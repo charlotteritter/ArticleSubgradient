@@ -1,0 +1,178 @@
+GAMS 32.2.0  rc62c018 Released Aug 26, 2020 WEX-WEI x86 64bit/MS Windows - 08/30/21 10:07:59 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+   1  POSITIVE VARIABLES X(W,T), Y(T),U(W,T), V(W,T);
+****                       $120,120
+**** 120  Unknown identifier entered as set
+   2  VARIABLES OBJ, BOUND_LR;
+   3  BINARY VARIABLE Z(W), R(W,T) ;
+   4   
+   5  scalar counter ;
+   6   
+   7  EQUATIONS
+   8          Objective
+   9          Const1_1(scen,t)
+****                      $120
+**** 120  Unknown identifier entered as set
+  10          Const1_2(scen,t)
+  11          Const_3_1(scen,t)
+  12          Const_3_1_scenario(scen,t)
+  13          Const_3_2(scen,t)
+  14          Const_3_2_scenario(scen,t)
+  15          Const_4_1(scen,t)
+  16          Const_4_1_scenario(scen,t)
+  17          Const_4_2(scen,t)
+  18          Const_4_2_scenario(scen,t)
+  19          Const_5(scen,t)
+  20          Const_5_scenario(scen,t)
+  21          Const_6(scen,t)
+  22          Const_6_scenario(scen,t)
+  23          LR
+  24          Objective_scenario(scen)
+  25          Const1_1_scenario(scen,t)
+  26          ;
+  27   
+  28   
+  29  Objective.. OBJ=E= SUM(T,COSTS(T, 'REW')*Y(T) - PROBABILITY*SUM(W, COSTS(T, 'GEN')*( X(W,T) + GG*R(w,t) ) )  )  ;
+****                               $140                         $140                                 $140
+**** 140  Unknown symbol
+  30   
+  31  LR.. bound_lr =e=   SUM(T,COSTS(T, 'REW')*Y(T) - PROBABILITY*SUM(W, COSTS(T, 'GEN')*( X(W,T) + GG*R(w,t) ) )  )
+  32                           - lambda* (threshold - sum(scen, z(scen)))  ;
+****                                  $140        $140                $171
+**** 140  Unknown symbol
+**** 171  Domain violation for set
+  33   
+  34  Objective_scenario(w)$(ord(w) eq counter)..
+****                      $171
+**** 171  Domain violation for set
+  35           OBJ =E= SUM(T,COSTS(T, 'REW')*Y(T) - PROBABILITY*SUM(W, COSTS(T, 'GEN')*( X(W,T) + GG*R(w,t) ) )  )     ;
+****                                                                 $125
+**** 125  Set is under control already
+  36   
+  37  *Const1_1(W,T).. Y(T)-X(W,T)-R(W,T)*GG -Z(W)*WIND(W,T) =L= (1-Z(W))*BigMM(w) ;
+  38  Const1_1(W,T).. Y(T)-X(W,T)-R(W,T)*GG -WIND(W,T) =L= Z(W)*BigM(w,t) ;
+****                                            $140               $140
+**** 140  Unknown symbol
+  39   
+  40  Const1_1_scenario(w,t)$(ord(t) lt card(t) and (ord(w) eq counter))..
+****                     $171
+**** 171  Domain violation for set
+  41           Y(T)-X(W,T)-R(W,T)*GG -WIND(W,T) =L= 0 ;
+  42   
+  43  Const1_2..  -SUM(W,Z(W)) =G= -floor(card(w)*TOL) ;
+****           $148                                 $140
+**** 140  Unknown symbol
+**** 148  Dimension different - The symbol is referenced with more/less
+****         indices as declared
+  44   
+  45  ****************************************************************************TODO Constraints (all but no. 1) in scenario form (z(w)=0)
+  46   
+  47  * The generator constraints
+  48   
+  49  *Ramp
+  50   
+  51  Const_3_1(W,T)$( ord(t) le (card(t)-1)).. X(W,T+1) + GG*R(w,t+1)- X(W,T) - GG*R(w,t)  =L= ramp*(U(w,t+1) + R(w,t)) ;
+****             $171                                                                              $140
+**** 140  Unknown symbol
+**** 171  Domain violation for set
+  52  Const_3_1_scenario(W,T)$( ord(t) le (card(t)-1) and (ord(scen) eq counter)).. X(W,T+1) + GG*R(w,t+1)- X(W,T) - GG*R(w,t)  =L= ramp*(U(w,t+1) + R(w,t)) ;
+****                      $171                                    $154
+**** 154  Set for 'ord' is not controlled
+**** 171  Domain violation for set
+  53   
+  54  Const_3_2(W,T)$( ord(t) le (card(t)-1)).. X(W,T) + GG*R(w,t)- X(W,T+1) -GG*R(w,t+1)=L= ramp*(V(w,t+1) + R(w,t+1)) ;
+****             $171
+**** 171  Domain violation for set
+  55  Const_3_2_scenario(W,T)$( ord(t) le (card(t)-1) and (ord(scen) eq counter)).. X(W,T) + GG*R(w,t)- X(W,T+1) -GG*R(w,t+1)=L= ramp*(V(w,t+1) + R(w,t+1)) ;
+****                      $171                                    $154
+**** 154  Set for 'ord' is not controlled
+**** 171  Domain violation for set
+  56   
+  57  *On/off
+  58   
+  59  Const_4_1(W,T)$(ord(t) ge uptime)..   Sum(tt$((ORD(TT) le ORD(T)) and (ORD(TT) ge (ORD(T) - UPTIME +1))),U(W,TT)) =L= R(W,T) ;
+****             $171                $140        $120,340                                                            $171
+**** 120  Unknown identifier entered as set
+**** 140  Unknown symbol
+**** 171  Domain violation for set
+**** 340  A label/element with the same name exist. You may have forgotten
+****         to quote a label/element reference. For example,
+****         set i / a,b,c /; parameter x(i); x('a') = 10;
+  60  Const_4_1_scenario(W,T)$(ord(t) ge uptime and (ord(scen) eq counter))..   Sum(tt$((ORD(TT) le ORD(T)) and (ORD(TT) ge (ORD(T) - UPTIME +1))),U(W,TT)) =L= R(W,T) ;
+****                      $171                              $154                                                                                         $171
+**** 154  Set for 'ord' is not controlled
+**** 171  Domain violation for set
+  61   
+  62  Const_4_2(W,T)$(ord(t) ge downtime )..Sum(tt$((ORD(TT) le ORD(T)) and (ORD(TT) ge (ORD(T) - DOWNTIME +1))),V(W,TT)) =L= 1-R(W,T) ;
+****             $171                  $140                                                                            $171
+**** 140  Unknown symbol
+**** 171  Domain violation for set
+  63  Const_4_2_scenario(W,T)$(ord(t) ge downtime and (ord(scen) eq counter))..Sum(tt$((ORD(TT) le ORD(T)) and (ORD(TT) ge (ORD(T) - DOWNTIME +1))),V(W,TT)) =L= 1-R(W,T) ;
+****                      $171                                $154                                                                                        $171
+**** 154  Set for 'ord' is not controlled
+**** 171  Domain violation for set
+  64   
+  65  Const_5(W,T)$(ord(t) ge 2).. U(W,T) - V(W,T) =E= R(W,T) - R(W,T-1) ;
+****           $171
+**** 171  Domain violation for set
+  66  Const_5_scenario(W,T)$(ord(t) ge 2 and (ord(scen) eq counter)).. U(W,T) - V(W,T) =E= R(W,T) - R(W,T-1) ;
+****                    $171                         $154
+**** 154  Set for 'ord' is not controlled
+**** 171  Domain violation for set
+  67   
+  68  *if uptime more than 1
+  69  Const_6(W,T)$( ord(t) le (card(t)-1))..   (G-GG)*R(W,T)- (G-ramp)*U(W,T) - (G-ramp)*V(W,T+1) =G= X(W,T);
+****           $171                              $140
+**** 140  Unknown symbol
+**** 171  Domain violation for set
+  70  Const_6_scenario(W,T)$( ord(t) le (card(t)-1) and (ord(scen) eq counter))..   (G-GG)*R(W,T)- (G-ramp)*U(W,T) - (G-ramp)*V(W,T+1) =G= X(W,T);
+****                    $171                                    $154
+**** 154  Set for 'ord' is not controlled
+**** 171  Domain violation for set
+  71   
+  72   
+  73  *** bounds on any variables
+  74  X.UP(W,T) =  G-GG;
+  75  U.UP(W,T) = 1;
+  76  V.UP(W,T) =1;
+  77  Z.UP(w)=1;
+  78   
+  79  * initialize the on/off variables
+  80  * assume the unit was on for last (uptime -1) periods
+  81  r.fx(w,t)$(ord(t) eq 1) =1;
+  82  u.fx(w,t)$(ord(t) eq 1) = 0;
+  83  v.fx(w,t)$(ord(t) eq 1) = 0 ;
+  84  * assume the generator was producing minimim power in last time period
+  85  x.up(w,t)$(ord(t) eq 1)= ramp - GG;
+  86   
+  87   
+  88  ******* ALL MODELS
+  89   
+  90  model schedule     / Objective,  Const1_1, Const1_2, Const_3_1, Const_3_2, Const_4_1, Const_4_2, Const_5, Const_6 /;
+  91  model schedule_scenario     / Objective_scenario,  Const1_1_scenario, Const_3_1_scenario, Const_3_2_scenario, Const_4_1_scenario, Const_4_2_scenario, Const_5_scenario, Const_6_scenario / ;
+  92  model INITIAL               / / ;
+****                                $233
+**** 233  Empty model list
+****        no legal data between / / or 'all' without any equations
+  93  model Lagrangian      / LR,    Const1_1, Const_3_1, Const_3_2, Const_4_1, Const_4_2, Const_5, Const_6 /;
+
+**** 45 ERROR(S)   0 WARNING(S)
+
+
+COMPILATION TIME     =        0.000 SECONDS      3 MB  32.2.0 rc62c018 WEX-WEI
+
+
+USER: Small MUD - 5 User License                     S200323/0001AN-GEN
+      Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\equations_all.gms
+Output     C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\equations_all.lst
+
+**** USER ERROR(S) ENCOUNTERED

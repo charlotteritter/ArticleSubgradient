@@ -1,0 +1,60 @@
+--- Job CreatingScenSorted.gms Start 09/09/21 12:29:03 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\CreatingScenSorted_Send\CreatingScenSorted.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\CreatingScenSorted_Send\225a\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- CreatingScenSorted.gms(5) 2 Mb
+--- . inputME.gms(22) 3 Mb
+--- .. wind_scenarios_150.csv(151) 3 Mb
+--- . inputME.gms(85) 3 Mb
+--- .. scenario_sorted_150_01.csv(151) 3 Mb
+--- . inputME.gms(125) 3 Mb 1 Error
+*** Error 282 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\CreatingScenSorted_Send\inputME.gms
+    Unable to open include file
+--- . inputME.gms(127) 3 Mb 2 Errors
+*** Error 463 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\CreatingScenSorted_Send\inputME.gms
+    The column section in the previous table is missing.
+       You may want to use $ON/OFFEMPTY
+--- . inputME.gms(194) 3 Mb
+--- CreatingScenSorted.gms(6) 3 Mb
+--- . subgradient_parameters.gms(33) 3 Mb
+--- CreatingScenSorted.gms(8) 3 Mb
+--- . equations_all.gms(92) 3 Mb
+--- CreatingScenSorted.gms(9) 3 Mb
+--- . lp_lowerbound.gms(4) 3 Mb 3 Errors
+*** Error 257 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\CreatingScenSorted_Send\lp_lowerbound.gms
+    Solve statement not checked because of previous errors
+--- . lp_lowerbound.gms(7) 3 Mb 4 Errors
+*** Error 141 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\CreatingScenSorted_Send\lp_lowerbound.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+--- . lp_lowerbound.gms(8) 3 Mb 5 Errors
+*** Error 141 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\CreatingScenSorted_Send\lp_lowerbound.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+--- . lp_lowerbound.gms(12) 3 Mb
+--- CreatingScenSorted.gms(31) 3 Mb 6 Errors
+*** Error 257 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\CreatingScenSorted_Send\CreatingScenSorted.gms
+    Solve statement not checked because of previous errors
+--- CreatingScenSorted.gms(74) 3 Mb 6 Errors
+*** Status: Compilation error(s)
+--- Job CreatingScenSorted.gms Stop 09/09/21 12:29:03 elapsed 0:00:00.020

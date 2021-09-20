@@ -1,0 +1,70 @@
+--- Job true_problem.gms Start 09/14/21 09:44:17 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\CreatingScenSorted_Send\CreatingScenSorted_Send_bs\CreatingScenSorted_Send_bs\true_problem.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\CreatingScenSorted_Send\CreatingScenSorted_Send_bs\CreatingScenSorted_Send_bs\225a\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- true_problem.gms(28) 3 Mb
+--- . wind_costs.csv(25) 3 Mb
+--- true_problem.gms(35) 3 Mb
+--- . wind_scenarios_150.csv(151) 3 Mb
+--- true_problem.gms(169) 3 Mb
+--- Starting execution: elapsed 0:00:00.033
+--- true_problem.gms(338) 9 Mb
+--- Generating MIP model SCHEDULE
+--- true_problem.gms(292) 9 Mb
+--- Starting Equ Objective: elapsed 0:00:01.071
+--- true_problem.gms(295) 17 Mb
+--- Starting Equ Const1_1: elapsed 0:00:02.550
+--- true_problem.gms(297) 38 Mb
+--- Starting Equ Const1_2: elapsed 0:00:02.715
+--- true_problem.gms(303) 38 Mb
+--- Starting Equ Const_3_1: elapsed 0:00:02.741
+--- true_problem.gms(304) 48 Mb
+--- Starting Equ Const_3_2: elapsed 0:00:03.016
+--- true_problem.gms(308) 59 Mb
+--- Starting Equ Const_4_1: elapsed 0:00:03.291
+--- true_problem.gms(309) 65 Mb
+--- Starting Equ Const_4_2: elapsed 0:00:03.745
+--- true_problem.gms(312) 71 Mb
+--- Starting Equ Const_5: elapsed 0:00:04.211
+--- true_problem.gms(315) 82 Mb
+--- Starting Equ Const_6: elapsed 0:00:04.468
+--- true_problem.gms(339) 94 Mb
+---   240,002 rows  145,525 columns  1,102,525 non-zeroes
+---   109,500 discrete-columns
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:05.463
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+Gurobi link license.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model SCHEDULE
+--- Executing after solve: elapsed 0:00:06.434
+--- true_problem.gms(344) 94 Mb
+--- Profile Summary (5539 records processed)
+     1.484   0.017GB       292 Equation   Objective (1)
+     1.000   0.005GB       237 Loop       
+     0.907   0.094GB       339 Solve Alg  SCHEDULE
+     0.703   0.094GB       339 Solve Fini SCHEDULE (1102525)
+     0.468   0.071GB       309 Equation   Const_4_2 (33000)
+     0.454   0.065GB       308 Equation   Const_4_1 (33000)
+     0.297   0.092GB       315 Equation   Const_6 (34500)
+     0.281   0.059GB       304 Equation   Const_3_2 (34500)
+     0.265   0.048GB       303 Equation   Const_3_1 (34500)
+     0.250   0.082GB       312 Equation   Const_5 (34500)
+*** Status: Normal completion
+--- Job true_problem.gms Stop 09/14/21 09:44:24 elapsed 0:00:06.451
