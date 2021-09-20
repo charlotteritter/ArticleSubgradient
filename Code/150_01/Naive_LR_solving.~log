@@ -1,0 +1,137 @@
+--- Job Naive_LR_solving.gms Start 09/20/21 11:07:23 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\Naive_LR_solving.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- Naive_LR_solving.gms(19) 2 Mb
+--- . inputME.gms(22) 3 Mb
+--- .. wind_scenarios_20.csv(21) 3 Mb
+--- . inputME.gms(85) 3 Mb
+--- .. scenario_sorted_20_05.csv(21) 3 Mb
+--- . inputME.gms(125) 3 Mb
+--- .. wind_costs.csv(25) 3 Mb
+--- . inputME.gms(197) 3 Mb
+--- Naive_LR_solving.gms(20) 3 Mb
+--- . subgradient_parameters.gms(33) 3 Mb
+--- Naive_LR_solving.gms(22) 3 Mb
+--- . equations_all.gms(94) 3 Mb
+--- Naive_LR_solving.gms(71) 3 Mb
+--- . lp_lowerbound.gms(12) 3 Mb
+--- Naive_LR_solving.gms(72) 3 Mb
+--- . heuristic_upperbound.gms(59) 3 Mb
+--- Naive_LR_solving.gms(109) 3 Mb
+--- . plain_lr.gms(12) 3 Mb
+--- Naive_LR_solving.gms(115) 3 Mb
+--- . LR_updates.gms(17) 3 Mb
+--- .. stepsizes.gms(21) 3 Mb
+--- . LR_updates.gms(42) 3 Mb
+--- Naive_LR_solving.gms(141) 3 Mb
+--- Starting execution: elapsed 0:00:00.023
+--- Naive_LR_solving.gms(429) 4 Mb
+--- Generating MIP model schedule
+--- Naive_LR_solving.gms(347) 4 Mb
+--- Starting Equ Objective: elapsed 0:00:00.027
+--- Naive_LR_solving.gms(356) 4 Mb
+--- Starting Equ Const1_1: elapsed 0:00:00.040
+--- Naive_LR_solving.gms(363) 5 Mb
+--- Starting Equ Const1_2: elapsed 0:00:00.042
+--- Naive_LR_solving.gms(371) 5 Mb
+--- Starting Equ Const_3_1: elapsed 0:00:00.042
+--- Naive_LR_solving.gms(374) 5 Mb
+--- Starting Equ Const_3_2: elapsed 0:00:00.044
+--- Naive_LR_solving.gms(379) 5 Mb
+--- Starting Equ Const_4_1: elapsed 0:00:00.046
+--- Naive_LR_solving.gms(382) 5 Mb
+--- Starting Equ Const_4_2: elapsed 0:00:00.052
+--- Naive_LR_solving.gms(385) 5 Mb
+--- Starting Equ Const_5: elapsed 0:00:00.057
+--- Naive_LR_solving.gms(389) 5 Mb
+--- Starting Equ Const_6: elapsed 0:00:00.057
+--- Naive_LR_solving.gms(430) 5 Mb
+---   3,202 rows  1,965 columns  14,725 non-zeroes
+---   500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:00.081
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 0.13 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               4200
+CPXPARAM_Tune_TimeLimit                          840
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0.001
+CPXPARAM_MIP_Tolerances_MIPGap                   0.001
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
+Found incumbent of value -2684.465200 after 0.00 sec. (0.14 ticks)
+Tried aggregator 2 times.
+MIP Presolve eliminated 81 rows and 101 columns.
+MIP Presolve modified 40 coefficients.
+Aggregator did 20 substitutions.
+Reduced MIP has 3101 rows, 1844 columns, and 13120 nonzeros.
+Reduced MIP has 480 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (7.81 ticks)
+Probing fixed 0 vars, tightened 59 bounds.
+Probing time = 0.00 sec. (0.77 ticks)
+Cover probing fixed 0 vars, tightened 1 bounds.
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 21 rows and 20 columns.
+MIP Presolve modified 59 coefficients.
+Reduced MIP has 3080 rows, 1824 columns, and 12977 nonzeros.
+Reduced MIP has 500 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (7.25 ticks)
+Probing changed sense of 20 constraints.
+Probing time = 0.00 sec. (0.55 ticks)
+Clique table members: 101.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
+Parallel mode: deterministic, using up to 6 threads for concurrent optimization:
+ * Starting dual Simplex on 1 thread...
+ * Starting Barrier on 4 threads...
+ * Starting primal Simplex on 1 thread...
+Tried aggregator 1 time.
+No LP presolve or aggregator reductions.
+Presolve time = 0.01 sec. (1.40 ticks)
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Dual objective     =        -84290.029009
+Iteration:   153   Dual objective     =        -60604.150141
+Iteration:   288   Dual objective     =        -49152.680115
+Iteration:   419   Dual objective     =        -41699.333336
+Iteration:   566   Dual objective     =        -33827.529674
+Iteration:   696   Dual objective     =        -31434.492394
+Iteration:   823   Dual objective     =        -29199.528220
+Iteration:   927   Dual objective     =        -24015.190085
+Iteration:  1036   Dual objective     =        -21735.714505
+Iteration:  1132   Dual objective     =        -19622.776050
+Iteration:  1235   Dual objective     =        -18296.071012
+Iteration:  1338   Dual objective     =        -17388.286336
+Iteration:  1439   Dual objective     =        -16790.409858
+Iteration:  1540   Dual objective     =        -16168.849300
+Iteration:  1636   Dual objective     =        -15729.275605
+Iteration:  1736   Dual objective     =        -15224.458940
+Iteration:  1829   Dual objective     =        -14904.187096

@@ -1,0 +1,1394 @@
+GAMS 32.2.0  rc62c018 Released Aug 26, 2020 WEX-WEI x86 64bit/MS Windows - 09/20/21 11:07:23 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+      Bismark Singh
+      March 17, 2021
+       
+      Code for plain Lagrangian decomposition (removed Progressive Hedging)
+      Based on the paper at http://www.optimization-online.org/DB_HTML/2019/05/7222.html
+       
+       
+      Excel file used for LB heuristic needs to be manually sorted
+       
+  12   
+  14  OPTIONS PROFILE =3, RESLIM   = 4200, LIMROW   = 5, LP = CPLEX, MIP = cplex, RMIP=cplex, NLP = CONOPT, MINLP = DICOPT, MIQCP = CPLEX, SOLPRINT = OFF, decimals = 8, optcr=0.001, optca=0.001, threads =8, integer4=0;
+  15   
+  16  ********************************************************************************
+  17  *                                Include input files
+  18  ********************************************************************************
+INCLUDE    C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\inputME.gms
+  20  ** sets later to be defined in input file
+  21   
+  22  ** to be changed
+  23   
+  24  SETS T times/t1*t24/;
+  25  * Number of scenarios
+  26  *SETS SCEN scenarios /scen1*%MAXSCEN%/;
+  27  SETS SCEN scenarios /scen1*scen20/;
+  28  alias(scen, w);
+  29  Parameter last_z(scen);
+  30   
+  31  SCALAR G, GG, start_cost, ramp, uptime, downtime;
+  32  G=130;
+  33  GG=20;
+  34  ramp=50;
+  35  UPTIME =3;
+  36  DOWNTIME=3;
+  37   
+  38  TABLE wind(scen,t)
+  40  *$INCLUDE %SOLAR%.csv
+INCLUDE    C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\wind_scenarios_20.csv
+  42  ,t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14,t15,t16,t17,t18,t19,t20,t21,t22,t23,t24
+  43  scen1,40.788,31.292,31.686,13.104,19.513,17.589,3.982,2.111,5.395,7.339,16.453,12.563,18.552,26.285,25.218,27.124,61.119,61.994,26.851,30.668,33.969,21.804,0.894,5.003
+  44  scen2,38.871,29.430,17.177,37.161,36.065,43.551,20.778,15.194,11.549,4.238,15.674,23.131,10.582,18.198,47.717,35.322,42.241,44.180,22.863,32.739,31.534,35.139,47.508,39.488
+  45  scen3,40.453,39.543,54.351,7.527,13.003,5.582,10.555,30.856,40.955,2.810,10.196,24.696,1.107,1.261,6.703,28.630,7.813,5.701,29.724,37.637,47.618,20.059,17.157,33.769
+  46  scen4,30.964,31.662,21.754,2.502,5.546,11.349,26.873,36.986,52.809,4.681,11.948,7.568,11.216,17.302,12.527,40.069,45.700,39.670,19.931,55.956,60.507,31.742,38.095,38.727
+  47  scen5,31.977,44.193,31.514,1.068,6.901,8.509,9.550,14.850,29.701,0.550,15.489,10.324,8.957,3.511,4.151,42.279,31.693,15.346,20.856,27.220,39.239,19.065,12.689,17.604
+  48  scen6,44.125,23.932,10.829,6.189,21.050,13.703,25.274,34.905,34.505,8.014,4.363,2.003,14.843,9.970,4.671,40.140,46.915,52.225,39.938,29.705,23.973,21.239,33.044,37.499
+  49  scen7,42.361,42.758,33.893,1.576,8.044,8.320,10.711,32.328,44.895,13.217,24.235,41.519,15.350,0.507,8.108,16.188,24.578,31.130,28.765,27.134,35.786,17.934,23.462,31.903
+  50  scen8,24.010,15.731,28.429,7.051,6.959,7.177,9.913,2.702,28.548,14.935,23.306,25.621,0.375,2.024,11.126,31.555,25.978,30.023,27.545,27.083,16.445,19.196,18.951,21.620
+  51  scen9,31.739,28.197,24.841,0.057,1.148,10.663,18.933,15.737,8.667,5.207,35.804,49.272,21.944,35.804,23.935,24.683,12.825,7.677,24.350,31.201,31.877,33.394,18.536,19.869
+  52  scen10,53.992,68.828,63.827,7.661,25.876,36.882,1.569,7.646,2.418,21.509,23.117,3.706,20.109,8.312,4.564,29.517,23.436,33.347,33.934,32.751,23.656,22.811,19.852,2.295
+  53  scen11,35.906,40.647,22.324,5.385,21.266,9.214,6.017,6.382,2.859,22.078,14.943,19.075,16.300,30.952,43.881,48.997,46.315,33.619,36.430,30.778,16.032,13.804,14.004,33.443
+  54  scen12,21.121,16.353,35.608,1.199,0.799,7.159,3.171,6.269,1.693,5.049,6.014,4.394,7.257,0.202,11.054,31.809,34.371,25.556,19.061,26.158,10.004,30.579,30.212,20.788
+  55  scen13,46.383,49.690,45.550,3.904,9.649,10.204,9.996,6.974,9.864,2.449,1.958,3.780,20.149,42.136,53.366,56.735,49.034,47.172,26.451,38.567,33.220,42.018,59.848,73.926
+  56  scen14,43.103,45.663,39.525,2.904,21.530,34.186,4.464,18.244,3.407,17.752,24.454,9.595,6.177,9.903,13.875,40.823,28.385,12.174,39.200,41.820,41.778,38.182,10.253,2.632
+  57  scen15,37.583,34.645,32.719,19.370,19.987,21.276,1.383,10.348,17.944,16.976,20.339,31.687,1.862,1.024,9.111,49.187,60.406,38.053,22.813,22.300,17.566,46.529,54.186,40.475
+  58  scen16,26.222,23.736,29.680,25.646,40.098,42.033,16.438,18.297,20.203,3.928,8.400,15.628,26.087,31.792,40.537,28.131,28.417,25.934,52.851,53.860,33.250,33.507,49.510,55.165
+  59  scen17,30.618,13.952,7.782,7.573,23.744,23.919,2.975,6.893,18.567,20.334,31.383,48.316,3.900,23.019,22.115,42.827,40.195,48.733,35.458,48.134,43.028,42.002,35.285,30.583
+  60  scen18,36.582,33.992,50.666,17.083,11.431,6.019,30.221,46.971,49.415,23.601,29.279,32.148,8.504,0.920,1.754,31.913,23.320,14.043,25.916,28.322,18.550,39.284,26.472,22.773
+  61  scen19,34.352,29.418,29.102,0.592,15.195,6.234,4.431,18.591,21.658,26.181,17.305,12.471,8.995,0.595,6.656,42.025,52.206,48.223,19.233,18.921,21.031,18.374,16.086,17.735
+  62  scen20,56.789,57.879,57.190,15.012,39.102,38.643,16.741,26.861,16.576,12.535,38.359,46.995,0.663,12.961,19.233,17.176,19.198,20.429,18.671,18.028,20.283,21.967,31.649,33.541
+  64  ;
+  65  *alias(solar,wind);
+  66   
+  67  *Tolerance
+  68  scalar tol;
+  69  *tol=%TOL%;
+  70  tol=0.05;
+  71   
+  72  * maximum number of iterations in LR
+  73  set iter number of subgradient iterations /iter1*iter10/;
+  74   
+  75  * time limit for each problem
+  76  scalar time_limit;
+  77  *time_limit=%TIMELIM%;
+  78  time_limit=2250;
+  79   
+  80   
+  81  * Import the SORTED file
+  82  table scenario_sorted(scen,*)
+  84  *$INCLUDE %SORTEDFILE%.csv
+  85  *$INCLUDE scenario_sorted_100_1_01.csv
+  86  *$INCLUDE scenario_sorted_100_2_01.csv
+  87  *$INCLUDE scenario_sorted_100_3_01.csv
+  88  *$INCLUDE scenario_sorted_100_4_01.csv
+  89  *$INCLUDE scenario_sorted_100_5_01.csv
+  90  *$INCLUDE scenario_sorted_100_6_01.csv
+  91  *$INCLUDE scenario_sorted_100_7_01.csv
+  92  *$INCLUDE scenario_sorted_100_8_01.csv
+  93  *$INCLUDE scenario_sorted_100_9_01.csv
+  94  *$INCLUDE scenario_sorted_100_10_01.csv
+  95  *$INCLUDE scenario_sorted_100_11_01.csv
+  96  *$INCLUDE scenario_sorted_100_12_01.csv
+  97  *$INCLUDE scenario_sorted_100_13_01.csv
+  98  *$INCLUDE scenario_sorted_100_14_01.csv
+  99  *$INCLUDE scenario_sorted_100_15_01.csv
+ 100  *$INCLUDE scenario_sorted_100_16_01.csv
+ 101  *$INCLUDE scenario_sorted_100_17_01.csv
+ 102  *$INCLUDE scenario_sorted_100_18_01.csv
+ 103  *$INCLUDE scenario_sorted_100_19_01.csv
+ 104  *$INCLUDE scenario_sorted_100_20_01.csv
+ 105  *$INCLUDE scenario_sorted_100_1_05.csv
+ 106  *$INCLUDE scenario_sorted_100_2_05.csv
+ 107  *$INCLUDE scenario_sorted_100_3_05.csv
+ 108  *$INCLUDE scenario_sorted_100_4_05.csv
+ 109  *$INCLUDE scenario_sorted_100_5_05.csv
+ 110  *$INCLUDE scenario_sorted_100_6_05.csv
+ 111  *$INCLUDE scenario_sorted_100_7_05.csv
+ 112  *$INCLUDE scenario_sorted_100_8_05.csv
+ 113  *$INCLUDE scenario_sorted_100_9_05.csv
+ 114  *$INCLUDE scenario_sorted_100_10_05.csv
+ 115  *$INCLUDE scenario_sorted_100_11_05.csv
+ 116  *$INCLUDE scenario_sorted_100_12_05.csv
+ 117  *$INCLUDE scenario_sorted_100_13_05.csv
+ 118  *$INCLUDE scenario_sorted_100_14_05.csv
+ 119  *$INCLUDE scenario_sorted_100_15_05.csv
+ 120  *$INCLUDE scenario_sorted_100_16_05.csv
+ 121  *$INCLUDE scenario_sorted_100_17_05.csv
+ 122  *$INCLUDE scenario_sorted_100_18_05.csv
+ 123  *$INCLUDE scenario_sorted_100_19_05.csv
+ 124  *$INCLUDE scenario_sorted_100_20_05.csv
+INCLUDE    C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\scenario_sorted_20_05.csv
+ 126   ,value
+ 127  scen12,1
+ 128  scen5,0
+ 129  scen8,0
+ 130  scen3,0
+ 131  scen19,0
+ 132  scen1,0
+ 133  scen6,0
+ 134  scen14,0
+ 135  scen10,0
+ 136  scen9,0
+ 137  scen11,0
+ 138  scen7,0
+ 139  scen4,0
+ 140  scen15,0
+ 141  scen13,0
+ 142  scen2,0
+ 143  scen18,0
+ 144  scen16,0
+ 145  scen17,0
+ 146  scen20,0
+ 147  *$INCLUDE scenario_sorted_150_03.csv
+ 148  *$INCLUDE scenario_sorted_150_05.csv
+ 149  *$INCLUDE scenario_sorted_300_01.csv
+ 150  *$INCLUDE scenario_sorted_300_03.csv
+ 151  *$INCLUDE scenario_sorted_300_05.csv
+ 152  *$INCLUDE scenario_sorted_450_01.csv
+ 153  *$INCLUDE scenario_sorted_450_03.csv
+ 154  *$INCLUDE scenario_sorted_450_05.csv
+ 155  *$INCLUDE scenario_sorted_600_01.csv
+ 156  *$INCLUDE scenario_sorted_600_05.csv
+ 157  *$INCLUDE scenario_sorted_600_03.csv
+ 158  *$INCLUDE scenario_sorted_900_01.csv
+ 159  *$INCLUDE scenario_sorted_900_03.csv
+ 160  *$INCLUDE scenario_sorted_900_05.csv
+ 161  *$INCLUDE scenario_sorted_1200_01.csv
+ 162  *$INCLUDE scenario_sorted_1200_03.csv
+ 163  *$INCLUDE scenario_sorted_1200_05.csv
+ 164  *$INCLUDE scenario_sorted_2400_01.csv
+ 165  *$INCLUDE scenario_sorted_2400_05.csv
+ 167  ;
+ 168   
+ 169   
+ 170   
+ 171   
+ 172   
+ 173  ALIAS (T,TT);
+ 174  alias(scen,i);
+ 175   
+ 176  scalar n;
+ 177  n=card(scen);
+ 178   
+ 179  *Scalar which tells if LR converges
+ 180  scalar convergence;
+ 181   
+ 182  ** define battery  operation costs costs and solar selling prices
+ 183   
+ 184  TABLE PRICES(t,*)
+INCLUDE    C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\wind_costs.csv
+ 187  ,REW,GEN
+ 188  t1,21.86631793,50
+ 189  t2,22.68762551,50
+ 190  t3,22.63231186,50
+ 191  t4,23.53977501,50
+ 192  t5,24.15305477,50
+ 193  t6,25.0022415,50
+ 194  t7,26.14884331,50
+ 195  t8,28.48265662,50
+ 196  t9,35.32421651,50
+ 197  t10,53.07988113,50
+ 198  t11,67.07745747,50
+ 199  t12,43.78264533,50
+ 200  t13,33.25218533,50
+ 201  t14,28.68827035,50
+ 202  t15,26.76175663,50
+ 203  t16,23.97472252,50
+ 204  t17,21.05077606,50
+ 205  t18,18.8721276,50
+ 206  t19,17.16537812,50
+ 207  t20,15.4798614,50
+ 208  t21,14.81514842,50
+ 209  t22,14.64047737,50
+ 210  t23,15.10197375,50
+ 211  t24,17.32390701,50
+ 213  ;
+ 214  *alias(costs, prices);
+ 215   
+ 216  Prices(t,'rew')     =  - Prices(t,'rew');
+ 217  Prices(t,'gen')    =  - Prices(t,'gen');
+ 218  ** define solar scenarios at all time periods
+ 219   
+ 220   
+ 221  * Scaling of wind power scenarios ;
+ 222  scalar scale ;
+ 223  scale = 1;
+ 224  wind(scen,t) = scale* wind(scen,t) ;
+ 225  * Remove too many decimals in Solar
+ 226  wind(scen,t) = round(wind(scen,t),2) ;
+ 227   
+ 228   
+ 229  scalar PROBABILITY;
+ 230  PROBABILITY = 1/CARD(scen);
+ 231   
+ 232   
+ 233  parameters max_store(t), min_store(t), max_charge, max_discharge;
+ 234   
+ 235   
+ 236  ** define tolerance threshold
+ 237  SCALAR threshold;
+ 238  threshold = floor(card(scen)*TOL)  ;
+ 239   
+      parameter BigX, LowX, X_0 maximum minimum initial energy stored ;
+      parameter BigM(scen,t) find a good BigM ;
+       
+      BigX = 960 ;
+      LowX = 0.2* BigX ;
+      X_0  = 0.5* BigX ;
+      max_charge =  0.5* BigX ;
+      max_discharge =  0.5* BigX ;
+ 250   
+ 251  ************** Find a Big M
+ 252   
+ 253  * find Ntol + 1st value
+ 254  parameter maxwind(t), minwind(t), dummywind(w,t) ;
+ 255  maxwind(t) =smax(w,wind(w,t)) ;
+ 256  dummywind(w,t) = wind(w,t) ;
+ 257   
+ 258  scalar it ;
+ 259  it = floor(card(w)*tol) + 1;
+ 260   
+ 261  * index of it
+ 262  set dummy(w);
+ 263  * make the dum_iter go till at least the size of it
+ 264  set dum_iter /dum_iter1*dum_iter100/;
+ 265  loop(t,
+ 266  loop(dum_iter$(ord(dum_iter)le it),
+ 267  * find the smallest wind value for this t
+ 268           minwind(t) = smin(w,dummywind(w,t)) ;
+ 269  * index of smallest wind value
+ 270           dummy(w) = yes$(dummywind(w,t) eq minwind(t)) ;
+ 271  * make the smallest wind value large
+ 272           dummywind(w,t)$dummy(w) =maxwind(t) ;
+ 273  ); );
+ 274  display minwind ;
+ 275   
+ 276   
+ 277   
+ 278  parameter BigMM(w), BigM(w,t);
+ 279  BigMM(w)= smax(t, wind(w,t));
+ 280  BigM(w,t)= G - wind(w,t) + minwind(t);
+ 281   
+ 282   
+ 283  scalar run_time_total, start_time, end_time, LP_time, bound_time, lr_time ;
+INCLUDE    C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\subgradient_parameters.gms
+ 285  parameter lambda;
+ 286  parameter ldual value of Lagrangian dual ;
+ 287  parameter bound total value of Lagrangian dual ;
+ 288  scalar init_lambda, init_bound initial value of lambda dual LP objective from LP ;
+ 289  *Hier werden die maximalen Iterationen, also big M festgelegt
+ 290  *set iter                 number of subgradient iterations /iter1*iter3/;
+ 291  scalar num_iter          how many iterations we did ;
+ 292  scalar contin            stopping             /1/;
+ 293  parameter stepsize;
+ 294  scalar theta /2/;
+ 295  scalar originalTheta;
+ 296  originalTheta=theta;
+ 297  scalar noimprovement /0/;
+ 298  scalar upperbound ;
+ 299  parameter gamma           subgradient          ;
+ 300  parameter b;
+ 301  parameter norm;
+ 302  parameter norm2;
+ 303  scalar lowerbound;
+ 304  parameter lambdaprevious, deltalambda, results(iter,*), prev_w(scen,t), prev_y(t)  ;
+ 305   
+ 306   
+ 307  scalar m ;
+ 308  parameter   y_previous(scen,t), y_average_previous(t), weight_previous(scen,t);
+ 309  scalar profit_orig, t1, t2, exit_tol;
+ 310   
+ 311  scalar final_gap ;
+ 312   
+ 313  parameter lb(scen) ;
+ 314  parameter rho(t) ;
+ 315   
+ 316  scalar exit_tol ;
+ 317  exit_tol = 0.00001 ;
+ 318   
+INCLUDE    C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\equations_all.gms
+ 320  POSITIVE VARIABLES X(W,T), Y(T),U(W,T), V(W,T);
+ 321  VARIABLES OBJ, BOUND_LR;
+ 322  BINARY VARIABLE Z(SCEN), R(W,T) ;
+ 323   
+ 324  scalar counter ;
+ 325   
+ 326  EQUATIONS
+ 327          Objective
+ 328          Const1_1(scen,t)
+ 329          Const1_2
+ 330          Const_3_1(scen,t)
+ 331          Const_3_1_scenario(scen,t)
+ 332          Const_3_2(scen,t)
+ 333          Const_3_2_scenario(scen,t)
+ 334          Const_4_1(scen,t)
+ 335          Const_4_1_scenario(scen,t)
+ 336          Const_4_2(scen,t)
+ 337          Const_4_2_scenario(scen,t)
+ 338          Const_5(scen,t)
+ 339          Const_5_scenario(scen,t)
+ 340          Const_6(scen,t)
+ 341          Const_6_scenario(scen,t)
+ 342          LR
+ 343          Objective_scenario(scen)
+ 344          Const1_1_scenario(scen,t)
+ 345          ;
+ 346   
+ 347  Objective.. OBJ=E= SUM(T,PRICES(T, 'REW')*Y(T) - PROBABILITY*SUM(scen, PRICES(T, 'GEN')*( X(scen,T) + GG*R(scen,t) ) )  )  ;
+ 348   
+ 349  LR.. bound_lr =e=   SUM(T,PRICES(T, 'REW')*Y(T) - PROBABILITY*SUM(scen, PRICES(T, 'GEN')*( X(scen,T) + GG*R(scen,t) ) )  )
+ 350                           - lambda* (threshold - sum(scen, z(scen)))  ;
+ 351   
+ 352  Objective_scenario(scen)$(ord(scen) eq counter)..
+ 353           OBJ =E= SUM(TT,PRICES(tt, 'REW')*Y(TT) - PRICES(TT, 'GEN')*( X(scen,TT) + GG*R(scen,tt) ) )     ;
+ 354   
+ 355  *Const1_1(W,T).. Y(T)-X(W,T)-R(W,T)*GG -Z(W)*WIND(W,T) =L= (1-Z(W))*BigMM(w) ;
+ 356  Const1_1(scen,T).. Y(T)-X(scen,T)-R(scen,T)*GG -WIND(scen,T) =L= Z(scen)*BigM(scen,t) ;
+ 357   
+ 358  *Const1_1_scenario(scen,t)$(ord(t) lt card(t) and (ord(scen) eq counter))..
+ 359  Const1_1_scenario(scen,t)$(ord(scen) eq counter)..
+ 360   
+ 361           Y(T)-X(scen,T)-R(scen,T)*GG -WIND(scen,T) =L= 0 ;
+ 362   
+ 363  Const1_2..   -SUM(SCEN, Z(SCEN)) =G= -threshold;
+ 364   
+ 365  ****************************************************************************TODO Constraints (all but no. 1) in scenario form (z(w)=0)
+ 366   
+ 367  * The generator constraints
+ 368   
+ 369  *Ramp
+ 370   
+ 371  Const_3_1(scen,T)$( ord(t) le (card(t)-1)).. X(scen,T+1) + GG*R(scen,t+1)- X(scen,T) - GG*R(scen,t)  =L= ramp*(U(scen,t+1) + R(scen,t)) ;
+ 372  Const_3_1_scenario(scen,T)$( ord(t) le (card(t)-1) and (ord(scen) eq counter)).. X(scen,T+1) + GG*R(scen,t+1)- X(scen,T) - GG*R(scen,t)  =L= ramp*(U(scen,t+1) + R(scen,t)) ;
+ 373   
+ 374  Const_3_2(scen,T)$( ord(t) le (card(t)-1)).. X(scen,T) + GG*R(scen,t)- X(scen,T+1) -GG*R(scen,t+1)=L= ramp*(V(scen,t+1) + R(scen,t+1)) ;
+ 375  Const_3_2_scenario(scen,T)$( ord(t) le (card(t)-1) and (ord(scen) eq counter)).. X(scen,T) + GG*R(scen,t)- X(scen,T+1) -GG*R(scen,t+1)=L= ramp*(V(scen,t+1) + R(scen,t+1)) ;
+ 376   
+ 377  *On/off
+ 378   
+ 379  Const_4_1(scen,T)$(ord(t) ge uptime)..   Sum(tt$((ORD(TT) le ORD(T)) and (ORD(TT) ge (ORD(T) - UPTIME +1))),U(scen,TT)) =L= R(scen,T) ;
+ 380  Const_4_1_scenario(scen,T)$(ord(t) ge uptime and (ord(scen) eq counter))..   Sum(tt$((ORD(TT) le ORD(T)) and (ORD(TT) ge (ORD(T) - UPTIME +1))),U(scen,TT)) =L= R(scen,T) ;
+ 381   
+ 382  Const_4_2(scen,T)$(ord(t) ge downtime )..Sum(tt$((ORD(TT) le ORD(T)) and (ORD(TT) ge (ORD(T) - DOWNTIME +1))),V(scen,TT)) =L= 1-R(scen,T) ;
+ 383  Const_4_2_scenario(scen,T)$(ord(t) ge downtime and (ord(scen) eq counter))..Sum(tt$((ORD(TT) le ORD(T)) and (ORD(TT) ge (ORD(T) - DOWNTIME +1))),V(scen,TT)) =L= 1-R(scen,T) ;
+ 384   
+ 385  Const_5(scen,T)$(ord(t) ge 2).. U(scen,T) - V(scen,T) =E= R(scen,T) - R(scen,T-1) ;
+ 386  Const_5_scenario(scen,T)$(ord(t) ge 2 and (ord(scen) eq counter)).. U(scen,T) - V(scen,T) =E= R(scen,T) - R(scen,T-1) ;
+ 387   
+ 388  *if uptime more than 1
+ 389  Const_6(scen,T)$( ord(t) le (card(t)-1))..   (G-GG)*R(scen,T)- (G-ramp)*U(scen,T) - (G-ramp)*V(scen,T+1) =G= X(scen,T);
+ 390  Const_6_scenario(scen,T)$( ord(t) le (card(t)-1) and (ord(scen) eq counter))..   (G-GG)*R(scen,T)- (G-ramp)*U(scen,T) - (G-ramp)*V(scen,T+1) =G= X(scen,T);
+ 391   
+ 392   
+ 393  *** bounds on any variables
+ 394  X.UP(scen,T) =  G-GG;
+ 395  U.UP(scen,T) = 1;
+ 396  V.UP(scen,T) =1;
+ 397  Z.UP(scen)=1;
+ 398   
+ 399  * initialize the on/off variables
+ 400  * assume the unit was on for last (uptime -1) periods
+ 401  r.fx(scen,t)$(ord(t) eq 1) =1;
+ 402  u.fx(scen,t)$(ord(t) eq 1) = 0;
+ 403  v.fx(scen,t)$(ord(t) eq 1) = 0 ;
+ 404  * assume the generator was producing minimim power in last time period
+ 405  x.up(scen,t)$(ord(t) eq 1)= ramp - GG;
+ 406   
+ 407   
+ 408  ******* ALL MODELS
+ 409   
+ 410  model schedule     / Objective,  Const1_1, Const1_2, Const_3_1, Const_3_2, Const_4_1, Const_4_2, Const_5, Const_6 /;
+ 411  model schedule_scenario     / Objective_scenario,  Const1_1_scenario, Const_3_1_scenario, Const_3_2_scenario, Const_4_1_scenario, Const_4_2_scenario, Const_5_scenario, Const_6_scenario / ;
+ 412  *model INITIAL               / / ;
+ 413  model Lagrangian      / LR,    Const1_1, Const_3_1, Const_3_2, Const_4_1, Const_4_2, Const_5, Const_6 /;
+ 414   
+ 415   
+ 416  scalar d;
+ 417  set indices /1*6/;
+ 418   
+ 419  File TestingFile3 / TestingFile3.csv /;
+ 420  TestingFile3.pc=5;
+ 421  TestingFile3.nd=5;
+ 422  put TestingFile3;
+ 423  put 'Omega', put 'Tolerance', put 'Step Size Rule', put 'Iterations', put 'Converged?', put 'Gap LR', put 'Gap Naive', put 'Obj. Naive', put 'Obj. LR', put 'Gap' put 'Time Naive', put 'Time LR', put 'Final Lambda', put 'LB Heuristic' put /;
+ 424   
+ 425  ********************************************************************************
+ 426  * Solve main Problem
+ 427  ********************************************************************************
+ 428   
+ 429  start_time = jnow;
+ 430  solve schedule using MIP minimizing Obj ;
+ 431  end_time = jnow ;
+ 432   
+ 433   
+ 434   
+ 435  run_time_total = ghour(end_time - start_time)*3600 + gminute(end_time - start_time)*60 + gsecond(end_time - start_time);
+ 436   
+ 437  scalar ObjNaive;
+ 438  ObjNaive=Obj.l;
+ 439   
+ 440  scalar zlower;
+ 441  zlower=-Obj.l;
+ 442   
+ 443  scalar zupper;
+ 444  zupper=-schedule.objEst;
+ 445   
+ 446  scalar GapNaive;
+ 447  GapNaive = (zupper-zlower)/zupper;
+ 448   
+ 449  scalar ObjLR;
+ 450   
+ 451  scalar heuristic;
+ 452   
+ 453  scalar TimeNaive;
+ 454  TimeNaive=run_time_total;
+ 455   
+ 456  display Obj.l, run_time_total ;
+ 457   
+ 458  ********************************************************************************
+ 459  * Solve the Lagrangian Dual problem now
+ 460  ********************************************************************************
+ 461   
+INCLUDE    C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\lp_lowerbound.gms
+ 463  start_time = jnow ;
+ 464  options optca=0 ;
+ 465  options optcr=0 ;
+ 466  solve schedule using RMIP minimizing OBJ ;
+ 467  end_time =jnow ;
+ 468  LP_time = ghour(end_time - start_time)*3600 + gminute(end_time - start_time)*60 + gsecond(end_time - start_time);
+ 469  init_lambda  = Const1_2.m ;
+ 470  lowerbound   = Obj.l ;
+ 471  scalar LP_bound ;
+ 472  lambda       = init_lambda ;
+ 473  display init_lambda, LP_time, lowerbound    ;
+ 474  LP_bound   = Obj.l ;
+INCLUDE    C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\heuristic_upperbound.gms
+ 476  ********************************************************************************
+ 477  * Find a upperbound on the problem : a feasible solution
+ 478  ********************************************************************************
+ 479   
+ 480  *upperbound =  0;
+ 481  * Find a upper bound using a fixed value and solving MIP (a feasible solution)
+ 482  * solve single scenario problem and choose the worst #threshold problems
+ 483  start_time = jnow ;
+ 484  schedule_scenario.solvelink = 5 ;
+ 485  alias(rs,scen)
+ 486  parameter res_scenarios(rs,*) ;
+ 487   
+ 488  loop(rs,
+ 489  counter = ord(rs)  ;
+ 490  *Solving (2) for each scenario w with corresponding z(w) = 0
+ 491  solve schedule_scenario using MIP minimizing Obj ;
+ 492  res_scenarios(rs,'obj') =obj.l ;
+ 493   
+ 494   
+ 495  res_scenarios(rs,'scenario') = counter ;
+ 496  *=counter
+ 497   
+ 498   
+ 499  );
+ 500  end_time =jnow ;
+ 501  run_time_total = ghour(end_time - start_time)*3600 + gminute(end_time - start_time)*60 + gsecond(end_time - start_time);
+ 502   
+ 503   
+ 504  ** Write to a file to sort
+ 505  FILE scen_sorted /scen_sorted.csv/;
+ 506  *.PC specifies the format of the put file: 5 -> Formatted output; non-numeric output is quoted and each item is delimited with commas.
+ 507  scen_sorted.PC = 5;
+ 508  *.ND sets the number of decimals that are displayed in the put file
+ 509  scen_sorted.ND = 3;
+ 510  PUT scen_sorted;
+ 511  loop(rs, put res_scenarios(rs,'scenario') put res_scenarios(rs,'obj') put /; ) ;
+ 512  PUTCLOSE scen_sorted;
+ 513   
+ 514   
+ 515  z.lo(scen) = scenario_sorted(scen,'value') ;
+ 516  *** Ensure file was generated correctly
+ 517  if ( sum(scen,z.lo(scen)) ne threshold, abort "sorted file not generated correctly check manually") ;
+ 518  start_time = jnow ;
+ 519  schedule.solprint = 0;
+ 520  *schedule.optfile  = 1;
+ 521  schedule.solvelink = 5 ;
+ 522  solve schedule using MIP minimizing Obj ;
+ 523  end_time = jnow ;
+ 524  bound_time =  run_time_total + ghour(end_time - start_time)*3600 + gminute(end_time - start_time)*60 + gsecond(end_time - start_time);
+ 525  upperbound = Obj.l ;
+ 526  prev_y(t) = y.l(t) ;
+ 527  *prev_w(scen,t) = w.l(scen,t) ;
+ 528   
+ 529  * Clear bound on z now
+ 530  z.up(scen) = 1 ;
+ 531  z.lo(scen) = 0 ;
+ 532   
+ 533  display lowerbound,upperbound,prev_y, LP_time, bound_time  ;
+ 534   
+ 535   
+ 536  parameter ldual_iter(iter) obj function at each iteration ;
+ 537  lr_time = 0 ;
+ 538   
+ 539  option limrow = 0, limcol = 0, optca=0.0001, optcr=0.0001, RESLIM   = 2100;
+ 540   
+ 541  prev_y(t) = y.l(t) ;
+ 542   
+ 543  parameter check(scen,t);
+ 544  scalar steprule;
+ 545  scalar FinalIter;
+ 546   
+ 547  loop(indices,
+ 548      option clear=results;
+ 549      noimprovement = 0;
+ 550      lambda=init_lambda;
+ 551      lowerbound=LP_bound;
+ 552      theta=originalTheta;
+ 553      lr_time=0;
+ 554      run_time_total=0;
+ 555      contin=1;
+ 556      steprule=ord(indices);
+ 557   
+ 558      loop(iter$contin,
+ 559      num_iter = ord(iter) ;
+ 560  *         pass a warm start
+ 561               y.l(t) = prev_y(t) ;
+ 562               z.l(scen) = scenario_sorted(scen,'value') ;
+ 563               start_time = jnow;
+ 564   
+ 565  *********************************************************************
+ 566  ***Solve a Lagrangian iteration
+ 567  *********************************************************************
+ 568   
+ 569  *Test
+ 570   
+INCLUDE    C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\plain_lr.gms
+ 572  * Plain LR solve
+ 573  Lagrangian.solvelink = 5;
+ 574  Lagrangian.optfile   = 1;
+ 575  solve Lagrangian using mip minimizing bound_lr  ;
+ 576   
+ 577  bound             = bound_lr.l ;
+ 578  prev_y(t)         = y.l(t) ;
+ 579  last_z(scen)      = z.l(scen) ;
+ 580   
+ 581  * if model is unbounded
+ 582  if (Lagrangian.modelstat =18,  bound = -100000000;  );
+ 583  results(iter,'status') = Lagrangian.modelstat;
+ 584   
+ 585      end_time = jnow ;
+ 586      results(iter,'time') = ghour(end_time - start_time)*3600 + gminute(end_time - start_time)*60 + gsecond(end_time - start_time);
+ 587      results(iter,'objective') = bound ;
+ 588   
+INCLUDE    C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\LR_updates.gms
+ 590  *** UPDATES FOR LAMBDA, GAMMA, THETA
+ 591   
+ 592  * Gamma update
+ 593  gamma =  threshold - sum(scen, last_z(scen));
+ 594   
+ 595  * Bound and theta Update -> in stepsize 6
+ 596  if (bound > lowerbound,
+ 597           lowerbound = bound;
+ 598           noimprovement = 0;
+ 599  else
+ 600           noimprovement = noimprovement + 1;
+ 601           if (noimprovement > 1,  theta = theta/2; noimprovement = 0; );
+ 602  );
+ 603   
+ 604  * Fix the Stepsize
+ 605   
+INCLUDE    C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\stepsizes.gms
+ 607  *** Guarantees that never zero in the denominator
+ 608  *norm = max(abs(gamma), 1e-6);
+ 609  norm2 = max(gamma*gamma, 1e-6);
+ 610   
+ 611  *** constant step-size rule
+ 612  if(steprule=1,stepsize =0.015;);
+ 613   
+ 614  *** constant step length
+ 615  if(steprule=2,stepsize = 1.5/norm2;);
+ 616   
+ 617  *** square summable but not summable
+ 618  if(steprule=3,stepsize =0.03/(3+num_iter););
+ 619   
+ 620  *** nonsummable diminishing
+ 621  if(steprule=4,stepsize= 0.005/sqrt(num_iter););
+ 622   
+ 623  *** nonsummable diminishing step length
+ 624  if(steprule=5,stepsize= (6/num_iter)/norm2;);
+ 625   
+ 626  *** original
+ 627  if(steprule=6,stepsize=theta*(upperbound - bound)/norm2;);
+ 628   
+ 629  * Lambda Update
+ 630   
+ 631  lambdaprevious = lambda ;
+ 632   
+ 633           if (gamma ge 0 and lambdaprevious eq 0,
+ 634                   lambda = lambdaprevious ; );
+ 635           if (gamma gt 0 and lambdaprevious gt 0,
+ 636                   lambda = lambdaprevious - min(stepsize, lambdaprevious/gamma)*gamma ; );
+ 637           if (gamma le 0,
+ 638                   lambda = lambdaprevious - stepsize*gamma; );
+ 639   
+ 640  * Check convergence
+ 641  convergence=0;
+ 642  deltalambda = abs(lambdaprevious-lambda) ;
+ 643  if( deltalambda < 0.0001, contin = 0; display 'lambdas same'; convergence = 1 );
+ 644   
+ 645  * Results output
+ 646  results(iter,'deltalambda') = deltalambda;
+ 647  results(iter,'noimprov') = noimprovement;
+ 648  results(iter,'theta') = theta;
+ 649  results(iter,'step') = stepsize;
+ 650  results(iter,'gamma') = gamma ;
+ 651  results(iter,'lambda') = lambda ;
+ 652  results(iter,'gap') = (((-lowerbound)+upperbound)/(-lowerbound))    ; //gap is same as computed by GAMS
+ 653      if( ((results(iter,'gap') < exit_tol) and (num_iter > 2)),convergence=2; contin = 0;);
+ 654      lr_time = lr_time + results(iter,'time')   ;
+ 655      if (lr_time > 2400, contin = 0 ; ) ;
+ 656   
+ 657      d=results(iter,'gap');
+ 658      FinalIter=num_iter;
+ 659  );
+ 660   
+ 661  run_time_total = LP_time + lr_time + bound_time  ;
+ 662   
+ 663  * check if any p and q active simultaneously (nothing to do with Lagrangian)
+ 664  *parameter check(scen,t);
+ 665   
+ 666   
+ 667  ObjLR=-lowerbound;
+ 668  heuristic=-upperbound;
+ 669   
+ 670  put TestingFile3;
+ 671  put n, put tol, put steprule, put FinalIter, put convergence, put d, put GapNaive, put zlower, put ObjLR, put ((ObjLR-max(heuristic,zlower))/ObjLR), put TimeNaive, put lr_time, put lambda, put heuristic put /;
+ 672   
+ 673  display results, lowerbound, upperbound, LP_bound, run_time_total, lr_time, num_iter ;
+ 674  display z.l, y.l ;
+ 675  display zlower, zupper, ObjLR, heuristic;
+ 676   
+ 677  );
+ 678   
+
+**** LIST OF STRAY NAMES - CHECK DECLARATIONS FOR SPURIOUS COMMAS
+**** STRAY NAME start_cost OF TYPE PARAM
+**** STRAY NAME max_charge OF TYPE PARAM
+**** STRAY NAME max_discharge OF TYPE PARAM
+**** STRAY NAME init_bound OF TYPE PARAM
+**** STRAY NAME t1 OF TYPE PARAM
+**** STRAY NAME t2 OF TYPE PARAM
+GAMS 32.2.0  rc62c018 Released Aug 26, 2020 WEX-WEI x86 64bit/MS Windows - 09/20/21 11:07:23 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Include File Summary
+
+
+   SEQ   GLOBAL TYPE      PARENT   LOCAL  FILENAME
+
+     1        1 INPUT          0       0  C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\Naive_LR_solving.gms
+     2       19 INCLUDE        1      19  .C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\inputME.gms
+     3       41 INCLUDE        2      22  ..C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\wind_scenarios_20.csv
+     4      125 INCLUDE        2      85  ..C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\scenario_sorted_20_05.csv
+     5      186 INCLUDE        2     125  ..C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\wind_costs.csv
+     6      284 INCLUDE        1      20  .C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\subgradient_parameters.gms
+     7      319 INCLUDE        1      22  .C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\equations_all.gms
+     8      462 INCLUDE        1      71  .C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\lp_lowerbound.gms
+     9      475 INCLUDE        1      72  .C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\heuristic_upperbound.gms
+    10      571 INCLUDE        1     109  .C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\plain_lr.gms
+    11      589 INCLUDE        1     115  .C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\LR_updates.gms
+    12      606 INCLUDE       11      17  ..C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\stepsizes.gms
+
+
+COMPILATION TIME     =        0.016 SECONDS      3 MB  32.2.0 rc62c018 WEX-WEI
+GAMS 32.2.0  rc62c018 Released Aug 26, 2020 WEX-WEI x86 64bit/MS Windows - 09/20/21 11:07:23 Page 3
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+E x e c u t i o n
+
+
+----     32 Assignment G             0.000     0.000 SECS      4 MB      1
+----     33 Assignment GG            0.000     0.000 SECS      4 MB      1
+----     34 Assignment ramp          0.000     0.000 SECS      4 MB      1
+----     35 Assignment uptime        0.000     0.000 SECS      4 MB      1
+----     36 Assignment downtime      0.000     0.000 SECS      4 MB      1
+----     70 Assignment tol           0.000     0.000 SECS      4 MB      1
+----     78 Assignment time_limit    0.000     0.000 SECS      4 MB      1
+----    177 Assignment n             0.000     0.000 SECS      4 MB      1
+----    216 Assignment PRICES        0.000     0.000 SECS      4 MB     48
+----    217 Assignment PRICES        0.000     0.000 SECS      4 MB     48
+----    223 Assignment scale         0.000     0.000 SECS      4 MB      1
+----    224 Assignment wind          0.000     0.000 SECS      4 MB    480
+----    226 Assignment wind          0.000     0.000 SECS      4 MB    480
+----    230 Assignment PROBABILITY    0.000     0.000 SECS      4 MB      1
+----    238 Assignment threshold     0.000     0.000 SECS      4 MB      1
+----    255 Assignment maxwind       0.000     0.000 SECS      4 MB     24
+----    256 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    259 Assignment it            0.000     0.000 SECS      4 MB      1
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB      1
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB      1
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    266 Loop                     0.000     0.000 SECS      4 MB 
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB      2
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB      2
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    266 Loop                     0.000     0.000 SECS      4 MB 
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB      3
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB      3
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    266 Loop                     0.000     0.000 SECS      4 MB 
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB      4
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB      4
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    266 Loop                     0.000     0.000 SECS      4 MB 
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB      5
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB      5
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    266 Loop                     0.000     0.000 SECS      4 MB 
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB      6
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB      6
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    266 Loop                     0.000     0.000 SECS      4 MB 
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB      7
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB      7
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    266 Loop                     0.000     0.000 SECS      4 MB 
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB      8
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB      8
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    266 Loop                     0.000     0.000 SECS      4 MB 
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB      9
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB      9
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    266 Loop                     0.000     0.000 SECS      4 MB 
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB     10
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB     10
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    266 Loop                     0.000     0.000 SECS      4 MB 
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB     11
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB     11
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    266 Loop                     0.000     0.000 SECS      4 MB 
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB     12
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB     12
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    266 Loop                     0.000     0.000 SECS      4 MB 
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB     13
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB     13
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    266 Loop                     0.000     0.000 SECS      4 MB 
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB     14
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB     14
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    266 Loop                     0.000     0.000 SECS      4 MB 
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB     15
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB     15
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    266 Loop                     0.000     0.000 SECS      4 MB 
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB     16
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB     16
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    266 Loop                     0.000     0.000 SECS      4 MB 
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB     17
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB     17
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    266 Loop                     0.000     0.000 SECS      4 MB 
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB     18
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB     18
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    266 Loop                     0.000     0.000 SECS      4 MB 
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB     19
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB     19
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    266 Loop                     0.000     0.000 SECS      4 MB 
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB     20
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB     20
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    266 Loop                     0.000     0.000 SECS      4 MB 
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB     21
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB     21
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    266 Loop                     0.000     0.000 SECS      4 MB 
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB     22
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB     22
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    266 Loop                     0.000     0.000 SECS      4 MB 
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB     23
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB     23
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    266 Loop                     0.000     0.000 SECS      4 MB 
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB     24
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    268 Assignment minwind       0.000     0.000 SECS      4 MB     24
+----    270 Assignment dummy         0.000     0.000 SECS      4 MB      1
+----    272 Assignment dummywind     0.000     0.000 SECS      4 MB    480
+----    266 Loop                     0.000     0.000 SECS      4 MB 
+----    265 Loop                     0.000     0.000 SECS      4 MB 
+
+----    274 PARAMETER minwind  
+
+t1  24.01000000,    t2  15.73000000,    t3  10.83000000,    t4   0.59000000,    t5   1.15000000,    t6   6.02000000,    t7   1.57000000,    t8   2.70000000,    t9   2.42000000,    t10  2.45000000,    t11  4.36000000,    t12  3.71000000,    t13  0.66000000,    t14  0.51000000,    t15  4.15000000,    t16 17.18000000,    t17 12.83000000,    t18  7.68000000,    t19 19.06000000,    t20 18.92000000,    t21 16.03000000,    t22 17.93000000,    t23 10.25000000,    t24  2.63000000
+
+----    274 Display                  0.000     0.000 SECS      4 MB 
+----    279 Assignment BigMM         0.000     0.000 SECS      4 MB     20
+----    280 Assignment BigM          0.000     0.000 SECS      4 MB    480
+----    296 Assignment originalTheta    0.000     0.000 SECS      4 MB      1
+----    317 Assignment exit_tol      0.000     0.000 SECS      4 MB      1
+----    394 Assignment X             0.000     0.000 SECS      4 MB    480
+----    395 Assignment U             0.000     0.000 SECS      4 MB    480
+----    396 Assignment V             0.000     0.000 SECS      4 MB    480
+----    397 Assignment Z             0.000     0.000 SECS      4 MB      0
+----    401 Assignment R             0.000     0.000 SECS      4 MB     20
+----    402 Assignment U             0.000     0.000 SECS      4 MB    480
+----    403 Assignment V             0.000     0.000 SECS      4 MB    480
+----    405 Assignment X             0.000     0.000 SECS      4 MB    480
+----    420 Assignment TestingFile3    0.000     0.000 SECS      4 MB      0
+----    421 Assignment TestingFile3    0.000     0.000 SECS      4 MB      0
+----    422 Put                      0.000     0.000 SECS      4 MB 
+----    423 Put                      0.000     0.000 SECS      4 MB 
+----    423 Put                      0.000     0.000 SECS      4 MB 
+----    423 Put                      0.000     0.000 SECS      4 MB 
+----    423 Put                      0.000     0.000 SECS      4 MB 
+----    423 Put                      0.000     0.000 SECS      4 MB 
+----    423 Put                      0.000     0.000 SECS      4 MB 
+----    423 Put                      0.000     0.000 SECS      4 MB 
+----    423 Put                      0.000     0.000 SECS      4 MB 
+----    423 Put                      0.000     0.000 SECS      4 MB 
+----    423 Put                      0.000     0.000 SECS      4 MB 
+----    423 Put                      0.000     0.000 SECS      4 MB 
+----    423 Put                      0.000     0.000 SECS      4 MB 
+----    423 Put                      0.000     0.000 SECS      4 MB 
+----    423 Put                      0.000     0.000 SECS      4 MB 
+----    423 Put                      0.000     0.000 SECS      4 MB 
+----    429 Assignment start_time    0.000     0.000 SECS      4 MB      1
+GAMS 32.2.0  rc62c018 Released Aug 26, 2020 WEX-WEI x86 64bit/MS Windows - 09/20/21 11:07:23 Page 4
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Analysis      SOLVE schedule Using MIP From line 430
+
+
+----    430 Solve Init schedule      0.000     0.000 SECS      4 MB 
+GAMS 32.2.0  rc62c018 Released Aug 26, 2020 WEX-WEI x86 64bit/MS Windows - 09/20/21 11:07:23 Page 5
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Equation Listing    SOLVE schedule Using MIP From line 430
+
+
+---- Objective  =E=  
+
+Objective..  - 2.5*X(scen1,t1) - 2.5*X(scen1,t2) - 2.5*X(scen1,t3) - 2.5*X(scen1,t4) - 2.5*X(scen1,t5) - 2.5*X(scen1,t6) - 2.5*X(scen1,t7) - 2.5*X(scen1,t8) - 2.5*X(scen1,t9) - 2.5*X(scen1,t10) - 2.5*X(scen1,t11) - 2.5*X(scen1,t12) - 2.5*X(scen1,t13) - 2.5*X(scen1,t14) - 2.5*X(scen1,t15) - 2.5*X(scen1,t16) - 2.5*X(scen1,t17) - 2.5*X(scen1,t18) - 2.5*X(scen1,t19) - 2.5*X(scen1,t20) - 2.5*X(scen1,t21) - 2.5*X(scen1,t22) - 2.5*X(scen1,t23) - 2.5*X(scen1,t24) - 2.5*X(scen2,t1) - 2.5*X(scen2,t2) - 2.5*X(scen2,t3) - 2.5*X(scen2,t4) - 2.5*X(scen2,t5) - 2.5*X(scen2,t6) - 2.5*X(scen2,t7) - 2.5*X(scen2,t8) - 2.5*X(scen2,t9) - 2.5*X(scen2,t10) - 2.5*X(scen2,t11) - 2.5*X(scen2,t12) - 2.5*X(scen2,t13) - 2.5*X(scen2,t14) - 2.5*X(scen2,t15) - 2.5*X(scen2,t16) - 2.5*X(scen2,t17) - 2.5*X(scen2,t18) - 2.5*X(scen2,t19) - 2.5*X(scen2,t20) - 2.5*X(scen2,t21) - 2.5*X(scen2,t22) - 2.5*X(scen2,t23) - 2.5*X(scen2,t24) - 2.5*X(scen3,t1) - 2.5*X(scen3,t2) - 2.5*X(scen3,t3) - 2.5*X(scen3,t4) - 2.5*X(scen3,t5) - 2.5*X(scen3,t6) - 2.5*X(scen3,t7) - 2.5*X(scen3,t8) - 2.5*X(scen3,t9) - 2.5*X(scen3,t10) - 2.5*X(scen3,t11) - 2.5*X(scen3,t12) - 2.5*X(scen3,t13) - 2.5*X(scen3,t14) - 2.5*X(scen3,t15) - 2.5*X(scen3,t16) - 2.5*X(scen3,t17) - 2.5*X(scen3,t18) - 2.5*X(scen3,t19) - 2.5*X(scen3,t20) - 2.5*X(scen3,t21) - 2.5*X(scen3,t22) - 2.5*X(scen3,t23) - 2.5*X(scen3,t24) - 2.5*X(scen4,t1) - 2.5*X(scen4,t2) - 2.5*X(scen4,t3) - 2.5*X(scen4,t4) - 2.5*X(scen4,t5) - 2.5*X(scen4,t6) - 2.5*X(scen4,t7) - 2.5*X(scen4,t8) - 2.5*X(scen4,t9) - 2.5*X(scen4,t10) - 2.5*X(scen4,t11) - 2.5*X(scen4,t12) - 2.5*X(scen4,t13) - 2.5*X(scen4,t14) - 2.5*X(scen4,t15) - 2.5*X(scen4,t16) - 2.5*X(scen4,t17) - 2.5*X(scen4,t18) - 2.5*X(scen4,t19) - 2.5*X(scen4,t20) - 2.5*X(scen4,t21) - 2.5*X(scen4,t22) - 2.5*X(scen4,t23) - 2.5*X(scen4,t24) - 2.5*X(scen5,t1) - 2.5*X(scen5,t2) - 2.5*X(scen5,t3) - 2.5*X(scen5,t4) - 2.5*X(scen5,t5) - 2.5*X(scen5,t6) - 2.5*X(scen5,t7) - 2.5*X(scen5,t8) - 2.5*X(scen5,t9) - 2.5*X(scen5,t10) - 2.5*X(scen5,t11) - 2.5*X(scen5,t12) - 2.5*X(scen5,t13) - 2.5*X(scen5,t14) - 2.5*X(scen5,t15) - 2.5*X(scen5,t16) - 2.5*X(scen5,t17) - 2.5*X(scen5,t18) - 2.5*X(scen5,t19) - 2.5*X(scen5,t20) - 2.5*X(scen5,t21) - 2.5*X(scen5,t22) - 2.5*X(scen5,t23) - 2.5*X(scen5,t24) - 2.5*X(scen6,t1) - 2.5*X(scen6,t2) - 2.5*X(scen6,t3) - 2.5*X(scen6,t4) - 2.5*X(scen6,t5) - 2.5*X(scen6,t6) - 2.5*X(scen6,t7) - 2.5*X(scen6,t8) - 2.5*X(scen6,t9) - 2.5*X(scen6,t10) - 2.5*X(scen6,t11) - 2.5*X(scen6,t12) - 2.5*X(scen6,t13) - 2.5*X(scen6,t14) - 2.5*X(scen6,t15) - 2.5*X(scen6,t16) - 2.5*X(scen6,t17) - 2.5*X(scen6,t18) - 2.5*X(scen6,t19) - 2.5*X(scen6,t20) - 2.5*X(scen6,t21) - 2.5*X(scen6,t22) - 2.5*X(scen6,t23) - 2.5*X(scen6,t24) - 2.5*X(scen7,t1) - 2.5*X(scen7,t2) - 2.5*X(scen7,t3) - 2.5*X(scen7,t4) - 2.5*X(scen7,t5) - 2.5*X(scen7,t6) - 2.5*X(scen7,t7) - 2.5*X(scen7,t8) - 2.5*X(scen7,t9) - 2.5*X(scen7,t10) - 2.5*X(scen7,t11) - 2.5*X(scen7,t12) - 2.5*X(scen7,t13) - 2.5*X(scen7,t14) - 2.5*X(scen7,t15) - 2.5*X(scen7,t16) - 2.5*X(scen7,t17) - 2.5*X(scen7,t18) - 2.5*X(scen7,t19) - 2.5*X(scen7,t20) - 2.5*X(scen7,t21) - 2.5*X(scen7,t22) - 2.5*X(scen7,t23) - 2.5*X(scen7,t24) - 2.5*X(scen8,t1) - 2.5*X(scen8,t2) - 2.5*X(scen8,t3) - 2.5*X(scen8,t4) - 2.5*X(scen8,t5) - 2.5*X(scen8,t6) - 2.5*X(scen8,t7) - 2.5*X(scen8,t8) - 2.5*X(scen8,t9) - 2.5*X(scen8,t10) - 2.5*X(scen8,t11) - 2.5*X(scen8,t12) - 2.5*X(scen8,t13) - 2.5*X(scen8,t14) - 2.5*X(scen8,t15) - 2.5*X(scen8,t16) - 2.5*X(scen8,t17) - 2.5*X(scen8,t18) - 2.5*X(scen8,t19) - 2.5*X(scen8,t20) - 2.5*X(scen8,t21) - 2.5*X(scen8,t22) - 2.5*X(scen8,t23) - 2.5*X(scen8,t24) - 2.5*X(scen9,t1) - 2.5*X(scen9,t2) - 2.5*X(scen9,t3) - 2.5*X(scen9,t4) - 2.5*X(scen9,t5) - 2.5*X(scen9,t6) - 2.5*X(scen9,t7) - 2.5*X(scen9,t8) - 2.5*X(scen9,t9) - 2.5*X(scen9,t10) - 2.5*X(scen9,t11) - 2.5*X(scen9,t12) - 2.5*X(scen9,t13) - 2.5*X(scen9,t14) - 2.5*X(scen9,t15) - 2.5*X(scen9,t16) - 2.5*X(scen9,t17) - 2.5*X(scen9,t18) - 2.5*X(scen9,t19) - 2.5*X(scen9,t20) - 2.5*X(scen9,t21) - 2.5*X(scen9,t22) - 2.5*X(scen9,t23) - 2.5*X(scen9,t24) - 2.5*X(scen10,t1) - 2.5*X(scen10,t2) - 2.5*X(scen10,t3) - 2.5*X(scen10,t4) - 2.5*X(scen10,t5) - 2.5*X(scen10,t6) - 2.5*X(scen10,t7) - 2.5*X(scen10,t8) - 2.5*X(scen10,t9) - 2.5*X(scen10,t10) - 2.5*X(scen10,t11) - 2.5*X(scen10,t12) - 2.5*X(scen10,t13) - 2.5*X(scen10,t14) - 2.5*X(scen10,t15) - 2.5*X(scen10,t16) - 2.5*X(scen10,t17) - 2.5*X(scen10,t18) - 2.5*X(scen10,t19) - 2.5*X(scen10,t20) - 2.5*X(scen10,t21) - 2.5*X(scen10,t22) - 2.5*X(scen10,t23) - 2.5*X(scen10,t24) - 2.5*X(scen11,t1) - 2.5*X(scen11,t2) - 2.5*X(scen11,t3) - 2.5*X(scen11,t4) - 2.5*X(scen11,t5) - 2.5*X(scen11,t6) - 2.5*X(scen11,t7) - 2.5*X(scen11,t8) - 2.5*X(scen11,t9) - 2.5*X(scen11,t10) - 2.5*X(scen11,t11) - 2.5*X(scen11,t12) - 2.5*X(scen11,t13) - 2.5*X(scen11,t14) - 2.5*X(scen11,t15) - 2.5*X(scen11,t16) - 2.5*X(scen11,t17) - 2.5*X(scen11,t18) - 2.5*X(scen11,t19) - 2.5*X(scen11,t20) - 2.5*X(scen11,t21) - 2.5*X(scen11,t22) - 2.5*X(scen11,t23) - 2.5*X(scen11,t24) - 2.5*X(scen12,t1) - 2.5*X(scen12,t2) - 2.5*X(scen12,t3) - 2.5*X(scen12,t4) - 2.5*X(scen12,t5) - 2.5*X(scen12,t6) - 2.5*X(scen12,t7) - 2.5*X(scen12,t8) - 2.5*X(scen12,t9) - 2.5*X(scen12,t10) - 2.5*X(scen12,t11) - 2.5*X(scen12,t12) - 2.5*X(scen12,t13) - 2.5*X(scen12,t14) - 2.5*X(scen12,t15) - 2.5*X(scen12,t16) - 2.5*X(scen12,t17) - 2.5*X(scen12,t18) - 2.5*X(scen12,t19) - 2.5*X(scen12,t20) - 2.5*X(scen12,t21) - 2.5*X(scen12,t22) - 2.5*X(scen12,t23) - 2.5*X(scen12,t24) - 2.5*X(scen13,t1) - 2.5*X(scen13,t2) - 2.5*X(scen13,t3) - 2.5*X(scen13,t4) - 2.5*X(scen13,t5) - 2.5*X(scen13,t6) - 2.5*X(scen13,t7) - 2.5*X(scen13,t8) - 2.5*X(scen13,t9) - 2.5*X(scen13,t10) - 2.5*X(scen13,t11) - 2.5*X(scen13,t12) - 2.5*X(scen13,t13) - 2.5*X(scen13,t14) - 2.5*X(scen13,t15) - 2.5*X(scen13,t16) - 2.5*X(scen13,t17) - 2.5*X(scen13,t18) - 2.5*X(scen13,t19) - 2.5*X(scen13,t20) - 2.5*X(scen13,t21) - 2.5*X(scen13,t22) - 2.5*X(scen13,t23) - 2.5*X(scen13,t24) - 2.5*X(scen14,t1) - 2.5*X(scen14,t2) - 2.5*X(scen14,t3) - 2.5*X(scen14,t4) - 2.5*X(scen14,t5) - 2.5*X(scen14,t6) - 2.5*X(scen14,t7) - 2.5*X(scen14,t8) - 2.5*X(scen14,t9) - 2.5*X(scen14,t10) - 2.5*X(scen14,t11) - 2.5*X(scen14,t12) - 2.5*X(scen14,t13) - 2.5*X(scen14,t14) - 2.5*X(scen14,t15) - 2.5*X(scen14,t16) - 2.5*X(scen14,t17) - 2.5*X(scen14,t18) - 2.5*X(scen14,t19) - 2.5*X(scen14,t20) - 2.5*X(scen14,t21) - 2.5*X(scen14,t22) - 2.5*X(scen14,t23) - 2.5*X(scen14,t24) - 2.5*X(scen15,t1) - 2.5*X(scen15,t2) - 2.5*X(scen15,t3) - 2.5*X(scen15,t4) - 2.5*X(scen15,t5) - 2.5*X(scen15,t6) - 2.5*X(scen15,t7) - 2.5*X(scen15,t8) - 2.5*X(scen15,t9) - 2.5*X(scen15,t10) - 2.5*X(scen15,t11) - 2.5*X(scen15,t12) - 2.5*X(scen15,t13) - 2.5*X(scen15,t14) - 2.5*X(scen15,t15) - 2.5*X(scen15,t16) - 2.5*X(scen15,t17) - 2.5*X(scen15,t18) - 2.5*X(scen15,t19) - 2.5*X(scen15,t20) - 2.5*X(scen15,t21) - 2.5*X(scen15,t22) - 2.5*X(scen15,t23) - 2.5*X(scen15,t24) - 2.5*X(scen16,t1) - 2.5*X(scen16,t2) - 2.5*X(scen16,t3) - 2.5*X(scen16,t4) - 2.5*X(scen16,t5) - 2.5*X(scen16,t6) - 2.5*X(scen16,t7) - 2.5*X(scen16,t8) - 2.5*X(scen16,t9) - 2.5*X(scen16,t10) - 2.5*X(scen16,t11) - 2.5*X(scen16,t12) - 2.5*X(scen16,t13) - 2.5*X(scen16,t14) - 2.5*X(scen16,t15) - 2.5*X(scen16,t16) - 2.5*X(scen16,t17) - 2.5*X(scen16,t18) - 2.5*X(scen16,t19) - 2.5*X(scen16,t20) - 2.5*X(scen16,t21) - 2.5*X(scen16,t22) - 2.5*X(scen16,t23) - 2.5*X(scen16,t24) - 2.5*X(scen17,t1) - 2.5*X(scen17,t2) - 2.5*X(scen17,t3) - 2.5*X(scen17,t4) - 2.5*X(scen17,t5) - 2.5*X(scen17,t6) - 2.5*X(scen17,t7) - 2.5*X(scen17,t8) - 2.5*X(scen17,t9) - 2.5*X(scen17,t10) - 2.5*X(scen17,t11) - 2.5*X(scen17,t12) - 2.5*X(scen17,t13) - 2.5*X(scen17,t14) - 2.5*X(scen17,t15) - 2.5*X(scen17,t16) - 2.5*X(scen17,t17) - 2.5*X(scen17,t18) - 2.5*X(scen17,t19) - 2.5*X(scen17,t20) - 2.5*X(scen17,t21) - 2.5*X(scen17,t22) - 2.5*X(scen17,t23) - 2.5*X(scen17,t24) - 2.5*X(scen18,t1) - 2.5*X(scen18,t2) - 2.5*X(scen18,t3) - 2.5*X(scen18,t4) - 2.5*X(scen18,t5) - 2.5*X(scen18,t6) - 2.5*X(scen18,t7) - 2.5*X(scen18,t8) - 2.5*X(scen18,t9) - 2.5*X(scen18,t10) - 2.5*X(scen18,t11) - 2.5*X(scen18,t12) - 2.5*X(scen18,t13) - 2.5*X(scen18,t14) - 2.5*X(scen18,t15) - 2.5*X(scen18,t16) - 2.5*X(scen18,t17) - 2.5*X(scen18,t18) - 2.5*X(scen18,t19) - 2.5*X(scen18,t20) - 2.5*X(scen18,t21) - 2.5*X(scen18,t22) - 2.5*X(scen18,t23) - 2.5*X(scen18,t24) - 2.5*X(scen19,t1) - 2.5*X(scen19,t2) - 2.5*X(scen19,t3) - 2.5*X(scen19,t4) - 2.5*X(scen19,t5) - 2.5*X(scen19,t6) - 2.5*X(scen19,t7) - 2.5*X(scen19,t8) - 2.5*X(scen19,t9) - 2.5*X(scen19,t10) - 2.5*X(scen19,t11) - 2.5*X(scen19,t12) - 2.5*X(scen19,t13) - 2.5*X(scen19,t14) - 2.5*X(scen19,t15) - 2.5*X(scen19,t16) - 2.5*X(scen19,t17) - 2.5*X(scen19,t18) - 2.5*X(scen19,t19) - 2.5*X(scen19,t20) - 2.5*X(scen19,t21) - 2.5*X(scen19,t22) - 2.5*X(scen19,t23) - 2.5*X(scen19,t24) - 2.5*X(scen20,t1) - 2.5*X(scen20,t2) - 2.5*X(scen20,t3) - 2.5*X(scen20,t4) - 2.5*X(scen20,t5) - 2.5*X(scen20,t6) - 2.5*X(scen20,t7) - 2.5*X(scen20,t8) - 2.5*X(scen20,t9) - 2.5*X(scen20,t10) - 2.5*X(scen20,t11) - 2.5*X(scen20,t12) - 2.5*X(scen20,t13) - 2.5*X(scen20,t14) - 2.5*X(scen20,t15) - 2.5*X(scen20,t16) - 2.5*X(scen20,t17) - 2.5*X(scen20,t18) - 2.5*X(scen20,t19) - 2.5*X(scen20,t20) - 2.5*X(scen20,t21) - 2.5*X(scen20,t22) - 2.5*X(scen20,t23) - 2.5*X(scen20,t24) + 21.86631793*Y(t1) + 22.68762551*Y(t2) + 22.63231186*Y(t3) + 23.53977501*Y(t4) + 24.15305477*Y(t5) + 25.0022415*Y(t6) + 26.14884331*Y(t7) + 28.48265662*Y(t8) + 35.32421651*Y(t9) + 53.07988113*Y(t10) + 67.07745747*Y(t11) + 43.78264533*Y(t12) + 33.25218533*Y(t13) + 28.68827035*Y(t14) + 26.76175663*Y(t15) + 23.97472252*Y(t16) + 21.05077606*Y(t17) + 18.8721276*Y(t18) + 17.16537812*Y(t19) + 15.4798614*Y(t20) + 14.81514842*Y(t21) + 14.64047737*Y(t22) + 15.10197375*Y(t23) + 17.32390701*Y(t24) + OBJ - 50*R(scen1,t1) - 50*R(scen1,t2) - 50*R(scen1,t3) - 50*R(scen1,t4) - 50*R(scen1,t5) - 50*R(scen1,t6) - 50*R(scen1,t7) - 50*R(scen1,t8) - 50*R(scen1,t9) - 50*R(scen1,t10) - 50*R(scen1,t11) - 50*R(scen1,t12) - 50*R(scen1,t13) - 50*R(scen1,t14) - 50*R(scen1,t15) - 50*R(scen1,t16) - 50*R(scen1,t17) - 50*R(scen1,t18) - 50*R(scen1,t19) - 50*R(scen1,t20) - 50*R(scen1,t21) - 50*R(scen1,t22) - 50*R(scen1,t23) - 50*R(scen1,t24) - 50*R(scen2,t1) - 50*R(scen2,t2) - 50*R(scen2,t3) - 50*R(scen2,t4) - 50*R(scen2,t5) - 50*R(scen2,t6) - 50*R(scen2,t7) - 50*R(scen2,t8) - 50*R(scen2,t9) - 50*R(scen2,t10) - 50*R(scen2,t11) - 50*R(scen2,t12) - 50*R(scen2,t13) - 50*R(scen2,t14) - 50*R(scen2,t15) - 50*R(scen2,t16) - 50*R(scen2,t17) - 50*R(scen2,t18) - 50*R(scen2,t19) - 50*R(scen2,t20) - 50*R(scen2,t21) - 50*R(scen2,t22) - 50*R(scen2,t23) - 50*R(scen2,t24) - 50*R(scen3,t1) - 50*R(scen3,t2) - 50*R(scen3,t3) - 50*R(scen3,t4) - 50*R(scen3,t5) - 50*R(scen3,t6) - 50*R(scen3,t7) - 50*R(scen3,t8) - 50*R(scen3,t9) - 50*R(scen3,t10) - 50*R(scen3,t11) - 50*R(scen3,t12) - 50*R(scen3,t13) - 50*R(scen3,t14) - 50*R(scen3,t15) - 50*R(scen3,t16) - 50*R(scen3,t17) - 50*R(scen3,t18) - 50*R(scen3,t19) - 50*R(scen3,t20) - 50*R(scen3,t21) - 50*R(scen3,t22) - 50*R(scen3,t23) - 50*R(scen3,t24) - 50*R(scen4,t1) - 50*R(scen4,t2) - 50*R(scen4,t3) - 50*R(scen4,t4) - 50*R(scen4,t5) - 50*R(scen4,t6) - 50*R(scen4,t7) - 50*R(scen4,t8) - 50*R(scen4,t9) - 50*R(scen4,t10) - 50*R(scen4,t11) - 50*R(scen4,t12) - 50*R(scen4,t13) - 50*R(scen4,t14) - 50*R(scen4,t15) - 50*R(scen4,t16) - 50*R(scen4,t17) - 50*R(scen4,t18) - 50*R(scen4,t19) - 50*R(scen4,t20) - 50*R(scen4,t21) - 50*R(scen4,t22) - 50*R(scen4,t23) - 50*R(scen4,t24) - 50*R(scen5,t1) - 50*R(scen5,t2) - 50*R(scen5,t3) - 50*R(scen5,t4) - 50*R(scen5,t5) - 50*R(scen5,t6) - 50*R(scen5,t7) - 50*R(scen5,t8) - 50*R(scen5,t9) - 50*R(scen5,t10) - 50*R(scen5,t11) - 50*R(scen5,t12) - 50*R(scen5,t13) - 50*R(scen5,t14) - 50*R(scen5,t15) - 50*R(scen5,t16) - 50*R(scen5,t17) - 50*R(scen5,t18) - 50*R(scen5,t19) - 50*R(scen5,t20) - 50*R(scen5,t21) - 50*R(scen5,t22) - 50*R(scen5,t23) - 50*R(scen5,t24) - 50*R(scen6,t1) - 50*R(scen6,t2) - 50*R(scen6,t3) - 50*R(scen6,t4) - 50*R(scen6,t5) - 50*R(scen6,t6) - 50*R(scen6,t7) - 50*R(scen6,t8) - 50*R(scen6,t9) - 50*R(scen6,t10) - 50*R(scen6,t11) - 50*R(scen6,t12) - 50*R(scen6,t13) - 50*R(scen6,t14) - 50*R(scen6,t15) - 50*R(scen6,t16) - 50*R(scen6,t17) - 50*R(scen6,t18) - 50*R(scen6,t19) - 50*R(scen6,t20) - 50*R(scen6,t21) - 50*R(scen6,t22) - 50*R(scen6,t23) - 50*R(scen6,t24) - 50*R(scen7,t1) - 50*R(scen7,t2) - 50*R(scen7,t3) - 50*R(scen7,t4) - 50*R(scen7,t5) - 50*R(scen7,t6) - 50*R(scen7,t7) - 50*R(scen7,t8) - 50*R(scen7,t9) - 50*R(scen7,t10) - 50*R(scen7,t11) - 50*R(scen7,t12) - 50*R(scen7,t13) - 50*R(scen7,t14) - 50*R(scen7,t15) - 50*R(scen7,t16) - 50*R(scen7,t17) - 50*R(scen7,t18) - 50*R(scen7,t19) - 50*R(scen7,t20) - 50*R(scen7,t21) - 50*R(scen7,t22) - 50*R(scen7,t23) - 50*R(scen7,t24) - 50*R(scen8,t1) - 50*R(scen8,t2) - 50*R(scen8,t3) - 50*R(scen8,t4) - 50*R(scen8,t5) - 50*R(scen8,t6) - 50*R(scen8,t7) - 50*R(scen8,t8) - 50*R(scen8,t9) - 50*R(scen8,t10) - 50*R(scen8,t11) - 50*R(scen8,t12) - 50*R(scen8,t13) - 50*R(scen8,t14) - 50*R(scen8,t15) - 50*R(scen8,t16) - 50*R(scen8,t17) - 50*R(scen8,t18) - 50*R(scen8,t19) - 50*R(scen8,t20) - 50*R(scen8,t21) - 50*R(scen8,t22) - 50*R(scen8,t23) - 50*R(scen8,t24) - 50*R(scen9,t1) - 50*R(scen9,t2) - 50*R(scen9,t3) - 50*R(scen9,t4) - 50*R(scen9,t5) - 50*R(scen9,t6) - 50*R(scen9,t7) - 50*R(scen9,t8) - 50*R(scen9,t9) - 50*R(scen9,t10) - 50*R(scen9,t11) - 50*R(scen9,t12) - 50*R(scen9,t13) - 50*R(scen9,t14) - 50*R(scen9,t15) - 50*R(scen9,t16) - 50*R(scen9,t17) - 50*R(scen9,t18) - 50*R(scen9,t19) - 50*R(scen9,t20) - 50*R(scen9,t21) - 50*R(scen9,t22) - 50*R(scen9,t23) - 50*R(scen9,t24) - 50*R(scen10,t1) - 50*R(scen10,t2) - 50*R(scen10,t3) - 50*R(scen10,t4) - 50*R(scen10,t5) - 50*R(scen10,t6) - 50*R(scen10,t7) - 50*R(scen10,t8) - 50*R(scen10,t9) - 50*R(scen10,t10) - 50*R(scen10,t11) - 50*R(scen10,t12) - 50*R(scen10,t13) - 50*R(scen10,t14) - 50*R(scen10,t15) - 50*R(scen10,t16) - 50*R(scen10,t17) - 50*R(scen10,t18) - 50*R(scen10,t19) - 50*R(scen10,t20) - 50*R(scen10,t21) - 50*R(scen10,t22) - 50*R(scen10,t23) - 50*R(scen10,t24) - 50*R(scen11,t1) - 50*R(scen11,t2) - 50*R(scen11,t3) - 50*R(scen11,t4) - 50*R(scen11,t5) - 50*R(scen11,t6) - 50*R(scen11,t7) - 50*R(scen11,t8) - 50*R(scen11,t9) - 50*R(scen11,t10) - 50*R(scen11,t11) - 50*R(scen11,t12) - 50*R(scen11,t13) - 50*R(scen11,t14) - 50*R(scen11,t15) - 50*R(scen11,t16) - 50*R(scen11,t17) - 50*R(scen11,t18) - 50*R(scen11,t19) - 50*R(scen11,t20) - 50*R(scen11,t21) - 50*R(scen11,t22) - 50*R(scen11,t23) - 50*R(scen11,t24) - 50*R(scen12,t1) - 50*R(scen12,t2) - 50*R(scen12,t3) - 50*R(scen12,t4) - 50*R(scen12,t5) - 50*R(scen12,t6) - 50*R(scen12,t7) - 50*R(scen12,t8) - 50*R(scen12,t9) - 50*R(scen12,t10) - 50*R(scen12,t11) - 50*R(scen12,t12) - 50*R(scen12,t13) - 50*R(scen12,t14) - 50*R(scen12,t15) - 50*R(scen12,t16) - 50*R(scen12,t17) - 50*R(scen12,t18) - 50*R(scen12,t19) - 50*R(scen12,t20) - 50*R(scen12,t21) - 50*R(scen12,t22) - 50*R(scen12,t23) - 50*R(scen12,t24) - 50*R(scen13,t1) - 50*R(scen13,t2) - 50*R(scen13,t3) - 50*R(scen13,t4) - 50*R(scen13,t5) - 50*R(scen13,t6) - 50*R(scen13,t7) - 50*R(scen13,t8) - 50*R(scen13,t9) - 50*R(scen13,t10) - 50*R(scen13,t11) - 50*R(scen13,t12) - 50*R(scen13,t13) - 50*R(scen13,t14) - 50*R(scen13,t15) - 50*R(scen13,t16) - 50*R(scen13,t17) - 50*R(scen13,t18) - 50*R(scen13,t19) - 50*R(scen13,t20) - 50*R(scen13,t21) - 50*R(scen13,t22) - 50*R(scen13,t23) - 50*R(scen13,t24) - 50*R(scen14,t1) - 50*R(scen14,t2) - 50*R(scen14,t3) - 50*R(scen14,t4) - 50*R(scen14,t5) - 50*R(scen14,t6) - 50*R(scen14,t7) - 50*R(scen14,t8) - 50*R(scen14,t9) - 50*R(scen14,t10) - 50*R(scen14,t11) - 50*R(scen14,t12) - 50*R(scen14,t13) - 50*R(scen14,t14) - 50*R(scen14,t15) - 50*R(scen14,t16) - 50*R(scen14,t17) - 50*R(scen14,t18) - 50*R(scen14,t19) - 50*R(scen14,t20) - 50*R(scen14,t21) - 50*R(scen14,t22) - 50*R(scen14,t23) - 50*R(scen14,t24) - 50*R(scen15,t1) - 50*R(scen15,t2) - 50*R(scen15,t3) - 50*R(scen15,t4) - 50*R(scen15,t5) - 50*R(scen15,t6) - 50*R(scen15,t7) - 50*R(scen15,t8) - 50*R(scen15,t9) - 50*R(scen15,t10) - 50*R(scen15,t11) - 50*R(scen15,t12) - 50*R(scen15,t13) - 50*R(scen15,t14) - 50*R(scen15,t15) - 50*R(scen15,t16) - 50*R(scen15,t17) - 50*R(scen15,t18) - 50*R(scen15,t19) - 50*R(scen15,t20) - 50*R(scen15,t21) - 50*R(scen15,t22) - 50*R(scen15,t23) - 50*R(scen15,t24) - 50*R(scen16,t1) - 50*R(scen16,t2) - 50*R(scen16,t3) - 50*R(scen16,t4) - 50*R(scen16,t5) - 50*R(scen16,t6) - 50*R(scen16,t7) - 50*R(scen16,t8) - 50*R(scen16,t9) - 50*R(scen16,t10) - 50*R(scen16,t11) - 50*R(scen16,t12) - 50*R(scen16,t13) - 50*R(scen16,t14) - 50*R(scen16,t15) - 50*R(scen16,t16) - 50*R(scen16,t17) - 50*R(scen16,t18) - 50*R(scen16,t19) - 50*R(scen16,t20) - 50*R(scen16,t21) - 50*R(scen16,t22) - 50*R(scen16,t23) - 50*R(scen16,t24) - 50*R(scen17,t1) - 50*R(scen17,t2) - 50*R(scen17,t3) - 50*R(scen17,t4) - 50*R(scen17,t5) - 50*R(scen17,t6) - 50*R(scen17,t7) - 50*R(scen17,t8) - 50*R(scen17,t9) - 50*R(scen17,t10) - 50*R(scen17,t11) - 50*R(scen17,t12) - 50*R(scen17,t13) - 50*R(scen17,t14) - 50*R(scen17,t15) - 50*R(scen17,t16) - 50*R(scen17,t17) - 50*R(scen17,t18) - 50*R(scen17,t19) - 50*R(scen17,t20) - 50*R(scen17,t21) - 50*R(scen17,t22) - 50*R(scen17,t23) - 50*R(scen17,t24) - 50*R(scen18,t1) - 50*R(scen18,t2) - 50*R(scen18,t3) - 50*R(scen18,t4) - 50*R(scen18,t5) - 50*R(scen18,t6) - 50*R(scen18,t7) - 50*R(scen18,t8) - 50*R(scen18,t9) - 50*R(scen18,t10) - 50*R(scen18,t11) - 50*R(scen18,t12) - 50*R(scen18,t13) - 50*R(scen18,t14) - 50*R(scen18,t15) - 50*R(scen18,t16) - 50*R(scen18,t17) - 50*R(scen18,t18) - 50*R(scen18,t19) - 50*R(scen18,t20) - 50*R(scen18,t21) - 50*R(scen18,t22) - 50*R(scen18,t23) - 50*R(scen18,t24) - 50*R(scen19,t1) - 50*R(scen19,t2) - 50*R(scen19,t3) - 50*R(scen19,t4) - 50*R(scen19,t5) - 50*R(scen19,t6) - 50*R(scen19,t7) - 50*R(scen19,t8) - 50*R(scen19,t9) - 50*R(scen19,t10) - 50*R(scen19,t11) - 50*R(scen19,t12) - 50*R(scen19,t13) - 50*R(scen19,t14) - 50*R(scen19,t15) - 50*R(scen19,t16) - 50*R(scen19,t17) - 50*R(scen19,t18) - 50*R(scen19,t19) - 50*R(scen19,t20) - 50*R(scen19,t21) - 50*R(scen19,t22) - 50*R(scen19,t23) - 50*R(scen19,t24) - 50*R(scen20,t1) - 50*R(scen20,t2) - 50*R(scen20,t3) - 50*R(scen20,t4) - 50*R(scen20,t5) - 50*R(scen20,t6) - 50*R(scen20,t7) - 50*R(scen20,t8) - 50*R(scen20,t9) - 50*R(scen20,t10) - 50*R(scen20,t11) - 50*R(scen20,t12) - 50*R(scen20,t13) - 50*R(scen20,t14) - 50*R(scen20,t15) - 50*R(scen20,t16) - 50*R(scen20,t17) - 50*R(scen20,t18) - 50*R(scen20,t19) - 50*R(scen20,t20) - 50*R(scen20,t21) - 50*R(scen20,t22) - 50*R(scen20,t23) - 50*R(scen20,t24) =E= 0 ; (LHS = -1000, INFES = 1000 ****)
+     
+----    347 Equation   Objective     0.015     0.015 SECS      4 MB      1
+                                      0.000              ROWGEN
+                                      0.015              COLGEN
+
+---- Const1_1  =L=  
+
+Const1_1(scen1,t1)..  - X(scen1,t1) + Y(t1) - 113.22*Z(scen1) - 20*R(scen1,t1) =L= 40.79 ; (LHS = -20)
+     
+Const1_1(scen1,t2)..  - X(scen1,t2) + Y(t2) - 114.44*Z(scen1) - 20*R(scen1,t2) =L= 31.29 ; (LHS = 0)
+     
+Const1_1(scen1,t3)..  - X(scen1,t3) + Y(t3) - 109.14*Z(scen1) - 20*R(scen1,t3) =L= 31.69 ; (LHS = 0)
+     
+Const1_1(scen1,t4)..  - X(scen1,t4) + Y(t4) - 117.49*Z(scen1) - 20*R(scen1,t4) =L= 13.1 ; (LHS = 0)
+     
+Const1_1(scen1,t5)..  - X(scen1,t5) + Y(t5) - 111.64*Z(scen1) - 20*R(scen1,t5) =L= 19.51 ; (LHS = 0)
+     
+REMAINING 475 ENTRIES SKIPPED
+
+----    356 Equation   Const1_1      0.000     0.015 SECS      5 MB    480
+                                      0.000              ROWGEN
+                                      0.000              COLGEN
+
+---- Const1_2  =G=  
+
+Const1_2..  - Z(scen1) - Z(scen2) - Z(scen3) - Z(scen4) - Z(scen5) - Z(scen6) - Z(scen7) - Z(scen8) - Z(scen9) - Z(scen10) - Z(scen11) - Z(scen12) - Z(scen13) - Z(scen14) - Z(scen15) - Z(scen16) - Z(scen17) - Z(scen18) - Z(scen19) - Z(scen20) =G= -1 ; (LHS = 0)
+     
+----    363 Equation   Const1_2      0.000     0.015 SECS      5 MB      1
+                                      0.000              ROWGEN
+                                      0.000              COLGEN
+
+---- Const_3_1  =L=  
+
+Const_3_1(scen1,t1)..  - X(scen1,t1) + X(scen1,t2) - 50*U(scen1,t2) - 70*R(scen1,t1) + 20*R(scen1,t2) =L= 0 ; (LHS = -70)
+     
+Const_3_1(scen1,t2)..  - X(scen1,t2) + X(scen1,t3) - 50*U(scen1,t3) - 70*R(scen1,t2) + 20*R(scen1,t3) =L= 0 ; (LHS = 0)
+     
+Const_3_1(scen1,t3)..  - X(scen1,t3) + X(scen1,t4) - 50*U(scen1,t4) - 70*R(scen1,t3) + 20*R(scen1,t4) =L= 0 ; (LHS = 0)
+     
+Const_3_1(scen1,t4)..  - X(scen1,t4) + X(scen1,t5) - 50*U(scen1,t5) - 70*R(scen1,t4) + 20*R(scen1,t5) =L= 0 ; (LHS = 0)
+     
+Const_3_1(scen1,t5)..  - X(scen1,t5) + X(scen1,t6) - 50*U(scen1,t6) - 70*R(scen1,t5) + 20*R(scen1,t6) =L= 0 ; (LHS = 0)
+     
+REMAINING 455 ENTRIES SKIPPED
+
+----    371 Equation   Const_3_1     0.000     0.015 SECS      5 MB    460
+                                      0.000              ROWGEN
+                                      0.000              COLGEN
+
+---- Const_3_2  =L=  
+
+Const_3_2(scen1,t1)..  X(scen1,t1) - X(scen1,t2) - 50*V(scen1,t2) + 20*R(scen1,t1) - 70*R(scen1,t2) =L= 0 ; (LHS = 20, INFES = 20 ****)
+     
+Const_3_2(scen1,t2)..  X(scen1,t2) - X(scen1,t3) - 50*V(scen1,t3) + 20*R(scen1,t2) - 70*R(scen1,t3) =L= 0 ; (LHS = 0)
+     
+Const_3_2(scen1,t3)..  X(scen1,t3) - X(scen1,t4) - 50*V(scen1,t4) + 20*R(scen1,t3) - 70*R(scen1,t4) =L= 0 ; (LHS = 0)
+     
+Const_3_2(scen1,t4)..  X(scen1,t4) - X(scen1,t5) - 50*V(scen1,t5) + 20*R(scen1,t4) - 70*R(scen1,t5) =L= 0 ; (LHS = 0)
+     
+Const_3_2(scen1,t5)..  X(scen1,t5) - X(scen1,t6) - 50*V(scen1,t6) + 20*R(scen1,t5) - 70*R(scen1,t6) =L= 0 ; (LHS = 0)
+     
+REMAINING 455 ENTRIES SKIPPED
+
+----    374 Equation   Const_3_2     0.000     0.015 SECS      5 MB    460
+                                      0.000              ROWGEN
+                                      0.000              COLGEN
+
+---- Const_4_1  =L=  
+
+Const_4_1(scen1,t3)..  U(scen1,t1) + U(scen1,t2) + U(scen1,t3) - R(scen1,t3) =L= 0 ; (LHS = 0)
+     
+Const_4_1(scen1,t4)..  U(scen1,t2) + U(scen1,t3) + U(scen1,t4) - R(scen1,t4) =L= 0 ; (LHS = 0)
+     
+Const_4_1(scen1,t5)..  U(scen1,t3) + U(scen1,t4) + U(scen1,t5) - R(scen1,t5) =L= 0 ; (LHS = 0)
+     
+Const_4_1(scen1,t6)..  U(scen1,t4) + U(scen1,t5) + U(scen1,t6) - R(scen1,t6) =L= 0 ; (LHS = 0)
+     
+Const_4_1(scen1,t7)..  U(scen1,t5) + U(scen1,t6) + U(scen1,t7) - R(scen1,t7) =L= 0 ; (LHS = 0)
+     
+REMAINING 435 ENTRIES SKIPPED
+
+----    379 Equation   Const_4_1     0.000     0.015 SECS      5 MB    440
+                                      0.000              ROWGEN
+                                      0.000              COLGEN
+
+---- Const_4_2  =L=  
+
+Const_4_2(scen1,t3)..  V(scen1,t1) + V(scen1,t2) + V(scen1,t3) + R(scen1,t3) =L= 1 ; (LHS = 0)
+     
+Const_4_2(scen1,t4)..  V(scen1,t2) + V(scen1,t3) + V(scen1,t4) + R(scen1,t4) =L= 1 ; (LHS = 0)
+     
+Const_4_2(scen1,t5)..  V(scen1,t3) + V(scen1,t4) + V(scen1,t5) + R(scen1,t5) =L= 1 ; (LHS = 0)
+     
+Const_4_2(scen1,t6)..  V(scen1,t4) + V(scen1,t5) + V(scen1,t6) + R(scen1,t6) =L= 1 ; (LHS = 0)
+     
+Const_4_2(scen1,t7)..  V(scen1,t5) + V(scen1,t6) + V(scen1,t7) + R(scen1,t7) =L= 1 ; (LHS = 0)
+     
+REMAINING 435 ENTRIES SKIPPED
+
+----    382 Equation   Const_4_2     0.016     0.031 SECS      5 MB    440
+                                      0.016              ROWGEN
+                                      0.000              COLGEN
+
+---- Const_5  =E=  
+
+Const_5(scen1,t2)..  U(scen1,t2) - V(scen1,t2) + R(scen1,t1) - R(scen1,t2) =E= 0 ; (LHS = 1, INFES = 1 ****)
+     
+Const_5(scen1,t3)..  U(scen1,t3) - V(scen1,t3) + R(scen1,t2) - R(scen1,t3) =E= 0 ; (LHS = 0)
+     
+Const_5(scen1,t4)..  U(scen1,t4) - V(scen1,t4) + R(scen1,t3) - R(scen1,t4) =E= 0 ; (LHS = 0)
+     
+Const_5(scen1,t5)..  U(scen1,t5) - V(scen1,t5) + R(scen1,t4) - R(scen1,t5) =E= 0 ; (LHS = 0)
+     
+Const_5(scen1,t6)..  U(scen1,t6) - V(scen1,t6) + R(scen1,t5) - R(scen1,t6) =E= 0 ; (LHS = 0)
+     
+REMAINING 455 ENTRIES SKIPPED
+
+----    385 Equation   Const_5       0.000     0.031 SECS      5 MB    460
+                                      0.000              ROWGEN
+                                      0.000              COLGEN
+
+---- Const_6  =G=  
+
+Const_6(scen1,t1)..  - X(scen1,t1) - 80*U(scen1,t1) - 80*V(scen1,t2) + 110*R(scen1,t1) =G= 0 ; (LHS = 110)
+     
+Const_6(scen1,t2)..  - X(scen1,t2) - 80*U(scen1,t2) - 80*V(scen1,t3) + 110*R(scen1,t2) =G= 0 ; (LHS = 0)
+     
+Const_6(scen1,t3)..  - X(scen1,t3) - 80*U(scen1,t3) - 80*V(scen1,t4) + 110*R(scen1,t3) =G= 0 ; (LHS = 0)
+     
+Const_6(scen1,t4)..  - X(scen1,t4) - 80*U(scen1,t4) - 80*V(scen1,t5) + 110*R(scen1,t4) =G= 0 ; (LHS = 0)
+     
+Const_6(scen1,t5)..  - X(scen1,t5) - 80*U(scen1,t5) - 80*V(scen1,t6) + 110*R(scen1,t5) =G= 0 ; (LHS = 0)
+     
+REMAINING 455 ENTRIES SKIPPED
+
+----    389 Equation   Const_6       0.000     0.031 SECS      5 MB    460
+                                      0.000              ROWGEN
+                                      0.000              COLGEN
+GAMS 32.2.0  rc62c018 Released Aug 26, 2020 WEX-WEI x86 64bit/MS Windows - 09/20/21 11:07:23 Page 6
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Column Listing      SOLVE schedule Using MIP From line 430
+
+
+---- X  
+
+X(scen1,t1)
+                (.LO, .L, .UP, .M = 0, 0, 30, 0)
+       -2.5     Objective
+       -1       Const1_1(scen1,t1)
+       -1       Const_3_1(scen1,t1)
+        1       Const_3_2(scen1,t1)
+       -1       Const_6(scen1,t1)
+
+X(scen1,t2)
+                (.LO, .L, .UP, .M = 0, 0, 110, 0)
+       -2.5     Objective
+       -1       Const1_1(scen1,t2)
+        1       Const_3_1(scen1,t1)
+       -1       Const_3_1(scen1,t2)
+       -1       Const_3_2(scen1,t1)
+        1       Const_3_2(scen1,t2)
+       -1       Const_6(scen1,t2)
+
+X(scen1,t3)
+                (.LO, .L, .UP, .M = 0, 0, 110, 0)
+       -2.5     Objective
+       -1       Const1_1(scen1,t3)
+        1       Const_3_1(scen1,t2)
+       -1       Const_3_1(scen1,t3)
+       -1       Const_3_2(scen1,t2)
+        1       Const_3_2(scen1,t3)
+       -1       Const_6(scen1,t3)
+
+REMAINING 477 ENTRIES SKIPPED
+
+---- Y  
+
+Y(t1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       21.8663  Objective
+        1       Const1_1(scen1,t1)
+        1       Const1_1(scen2,t1)
+        1       Const1_1(scen3,t1)
+        1       Const1_1(scen4,t1)
+        1       Const1_1(scen5,t1)
+        1       Const1_1(scen6,t1)
+        1       Const1_1(scen7,t1)
+        1       Const1_1(scen8,t1)
+        1       Const1_1(scen9,t1)
+        1       Const1_1(scen10,t1)
+        1       Const1_1(scen11,t1)
+        1       Const1_1(scen12,t1)
+        1       Const1_1(scen13,t1)
+        1       Const1_1(scen14,t1)
+        1       Const1_1(scen15,t1)
+        1       Const1_1(scen16,t1)
+        1       Const1_1(scen17,t1)
+        1       Const1_1(scen18,t1)
+        1       Const1_1(scen19,t1)
+        1       Const1_1(scen20,t1)
+
+Y(t2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       22.6876  Objective
+        1       Const1_1(scen1,t2)
+        1       Const1_1(scen2,t2)
+        1       Const1_1(scen3,t2)
+        1       Const1_1(scen4,t2)
+        1       Const1_1(scen5,t2)
+        1       Const1_1(scen6,t2)
+        1       Const1_1(scen7,t2)
+        1       Const1_1(scen8,t2)
+        1       Const1_1(scen9,t2)
+        1       Const1_1(scen10,t2)
+        1       Const1_1(scen11,t2)
+        1       Const1_1(scen12,t2)
+        1       Const1_1(scen13,t2)
+        1       Const1_1(scen14,t2)
+        1       Const1_1(scen15,t2)
+        1       Const1_1(scen16,t2)
+        1       Const1_1(scen17,t2)
+        1       Const1_1(scen18,t2)
+        1       Const1_1(scen19,t2)
+        1       Const1_1(scen20,t2)
+
+Y(t3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       22.6323  Objective
+        1       Const1_1(scen1,t3)
+        1       Const1_1(scen2,t3)
+        1       Const1_1(scen3,t3)
+        1       Const1_1(scen4,t3)
+        1       Const1_1(scen5,t3)
+        1       Const1_1(scen6,t3)
+        1       Const1_1(scen7,t3)
+        1       Const1_1(scen8,t3)
+        1       Const1_1(scen9,t3)
+        1       Const1_1(scen10,t3)
+        1       Const1_1(scen11,t3)
+        1       Const1_1(scen12,t3)
+        1       Const1_1(scen13,t3)
+        1       Const1_1(scen14,t3)
+        1       Const1_1(scen15,t3)
+        1       Const1_1(scen16,t3)
+        1       Const1_1(scen17,t3)
+        1       Const1_1(scen18,t3)
+        1       Const1_1(scen19,t3)
+        1       Const1_1(scen20,t3)
+
+REMAINING 21 ENTRIES SKIPPED
+
+---- U  
+
+U(scen1,t1)
+                (.LO, .L, .UP, .M = 0, 0, 0, 0)
+        1       Const_4_1(scen1,t3)
+      -80       Const_6(scen1,t1)
+
+U(scen1,t2)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+      -50       Const_3_1(scen1,t1)
+        1       Const_4_1(scen1,t3)
+        1       Const_4_1(scen1,t4)
+        1       Const_5(scen1,t2)
+      -80       Const_6(scen1,t2)
+
+U(scen1,t3)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+      -50       Const_3_1(scen1,t2)
+        1       Const_4_1(scen1,t3)
+        1       Const_4_1(scen1,t4)
+        1       Const_4_1(scen1,t5)
+        1       Const_5(scen1,t3)
+      -80       Const_6(scen1,t3)
+
+REMAINING 477 ENTRIES SKIPPED
+
+---- V  
+
+V(scen1,t1)
+                (.LO, .L, .UP, .M = 0, 0, 0, 0)
+        1       Const_4_2(scen1,t3)
+
+V(scen1,t2)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+      -50       Const_3_2(scen1,t1)
+        1       Const_4_2(scen1,t3)
+        1       Const_4_2(scen1,t4)
+       -1       Const_5(scen1,t2)
+      -80       Const_6(scen1,t1)
+
+V(scen1,t3)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+      -50       Const_3_2(scen1,t2)
+        1       Const_4_2(scen1,t3)
+        1       Const_4_2(scen1,t4)
+        1       Const_4_2(scen1,t5)
+       -1       Const_5(scen1,t3)
+      -80       Const_6(scen1,t2)
+
+REMAINING 477 ENTRIES SKIPPED
+
+---- OBJ  
+
+OBJ
+                (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
+        1       Objective
+
+
+---- Z  
+
+Z(scen1)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+     -113.22    Const1_1(scen1,t1)
+     -114.44    Const1_1(scen1,t2)
+     -109.14    Const1_1(scen1,t3)
+     -117.49    Const1_1(scen1,t4)
+     -111.64    Const1_1(scen1,t5)
+     -118.43    Const1_1(scen1,t6)
+     -127.59    Const1_1(scen1,t7)
+     -130.59    Const1_1(scen1,t8)
+     -127.02    Const1_1(scen1,t9)
+     -125.11    Const1_1(scen1,t10)
+     -117.91    Const1_1(scen1,t11)
+     -121.15    Const1_1(scen1,t12)
+     -112.11    Const1_1(scen1,t13)
+     -104.22    Const1_1(scen1,t14)
+     -108.93    Const1_1(scen1,t15)
+     -120.06    Const1_1(scen1,t16)
+      -81.71    Const1_1(scen1,t17)
+      -75.69    Const1_1(scen1,t18)
+     -122.21    Const1_1(scen1,t19)
+     -118.25    Const1_1(scen1,t20)
+     -112.06    Const1_1(scen1,t21)
+     -126.13    Const1_1(scen1,t22)
+     -139.36    Const1_1(scen1,t23)
+     -127.63    Const1_1(scen1,t24)
+       -1       Const1_2
+
+Z(scen2)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+     -115.14    Const1_1(scen2,t1)
+     -116.3     Const1_1(scen2,t2)
+     -123.65    Const1_1(scen2,t3)
+      -93.43    Const1_1(scen2,t4)
+      -95.08    Const1_1(scen2,t5)
+      -92.47    Const1_1(scen2,t6)
+     -110.79    Const1_1(scen2,t7)
+     -117.51    Const1_1(scen2,t8)
+     -120.87    Const1_1(scen2,t9)
+     -128.21    Const1_1(scen2,t10)
+     -118.69    Const1_1(scen2,t11)
+     -110.58    Const1_1(scen2,t12)
+     -120.08    Const1_1(scen2,t13)
+     -112.31    Const1_1(scen2,t14)
+      -86.43    Const1_1(scen2,t15)
+     -111.86    Const1_1(scen2,t16)
+     -100.59    Const1_1(scen2,t17)
+      -93.5     Const1_1(scen2,t18)
+     -126.2     Const1_1(scen2,t19)
+     -116.18    Const1_1(scen2,t20)
+     -114.5     Const1_1(scen2,t21)
+     -112.79    Const1_1(scen2,t22)
+      -92.74    Const1_1(scen2,t23)
+      -93.14    Const1_1(scen2,t24)
+       -1       Const1_2
+
+Z(scen3)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+     -113.56    Const1_1(scen3,t1)
+     -106.19    Const1_1(scen3,t2)
+      -86.48    Const1_1(scen3,t3)
+     -123.06    Const1_1(scen3,t4)
+     -118.15    Const1_1(scen3,t5)
+     -130.44    Const1_1(scen3,t6)
+     -121.01    Const1_1(scen3,t7)
+     -101.84    Const1_1(scen3,t8)
+      -91.46    Const1_1(scen3,t9)
+     -129.64    Const1_1(scen3,t10)
+     -124.16    Const1_1(scen3,t11)
+     -109.01    Const1_1(scen3,t12)
+     -129.55    Const1_1(scen3,t13)
+     -129.25    Const1_1(scen3,t14)
+     -127.45    Const1_1(scen3,t15)
+     -118.55    Const1_1(scen3,t16)
+     -135.02    Const1_1(scen3,t17)
+     -131.98    Const1_1(scen3,t18)
+     -119.34    Const1_1(scen3,t19)
+     -111.28    Const1_1(scen3,t20)
+      -98.41    Const1_1(scen3,t21)
+     -127.87    Const1_1(scen3,t22)
+     -123.09    Const1_1(scen3,t23)
+      -98.86    Const1_1(scen3,t24)
+       -1       Const1_2
+
+REMAINING 17 ENTRIES SKIPPED
+
+---- R  
+
+R(scen1,t1)
+                (.LO, .L, .UP, .M = 1, 1, 1, 0)
+      -50       Objective
+      -20       Const1_1(scen1,t1)
+      -70       Const_3_1(scen1,t1)
+       20       Const_3_2(scen1,t1)
+        1       Const_5(scen1,t2)
+      110       Const_6(scen1,t1)
+
+R(scen1,t2)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+      -50       Objective
+      -20       Const1_1(scen1,t2)
+       20       Const_3_1(scen1,t1)
+      -70       Const_3_1(scen1,t2)
+      -70       Const_3_2(scen1,t1)
+       20       Const_3_2(scen1,t2)
+       -1       Const_5(scen1,t2)
+        1       Const_5(scen1,t3)
+      110       Const_6(scen1,t2)
+
+R(scen1,t3)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+      -50       Objective
+      -20       Const1_1(scen1,t3)
+       20       Const_3_1(scen1,t2)
+      -70       Const_3_1(scen1,t3)
+      -70       Const_3_2(scen1,t2)
+       20       Const_3_2(scen1,t3)
+       -1       Const_4_1(scen1,t3)
+        1       Const_4_2(scen1,t3)
+       -1       Const_5(scen1,t3)
+        1       Const_5(scen1,t4)
+      110       Const_6(scen1,t3)
+
+REMAINING 477 ENTRIES SKIPPED
+GAMS 32.2.0  rc62c018 Released Aug 26, 2020 WEX-WEI x86 64bit/MS Windows - 09/20/21 11:07:23 Page 7
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Statistics    SOLVE schedule Using MIP From line 430
+
+
+MODEL STATISTICS
+
+BLOCKS OF EQUATIONS           9     SINGLE EQUATIONS        3,202
+BLOCKS OF VARIABLES           7     SINGLE VARIABLES        1,965
+NON ZERO ELEMENTS        14,725     DISCRETE VARIABLES        500
+
+
+----    430 Solve Fini schedule      0.015     0.046 SECS      5 MB  14725
+                                    
