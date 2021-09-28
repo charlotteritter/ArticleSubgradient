@@ -19,7 +19,7 @@ DOWNTIME=3;
 TABLE wind(scen,t)
 $ondelim
 *$INCLUDE %SOLAR%.csv
-$INCLUDE wind_scenarios_100_1.csv
+$INCLUDE wind_scenarios_100_6.csv
 $offdelim
 ;
 *alias(solar,wind);
@@ -62,7 +62,7 @@ $ondelim
 *$INCLUDE scenario_sorted_100_18_01.csv
 *$INCLUDE scenario_sorted_100_19_01.csv
 *$INCLUDE scenario_sorted_100_20_01.csv
-$INCLUDE scenario_sorted_100_1_05.csv
+$INCLUDE scenario_sorted_100_6_05.csv
 *$INCLUDE scenario_sorted_100_2_05.csv
 *$INCLUDE scenario_sorted_100_3_05.csv
 *$INCLUDE scenario_sorted_100_4_05.csv
