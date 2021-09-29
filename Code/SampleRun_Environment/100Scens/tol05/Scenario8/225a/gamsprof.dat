@@ -1,0 +1,11 @@
+546      0.011
+590 1      0.127       0.010 Solve Fini schedule (73525)
+626 2      0.104       0.010 Solve Fini schedule (73525)
+539 9      0.014       0.008 Equation   Const_4_1 (2200)
+542 8      0.014       0.009 Equation   Const_4_2 (2200)
+539 5      0.015       0.008 Equation   Const_4_1 (2200)
+590 6      0.015       0.004 Solve Read schedule
+542 7      0.014       0.009 Equation   Const_4_2 (2200)
+590 10      0.051       0.010 GAMS Fini   
+626 4      0.066       0.010 GAMS Fini   
+507 3      0.014       0.006 Equation   Objective (1)

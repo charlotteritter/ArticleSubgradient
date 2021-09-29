@@ -5,7 +5,7 @@
 SETS T times/t1*t24/;
 * Number of scenarios 
 *SETS SCEN scenarios /scen1*%MAXSCEN%/;
-SETS SCEN scenarios /scen1*scen20/;
+SETS SCEN scenarios /scen1*scen1500/;
 alias(scen, w);
 Parameter last_z(scen);
 
@@ -19,7 +19,7 @@ DOWNTIME=3;
 TABLE wind(scen,t)
 $ondelim
 *$INCLUDE %SOLAR%.csv
-$INCLUDE wind_scenarios_20.csv
+$INCLUDE wind_scenarios_1500_2.csv
 $offdelim
 ;
 *alias(solar,wind);
@@ -82,7 +82,7 @@ $ondelim
 *$INCLUDE scenario_sorted_100_18_05.csv
 *$INCLUDE scenario_sorted_100_19_05.csv
 *$INCLUDE scenario_sorted_100_20_05.csv
-$INCLUDE scenario_sorted_20_05.csv
+$INCLUDE scenario_sorted_1500_2.csv
 *$INCLUDE scenario_sorted_150_03.csv
 *$INCLUDE scenario_sorted_150_05.csv
 *$INCLUDE scenario_sorted_300_01.csv
