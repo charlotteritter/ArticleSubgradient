@@ -27,7 +27,7 @@ $offdelim
 *Tolerance 
 scalar tol;
 *tol=%TOL%;
-tol=0.05;
+tol=0.01;
 
 * maximum number of iterations in LR
 set iter number of subgradient iterations /iter1*iter10/;
@@ -39,13 +39,12 @@ time_limit=2250;
 
 
 * Import the SORTED file
-$ONTEXT
+
 table scenario_sorted(scen,*)
 $ondelim
 $INCLUDE scenario_sorted.csv 
 $offdelim
 ;
-$OFFTEXT
 
 
 
