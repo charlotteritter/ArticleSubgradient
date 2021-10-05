@@ -39,13 +39,11 @@ time_limit=2250;
 
 
 * Import the SORTED file
-$ONTEXT
 table scenario_sorted(scen,*)
 $ondelim
 $INCLUDE scenario_sorted.csv 
 $offdelim
 ;
-$OFFTEXT
 
 
 
