@@ -1,6 +1,6 @@
-POSITIVE VARIABLES X(W,T), Y(T),U(W,T), V(W,T);
+POSITIVE VARIABLES X(W,T), Y(T);
 VARIABLES OBJ, BOUND_LR;
-BINARY VARIABLE Z(SCEN), R(W,T) ;
+BINARY VARIABLE Z(SCEN), R(W,T), U(W,T), V(W,T) ;
 
 scalar counter ;
 
@@ -8,6 +8,7 @@ EQUATIONS
         Objective
         Const1_1(scen,t)    
         Const1_2    
+        Const1_2_new
         Const_3_1(scen,t)    
         Const_3_1_scenario(scen,t)    
         Const_3_2(scen,t)
@@ -42,6 +43,7 @@ Const1_1_scenario(scen,t)$(ord(scen) eq counter)..
          Y(T)-X(scen,T)-R(scen,T)*GG -WIND(scen,T) =L= 0 ;
 
 Const1_2..   -SUM(SCEN, Z(SCEN)) =G= -threshold;
+Const1_2_new.. SUM(SCEN, Z(SCEN)) =L= threshold;
 
 ****************************************************************************TODO Constraints (all but no. 1) in scenario form (z(w)=0)
 
@@ -88,7 +90,7 @@ x.up(scen,t)$(ord(t) eq 1)= ramp - GG;
 
 ******* ALL MODELS
 
-model schedule     / Objective,  Const1_1, Const1_2, Const_3_1, Const_3_2, Const_4_1, Const_4_2, Const_5, Const_6 /;
+model schedule     / Objective,  Const1_1, Const1_2_new, Const_3_1, Const_3_2, Const_4_1, Const_4_2, Const_5, Const_6 /;
 model schedule_scenario     / Objective_scenario,  Const1_1_scenario, Const_3_1_scenario, Const_3_2_scenario, Const_4_1_scenario, Const_4_2_scenario, Const_5_scenario, Const_6_scenario / ; 
 *model INITIAL               / / ;
 model Lagrangian      / LR,    Const1_1, Const_3_1, Const_3_2, Const_4_1, Const_4_2, Const_5, Const_6 /;

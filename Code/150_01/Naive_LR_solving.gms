@@ -23,7 +23,8 @@ $include equations_all.gms
 
 
 scalar d;
-set indices /1*6/;
+set indices /1/;
+*set indices /1*6/;
 
 File TestingFile3 / TestingFile3.csv /;
 TestingFile3.pc=5;

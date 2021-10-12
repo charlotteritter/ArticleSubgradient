@@ -4,7 +4,7 @@ options optcr=0 ;
 solve schedule using RMIP minimizing OBJ ;
 end_time =jnow ;
 LP_time = ghour(end_time - start_time)*3600 + gminute(end_time - start_time)*60 + gsecond(end_time - start_time);
-init_lambda  = Const1_2.m ;
+init_lambda  = Const1_2_new.m ;
 lowerbound   = Obj.l ;
 scalar LP_bound ;
 lambda       = init_lambda ;
