@@ -35,6 +35,8 @@ put 'Omega', put 'Tolerance', put 'Step Size Rule', put 'Iterations', put 'Conve
 ********************************************************************************
 * Solve main Problem
 ********************************************************************************
+option limrow = 10000;
+schedule.optfile=1;
 
 start_time = jnow;
 solve schedule using MIP minimizing Obj ;                       

@@ -1,6 +1,6 @@
-POSITIVE VARIABLES X(W,T), Y(T),U(W,T), V(W,T);
+POSITIVE VARIABLES X(W,T), Y(T);
 VARIABLES OBJ, BOUND_LR;
-BINARY VARIABLE Z(SCEN), R(W,T) ;
+BINARY VARIABLE Z(SCEN), R(W,T), U(W,T), V(W,T) ;
 
 scalar counter ;
 
@@ -8,6 +8,7 @@ EQUATIONS
         Objective
         Const1_1(scen,t)    
         Const1_2    
+        Const1_2_new
         Const_3_1(scen,t)    
         Const_3_1_scenario(scen,t)    
         Const_3_2(scen,t)
@@ -42,6 +43,7 @@ Const1_1_scenario(scen,t)$(ord(scen) eq counter)..
          Y(T)-X(scen,T)-R(scen,T)*GG -WIND(scen,T) =L= 0 ;
 
 Const1_2..   -SUM(SCEN, Z(SCEN)) =G= -threshold;
+Const1_2_new.. SUM(SCEN, Z(SCEN)) =L= threshold;
 
 ****************************************************************************TODO Constraints (all but no. 1) in scenario form (z(w)=0)
 

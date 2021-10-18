@@ -11,7 +11,7 @@ Excel file used for LB heuristic needs to be manually sorted
 $OFFTEXT
 
 $eolcom //
-OPTIONS PROFILE =3, RESLIM   = 4200, LIMROW   = 5, LP = CPLEX, MIP = cplex, RMIP=cplex, NLP = CONOPT, MINLP = DICOPT, MIQCP = CPLEX, SOLPRINT = OFF, decimals = 8, optcr=0.001, optca=0.001, threads =8, integer4=0;
+OPTIONS PROFILE =3, RESLIM   = 4200, LIMROW   = 5, LP = CPLEX, MIP = gurobi, RMIP=Gurobi, NLP = CONOPT, MINLP = DICOPT, MIQCP = CPLEX,SOLPRINT = OFF, decimals = 8, optcr=0.01, optca=0.01, threads =8, integer4=0;
 
 ********************************************************************************
 *                                Include input files
@@ -23,6 +23,7 @@ $include equations_all.gms
 
 
 scalar d;
+*set indices /1/;
 set indices /1*6/;
 
 File TestingFile3 / TestingFile3.csv /;
@@ -34,6 +35,8 @@ put 'Omega', put 'Tolerance', put 'Step Size Rule', put 'Iterations', put 'Conve
 ********************************************************************************
 * Solve main Problem
 ********************************************************************************
+option limrow = 10000;
+schedule.optfile=1;
 
 start_time = jnow;
 solve schedule using MIP minimizing Obj ;                       
