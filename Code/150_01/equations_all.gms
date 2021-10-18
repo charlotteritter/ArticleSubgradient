@@ -90,7 +90,7 @@ x.up(scen,t)$(ord(t) eq 1)= ramp - GG;
 
 ******* ALL MODELS
 
-model schedule     / Objective,  Const1_1, Const1_2_new, Const_3_1, Const_3_2, Const_4_1, Const_4_2, Const_5, Const_6 /;
+model schedule     / Objective,  Const1_1, Const1_2, Const_3_1, Const_3_2, Const_4_1, Const_4_2, Const_5, Const_6 /;
 model schedule_scenario     / Objective_scenario,  Const1_1_scenario, Const_3_1_scenario, Const_3_2_scenario, Const_4_1_scenario, Const_4_2_scenario, Const_5_scenario, Const_6_scenario / ; 
 *model INITIAL               / / ;
 model Lagrangian      / LR,    Const1_1, Const_3_1, Const_3_2, Const_4_1, Const_4_2, Const_5, Const_6 /;
