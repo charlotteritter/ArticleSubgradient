@@ -1,10 +1,10 @@
---- Job Naive_LR_solving.gms Start 09/20/21 11:04:42 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Job Naive_LR_solving.gms Start 10/20/21 11:06:42 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     C:\GAMS\32\gmsprmNT.txt
 --- GAMS Parameters defined
     Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\Naive_LR_solving.gms
     PageSize 0
-    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225d\
     SysDir C:\GAMS\32\
     LogOption 3
     ErrMsg 1
@@ -18,2889 +18,681 @@ Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
 --- Starting compilation
 --- Naive_LR_solving.gms(19) 2 Mb
 --- . inputME.gms(22) 3 Mb
---- .. wind_scenarios_20.csv(21) 3 Mb
---- . inputME.gms(85) 3 Mb
---- .. scenario_sorted_20_01.csv(21) 3 Mb
---- . inputME.gms(125) 3 Mb
---- .. wind_costs.csv(25) 3 Mb
---- . inputME.gms(197) 3 Mb
---- Naive_LR_solving.gms(20) 3 Mb
---- . subgradient_parameters.gms(33) 3 Mb
---- Naive_LR_solving.gms(22) 3 Mb
---- . equations_all.gms(94) 3 Mb
---- Naive_LR_solving.gms(71) 3 Mb
---- . lp_lowerbound.gms(12) 3 Mb
---- Naive_LR_solving.gms(72) 3 Mb
---- . heuristic_upperbound.gms(59) 3 Mb
---- Naive_LR_solving.gms(109) 3 Mb
---- . plain_lr.gms(12) 3 Mb
---- Naive_LR_solving.gms(115) 3 Mb
---- . LR_updates.gms(17) 3 Mb
---- .. stepsizes.gms(21) 3 Mb
---- . LR_updates.gms(42) 3 Mb
---- Naive_LR_solving.gms(141) 3 Mb
---- Starting execution: elapsed 0:00:00.032
---- Naive_LR_solving.gms(429) 4 Mb
---- Generating MIP model schedule
---- Naive_LR_solving.gms(347) 4 Mb
---- Starting Equ Objective: elapsed 0:00:00.039
---- Naive_LR_solving.gms(356) 4 Mb
---- Starting Equ Const1_1: elapsed 0:00:00.057
---- Naive_LR_solving.gms(363) 5 Mb
---- Starting Equ Const1_2: elapsed 0:00:00.059
---- Naive_LR_solving.gms(371) 5 Mb
---- Starting Equ Const_3_1: elapsed 0:00:00.059
---- Naive_LR_solving.gms(374) 5 Mb
---- Starting Equ Const_3_2: elapsed 0:00:00.062
---- Naive_LR_solving.gms(379) 5 Mb
---- Starting Equ Const_4_1: elapsed 0:00:00.064
---- Naive_LR_solving.gms(382) 5 Mb
---- Starting Equ Const_4_2: elapsed 0:00:00.071
---- Naive_LR_solving.gms(385) 5 Mb
---- Starting Equ Const_5: elapsed 0:00:00.074
---- Naive_LR_solving.gms(389) 5 Mb
---- Starting Equ Const_6: elapsed 0:00:00.076
---- Naive_LR_solving.gms(430) 5 Mb
----   3,202 rows  1,965 columns  14,725 non-zeroes
----   500 discrete-columns
---- Executing CPLEX (Solvelink=2): elapsed 0:00:00.107
-
-IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
---- GAMS/Cplex Link licensed for continuous and discrete problems.
-Cplex 12.10.0.0
-
-Reading data...
-Starting Cplex...
-Space for names approximately 0.13 Mb
-Use option 'names no' to turn use of names off
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 0
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0.001
-CPXPARAM_MIP_Tolerances_MIPGap                   0.001
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Found incumbent of value -2684.465200 after 0.00 sec. (0.14 ticks)
-Tried aggregator 2 times.
-MIP Presolve eliminated 84 rows and 121 columns.
-MIP Presolve modified 40 coefficients.
-Aggregator did 20 substitutions.
-Reduced MIP has 3098 rows, 1824 columns, and 12616 nonzeros.
-Reduced MIP has 460 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (7.55 ticks)
-Probing fixed 0 vars, tightened 20 bounds.
-Probing time = 0.00 sec. (0.69 ticks)
-Tried aggregator 1 time.
-Detecting symmetries...
-MIP Presolve eliminated 20 rows and 20 columns.
-MIP Presolve modified 20 coefficients.
-Reduced MIP has 3078 rows, 1804 columns, and 12476 nonzeros.
-Reduced MIP has 480 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.02 sec. (6.95 ticks)
-Probing changed sense of 20 constraints.
-Probing time = 0.02 sec. (0.70 ticks)
-Clique table members: 100.
-MIP emphasis: balance optimality and feasibility.
-MIP search method: dynamic search.
-Parallel mode: deterministic, using up to 8 threads.
-Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
-Parallel mode: deterministic, using up to 6 threads for concurrent optimization:
- * Starting dual Simplex on 1 thread...
- * Starting Barrier on 4 threads...
- * Starting primal Simplex on 1 thread...
-Tried aggregator 1 time.
-No LP presolve or aggregator reductions.
-Presolve time = 0.00 sec. (1.37 ticks)
-Initializing dual steep norms . . .
-
-Iteration log . . .
-Iteration:     1   Dual objective     =        -83059.674138
-Iteration:   200   Dual objective     =        -24932.693483
-Iteration:   411   Dual objective     =        -10271.421503
-Iteration:   579   Dual objective     =         -9803.178197
-Iteration:   759   Dual objective     =         -9688.955203
-Iteration:   925   Dual objective     =         -9647.526879
-
-Dual simplex solved model.
-
-Root relaxation solution time = 0.06 sec. (17.13 ticks)
-
-        Nodes                                         Cuts/
-   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
-
-*     0+    0                        -2684.4652   -83134.6741              --- 
-Found incumbent of value -2684.465200 after 0.14 sec. (38.70 ticks)
-*     0+    0                        -2867.1680   -83134.6741              --- 
-Found incumbent of value -2867.168042 after 0.14 sec. (38.78 ticks)
-      0     0    -9647.4967   254    -2867.1680    -9647.4967      927  236.48%
-*     0+    0                        -6001.4528    -9647.4967            60.75%
-Found incumbent of value -6001.452773 after 0.19 sec. (55.06 ticks)
-      0     0    -8701.1553   254    -6001.4528     Cuts: 847     1570   44.98%
-*     0+    0                        -6380.8576    -8701.1553            36.36%
-Found incumbent of value -6380.857613 after 1.08 sec. (299.06 ticks)
-      0     0    -8353.3090   254    -6380.8576     Cuts: 728     2119   30.91%
-      0     0    -8158.3487   254    -6380.8576     Cuts: 491     2564   27.86%
-      0     0    -8057.0565   254    -6380.8576     Cuts: 364     2967   26.27%
-      0     0    -8008.7406   254    -6380.8576     Cuts: 357     3261   25.51%
-Detecting symmetries...
-      0     0    -7959.8802   254    -6380.8576     Cuts: 284     3549   24.75%
-*     0+    0                        -6546.6319    -7959.8802            21.59%
-Found incumbent of value -6546.631897 after 2.03 sec. (580.89 ticks)
-*     0+    0                        -6570.6707    -7959.8802            21.14%
-Found incumbent of value -6570.670682 after 2.13 sec. (599.86 ticks)
-*     0+    0                        -6706.8560    -7959.8802            18.68%
-Found incumbent of value -6706.855972 after 2.22 sec. (612.80 ticks)
-*     0+    0                        -6825.9369    -7959.8802            16.61%
-Found incumbent of value -6825.936893 after 2.26 sec. (616.21 ticks)
-      0     0  -1.00000e+75     0    -6825.9369    -7959.8802     3549   16.61%
-      0     0    -7924.7085   254    -6825.9369     Cuts: 269     3765   16.10%
-      0     0    -7906.0754   254    -6825.9369     Cuts: 195     3972   15.82%
-*     0+    0                        -6840.4963    -7906.0754            15.58%
-Found incumbent of value -6840.496260 after 2.61 sec. (752.71 ticks)
-      0     0    -7869.7679   254    -6840.4963     Cuts: 273     4235   15.05%
-      0     0    -7851.7846   254    -6840.4963     Cuts: 243     4476   14.78%
-*     0+    0                        -6885.2330    -7851.7846            14.04%
-Found incumbent of value -6885.232997 after 3.00 sec. (867.74 ticks)
-*     0+    0                        -6900.5282    -7851.7846            13.79%
-Found incumbent of value -6900.528204 after 3.09 sec. (882.56 ticks)
-*     0+    0                        -6922.9944    -7851.7846            13.42%
-Found incumbent of value -6922.994400 after 3.13 sec. (885.84 ticks)
-      0     0  -1.00000e+75     0    -6922.9944    -7851.7846     4476   13.42%
-      0     0    -7840.0068   254    -6922.9944     Cuts: 203     4664   13.25%
-      0     0    -7827.7335   254    -6922.9944     Cuts: 220     4865   13.07%
-*     0+    0                        -6939.7101    -7827.7335            12.80%
-Found incumbent of value -6939.710147 after 3.58 sec. (1036.46 ticks)
-      0     0    -7815.6807   254    -6939.7101     Cuts: 173     5022   12.62%
-      0     0    -7800.2043   254    -6939.7101     Cuts: 113     5221   12.40%
-*     0+    0                        -6993.3896    -7800.2043            11.54%
-Found incumbent of value -6993.389614 after 3.92 sec. (1149.89 ticks)
-*     0+    0                        -7111.9782    -7800.2043             9.68%
-Found incumbent of value -7111.978194 after 3.95 sec. (1152.41 ticks)
-*     0+    0                        -7149.7396    -7800.2043             9.10%
-Found incumbent of value -7149.739596 after 4.06 sec. (1170.24 ticks)
-      0     0  -1.00000e+75     0    -7149.7396    -7800.2043     5221    9.10%
-      0     0    -7789.3336   254    -7149.7396     Cuts: 159     5377    8.95%
-      0     0    -7785.4760   254    -7149.7396      Cuts: 76     5474    8.89%
-      0     0    -7780.2452   254    -7149.7396     Cuts: 134     5577    8.82%
-      0     0    -7777.0431   254    -7149.7396      Cuts: 80     5673    8.77%
-      0     0    -7775.0949   254    -7149.7396      Cuts: 39     5735    8.75%
-      0     0    -7771.4100   254    -7149.7396      Cuts: 96     5821    8.70%
-      0     0    -7766.6026   254    -7149.7396      Cuts: 81     5922    8.63%
-*     0+    0                        -7153.1693    -7766.6026             8.58%
-Found incumbent of value -7153.169262 after 5.05 sec. (1500.04 ticks)
-      0     0    -7765.5124   254    -7153.1693      Cuts: 36     5979    8.56%
-*     0+    0                        -7320.1385    -7765.5124             6.08%
-Found incumbent of value -7320.138467 after 5.41 sec. (1638.07 ticks)
-      0     0    -7763.3170   254    -7320.1385      Cuts: 72     6118    6.05%
-      0     0    -7762.0867   254    -7320.1385      Cuts: 56     6197    6.04%
-Detecting symmetries...
-      0     2    -7762.0867   300    -7320.1385    -7762.0867     6197    6.04%
-Elapsed time = 6.69 sec. (2014.61 ticks, tree = 0.02 MB, solutions = 18)
-     33    15    -7628.4932   293    -7320.1385    -7731.5138     8451    5.62%
-                                                     Cuts: 78                  
-    165   118    -7383.2403   244    -7320.1385    -7731.5138    27040    5.62%
-                                                 Impl Bds: 21                  
-    327   208        cutoff          -7320.1385    -7731.5138    46301    5.62%
-                                                     Cuts: 56                  
-    470   305    -7450.6424   187    -7320.1385    -7648.0517    60983    4.48%
-                                                 Impl Bds: 45                  
-*   501+  269                        -7323.5681    -7648.0517             4.43%
-                                                  Impl Bds: 3                  
-Found incumbent of value -7323.568132 after 9.72 sec. (3025.44 ticks)
-    587   380    -7473.7613   302    -7323.5681    -7611.7200    75246    3.93%
-                                                     Cuts: 34                  
-    733   448    -7481.2928   274    -7323.5681    -7604.1564    85022    3.83%
-                                                 Impl Bds: 17                  
-    906   526    -7412.8798   184    -7323.5681    -7593.5520    98711    3.69%
-                                                     Cuts: 32                  
-   1112   604    -7434.1703   297    -7323.5681    -7577.1411   111421    3.46%
-                                                 Impl Bds: 30                  
-   1307   819    -7392.6507   274    -7323.5681    -7568.8218   136437    3.35%
-                                                     Cuts: 39                  
-   2092  1205    -7357.4715   275    -7323.5681    -7515.0600   205078    2.61%
-                                                    Cuts: 128                  
-Elapsed time = 15.83 sec. (5123.02 ticks, tree = 1.56 MB, solutions = 19)
-   2918  1641        cutoff          -7323.5681    -7483.7706   278200    2.19%
-                                                    Cuts: 103                  
-   3727  1842    -7376.6905   185    -7323.5681    -7456.3386   325792    1.81%
-                                                    Cuts: 117                  
-   4600  2084    -7345.7511   275    -7323.5681    -7431.4836   414192    1.47%
-                                                    Cuts: 116                  
-
-Performing restart 1
-
-Repeating presolve.
-Tried aggregator 1 time.
-Reduced MIP has 3078 rows, 1804 columns, and 12476 nonzeros.
-Reduced MIP has 500 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.02 sec. (4.66 ticks)
-Tried aggregator 1 time.
-Reduced MIP has 3078 rows, 1804 columns, and 12476 nonzeros.
-Reduced MIP has 500 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.02 sec. (6.75 ticks)
-Represolve time = 0.06 sec. (20.51 ticks)
-Tried aggregator 1 time.
-LP Presolve eliminated 151 rows and 0 columns.
-Reduced LP has 4302 rows, 1804 columns, and 18703 nonzeros.
-Presolve time = 0.00 sec. (2.63 ticks)
-Initializing dual steep norms . . .
-
-Iteration log . . .
-Iteration:     1   Dual objective     =        -83059.674138
-Iteration:   155   Dual objective     =        -45905.824637
-Iteration:   366   Dual objective     =        -13311.493370
-Iteration:   588   Dual objective     =         -9399.713091
-Iteration:   759   Dual objective     =         -8886.681905
-Iteration:   885   Dual objective     =         -8734.141162
-Iteration:  1006   Dual objective     =         -8484.684355
-Iteration:  1127   Dual objective     =         -8405.345672
-Iteration:  1250   Dual objective     =         -8169.901317
-Iteration:  1352   Dual objective     =         -8136.472914
-Iteration:  1465   Dual objective     =         -8050.970894
-Iteration:  1573   Dual objective     =         -7985.032426
-Iteration:  1679   Dual objective     =         -7949.148123
-Iteration:  1792   Dual objective     =         -7927.329461
-Iteration:  1891   Dual objective     =         -7876.248951
-Iteration:  2022   Dual objective     =         -7842.467023
-Iteration:  2129   Dual objective     =         -7824.675704
-Iteration:  2238   Dual objective     =         -7796.219611
-Iteration:  2345   Dual objective     =         -7786.999013
-Iteration:  2449   Dual objective     =         -7776.092894
-Iteration:  2572   Dual objective     =         -7768.973446
-Iteration:  2671   Dual objective     =         -7762.049183
-Iteration:  2780   Dual objective     =         -7758.114773
-Iteration:  2875   Dual objective     =         -7755.244315
-Iteration:  2990   Dual objective     =         -7753.144619
-Initializing dual steep norms . . .
-   5076     0    -7642.8540   306    -7323.5681     Cuts: 825   473126    1.27%
-   5076     0    -7626.5732   306    -7323.5681     Cuts: 210   473508    1.27%
-   5076     0    -7620.6914   306    -7323.5681     Cuts: 148   473821    1.27%
-   5076     0    -7611.3815   306    -7323.5681     Cuts: 169   474051    1.27%
-   5076     0    -7607.1443   306    -7323.5681      Cuts: 90   474269    1.27%
-   5076     0    -7601.5473   306    -7323.5681     Cuts: 198   474520    1.27%
-   5076     0    -7598.3108   306    -7323.5681     Cuts: 126   474761    1.27%
-   5076     0    -7594.0787   306    -7323.5681     Cuts: 147   475025    1.27%
-   5076     2    -7594.0787   345    -7323.5681    -7416.6245   475025    1.27%
-   5085     7    -7552.2032   318    -7323.5681    -7416.6245   477587    1.27%
-                                                     Cuts: 70                  
-   5169    29    -7357.7104   281    -7323.5681    -7416.6245   496646    1.27%
-                                                     Cuts: 50                  
-   5507   207    -7345.2467   267    -7323.5681    -7416.6245   548266    1.27%
-                                                     Cuts: 56                  
-   5907   390        cutoff          -7323.5681    -7416.6245   595069    1.27%
-                                                     Cuts: 49                  
-   6316   565    -7386.9703   206    -7323.5681    -7416.6245   638574    1.27%
-                                                      Cuts: 7                  
-   6726   650    -7346.8443   207    -7323.5681    -7410.7125   681040    1.19%
-                                                      Cuts: 5                  
-Elapsed time = 57.61 sec. (19856.04 ticks, tree = 0.56 MB, solutions = 19)
-   7162   820    -7368.4257   255    -7323.5681    -7391.7351   738201    0.93%
-                                                     Cuts: 56                  
-
-Implied bound cuts applied:  63
-Flow cuts applied:  265
-Mixed integer rounding cuts applied:  374
-Lift and project cuts applied:  31
-Gomory fractional cuts applied:  4
-
-Root node processing (before b&c):
-  Real time             =    6.67 sec. (2011.73 ticks)
-Parallel b&c, 8 threads:
-  Real time             =   57.91 sec. (19750.31 ticks)
-  Sync time (average)   =    4.79 sec.
-  Wait time (average)   =    0.01 sec.
-                          ------------
-Total (root+branch&cut) =   64.58 sec. (21762.04 ticks)
-MIP status(102): integer optimal, tolerance
-Cplex Time: 64.59sec (det. 21762.05 ticks)
-Fixing integer variables, and solving final LP...
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 2
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0.001
-CPXPARAM_MIP_Tolerances_MIPGap                   0.001
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Parallel mode: deterministic, using up to 8 threads for concurrent optimization:
- * Starting dual Simplex on 1 thread...
- * Starting Barrier on 6 threads...
- * Starting primal Simplex on 1 thread...
-Tried aggregator 1 time.
-LP Presolve eliminated 2968 rows and 1840 columns.
-Reduced LP has 234 rows, 125 columns, and 468 nonzeros.
-Presolve time = 0.00 sec. (1.83 ticks)
-
-Iteration log . . .
-Iteration:     1   Dual infeasibility =           216.558487
-Iteration:    11   Dual objective     =        -24170.812746
-Iteration:    72   Dual objective     =         -9028.744987
-
-Dual simplex solved model.
-
-Fixed MIP status(1): optimal
-Cplex Time: 0.01sec (det. 3.92 ticks)
-
-Solution satisfies tolerances.
-
-MIP Solution:        -7323.568132    (814605 iterations, 8221 nodes)
-Final Solve:         -7323.568132    (116 iterations)
-
-Best possible:       -7330.891470
-Absolute gap:            7.323338
-Relative gap:            0.000999
-
---- Reading solution for model schedule
---- Executing after solve: elapsed 0:01:04.832
---- Naive_LR_solving.gms(465) 5 Mb
+--- .. wind_scenarios_1500_2.csv(1501) 4 Mb
+--- . inputME.gms(85) 4 Mb
+--- .. scenario_sorted_1500_2.csv(1501) 4 Mb
+--- . inputME.gms(125) 4 Mb
+--- .. wind_costs.csv(25) 4 Mb
+--- . inputME.gms(197) 4 Mb
+--- Naive_LR_solving.gms(20) 4 Mb
+--- . subgradient_parameters.gms(33) 4 Mb
+--- Naive_LR_solving.gms(22) 4 Mb
+--- . equations_all.gms(96) 4 Mb
+--- Naive_LR_solving.gms(23) 4 Mb
+--- . lp_lowerbound.gms(12) 4 Mb
+--- Naive_LR_solving.gms(24) 4 Mb
+--- . heuristic_upperbound.gms(60) 4 Mb
+--- Naive_LR_solving.gms(112) 4 Mb
+--- . plain_lr.gms(12) 4 Mb
+--- Naive_LR_solving.gms(118) 4 Mb
+--- . LR_updates.gms(17) 4 Mb
+--- .. stepsizes.gms(21) 4 Mb
+--- . LR_updates.gms(42) 4 Mb
+--- Naive_LR_solving.gms(144) 4 Mb
+--- Starting execution: elapsed 0:00:00.039
+--- Naive_LR_solving.gms(3379) 10 Mb
 --- Generating RMIP model schedule
---- Naive_LR_solving.gms(347) 5 Mb
---- Starting Equ Objective: elapsed 0:01:04.832
---- Naive_LR_solving.gms(356) 5 Mb
---- Starting Equ Const1_1: elapsed 0:01:04.846
---- Naive_LR_solving.gms(363) 5 Mb
---- Starting Equ Const1_2: elapsed 0:01:04.847
---- Naive_LR_solving.gms(371) 5 Mb
---- Starting Equ Const_3_1: elapsed 0:01:04.847
---- Naive_LR_solving.gms(374) 5 Mb
---- Starting Equ Const_3_2: elapsed 0:01:04.849
---- Naive_LR_solving.gms(379) 5 Mb
---- Starting Equ Const_4_1: elapsed 0:01:04.850
---- Naive_LR_solving.gms(382) 5 Mb
---- Starting Equ Const_4_2: elapsed 0:01:04.854
---- Naive_LR_solving.gms(385) 5 Mb
---- Starting Equ Const_5: elapsed 0:01:04.857
---- Naive_LR_solving.gms(389) 5 Mb
---- Starting Equ Const_6: elapsed 0:01:04.858
---- Naive_LR_solving.gms(466) 6 Mb
----   3,202 rows  1,965 columns  14,725 non-zeroes
----   500 discrete-columns
---- Executing CPLEX (Solvelink=2): elapsed 0:01:04.867
+--- Naive_LR_solving.gms(3308) 10 Mb
+--- Starting Equ Objective: elapsed 0:00:00.750
+--- Naive_LR_solving.gms(3317) 18 Mb
+--- Starting Equ Const1_1: elapsed 0:00:01.730
+--- Naive_LR_solving.gms(3324) 39 Mb
+--- Starting Equ Const1_2: elapsed 0:00:01.785
+--- Naive_LR_solving.gms(3333) 39 Mb
+--- Starting Equ Const_3_1: elapsed 0:00:01.796
+--- Naive_LR_solving.gms(3336) 49 Mb
+--- Starting Equ Const_3_2: elapsed 0:00:01.892
+--- Naive_LR_solving.gms(3341) 60 Mb
+--- Starting Equ Const_4_1: elapsed 0:00:01.983
+--- Naive_LR_solving.gms(3344) 67 Mb
+--- Starting Equ Const_4_2: elapsed 0:00:02.210
+--- Naive_LR_solving.gms(3347) 73 Mb
+--- Starting Equ Const_5: elapsed 0:00:02.431
+--- Naive_LR_solving.gms(3351) 83 Mb
+--- Starting Equ Const_6: elapsed 0:00:02.510
+--- Naive_LR_solving.gms(3380) 95 Mb
+---   240,002 rows  145,525 columns  1,102,525 non-zeroes
+---   109,500 discrete-columns
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:02.956
 
-IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
---- GAMS/Cplex Link licensed for continuous and discrete problems.
-Cplex 12.10.0.0
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
-Reading data...
-Starting Cplex...
-Space for names approximately 0.13 Mb
-Use option 'names no' to turn use of names off
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 0
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-Parallel mode: deterministic, using up to 8 threads for concurrent optimization:
- * Starting dual Simplex on 1 thread...
- * Starting Barrier on 6 threads...
- * Starting primal Simplex on 1 thread...
-Tried aggregator 1 time.
-LP Presolve eliminated 24 rows and 81 columns.
-Reduced LP has 3178 rows, 1884 columns, and 13036 nonzeros.
-Presolve time = 0.01 sec. (4.26 ticks)
-Initializing dual steep norms . . .
-
-Iteration log . . .
-Iteration:     1   Scaled dual infeas =          9923.963015
-Iteration:   272   Scaled dual infeas =          4504.596697
-Iteration:   486   Dual objective     =        -15577.191125
-Iteration:   719   Dual objective     =        -11113.974869
-Iteration:   923   Dual objective     =        -10061.242011
-Iteration:  1104   Dual objective     =         -9793.484824
-Iteration:  1266   Dual objective     =         -9659.849629
-
-Dual simplex solved model.
-
-LP status(1): optimal
-Cplex Time: 0.06sec (det. 24.07 ticks)
-
-Optimal solution found.
-Objective :       -9647.496656
-
+Gurobi link license.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule
---- Executing after solve: elapsed 0:01:04.999
---- Naive_LR_solving.gms(488) 6 Mb
+--- Executing after solve: elapsed 0:00:03.398
+--- Naive_LR_solving.gms(3402) 95 Mb
 --- Generating MIP model schedule_scenario
---- Naive_LR_solving.gms(352) 6 Mb
---- Starting Equ Objective_scenario: elapsed 0:01:04.999
---- Naive_LR_solving.gms(359) 6 Mb
---- Starting Equ Const1_1_scenario: elapsed 0:01:05.000
---- Naive_LR_solving.gms(372) 6 Mb
---- Starting Equ Const_3_1_scenario: elapsed 0:01:05.000
---- Naive_LR_solving.gms(375) 6 Mb
---- Starting Equ Const_3_2_scenario: elapsed 0:01:05.000
---- Naive_LR_solving.gms(380) 6 Mb
---- Starting Equ Const_4_1_scenario: elapsed 0:01:05.000
---- Naive_LR_solving.gms(383) 6 Mb
---- Starting Equ Const_4_2_scenario: elapsed 0:01:05.001
---- Naive_LR_solving.gms(386) 6 Mb
---- Starting Equ Const_5_scenario: elapsed 0:01:05.001
---- Naive_LR_solving.gms(390) 6 Mb
---- Starting Equ Const_6_scenario: elapsed 0:01:05.002
---- Naive_LR_solving.gms(491) 6 Mb
+--- Naive_LR_solving.gms(3313) 95 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:03.399
+--- Naive_LR_solving.gms(3320) 95 Mb
+--- Starting Equ Const1_1_scenario: elapsed 0:00:03.399
+--- Naive_LR_solving.gms(3334) 95 Mb
+--- Starting Equ Const_3_1_scenario: elapsed 0:00:03.402
+--- Naive_LR_solving.gms(3337) 95 Mb
+--- Starting Equ Const_3_2_scenario: elapsed 0:00:03.408
+--- Naive_LR_solving.gms(3342) 95 Mb
+--- Starting Equ Const_4_1_scenario: elapsed 0:00:03.414
+--- Naive_LR_solving.gms(3345) 95 Mb
+--- Starting Equ Const_4_2_scenario: elapsed 0:00:03.420
+--- Naive_LR_solving.gms(3348) 95 Mb
+--- Starting Equ Const_5_scenario: elapsed 0:00:03.428
+--- Naive_LR_solving.gms(3352) 95 Mb
+--- Starting Equ Const_6_scenario: elapsed 0:00:03.434
+--- Naive_LR_solving.gms(3405) 95 Mb
 --- LOOPS rs = scen1
 ---   161 rows  121 columns  735 non-zeroes
----   24 discrete-columns
---- Executing CPLEX (Solvelink=5): elapsed 0:01:05.008
+---   72 discrete-columns
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:03.444
 
-IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
---- GAMS/Cplex Link licensed for continuous and discrete problems.
-Cplex 12.10.0.0
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
-Reading data...
-Starting Cplex...
-Space for names approximately 0.01 Mb
-Use option 'names no' to turn use of names off
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 0
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Found incumbent of value -12384.442217 after 0.00 sec. (0.01 ticks)
-Tried aggregator 2 times.
-MIP Presolve eliminated 29 rows and 30 columns.
-MIP Presolve modified 2 coefficients.
-Aggregator did 1 substitutions.
-Reduced MIP has 131 rows, 90 columns, and 560 nonzeros.
-Reduced MIP has 23 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.35 ticks)
-Probing fixed 0 vars, tightened 1 bounds.
-Probing time = 0.00 sec. (0.05 ticks)
-Tried aggregator 1 time.
-Detecting symmetries...
-MIP Presolve eliminated 1 rows and 1 columns.
-MIP Presolve modified 1 coefficients.
-Reduced MIP has 130 rows, 89 columns, and 553 nonzeros.
-Reduced MIP has 24 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.30 ticks)
-Probing changed sense of 1 constraints.
-Probing time = 0.00 sec. (0.05 ticks)
-Clique table members: 5.
-MIP emphasis: balance optimality and feasibility.
-MIP search method: dynamic search.
-Parallel mode: deterministic, using up to 8 threads.
-Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
-Tried aggregator 1 time.
-No LP presolve or aggregator reductions.
-Presolve time = 0.00 sec. (0.06 ticks)
-Initializing dual steep norms . . .
-
-Iteration log . . .
-Iteration:     1   Dual objective     =        -14818.375595
-Root relaxation solution time = 0.00 sec. (0.16 ticks)
-
-        Nodes                                         Cuts/
-   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
-
-*     0+    0                       -12384.4422   -15004.8962            21.16%
-Found incumbent of value -12384.442217 after 0.00 sec. (1.17 ticks)
-*     0     0      integral     0   -13935.3143   -13935.3143        8    0.00%
-Elapsed time = 0.00 sec. (1.19 ticks, tree = 0.00 MB, solutions = 2)
-Found incumbent of value -13935.314287 after 0.00 sec. (1.19 ticks)
-
-Root node processing (before b&c):
-  Real time             =    0.00 sec. (1.20 ticks)
-Parallel b&c, 8 threads:
-  Real time             =    0.00 sec. (0.00 ticks)
-  Sync time (average)   =    0.00 sec.
-  Wait time (average)   =    0.00 sec.
-                          ------------
-Total (root+branch&cut) =    0.00 sec. (1.20 ticks)
-MIP status(101): integer optimal solution
-Cplex Time: 0.02sec (det. 1.20 ticks)
-Fixing integer variables, and solving final LP...
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 2
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Tried aggregator 1 time.
-LP Presolve eliminated 161 rows and 121 columns.
-All rows and columns eliminated.
-Presolve time = 0.00 sec. (0.08 ticks)
-Fixed MIP status(1): optimal
-Cplex Time: 0.02sec (det. 0.14 ticks)
-
-Proven optimal solution.
-
-MIP Solution:       -13935.314287    (8 iterations, 0 nodes)
-Final Solve:        -13935.314287    (0 iterations)
-
-Best possible:      -13935.314287
-Absolute gap:            0.000000
-Relative gap:            0.000000
-
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule_scenario
---- Executing after solve: elapsed 0:01:05.050
---- Naive_LR_solving.gms(488) 6 Mb
+--- Executing after solve: elapsed 0:00:03.459
+--- Naive_LR_solving.gms(3402) 95 Mb
 --- Generating MIP model schedule_scenario
---- Naive_LR_solving.gms(352) 6 Mb
---- Starting Equ Objective_scenario: elapsed 0:01:05.050
---- Naive_LR_solving.gms(359) 6 Mb
---- Starting Equ Const1_1_scenario: elapsed 0:01:05.050
---- Naive_LR_solving.gms(372) 6 Mb
---- Starting Equ Const_3_1_scenario: elapsed 0:01:05.051
---- Naive_LR_solving.gms(375) 6 Mb
---- Starting Equ Const_3_2_scenario: elapsed 0:01:05.051
---- Naive_LR_solving.gms(380) 6 Mb
---- Starting Equ Const_4_1_scenario: elapsed 0:01:05.051
---- Naive_LR_solving.gms(383) 6 Mb
---- Starting Equ Const_4_2_scenario: elapsed 0:01:05.051
---- Naive_LR_solving.gms(386) 6 Mb
---- Starting Equ Const_5_scenario: elapsed 0:01:05.052
---- Naive_LR_solving.gms(390) 6 Mb
---- Starting Equ Const_6_scenario: elapsed 0:01:05.052
---- Naive_LR_solving.gms(491) 6 Mb
+--- Naive_LR_solving.gms(3313) 95 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:03.459
+--- Naive_LR_solving.gms(3320) 95 Mb
+--- Starting Equ Const1_1_scenario: elapsed 0:00:03.459
+--- Naive_LR_solving.gms(3334) 95 Mb
+--- Starting Equ Const_3_1_scenario: elapsed 0:00:03.463
+--- Naive_LR_solving.gms(3337) 95 Mb
+--- Starting Equ Const_3_2_scenario: elapsed 0:00:03.469
+--- Naive_LR_solving.gms(3342) 95 Mb
+--- Starting Equ Const_4_1_scenario: elapsed 0:00:03.476
+--- Naive_LR_solving.gms(3345) 95 Mb
+--- Starting Equ Const_4_2_scenario: elapsed 0:00:03.481
+--- Naive_LR_solving.gms(3348) 95 Mb
+--- Starting Equ Const_5_scenario: elapsed 0:00:03.486
+--- Naive_LR_solving.gms(3352) 95 Mb
+--- Starting Equ Const_6_scenario: elapsed 0:00:03.495
+--- Naive_LR_solving.gms(3405) 95 Mb
 --- LOOPS rs = scen2
 ---   161 rows  121 columns  735 non-zeroes
----   24 discrete-columns
---- Executing CPLEX (Solvelink=5): elapsed 0:01:05.058
+---   72 discrete-columns
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:03.505
 
-IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
---- GAMS/Cplex Link licensed for continuous and discrete problems.
-Cplex 12.10.0.0
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
-Reading data...
-Starting Cplex...
-Space for names approximately 0.01 Mb
-Use option 'names no' to turn use of names off
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 0
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Found incumbent of value -15854.613991 after 0.00 sec. (0.01 ticks)
-Tried aggregator 2 times.
-MIP Presolve eliminated 29 rows and 30 columns.
-MIP Presolve modified 2 coefficients.
-Aggregator did 1 substitutions.
-Reduced MIP has 131 rows, 90 columns, and 560 nonzeros.
-Reduced MIP has 23 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.35 ticks)
-Probing fixed 0 vars, tightened 1 bounds.
-Probing time = 0.00 sec. (0.05 ticks)
-Tried aggregator 1 time.
-Detecting symmetries...
-MIP Presolve eliminated 1 rows and 1 columns.
-MIP Presolve modified 1 coefficients.
-Reduced MIP has 130 rows, 89 columns, and 553 nonzeros.
-Reduced MIP has 24 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.02 sec. (0.30 ticks)
-Probing changed sense of 1 constraints.
-Probing time = 0.00 sec. (0.05 ticks)
-Clique table members: 5.
-MIP emphasis: balance optimality and feasibility.
-MIP search method: dynamic search.
-Parallel mode: deterministic, using up to 8 threads.
-Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
-Tried aggregator 1 time.
-No LP presolve or aggregator reductions.
-Presolve time = 0.00 sec. (0.06 ticks)
-Initializing dual steep norms . . .
-
-Iteration log . . .
-Iteration:     1   Dual objective     =        -18288.547369
-Root relaxation solution time = 0.00 sec. (0.16 ticks)
-
-        Nodes                                         Cuts/
-   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
-
-*     0+    0                       -15854.6140   -18475.0680            16.53%
-Found incumbent of value -15854.613991 after 0.02 sec. (1.17 ticks)
-*     0     0      integral     0   -17405.4861   -17405.4861        8    0.00%
-Elapsed time = 0.02 sec. (1.19 ticks, tree = 0.00 MB, solutions = 2)
-Found incumbent of value -17405.486061 after 0.02 sec. (1.19 ticks)
-
-Root node processing (before b&c):
-  Real time             =    0.02 sec. (1.20 ticks)
-Parallel b&c, 8 threads:
-  Real time             =    0.00 sec. (0.00 ticks)
-  Sync time (average)   =    0.00 sec.
-  Wait time (average)   =    0.00 sec.
-                          ------------
-Total (root+branch&cut) =    0.02 sec. (1.20 ticks)
-MIP status(101): integer optimal solution
-Cplex Time: 0.02sec (det. 1.20 ticks)
-Fixing integer variables, and solving final LP...
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 2
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Tried aggregator 1 time.
-LP Presolve eliminated 161 rows and 121 columns.
-All rows and columns eliminated.
-Presolve time = 0.00 sec. (0.08 ticks)
-Fixed MIP status(1): optimal
-Cplex Time: 0.00sec (det. 0.14 ticks)
-
-Proven optimal solution.
-
-MIP Solution:       -17405.486061    (8 iterations, 0 nodes)
-Final Solve:        -17405.486061    (0 iterations)
-
-Best possible:      -17405.486061
-Absolute gap:            0.000000
-Relative gap:            0.000000
-
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule_scenario
---- Executing after solve: elapsed 0:01:05.088
---- Naive_LR_solving.gms(488) 6 Mb
+--- Executing after solve: elapsed 0:00:03.515
+--- Naive_LR_solving.gms(3402) 95 Mb
 --- Generating MIP model schedule_scenario
---- Naive_LR_solving.gms(352) 6 Mb
---- Starting Equ Objective_scenario: elapsed 0:01:05.089
---- Naive_LR_solving.gms(359) 6 Mb
---- Starting Equ Const1_1_scenario: elapsed 0:01:05.089
---- Naive_LR_solving.gms(372) 6 Mb
---- Starting Equ Const_3_1_scenario: elapsed 0:01:05.089
---- Naive_LR_solving.gms(375) 6 Mb
---- Starting Equ Const_3_2_scenario: elapsed 0:01:05.089
---- Naive_LR_solving.gms(380) 6 Mb
---- Starting Equ Const_4_1_scenario: elapsed 0:01:05.090
---- Naive_LR_solving.gms(383) 6 Mb
---- Starting Equ Const_4_2_scenario: elapsed 0:01:05.090
---- Naive_LR_solving.gms(386) 6 Mb
---- Starting Equ Const_5_scenario: elapsed 0:01:05.090
---- Naive_LR_solving.gms(390) 6 Mb
---- Starting Equ Const_6_scenario: elapsed 0:01:05.090
---- Naive_LR_solving.gms(491) 6 Mb
+--- Naive_LR_solving.gms(3313) 95 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:03.515
+--- Naive_LR_solving.gms(3320) 95 Mb
+--- Starting Equ Const1_1_scenario: elapsed 0:00:03.516
+--- Naive_LR_solving.gms(3334) 95 Mb
+--- Starting Equ Const_3_1_scenario: elapsed 0:00:03.519
+--- Naive_LR_solving.gms(3337) 95 Mb
+--- Starting Equ Const_3_2_scenario: elapsed 0:00:03.525
+--- Naive_LR_solving.gms(3342) 95 Mb
+--- Starting Equ Const_4_1_scenario: elapsed 0:00:03.532
+--- Naive_LR_solving.gms(3345) 95 Mb
+--- Starting Equ Const_4_2_scenario: elapsed 0:00:03.536
+--- Naive_LR_solving.gms(3348) 95 Mb
+--- Starting Equ Const_5_scenario: elapsed 0:00:03.541
+--- Naive_LR_solving.gms(3352) 95 Mb
+--- Starting Equ Const_6_scenario: elapsed 0:00:03.545
+--- Naive_LR_solving.gms(3405) 95 Mb
 --- LOOPS rs = scen3
 ---   161 rows  121 columns  735 non-zeroes
----   24 discrete-columns
---- Executing CPLEX (Solvelink=5): elapsed 0:01:05.095
+---   72 discrete-columns
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:03.554
 
-IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
---- GAMS/Cplex Link licensed for continuous and discrete problems.
-Cplex 12.10.0.0
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
-Reading data...
-Starting Cplex...
-Space for names approximately 0.01 Mb
-Use option 'names no' to turn use of names off
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 0
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Found incumbent of value -11743.388339 after 0.00 sec. (0.01 ticks)
-Tried aggregator 2 times.
-MIP Presolve eliminated 29 rows and 30 columns.
-MIP Presolve modified 2 coefficients.
-Aggregator did 1 substitutions.
-Reduced MIP has 131 rows, 90 columns, and 560 nonzeros.
-Reduced MIP has 23 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.35 ticks)
-Probing fixed 0 vars, tightened 1 bounds.
-Probing time = 0.00 sec. (0.05 ticks)
-Tried aggregator 1 time.
-Detecting symmetries...
-MIP Presolve eliminated 1 rows and 1 columns.
-MIP Presolve modified 1 coefficients.
-Reduced MIP has 130 rows, 89 columns, and 553 nonzeros.
-Reduced MIP has 24 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.30 ticks)
-Probing changed sense of 1 constraints.
-Probing time = 0.00 sec. (0.05 ticks)
-Clique table members: 5.
-MIP emphasis: balance optimality and feasibility.
-MIP search method: dynamic search.
-Parallel mode: deterministic, using up to 8 threads.
-Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
-Tried aggregator 1 time.
-No LP presolve or aggregator reductions.
-Presolve time = 0.00 sec. (0.06 ticks)
-Initializing dual steep norms . . .
-
-Iteration log . . .
-Iteration:     1   Dual objective     =        -14177.321717
-Root relaxation solution time = 0.00 sec. (0.16 ticks)
-
-        Nodes                                         Cuts/
-   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
-
-*     0+    0                       -11743.3883   -14363.8424            22.31%
-Found incumbent of value -11743.388339 after 0.00 sec. (1.17 ticks)
-*     0     0      integral     0   -13294.2604   -13294.2604        8    0.00%
-Elapsed time = 0.00 sec. (1.19 ticks, tree = 0.00 MB, solutions = 2)
-Found incumbent of value -13294.260409 after 0.00 sec. (1.19 ticks)
-
-Root node processing (before b&c):
-  Real time             =    0.00 sec. (1.20 ticks)
-Parallel b&c, 8 threads:
-  Real time             =    0.00 sec. (0.00 ticks)
-  Sync time (average)   =    0.00 sec.
-  Wait time (average)   =    0.00 sec.
-                          ------------
-Total (root+branch&cut) =    0.00 sec. (1.20 ticks)
-MIP status(101): integer optimal solution
-Cplex Time: 0.00sec (det. 1.20 ticks)
-Fixing integer variables, and solving final LP...
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 2
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Tried aggregator 1 time.
-LP Presolve eliminated 161 rows and 121 columns.
-All rows and columns eliminated.
-Presolve time = 0.00 sec. (0.08 ticks)
-Fixed MIP status(1): optimal
-Cplex Time: 0.00sec (det. 0.14 ticks)
-
-Proven optimal solution.
-
-MIP Solution:       -13294.260409    (8 iterations, 0 nodes)
-Final Solve:        -13294.260409    (0 iterations)
-
-Best possible:      -13294.260409
-Absolute gap:            0.000000
-Relative gap:            0.000000
-
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule_scenario
---- Executing after solve: elapsed 0:01:05.124
---- Naive_LR_solving.gms(488) 6 Mb
+--- Executing after solve: elapsed 0:00:03.562
+--- Naive_LR_solving.gms(3402) 95 Mb
 --- Generating MIP model schedule_scenario
---- Naive_LR_solving.gms(352) 6 Mb
---- Starting Equ Objective_scenario: elapsed 0:01:05.125
---- Naive_LR_solving.gms(359) 6 Mb
---- Starting Equ Const1_1_scenario: elapsed 0:01:05.125
---- Naive_LR_solving.gms(372) 6 Mb
---- Starting Equ Const_3_1_scenario: elapsed 0:01:05.125
---- Naive_LR_solving.gms(375) 6 Mb
---- Starting Equ Const_3_2_scenario: elapsed 0:01:05.125
---- Naive_LR_solving.gms(380) 6 Mb
---- Starting Equ Const_4_1_scenario: elapsed 0:01:05.126
---- Naive_LR_solving.gms(383) 6 Mb
---- Starting Equ Const_4_2_scenario: elapsed 0:01:05.126
---- Naive_LR_solving.gms(386) 6 Mb
---- Starting Equ Const_5_scenario: elapsed 0:01:05.126
---- Naive_LR_solving.gms(390) 6 Mb
---- Starting Equ Const_6_scenario: elapsed 0:01:05.126
---- Naive_LR_solving.gms(491) 6 Mb
+--- Naive_LR_solving.gms(3313) 95 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:03.563
+--- Naive_LR_solving.gms(3320) 95 Mb
+--- Starting Equ Const1_1_scenario: elapsed 0:00:03.564
+--- Naive_LR_solving.gms(3334) 95 Mb
+--- Starting Equ Const_3_1_scenario: elapsed 0:00:03.568
+--- Naive_LR_solving.gms(3337) 95 Mb
+--- Starting Equ Const_3_2_scenario: elapsed 0:00:03.574
+--- Naive_LR_solving.gms(3342) 95 Mb
+--- Starting Equ Const_4_1_scenario: elapsed 0:00:03.581
+--- Naive_LR_solving.gms(3345) 95 Mb
+--- Starting Equ Const_4_2_scenario: elapsed 0:00:03.586
+--- Naive_LR_solving.gms(3348) 95 Mb
+--- Starting Equ Const_5_scenario: elapsed 0:00:03.589
+--- Naive_LR_solving.gms(3352) 95 Mb
+--- Starting Equ Const_6_scenario: elapsed 0:00:03.594
+--- Naive_LR_solving.gms(3405) 95 Mb
 --- LOOPS rs = scen4
 ---   161 rows  121 columns  735 non-zeroes
----   24 discrete-columns
---- Executing CPLEX (Solvelink=5): elapsed 0:01:05.131
+---   72 discrete-columns
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:03.603
 
-IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
---- GAMS/Cplex Link licensed for continuous and discrete problems.
-Cplex 12.10.0.0
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
-Reading data...
-Starting Cplex...
-Space for names approximately 0.01 Mb
-Use option 'names no' to turn use of names off
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 0
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Found incumbent of value -14496.532586 after 0.00 sec. (0.01 ticks)
-Tried aggregator 2 times.
-MIP Presolve eliminated 29 rows and 30 columns.
-MIP Presolve modified 2 coefficients.
-Aggregator did 1 substitutions.
-Reduced MIP has 131 rows, 90 columns, and 560 nonzeros.
-Reduced MIP has 23 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.35 ticks)
-Probing fixed 0 vars, tightened 1 bounds.
-Probing time = 0.00 sec. (0.05 ticks)
-Tried aggregator 1 time.
-Detecting symmetries...
-MIP Presolve eliminated 1 rows and 1 columns.
-MIP Presolve modified 1 coefficients.
-Reduced MIP has 130 rows, 89 columns, and 553 nonzeros.
-Reduced MIP has 24 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.30 ticks)
-Probing changed sense of 1 constraints.
-Probing time = 0.00 sec. (0.05 ticks)
-Clique table members: 5.
-MIP emphasis: balance optimality and feasibility.
-MIP search method: dynamic search.
-Parallel mode: deterministic, using up to 8 threads.
-Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
-Tried aggregator 1 time.
-No LP presolve or aggregator reductions.
-Presolve time = 0.00 sec. (0.06 ticks)
-Initializing dual steep norms . . .
-
-Iteration log . . .
-Iteration:     1   Dual objective     =        -16930.465963
-Root relaxation solution time = 0.02 sec. (0.16 ticks)
-
-        Nodes                                         Cuts/
-   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
-
-*     0+    0                       -14496.5326   -17116.9866            18.08%
-Found incumbent of value -14496.532586 after 0.02 sec. (1.17 ticks)
-*     0     0      integral     0   -16047.4047   -16047.4047        8    0.00%
-Elapsed time = 0.02 sec. (1.19 ticks, tree = 0.00 MB, solutions = 2)
-Found incumbent of value -16047.404656 after 0.02 sec. (1.19 ticks)
-
-Root node processing (before b&c):
-  Real time             =    0.02 sec. (1.20 ticks)
-Parallel b&c, 8 threads:
-  Real time             =    0.00 sec. (0.00 ticks)
-  Sync time (average)   =    0.00 sec.
-  Wait time (average)   =    0.00 sec.
-                          ------------
-Total (root+branch&cut) =    0.02 sec. (1.20 ticks)
-MIP status(101): integer optimal solution
-Cplex Time: 0.02sec (det. 1.20 ticks)
-Fixing integer variables, and solving final LP...
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 2
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Tried aggregator 1 time.
-LP Presolve eliminated 161 rows and 121 columns.
-All rows and columns eliminated.
-Presolve time = 0.00 sec. (0.08 ticks)
-Fixed MIP status(1): optimal
-Cplex Time: 0.00sec (det. 0.14 ticks)
-
-Proven optimal solution.
-
-MIP Solution:       -16047.404656    (8 iterations, 0 nodes)
-Final Solve:        -16047.404656    (0 iterations)
-
-Best possible:      -16047.404656
-Absolute gap:            0.000000
-Relative gap:            0.000000
-
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule_scenario
---- Executing after solve: elapsed 0:01:05.162
---- Naive_LR_solving.gms(488) 6 Mb
+--- Executing after solve: elapsed 0:00:03.612
+--- Naive_LR_solving.gms(3402) 95 Mb
 --- Generating MIP model schedule_scenario
---- Naive_LR_solving.gms(352) 6 Mb
---- Starting Equ Objective_scenario: elapsed 0:01:05.162
---- Naive_LR_solving.gms(359) 6 Mb
---- Starting Equ Const1_1_scenario: elapsed 0:01:05.163
---- Naive_LR_solving.gms(372) 6 Mb
---- Starting Equ Const_3_1_scenario: elapsed 0:01:05.163
---- Naive_LR_solving.gms(375) 6 Mb
---- Starting Equ Const_3_2_scenario: elapsed 0:01:05.163
---- Naive_LR_solving.gms(380) 6 Mb
---- Starting Equ Const_4_1_scenario: elapsed 0:01:05.164
---- Naive_LR_solving.gms(383) 6 Mb
---- Starting Equ Const_4_2_scenario: elapsed 0:01:05.164
---- Naive_LR_solving.gms(386) 6 Mb
---- Starting Equ Const_5_scenario: elapsed 0:01:05.164
---- Naive_LR_solving.gms(390) 6 Mb
---- Starting Equ Const_6_scenario: elapsed 0:01:05.164
---- Naive_LR_solving.gms(491) 6 Mb
+--- Naive_LR_solving.gms(3313) 95 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:03.612
+--- Naive_LR_solving.gms(3320) 95 Mb
+--- Starting Equ Const1_1_scenario: elapsed 0:00:03.612
+--- Naive_LR_solving.gms(3334) 95 Mb
+--- Starting Equ Const_3_1_scenario: elapsed 0:00:03.615
+--- Naive_LR_solving.gms(3337) 95 Mb
+--- Starting Equ Const_3_2_scenario: elapsed 0:00:03.622
+--- Naive_LR_solving.gms(3342) 95 Mb
+--- Starting Equ Const_4_1_scenario: elapsed 0:00:03.629
+--- Naive_LR_solving.gms(3345) 95 Mb
+--- Starting Equ Const_4_2_scenario: elapsed 0:00:03.634
+--- Naive_LR_solving.gms(3348) 95 Mb
+--- Starting Equ Const_5_scenario: elapsed 0:00:03.638
+--- Naive_LR_solving.gms(3352) 95 Mb
+--- Starting Equ Const_6_scenario: elapsed 0:00:03.643
+--- Naive_LR_solving.gms(3405) 95 Mb
 --- LOOPS rs = scen5
 ---   161 rows  121 columns  735 non-zeroes
----   24 discrete-columns
---- Executing CPLEX (Solvelink=5): elapsed 0:01:05.171
+---   72 discrete-columns
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:03.653
 
-IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
---- GAMS/Cplex Link licensed for continuous and discrete problems.
-Cplex 12.10.0.0
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
-Reading data...
-Starting Cplex...
-Space for names approximately 0.01 Mb
-Use option 'names no' to turn use of names off
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 0
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Found incumbent of value -10115.463994 after 0.00 sec. (0.01 ticks)
-Tried aggregator 2 times.
-MIP Presolve eliminated 29 rows and 30 columns.
-MIP Presolve modified 2 coefficients.
-Aggregator did 1 substitutions.
-Reduced MIP has 131 rows, 90 columns, and 560 nonzeros.
-Reduced MIP has 23 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.01 sec. (0.35 ticks)
-Probing fixed 0 vars, tightened 1 bounds.
-Probing time = 0.00 sec. (0.05 ticks)
-Tried aggregator 1 time.
-Detecting symmetries...
-MIP Presolve eliminated 1 rows and 1 columns.
-MIP Presolve modified 1 coefficients.
-Reduced MIP has 130 rows, 89 columns, and 553 nonzeros.
-Reduced MIP has 24 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.30 ticks)
-Probing changed sense of 1 constraints.
-Probing time = 0.00 sec. (0.05 ticks)
-Clique table members: 5.
-MIP emphasis: balance optimality and feasibility.
-MIP search method: dynamic search.
-Parallel mode: deterministic, using up to 8 threads.
-Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
-Tried aggregator 1 time.
-No LP presolve or aggregator reductions.
-Presolve time = 0.00 sec. (0.06 ticks)
-Initializing dual steep norms . . .
-
-Iteration log . . .
-Iteration:     1   Dual objective     =        -12549.397372
-Root relaxation solution time = 0.00 sec. (0.16 ticks)
-
-        Nodes                                         Cuts/
-   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
-
-*     0+    0                       -10115.4640   -12735.9180            25.91%
-Found incumbent of value -10115.463994 after 0.01 sec. (1.17 ticks)
-*     0     0      integral     0   -11666.3361   -11666.3361        8    0.00%
-Elapsed time = 0.01 sec. (1.19 ticks, tree = 0.00 MB, solutions = 2)
-Found incumbent of value -11666.336064 after 0.01 sec. (1.19 ticks)
-
-Root node processing (before b&c):
-  Real time             =    0.01 sec. (1.20 ticks)
-Parallel b&c, 8 threads:
-  Real time             =    0.00 sec. (0.00 ticks)
-  Sync time (average)   =    0.00 sec.
-  Wait time (average)   =    0.00 sec.
-                          ------------
-Total (root+branch&cut) =    0.01 sec. (1.20 ticks)
-MIP status(101): integer optimal solution
-Cplex Time: 0.01sec (det. 1.20 ticks)
-Fixing integer variables, and solving final LP...
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 2
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Tried aggregator 1 time.
-LP Presolve eliminated 161 rows and 121 columns.
-All rows and columns eliminated.
-Presolve time = 0.00 sec. (0.08 ticks)
-Fixed MIP status(1): optimal
-Cplex Time: 0.00sec (det. 0.14 ticks)
-
-Proven optimal solution.
-
-MIP Solution:       -11666.336064    (8 iterations, 0 nodes)
-Final Solve:        -11666.336064    (0 iterations)
-
-Best possible:      -11666.336064
-Absolute gap:            0.000000
-Relative gap:            0.000000
-
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule_scenario
---- Executing after solve: elapsed 0:01:05.204
---- Naive_LR_solving.gms(488) 6 Mb
+--- Executing after solve: elapsed 0:00:03.662
+--- Naive_LR_solving.gms(3402) 95 Mb
 --- Generating MIP model schedule_scenario
---- Naive_LR_solving.gms(352) 6 Mb
---- Starting Equ Objective_scenario: elapsed 0:01:05.205
---- Naive_LR_solving.gms(359) 6 Mb
---- Starting Equ Const1_1_scenario: elapsed 0:01:05.205
---- Naive_LR_solving.gms(372) 6 Mb
---- Starting Equ Const_3_1_scenario: elapsed 0:01:05.205
---- Naive_LR_solving.gms(375) 6 Mb
---- Starting Equ Const_3_2_scenario: elapsed 0:01:05.205
---- Naive_LR_solving.gms(380) 6 Mb
---- Starting Equ Const_4_1_scenario: elapsed 0:01:05.206
---- Naive_LR_solving.gms(383) 6 Mb
---- Starting Equ Const_4_2_scenario: elapsed 0:01:05.206
---- Naive_LR_solving.gms(386) 6 Mb
---- Starting Equ Const_5_scenario: elapsed 0:01:05.206
---- Naive_LR_solving.gms(390) 6 Mb
---- Starting Equ Const_6_scenario: elapsed 0:01:05.206
---- Naive_LR_solving.gms(491) 6 Mb
+--- Naive_LR_solving.gms(3313) 95 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:03.662
+--- Naive_LR_solving.gms(3320) 95 Mb
+--- Starting Equ Const1_1_scenario: elapsed 0:00:03.662
+--- Naive_LR_solving.gms(3334) 95 Mb
+--- Starting Equ Const_3_1_scenario: elapsed 0:00:03.666
+--- Naive_LR_solving.gms(3337) 95 Mb
+--- Starting Equ Const_3_2_scenario: elapsed 0:00:03.672
+--- Naive_LR_solving.gms(3342) 95 Mb
+--- Starting Equ Const_4_1_scenario: elapsed 0:00:03.679
+--- Naive_LR_solving.gms(3345) 95 Mb
+--- Starting Equ Const_4_2_scenario: elapsed 0:00:03.683
+--- Naive_LR_solving.gms(3348) 95 Mb
+--- Starting Equ Const_5_scenario: elapsed 0:00:03.688
+--- Naive_LR_solving.gms(3352) 95 Mb
+--- Starting Equ Const_6_scenario: elapsed 0:00:03.692
+--- Naive_LR_solving.gms(3405) 95 Mb
 --- LOOPS rs = scen6
 ---   161 rows  121 columns  735 non-zeroes
----   24 discrete-columns
---- Executing CPLEX (Solvelink=5): elapsed 0:01:05.211
+---   72 discrete-columns
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:03.701
 
-IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
---- GAMS/Cplex Link licensed for continuous and discrete problems.
-Cplex 12.10.0.0
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
-Reading data...
-Starting Cplex...
-Space for names approximately 0.01 Mb
-Use option 'names no' to turn use of names off
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 0
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Found incumbent of value -12666.707227 after 0.00 sec. (0.01 ticks)
-Tried aggregator 2 times.
-MIP Presolve eliminated 29 rows and 30 columns.
-MIP Presolve modified 2 coefficients.
-Aggregator did 1 substitutions.
-Reduced MIP has 131 rows, 90 columns, and 560 nonzeros.
-Reduced MIP has 23 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.35 ticks)
-Probing fixed 0 vars, tightened 1 bounds.
-Probing time = 0.00 sec. (0.05 ticks)
-Tried aggregator 1 time.
-Detecting symmetries...
-MIP Presolve eliminated 1 rows and 1 columns.
-MIP Presolve modified 1 coefficients.
-Reduced MIP has 130 rows, 89 columns, and 553 nonzeros.
-Reduced MIP has 24 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.30 ticks)
-Probing changed sense of 1 constraints.
-Probing time = 0.00 sec. (0.05 ticks)
-Clique table members: 5.
-MIP emphasis: balance optimality and feasibility.
-MIP search method: dynamic search.
-Parallel mode: deterministic, using up to 8 threads.
-Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
-Tried aggregator 1 time.
-No LP presolve or aggregator reductions.
-Presolve time = 0.00 sec. (0.06 ticks)
-Initializing dual steep norms . . .
-
-Iteration log . . .
-Iteration:     1   Dual objective     =        -15100.640605
-Root relaxation solution time = 0.01 sec. (0.16 ticks)
-
-        Nodes                                         Cuts/
-   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
-
-*     0+    0                       -12666.7072   -15287.1612            20.69%
-Found incumbent of value -12666.707227 after 0.01 sec. (1.17 ticks)
-*     0     0      integral     0   -14217.5793   -14217.5793        8    0.00%
-Elapsed time = 0.01 sec. (1.19 ticks, tree = 0.00 MB, solutions = 2)
-Found incumbent of value -14217.579297 after 0.01 sec. (1.19 ticks)
-
-Root node processing (before b&c):
-  Real time             =    0.01 sec. (1.20 ticks)
-Parallel b&c, 8 threads:
-  Real time             =    0.00 sec. (0.00 ticks)
-  Sync time (average)   =    0.00 sec.
-  Wait time (average)   =    0.00 sec.
-                          ------------
-Total (root+branch&cut) =    0.01 sec. (1.20 ticks)
-MIP status(101): integer optimal solution
-Cplex Time: 0.01sec (det. 1.20 ticks)
-Fixing integer variables, and solving final LP...
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 2
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Tried aggregator 1 time.
-LP Presolve eliminated 161 rows and 121 columns.
-All rows and columns eliminated.
-Presolve time = 0.00 sec. (0.08 ticks)
-Fixed MIP status(1): optimal
-Cplex Time: 0.00sec (det. 0.14 ticks)
-
-Proven optimal solution.
-
-MIP Solution:       -14217.579297    (8 iterations, 0 nodes)
-Final Solve:        -14217.579297    (0 iterations)
-
-Best possible:      -14217.579297
-Absolute gap:            0.000000
-Relative gap:            0.000000
-
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule_scenario
---- Executing after solve: elapsed 0:01:05.239
---- Naive_LR_solving.gms(488) 6 Mb
+--- Executing after solve: elapsed 0:00:03.710
+--- Naive_LR_solving.gms(3402) 95 Mb
 --- Generating MIP model schedule_scenario
---- Naive_LR_solving.gms(352) 6 Mb
---- Starting Equ Objective_scenario: elapsed 0:01:05.240
---- Naive_LR_solving.gms(359) 6 Mb
---- Starting Equ Const1_1_scenario: elapsed 0:01:05.240
---- Naive_LR_solving.gms(372) 6 Mb
---- Starting Equ Const_3_1_scenario: elapsed 0:01:05.240
---- Naive_LR_solving.gms(375) 6 Mb
---- Starting Equ Const_3_2_scenario: elapsed 0:01:05.240
---- Naive_LR_solving.gms(380) 6 Mb
---- Starting Equ Const_4_1_scenario: elapsed 0:01:05.240
---- Naive_LR_solving.gms(383) 6 Mb
---- Starting Equ Const_4_2_scenario: elapsed 0:01:05.241
---- Naive_LR_solving.gms(386) 6 Mb
---- Starting Equ Const_5_scenario: elapsed 0:01:05.241
---- Naive_LR_solving.gms(390) 6 Mb
---- Starting Equ Const_6_scenario: elapsed 0:01:05.241
---- Naive_LR_solving.gms(491) 6 Mb
+--- Naive_LR_solving.gms(3313) 95 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:03.710
+--- Naive_LR_solving.gms(3320) 95 Mb
+--- Starting Equ Const1_1_scenario: elapsed 0:00:03.710
+--- Naive_LR_solving.gms(3334) 95 Mb
+--- Starting Equ Const_3_1_scenario: elapsed 0:00:03.713
+--- Naive_LR_solving.gms(3337) 95 Mb
+--- Starting Equ Const_3_2_scenario: elapsed 0:00:03.720
+--- Naive_LR_solving.gms(3342) 95 Mb
+--- Starting Equ Const_4_1_scenario: elapsed 0:00:03.726
+--- Naive_LR_solving.gms(3345) 95 Mb
+--- Starting Equ Const_4_2_scenario: elapsed 0:00:03.731
+--- Naive_LR_solving.gms(3348) 95 Mb
+--- Starting Equ Const_5_scenario: elapsed 0:00:03.735
+--- Naive_LR_solving.gms(3352) 95 Mb
+--- Starting Equ Const_6_scenario: elapsed 0:00:03.742
+--- Naive_LR_solving.gms(3405) 95 Mb
 --- LOOPS rs = scen7
 ---   161 rows  121 columns  735 non-zeroes
----   24 discrete-columns
---- Executing CPLEX (Solvelink=5): elapsed 0:01:05.246
+---   72 discrete-columns
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:03.754
 
-IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
---- GAMS/Cplex Link licensed for continuous and discrete problems.
-Cplex 12.10.0.0
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
-Reading data...
-Starting Cplex...
-Space for names approximately 0.01 Mb
-Use option 'names no' to turn use of names off
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 0
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Found incumbent of value -14321.239811 after 0.00 sec. (0.01 ticks)
-Tried aggregator 2 times.
-MIP Presolve eliminated 29 rows and 30 columns.
-MIP Presolve modified 2 coefficients.
-Aggregator did 1 substitutions.
-Reduced MIP has 131 rows, 90 columns, and 560 nonzeros.
-Reduced MIP has 23 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.35 ticks)
-Probing fixed 0 vars, tightened 1 bounds.
-Probing time = 0.00 sec. (0.05 ticks)
-Tried aggregator 1 time.
-Detecting symmetries...
-MIP Presolve eliminated 1 rows and 1 columns.
-MIP Presolve modified 1 coefficients.
-Reduced MIP has 130 rows, 89 columns, and 553 nonzeros.
-Reduced MIP has 24 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.30 ticks)
-Probing changed sense of 1 constraints.
-Probing time = 0.00 sec. (0.05 ticks)
-Clique table members: 5.
-MIP emphasis: balance optimality and feasibility.
-MIP search method: dynamic search.
-Parallel mode: deterministic, using up to 8 threads.
-Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
-Tried aggregator 1 time.
-No LP presolve or aggregator reductions.
-Presolve time = 0.00 sec. (0.06 ticks)
-Initializing dual steep norms . . .
-
-Iteration log . . .
-Iteration:     1   Dual objective     =        -16755.173189
-Root relaxation solution time = 0.00 sec. (0.16 ticks)
-
-        Nodes                                         Cuts/
-   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
-
-*     0+    0                       -14321.2398   -16941.6938            18.30%
-Found incumbent of value -14321.239811 after 0.01 sec. (1.17 ticks)
-*     0     0      integral     0   -15872.1119   -15872.1119        8    0.00%
-Elapsed time = 0.01 sec. (1.19 ticks, tree = 0.00 MB, solutions = 2)
-Found incumbent of value -15872.111881 after 0.01 sec. (1.19 ticks)
-
-Root node processing (before b&c):
-  Real time             =    0.01 sec. (1.20 ticks)
-Parallel b&c, 8 threads:
-  Real time             =    0.00 sec. (0.00 ticks)
-  Sync time (average)   =    0.00 sec.
-  Wait time (average)   =    0.00 sec.
-                          ------------
-Total (root+branch&cut) =    0.01 sec. (1.20 ticks)
-MIP status(101): integer optimal solution
-Cplex Time: 0.01sec (det. 1.20 ticks)
-Fixing integer variables, and solving final LP...
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 2
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Tried aggregator 1 time.
-LP Presolve eliminated 161 rows and 121 columns.
-All rows and columns eliminated.
-Presolve time = 0.00 sec. (0.08 ticks)
-Fixed MIP status(1): optimal
-Cplex Time: 0.00sec (det. 0.14 ticks)
-
-Proven optimal solution.
-
-MIP Solution:       -15872.111881    (8 iterations, 0 nodes)
-Final Solve:        -15872.111881    (0 iterations)
-
-Best possible:      -15872.111881
-Absolute gap:            0.000000
-Relative gap:            0.000000
-
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule_scenario
---- Executing after solve: elapsed 0:01:05.283
---- Naive_LR_solving.gms(488) 6 Mb
+--- Executing after solve: elapsed 0:00:03.766
+--- Naive_LR_solving.gms(3402) 95 Mb
 --- Generating MIP model schedule_scenario
---- Naive_LR_solving.gms(352) 6 Mb
---- Starting Equ Objective_scenario: elapsed 0:01:05.283
---- Naive_LR_solving.gms(359) 6 Mb
---- Starting Equ Const1_1_scenario: elapsed 0:01:05.283
---- Naive_LR_solving.gms(372) 6 Mb
---- Starting Equ Const_3_1_scenario: elapsed 0:01:05.283
---- Naive_LR_solving.gms(375) 6 Mb
---- Starting Equ Const_3_2_scenario: elapsed 0:01:05.284
---- Naive_LR_solving.gms(380) 6 Mb
---- Starting Equ Const_4_1_scenario: elapsed 0:01:05.284
---- Naive_LR_solving.gms(383) 6 Mb
---- Starting Equ Const_4_2_scenario: elapsed 0:01:05.284
---- Naive_LR_solving.gms(386) 6 Mb
---- Starting Equ Const_5_scenario: elapsed 0:01:05.285
---- Naive_LR_solving.gms(390) 6 Mb
---- Starting Equ Const_6_scenario: elapsed 0:01:05.285
---- Naive_LR_solving.gms(491) 6 Mb
+--- Naive_LR_solving.gms(3313) 95 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:03.766
+--- Naive_LR_solving.gms(3320) 95 Mb
+--- Starting Equ Const1_1_scenario: elapsed 0:00:03.767
+--- Naive_LR_solving.gms(3334) 95 Mb
+--- Starting Equ Const_3_1_scenario: elapsed 0:00:03.770
+--- Naive_LR_solving.gms(3337) 95 Mb
+--- Starting Equ Const_3_2_scenario: elapsed 0:00:03.777
+--- Naive_LR_solving.gms(3342) 95 Mb
+--- Starting Equ Const_4_1_scenario: elapsed 0:00:03.783
+--- Naive_LR_solving.gms(3345) 95 Mb
+--- Starting Equ Const_4_2_scenario: elapsed 0:00:03.787
+--- Naive_LR_solving.gms(3348) 95 Mb
+--- Starting Equ Const_5_scenario: elapsed 0:00:03.791
+--- Naive_LR_solving.gms(3352) 95 Mb
+--- Starting Equ Const_6_scenario: elapsed 0:00:03.795
+--- Naive_LR_solving.gms(3405) 95 Mb
 --- LOOPS rs = scen8
 ---   161 rows  121 columns  735 non-zeroes
----   24 discrete-columns
---- Executing CPLEX (Solvelink=5): elapsed 0:01:05.290
+---   72 discrete-columns
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:03.804
 
-IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
---- GAMS/Cplex Link licensed for continuous and discrete problems.
-Cplex 12.10.0.0
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
-Reading data...
-Starting Cplex...
-Space for names approximately 0.01 Mb
-Use option 'names no' to turn use of names off
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 0
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Found incumbent of value -10615.230925 after 0.00 sec. (0.01 ticks)
-Tried aggregator 2 times.
-MIP Presolve eliminated 29 rows and 30 columns.
-MIP Presolve modified 2 coefficients.
-Aggregator did 1 substitutions.
-Reduced MIP has 131 rows, 90 columns, and 560 nonzeros.
-Reduced MIP has 23 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.35 ticks)
-Probing fixed 0 vars, tightened 1 bounds.
-Probing time = 0.00 sec. (0.05 ticks)
-Tried aggregator 1 time.
-Detecting symmetries...
-MIP Presolve eliminated 1 rows and 1 columns.
-MIP Presolve modified 1 coefficients.
-Reduced MIP has 130 rows, 89 columns, and 553 nonzeros.
-Reduced MIP has 24 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.30 ticks)
-Probing changed sense of 1 constraints.
-Probing time = 0.00 sec. (0.05 ticks)
-Clique table members: 5.
-MIP emphasis: balance optimality and feasibility.
-MIP search method: dynamic search.
-Parallel mode: deterministic, using up to 8 threads.
-Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
-Tried aggregator 1 time.
-No LP presolve or aggregator reductions.
-Presolve time = 0.00 sec. (0.06 ticks)
-Initializing dual steep norms . . .
-
-Iteration log . . .
-Iteration:     1   Dual objective     =        -13049.164303
-Root relaxation solution time = 0.00 sec. (0.16 ticks)
-
-        Nodes                                         Cuts/
-   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
-
-*     0+    0                       -10615.2309   -13235.6849            24.69%
-Found incumbent of value -10615.230925 after 0.01 sec. (1.17 ticks)
-*     0     0      integral     0   -12166.1030   -12166.1030        8    0.00%
-Elapsed time = 0.01 sec. (1.19 ticks, tree = 0.00 MB, solutions = 2)
-Found incumbent of value -12166.102995 after 0.01 sec. (1.19 ticks)
-
-Root node processing (before b&c):
-  Real time             =    0.01 sec. (1.20 ticks)
-Parallel b&c, 8 threads:
-  Real time             =    0.00 sec. (0.00 ticks)
-  Sync time (average)   =    0.00 sec.
-  Wait time (average)   =    0.00 sec.
-                          ------------
-Total (root+branch&cut) =    0.01 sec. (1.20 ticks)
-MIP status(101): integer optimal solution
-Cplex Time: 0.01sec (det. 1.20 ticks)
-Fixing integer variables, and solving final LP...
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 2
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Tried aggregator 1 time.
-LP Presolve eliminated 161 rows and 121 columns.
-All rows and columns eliminated.
-Presolve time = 0.00 sec. (0.08 ticks)
-Fixed MIP status(1): optimal
-Cplex Time: 0.00sec (det. 0.14 ticks)
-
-Proven optimal solution.
-
-MIP Solution:       -12166.102995    (8 iterations, 0 nodes)
-Final Solve:        -12166.102995    (0 iterations)
-
-Best possible:      -12166.102995
-Absolute gap:            0.000000
-Relative gap:            0.000000
-
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule_scenario
---- Executing after solve: elapsed 0:01:05.324
---- Naive_LR_solving.gms(488) 6 Mb
+--- Executing after solve: elapsed 0:00:03.813
+--- Naive_LR_solving.gms(3402) 95 Mb
 --- Generating MIP model schedule_scenario
---- Naive_LR_solving.gms(352) 6 Mb
---- Starting Equ Objective_scenario: elapsed 0:01:05.324
---- Naive_LR_solving.gms(359) 6 Mb
---- Starting Equ Const1_1_scenario: elapsed 0:01:05.325
---- Naive_LR_solving.gms(372) 6 Mb
---- Starting Equ Const_3_1_scenario: elapsed 0:01:05.325
---- Naive_LR_solving.gms(375) 6 Mb
---- Starting Equ Const_3_2_scenario: elapsed 0:01:05.325
---- Naive_LR_solving.gms(380) 6 Mb
---- Starting Equ Const_4_1_scenario: elapsed 0:01:05.326
---- Naive_LR_solving.gms(383) 6 Mb
---- Starting Equ Const_4_2_scenario: elapsed 0:01:05.326
---- Naive_LR_solving.gms(386) 6 Mb
---- Starting Equ Const_5_scenario: elapsed 0:01:05.326
---- Naive_LR_solving.gms(390) 6 Mb
---- Starting Equ Const_6_scenario: elapsed 0:01:05.326
---- Naive_LR_solving.gms(491) 6 Mb
+--- Naive_LR_solving.gms(3313) 95 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:03.813
+--- Naive_LR_solving.gms(3320) 95 Mb
+--- Starting Equ Const1_1_scenario: elapsed 0:00:03.813
+--- Naive_LR_solving.gms(3334) 95 Mb
+--- Starting Equ Const_3_1_scenario: elapsed 0:00:03.817
+--- Naive_LR_solving.gms(3337) 95 Mb
+--- Starting Equ Const_3_2_scenario: elapsed 0:00:03.824
+--- Naive_LR_solving.gms(3342) 95 Mb
+--- Starting Equ Const_4_1_scenario: elapsed 0:00:03.830
+--- Naive_LR_solving.gms(3345) 95 Mb
+--- Starting Equ Const_4_2_scenario: elapsed 0:00:03.838
+--- Naive_LR_solving.gms(3348) 95 Mb
+--- Starting Equ Const_5_scenario: elapsed 0:00:03.844
+--- Naive_LR_solving.gms(3352) 95 Mb
+--- Starting Equ Const_6_scenario: elapsed 0:00:03.849
+--- Naive_LR_solving.gms(3405) 95 Mb
 --- LOOPS rs = scen9
 ---   161 rows  121 columns  735 non-zeroes
----   24 discrete-columns
---- Executing CPLEX (Solvelink=5): elapsed 0:01:05.333
+---   72 discrete-columns
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:03.860
 
-IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
---- GAMS/Cplex Link licensed for continuous and discrete problems.
-Cplex 12.10.0.0
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
-Reading data...
-Starting Cplex...
-Space for names approximately 0.01 Mb
-Use option 'names no' to turn use of names off
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 0
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Found incumbent of value -13604.021676 after 0.00 sec. (0.01 ticks)
-Tried aggregator 2 times.
-MIP Presolve eliminated 29 rows and 30 columns.
-MIP Presolve modified 2 coefficients.
-Aggregator did 1 substitutions.
-Reduced MIP has 131 rows, 90 columns, and 560 nonzeros.
-Reduced MIP has 23 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.35 ticks)
-Probing fixed 0 vars, tightened 1 bounds.
-Probing time = 0.00 sec. (0.05 ticks)
-Tried aggregator 1 time.
-Detecting symmetries...
-MIP Presolve eliminated 1 rows and 1 columns.
-MIP Presolve modified 1 coefficients.
-Reduced MIP has 130 rows, 89 columns, and 553 nonzeros.
-Reduced MIP has 24 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.30 ticks)
-Probing changed sense of 1 constraints.
-Probing time = 0.00 sec. (0.05 ticks)
-Clique table members: 5.
-MIP emphasis: balance optimality and feasibility.
-MIP search method: dynamic search.
-Parallel mode: deterministic, using up to 8 threads.
-Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
-Tried aggregator 1 time.
-No LP presolve or aggregator reductions.
-Presolve time = 0.00 sec. (0.06 ticks)
-Initializing dual steep norms . . .
-
-Iteration log . . .
-Iteration:     1   Dual objective     =        -16037.955054
-Root relaxation solution time = 0.00 sec. (0.16 ticks)
-
-        Nodes                                         Cuts/
-   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
-
-*     0+    0                       -13604.0217   -16224.4757            19.26%
-Found incumbent of value -13604.021676 after 0.00 sec. (1.17 ticks)
-*     0     0      integral     0   -15154.8937   -15154.8937        8    0.00%
-Elapsed time = 0.00 sec. (1.19 ticks, tree = 0.00 MB, solutions = 2)
-Found incumbent of value -15154.893746 after 0.00 sec. (1.19 ticks)
-
-Root node processing (before b&c):
-  Real time             =    0.00 sec. (1.20 ticks)
-Parallel b&c, 8 threads:
-  Real time             =    0.00 sec. (0.00 ticks)
-  Sync time (average)   =    0.00 sec.
-  Wait time (average)   =    0.00 sec.
-                          ------------
-Total (root+branch&cut) =    0.00 sec. (1.20 ticks)
-MIP status(101): integer optimal solution
-Cplex Time: 0.00sec (det. 1.20 ticks)
-Fixing integer variables, and solving final LP...
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 2
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Tried aggregator 1 time.
-LP Presolve eliminated 161 rows and 121 columns.
-All rows and columns eliminated.
-Presolve time = 0.01 sec. (0.08 ticks)
-Fixed MIP status(1): optimal
-Cplex Time: 0.01sec (det. 0.14 ticks)
-
-Proven optimal solution.
-
-MIP Solution:       -15154.893746    (8 iterations, 0 nodes)
-Final Solve:        -15154.893746    (0 iterations)
-
-Best possible:      -15154.893746
-Absolute gap:            0.000000
-Relative gap:            0.000000
-
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule_scenario
---- Executing after solve: elapsed 0:01:05.365
---- Naive_LR_solving.gms(488) 6 Mb
+--- Executing after solve: elapsed 0:00:03.870
+--- Naive_LR_solving.gms(3402) 95 Mb
 --- Generating MIP model schedule_scenario
---- Naive_LR_solving.gms(352) 6 Mb
---- Starting Equ Objective_scenario: elapsed 0:01:05.365
---- Naive_LR_solving.gms(359) 6 Mb
---- Starting Equ Const1_1_scenario: elapsed 0:01:05.365
---- Naive_LR_solving.gms(372) 6 Mb
---- Starting Equ Const_3_1_scenario: elapsed 0:01:05.365
---- Naive_LR_solving.gms(375) 6 Mb
---- Starting Equ Const_3_2_scenario: elapsed 0:01:05.366
---- Naive_LR_solving.gms(380) 6 Mb
---- Starting Equ Const_4_1_scenario: elapsed 0:01:05.366
---- Naive_LR_solving.gms(383) 6 Mb
---- Starting Equ Const_4_2_scenario: elapsed 0:01:05.366
---- Naive_LR_solving.gms(386) 6 Mb
---- Starting Equ Const_5_scenario: elapsed 0:01:05.366
---- Naive_LR_solving.gms(390) 6 Mb
---- Starting Equ Const_6_scenario: elapsed 0:01:05.367
---- Naive_LR_solving.gms(491) 6 Mb
+--- Naive_LR_solving.gms(3313) 95 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:03.870
+--- Naive_LR_solving.gms(3320) 95 Mb
+--- Starting Equ Const1_1_scenario: elapsed 0:00:03.870
+--- Naive_LR_solving.gms(3334) 95 Mb
+--- Starting Equ Const_3_1_scenario: elapsed 0:00:03.873
+--- Naive_LR_solving.gms(3337) 95 Mb
+--- Starting Equ Const_3_2_scenario: elapsed 0:00:03.880
+--- Naive_LR_solving.gms(3342) 95 Mb
+--- Starting Equ Const_4_1_scenario: elapsed 0:00:03.886
+--- Naive_LR_solving.gms(3345) 95 Mb
+--- Starting Equ Const_4_2_scenario: elapsed 0:00:03.890
+--- Naive_LR_solving.gms(3348) 95 Mb
+--- Starting Equ Const_5_scenario: elapsed 0:00:03.895
+--- Naive_LR_solving.gms(3352) 95 Mb
+--- Starting Equ Const_6_scenario: elapsed 0:00:03.900
+--- Naive_LR_solving.gms(3405) 95 Mb
 --- LOOPS rs = scen10
 ---   161 rows  121 columns  735 non-zeroes
----   24 discrete-columns
---- Executing CPLEX (Solvelink=5): elapsed 0:01:05.372
+---   72 discrete-columns
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:03.909
 
-IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
---- GAMS/Cplex Link licensed for continuous and discrete problems.
-Cplex 12.10.0.0
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
-Reading data...
-Starting Cplex...
-Space for names approximately 0.01 Mb
-Use option 'names no' to turn use of names off
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 0
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Found incumbent of value -13524.185924 after 0.00 sec. (0.01 ticks)
-Tried aggregator 2 times.
-MIP Presolve eliminated 29 rows and 30 columns.
-MIP Presolve modified 2 coefficients.
-Aggregator did 1 substitutions.
-Reduced MIP has 131 rows, 90 columns, and 560 nonzeros.
-Reduced MIP has 23 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.01 sec. (0.35 ticks)
-Probing fixed 0 vars, tightened 1 bounds.
-Probing time = 0.00 sec. (0.05 ticks)
-Tried aggregator 1 time.
-Detecting symmetries...
-MIP Presolve eliminated 1 rows and 1 columns.
-MIP Presolve modified 1 coefficients.
-Reduced MIP has 130 rows, 89 columns, and 553 nonzeros.
-Reduced MIP has 24 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.30 ticks)
-Probing changed sense of 1 constraints.
-Probing time = 0.00 sec. (0.05 ticks)
-Clique table members: 5.
-MIP emphasis: balance optimality and feasibility.
-MIP search method: dynamic search.
-Parallel mode: deterministic, using up to 8 threads.
-Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
-Tried aggregator 1 time.
-No LP presolve or aggregator reductions.
-Presolve time = 0.00 sec. (0.06 ticks)
-Initializing dual steep norms . . .
-
-Iteration log . . .
-Iteration:     1   Dual objective     =        -15958.119302
-Root relaxation solution time = 0.00 sec. (0.16 ticks)
-
-        Nodes                                         Cuts/
-   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
-
-*     0+    0                       -13524.1859   -16144.6399            19.38%
-Found incumbent of value -13524.185924 after 0.01 sec. (1.17 ticks)
-*     0     0      integral     0   -15075.0580   -15075.0580        8    0.00%
-Elapsed time = 0.01 sec. (1.19 ticks, tree = 0.00 MB, solutions = 2)
-Found incumbent of value -15075.057994 after 0.01 sec. (1.19 ticks)
-
-Root node processing (before b&c):
-  Real time             =    0.01 sec. (1.20 ticks)
-Parallel b&c, 8 threads:
-  Real time             =    0.00 sec. (0.00 ticks)
-  Sync time (average)   =    0.00 sec.
-  Wait time (average)   =    0.00 sec.
-                          ------------
-Total (root+branch&cut) =    0.01 sec. (1.20 ticks)
-MIP status(101): integer optimal solution
-Cplex Time: 0.01sec (det. 1.20 ticks)
-Fixing integer variables, and solving final LP...
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 2
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Tried aggregator 1 time.
-LP Presolve eliminated 161 rows and 121 columns.
-All rows and columns eliminated.
-Presolve time = 0.00 sec. (0.08 ticks)
-Fixed MIP status(1): optimal
-Cplex Time: 0.00sec (det. 0.14 ticks)
-
-Proven optimal solution.
-
-MIP Solution:       -15075.057994    (8 iterations, 0 nodes)
-Final Solve:        -15075.057994    (0 iterations)
-
-Best possible:      -15075.057994
-Absolute gap:            0.000000
-Relative gap:            0.000000
-
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule_scenario
---- Executing after solve: elapsed 0:01:05.405
---- Naive_LR_solving.gms(488) 6 Mb
+--- Executing after solve: elapsed 0:00:03.920
+--- Naive_LR_solving.gms(3402) 95 Mb
 --- Generating MIP model schedule_scenario
---- Naive_LR_solving.gms(352) 6 Mb
---- Starting Equ Objective_scenario: elapsed 0:01:05.405
---- Naive_LR_solving.gms(359) 6 Mb
---- Starting Equ Const1_1_scenario: elapsed 0:01:05.405
---- Naive_LR_solving.gms(372) 6 Mb
---- Starting Equ Const_3_1_scenario: elapsed 0:01:05.405
---- Naive_LR_solving.gms(375) 6 Mb
---- Starting Equ Const_3_2_scenario: elapsed 0:01:05.406
---- Naive_LR_solving.gms(380) 6 Mb
---- Starting Equ Const_4_1_scenario: elapsed 0:01:05.406
---- Naive_LR_solving.gms(383) 6 Mb
---- Starting Equ Const_4_2_scenario: elapsed 0:01:05.406
---- Naive_LR_solving.gms(386) 6 Mb
---- Starting Equ Const_5_scenario: elapsed 0:01:05.407
---- Naive_LR_solving.gms(390) 6 Mb
---- Starting Equ Const_6_scenario: elapsed 0:01:05.407
---- Naive_LR_solving.gms(491) 6 Mb
+--- Naive_LR_solving.gms(3313) 95 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:03.920
+--- Naive_LR_solving.gms(3320) 95 Mb
+--- Starting Equ Const1_1_scenario: elapsed 0:00:03.921
+--- Naive_LR_solving.gms(3334) 95 Mb
+--- Starting Equ Const_3_1_scenario: elapsed 0:00:03.923
+--- Naive_LR_solving.gms(3337) 95 Mb
+--- Starting Equ Const_3_2_scenario: elapsed 0:00:03.930
+--- Naive_LR_solving.gms(3342) 95 Mb
+--- Starting Equ Const_4_1_scenario: elapsed 0:00:03.937
+--- Naive_LR_solving.gms(3345) 95 Mb
+--- Starting Equ Const_4_2_scenario: elapsed 0:00:03.944
+--- Naive_LR_solving.gms(3348) 95 Mb
+--- Starting Equ Const_5_scenario: elapsed 0:00:03.948
+--- Naive_LR_solving.gms(3352) 95 Mb
+--- Starting Equ Const_6_scenario: elapsed 0:00:03.953
+--- Naive_LR_solving.gms(3405) 95 Mb
 --- LOOPS rs = scen11
 ---   161 rows  121 columns  735 non-zeroes
----   24 discrete-columns
---- Executing CPLEX (Solvelink=5): elapsed 0:01:05.412
+---   72 discrete-columns
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:03.965
 
-IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
---- GAMS/Cplex Link licensed for continuous and discrete problems.
-Cplex 12.10.0.0
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
-Reading data...
-Starting Cplex...
-Space for names approximately 0.01 Mb
-Use option 'names no' to turn use of names off
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 0
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Found incumbent of value -13691.115136 after 0.00 sec. (0.01 ticks)
-Tried aggregator 2 times.
-MIP Presolve eliminated 29 rows and 30 columns.
-MIP Presolve modified 2 coefficients.
-Aggregator did 1 substitutions.
-Reduced MIP has 131 rows, 90 columns, and 560 nonzeros.
-Reduced MIP has 23 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.35 ticks)
-Probing fixed 0 vars, tightened 1 bounds.
-Probing time = 0.00 sec. (0.05 ticks)
-Tried aggregator 1 time.
-Detecting symmetries...
-MIP Presolve eliminated 1 rows and 1 columns.
-MIP Presolve modified 1 coefficients.
-Reduced MIP has 130 rows, 89 columns, and 553 nonzeros.
-Reduced MIP has 24 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.30 ticks)
-Probing changed sense of 1 constraints.
-Probing time = 0.00 sec. (0.05 ticks)
-Clique table members: 5.
-MIP emphasis: balance optimality and feasibility.
-MIP search method: dynamic search.
-Parallel mode: deterministic, using up to 8 threads.
-Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
-Tried aggregator 1 time.
-No LP presolve or aggregator reductions.
-Presolve time = 0.00 sec. (0.06 ticks)
-Initializing dual steep norms . . .
-
-Iteration log . . .
-Iteration:     1   Dual objective     =        -16125.048514
-Root relaxation solution time = 0.00 sec. (0.16 ticks)
-
-        Nodes                                         Cuts/
-   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
-
-*     0+    0                       -13691.1151   -16311.5692            19.14%
-Found incumbent of value -13691.115136 after 0.01 sec. (1.17 ticks)
-*     0     0      integral     0   -15241.9872   -15241.9872        8    0.00%
-Elapsed time = 0.01 sec. (1.19 ticks, tree = 0.00 MB, solutions = 2)
-Found incumbent of value -15241.987206 after 0.01 sec. (1.19 ticks)
-
-Root node processing (before b&c):
-  Real time             =    0.01 sec. (1.20 ticks)
-Parallel b&c, 8 threads:
-  Real time             =    0.00 sec. (0.00 ticks)
-  Sync time (average)   =    0.00 sec.
-  Wait time (average)   =    0.00 sec.
-                          ------------
-Total (root+branch&cut) =    0.01 sec. (1.20 ticks)
-MIP status(101): integer optimal solution
-Cplex Time: 0.01sec (det. 1.20 ticks)
-Fixing integer variables, and solving final LP...
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 2
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Tried aggregator 1 time.
-LP Presolve eliminated 161 rows and 121 columns.
-All rows and columns eliminated.
-Presolve time = 0.00 sec. (0.08 ticks)
-Fixed MIP status(1): optimal
-Cplex Time: 0.00sec (det. 0.14 ticks)
-
-Proven optimal solution.
-
-MIP Solution:       -15241.987206    (8 iterations, 0 nodes)
-Final Solve:        -15241.987206    (0 iterations)
-
-Best possible:      -15241.987206
-Absolute gap:            0.000000
-Relative gap:            0.000000
-
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule_scenario
---- Executing after solve: elapsed 0:01:05.443
---- Naive_LR_solving.gms(488) 6 Mb
+--- Executing after solve: elapsed 0:00:03.978
+--- Naive_LR_solving.gms(3402) 95 Mb
 --- Generating MIP model schedule_scenario
---- Naive_LR_solving.gms(352) 6 Mb
---- Starting Equ Objective_scenario: elapsed 0:01:05.444
---- Naive_LR_solving.gms(359) 6 Mb
---- Starting Equ Const1_1_scenario: elapsed 0:01:05.444
---- Naive_LR_solving.gms(372) 6 Mb
---- Starting Equ Const_3_1_scenario: elapsed 0:01:05.444
---- Naive_LR_solving.gms(375) 6 Mb
---- Starting Equ Const_3_2_scenario: elapsed 0:01:05.444
---- Naive_LR_solving.gms(380) 6 Mb
---- Starting Equ Const_4_1_scenario: elapsed 0:01:05.445
---- Naive_LR_solving.gms(383) 6 Mb
---- Starting Equ Const_4_2_scenario: elapsed 0:01:05.445
---- Naive_LR_solving.gms(386) 6 Mb
---- Starting Equ Const_5_scenario: elapsed 0:01:05.445
---- Naive_LR_solving.gms(390) 6 Mb
---- Starting Equ Const_6_scenario: elapsed 0:01:05.445
---- Naive_LR_solving.gms(491) 6 Mb
+--- Naive_LR_solving.gms(3313) 95 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:03.978
+--- Naive_LR_solving.gms(3320) 95 Mb
+--- Starting Equ Const1_1_scenario: elapsed 0:00:03.978
+--- Naive_LR_solving.gms(3334) 95 Mb
+--- Starting Equ Const_3_1_scenario: elapsed 0:00:03.981
+--- Naive_LR_solving.gms(3337) 95 Mb
+--- Starting Equ Const_3_2_scenario: elapsed 0:00:03.988
+--- Naive_LR_solving.gms(3342) 95 Mb
+--- Starting Equ Const_4_1_scenario: elapsed 0:00:03.994
+--- Naive_LR_solving.gms(3345) 95 Mb
+--- Starting Equ Const_4_2_scenario: elapsed 0:00:03.999
+--- Naive_LR_solving.gms(3348) 95 Mb
+--- Starting Equ Const_5_scenario: elapsed 0:00:04.003
+--- Naive_LR_solving.gms(3352) 95 Mb
+--- Starting Equ Const_6_scenario: elapsed 0:00:04.007
+--- Naive_LR_solving.gms(3405) 95 Mb
 --- LOOPS rs = scen12
 ---   161 rows  121 columns  735 non-zeroes
----   24 discrete-columns
---- Executing CPLEX (Solvelink=5): elapsed 0:01:05.450
+---   72 discrete-columns
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:04.016
 
-IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
---- GAMS/Cplex Link licensed for continuous and discrete problems.
-Cplex 12.10.0.0
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
-Reading data...
-Starting Cplex...
-Space for names approximately 0.01 Mb
-Use option 'names no' to turn use of names off
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 0
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Found incumbent of value -7142.945092 after 0.00 sec. (0.01 ticks)
-Tried aggregator 2 times.
-MIP Presolve eliminated 29 rows and 30 columns.
-MIP Presolve modified 2 coefficients.
-Aggregator did 1 substitutions.
-Reduced MIP has 131 rows, 90 columns, and 560 nonzeros.
-Reduced MIP has 23 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.02 sec. (0.35 ticks)
-Probing fixed 0 vars, tightened 1 bounds.
-Probing time = 0.00 sec. (0.05 ticks)
-Tried aggregator 1 time.
-Detecting symmetries...
-MIP Presolve eliminated 1 rows and 1 columns.
-MIP Presolve modified 1 coefficients.
-Reduced MIP has 130 rows, 89 columns, and 553 nonzeros.
-Reduced MIP has 24 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.30 ticks)
-Probing changed sense of 1 constraints.
-Probing time = 0.00 sec. (0.05 ticks)
-Clique table members: 5.
-MIP emphasis: balance optimality and feasibility.
-MIP search method: dynamic search.
-Parallel mode: deterministic, using up to 8 threads.
-Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
-Tried aggregator 1 time.
-No LP presolve or aggregator reductions.
-Presolve time = 0.00 sec. (0.06 ticks)
-Initializing dual steep norms . . .
-
-Iteration log . . .
-Iteration:     1   Dual objective     =         -9576.878470
-Root relaxation solution time = 0.00 sec. (0.16 ticks)
-
-        Nodes                                         Cuts/
-   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
-
-*     0+    0                        -7142.9451    -9763.3991            36.69%
-Found incumbent of value -7142.945092 after 0.02 sec. (1.17 ticks)
-*     0     0      integral     0    -8693.8172    -8693.8172        8    0.00%
-Elapsed time = 0.02 sec. (1.19 ticks, tree = 0.00 MB, solutions = 2)
-Found incumbent of value -8693.817162 after 0.02 sec. (1.19 ticks)
-
-Root node processing (before b&c):
-  Real time             =    0.02 sec. (1.20 ticks)
-Parallel b&c, 8 threads:
-  Real time             =    0.00 sec. (0.00 ticks)
-  Sync time (average)   =    0.00 sec.
-  Wait time (average)   =    0.00 sec.
-                          ------------
-Total (root+branch&cut) =    0.02 sec. (1.20 ticks)
-MIP status(101): integer optimal solution
-Cplex Time: 0.02sec (det. 1.20 ticks)
-Fixing integer variables, and solving final LP...
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 2
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Tried aggregator 1 time.
-LP Presolve eliminated 161 rows and 121 columns.
-All rows and columns eliminated.
-Presolve time = 0.00 sec. (0.08 ticks)
-Fixed MIP status(1): optimal
-Cplex Time: 0.00sec (det. 0.14 ticks)
-
-Proven optimal solution.
-
-MIP Solution:        -8693.817162    (8 iterations, 0 nodes)
-Final Solve:         -8693.817162    (0 iterations)
-
-Best possible:       -8693.817162
-Absolute gap:            0.000000
-Relative gap:            0.000000
-
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule_scenario
---- Executing after solve: elapsed 0:01:05.481
---- Naive_LR_solving.gms(488) 6 Mb
+--- Executing after solve: elapsed 0:00:04.024
+--- Naive_LR_solving.gms(3402) 95 Mb
 --- Generating MIP model schedule_scenario
---- Naive_LR_solving.gms(352) 6 Mb
---- Starting Equ Objective_scenario: elapsed 0:01:05.481
---- Naive_LR_solving.gms(359) 6 Mb
---- Starting Equ Const1_1_scenario: elapsed 0:01:05.482
---- Naive_LR_solving.gms(372) 6 Mb
---- Starting Equ Const_3_1_scenario: elapsed 0:01:05.482
---- Naive_LR_solving.gms(375) 6 Mb
---- Starting Equ Const_3_2_scenario: elapsed 0:01:05.482
---- Naive_LR_solving.gms(380) 6 Mb
---- Starting Equ Const_4_1_scenario: elapsed 0:01:05.483
---- Naive_LR_solving.gms(383) 6 Mb
---- Starting Equ Const_4_2_scenario: elapsed 0:01:05.483
---- Naive_LR_solving.gms(386) 6 Mb
---- Starting Equ Const_5_scenario: elapsed 0:01:05.483
---- Naive_LR_solving.gms(390) 6 Mb
---- Starting Equ Const_6_scenario: elapsed 0:01:05.483
---- Naive_LR_solving.gms(491) 6 Mb
+--- Naive_LR_solving.gms(3313) 95 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:04.024
+--- Naive_LR_solving.gms(3320) 95 Mb
+--- Starting Equ Const1_1_scenario: elapsed 0:00:04.024
+--- Naive_LR_solving.gms(3334) 95 Mb
+--- Starting Equ Const_3_1_scenario: elapsed 0:00:04.027
+--- Naive_LR_solving.gms(3337) 95 Mb
+--- Starting Equ Const_3_2_scenario: elapsed 0:00:04.033
+--- Naive_LR_solving.gms(3342) 95 Mb
+--- Starting Equ Const_4_1_scenario: elapsed 0:00:04.040
+--- Naive_LR_solving.gms(3345) 95 Mb
+--- Starting Equ Const_4_2_scenario: elapsed 0:00:04.044
+--- Naive_LR_solving.gms(3348) 95 Mb
+--- Starting Equ Const_5_scenario: elapsed 0:00:04.048
+--- Naive_LR_solving.gms(3352) 95 Mb
+--- Starting Equ Const_6_scenario: elapsed 0:00:04.052
+--- Naive_LR_solving.gms(3405) 95 Mb
 --- LOOPS rs = scen13
 ---   161 rows  121 columns  735 non-zeroes
----   24 discrete-columns
---- Executing CPLEX (Solvelink=5): elapsed 0:01:05.490
+---   72 discrete-columns
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:04.062
 
-IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
---- GAMS/Cplex Link licensed for continuous and discrete problems.
-Cplex 12.10.0.0
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
-Reading data...
-Starting Cplex...
-Space for names approximately 0.01 Mb
-Use option 'names no' to turn use of names off
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 0
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Found incumbent of value -15357.884247 after 0.00 sec. (0.01 ticks)
-Tried aggregator 2 times.
-MIP Presolve eliminated 29 rows and 30 columns.
-MIP Presolve modified 2 coefficients.
-Aggregator did 1 substitutions.
-Reduced MIP has 131 rows, 90 columns, and 560 nonzeros.
-Reduced MIP has 23 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.35 ticks)
-Probing fixed 0 vars, tightened 1 bounds.
-Probing time = 0.00 sec. (0.05 ticks)
-Tried aggregator 1 time.
-Detecting symmetries...
-MIP Presolve eliminated 1 rows and 1 columns.
-MIP Presolve modified 1 coefficients.
-Reduced MIP has 130 rows, 89 columns, and 553 nonzeros.
-Reduced MIP has 24 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.30 ticks)
-Probing changed sense of 1 constraints.
-Probing time = 0.00 sec. (0.05 ticks)
-Clique table members: 5.
-MIP emphasis: balance optimality and feasibility.
-MIP search method: dynamic search.
-Parallel mode: deterministic, using up to 8 threads.
-Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
-Tried aggregator 1 time.
-No LP presolve or aggregator reductions.
-Presolve time = 0.00 sec. (0.06 ticks)
-Initializing dual steep norms . . .
-
-Iteration log . . .
-Iteration:     1   Dual objective     =        -17791.817625
-Root relaxation solution time = 0.00 sec. (0.16 ticks)
-
-        Nodes                                         Cuts/
-   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
-
-*     0+    0                       -15357.8842   -17978.3383            17.06%
-Found incumbent of value -15357.884247 after 0.00 sec. (1.17 ticks)
-*     0     0      integral     0   -16908.7563   -16908.7563        8    0.00%
-Elapsed time = 0.00 sec. (1.19 ticks, tree = 0.00 MB, solutions = 2)
-Found incumbent of value -16908.756317 after 0.00 sec. (1.19 ticks)
-
-Root node processing (before b&c):
-  Real time             =    0.01 sec. (1.20 ticks)
-Parallel b&c, 8 threads:
-  Real time             =    0.00 sec. (0.00 ticks)
-  Sync time (average)   =    0.00 sec.
-  Wait time (average)   =    0.00 sec.
-                          ------------
-Total (root+branch&cut) =    0.01 sec. (1.20 ticks)
-MIP status(101): integer optimal solution
-Cplex Time: 0.01sec (det. 1.20 ticks)
-Fixing integer variables, and solving final LP...
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 2
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Tried aggregator 1 time.
-LP Presolve eliminated 161 rows and 121 columns.
-All rows and columns eliminated.
-Presolve time = 0.00 sec. (0.08 ticks)
-Fixed MIP status(1): optimal
-Cplex Time: 0.00sec (det. 0.14 ticks)
-
-Proven optimal solution.
-
-MIP Solution:       -16908.756317    (8 iterations, 0 nodes)
-Final Solve:        -16908.756317    (0 iterations)
-
-Best possible:      -16908.756317
-Absolute gap:            0.000000
-Relative gap:            0.000000
-
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule_scenario
---- Executing after solve: elapsed 0:01:05.527
---- Naive_LR_solving.gms(488) 6 Mb
+--- Executing after solve: elapsed 0:00:04.074
+--- Naive_LR_solving.gms(3402) 95 Mb
 --- Generating MIP model schedule_scenario
---- Naive_LR_solving.gms(352) 6 Mb
---- Starting Equ Objective_scenario: elapsed 0:01:05.528
---- Naive_LR_solving.gms(359) 6 Mb
---- Starting Equ Const1_1_scenario: elapsed 0:01:05.528
---- Naive_LR_solving.gms(372) 6 Mb
---- Starting Equ Const_3_1_scenario: elapsed 0:01:05.528
---- Naive_LR_solving.gms(375) 6 Mb
---- Starting Equ Const_3_2_scenario: elapsed 0:01:05.528
---- Naive_LR_solving.gms(380) 6 Mb
---- Starting Equ Const_4_1_scenario: elapsed 0:01:05.529
---- Naive_LR_solving.gms(383) 6 Mb
---- Starting Equ Const_4_2_scenario: elapsed 0:01:05.529
---- Naive_LR_solving.gms(386) 6 Mb
---- Starting Equ Const_5_scenario: elapsed 0:01:05.529
---- Naive_LR_solving.gms(390) 6 Mb
---- Starting Equ Const_6_scenario: elapsed 0:01:05.530
---- Naive_LR_solving.gms(491) 6 Mb
+--- Naive_LR_solving.gms(3313) 95 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:04.074
+--- Naive_LR_solving.gms(3320) 95 Mb
+--- Starting Equ Const1_1_scenario: elapsed 0:00:04.075
+--- Naive_LR_solving.gms(3334) 95 Mb
+--- Starting Equ Const_3_1_scenario: elapsed 0:00:04.079
+--- Naive_LR_solving.gms(3337) 95 Mb
+--- Starting Equ Const_3_2_scenario: elapsed 0:00:04.086
+--- Naive_LR_solving.gms(3342) 95 Mb
+--- Starting Equ Const_4_1_scenario: elapsed 0:00:04.093
+--- Naive_LR_solving.gms(3345) 95 Mb
+--- Starting Equ Const_4_2_scenario: elapsed 0:00:04.097
+--- Naive_LR_solving.gms(3348) 95 Mb
+--- Starting Equ Const_5_scenario: elapsed 0:00:04.102
+--- Naive_LR_solving.gms(3352) 95 Mb
+--- Starting Equ Const_6_scenario: elapsed 0:00:04.106
+--- Naive_LR_solving.gms(3405) 95 Mb
 --- LOOPS rs = scen14
 ---   161 rows  121 columns  735 non-zeroes
----   24 discrete-columns
---- Executing CPLEX (Solvelink=5): elapsed 0:01:05.537
+---   72 discrete-columns
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:04.116
 
-IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
---- GAMS/Cplex Link licensed for continuous and discrete problems.
-Cplex 12.10.0.0
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
-Reading data...
-Starting Cplex...
-Space for names approximately 0.01 Mb
-Use option 'names no' to turn use of names off
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 0
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Found incumbent of value -12878.049502 after 0.00 sec. (0.01 ticks)
-Tried aggregator 2 times.
-MIP Presolve eliminated 29 rows and 30 columns.
-MIP Presolve modified 2 coefficients.
-Aggregator did 1 substitutions.
-Reduced MIP has 131 rows, 90 columns, and 560 nonzeros.
-Reduced MIP has 23 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.35 ticks)
-Probing fixed 0 vars, tightened 1 bounds.
-Probing time = 0.00 sec. (0.05 ticks)
-Tried aggregator 1 time.
-Detecting symmetries...
-MIP Presolve eliminated 1 rows and 1 columns.
-MIP Presolve modified 1 coefficients.
-Reduced MIP has 130 rows, 89 columns, and 553 nonzeros.
-Reduced MIP has 24 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.30 ticks)
-Probing changed sense of 1 constraints.
-Probing time = 0.00 sec. (0.05 ticks)
-Clique table members: 5.
-MIP emphasis: balance optimality and feasibility.
-MIP search method: dynamic search.
-Parallel mode: deterministic, using up to 8 threads.
-Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
-Tried aggregator 1 time.
-No LP presolve or aggregator reductions.
-Presolve time = 0.00 sec. (0.06 ticks)
-Initializing dual steep norms . . .
-
-Iteration log . . .
-Iteration:     1   Dual objective     =        -15311.982880
-Root relaxation solution time = 0.00 sec. (0.16 ticks)
-
-        Nodes                                         Cuts/
-   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
-
-*     0+    0                       -12878.0495   -15498.5035            20.35%
-Found incumbent of value -12878.049502 after 0.00 sec. (1.17 ticks)
-*     0     0      integral     0   -14428.9216   -14428.9216        8    0.00%
-Elapsed time = 0.00 sec. (1.19 ticks, tree = 0.00 MB, solutions = 2)
-Found incumbent of value -14428.921572 after 0.00 sec. (1.19 ticks)
-
-Root node processing (before b&c):
-  Real time             =    0.00 sec. (1.20 ticks)
-Parallel b&c, 8 threads:
-  Real time             =    0.00 sec. (0.00 ticks)
-  Sync time (average)   =    0.00 sec.
-  Wait time (average)   =    0.00 sec.
-                          ------------
-Total (root+branch&cut) =    0.00 sec. (1.20 ticks)
-MIP status(101): integer optimal solution
-Cplex Time: 0.01sec (det. 1.20 ticks)
-Fixing integer variables, and solving final LP...
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 2
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Tried aggregator 1 time.
-LP Presolve eliminated 161 rows and 121 columns.
-All rows and columns eliminated.
-Presolve time = 0.00 sec. (0.08 ticks)
-Fixed MIP status(1): optimal
-Cplex Time: 0.00sec (det. 0.14 ticks)
-
-Proven optimal solution.
-
-MIP Solution:       -14428.921572    (8 iterations, 0 nodes)
-Final Solve:        -14428.921572    (0 iterations)
-
-Best possible:      -14428.921572
-Absolute gap:            0.000000
-Relative gap:            0.000000
-
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule_scenario
---- Executing after solve: elapsed 0:01:05.567
---- Naive_LR_solving.gms(488) 6 Mb
+--- Executing after solve: elapsed 0:00:04.124
+--- Naive_LR_solving.gms(3402) 95 Mb
 --- Generating MIP model schedule_scenario
---- Naive_LR_solving.gms(352) 6 Mb
---- Starting Equ Objective_scenario: elapsed 0:01:05.567
---- Naive_LR_solving.gms(359) 6 Mb
---- Starting Equ Const1_1_scenario: elapsed 0:01:05.568
---- Naive_LR_solving.gms(372) 6 Mb
---- Starting Equ Const_3_1_scenario: elapsed 0:01:05.568
---- Naive_LR_solving.gms(375) 6 Mb
---- Starting Equ Const_3_2_scenario: elapsed 0:01:05.568
---- Naive_LR_solving.gms(380) 6 Mb
---- Starting Equ Const_4_1_scenario: elapsed 0:01:05.568
---- Naive_LR_solving.gms(383) 6 Mb
---- Starting Equ Const_4_2_scenario: elapsed 0:01:05.569
---- Naive_LR_solving.gms(386) 6 Mb
---- Starting Equ Const_5_scenario: elapsed 0:01:05.569
---- Naive_LR_solving.gms(390) 6 Mb
---- Starting Equ Const_6_scenario: elapsed 0:01:05.569
---- Naive_LR_solving.gms(491) 6 Mb
+--- Naive_LR_solving.gms(3313) 95 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:04.124
+--- Naive_LR_solving.gms(3320) 95 Mb
+--- Starting Equ Const1_1_scenario: elapsed 0:00:04.124
+--- Naive_LR_solving.gms(3334) 95 Mb
+--- Starting Equ Const_3_1_scenario: elapsed 0:00:04.127
+--- Naive_LR_solving.gms(3337) 95 Mb
+--- Starting Equ Const_3_2_scenario: elapsed 0:00:04.134
+--- Naive_LR_solving.gms(3342) 95 Mb
+--- Starting Equ Const_4_1_scenario: elapsed 0:00:04.140
+--- Naive_LR_solving.gms(3345) 95 Mb
+--- Starting Equ Const_4_2_scenario: elapsed 0:00:04.145
+--- Naive_LR_solving.gms(3348) 95 Mb
+--- Starting Equ Const_5_scenario: elapsed 0:00:04.153
+--- Naive_LR_solving.gms(3352) 95 Mb
+--- Starting Equ Const_6_scenario: elapsed 0:00:04.159
+--- Naive_LR_solving.gms(3405) 95 Mb
 --- LOOPS rs = scen15
 ---   161 rows  121 columns  735 non-zeroes
----   24 discrete-columns
---- Executing CPLEX (Solvelink=5): elapsed 0:01:05.574
+---   72 discrete-columns
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:04.169
 
-IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
---- GAMS/Cplex Link licensed for continuous and discrete problems.
-Cplex 12.10.0.0
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
-Reading data...
-Starting Cplex...
-Space for names approximately 0.01 Mb
-Use option 'names no' to turn use of names off
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 0
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Found incumbent of value -14576.175610 after 0.00 sec. (0.01 ticks)
-Tried aggregator 2 times.
-MIP Presolve eliminated 29 rows and 30 columns.
-MIP Presolve modified 2 coefficients.
-Aggregator did 1 substitutions.
-Reduced MIP has 131 rows, 90 columns, and 560 nonzeros.
-Reduced MIP has 23 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.35 ticks)
-Probing fixed 0 vars, tightened 1 bounds.
-Probing time = 0.00 sec. (0.05 ticks)
-Tried aggregator 1 time.
-Detecting symmetries...
-MIP Presolve eliminated 1 rows and 1 columns.
-MIP Presolve modified 1 coefficients.
-Reduced MIP has 130 rows, 89 columns, and 553 nonzeros.
-Reduced MIP has 24 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.30 ticks)
-Probing changed sense of 1 constraints.
-Probing time = 0.00 sec. (0.05 ticks)
-Clique table members: 5.
-MIP emphasis: balance optimality and feasibility.
-MIP search method: dynamic search.
-Parallel mode: deterministic, using up to 8 threads.
-Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
-Tried aggregator 1 time.
-No LP presolve or aggregator reductions.
-Presolve time = 0.00 sec. (0.06 ticks)
-Initializing dual steep norms . . .
-
-Iteration log . . .
-Iteration:     1   Dual objective     =        -17010.108987
-Root relaxation solution time = 0.00 sec. (0.16 ticks)
-
-        Nodes                                         Cuts/
-   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
-
-*     0+    0                       -14576.1756   -17196.6296            17.98%
-Found incumbent of value -14576.175610 after 0.02 sec. (1.17 ticks)
-*     0     0      integral     0   -16127.0477   -16127.0477        8    0.00%
-Elapsed time = 0.02 sec. (1.19 ticks, tree = 0.00 MB, solutions = 2)
-Found incumbent of value -16127.047680 after 0.02 sec. (1.19 ticks)
-
-Root node processing (before b&c):
-  Real time             =    0.02 sec. (1.20 ticks)
-Parallel b&c, 8 threads:
-  Real time             =    0.00 sec. (0.00 ticks)
-  Sync time (average)   =    0.00 sec.
-  Wait time (average)   =    0.00 sec.
-                          ------------
-Total (root+branch&cut) =    0.02 sec. (1.20 ticks)
-MIP status(101): integer optimal solution
-Cplex Time: 0.02sec (det. 1.20 ticks)
-Fixing integer variables, and solving final LP...
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 2
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Tried aggregator 1 time.
-LP Presolve eliminated 161 rows and 121 columns.
-All rows and columns eliminated.
-Presolve time = 0.00 sec. (0.08 ticks)
-Fixed MIP status(1): optimal
-Cplex Time: 0.00sec (det. 0.14 ticks)
-
-Proven optimal solution.
-
-MIP Solution:       -16127.047680    (8 iterations, 0 nodes)
-Final Solve:        -16127.047680    (0 iterations)
-
-Best possible:      -16127.047680
-Absolute gap:            0.000000
-Relative gap:            0.000000
-
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule_scenario
---- Executing after solve: elapsed 0:01:05.607
---- Naive_LR_solving.gms(488) 6 Mb
+--- Executing after solve: elapsed 0:00:04.179
+--- Naive_LR_solving.gms(3402) 95 Mb
 --- Generating MIP model schedule_scenario
---- Naive_LR_solving.gms(352) 6 Mb
---- Starting Equ Objective_scenario: elapsed 0:01:05.607
---- Naive_LR_solving.gms(359) 6 Mb
---- Starting Equ Const1_1_scenario: elapsed 0:01:05.608
---- Naive_LR_solving.gms(372) 6 Mb
---- Starting Equ Const_3_1_scenario: elapsed 0:01:05.608
---- Naive_LR_solving.gms(375) 6 Mb
---- Starting Equ Const_3_2_scenario: elapsed 0:01:05.608
---- Naive_LR_solving.gms(380) 6 Mb
---- Starting Equ Const_4_1_scenario: elapsed 0:01:05.608
---- Naive_LR_solving.gms(383) 6 Mb
---- Starting Equ Const_4_2_scenario: elapsed 0:01:05.609
---- Naive_LR_solving.gms(386) 6 Mb
---- Starting Equ Const_5_scenario: elapsed 0:01:05.609
---- Naive_LR_solving.gms(390) 6 Mb
---- Starting Equ Const_6_scenario: elapsed 0:01:05.609
---- Naive_LR_solving.gms(491) 6 Mb
+--- Naive_LR_solving.gms(3313) 95 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:04.180
+--- Naive_LR_solving.gms(3320) 95 Mb
+--- Starting Equ Const1_1_scenario: elapsed 0:00:04.180
+--- Naive_LR_solving.gms(3334) 95 Mb
+--- Starting Equ Const_3_1_scenario: elapsed 0:00:04.183
+--- Naive_LR_solving.gms(3337) 95 Mb
+--- Starting Equ Const_3_2_scenario: elapsed 0:00:04.190
+--- Naive_LR_solving.gms(3342) 95 Mb
+--- Starting Equ Const_4_1_scenario: elapsed 0:00:04.197
+--- Naive_LR_solving.gms(3345) 95 Mb
+--- Starting Equ Const_4_2_scenario: elapsed 0:00:04.201
+--- Naive_LR_solving.gms(3348) 95 Mb
+--- Starting Equ Const_5_scenario: elapsed 0:00:04.205
+--- Naive_LR_solving.gms(3352) 95 Mb
+--- Starting Equ Const_6_scenario: elapsed 0:00:04.210
+--- Naive_LR_solving.gms(3405) 95 Mb
 --- LOOPS rs = scen16
 ---   161 rows  121 columns  735 non-zeroes
----   24 discrete-columns
---- Executing CPLEX (Solvelink=5): elapsed 0:01:05.614
+---   72 discrete-columns
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:04.219
 
-IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
---- GAMS/Cplex Link licensed for continuous and discrete problems.
-Cplex 12.10.0.0
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
-Reading data...
-Starting Cplex...
-Space for names approximately 0.01 Mb
-Use option 'names no' to turn use of names off
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 0
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Found incumbent of value -16019.313324 after 0.00 sec. (0.01 ticks)
-Tried aggregator 2 times.
-MIP Presolve eliminated 29 rows and 30 columns.
-MIP Presolve modified 2 coefficients.
-Aggregator did 1 substitutions.
-Reduced MIP has 131 rows, 90 columns, and 560 nonzeros.
-Reduced MIP has 23 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.35 ticks)
-Probing fixed 0 vars, tightened 1 bounds.
-Probing time = 0.00 sec. (0.05 ticks)
-Tried aggregator 1 time.
-Detecting symmetries...
-MIP Presolve eliminated 1 rows and 1 columns.
-MIP Presolve modified 1 coefficients.
-Reduced MIP has 130 rows, 89 columns, and 553 nonzeros.
-Reduced MIP has 24 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.30 ticks)
-Probing changed sense of 1 constraints.
-Probing time = 0.00 sec. (0.05 ticks)
-Clique table members: 5.
-MIP emphasis: balance optimality and feasibility.
-MIP search method: dynamic search.
-Parallel mode: deterministic, using up to 8 threads.
-Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
-Tried aggregator 1 time.
-No LP presolve or aggregator reductions.
-Presolve time = 0.00 sec. (0.06 ticks)
-Initializing dual steep norms . . .
-
-Iteration log . . .
-Iteration:     1   Dual objective     =        -18453.246702
-Root relaxation solution time = 0.00 sec. (0.16 ticks)
-
-        Nodes                                         Cuts/
-   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
-
-*     0+    0                       -16019.3133   -18639.7673            16.36%
-Found incumbent of value -16019.313324 after 0.00 sec. (1.17 ticks)
-*     0     0      integral     0   -17570.1854   -17570.1854        8    0.00%
-Elapsed time = 0.00 sec. (1.19 ticks, tree = 0.00 MB, solutions = 2)
-Found incumbent of value -17570.185394 after 0.00 sec. (1.19 ticks)
-
-Root node processing (before b&c):
-  Real time             =    0.00 sec. (1.20 ticks)
-Parallel b&c, 8 threads:
-  Real time             =    0.00 sec. (0.00 ticks)
-  Sync time (average)   =    0.00 sec.
-  Wait time (average)   =    0.00 sec.
-                          ------------
-Total (root+branch&cut) =    0.00 sec. (1.20 ticks)
-MIP status(101): integer optimal solution
-Cplex Time: 0.00sec (det. 1.20 ticks)
-Fixing integer variables, and solving final LP...
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 2
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Tried aggregator 1 time.
-LP Presolve eliminated 161 rows and 121 columns.
-All rows and columns eliminated.
-Presolve time = 0.00 sec. (0.08 ticks)
-Fixed MIP status(1): optimal
-Cplex Time: 0.00sec (det. 0.14 ticks)
-
-Proven optimal solution.
-
-MIP Solution:       -17570.185394    (8 iterations, 0 nodes)
-Final Solve:        -17570.185394    (0 iterations)
-
-Best possible:      -17570.185394
-Absolute gap:            0.000000
-Relative gap:            0.000000
-
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule_scenario
---- Executing after solve: elapsed 0:01:05.643
---- Naive_LR_solving.gms(488) 6 Mb
+--- Executing after solve: elapsed 0:00:04.227
+--- Naive_LR_solving.gms(3402) 95 Mb
 --- Generating MIP model schedule_scenario
---- Naive_LR_solving.gms(352) 6 Mb
---- Starting Equ Objective_scenario: elapsed 0:01:05.643
---- Naive_LR_solving.gms(359) 6 Mb
---- Starting Equ Const1_1_scenario: elapsed 0:01:05.643
---- Naive_LR_solving.gms(372) 6 Mb
---- Starting Equ Const_3_1_scenario: elapsed 0:01:05.644
---- Naive_LR_solving.gms(375) 6 Mb
---- Starting Equ Const_3_2_scenario: elapsed 0:01:05.644
---- Naive_LR_solving.gms(380) 6 Mb
---- Starting Equ Const_4_1_scenario: elapsed 0:01:05.644
---- Naive_LR_solving.gms(383) 6 Mb
---- Starting Equ Const_4_2_scenario: elapsed 0:01:05.644
---- Naive_LR_solving.gms(386) 6 Mb
---- Starting Equ Const_5_scenario: elapsed 0:01:05.645
---- Naive_LR_solving.gms(390) 6 Mb
---- Starting Equ Const_6_scenario: elapsed 0:01:05.645
---- Naive_LR_solving.gms(491) 6 Mb
+--- Naive_LR_solving.gms(3313) 95 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:04.227
+--- Naive_LR_solving.gms(3320) 95 Mb
+--- Starting Equ Const1_1_scenario: elapsed 0:00:04.228
+--- Naive_LR_solving.gms(3334) 95 Mb
+--- Starting Equ Const_3_1_scenario: elapsed 0:00:04.232
+--- Naive_LR_solving.gms(3337) 95 Mb
+--- Starting Equ Const_3_2_scenario: elapsed 0:00:04.239
+--- Naive_LR_solving.gms(3342) 95 Mb
+--- Starting Equ Const_4_1_scenario: elapsed 0:00:04.246
+--- Naive_LR_solving.gms(3345) 95 Mb
+--- Starting Equ Const_4_2_scenario: elapsed 0:00:04.250
+--- Naive_LR_solving.gms(3348) 95 Mb
+--- Starting Equ Const_5_scenario: elapsed 0:00:04.254
+--- Naive_LR_solving.gms(3352) 95 Mb
+--- Starting Equ Const_6_scenario: elapsed 0:00:04.259
+--- Naive_LR_solving.gms(3405) 95 Mb
 --- LOOPS rs = scen17
 ---   161 rows  121 columns  735 non-zeroes
----   24 discrete-columns
---- Executing CPLEX (Solvelink=5): elapsed 0:01:05.649
+---   72 discrete-columns
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:04.268
 
-IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
---- GAMS/Cplex Link licensed for continuous and discrete problems.
-Cplex 12.10.0.0
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
-Reading data...
-Starting Cplex...
-Space for names approximately 0.01 Mb
-Use option 'names no' to turn use of names off
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 0
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Found incumbent of value -16022.273326 after 0.00 sec. (0.01 ticks)
-Tried aggregator 2 times.
-MIP Presolve eliminated 29 rows and 30 columns.
-MIP Presolve modified 2 coefficients.
-Aggregator did 1 substitutions.
-Reduced MIP has 131 rows, 90 columns, and 560 nonzeros.
-Reduced MIP has 23 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.35 ticks)
-Probing fixed 0 vars, tightened 1 bounds.
-Probing time = 0.00 sec. (0.05 ticks)
-Tried aggregator 1 time.
-Detecting symmetries...
-MIP Presolve eliminated 1 rows and 1 columns.
-MIP Presolve modified 1 coefficients.
-Reduced MIP has 130 rows, 89 columns, and 553 nonzeros.
-Reduced MIP has 24 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.30 ticks)
-Probing changed sense of 1 constraints.
-Probing time = 0.02 sec. (0.05 ticks)
-Clique table members: 5.
-MIP emphasis: balance optimality and feasibility.
-MIP search method: dynamic search.
-Parallel mode: deterministic, using up to 8 threads.
-Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
-Tried aggregator 1 time.
-No LP presolve or aggregator reductions.
-Presolve time = 0.00 sec. (0.06 ticks)
-Initializing dual steep norms . . .
-
-Iteration log . . .
-Iteration:     1   Dual objective     =        -18456.206704
-Root relaxation solution time = 0.00 sec. (0.16 ticks)
-
-        Nodes                                         Cuts/
-   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
-
-*     0+    0                       -16022.2733   -18642.7273            16.36%
-Found incumbent of value -16022.273326 after 0.02 sec. (1.17 ticks)
-*     0     0      integral     0   -17573.1454   -17573.1454        8    0.00%
-Elapsed time = 0.02 sec. (1.19 ticks, tree = 0.00 MB, solutions = 2)
-Found incumbent of value -17573.145396 after 0.02 sec. (1.19 ticks)
-
-Root node processing (before b&c):
-  Real time             =    0.02 sec. (1.20 ticks)
-Parallel b&c, 8 threads:
-  Real time             =    0.00 sec. (0.00 ticks)
-  Sync time (average)   =    0.00 sec.
-  Wait time (average)   =    0.00 sec.
-                          ------------
-Total (root+branch&cut) =    0.02 sec. (1.20 ticks)
-MIP status(101): integer optimal solution
-Cplex Time: 0.02sec (det. 1.20 ticks)
-Fixing integer variables, and solving final LP...
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 2
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Tried aggregator 1 time.
-LP Presolve eliminated 161 rows and 121 columns.
-All rows and columns eliminated.
-Presolve time = 0.00 sec. (0.08 ticks)
-Fixed MIP status(1): optimal
-Cplex Time: 0.00sec (det. 0.14 ticks)
-
-Proven optimal solution.
-
-MIP Solution:       -17573.145396    (8 iterations, 0 nodes)
-Final Solve:        -17573.145396    (0 iterations)
-
-Best possible:      -17573.145396
-Absolute gap:            0.000000
-Relative gap:            0.000000
-
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule_scenario
---- Executing after solve: elapsed 0:01:05.681
---- Naive_LR_solving.gms(488) 6 Mb
+--- Executing after solve: elapsed 0:00:04.275
+--- Naive_LR_solving.gms(3402) 95 Mb
 --- Generating MIP model schedule_scenario
---- Naive_LR_solving.gms(352) 6 Mb
---- Starting Equ Objective_scenario: elapsed 0:01:05.681
---- Naive_LR_solving.gms(359) 6 Mb
---- Starting Equ Const1_1_scenario: elapsed 0:01:05.682
---- Naive_LR_solving.gms(372) 6 Mb
---- Starting Equ Const_3_1_scenario: elapsed 0:01:05.682
---- Naive_LR_solving.gms(375) 6 Mb
---- Starting Equ Const_3_2_scenario: elapsed 0:01:05.683
---- Naive_LR_solving.gms(380) 6 Mb
---- Starting Equ Const_4_1_scenario: elapsed 0:01:05.683
---- Naive_LR_solving.gms(383) 6 Mb
---- Starting Equ Const_4_2_scenario: elapsed 0:01:05.683
---- Naive_LR_solving.gms(386) 6 Mb
---- Starting Equ Const_5_scenario: elapsed 0:01:05.684
---- Naive_LR_solving.gms(390) 6 Mb
---- Starting Equ Const_6_scenario: elapsed 0:01:05.684
---- Naive_LR_solving.gms(491) 6 Mb
+--- Naive_LR_solving.gms(3313) 95 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:04.275
+--- Naive_LR_solving.gms(3320) 95 Mb
+--- Starting Equ Const1_1_scenario: elapsed 0:00:04.276
+--- Naive_LR_solving.gms(3334) 95 Mb
+--- Starting Equ Const_3_1_scenario: elapsed 0:00:04.278
+--- Naive_LR_solving.gms(3337) 95 Mb
+--- Starting Equ Const_3_2_scenario: elapsed 0:00:04.285
+--- Naive_LR_solving.gms(3342) 95 Mb
+--- Starting Equ Const_4_1_scenario: elapsed 0:00:04.291
+--- Naive_LR_solving.gms(3345) 95 Mb
+--- Starting Equ Const_4_2_scenario: elapsed 0:00:04.295
+--- Naive_LR_solving.gms(3348) 95 Mb
+--- Starting Equ Const_5_scenario: elapsed 0:00:04.300
+--- Naive_LR_solving.gms(3352) 95 Mb
+--- Starting Equ Const_6_scenario: elapsed 0:00:04.305
+--- Naive_LR_solving.gms(3405) 95 Mb
 --- LOOPS rs = scen18
 ---   161 rows  121 columns  735 non-zeroes
----   24 discrete-columns
---- Executing CPLEX (Solvelink=5): elapsed 0:01:05.688
+---   72 discrete-columns
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:04.319
 
-IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
---- GAMS/Cplex Link licensed for continuous and discrete problems.
-Cplex 12.10.0.0
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
-Reading data...
-Starting Cplex...
-Space for names approximately 0.01 Mb
-Use option 'names no' to turn use of names off
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 0
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Found incumbent of value -15886.068432 after 0.00 sec. (0.01 ticks)
-Tried aggregator 2 times.
-MIP Presolve eliminated 29 rows and 30 columns.
-MIP Presolve modified 2 coefficients.
-Aggregator did 1 substitutions.
-Reduced MIP has 131 rows, 90 columns, and 560 nonzeros.
-Reduced MIP has 23 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.35 ticks)
-Probing fixed 0 vars, tightened 1 bounds.
-Probing time = 0.00 sec. (0.05 ticks)
-Tried aggregator 1 time.
-Detecting symmetries...
-MIP Presolve eliminated 1 rows and 1 columns.
-MIP Presolve modified 1 coefficients.
-Reduced MIP has 130 rows, 89 columns, and 553 nonzeros.
-Reduced MIP has 24 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.30 ticks)
-Probing changed sense of 1 constraints.
-Probing time = 0.00 sec. (0.05 ticks)
-Clique table members: 5.
-MIP emphasis: balance optimality and feasibility.
-MIP search method: dynamic search.
-Parallel mode: deterministic, using up to 8 threads.
-Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
-Tried aggregator 1 time.
-No LP presolve or aggregator reductions.
-Presolve time = 0.00 sec. (0.06 ticks)
-Initializing dual steep norms . . .
-
-Iteration log . . .
-Iteration:     1   Dual objective     =        -18320.001810
-Root relaxation solution time = 0.00 sec. (0.16 ticks)
-
-        Nodes                                         Cuts/
-   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
-
-*     0+    0                       -15886.0684   -18506.5225            16.50%
-Found incumbent of value -15886.068432 after 0.00 sec. (1.17 ticks)
-*     0     0      integral     0   -17436.9405   -17436.9405        8    0.00%
-Elapsed time = 0.00 sec. (1.19 ticks, tree = 0.00 MB, solutions = 2)
-Found incumbent of value -17436.940502 after 0.00 sec. (1.19 ticks)
-
-Root node processing (before b&c):
-  Real time             =    0.00 sec. (1.20 ticks)
-Parallel b&c, 8 threads:
-  Real time             =    0.00 sec. (0.00 ticks)
-  Sync time (average)   =    0.00 sec.
-  Wait time (average)   =    0.00 sec.
-                          ------------
-Total (root+branch&cut) =    0.00 sec. (1.20 ticks)
-MIP status(101): integer optimal solution
-Cplex Time: 0.02sec (det. 1.20 ticks)
-Fixing integer variables, and solving final LP...
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 2
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Tried aggregator 1 time.
-LP Presolve eliminated 161 rows and 121 columns.
-All rows and columns eliminated.
-Presolve time = 0.00 sec. (0.08 ticks)
-Fixed MIP status(1): optimal
-Cplex Time: 0.00sec (det. 0.14 ticks)
-
-Proven optimal solution.
-
-MIP Solution:       -17436.940502    (8 iterations, 0 nodes)
-Final Solve:        -17436.940502    (0 iterations)
-
-Best possible:      -17436.940502
-Absolute gap:            0.000000
-Relative gap:            0.000000
-
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule_scenario
---- Executing after solve: elapsed 0:01:05.719
---- Naive_LR_solving.gms(488) 6 Mb
+--- Executing after solve: elapsed 0:00:04.328
+--- Naive_LR_solving.gms(3402) 95 Mb
 --- Generating MIP model schedule_scenario
---- Naive_LR_solving.gms(352) 6 Mb
---- Starting Equ Objective_scenario: elapsed 0:01:05.719
---- Naive_LR_solving.gms(359) 6 Mb
---- Starting Equ Const1_1_scenario: elapsed 0:01:05.720
---- Naive_LR_solving.gms(372) 6 Mb
---- Starting Equ Const_3_1_scenario: elapsed 0:01:05.720
---- Naive_LR_solving.gms(375) 6 Mb
---- Starting Equ Const_3_2_scenario: elapsed 0:01:05.720
---- Naive_LR_solving.gms(380) 6 Mb
---- Starting Equ Const_4_1_scenario: elapsed 0:01:05.720
---- Naive_LR_solving.gms(383) 6 Mb
---- Starting Equ Const_4_2_scenario: elapsed 0:01:05.721
---- Naive_LR_solving.gms(386) 6 Mb
---- Starting Equ Const_5_scenario: elapsed 0:01:05.721
---- Naive_LR_solving.gms(390) 6 Mb
---- Starting Equ Const_6_scenario: elapsed 0:01:05.721
---- Naive_LR_solving.gms(491) 6 Mb
+--- Naive_LR_solving.gms(3313) 95 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:04.329
+--- Naive_LR_solving.gms(3320) 95 Mb
+--- Starting Equ Const1_1_scenario: elapsed 0:00:04.329
+--- Naive_LR_solving.gms(3334) 95 Mb
+--- Starting Equ Const_3_1_scenario: elapsed 0:00:04.334
+--- Naive_LR_solving.gms(3337) 95 Mb
+--- Starting Equ Const_3_2_scenario: elapsed 0:00:04.340
+--- Naive_LR_solving.gms(3342) 95 Mb
+--- Starting Equ Const_4_1_scenario: elapsed 0:00:04.346
+--- Naive_LR_solving.gms(3345) 95 Mb
+--- Starting Equ Const_4_2_scenario: elapsed 0:00:04.351
+--- Naive_LR_solving.gms(3348) 95 Mb
+--- Starting Equ Const_5_scenario: elapsed 0:00:04.355
+--- Naive_LR_solving.gms(3352) 95 Mb
+--- Starting Equ Const_6_scenario: elapsed 0:00:04.360
+--- Naive_LR_solving.gms(3405) 95 Mb
 --- LOOPS rs = scen19
 ---   161 rows  121 columns  735 non-zeroes
----   24 discrete-columns
---- Executing CPLEX (Solvelink=5): elapsed 0:01:05.725
+---   72 discrete-columns
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:04.370
 
-IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
---- GAMS/Cplex Link licensed for continuous and discrete problems.
-Cplex 12.10.0.0
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
-Reading data...
-Starting Cplex...
-Space for names approximately 0.01 Mb
-Use option 'names no' to turn use of names off
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 0
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Found incumbent of value -11823.359831 after 0.00 sec. (0.01 ticks)
-Tried aggregator 2 times.
-MIP Presolve eliminated 29 rows and 30 columns.
-MIP Presolve modified 2 coefficients.
-Aggregator did 1 substitutions.
-Reduced MIP has 131 rows, 90 columns, and 560 nonzeros.
-Reduced MIP has 23 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.35 ticks)
-Probing fixed 0 vars, tightened 1 bounds.
-Probing time = 0.00 sec. (0.05 ticks)
-Tried aggregator 1 time.
-Detecting symmetries...
-MIP Presolve eliminated 1 rows and 1 columns.
-MIP Presolve modified 1 coefficients.
-Reduced MIP has 130 rows, 89 columns, and 553 nonzeros.
-Reduced MIP has 24 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.30 ticks)
-Probing changed sense of 1 constraints.
-Probing time = 0.00 sec. (0.05 ticks)
-Clique table members: 5.
-MIP emphasis: balance optimality and feasibility.
-MIP search method: dynamic search.
-Parallel mode: deterministic, using up to 8 threads.
-Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
-Tried aggregator 1 time.
-No LP presolve or aggregator reductions.
-Presolve time = 0.00 sec. (0.06 ticks)
-Initializing dual steep norms . . .
-
-Iteration log . . .
-Iteration:     1   Dual objective     =        -14257.293209
-Root relaxation solution time = 0.00 sec. (0.16 ticks)
-
-        Nodes                                         Cuts/
-   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
-
-*     0+    0                       -11823.3598   -14443.8138            22.16%
-Found incumbent of value -11823.359831 after 0.02 sec. (1.17 ticks)
-*     0     0      integral     0   -13374.2319   -13374.2319        8    0.00%
-Elapsed time = 0.02 sec. (1.19 ticks, tree = 0.00 MB, solutions = 2)
-Found incumbent of value -13374.231901 after 0.02 sec. (1.19 ticks)
-
-Root node processing (before b&c):
-  Real time             =    0.02 sec. (1.20 ticks)
-Parallel b&c, 8 threads:
-  Real time             =    0.00 sec. (0.00 ticks)
-  Sync time (average)   =    0.00 sec.
-  Wait time (average)   =    0.00 sec.
-                          ------------
-Total (root+branch&cut) =    0.02 sec. (1.20 ticks)
-MIP status(101): integer optimal solution
-Cplex Time: 0.02sec (det. 1.20 ticks)
-Fixing integer variables, and solving final LP...
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 2
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Tried aggregator 1 time.
-LP Presolve eliminated 161 rows and 121 columns.
-All rows and columns eliminated.
-Presolve time = 0.00 sec. (0.08 ticks)
-Fixed MIP status(1): optimal
-Cplex Time: 0.00sec (det. 0.14 ticks)
-
-Proven optimal solution.
-
-MIP Solution:       -13374.231901    (8 iterations, 0 nodes)
-Final Solve:        -13374.231901    (0 iterations)
-
-Best possible:      -13374.231901
-Absolute gap:            0.000000
-Relative gap:            0.000000
-
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule_scenario
---- Executing after solve: elapsed 0:01:05.755
---- Naive_LR_solving.gms(488) 6 Mb
+--- Executing after solve: elapsed 0:00:04.378
+--- Naive_LR_solving.gms(3402) 95 Mb
 --- Generating MIP model schedule_scenario
---- Naive_LR_solving.gms(352) 6 Mb
---- Starting Equ Objective_scenario: elapsed 0:01:05.756
---- Naive_LR_solving.gms(359) 6 Mb
---- Starting Equ Const1_1_scenario: elapsed 0:01:05.756
---- Naive_LR_solving.gms(372) 6 Mb
---- Starting Equ Const_3_1_scenario: elapsed 0:01:05.756
---- Naive_LR_solving.gms(375) 6 Mb
---- Starting Equ Const_3_2_scenario: elapsed 0:01:05.756
---- Naive_LR_solving.gms(380) 6 Mb
---- Starting Equ Const_4_1_scenario: elapsed 0:01:05.757
---- Naive_LR_solving.gms(383) 6 Mb
---- Starting Equ Const_4_2_scenario: elapsed 0:01:05.757
---- Naive_LR_solving.gms(386) 6 Mb
---- Starting Equ Const_5_scenario: elapsed 0:01:05.757
---- Naive_LR_solving.gms(390) 6 Mb
---- Starting Equ Const_6_scenario: elapsed 0:01:05.757
---- Naive_LR_solving.gms(491) 6 Mb
---- LOOPS rs = scen20
----   161 rows  121 columns  735 non-zeroes
----   24 discrete-columns
---- Executing CPLEX (Solvelink=5): elapsed 0:01:05.763
-
-IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
---- GAMS/Cplex Link licensed for continuous and discrete problems.
-Cplex 12.10.0.0
-
-Reading data...
-Starting Cplex...
-Space for names approximately 0.01 Mb
-Use option 'names no' to turn use of names off
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 0
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Found incumbent of value -17026.064446 after 0.00 sec. (0.01 ticks)
-Tried aggregator 2 times.
-MIP Presolve eliminated 29 rows and 30 columns.
-MIP Presolve modified 2 coefficients.
-Aggregator did 1 substitutions.
-Reduced MIP has 131 rows, 90 columns, and 560 nonzeros.
-Reduced MIP has 23 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.35 ticks)
-Probing fixed 0 vars, tightened 1 bounds.
-Probing time = 0.00 sec. (0.05 ticks)
-Tried aggregator 1 time.
-Detecting symmetries...
-MIP Presolve eliminated 1 rows and 1 columns.
-MIP Presolve modified 1 coefficients.
-Reduced MIP has 130 rows, 89 columns, and 553 nonzeros.
-Reduced MIP has 24 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.00 sec. (0.30 ticks)
-Probing changed sense of 1 constraints.
-Probing time = 0.00 sec. (0.05 ticks)
-Clique table members: 5.
-MIP emphasis: balance optimality and feasibility.
-MIP search method: dynamic search.
-Parallel mode: deterministic, using up to 8 threads.
-Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
-Tried aggregator 1 time.
-No LP presolve or aggregator reductions.
-Presolve time = 0.00 sec. (0.06 ticks)
-Initializing dual steep norms . . .
-
-Iteration log . . .
-Iteration:     1   Dual objective     =        -19459.997824
-Root relaxation solution time = 0.00 sec. (0.16 ticks)
-
-        Nodes                                         Cuts/
-   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
-
-*     0+    0                       -17026.0644   -19646.5185            15.39%
-Found incumbent of value -17026.064446 after 0.02 sec. (1.17 ticks)
-*     0     0      integral     0   -18576.9365   -18576.9365        8    0.00%
-Elapsed time = 0.02 sec. (1.19 ticks, tree = 0.00 MB, solutions = 2)
-Found incumbent of value -18576.936516 after 0.02 sec. (1.19 ticks)
-
-Root node processing (before b&c):
-  Real time             =    0.02 sec. (1.20 ticks)
-Parallel b&c, 8 threads:
-  Real time             =    0.00 sec. (0.00 ticks)
-  Sync time (average)   =    0.00 sec.
-  Wait time (average)   =    0.00 sec.
-                          ------------
-Total (root+branch&cut) =    0.02 sec. (1.20 ticks)
-MIP status(101): integer optimal solution
-Cplex Time: 0.02sec (det. 1.20 ticks)
-Fixing integer variables, and solving final LP...
-Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
-CPXPARAM_Advance                                 2
-CPXPARAM_Threads                                 8
-CPXPARAM_Parallel                                1
-CPXPARAM_MIP_Display                             4
-CPXPARAM_TimeLimit                               4200
-CPXPARAM_Tune_TimeLimit                          840
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-CPXPARAM_MIP_Tolerances_MIPGap                   0
-CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\225a\"
-Tried aggregator 1 time.
-LP Presolve eliminated 161 rows and 121 columns.
-All rows and columns eliminated.
-Presolve time = 0.00 sec. (0.08 ticks)
-Fixed MIP status(1): optimal
-Cplex Time: 0.00sec (det. 0.14 ticks)
-
-Proven optimal solution.
-
-MIP Solution:       -18576.936516    (8 iterations, 0 nodes)
-Final Solve:        -18576.936516    (0 iterations)
-
-Best possible:      -18576.936516
-Absolute gap:            0.000000
-Relative gap:            0.000000
-
---- Reading solution for model schedule_scenario
---- Executing after solve: elapsed 0:01:05.793
---- Naive_LR_solving.gms(517) 6 Mb
-*** Error at line 517: Execution halted: abort 'sorted file not generated correctly check manually'
---- Naive_LR_solving.gms(517) 6 Mb 1 Error
---- Putfile TestingFile3 C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\TestingFile3.csv
---- Putfile scen_sorted C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\scen_sorted.csv
---- Profile Summary (563 records processed)
-    64.719   0.005GB       430 Solve Alg  schedule
-     0.797   0.006GB       488 Loop       
-     0.125   0.006GB       466 Solve Alg  schedule
-     0.032   0.006GB       491 Solve Alg  schedule_scenario
-     0.031   0.006GB       491 Solve Alg  schedule_scenario
-     0.031   0.006GB       491 Solve Alg  schedule_scenario
-     0.031   0.006GB       491 Solve Alg  schedule_scenario
-     0.031   0.006GB       491 Solve Alg  schedule_scenario
-     0.031   0.005GB       430 Solve Fini schedule (14725)
-     0.031   0.006GB       491 Solve Alg  schedule_scenario
---- Naive_LR_solving.gms(517) 6 Mb 1 Error
+--- Naive_LR_solving.gms(3313) 95 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:04.378
+--- Naive_LR_solving.gms(3320) 95 Mb
+--- Starting Equ Const1_1_scenario: elapsed 0:00:04.379
+--- Naive_LR_solving.gms(3334) 95 Mb
+--- Starting Equ Const_3_1_scenario: elapsed 0:00:04.382
+--- Naive_LR_solving.gms(3337) 95 Mb
+--- Starting Equ Const_3_2_scenario: elapsed 0:00:04.389
+--- Naive_LR_solving.gms(3342) 95 Mb
+--- Starting Equ Const_4_1_scenario: elapsed 0:00:04.395
+--- Naive_LR_solving.gms(3345) 95 Mb
+--- Starting Equ Const_4_2_scenario: elapsed 0:00:04.402
+--- Naive_LR_solving.gms(3348) 95 Mb
+--- Starting Equ Const_5_scenario: elapsed 0:00:04.407
+--- Naive_LR_solving.gms(3352) 95 Mb
+--- Starting Equ Const_6_scenario: elapsed 0:00:04.413
+*** Error at line 3348: Execution halted: Triggered by pending CtrlC event
+--- Naive_LR_solving.gms(3405) 95 Mb 1 Error
+*** SOLVE aborted
+--- Profile Summary (5850 records processed)
+     0.968   0.018GB      3308 Equation   Objective (1)
+     0.671   0.006GB      3225 Loop       
+     0.406   0.095GB      3380 Solve Alg  schedule
+     0.344   0.095GB      3380 Solve Fini schedule (1102525)
+     0.219   0.067GB      3341 Equation   Const_4_1 (33000)
+     0.219   0.073GB      3344 Equation   Const_4_2 (33000)
+     0.109   0.093GB      3351 Equation   Const_6 (34500)
+     0.094   0.060GB      3336 Equation   Const_3_2 (34500)
+     0.093   0.049GB      3333 Equation   Const_3_1 (34500)
+     0.078   0.083GB      3347 Equation   Const_5 (34500)
+--- Naive_LR_solving.gms(3405) 95 Mb 1 Error
 *** Status: Execution error(s)
---- Job Naive_LR_solving.gms Stop 09/20/21 11:05:48 elapsed 0:01:05.803
+--- Job Naive_LR_solving.gms Stop 10/20/21 11:06:47 elapsed 0:00:04.418
