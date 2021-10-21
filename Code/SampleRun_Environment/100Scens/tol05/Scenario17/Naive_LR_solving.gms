@@ -20,6 +20,8 @@ $include inputME.gms // no need to change for Lagrangian decomposition
 $include subgradient_parameters.gms
 
 $include equations_all.gms
+$include lp_lowerbound.gms // no need to change for Lagrangian decomposition
+$include heuristic_upperbound.gms // no need to change for Lagrangian decomposition
 
 
 scalar d;
@@ -38,6 +40,10 @@ put 'Omega', put 'Tolerance', put 'Step Size Rule', put 'Iterations', put 'Conve
 option limrow = 10000;
 schedule.optfile=1;
 
+
+* When setting the start value of the one of the heuristic so the Naive model value will be greater or equal than the heuristic:
+* heu_z(scen)=z.l(scen);
+* z.l(scen)=heu_z(scen);
 start_time = jnow;
 solve schedule using MIP minimizing Obj ;                       
 end_time = jnow ;
@@ -71,8 +77,6 @@ display Obj.l, run_time_total ;
 * Solve the Lagrangian Dual problem now
 ********************************************************************************
 
-$include lp_lowerbound.gms // no need to change for Lagrangian decomposition
-$include heuristic_upperbound.gms // no need to change for Lagrangian decomposition
 
 parameter ldual_iter(iter) obj function at each iteration ;
 lr_time = 0 ;

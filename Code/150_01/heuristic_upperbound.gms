@@ -51,7 +51,6 @@ upperbound = Obj.l ;
 prev_y(t) = y.l(t) ;
 *prev_w(scen,t) = w.l(scen,t) ;
 parameter heu_z(scen);
-heu_z(scen)=z.l(scen);
 * Clear bound on z now
 z.up(scen) = 1 ;
 z.lo(scen) = 0 ;

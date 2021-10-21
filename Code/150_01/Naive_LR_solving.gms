@@ -39,7 +39,11 @@ put 'Omega', put 'Tolerance', put 'Step Size Rule', put 'Iterations', put 'Conve
 ********************************************************************************
 option limrow = 10000;
 schedule.optfile=1;
-z.l(scen)=heu_z(scen);
+
+
+* When setting the start value of the one of the heuristic so the Naive model value will be greater or equal than the heuristic:
+* heu_z(scen)=z.l(scen);
+* z.l(scen)=heu_z(scen);
 start_time = jnow;
 solve schedule using MIP minimizing Obj ;                       
 end_time = jnow ;
