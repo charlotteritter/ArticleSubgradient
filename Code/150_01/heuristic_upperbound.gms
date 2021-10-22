@@ -50,7 +50,6 @@ bound_time =  run_time_total + ghour(end_time - start_time)*3600 + gminute(end_t
 upperbound = Obj.l ;
 prev_y(t) = y.l(t) ;
 *prev_w(scen,t) = w.l(scen,t) ;
-parameter heu_z(scen);
 * Clear bound on z now
 z.up(scen) = 1 ;
 z.lo(scen) = 0 ;

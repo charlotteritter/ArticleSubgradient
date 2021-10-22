@@ -1,4 +1,4 @@
---- Job Naive_LR_solving.gms Start 10/20/21 11:05:32 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Job Naive_LR_solving.gms Start 10/22/21 16:40:33 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     C:\GAMS\32\gmsprmNT.txt
 --- GAMS Parameters defined
@@ -31,51 +31,45 @@ Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
 --- Naive_LR_solving.gms(23) 4 Mb
 --- . lp_lowerbound.gms(12) 4 Mb
 --- Naive_LR_solving.gms(24) 4 Mb
---- . heuristic_upperbound.gms(60) 4 Mb
---- Naive_LR_solving.gms(40) 4 Mb 1 Error
-*** Error 250 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\Naive_LR_solving.gms
-    Unknown option.  valid are -
-      LP = "lpname" ( This works for all other model types as well:
-                      MIP, RMIP, NLP, MCP, MPEC, RMPEC, CNS, DNLP, RMINLP
-                      MINLP, QCP, MIQCP, RMIQCP, EMP )
-      -no values:
-      DmpSym, DmpOpt, Eject, Measure, MemoryStat, SubSystems
-   
-      -strings: [name=default/option/option/...]
-      SysOut=off/on, SolPrint=off/on/Silent, gdxUels=Squeezed/Full
-      ZeroToEps=off/on, SolveOpt=Merge/Replace/Clear
-   
-      -numeric values:
-      IntVarUp, Profile, LimRow, LimCol, IterLim, DomLim, ResLim, OptCR
-      OptCA, Bratio, ForLim, Seed, SavePoint, SolveLink, Sys10, Sys11
-      Sys12, ProfileTol, Integer1, Integer2, Integer3, Integer4, Integer5
-      Threads, strictSingleton, FDDelta, FDOpt, ThreadsAsync, MCPRHoldfx
-      AsyncSolLst, CheckErrorLevel, Decimals, DispWidth, DualCheck
-      Real1, Real2, Real3, Real4, Real5, Reform, SolSlack
-   
-      "symbol":decimals:rows:columns        (display control)
-      (decimals, rows, columns are integers. Number of
-      displayed decimal places, labels for each row and
-      for each column)
---- Naive_LR_solving.gms(44) 4 Mb 2 Errors
-*** Error 257 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\Naive_LR_solving.gms
-    Solve statement not checked because of previous errors
---- Naive_LR_solving.gms(112) 4 Mb
---- . plain_lr.gms(4) 4 Mb 3 Errors
-*** Error 257 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\plain_lr.gms
-    Solve statement not checked because of previous errors
---- . plain_lr.gms(6) 4 Mb 4 Errors
-*** Error 141 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\150_01\plain_lr.gms
-    Symbol declared but no values have been assigned. Check for missing
-       data definition, assignment, data loading or implicit assignment
-       via a solve statement.
-       A wild shot: You may have spurious commas in the explanatory
-       text of a declaration. Check symbol reference list.
+--- . heuristic_upperbound.gms(58) 4 Mb
+--- Naive_LR_solving.gms(116) 4 Mb
 --- . plain_lr.gms(12) 4 Mb
---- Naive_LR_solving.gms(118) 4 Mb
+--- Naive_LR_solving.gms(122) 4 Mb
 --- . LR_updates.gms(17) 4 Mb
 --- .. stepsizes.gms(21) 4 Mb
 --- . LR_updates.gms(42) 4 Mb
---- Naive_LR_solving.gms(144) 4 Mb 4 Errors
-*** Status: Compilation error(s)
---- Job Naive_LR_solving.gms Stop 10/20/21 11:05:32 elapsed 0:00:00.044
+--- Naive_LR_solving.gms(148) 4 Mb
+--- Starting execution: elapsed 0:00:00.122
+--- Naive_LR_solving.gms(3379) 10 Mb
+--- Generating RMIP model schedule
+--- Naive_LR_solving.gms(3308) 10 Mb
+--- Starting Equ Objective: elapsed 0:00:00.904
+--- Naive_LR_solving.gms(3317) 18 Mb
+--- Starting Equ Const1_1: elapsed 0:00:01.927
+--- Naive_LR_solving.gms(3324) 39 Mb
+--- Starting Equ Const1_2: elapsed 0:00:01.986
+--- Naive_LR_solving.gms(3333) 39 Mb
+--- Starting Equ Const_3_1: elapsed 0:00:01.999
+--- Naive_LR_solving.gms(3336) 49 Mb
+--- Starting Equ Const_3_2: elapsed 0:00:02.100
+--- Naive_LR_solving.gms(3341) 60 Mb
+--- Starting Equ Const_4_1: elapsed 0:00:02.196
+--- Naive_LR_solving.gms(3344) 67 Mb
+--- Starting Equ Const_4_2: elapsed 0:00:02.451
+*** Error at line 3341: Execution halted: Triggered by pending CtrlC event
+--- Naive_LR_solving.gms(3380) 67 Mb 1 Error
+*** SOLVE aborted
+--- Profile Summary (5541 records processed)
+     1.032   0.018GB      3308 Equation   Objective (1)
+     0.735   0.006GB      3225 Loop       
+     0.250   0.067GB      3341 Equation   Const_4_1 (33000)
+     0.094   0.060GB      3336 Equation   Const_3_2 (34500)
+     0.093   0.049GB      3333 Equation   Const_3_1 (34500)
+     0.062   0.039GB      3317 Equation   Const1_1 (36000)
+     0.047   0.006GB      3226 Loop       
+     0.032   0.006GB      3226 Loop       
+     0.032   0.006GB      3226 Loop       
+     0.032   0.006GB      3226 Loop       
+--- Naive_LR_solving.gms(3380) 67 Mb 1 Error
+*** Status: Execution error(s)
+--- Job Naive_LR_solving.gms Stop 10/22/21 16:40:35 elapsed 0:00:02.524

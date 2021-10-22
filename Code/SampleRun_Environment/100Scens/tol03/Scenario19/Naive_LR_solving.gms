@@ -42,6 +42,7 @@ schedule.optfile=1;
 
 
 * When setting the start value of the one of the heuristic so the Naive model value will be greater or equal than the heuristic:
+* parameter heu_z(scen);
 * heu_z(scen)=z.l(scen);
 * z.l(scen)=heu_z(scen);
 start_time = jnow;
