@@ -30,13 +30,11 @@ $include heuristic_upperbound.gms // no need to change for Lagrangian decomposit
 parameter ldual_iter(iter) obj function at each iteration ;
 lr_time = 0 ;
 
-scalar steprule;
-steprule=3;
-
 option limrow = 0, limcol = 0, optca=0.0001, optcr=0.0001 ;
 
 prev_y(t) = y.l(t) ;
-
+scalar steprule;
+steprule=6;
 loop(iter$contin,
 num_iter = ord(iter) ;
 *         pass a warm start
@@ -47,25 +45,25 @@ num_iter = ord(iter) ;
 *********************************************************************
 ***Solve a Lagrangian iteration 
 *********************************************************************
-$include plain_lr.gms
+$include plain_LR.gms
 
          end_time = jnow ;
          results(iter,'time') = ghour(end_time - start_time)*3600 + gminute(end_time - start_time)*60 + gsecond(end_time - start_time);
          results(iter,'objective') = bound ;
 
 $include LR_updates.gms
-         if( ((results(iter,'gap') < 0.001) and (num_iter > 2)),convergence=2; contin = 0;);
+         if( ((results(iter,'gap') < 0.001) and (num_iter > 2)), contin = 0;);
          lr_time = lr_time + results(iter,'time')   ;
          if (lr_time > 2250, contin = 0 ;) ;
 );
 
 run_time_total = LP_time + lr_time + bound_time  ;
+scalar ObjLR;
+scalar heuristic;
 
-* check if any p and q active simultaneously (nothing to do with Lagrangian)
-parameter check(scen,t);
-check(scen,t) = 0 ;
-check(scen,t) = 1$( p.l(scen,t) gt 0 and q.l(scen,t) gt 0) ;
-if ( sum((scen,t), check(scen,t)) gt 0, abort "error: p and q are one together, check. ")
+ObjLR=-lowerbound;
+heuristic=-upperbound;
 
-display results, lowerbound, upperbound, LP_bound, run_time_total, lr_time, num_iter, convergence ;
+display results, lowerbound, upperbound, LP_bound, run_time_total, lr_time, num_iter ;
 display z.l, y.l ;
+display ObjLR, heuristic;
