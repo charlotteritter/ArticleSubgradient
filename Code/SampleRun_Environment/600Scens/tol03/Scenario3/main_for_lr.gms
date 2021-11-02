@@ -45,7 +45,7 @@ num_iter = ord(iter) ;
 *********************************************************************
 ***Solve a Lagrangian iteration 
 *********************************************************************
-$include plain_LR.gms
+$include plain_lr.gms
 
          end_time = jnow ;
          results(iter,'time') = ghour(end_time - start_time)*3600 + gminute(end_time - start_time)*60 + gsecond(end_time - start_time);
