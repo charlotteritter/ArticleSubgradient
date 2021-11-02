@@ -1,0 +1,14 @@
+Input=/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol01/Scenario15/Naive_LR_solving_2Approach.gms
+Output=/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol01/Scenario15/Naive_LR_solving_2Approach.lst
+Action=R
+SubSys=/home/woody/mpwm/shared/software/gams24.8_linux_x64_64_sfx/gmscmpun.txt
+ScrDir=/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol01/Scenario15/225a/
+SysDir=/home/woody/mpwm/shared/software/gams24.8_linux_x64_64_sfx/
+CurDir=/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol01/Scenario15/
+WorkDir=/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol01/Scenario15/
+PutDir=/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol01/Scenario15/
+GridDir=/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol01/Scenario15/225a/
+ScriptNext=225a/gamsnext.sh
+AppendOut=1
+LibIncDir=/home/woody/mpwm/shared/software/gams24.8_linux_x64_64_sfx/inclib/
+SysIncDir=/home/woody/mpwm/shared/software/gams24.8_linux_x64_64_sfx/

@@ -1,0 +1,11 @@
+235      0.001
+596 2      0.558       0.010 GAMS Fini   
+596 1      1.472       0.010 Solve Fini schedule (73525)
+544 6      0.192       0.009 Equation   Const_6 (2300)
+540 5      0.175       0.009 Equation   Const_5 (2300)
+537 7      0.327       0.008 Equation   Const_4_2 (2200)
+534 10      0.370       0.008 Equation   Const_4_1 (2200)
+529 3      0.273       0.007 Equation   Const_3_2 (2300)
+501 4      0.024       0.004 Equation   Objective (1)
+510 9      0.104       0.006 Equation   Const1_1 (2400)
+526 8      0.261       0.007 Equation   Const_3_1 (2300)
