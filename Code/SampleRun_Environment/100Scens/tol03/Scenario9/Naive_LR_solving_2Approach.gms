@@ -25,13 +25,6 @@ put TestingFile3;
 put 'Omega', put 'Tolerance', put 'Step Size Rule', put 'Iterations', put 'Converged?', put 'Gap LR', put 'Gap Naive', put 'Obj. Naive', put 'Obj. LR', put 'Gap' put 'Time Naive', put 'Time LR', put 'Final Lambda', put 'LB Heuristic' put /;
 
 
-
-
-***Zwischen fixed und LR
-
-Prices(t,'rew')     =  - Prices(t,'rew');
-Prices(t,'gen')    =  - Prices(t,'gen');
-
 *********************************************************************************
 *Solve main problem
 *********************************************************************************
