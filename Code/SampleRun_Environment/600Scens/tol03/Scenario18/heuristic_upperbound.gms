@@ -37,7 +37,7 @@ loop(rs, put res_scenarios(rs,'scenario') put res_scenarios(rs,'obj') put /; ) ;
 PUTCLOSE scen_sorted;
 
 
-z.lo(scen) = scenario_sorted(scen,'value') ;
+z.fx(scen) = scenario_sorted(scen,'value') ;
 *** Ensure file was generated correctly
 if ( sum(scen,z.lo(scen)) ne threshold, abort "sorted file not generated correctly check manually") ;
 start_time = jnow ;
@@ -54,5 +54,6 @@ prev_y(t) = y.l(t) ;
 z.up(scen) = 1 ;
 z.lo(scen) = 0 ;
 
-display lowerbound,upperbound,prev_y, LP_time, bound_time  ;
+*display lowerbound,upperbound,prev_y, LP_time, bound_time  ;
+display upperbound,prev_y ;
 

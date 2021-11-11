@@ -1,12 +1,12 @@
 $eolcom //
-OPTIONS PROFILE =3, RESLIM   = 2100, LIMROW   = 5, LP = CPLEX, MIP = cplex, RMIP=cplex, NLP = CONOPT, MINLP = DICOPT, MIQCP = CPLEX, SOLPRINT = OFF, decimals = 8, optcr=0.001, optca=0.001, threads =8, integer4=0;
+OPTIONS PROFILE =3, RESLIM   = 2100, LIMROW   = 5, LP = CPLEX, MIP = gurobi, RMIP=gurobi, NLP = CONOPT, MINLP = DICOPT, MIQCP = CPLEX, SOLPRINT = OFF, decimals = 8, optcr=0.001, optca=0.001, threads =8, integer4=0;
 
 
 $include inputME.gms // no need to change for Lagrangian decomposition
 $include subgradient_parameters.gms
 
 $include equations_all.gms
-$include lp_lowerbound.gms // no need to change for Lagrangian decomposition
+*$include lp_lowerbound.gms // no need to change for Lagrangian decomposition
 
 
 
@@ -14,7 +14,7 @@ $include lp_lowerbound.gms // no need to change for Lagrangian decomposition
 ********************************************************************************
 * Find a upperbound on the problem : a feasible solution
 ********************************************************************************
-$onMultiR
+*$onMultiR
 
 *upperbound =  0;
 * Find a upper bound using a fixed value and solving MIP (a feasible solution)
@@ -52,23 +52,23 @@ loop(rs, put res_scenarios(rs,'scenario') put res_scenarios(rs,'obj') put /; ) ;
 PUTCLOSE scen_sorted;
 
 
-*z.lo(scen) = scenario_sorted(scen,'value') ;
-**** Ensure file was generated correctly
-*if ( sum(scen,z.lo(scen)) ne threshold, abort "sorted file not generated correctly check manually") ;
-*start_time = jnow ;
-*schedule.solprint = 0;
-**schedule.optfile  = 1;
-*schedule.solvelink = 5 ;
-*solve schedule using MIP minimizing Obj ;
-*end_time = jnow ;
-*bound_time =  run_time_total + ghour(end_time - start_time)*3600 + gminute(end_time - start_time)*60 + gsecond(end_time - start_time);
-*upperbound = Obj.l ;
-*prev_y(t) = y.l(t) ;
-**prev_w(scen,t) = w.l(scen,t) ;
-*
-** Clear bound on z now
-*z.up(scen) = 1 ;
-*z.lo(scen) = 0 ;
-*
-*display lowerbound,upperbound,prev_y, LP_time, bound_time  ;
+z.lo(scen) = scenario_sorted(scen,'value') ;
+*** Ensure file was generated correctly
+if ( sum(scen,z.lo(scen)) ne threshold, abort "sorted file not generated correctly check manually") ;
+start_time = jnow ;
+schedule.solprint = 0;
+*schedule.optfile  = 1;
+schedule.solvelink = 5 ;
+solve schedule using MIP minimizing Obj ;
+end_time = jnow ;
+bound_time =  run_time_total + ghour(end_time - start_time)*3600 + gminute(end_time - start_time)*60 + gsecond(end_time - start_time);
+upperbound = Obj.l ;
+prev_y(t) = y.l(t) ;
+*prev_w(scen,t) = w.l(scen,t) ;
+
+* Clear bound on z now
+z.up(scen) = 1 ;
+z.lo(scen) = 0 ;
+
+display lowerbound,upperbound,prev_y, LP_time, bound_time  ;
 
