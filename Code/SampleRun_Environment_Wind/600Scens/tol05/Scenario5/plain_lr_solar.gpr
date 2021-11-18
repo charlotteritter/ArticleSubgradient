@@ -1,0 +1,59 @@
+[PROJECT]
+
+[RP:MAIN_FOR_LR_SMALLTEST]
+1=
+
+[RP:PLAIN_LR]
+1=
+
+[RP:PH_PARAMETERS]
+1=
+
+[RP:LP_LOWERBOUND]
+1=
+
+[RP:EQUATIONS_ALL]
+1=
+
+[RP:MAIN_FOR_PH]
+1=
+
+[RP:INPUT]
+1=
+
+[RP:LR_UPDATES]
+1=
+
+[RP:SUBGRADIENT_PARAMETERS]
+1=
+
+[RP:HEURISTIC_UPPERBOUND]
+1=
+
+[RP:MAIN_FOR_LR]
+1=
+
+[MRUFILES]
+1=C:\Users\bisma\OneDrive\Documents\Renewable_Energy\Solar\Plain PH code\equations_all.gms
+2=C:\Users\bisma\OneDrive\Documents\Renewable_Energy\Solar\Plain LR code\equations_all.gms
+3=C:\Users\bisma\OneDrive\Documents\Renewable_Energy\Solar\Optimization\ph_parameters.gms
+4=C:\Users\bisma\OneDrive\Documents\Renewable_Energy\Solar\Optimization\main_for_lr_smalltest.gms
+
+[OPENWINDOW_1]
+FILE0=C:\Users\bisma\OneDrive\Documents\Renewable_Energy\Solar\Plain LR code\heuristic_upperbound.gms
+FILE1=C:\Users\bisma\OneDrive\Documents\Renewable_Energy\Solar\Plain LR code\input.gms
+FILE2=C:\Users\bisma\OneDrive\Documents\Renewable_Energy\Solar\Plain LR code\input.lst
+FILE3=C:\Users\bisma\OneDrive\Documents\Renewable_Energy\Solar\Plain LR code\lp_lowerbound.gms
+FILE4=C:\Users\bisma\OneDrive\Documents\Renewable_Energy\Solar\Plain LR code\LR_updates.gms
+FILE5=C:\Users\bisma\OneDrive\Documents\Renewable_Energy\Solar\Plain LR code\main_for_lr.gms
+FILE6=C:\Users\bisma\OneDrive\Documents\Renewable_Energy\Solar\Plain LR code\main_for_lr.lst
+FILE7=C:\Users\bisma\OneDrive\Documents\Renewable_Energy\Solar\Plain LR code\ph_parameters.gms
+FILE8=C:\Users\bisma\OneDrive\Documents\Renewable_Energy\Solar\Plain LR code\plain_lr.gms
+FILE9=C:\Users\bisma\OneDrive\Documents\Renewable_Energy\Solar\Plain LR code\subgradient_parameters.gms
+FILE10=C:\Users\bisma\OneDrive\Documents\Renewable_Energy\Solar\Plain PH code\main_for_ph.gms
+FILE11=C:\Users\bisma\OneDrive\Documents\Renewable_Energy\Solar\Plain LR code\main_for_lr.lst
+MAXIM=1
+TOP=50
+LEFT=50
+HEIGHT=400
+WIDTH=400

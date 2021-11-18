@@ -1,0 +1,11 @@
+585      0.002
+1417 6      0.040       0.004 Loop       
+1377 9      0.003       0.004 Assignment Solar (8040)
+1429 10      0.003       0.005 Assignment BigM (14400)
+1496 1      0.019       0.017 Equation   Const1 (13800)
+1418 4      0.003       0.004 Loop       
+1559 8      0.180       0.021 Solve Fini schedule (127825)
+1418 7      0.003       0.004 Loop       
+1502 2      0.015       0.021 Equation   Const_chance_1 (14400)
+1559 5      0.060       0.021 GAMS Fini   
+1494 3      0.052       0.009 Equation   Objective (1)

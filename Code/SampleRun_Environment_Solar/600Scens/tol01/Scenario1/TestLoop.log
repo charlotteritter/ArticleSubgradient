@@ -1,0 +1,215 @@
+--- Job TestLoop.gms Start 06/16/21 00:09:39 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\6.Semester\Bachelor-Arbeit\bachelor-thesis\SampleRun_Environment\600Scens\tol01\Scenario1\TestLoop.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\6.Semester\Bachelor-Arbeit\bachelor-thesis\SampleRun_Environment\600Scens\tol01\Scenario1\225c\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- TestLoop.gms(19) 2 Mb
+--- . inputME.gms(14) 3 Mb
+--- .. solar_scenarios_600_1.csv(601) 3 Mb
+--- . inputME.gms(36) 3 Mb
+--- .. scenario_sorted_600_1_01.csv(601) 3 Mb
+--- . inputME.gms(116) 3 Mb
+--- .. battery_revenue.csv(25) 3 Mb
+--- . inputME.gms(185) 3 Mb
+--- TestLoop.gms(20) 3 Mb
+--- . subgradient_parameters.gms(33) 3 Mb
+--- TestLoop.gms(22) 3 Mb
+--- . equations_all.gms(76) 3 Mb
+--- TestLoop.gms(70) 3 Mb
+--- . lp_lowerbound.gms(12) 3 Mb
+--- TestLoop.gms(71) 3 Mb
+--- . heuristic_upperbound.gms(59) 3 Mb
+--- TestLoop.gms(107) 3 Mb
+--- . plain_lr.gms(12) 3 Mb
+--- TestLoop.gms(113) 3 Mb
+--- . LR_updatesMe.gms(17) 3 Mb
+--- .. stepsize3.gms(21) 3 Mb
+--- . LR_updatesMe.gms(42) 3 Mb
+--- TestLoop.gms(142) 3 Mb
+--- Starting execution: elapsed 0:00:00.211
+--- TestLoop.gms(1558) 8 Mb
+--- Generating MIP model schedule
+--- TestLoop.gms(1494) 8 Mb
+--- Starting Equ Objective: elapsed 0:00:00.304
+--- TestLoop.gms(1496) 9 Mb
+--- Starting Equ Const1: elapsed 0:00:00.607
+--- TestLoop.gms(1502) 18 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:00.637
+--- TestLoop.gms(1509) 23 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:00.678
+--- TestLoop.gms(1559) 23 Mb
+---   28,202 rows  43,825 columns  127,825 non-zeroes
+---   600 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:00.808
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 1.78 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               4200
+CPXPARAM_Tune_TimeLimit                          840
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0.001
+CPXPARAM_MIP_Tolerances_MIPGap                   0.001
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\6.Semester\Bachelor-Arbeit\bachelor-thesis\SampleRun_Environment\600Scens\tol01\Scenario1\225c\"
+Found incumbent of value 0.000000 after 0.00 sec. (1.80 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 5501 rows and 1825 columns.
+MIP Presolve modified 3500 coefficients.
+Reduced MIP has 22701 rows, 42000 columns, and 81900 nonzeros.
+Reduced MIP has 600 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.11 sec. (40.24 ticks)
+Probing time = 0.02 sec. (1.37 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 22701 rows, 42000 columns, and 81900 nonzeros.
+Reduced MIP has 600 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.19 sec. (56.88 ticks)
+Probing time = 0.03 sec. (1.37 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
+Parallel mode: deterministic, using up to 6 threads for concurrent optimization:
+ * Starting dual Simplex on 1 thread...
+ * Starting Barrier on 4 threads...
+ * Starting primal Simplex on 1 thread...
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Dual objective     =          -295.384620
+Perturbation started.
+Iteration:   101   Dual objective     =          -295.384620
+Iteration:   885   Dual objective     =          -294.985268
+Iteration:  1703   Dual objective     =          -294.700176
+Iteration:  2540   Dual objective     =          -294.473334
+Iteration:  3320   Dual objective     =          -294.317413
+Iteration:  4091   Dual objective     =          -294.215091
+Iteration:  4854   Dual objective     =          -294.132642
+Iteration:  5628   Dual objective     =          -294.058156
+Iteration:  6522   Dual objective     =          -294.015632
+Iteration:  7355   Dual objective     =          -293.990229
+Iteration:  7973   Dual objective     =          -293.969201
+Iteration:  8614   Dual objective     =          -293.851952
+Iteration:  9326   Dual objective     =          -293.715442
+Iteration: 10036   Dual objective     =          -293.578152
+Iteration: 10620   Dual objective     =          -293.525028
+Iteration: 11215   Dual objective     =          -293.482365
+Iteration: 11796   Dual objective     =          -293.439326
+Iteration: 12314   Dual objective     =          -293.399365
+Iteration: 12875   Dual objective     =          -293.355932
+Removing perturbation.
+Root relaxation solution time = 1.45 sec. (284.75 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                          -12.3077     -295.3846              --- 
+Found incumbent of value -12.307692 after 1.97 sec. (423.14 ticks)
+      0     0  -1.00000e+37     0      -12.3077     -295.3846    12931     --- 
+
+Root node processing (before b&c):
+  Real time             =    2.00 sec. (426.47 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    2.00 sec. (426.47 ticks)
+MIP status(113): aborted
+Cplex Time: 2.02sec (det. 426.59 ticks)
+Fixing integer variables, and solving final LP...
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               4200
+CPXPARAM_Tune_TimeLimit                          840
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0.001
+CPXPARAM_MIP_Tolerances_MIPGap                   0.001
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\6.Semester\Bachelor-Arbeit\bachelor-thesis\SampleRun_Environment\600Scens\tol01\Scenario1\225c\"
+Parallel mode: deterministic, using up to 8 threads for concurrent optimization:
+ * Starting dual Simplex on 1 thread...
+ * Starting Barrier on 6 threads...
+ * Starting primal Simplex on 1 thread...
+Tried aggregator 1 time.
+Presolve time = 0.28 sec. (41.37 ticks)
+Fixed MIP status(13): user aborted
+Cplex Time: 0.30sec (det. 139.13 ticks)
+Rerunning with presolve turned off and solving with LPMETHOD=1
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Preprocessing_Presolve                  0
+CPXPARAM_LPMethod                                1
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               4200
+CPXPARAM_Tune_TimeLimit                          840
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0.001
+CPXPARAM_MIP_Tolerances_MIPGap                   0.001
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\6.Semester\Bachelor-Arbeit\bachelor-thesis\SampleRun_Environment\600Scens\tol01\Scenario1\225c\"
+Primal superbasis not built.
+Fixed MIP status(13): user aborted
+Cplex Time: 0.05sec (det. 15.65 ticks)
+Final solve did not return an optimal solution.
+Returning a primal only solution to GAMS (marginals all set to NA).
+
+Problem aborted.
+
+MIP Solution:          -12.307692    (12931 iterations, 0 nodes)
+Best possible:        -295.384620
+Absolute gap:          283.076927
+Relative gap:            0.958333
+
+--- Reading solution for model schedule
+***
+*** Solver did not provide marginals for model schedule
+***
+--- Executing after solve: elapsed 0:00:03.589
+--- TestLoop.gms(1594) 23 Mb
+--- Generating RMIP model schedule
+--- TestLoop.gms(1494) 23 Mb
+--- Starting Equ Objective: elapsed 0:00:03.589
+--- TestLoop.gms(1496) 23 Mb
+--- Starting Equ Const1: elapsed 0:00:03.936
+*** Error at line 1494: Execution halted: Triggered by pending CtrlC event
+--- TestLoop.gms(1595) 23 Mb 1 Error
+*** SOLVE aborted
+--- Putfile TestingFile C:\Users\charl\OneDrive\Dokumente\6.Semester\Bachelor-Arbeit\bachelor-thesis\SampleRun_Environment\600Scens\tol01\Scenario1\TestingFile.csv
+--- Profile Summary (602 records processed)
+     2.735   0.023GB      1559 Solve Alg  schedule
+     0.344   0.023GB      1494 Equation   Objective (1)
+     0.297   0.009GB      1494 Equation   Objective (1)
+     0.125   0.023GB      1559 Solve Fini schedule (127825)
+     0.063   0.005GB      1417 Loop       
+     0.047   0.023GB      1502 Equation   Const_chance_1 (14400)
+     0.046   0.023GB      1559 Solve Read schedule
+     0.031   0.018GB      1496 Equation   Const1 (13800)
+     0.016   0.023GB      1595 Solve Fini schedule (14425)
+     0.016   0.004GB      1375 Assignment Solar (8053)
+--- TestLoop.gms(1595) 23 Mb 1 Error
+*** Status: Execution error(s)
+--- Job TestLoop.gms Stop 06/16/21 00:09:43 elapsed 0:00:03.944

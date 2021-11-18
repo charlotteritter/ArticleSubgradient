@@ -1,0 +1,292 @@
+--- Job Naive_LR_solving.gms Start 11/18/21 11:06:10 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\600Scens\tol05\Scenario4\Naive_LR_solving.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\600Scens\tol05\Scenario4\225c\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- Naive_LR_solving.gms(19) 2 Mb
+--- . inputME.gms(14) 3 Mb
+--- .. solar_scenarios_600_4.csv(601) 3 Mb
+--- . inputME.gms(36) 3 Mb
+--- .. scenario_sorted_600_4_05.csv(601) 3 Mb
+--- . inputME.gms(116) 3 Mb
+--- .. battery_revenue.csv(25) 3 Mb
+--- . inputME.gms(185) 3 Mb
+--- Naive_LR_solving.gms(20) 3 Mb
+--- . subgradient_parameters.gms(33) 3 Mb
+--- Naive_LR_solving.gms(22) 3 Mb
+--- . equations_all.gms(76) 3 Mb
+--- Naive_LR_solving.gms(23) 3 Mb
+--- . lp_lowerbound.gms(12) 3 Mb
+--- Naive_LR_solving.gms(24) 3 Mb
+--- . heuristic_upperbound.gms(58) 3 Mb
+--- Naive_LR_solving.gms(117) 3 Mb
+--- . plain_lr.gms(13) 3 Mb
+--- Naive_LR_solving.gms(123) 3 Mb
+--- . LR_updates.gms(18) 3 Mb
+--- .. stepsizes.gms(21) 3 Mb
+--- . LR_updates.gms(43) 3 Mb
+--- Naive_LR_solving.gms(149) 3 Mb
+--- Starting execution: elapsed 0:00:00.121
+--- Naive_LR_solving.gms(1547) 8 Mb
+--- Generating RMIP model schedule
+--- Naive_LR_solving.gms(1494) 8 Mb
+--- Starting Equ Objective: elapsed 0:00:00.357
+--- Naive_LR_solving.gms(1496) 9 Mb
+--- Starting Equ Const1: elapsed 0:00:00.656
+--- Naive_LR_solving.gms(1502) 18 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:00.692
+--- Naive_LR_solving.gms(1509) 23 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:00.735
+--- Naive_LR_solving.gms(1548) 23 Mb
+---   28,202 rows  43,825 columns  127,825 non-zeroes
+---   600 discrete-columns
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:00.874
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+Gurobi link license.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:01.059
+--- Naive_LR_solving.gms(1570) 23 Mb
+--- Generating MIP model schedule_scenario
+--- Naive_LR_solving.gms(1514) 23 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.059
+--- Naive_LR_solving.gms(1498) 23 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.060
+--- Naive_LR_solving.gms(1503) 23 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.063
+--- Naive_LR_solving.gms(1573) 23 Mb
+--- LOOPS rs = scen1
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.072
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.097
+--- Naive_LR_solving.gms(1570) 23 Mb
+--- Generating MIP model schedule_scenario
+--- Naive_LR_solving.gms(1514) 23 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.097
+--- Naive_LR_solving.gms(1498) 23 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.098
+--- Naive_LR_solving.gms(1503) 23 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.102
+--- Naive_LR_solving.gms(1573) 23 Mb
+--- LOOPS rs = scen2
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.110
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.124
+--- Naive_LR_solving.gms(1570) 23 Mb
+--- Generating MIP model schedule_scenario
+--- Naive_LR_solving.gms(1514) 23 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.125
+--- Naive_LR_solving.gms(1498) 23 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.125
+--- Naive_LR_solving.gms(1503) 23 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.129
+--- Naive_LR_solving.gms(1573) 23 Mb
+--- LOOPS rs = scen3
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.135
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.149
+--- Naive_LR_solving.gms(1570) 23 Mb
+--- Generating MIP model schedule_scenario
+--- Naive_LR_solving.gms(1514) 23 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.149
+--- Naive_LR_solving.gms(1498) 23 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.150
+--- Naive_LR_solving.gms(1503) 23 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.153
+--- Naive_LR_solving.gms(1573) 23 Mb
+--- LOOPS rs = scen4
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.160
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.175
+--- Naive_LR_solving.gms(1570) 23 Mb
+--- Generating MIP model schedule_scenario
+--- Naive_LR_solving.gms(1514) 23 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.175
+--- Naive_LR_solving.gms(1498) 23 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.175
+--- Naive_LR_solving.gms(1503) 23 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.178
+--- Naive_LR_solving.gms(1573) 23 Mb
+--- LOOPS rs = scen5
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.186
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.200
+--- Naive_LR_solving.gms(1570) 23 Mb
+--- Generating MIP model schedule_scenario
+--- Naive_LR_solving.gms(1514) 23 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.200
+--- Naive_LR_solving.gms(1498) 23 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.201
+--- Naive_LR_solving.gms(1503) 23 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.204
+--- Naive_LR_solving.gms(1573) 23 Mb
+--- LOOPS rs = scen6
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.211
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.225
+--- Naive_LR_solving.gms(1570) 23 Mb
+--- Generating MIP model schedule_scenario
+--- Naive_LR_solving.gms(1514) 23 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.226
+--- Naive_LR_solving.gms(1498) 23 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.226
+--- Naive_LR_solving.gms(1503) 23 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.230
+--- Naive_LR_solving.gms(1573) 23 Mb
+--- LOOPS rs = scen7
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.238
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.252
+--- Naive_LR_solving.gms(1570) 23 Mb
+--- Generating MIP model schedule_scenario
+--- Naive_LR_solving.gms(1514) 23 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.252
+--- Naive_LR_solving.gms(1498) 23 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.252
+--- Naive_LR_solving.gms(1503) 23 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.257
+--- Naive_LR_solving.gms(1573) 23 Mb
+--- LOOPS rs = scen8
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.264
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.281
+--- Naive_LR_solving.gms(1570) 23 Mb
+--- Generating MIP model schedule_scenario
+--- Naive_LR_solving.gms(1514) 23 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.281
+--- Naive_LR_solving.gms(1498) 23 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.283
+--- Naive_LR_solving.gms(1503) 23 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.286
+--- Naive_LR_solving.gms(1573) 23 Mb
+--- LOOPS rs = scen9
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.292
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.307
+--- Naive_LR_solving.gms(1570) 23 Mb
+--- Generating MIP model schedule_scenario
+--- Naive_LR_solving.gms(1514) 23 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.307
+--- Naive_LR_solving.gms(1498) 23 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.308
+--- Naive_LR_solving.gms(1503) 23 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.311
+--- Naive_LR_solving.gms(1573) 23 Mb
+--- LOOPS rs = scen10
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.317
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.331
+--- Naive_LR_solving.gms(1570) 23 Mb
+--- Generating MIP model schedule_scenario
+--- Naive_LR_solving.gms(1514) 23 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.331
+--- Naive_LR_solving.gms(1498) 23 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.331
+--- Naive_LR_solving.gms(1503) 23 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.334
+--- Naive_LR_solving.gms(1573) 23 Mb
+--- LOOPS rs = scen11
+---   48 rows  97 columns  213 non-zeroes
+*** Error at line 1573: Control C Event: execution halted
+--- Naive_LR_solving.gms(1573) 23 Mb 1 Error
+*** SOLVE aborted
+--- Profile Summary (2414 records processed)
+     0.297   0.009GB      1494 Equation   Objective (1)
+     0.218   0.005GB      1417 Loop       
+     0.171   0.022GB      1548 Solve Alg  schedule
+     0.141   0.022GB      1548 Solve Fini schedule (127825)
+     0.047   0.022GB      1502 Equation   Const_chance_1 (14400)
+     0.031   0.018GB      1496 Equation   Const1 (13800)
+     0.016   0.005GB      1420 Assignment minsolar (14)
+     0.016   0.005GB      1418 Loop       
+     0.016   0.006GB      1530 Assignment X (14400)
+     0.016   0.005GB      1424 Assignment dummysolar (8037)
+--- Naive_LR_solving.gms(1573) 23 Mb 1 Error
+*** Status: Execution error(s)
+--- Job Naive_LR_solving.gms Stop 11/18/21 11:06:11 elapsed 0:00:01.344

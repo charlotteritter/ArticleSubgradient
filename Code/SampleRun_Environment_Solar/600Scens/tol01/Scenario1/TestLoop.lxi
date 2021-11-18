@@ -1,0 +1,30 @@
+B 3 C o m p i l a t i o n
+B 1813 Include File Summary
+B 1835 E x e c u t i o n
+B 2418 Model Analysis      SOLVE schedule Using MIP From line 1559
+B 2424 Equation Listing    SOLVE schedule Using MIP From line 1559
+D 2427 Objective
+D 2467 Const1
+D 2485 Const_chance_1
+D 2503 Const_chance_2
+B 2512 Column Listing      SOLVE schedule Using MIP From line 1559
+E 2515 P
+E 2537 Q
+E 2556 Y
+E 4372 X
+E 4392 OBJ
+E 4399 Z
+B 4488 Model Statistics    SOLVE schedule Using MIP From line 1559
+B 4506 Solution Report     SOLVE schedule Using MIP From line 1559
+B 4553 E x e c u t i o n
+I 4563 OBJ
+I 4564 run_time_total
+B 4572 Model Analysis      SOLVE schedule Using RMIP From line 1595
+B 4578 Equation Listing    SOLVE schedule Using RMIP From line 1595
+D 4581 Objective
+D 4622 Const1
+B 4631 Column Listing      SOLVE schedule Using RMIP From line 1595
+E 4634 P
+E 4650 Y
+E 4666 OBJ
+B 4674 Model Statistics    SOLVE schedule Using RMIP From line 1595
