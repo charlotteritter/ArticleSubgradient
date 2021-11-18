@@ -20,13 +20,13 @@ $ include inputME.gms // no need to change for Lagrangian decomposition
 $include subgradient_parameters.gms
 
 $include equations_all.gms
-*$include lp_lowerbound.gms // no need to change for Lagrangian decomposition
+$include lp_lowerbound.gms // no need to change for Lagrangian decomposition
 $include heuristic_upperbound.gms // no need to change for Lagrangian decomposition
 
 ********************************************************************************
 * Solve the Lagrangian Dual problem now
 ********************************************************************************
-$ontext
+
 parameter ldual_iter(iter) obj function at each iteration ;
 lr_time = 0 ;
 
@@ -34,7 +34,7 @@ option limrow = 0, limcol = 0, optca=0.0001, optcr=0.0001 ;
 
 prev_y(t) = y.l(t) ;
 scalar steprule;
-steprule=6;
+steprule=4;
 loop(iter$contin,
 num_iter = ord(iter) ;
 *         pass a warm start
@@ -67,4 +67,3 @@ heuristic=-upperbound;
 display results, lowerbound, upperbound, LP_bound, run_time_total, lr_time, num_iter ;
 display z.l, y.l ;
 display ObjLR, heuristic;
-$offtext

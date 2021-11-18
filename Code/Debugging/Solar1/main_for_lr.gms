@@ -11,7 +11,7 @@ Excel file used for LB heuristic needs to be manually sorted
 $OFFTEXT
 
 $eolcom //
-OPTIONS PROFILE =3, RESLIM   = 2100, LIMROW   = 5, LP = CPLEX, MIP = cplex, RMIP=cplex, NLP = CONOPT, MINLP = DICOPT, MIQCP = CPLEX, SOLPRINT = OFF, decimals = 8, optcr=0.001, optca=0.001, threads =8, integer4=0;
+OPTIONS PROFILE =3, RESLIM   = 2100, LIMROW   = 5, LP = CPLEX, MIP = gurobi, RMIP=Gurobi, NLP = CONOPT, MINLP = DICOPT, MIQCP = CPLEX, SOLPRINT = OFF, decimals = 8, optcr=0.001, optca=0.001, threads =8, integer4=0;
 
 ********************************************************************************
 *                                Include input files
@@ -22,6 +22,7 @@ $include subgradient_parameters.gms
 $include equations_all.gms
 $include lp_lowerbound.gms // no need to change for Lagrangian decomposition
 $include heuristic_upperbound.gms // no need to change for Lagrangian decomposition
+
 
 ********************************************************************************
 * Solve the Lagrangian Dual problem now

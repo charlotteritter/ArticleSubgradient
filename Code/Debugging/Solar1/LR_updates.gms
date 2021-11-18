@@ -2,6 +2,7 @@
 
 * Gamma update
 gamma =  threshold - sum(scen, last_z(scen));
+display gamma;
 
 * Bound and theta Update -> in stepsize 6
 if (bound > lowerbound,
@@ -23,10 +24,10 @@ lambdaprevious = lambda ;
          if (gamma ge 0 and lambdaprevious eq 0,
                  lambda = lambdaprevious ; );
          if (gamma gt 0 and lambdaprevious gt 0,
-                 lambda = lambdaprevious - min(stepsize, lambdaprevious/gamma)*gamma ; );
+                 lambda = max(0,lambdaprevious - min(stepsize, lambdaprevious/gamma)*gamma ); );
          if (gamma le 0,
                  lambda = lambdaprevious - stepsize*gamma; );
-
+display lambda;
 * Check convergence
 convergence=0;
 deltalambda = abs(lambdaprevious-lambda) ;
