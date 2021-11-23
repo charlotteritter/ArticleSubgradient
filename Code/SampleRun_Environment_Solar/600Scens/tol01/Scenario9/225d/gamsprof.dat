@@ -1,0 +1,11 @@
+569      0.002
+1496 7      0.022       0.017 Equation   Const1 (13800)
+1418 3      0.002       0.004 Loop       
+1548 8      0.078       0.021 GAMS Fini   
+1418 5      0.002       0.004 Loop       
+1417 1      0.028       0.004 Loop       
+1429 9      0.002       0.005 Assignment BigM (14400)
+1548 2      0.137       0.021 Solve Fini schedule (127825)
+1494 4      0.046       0.009 Equation   Objective (1)
+1502 6      0.016       0.021 Equation   Const_chance_1 (14400)
+1531 10      0.002       0.007 Assignment Q (14400)
