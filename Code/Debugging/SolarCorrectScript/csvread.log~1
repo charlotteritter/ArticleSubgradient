@@ -1,0 +1,28 @@
+--- Job csvread.gms Start 11/24/21 12:21:04 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\Debugging\SolarCorrectScript\csvread.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\Debugging\SolarCorrectScript\225a\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- csvread.gms(3) 3 Mb
+--- call csv2gdx Naive.csv id=d index=1 values=2..lastCol useHeader=y
+No errors, CSV2GDX time = 15ms
+--- csvread.gms(4) 3 Mb
+--- GDXin=C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\Debugging\SolarCorrectScript\Naive.gdx
+--- csvread.gms(15) 3 Mb
+--- Starting execution: elapsed 0:00:00.054
+--- csvread.gms(15) 4 Mb
+*** Status: Normal completion
+--- Job csvread.gms Stop 11/24/21 12:21:04 elapsed 0:00:00.054
