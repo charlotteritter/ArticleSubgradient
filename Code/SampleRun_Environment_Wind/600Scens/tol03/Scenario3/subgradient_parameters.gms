@@ -17,7 +17,9 @@ parameter b;
 parameter norm;
 parameter norm2;
 scalar lowerbound;
-parameter lambdaprevious, deltalambda, results(iter,*), prev_w(scen,t), prev_y(t)  ;
+parameter lambdaprevious, deltalambda, results(iter,*), prev_w(scen,t), prev_y(t), prev_z(scen)  ;
+scalar profitFIXED;
+parameter  profit(iterFIX), yprevious(t), run_time(iterFIX);
 
 
 scalar m ;
