@@ -34,7 +34,7 @@ $offdelim
 *Tolerance 
 scalar tol;
 *tol=%TOL%;
-tol=0.01;
+tol=0.03;
 
 
 * time limit for each problem
@@ -47,6 +47,12 @@ alias(scen,i);
 
 scalar n;
 n=card(scen);
+
+TABLE y_100(t,iter)
+$ONDELIM
+$INCLUDE sampled_dynamic.csv
+$OFFDELIM
+;
 
 
 ** define battery  operation costs costs and solar selling prices
@@ -105,7 +111,7 @@ scalar it ;
 it = floor(card(scen)*tol) + 1;
 
 * index of it
-set dummy(scen);
+set dummy_set(scen);
 * make the dum_iter go till at least the size of it
 set dum_iter /dum_iter1*dum_iter100/;
 loop(t,
@@ -113,9 +119,9 @@ loop(dum_iter$(ord(dum_iter)le it),
 * find the smallest solar value for this t
          minsolar(t) = smin(scen,dummysolar(scen,t)) ;
 * index of smallest solar value
-         dummy(scen) = yes$(dummysolar(scen,t) eq minsolar(t)) ;
+         dummy_set(scen) = yes$(dummysolar(scen,t) eq minsolar(t)) ;
 * make the smallest solar value large
-         dummysolar(scen,t)$dummy(scen) =maxsolar(t) ;
+         dummysolar(scen,t)$dummy_set(scen) =maxsolar(t) ;
 ); );
 scalar G upper bound on q - p ;
 G = min(eta*(BigX - LowX), max_discharge) ;
@@ -128,7 +134,7 @@ BigM(scen,t)= G - solar(scen,t) + minsolar(t);
 
 
 
-POSITIVE VARIABLES P(scen,t), Q(scen,t), Y(T), X(scen,t), dummy(t) ;
+POSITIVE VARIABLES P(scen,t), Q(scen,t), Y(T), X(scen,t) ;
 VARIABLES OBJ;
 BINARY VARIABLE Z(scen) ;
 
@@ -144,7 +150,7 @@ EQUATIONS
         Const_chance_2            chance constraint sum probabilities
         ;
 
-Objective.. OBJ=E= SUM(T,Prices(T, 'REW')*Y(T) - Sum(w,probability(w,'value')* ( Prices(T, 'CHAR')* P(w,t) + Prices(t, 'DISCHAR') * Q(w,t) ) ) )  + rho*sum(t,dummy(t))   ;
+Objective.. OBJ=E= SUM(T,Prices(T, 'REW')*Y(T) - PROBABILITY*Sum(w, ( Prices(T, 'CHAR')* P(w,t) + Prices(t, 'DISCHAR') * Q(w,t) ) ) )     ;
 
 Const1(scen,t)$(ord(t) lt card(t))..
          X(scen,t+1) =E= X(scen,t) + eta* P(scen,t) - (1/eta)* Q(scen,t) ;

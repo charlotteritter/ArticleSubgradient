@@ -59,12 +59,6 @@ alias(scen,i);
 scalar n;
 n=card(scen);
 
-TABLE y_100(t,iter)
-$ONDELIM
-$INCLUDE sampled_dynamic.csv
-$OFFDELIM
-;
-
 *Scalar which tells if LR converges
 scalar convergence;
 
@@ -158,15 +152,15 @@ EQUATIONS
         Const_chance_2            chance constraint sum probabilities
         ;
 
-Objective.. OBJ=E= SUM(T,Prices(T, 'REW')*Y(T) - Sum(w,probability(w,'value')* ( Prices(T, 'CHAR')* P(w,t) + Prices(t, 'DISCHAR') * Q(w,t) ) ) )  + rho*sum(t,dummy(t))   ;
+Objective.. OBJ=E= SUM(T,Prices(T, 'REW')*Y(T) - Sum(w$((ord(w) ge n) and (ord(w) le m)),probability(w,'value')* ( Prices(T, 'CHAR')* P(w,t) + Prices(t, 'DISCHAR') * Q(w,t) ) ) )  + rho*sum(t,dummy(t))   ;
 
-Const1(scen,t)$(ord(t) lt card(t))..
+Const1(scen,t)$(ord(t) lt card(t) and (ord(scen) ge n) and (ord(scen) le m))..
          X(scen,t+1) =E= X(scen,t) + eta* P(scen,t) - (1/eta)* Q(scen,t) ;
 
-Const_chance_1(scen,t).. Y(T) + P(scen,t) -  Q(scen,t) -SOLAR(scen,t) =L= Z(scen)*BigM(scen,t) ;
+Const_chance_1(scen,t)$((ord(scen) ge n) and (ord(scen) le m)).. Y(T) + P(scen,t) -  Q(scen,t) -SOLAR(scen,t) =L= Z(scen)*BigM(scen,t) ;
 
 
-Const_chance_2..      - sum(scen, z(scen)) =G= -threshold;
+Const_chance_2..      - sum(scen$((ord(scen) ge n) and (ord(scen) le m)), z(scen)*probability(scen,'value')) =G= -tol;
 
 
 *** bounds on any variables
