@@ -56,7 +56,7 @@ Const1_1_scenario(scen,t)$(ord(scen) eq counter)..
          Y(T)-X(scen,T)-R(scen,T)*GG -WIND(scen,T) =L= 0 ;
 
 Const1_2..   -SUM(SCEN, Z(SCEN)) =G= -threshold;
-Const1_2FIX..  SUM(W,Z(W)) =L= card(w)*TOL ;
+Const1_2FIX..  SUM(W,Z(W)) =L= threshold ;
 
 ****************************************************************************TODO Constraints (all but no. 1) in scenario form (z(w)=0)
 
