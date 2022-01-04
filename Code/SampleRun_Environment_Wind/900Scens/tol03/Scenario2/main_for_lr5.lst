@@ -1,0 +1,580 @@
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      12/19/21 17:10:11 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+      This is Step 5 of Algorithm 1 of file v10.pdf (iEEE paper)
+      The 1500 scenario fixed problem
+      Follow up of SAA.gms
+       
+   7   
+   8  OPTIONS PROFILE =3, RESLIM   = 2100, LIMROW   = 5, LP = CPLEX, MIP = gurobi, RMIP=gurobi, NLP = CONOPT, MINLP = DICOPT, MIQCP = CPLEX, SOLPRINT = OFF, decimals = 8, optcr=0.01, optca=0.01, threads =8, integer4=0;
+   9   
+  10  ********************************************************************************
+  11  *-------------------------------------------------------------------------------
+  12   
+INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/900Scens/tol03/Scenario2/input.gms
+  14  ** sets later to be defined in input file
+  15   
+  16  ** to be changed
+  17  SETS T times/t1*t24/;
+  18  SETS W scenarios /scen1*scen1500/;
+  19   
+  20  ALIAS (T,TT);
+  21  ALIAS (W,I);
+  22  ALIAS (W,SCEN);
+  23   
+  24  ** define generator costs and wind selling prices
+  25  TABLE PRICES(T,*)
+INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/900Scens/tol03/Scenario2/wind_costs.csv
+  28  ,REW,GEN
+  29  t1,21.86631793,50
+  30  t2,22.68762551,50
+  31  t3,22.63231186,50
+  32  t4,23.53977501,50
+  33  t5,24.15305477,50
+  34  t6,25.0022415,50
+  35  t7,26.14884331,50
+  36  t8,28.48265662,50
+  37  t9,35.32421651,50
+  38  t10,53.07988113,50
+  39  t11,67.07745747,50
+  40  t12,43.78264533,50
+  41  t13,33.25218533,50
+  42  t14,28.68827035,50
+  43  t15,26.76175663,50
+  44  t16,23.97472252,50
+  45  t17,21.05077606,50
+  46  t18,18.8721276,50
+  47  t19,17.16537812,50
+  48  t20,15.4798614,50
+  49  t21,14.81514842,50
+  50  t22,14.64047737,50
+  51  t23,15.10197375,50
+  52  t24,17.32390701,50
+  54  ;
+  55   
+  56  Prices(t,'rew')     =  - Prices(t,'rew');
+  57  Prices(t,'gen')    =  - Prices(t,'gen');
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      12/19/21 17:10:11 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+  58   
+  59  ** define wind realizations at all time periods
+  60  TABLE WIND(W,T)
+  62  $INCLUDE wind_scenarios.csv
+****                            $282
+**** LINE     24 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/900Scens/tol03/Scenario2/input.gms
+**** LINE     13 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/900Scens/tol03/Scenario2/main_for_lr5.gms
+  63  *$INCLUDE wind_scenarios_1500.csv
+  65  ;
+****  $463
+**** LINE     27 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/900Scens/tol03/Scenario2/input.gms
+**** LINE     13 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/900Scens/tol03/Scenario2/main_for_lr5.gms
+  66   
+  67  scalar PROBABILITY;
+  68  PROBABILITY = 1/CARD(W);
+  69  ;
+  70   
+  71   
+  72  ** define tolerance threshold
+  73  SCALAR TOL;
+  74  TOL =0.05;
+  75   
+  76   
+  77  Parameter last_z(scen);
+  78   
+  79  SCALAR G, GG, start_cost, ramp, uptime, downtime;
+  80  G=130;
+  81  GG=20;
+  82  ramp=50;
+  83  UPTIME =3;
+  84  DOWNTIME=3;
+  85   
+  86  * maximum number of iterations in LR
+  87  set iter number of subgradient iterations /iter1*iter10/;
+  88  set iterFIX iterations for fixed /iter1*iter30/;
+  89   
+  90  TABLE y_100(t,iterFIX)
+INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/900Scens/tol03/Scenario2/sampled_dynamic_hi.csv
+  93  ,iter1,iter2,iter3,iter4,iter5,iter6,iter7,iter8,iter9,iter10,iter11,iter12,iter13,iter14,iter15,iter16,iter17,iter18,iter19,iter20,iter21,iter22,iter23,iter24,iter25,iter26,iter27,iter28,iter29,iter30
+  94  t1,59.155,57.003,57.276,58.07,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+  95  t2,31.042,31.262,31.493,36.825,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+  96  t3,20.07,20.212,20.361,26.401,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+  97  t4,2.036,0.311,0.313,0.31,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+  98  t5,1.413,1.423,1.433,1.419,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+  99  t6,2.468,2.485,4.462,4.418,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ 100  t7,1.427,1.246,1.255,1.242,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ 101  t8,9.126,7.436,7.491,7.416,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ 102  t9,50.342,49.039,50.618,48.992,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ 103  t10,84.689,84.228,86.519,86.934,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ 104  t11,131.202,130.58,131.898,131.879,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ 105  t12,84.327,83.717,85.067,85.018,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ 106  t13,38.096,38.766,39.583,40.054,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ 107  t14,7.384,7.658,7.715,7.638,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      12/19/21 17:10:11 Page 3
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+ 108  t15,6.157,6.2,6.246,6.184,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ 109  t16,21.786,27.61,22.102,21.882,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ 110  t17,26.441,26.629,27.289,27.017,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ 111  t18,20.082,20.224,16.432,16.268,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ 112  t19,24.345,22.037,22.2,21.978,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ 113  t20,23.16,13.065,16.982,16.812,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ 114  t21,23.382,18.828,18.967,18.778,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ 115  t22,20.132,18.735,18.581,18.039,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ 116  t23,14.101,14.201,14.306,15.666,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ 117  t24,12.036,13.942,14.045,14.677,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ 119  ;
+ 120   
+ 121  * time limit for each problem
+ 122  scalar time_limit;
+ 123  *time_limit=%TIMELIM%;
+ 124  time_limit=2250;
+ 125   
+      * Import the SORTED file
+      table scenario_sorted(scen,*)
+      $ondelim
+      $INCLUDE scenario_sorted_1500.csv 
+      $offdelim
+      ;
+ 134   
+ 135  scalar n;
+ 136  n=card(scen);
+ 137   
+ 138  *Scalar which tells if LR converges
+ 139  scalar convergence;
+ 140   
+ 141  ** define battery  operation costs costs and solar selling prices
+ 142  ** define solar scenarios at all time periods
+ 143   
+ 144   
+ 145  * Scaling of wind power scenarios ;
+ 146  scalar scale ;
+ 147  scale = 1;
+ 148  wind(scen,t) = scale* wind(scen,t) ;
+ 149  * Remove too many decimals in Solar
+ 150  wind(scen,t) = round(wind(scen,t),2) ;
+ 151   
+ 152   
+ 153  parameters max_store(t), min_store(t), max_charge, max_discharge;
+ 154   
+ 155   
+ 156  ** define tolerance threshold
+ 157  SCALAR threshold;
+ 158  threshold = floor(card(scen)*TOL)  ;
+ 159   
+ 160   
+ 161  parameter maxwind(t), minwind(t), dummywind(w,t) ;
+ 162  maxwind(t) =smax(w,wind(w,t)) ;
+ 163  dummywind(w,t) = wind(w,t) ;
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      12/19/21 17:10:11 Page 4
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+ 164   
+ 165  scalar it ;
+ 166  it = floor(card(w)*tol) + 1;
+ 167   
+ 168  * index of it
+ 169  set dummy(w);
+ 170  * make the dum_iter go till at least the size of it
+ 171  set dum_iter /dum_iter1*dum_iter100/;
+ 172  loop(t,
+ 173  loop(dum_iter$(ord(dum_iter)le it),
+ 174  * find the smallest wind value for this t
+ 175           minwind(t) = smin(w,dummywind(w,t)) ;
+ 176  * index of smallest wind value
+ 177           dummy(w) = yes$(dummywind(w,t) eq minwind(t)) ;
+ 178  * make the smallest wind value large
+ 179           dummywind(w,t)$dummy(w) =maxwind(t) ;
+ 180  ); );
+ 181  display minwind ;
+ 182   
+ 183   
+ 184   
+ 185  parameter BigMM(w), BigM(w,t);
+ 186  BigMM(w)= smax(t, wind(w,t));
+ 187  BigM(w,t)= G - wind(w,t) + minwind(t);
+ 188   
+ 189   
+ 190  scalar run_time_total, start_time, end_time, LP_time, bound_time, lr_time ;
+INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/900Scens/tol03/Scenario2/subgradient_parameters.gms
+ 192  parameter lambda;
+ 193  parameter ldual value of Lagrangian dual ;
+ 194  parameter bound total value of Lagrangian dual ;
+ 195  scalar init_lambda, init_bound initial value of lambda dual LP objective from LP ;
+ 196  *Hier werden die maximalen Iterationen, also big M festgelegt
+ 197  *set iter                 number of subgradient iterations /iter1*iter3/;
+ 198  scalar num_iter          how many iterations we did ;
+ 199  scalar contin            stopping             /1/;
+ 200  parameter stepsize;
+ 201  scalar theta /2/;
+ 202  scalar originalTheta;
+ 203  originalTheta=theta;
+ 204  scalar noimprovement /0/;
+ 205  scalar upperbound ;
+ 206  parameter gamma           subgradient          ;
+ 207  parameter b;
+ 208  parameter norm;
+ 209  parameter norm2;
+ 210  scalar lowerbound;
+ 211  parameter lambdaprevious, deltalambda, results(iter,*), prev_w(scen,t), prev_y(t), prev_z(scen)  ;
+ 212  scalar profitFIXED;
+ 213  parameter  profit(iterFIX), yprevious(t), run_time(iterFIX);
+ 214   
+ 215   
+ 216  scalar m ;
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      12/19/21 17:10:11 Page 5
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+ 217  parameter   y_previous(scen,t), y_average_previous(t), weight_previous(scen,t);
+ 218  scalar profit_orig, t1, t2, exit_tol;
+ 219   
+ 220  scalar final_gap ;
+ 221   
+ 222  parameter lb(scen) ;
+ 223  parameter rho(t) ;
+ 224   
+ 225  scalar exit_tol ;
+ 226  exit_tol = 0.00001 ;
+INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/900Scens/tol03/Scenario2/equations.gms
+ 228   
+ 229  POSITIVE VARIABLES X(W,T), Y(T), U(W,T), V(W,T);
+ 230  VARIABLES OBJ, BOUND_LR;
+ 231  BINARY VARIABLE Z(SCEN), R(W,T) ;
+ 232   
+ 233  scalar counter ;
+ 234   
+ 235  EQUATIONS
+ 236          Objective
+ 237          ObjectiveFIX
+ 238          Const1_1(scen,t)
+ 239          Const1_1FIX(scen,t)
+ 240          Const1_2
+ 241          Const1_2FIX
+ 242          Const_3_1(scen,t)
+ 243          Const_3_1_scenario(scen,t)
+ 244          Const_3_1FIX(scen,t)
+ 245          Const_3_2(scen,t)
+ 246          Const_3_2_scenario(scen,t)
+ 247          Const_3_2FIX(scen,t)
+ 248          Const_4_1(scen,t)
+ 249          Const_4_1_scenario(scen,t)
+ 250          Const_4_1FIX(scen,t)
+ 251          Const_4_2(scen,t)
+ 252          Const_4_2_scenario(scen,t)
+ 253          Const_4_2FIX(scen,t)
+ 254          Const_5(scen,t)
+ 255          Const_5_scenario(scen,t)
+ 256          Const_5FIX(scen,t)
+ 257          Const_6(scen,t)
+ 258          Const_6_scenario(scen,t)
+ 259          Const_6FIX(scen,t)
+ 260          LR
+ 261          Objective_scenario(scen)
+ 262          Const1_1_scenario(scen,t)
+ 263          ;
+ 264   
+ 265  ObjectiveFIX.. OBJ=E= SUM(T,PRICES(T, 'REW')*Y(T) - PROBABILITY*SUM(W, PRICES(T, 'GEN')*( X(W,T) + GG*R(w,t) ) )  )  ;
+ 266   
+ 267  Objective.. OBJ=E= SUM(T,PRICES(T, 'REW')*Y(T) - PROBABILITY*SUM(scen, PRICES(T, 'GEN')*( X(scen,T) + GG*R(scen,t) ) )  )  ;
+ 268   
+ 269  LR.. bound_lr =e=   SUM(T,PRICES(T, 'REW')*Y(T) - PROBABILITY*SUM(scen, PRICES(T, 'GEN')*( X(scen,T) + GG*R(scen,t) ) )  )
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      12/19/21 17:10:11 Page 6
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+ 270                           - lambda* (threshold - sum(scen, z(scen)))  ;
+ 271   
+ 272  Objective_scenario(scen)$(ord(scen) eq counter)..
+ 273           OBJ =E= SUM(TT,PRICES(tt, 'REW')*Y(TT) - PRICES(TT, 'GEN')*( X(scen,TT) + GG*R(scen,tt) ) )     ;
+ 274   
+ 275  *Const1_1(W,T).. Y(T)-X(W,T)-R(W,T)*GG -Z(W)*WIND(W,T) =L= (1-Z(W))*BigMM(w) ;
+ 276  Const1_1(scen,T).. Y(T)-X(scen,T)-R(scen,T)*GG -WIND(scen,T) =L= Z(scen)*BigM(scen,t) ;
+ 277   
+ 278  Const1_1FIX(W,T).. Y(T)-X(W,T)-R(W,T)*GG -WIND(W,T) =L= Z(W)*BigM(w,t) ;
+ 279   
+ 280  *Const1_1_scenario(scen,t)$(ord(t) lt card(t) and (ord(scen) eq counter))..
+ 281  Const1_1_scenario(scen,t)$(ord(scen) eq counter)..
+ 282   
+ 283           Y(T)-X(scen,T)-R(scen,T)*GG -WIND(scen,T) =L= 0 ;
+ 284   
+ 285  Const1_2..   -SUM(SCEN, Z(SCEN)) =G= -threshold;
+ 286  Const1_2FIX..  SUM(W,Z(W)) =L= threshold ;
+ 287   
+ 288  ****************************************************************************TODO Constraints (all but no. 1) in scenario form (z(w)=0)
+ 289   
+ 290  * The generator constraints
+ 291   
+ 292  *Ramp
+ 293  Const_3_1FIX(W,T)$( ord(t) le (card(t)-1)).. X(W,T+1) + GG*R(w,t+1)- X(W,T) - GG*R(w,t)  =L= ramp*(U(w,t+1) + R(w,t)) ;
+ 294  Const_3_1(scen,T)$( ord(t) le (card(t)-1)).. X(scen,T+1) + GG*R(scen,t+1)- X(scen,T) - GG*R(scen,t)  =L= ramp*(U(scen,t+1) + R(scen,t)) ;
+ 295  Const_3_1_scenario(scen,T)$( ord(t) le (card(t)-1) and (ord(scen) eq counter)).. X(scen,T+1) + GG*R(scen,t+1)- X(scen,T) - GG*R(scen,t)  =L= ramp*(U(scen,t+1) + R(scen,t)) ;
+ 296   
+ 297  Const_3_2(scen,T)$( ord(t) le (card(t)-1)).. X(scen,T) + GG*R(scen,t)- X(scen,T+1) -GG*R(scen,t+1)=L= ramp*(V(scen,t+1) + R(scen,t+1)) ;
+ 298  Const_3_2_scenario(scen,T)$( ord(t) le (card(t)-1) and (ord(scen) eq counter)).. X(scen,T) + GG*R(scen,t)- X(scen,T+1) -GG*R(scen,t+1)=L= ramp*(V(scen,t+1) + R(scen,t+1)) ;
+ 299  Const_3_2FIX(W,T)$( ord(t) le (card(t)-1)).. X(W,T) + GG*R(w,t)- X(W,T+1) -GG*R(w,t+1)=L= ramp*(V(w,t+1) + R(w,t+1)) ;
+ 300   
+ 301  *On/off
+ 302   
+ 303  Const_4_1(scen,T)$(ord(t) ge uptime)..   Sum(tt$((ORD(TT) le ORD(T)) and (ORD(TT) ge (ORD(T) - UPTIME +1))),U(scen,TT)) =L= R(scen,T) ;
+ 304  Const_4_1_scenario(scen,T)$(ord(t) ge uptime and (ord(scen) eq counter))..   Sum(tt$((ORD(TT) le ORD(T)) and (ORD(TT) ge (ORD(T) - UPTIME +1))),U(scen,TT)) =L= R(scen,T) ;
+ 305  Const_4_1FIX(W,T)$(ord(t) ge uptime)..   Sum(tt$((ORD(TT) le ORD(T)) and (ORD(TT) ge (ORD(T) - UPTIME +1))),U(W,TT)) =L= R(W,T) ;
+ 306   
+ 307  Const_4_2(scen,T)$(ord(t) ge downtime )..Sum(tt$((ORD(TT) le ORD(T)) and (ORD(TT) ge (ORD(T) - DOWNTIME +1))),V(scen,TT)) =L= 1-R(scen,T) ;
+ 308  Const_4_2_scenario(scen,T)$(ord(t) ge downtime and (ord(scen) eq counter))..Sum(tt$((ORD(TT) le ORD(T)) and (ORD(TT) ge (ORD(T) - DOWNTIME +1))),V(scen,TT)) =L= 1-R(scen,T) ;
+ 309  Const_4_2FIX(W,T)$(ord(t) ge downtime )..Sum(tt$((ORD(TT) le ORD(T)) and (ORD(TT) ge (ORD(T) - DOWNTIME +1))),V(W,TT)) =L= 1-R(W,T) ;
+ 310   
+ 311  Const_5(scen,T)$(ord(t) ge 2).. U(scen,T) - V(scen,T) =E= R(scen,T) - R(scen,T-1) ;
+ 312  Const_5_scenario(scen,T)$(ord(t) ge 2 and (ord(scen) eq counter)).. U(scen,T) - V(scen,T) =E= R(scen,T) - R(scen,T-1) ;
+ 313  Const_5FIX(W,T)$(ord(t) ge 2).. U(W,T) - V(W,T) =E= R(W,T) - R(W,T-1) ;
+ 314   
+ 315  *if uptime more than 1
+ 316  Const_6(scen,T)$( ord(t) le (card(t)-1))..   (G-GG)*R(scen,T)- (G-ramp)*U(scen,T) - (G-ramp)*V(scen,T+1) =G= X(scen,T);
+ 317  Const_6_scenario(scen,T)$( ord(t) le (card(t)-1) and (ord(scen) eq counter))..   (G-GG)*R(scen,T)- (G-ramp)*U(scen,T) - (G-ramp)*V(scen,T+1) =G= X(scen,T);
+ 318  Const_6FIX(W,T)$( ord(t) le (card(t)-1))..   (G-GG)*R(W,T)- (G-ramp)*U(W,T) - (G-ramp)*V(W,T+1) =G= X(W,T);
+ 319   
+ 320   
+ 321  *** bounds on any variables
+ 322  X.UP(scen,T) =  G-GG;
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      12/19/21 17:10:11 Page 7
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+ 323  U.UP(scen,T) = 1;
+ 324  V.UP(scen,T) =1;
+ 325  Z.UP(scen)=1;
+ 326   
+ 327  * initialize the on/off variables
+ 328  * assume the unit was on for last (uptime -1) periods
+ 329  r.fx(scen,t)$(ord(t) eq 1) =1;
+ 330  u.fx(scen,t)$(ord(t) eq 1) = 0;
+ 331  v.fx(scen,t)$(ord(t) eq 1) = 0 ;
+ 332  * assume the generator was producing minimim power in last time period
+ 333  x.up(scen,t)$(ord(t) eq 1)= ramp - GG;
+ 334   
+ 335   
+ 336  ******* ALL MODELS
+ 337   
+ 338  model schedule     / Objective,  Const1_1, Const1_2, Const_3_1, Const_3_2, Const_4_1, Const_4_2, Const_5, Const_6 /;
+ 339  model schedule_scenario     / Objective_scenario,  Const1_1_scenario, Const_3_1_scenario, Const_3_2_scenario, Const_4_1_scenario, Const_4_2_scenario, Const_5_scenario, Const_6_scenario / ;
+ 340  *model INITIAL               / / ;
+ 341  model Lagrangian      / LR,    Const1_1, Const_3_1, Const_3_2, Const_4_1, Const_4_2, Const_5, Const_6 /;
+ 342  MODEL  SCHEDULEFIX    /ObjectiveFIX,Const1_1FIX,Const1_2FIX, Const_3_1FIX, Const_3_2FIX, Const_4_1FIX, Const_4_2FIX, Const_5FIX, Const_6FIX/;
+ 343   
+ 344   
+ 345   
+ 346   
+ 347   
+ 348   
+ 349   
+ 350   
+ 351  $include lp_lowerbound.gms
+****                           $282
+**** LINE     16 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/900Scens/tol03/Scenario2/main_for_lr5.gms
+ 352  $include heuristic_upperbound.gms
+****                                  $282
+**** LINE     17 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/900Scens/tol03/Scenario2/main_for_lr5.gms
+ 353   
+ 354   
+ 355  File TestingFile3 / LR1.csv /;
+ 356  TestingFile3.pc=5;
+ 357  TestingFile3.nd=5;
+ 358  put TestingFile3;
+ 359  put 'Omega', put 'Tolerance', put 'Step Size Rule', put 'Iterations', put 'Converged?', put 'Gap LR', put 'Gap Naive', put 'Obj. Naive', put 'Obj. LR', put 'Gap' put 'Time Naive', put 'Time LR', put 'Final Lambda', put 'LB Heuristic' put /;
+ 360   
+ 361   
+ 362   
+ 363  ********************************************************************************
+ 364  * Solve the Lagrangian Dual problem now
+ 365  ********************************************************************************
+ 366  scalar d;
+ 367  scalar FinalIter;
+ 368  sets ro "rows" /1/;
+ 369  sets cl "columns" /1*3/;
+GDXIN   /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/900Scens/tol03/Scenario2/Naive.gdx
+ 372  *$load i=dim1
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      12/19/21 17:10:11 Page 8
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+ 373  *$load j=dim2
+ 374  parameter nv(ro,cl) ;
+ 375  $load nv
+****         $492
+**** LINE     40 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/900Scens/tol03/Scenario2/main_for_lr5.gms
+ 377  display ro,cl,nv;
+****                 $141
+**** LINE     42 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/900Scens/tol03/Scenario2/main_for_lr5.gms
+ 378   
+ 379  scalar zlower;
+ 380  zlower=nv('1','1');
+ 381   
+ 382  scalar GapNaive;
+ 383  GapNaive =nv('1','2');
+ 384   
+ 385  scalar TimeNaive;
+ 386  TimeNaive= nv('1','3');
+ 387   
+ 388  parameter ldual_iter(iter) obj function at each iteration ;
+ 389  lr_time = 0 ;
+ 390   
+ 391  option limrow = 0, limcol = 0, optca=0.0001, optcr=0.0001;
+ 392   
+ 393   
+ 394  parameter check(scen,t);
+ 395  scalar steprule;
+ 396  steprule=5;
+ 397  scalar FinalIter;
+ 398   
+ 399   
+ 400      lr_time=0;
+ 401      run_time_total=0;
+ 402   
+ 403   
+ 404   
+ 405      y.lo(t)=0;
+ 406      y.up(t)=INF;
+ 407      option clear=y;
+ 408      Lagrangian.solveOpt=2;
+ 409   
+ 410      loop(iter$contin,
+ 411      num_iter = ord(iter) ;
+ 412  *         pass a warm start
+ 413  *             y.l(t) = prev_y(t) ;
+ 414  *             z.l(scen) = prev_z(scen) ;
+ 415               start_time = jnow;
+ 416   
+ 417  *********************************************************************
+ 418  ***Solve a Lagrangian iteration
+ 419  *********************************************************************
+ 420   
+ 421  *Test
+ 422   
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      12/19/21 17:10:11 Page 9
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+ 423  $include plain_lr.gms
+****                      $282
+**** LINE     88 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/900Scens/tol03/Scenario2/main_for_lr5.gms
+ 424   
+ 425      end_time = jnow ;
+ 426      results(iter,'time') = ghour(end_time - start_time)*3600 + gminute(end_time - start_time)*60 + gsecond(end_time - start_time);
+ 427      results(iter,'objective') = bound ;
+****                                      $141
+**** LINE     92 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/900Scens/tol03/Scenario2/main_for_lr5.gms
+ 428   
+ 429  $include LR_updates.gms
+****                        $282
+**** LINE     94 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/900Scens/tol03/Scenario2/main_for_lr5.gms
+ 430      if( ((results(iter,'gap') < exit_tol) and (num_iter > 2)),convergence=2; contin = 0;);
+****                             $116
+**** LINE     95 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/900Scens/tol03/Scenario2/main_for_lr5.gms
+ 431      lr_time = lr_time + results(iter,'time')   ;
+ 432      if (lr_time > 2400, contin = 0 ; ) ;
+ 433      d=results(iter,'gap');
+ 434      FinalIter=num_iter;
+ 435  );
+ 436   
+ 437  *run_time_total = LP_time + lr_time + bound_time  ;
+ 438   
+ 439  * check if any p and q active simultaneously (nothing to do with Lagrangian)
+ 440  *parameter check(scen,t);
+ 441   
+ 442  scalar ObjLR;
+ 443  scalar heuristic;
+ 444  ObjLR=-lowerbound;
+****                  $141
+**** LINE    109 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/900Scens/tol03/Scenario2/main_for_lr5.gms
+ 445  heuristic=-upperbound;
+****                      $141
+**** LINE    110 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/900Scens/tol03/Scenario2/main_for_lr5.gms
+ 446   
+ 447  display results, lowerbound, upperbound, LP_bound, run_time_total, lr_time, num_iter ;
+****                                                  $140
+**** LINE    112 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/900Scens/tol03/Scenario2/main_for_lr5.gms
+ 448  display z.l, y.l ;
+ 449  display zlower, ObjLR, heuristic;
+ 450   
+ 451   
+ 452  put TestingFile3;
+ 453  put n, put tol, put steprule, put FinalIter, put convergence, put d, put GapNaive, put zlower, put ObjLR, put ((ObjLR-max(heuristic,zlower))/ObjLR), put TimeNaive, put lr_time, put lambda, put heuristic put /;
+****                                                                                                                                                                                            $141
+**** LINE    118 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/900Scens/tol03/Scenario2/main_for_lr5.gms
+
+**** LIST OF STRAY NAMES - CHECK DECLARATIONS FOR SPURIOUS COMMAS
+**** STRAY NAME start_cost OF TYPE PARAM
+**** STRAY NAME max_charge OF TYPE PARAM
+**** STRAY NAME max_discharge OF TYPE PARAM
+**** STRAY NAME LP_time OF TYPE PARAM
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     12/19/21 17:10:11 Page 10
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+**** STRAY NAME bound_time OF TYPE PARAM
+**** STRAY NAME init_bound OF TYPE PARAM
+**** STRAY NAME deltalambda OF TYPE PARAM
+**** STRAY NAME t1 OF TYPE PARAM
+**** STRAY NAME t2 OF TYPE PARAM
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     12/19/21 17:10:11 Page 11
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Error Messages
+
+
+116  Label is unknown
+140  Unknown symbol
+141  Symbol declared but no values have been assigned. Check for missing
+        data definition, assignment, data loading or implicit assignment
+        via a solve statement.
+        A wild shot: You may have spurious commas in the explanatory
+        text of a declaration. Check symbol reference list.
+282  Unable to open include file
+463  The column section in the previous table is missing
+492  Symbol not in GDX
+
+**** 14 ERROR(S)   0 WARNING(S)
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     12/19/21 17:10:11 Page 12
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Include File Summary
+
+
+   SEQ   GLOBAL TYPE      PARENT   LOCAL  FILENAME
+
+     1        1 INPUT          0       0  /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/900Scens/tol03/Scenario2/main_for_lr5.gms
+     2       13 INCLUDE        1      13  ./home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/900Scens/tol03/Scenario2/input.gms
+     3       27 INCLUDE        2      14  ../home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/900Scens/tol03/Scenario2/wind_costs.csv
+     4       92 INCLUDE        2      54  ../home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/900Scens/tol03/Scenario2/sampled_dynamic_hi.csv
+     5      191 INCLUDE        1      14  ./home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/900Scens/tol03/Scenario2/subgradient_parameters.gms
+     6      227 INCLUDE        1      15  ./home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/900Scens/tol03/Scenario2/equations.gms
+     7      370 CALL           1      35  csv2gdx Naive.csv id=nv index=1 values=2..lastCol useHeader=y
+     8      371 GDXIN          1      36  /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/900Scens/tol03/Scenario2/Naive.gdx
+
+
+COMPILATION TIME     =        0.102 SECONDS      3 MB  24.8.5 r61358 LEX-LEG
+
+
+USER: Small MUD - 5 User License                     S160825:0507AO-LNX
+      Universitaet Erlangen-Nuernberg, Lehrstuhl f. WirtschaftsmaDC7699
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/900Scens/tol03/Scenario2/main_for_lr5.gms
+Output     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/900Scens/tol03/Scenario2/main_for_lr5.lst
+
+**** USER ERROR(S) ENCOUNTERED

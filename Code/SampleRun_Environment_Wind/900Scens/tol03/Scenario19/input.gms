@@ -2,7 +2,7 @@
 
 ** to be changed
 SETS T times/t1*t24/;
-SETS W scenarios /scen1*scen1500/;
+SETS W scenarios /scen1*scen900/;
 
 ALIAS (T,TT);
 ALIAS (W,I);
@@ -21,8 +21,8 @@ Prices(t,'gen')    =  - Prices(t,'gen');
 ** define wind realizations at all time periods
 TABLE WIND(W,T)
 $ONDELIM
+*$INCLUDE wind_scenarios.csv
 $INCLUDE wind_scenarios.csv
-*$INCLUDE wind_scenarios_1500.csv
 $OFFDELIM
 ;
 
@@ -33,7 +33,7 @@ PROBABILITY = 1/CARD(W);
 
 ** define tolerance threshold
 SCALAR TOL;
-TOL =0.05;
+TOL =0.03;
 
 
 Parameter last_z(scen);
@@ -46,7 +46,8 @@ UPTIME =3;
 DOWNTIME=3;
 
 * maximum number of iterations in LR
-set iter number of subgradient iterations /iter1*iter10/;
+*set iter number of subgradient iterations /iter1*iter10/;
+set iter number of subgradient iterations /iter1/;
 set iterFIX iterations for fixed /iter1*iter30/;
 
 TABLE y_100(t,iterFIX)

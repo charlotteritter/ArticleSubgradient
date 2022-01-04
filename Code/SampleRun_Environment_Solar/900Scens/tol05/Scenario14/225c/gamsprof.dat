@@ -1,0 +1,11 @@
+3375      0.023
+2090 3      0.044       0.023 Equation   Const1 (20700)
+2012 10      0.024       0.004 Loop       
+2011 8      0.371       0.004 Loop       
+2012 7      0.029       0.004 Loop       
+2012 1      0.026       0.004 Loop       
+2096 6      0.043       0.030 Equation   Const_chance_1 (21600)
+2088 4      0.091       0.012 Equation   Objective (1)
+2145 5      0.150       0.030 GAMS Fini   
+2012 2      0.024       0.004 Loop       
+2145 9      0.267       0.030 Solve Fini schedule (191725)

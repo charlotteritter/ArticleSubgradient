@@ -23,7 +23,7 @@ lambdaprevious = lambda ;
          if (gamma ge 0 and lambdaprevious eq 0,
                  lambda = lambdaprevious ; );
          if (gamma gt 0 and lambdaprevious gt 0,
-                 lambda = lambdaprevious - min(stepsize, lambdaprevious/gamma)*gamma ; );
+                 lambda = max(0,lambdaprevious - min(stepsize, lambdaprevious/gamma)*gamma ); );
          if (gamma le 0,
                  lambda = lambdaprevious - stepsize*gamma; );
 
@@ -39,4 +39,4 @@ results(iter,'theta') = theta;
 results(iter,'step') = stepsize;
 results(iter,'gamma') = gamma ;
 results(iter,'lambda') = lambda ;
-results(iter,'gap') = (((-lowerbound)+upperbound)/(-lowerbound))    ; //gap is same as computed by GAMS
+results(iter,'gap') = (((-lowerbound)+upperbound)/(-lowerbound))    ; 

@@ -1,0 +1,380 @@
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      01/03/22 16:04:09 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+      This is Step 4 of Algorithm 1 of file v10.pdf (iEEE paper)
+      Big M is updated
+      Single file to run different values of rho
+      Promise is updated at each iteration
+      Can update with new wind scenarios file
+       
+      After this file, we run fixed scenario problem - dynamic_1500.gms
+       
+  11   
+  12  OPTIONS PROFILE =3, RESLIM   = 2100, LIMROW   = 5, LP = CPLEX, MIP = gurobi, RMIP=Gurobi, NLP = CONOPT, MINLP = DICOPT, MIQCP = CPLEX,
+  13           SOLPRINT = OFF, decimals = 8, optcr=0.0005, optca=0.0005, threads =8, integer4=1;
+  14   
+  15  ********************************************************************************
+  16  * run_time_total recorder
+  17  SCALAR start_time, end_time, run_time_total;
+  18   
+  19  *-------------------------------------------------------------------------------
+  20   
+  21  SETS T times/t1*t24/;
+  22  SETS W scenarios /w1*w4272/;
+  23  SETS iter iterations /iter1*iter30/;
+  24  *SETS rho_ind /r1*r5/;
+  25  *parameter rho_val(rho_ind) / r1 5, r2 40, r3 80, r4 120, r5 160/;
+  26  *SETS rho_ind /r1*r3/;
+  27  *parameter rho_val(rho_ind) / r1 40, r2 50, r3 60/;
+  28   
+  29  SETS rho_ind /r1/;
+  30  parameter rho_val(rho_ind) / r1 0/;
+  31   
+  32  ALIAS (T,TT);
+  33  ALIAS (W,I);
+  34  ** define generator costs and wind selling prices
+  35  TABLE COSTS(T,*)
+INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol03/Scenario2/wind_costs.csv
+  38  ,REW,GEN
+  39  t1,21.86631793,50
+  40  t2,22.68762551,50
+  41  t3,22.63231186,50
+  42  t4,23.53977501,50
+  43  t5,24.15305477,50
+  44  t6,25.0022415,50
+  45  t7,26.14884331,50
+  46  t8,28.48265662,50
+  47  t9,35.32421651,50
+  48  t10,53.07988113,50
+  49  t11,67.07745747,50
+  50  t12,43.78264533,50
+  51  t13,33.25218533,50
+  52  t14,28.68827035,50
+  53  t15,26.76175663,50
+  54  t16,23.97472252,50
+  55  t17,21.05077606,50
+  56  t18,18.8721276,50
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      01/03/22 16:04:09 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+  57  t19,17.16537812,50
+  58  t20,15.4798614,50
+  59  t21,14.81514842,50
+  60  t22,14.64047737,50
+  61  t23,15.10197375,50
+  62  t24,17.32390701,50
+  64  ;
+  65   
+  66  ** define wind realizations at all time periods.
+  67  TABLE WIND(W,T)
+  69  $INCLUDE ScenarioSet_hierarchical_wind7200.csv
+****                                               $282
+**** LINE     44 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol03/Scenario2/SAA_hierarchical.gms
+  71  ;
+****  $463
+**** LINE     46 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol03/Scenario2/SAA_hierarchical.gms
+  72   
+  73  table probability(w,*)
+  75  $INCLUDE ScenarioWeights_hierarchical_wind7200.csv
+****                                                   $282
+**** LINE     50 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol03/Scenario2/SAA_hierarchical.gms
+  77  ;
+****  $463
+**** LINE     52 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol03/Scenario2/SAA_hierarchical.gms
+  78   
+  79  ** define tolerance threshold
+  80  SCALAR TOL;
+  81  TOL =0.03;
+  82   
+  83  * find Ntol + 1st value
+  84  parameter maxwind(t), minwind(t), dummywind(w,t) ;
+  85  scalar it ;
+  86   
+  87  * index of it
+  88  set dummy_set(w);
+  89  * make the dum_iter go till at least the size of it
+  90  set dum_iter /dum_iter1*dum_iter100/;
+  91   
+  92  parameter BigM(w,t);
+  93   
+  94  ** define generator ramp constraints
+  95  * this data is from Ostrowski's paper, our generator was too too large
+  96  SCALAR ramp;
+  97  ramp=50;
+  98   
+  99  ** define upper bound of generator capacity
+ 100  SCALAR G, GG, start_cost;
+ 101  G=130;
+ 102  GG=20;
+ 103   
+ 104   
+ 105  SCALARS UPTIME, DOWNTIME;
+ 106  UPTIME =3;
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      01/03/22 16:04:09 Page 3
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+ 107  DOWNTIME=3;
+ 108   
+ 109  scalars m,n,size, step, delta, rho, new_n, new_m, tot_time ;    ;
+ 110  parameters time(rho_ind,iter), promise(rho_ind,iter,t), profit(rho_ind,iter) , num_scen(rho_ind,iter), y_previous(t) ;
+ 111   
+ 112  * number of initial scenarios and % increase at each iterations
+ 113  step = 20;
+ 114  delta = 0.1 ;
+ 115   
+ 116   
+ 117   
+ 118   
+ 119  ********************************************************************************
+ 120  *                                begin model
+ 121  ********************************************************************************
+ 122  POSITIVE VARIABLES X(W,T), Y(T),U(W,T), V(W,T), dummy(t) ;
+ 123  VARIABLES OBJ;
+ 124  BINARY VARIABLE Z(W), R(W,T) ;
+ 125   
+ 126  EQUATIONS
+ 127          Objective
+ 128          Const1_1(W,T) bigm constraint
+ 129          Const1_2     sum probabilities
+ 130          Const_3_1(W,T) ramping constraint
+ 131          Const_3_2(W,T) ramping constraint
+ 132          Const_4_1(W,T) generator off constraints
+ 133          Const_4_2(W,T) generator off constraints
+ 134   
+ 135          Const_5(W,T) generator running constraints
+ 136   
+ 137          Const_6(W,T)
+ 138   
+ 139          Const_dum1(t)
+ 140          Const_dum2(t)
+ 141   
+ 142          ;
+ 143   
+ 144  Objective.. OBJ=E= SUM(T,COSTS(T, 'REW')*Y(T) - SUM(w$((ord(w) ge n) and (ord(w) le m)), probability(w,'value') *COSTS(T, 'GEN')*( X(W,T) + GG*R(w,t) ) )  )  - rho*sum(t,dummy(t)) ;
+ 145   
+ 146  Const1_1(W,T)$((ord(w) ge n) and (ord(w) le m)).. Y(T)-X(W,T)-R(W,T)*GG -WIND(W,T) =L= Z(W)*BigM(w,t) ;
+ 147   
+ 148  *Const1_2..  SUM(W$((ord(w) ge n) and (ord(w) le m)),Z(W)) =G= size*(1- TOL) ;
+ 149  Const1_2..  SUM(W$((ord(w) ge n) and (ord(w) le m)),Z(W)*probability(w,'value')) =L= TOL ;
+ 150   
+ 151   
+ 152  * The generator constraints
+ 153   
+ 154  *Ramp
+ 155   
+ 156  Const_3_1(W,T)$( (ord(t) le (card(t)-1)) and (ord(w) ge n) and (ord(w) le m)).. X(W,T+1) + GG*R(w,t+1)- X(W,T) - GG*R(w,t)  =L= ramp*(U(w,t+1) + R(w,t)) ;
+ 157  Const_3_2(W,T)$( (ord(t) le (card(t)-1)) and (ord(w) ge n) and (ord(w) le m)).. X(W,T) + GG*R(w,t)- X(W,T+1) -GG*R(w,t+1)=L= ramp*(V(w,t+1) + R(w,t+1)) ;
+ 158   
+ 159  *On/off
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      01/03/22 16:04:09 Page 4
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+ 160   
+ 161  Const_4_1(W,T)$( (ord(t) ge uptime)   and (ord(w) ge n) and (ord(w) le m))..   Sum(tt$((ORD(TT) le ORD(T)) and (ORD(TT) ge (ORD(T) - UPTIME +1))),U(W,TT)) =L= R(W,T) ;
+ 162  Const_4_2(W,T)$( (ord(t) ge downtime) and (ord(w) ge n) and (ord(w) le m))..   Sum(tt$((ORD(TT) le ORD(T)) and (ORD(TT) ge (ORD(T) - DOWNTIME +1))),V(W,TT)) =L= 1-R(W,T) ;
+ 163   
+ 164   
+ 165  Const_5(W,T)$(  (ord(t) ge 2) and (ord(w) ge n) and (ord(w) le m)).. U(W,T) - V(W,T) =E= R(W,T) - R(W,T-1) ;
+ 166   
+ 167  *if uptime more than 1
+ 168  Const_6(W,T)$(  (ord(t) le (card(t)-1)) and (ord(w) ge n) and (ord(w) le m))..   (G-GG)*R(W,T)- (G-ramp)*U(W,T) - (G-ramp)*V(W,T+1) =G= X(W,T);
+ 169   
+ 170  Const_dum1(t).. dummy(t)=g= y(t) - y_previous(t);
+ 171  Const_dum2(t).. dummy(t)=g= y_previous(t) - y(t);
+ 172   
+ 173   
+ 174   
+ 175  *** bounds on any variables
+ 176  X.UP(W,T) =  G-GG;
+ 177  U.UP(W,T) = 1;
+ 178  V.UP(W,T) = 1;
+ 179  Z.UP(w)   = 1;
+ 180   
+ 181   
+ 182  MODEL  SCHEDULE    /ALL/ ;
+ 183   
+ 184   
+ 185   
+ 186  ********************************************************************************
+ 187  *                                begin iterations
+ 188  ********************************************************************************
+ 189   
+ 190  *rho_ind -> r1 40
+ 191  loop(rho_ind,
+ 192  tot_time = 0;
+ 193  size =0;
+ 194  *We take the first 20 scenarios
+ 195  new_n = 1;
+ 196  new_m = 20;
+ 197  y_previous(t) = 0;
+ 198   
+ 199  *iter --> iter1 * iter1000
+ 200  loop(iter,
+ 201   
+ 202  if (tot_time < 1800,
+ 203   
+ 204  *rho_val(rho_ind=r1)=40
+ 205           rho =rho_val(rho_ind);
+ 206  * at the first iteration no proximal term due to first solving the model (1) without the regularization
+ 207  if (ord(iter) eq 1,  rho =0 ; options optca =0.04, optcr =0.04) ;
+ 208  if (ord(iter) gt 1,  options optca =0.0005, optcr =0.0005) ;
+ 209   
+ 210  * choose scenarios between n and m
+ 211           n= new_n   ;
+ 212           m= new_m ;
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      01/03/22 16:04:09 Page 5
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+ 213           size = m-n+1 ;
+ 214   
+ 215   
+ 216   
+ 217  *****************************************************************
+ 218  * choosing Big M
+ 219  *****************************************************************
+ 220   
+ 221  maxwind(t) =smax(w$((ord(w) ge n) and (ord(w) le m)),wind(w,t)) ;
+ 222  dummywind(w,t) = wind(w,t) ;
+ 223   
+ 224  it = floor(size*tol) + 1;
+ 225   
+ 226   
+ 227  loop(t,
+ 228  loop(dum_iter$(ord(dum_iter)le it),
+ 229  * find the smallest wind value for this t
+ 230           minwind(t) = smin(w$((ord(w) ge n) and (ord(w) le m)),dummywind(w,t)) ;
+ 231  * index of smallest wind value
+ 232           dummy_set(w)$((ord(w) ge n) and (ord(w) le m)) = yes$(dummywind(w,t) eq minwind(t)) ;
+ 233  * make the smallest wind value large
+ 234           dummywind(w,t)$(dummy_set(w) and ((ord(w) ge n) and (ord(w) le m))) =maxwind(t) ;
+ 235  ); );
+ 236   
+ 237  BigM(w,t)$((ord(w) ge n) and (ord(w) le m))= G - wind(w,t) + minwind(t);
+ 238   
+ 239   
+ 240  ******************************************************************
+ 241  *start of bounds
+ 242  ******************************************************************
+ 243   
+ 244  * initialize the on/off variables
+ 245  * assume the unit was on for last (uptime -1) periods
+ 246  r.fx(w,t)$((ord(t) eq 1) and (ord(w) ge n) and (ord(w) le m)) =1;
+ 247  u.fx(w,t)$((ord(t) eq 1) and (ord(w) ge n) and (ord(w) le m)) = 0;
+ 248  v.fx(w,t)$((ord(t) eq 1) and (ord(w) ge n) and (ord(w) le m)) = 0 ;
+ 249  * assume the generator was producing minimim power in last time period
+ 250  x.up(w,t)$((ord(t) eq 1) and (ord(w) ge n) and (ord(w) le m)) = ramp - GG;
+ 251   
+ 252  * fix the variables which are not being considered
+ 253  *X.FX(W,T)$((ord(w) lt n) or (ord(w) gt m)) = 0;
+ 254  *R.FX(W,T)$((ord(w) lt n) or (ord(w) gt m)) = 0 ;
+ 255   
+ 256  ****************************** end  of bounds
+ 257   
+ 258           start_time=jnow;
+ 259           SOLVE SCHEDULE USING MIP MAXIMIZING OBJ ;
+****                                                   $257
+**** LINE    234 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol03/Scenario2/SAA_hierarchical.gms
+ 260           end_time = jnow;
+ 261           time(rho_ind,iter) =  ghour(end_time - start_time)*3600 + gminute(end_time - start_time)*60 + gsecond(end_time - start_time);
+ 262           promise(rho_ind,iter,t) = y.l(t) ;
+****                                       $141
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      01/03/22 16:04:09 Page 6
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+**** LINE    237 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol03/Scenario2/SAA_hierarchical.gms
+ 263           y_previous(t) = y.l(t) ;
+ 264           profit(rho_ind,iter) = obj.l ;
+****                                      $141
+**** LINE    239 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol03/Scenario2/SAA_hierarchical.gms
+ 265           num_scen(rho_ind,iter) = size ;
+ 266   
+ 267           new_n = m + 1;
+ 268           new_m= m + ceil(size*(1+delta)) ;
+ 269  );
+ 270   
+ 271  * calculate total time loop has been running
+ 272           tot_time = time(rho_ind,iter) + tot_time ;
+ 273   
+ 274  );
+ 275   
+ 276  );
+ 277   
+ 278  display tot_time ;
+ 279  display time, num_scen, profit;
+ 280   
+ 281  FILE sampled_dynamic /sampled_dynamic_hi.csv/;
+ 282  sampled_dynamic.PC = 5;
+ 283  sampled_dynamic.ND = 3;
+ 284  PUT sampled_dynamic;
+ 285  loop(rho_ind,LOOP(t, loop(iter, put promise(rho_ind,iter,t);) put /; ); );
+ 286   
+ 287  PUTCLOSE sampled_dynamic;
+ 288   
+ 289   
+ 290  FILE profit_value /profit_value_hi.csv/;
+ 291  profit_value.PC = 5;
+ 292  profit_value.ND = 3;
+ 293  PUT profit_value;
+ 294  loop(rho_ind, put rho_val(rho_ind) put /;
+ 295  put ''  put 'time' put ' number scenarios' put 'profit_value' put /;
+ 296  LOOP(iter, put iter.tl PUT time(rho_ind,iter) put num_scen(rho_ind,iter) put profit(rho_ind,iter) put /;);
+ 297  );
+ 298  PUTCLOSE profit_value;
+ 299   
+ 300   
+
+**** LIST OF STRAY NAMES - CHECK DECLARATIONS FOR SPURIOUS COMMAS
+**** STRAY NAME run_time_total OF TYPE PARAM
+**** STRAY NAME start_cost OF TYPE PARAM
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      01/03/22 16:04:09 Page 7
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Error Messages
+
+
+141  Symbol declared but no values have been assigned. Check for missing
+        data definition, assignment, data loading or implicit assignment
+        via a solve statement.
+        A wild shot: You may have spurious commas in the explanatory
+        text of a declaration. Check symbol reference list.
+257  Solve statement not checked because of previous errors
+282  Unable to open include file
+463  The column section in the previous table is missing
+
+**** 7 ERROR(S)   0 WARNING(S)
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      01/03/22 16:04:09 Page 8
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Include File Summary
+
+
+   SEQ   GLOBAL TYPE      PARENT   LOCAL  FILENAME
+
+     1        1 INPUT          0       0  /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol03/Scenario2/SAA_hierarchical.gms
+     2       37 INCLUDE        1      37  ./home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol03/Scenario2/wind_costs.csv
+
+
+COMPILATION TIME     =        0.012 SECONDS      3 MB  24.8.5 r61358 LEX-LEG
+
+
+USER: Small MUD - 5 User License                     S160825:0507AO-LNX
+      Universitaet Erlangen-Nuernberg, Lehrstuhl f. WirtschaftsmaDC7699
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol03/Scenario2/SAA_hierarchical.gms
+Output     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol03/Scenario2/SAA_hierarchical.lst
+
+**** USER ERROR(S) ENCOUNTERED
