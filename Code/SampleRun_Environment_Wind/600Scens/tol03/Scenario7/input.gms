@@ -2,7 +2,7 @@
 
 ** to be changed
 SETS T times/t1*t24/;
-SETS W scenarios /scen1*scen600/;
+SETS W scenarios /scen1*scen100/;
 
 ALIAS (T,TT);
 ALIAS (W,I);
@@ -46,8 +46,8 @@ UPTIME =3;
 DOWNTIME=3;
 
 * maximum number of iterations in LR
-*set iter number of subgradient iterations /iter1*iter10/;
-set iter number of subgradient iterations /iter1/;
+set iter number of subgradient iterations /iter1*iter10/;
+*set iter number of subgradient iterations /iter1/;
 set iterFIX iterations for fixed /iter1*iter30/;
 
 TABLE y_100(t,iterFIX)

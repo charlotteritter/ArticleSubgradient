@@ -17,7 +17,7 @@ $include lp_lowerbound.gms
 $include heuristic_upperbound.gms 
 
 
-File TestingFile3 / LR1.csv /;
+File TestingFile3 / LR3.csv /;
 TestingFile3.pc=5;
 TestingFile3.nd=5;
 put TestingFile3; 
