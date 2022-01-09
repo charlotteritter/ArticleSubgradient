@@ -58,7 +58,7 @@ option limrow = 0, limcol = 0, optca=0.0001, optcr=0.0001;
 
 parameter check(scen,t);
 scalar steprule;
-steprule=2;
+steprule=3;
 scalar FinalIter;
 
 
