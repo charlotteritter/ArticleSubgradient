@@ -1,0 +1,11 @@
+2301      0.012
+913 7      0.019       0.036 Equation   Const_5 (13800)
+774 10      0.075       0.005 Loop       
+896 2      0.022       0.022 Equation   Const_3_1 (13800)
+909 6      0.048       0.032 Equation   Const_4_2 (13200)
+905 5      0.048       0.029 Equation   Const_4_1 (13200)
+869 4      0.056       0.011 Equation   Objective (1)
+959 8      0.254       0.040 Solve Fini schedule (441025)
+918 3      0.023       0.040 Equation   Const_6 (13800)
+899 9      0.021       0.026 Equation   Const_3_2 (13800)
+959 1      0.134       0.040 GAMS Fini   
