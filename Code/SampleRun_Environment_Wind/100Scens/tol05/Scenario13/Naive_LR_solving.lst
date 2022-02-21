@@ -18,7 +18,7 @@ C o m p i l a t i o n
   16  ********************************************************************************
   17  *                                Include input files
   18  ********************************************************************************
-INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/inputME.gms
+INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/inputME.gms
   20  ** sets later to be defined in input file
   21   
   22  ** to be changed
@@ -39,7 +39,7 @@ INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment
   37   
   38  TABLE wind(scen,t)
   40  *$INCLUDE %SOLAR%.csv
-INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/wind_scenarios_100_13.csv
+INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/wind_scenarios_100_13.csv
   42  ,t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14,t15,t16,t17,t18,t19,t20,t21,t22,t23,t24
   43  scen1,38.96974909,45.5184343,41.93152872,1.850043245,2.426887238,10.46329475,9.65056914,33.16861188,27.10294938,12.741329,16.63723498,23.64583003,3.70864038,11.20899345,8.741396222,42.52769904,43.80579316,38.11204261,23.11068866,19.06523102,6.641419
       818,33.23490664,20.7275087,14.13241657
@@ -267,7 +267,7 @@ C o m p i l a t i o n
  147  *Tolerance
  148  scalar tol;
  149  *tol=%TOL%;
- 150  tol=0.05;
+ 150  tol=0.03;
  151   
  152  * maximum number of iterations in LR
  153  set iter number of subgradient iterations /iter1*iter10/;
@@ -280,12 +280,12 @@ C o m p i l a t i o n
  160   
  161  * Import the SORTED file
  162  table scenario_sorted(scen,*)
-INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/scenario_sorted_100_13_05.csv
+INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/scenario_sorted_100_13_05.csv
  164   ,value
 ****  $463
-**** LINE      1 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/scenario_sorted_100_13_05.csv
-**** LINE     43 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/inputME.gms
-**** LINE     19 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/Naive_LR_solving.gms
+**** LINE      1 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/scenario_sorted_100_13_05.csv
+**** LINE     43 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/inputME.gms
+**** LINE     19 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/Naive_LR_solving.gms
  165  scen95,1
  166  scen70,1
 GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      11/01/21 18:17:12 Page 6
@@ -294,8 +294,8 @@ C o m p i l a t i o n
 
 
  167  scen85,1
- 168  scen62,1
- 169  scen42,1
+ 168  scen62,0
+ 169  scen42,0
  170  scen9,0
  171  scen22,0
  172  scen59,0
@@ -418,7 +418,7 @@ C o m p i l a t i o n
  280  ** define battery  operation costs costs and solar selling prices
  281   
  282  TABLE PRICES(t,*)
-INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/wind_costs.csv
+INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/wind_costs.csv
  285  ,REW,GEN
  286  t1,21.86631793,50
  287  t2,22.68762551,50
@@ -518,7 +518,7 @@ C o m p i l a t i o n
  379   
  380   
  381  scalar run_time_total, start_time, end_time, LP_time, bound_time, lr_time ;
-INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/subgradient_parameters.gms
+INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/subgradient_parameters.gms
  383  parameter lambda;
 GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/01/21 18:17:12 Page 10
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
@@ -558,7 +558,7 @@ C o m p i l a t i o n
  414  scalar exit_tol ;
  415  exit_tol = 0.00001 ;
  416   
-INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/equations_all.gms
+INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/equations_all.gms
  418  POSITIVE VARIABLES X(W,T), Y(T);
  419  VARIABLES OBJ, BOUND_LR;
  420  BINARY VARIABLE Z(SCEN), R(W,T), U(W,T), V(W,T) ;
@@ -665,29 +665,29 @@ C o m p i l a t i o n
  511  model schedule_scenario     / Objective_scenario,  Const1_1_scenario, Const_3_1_scenario, Const_3_2_scenario, Const_4_1_scenario, Const_4_2_scenario, Const_5_scenario, Const_6_scenario / ;
  512  *model INITIAL               / / ;
  513  model Lagrangian      / LR,    Const1_1, Const_3_1, Const_3_2, Const_4_1, Const_4_2, Const_5, Const_6 /;
-INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/lp_lowerbound.gms
+INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/lp_lowerbound.gms
  515  start_time = jnow ;
  516  options optca=0 ;
  517  options optcr=0 ;
  518  solve schedule using RMIP minimizing OBJ ;
 ****                                           $257
-**** LINE      4 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/lp_lowerbound.gms
-**** LINE     23 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/Naive_LR_solving.gms
+**** LINE      4 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/lp_lowerbound.gms
+**** LINE     23 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/Naive_LR_solving.gms
  519  end_time =jnow ;
  520  LP_time = ghour(end_time - start_time)*3600 + gminute(end_time - start_time)*60 + gsecond(end_time - start_time);
  521  init_lambda  = Const1_2.m ;
 ****                          $141
-**** LINE      7 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/lp_lowerbound.gms
-**** LINE     23 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/Naive_LR_solving.gms
+**** LINE      7 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/lp_lowerbound.gms
+**** LINE     23 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/Naive_LR_solving.gms
  522  lowerbound   = Obj.l ;
 ****                     $141
-**** LINE      8 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/lp_lowerbound.gms
-**** LINE     23 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/Naive_LR_solving.gms
+**** LINE      8 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/lp_lowerbound.gms
+**** LINE     23 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/Naive_LR_solving.gms
  523  scalar LP_bound ;
  524  lambda       = init_lambda ;
  525  display init_lambda, LP_time, lowerbound    ;
  526  LP_bound   = Obj.l ;
-INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/heuristic_upperbound.gms
+INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/heuristic_upperbound.gms
  528  ********************************************************************************
  529  * Find a upperbound on the problem : a feasible solution
  530  ********************************************************************************
@@ -710,8 +710,8 @@ C o m p i l a t i o n
  542  *Solving (2) for each scenario w with corresponding z(w) = 0
  543  solve schedule_scenario using MIP minimizing Obj ;
 ****                                                   $257
-**** LINE     16 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/heuristic_upperbound.gms
-**** LINE     24 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/Naive_LR_solving.gms
+**** LINE     16 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/heuristic_upperbound.gms
+**** LINE     24 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/Naive_LR_solving.gms
  544  res_scenarios(rs,'obj') =obj.l ;
  545   
  546   
@@ -737,8 +737,8 @@ C o m p i l a t i o n
  566   
  567  z.lo(scen) = scenario_sorted(scen,'value') ;
 ****                                          $116
-**** LINE     40 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/heuristic_upperbound.gms
-**** LINE     24 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/Naive_LR_solving.gms
+**** LINE     40 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/heuristic_upperbound.gms
+**** LINE     24 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/Naive_LR_solving.gms
  568  *** Ensure file was generated correctly
  569  if ( sum(scen,z.lo(scen)) ne threshold, abort "sorted file not generated correctly check manually") ;
  570  start_time = jnow ;
@@ -747,8 +747,8 @@ C o m p i l a t i o n
  573  schedule.solvelink = 5 ;
  574  solve schedule using MIP minimizing Obj ;
 ****                                          $257
-**** LINE     47 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/heuristic_upperbound.gms
-**** LINE     24 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/Naive_LR_solving.gms
+**** LINE     47 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/heuristic_upperbound.gms
+**** LINE     24 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/Naive_LR_solving.gms
  575  end_time = jnow ;
  576  bound_time =  run_time_total + ghour(end_time - start_time)*3600 + gminute(end_time - start_time)*60 + gsecond(end_time - start_time);
  577  upperbound = Obj.l ;
@@ -759,8 +759,8 @@ C o m p i l a t i o n
 
  578  prev_y(t) = y.l(t) ;
 ****                $141
-**** LINE     51 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/heuristic_upperbound.gms
-**** LINE     24 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/Naive_LR_solving.gms
+**** LINE     51 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/heuristic_upperbound.gms
+**** LINE     24 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/Naive_LR_solving.gms
  579  *prev_w(scen,t) = w.l(scen,t) ;
  580  * Clear bound on z now
  581  z.up(scen) = 1 ;
@@ -794,7 +794,7 @@ C o m p i l a t i o n
  609  start_time = jnow;
  610  solve schedule using MIP minimizing Obj ;
 ****                                          $257
-**** LINE     49 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/Naive_LR_solving.gms
+**** LINE     49 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/Naive_LR_solving.gms
  611  end_time = jnow ;
  612   
  613   
@@ -867,7 +867,7 @@ C o m p i l a t i o n
  675   
  676  *Test
  677   
-INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/plain_lr.gms
+INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/plain_lr.gms
 GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/01/21 18:17:12 Page 16
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
@@ -878,13 +878,13 @@ C o m p i l a t i o n
  681  Lagrangian.optfile   = 1;
  682  solve Lagrangian using mip minimizing bound_lr  ;
 ****                                                  $257
-**** LINE      4 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/plain_lr.gms
-**** LINE    117 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/Naive_LR_solving.gms
+**** LINE      4 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/plain_lr.gms
+**** LINE    117 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/Naive_LR_solving.gms
  683   
  684  bound             = bound_lr.l ;
 ****                               $141
-**** LINE      6 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/plain_lr.gms
-**** LINE    117 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/Naive_LR_solving.gms
+**** LINE      6 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/plain_lr.gms
+**** LINE    117 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/Naive_LR_solving.gms
  685  prev_y(t)         = y.l(t) ;
  686  last_z(scen)      = z.l(scen) ;
  687   
@@ -896,7 +896,7 @@ C o m p i l a t i o n
  693      results(iter,'time') = ghour(end_time - start_time)*3600 + gminute(end_time - start_time)*60 + gsecond(end_time - start_time);
  694      results(iter,'objective') = bound ;
  695   
-INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/LR_updates.gms
+INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/LR_updates.gms
  697  *** UPDATES FOR LAMBDA, GAMMA, THETA
  698   
  699  * Gamma update
@@ -913,7 +913,7 @@ INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment
  710   
  711  * Fix the Stepsize
  712   
-INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/stepsizes.gms
+INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/stepsizes.gms
  714  *** Guarantees that never zero in the denominator
  715  *norm = max(abs(gamma), 1e-6);
  716  norm2 = max(gamma*gamma, 1e-6);
@@ -1026,21 +1026,21 @@ Include File Summary
 
    SEQ   GLOBAL TYPE      PARENT   LOCAL  FILENAME
 
-     1        1 INPUT          0       0  /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/Naive_LR_solving.gms
-     2       19 INCLUDE        1      19  ./home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/inputME.gms
-     3       41 INCLUDE        2      22  ../home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/wind_scenarios_100_13.csv
-     4      163 INCLUDE        2      43  ../home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/scenario_sorted_100_13_05.csv
-     5      284 INCLUDE        2      63  ../home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/wind_costs.csv
-     6      382 INCLUDE        1      20  ./home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/subgradient_parameters.gms
-     7      417 INCLUDE        1      22  ./home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/equations_all.gms
-     8      514 INCLUDE        1      23  ./home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/lp_lowerbound.gms
-     9      527 INCLUDE        1      24  ./home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/heuristic_upperbound.gms
-    10      678 INCLUDE        1     117  ./home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/plain_lr.gms
-    11      696 INCLUDE        1     123  ./home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/LR_updates.gms
-    12      713 INCLUDE       11      17  ../home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/stepsizes.gms
+     1        1 INPUT          0       0  /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/Naive_LR_solving.gms
+     2       19 INCLUDE        1      19  ./home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/inputME.gms
+     3       41 INCLUDE        2      22  ../home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/wind_scenarios_100_13.csv
+     4      163 INCLUDE        2      43  ../home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/scenario_sorted_100_13_05.csv
+     5      284 INCLUDE        2      63  ../home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/wind_costs.csv
+     6      382 INCLUDE        1      20  ./home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/subgradient_parameters.gms
+     7      417 INCLUDE        1      22  ./home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/equations_all.gms
+     8      514 INCLUDE        1      23  ./home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/lp_lowerbound.gms
+     9      527 INCLUDE        1      24  ./home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/heuristic_upperbound.gms
+    10      678 INCLUDE        1     117  ./home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/plain_lr.gms
+    11      696 INCLUDE        1     123  ./home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/LR_updates.gms
+    12      713 INCLUDE       11      17  ../home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/stepsizes.gms
 
 
-COMPILATION TIME     =        2.778 SECONDS      3 MB  24.8.5 r61358 LEX-LEG
+COMPILATION TIME     =        2.679 SECONDS      3 MB  24.8.5 r61358 LEX-LEG
 
 
 USER: Small MUD - 5 User License                     S160825:0507AO-LNX
@@ -1050,7 +1050,7 @@ USER: Small MUD - 5 User License                     S160825:0507AO-LNX
 
 **** FILE SUMMARY
 
-Input      /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/Naive_LR_solving.gms
-Output     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario13/Naive_LR_solving.lst
+Input      /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/Naive_LR_solving.gms
+Output     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario13/Naive_LR_solving.lst
 
 **** USER ERROR(S) ENCOUNTERED

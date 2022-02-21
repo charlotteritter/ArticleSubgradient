@@ -27,7 +27,7 @@ $offdelim
 *Tolerance 
 scalar tol;
 *tol=%TOL%;
-tol=0.05;
+tol=0.03;
 
 * maximum number of iterations in LR
 set iter number of subgradient iterations /iter1*iter10/;

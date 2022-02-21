@@ -15,19 +15,19 @@
 2425 100
 0 0 0 0 0
  0.00000000000000E+0000  0.00000000000000E+0000  0.00000000000000E+0000  0.00000000000000E+0000  0.00000000000000E+0000
-/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario17/225a/gamsmatr.dat
-/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario17/225a/gamsinst.dat
-/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario17/gurobi.opt
-/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario17/225a/gamsstat.dat
-/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario17/225a/gamssolu.dat
+/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario17/225a/gamsmatr.dat
+/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario17/225a/gamsinst.dat
+/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario17/gurobi.opt
+/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario17/225a/gamsstat.dat
+/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario17/225a/gamssolu.dat
 
-/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario17/225a/gamsdict.dat
+/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario17/225a/gamsdict.dat
 1
 11:39:30
 11/02/21
-/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario17/
+/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario17/
 /home/woody/mpwm/shared/software/gams24.8_linux_x64_64_sfx/
-/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario17/225a/
+/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario17/225a/
 255 58
 0 0 1895 44501 42606 58240
 Small MUD - 5 User License                     S160825:0507AO-LNX0
@@ -284,17 +284,17 @@ gmsgenus.run
 gmsgenux.out
 105851131313131313131313131313                 G160825:00  AO   00
 DC7699       g 2                               A Invoice         0
-/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario17/Naive_LR_solving_2Approach.dat
+/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario17/Naive_LR_solving_2Approach.dat
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0  1.00000000000000E+0000 0 0
 0 0 0
 0 0 0 1 0
-/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario17/schedule.so
-/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario17/225a/sbbinfo.dat
-/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario17/225a/gamscntr.dat
-/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario17/
+/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario17/schedule.so
+/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario17/225a/sbbinfo.dat
+/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario17/225a/gamscntr.dat
+/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario17/
 dat
  1.00000000000000E+0299
 
 
-/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol05/Scenario17/Naive_LR_solving_2Approach.gms
+/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment/100Scens/tol03/Scenario17/Naive_LR_solving_2Approach.gms

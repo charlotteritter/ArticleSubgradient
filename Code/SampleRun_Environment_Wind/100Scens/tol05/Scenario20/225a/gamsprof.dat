@@ -1,11 +1,11 @@
-523      0.005
-536 1      1.530       0.010 Solve Fini schedule (73525)
-484 10      0.216       0.009 Equation   Const_6 (2300)
-480 8      0.212       0.009 Equation   Const_5 (2300)
-477 6      0.321       0.008 Equation   Const_4_2 (2200)
-474 5      0.346       0.008 Equation   Const_4_1 (2200)
-469 7      0.347       0.007 Equation   Const_3_2 (2300)
-466 4      0.340       0.007 Equation   Const_3_1 (2300)
-450 2      0.480       0.006 Equation   Const1_1 (2400)
-441 3      0.030       0.004 Equation   Objective (1)
-536 9      0.697       0.010 GAMS Fini   
+379      0.003
+536 1      0.320       0.010 Solve Fini schedule (73525)
+484 2      0.263       0.009 Equation   Const_6 (2300)
+480 4      0.182       0.009 Equation   Const_5 (2300)
+477 5      0.255       0.008 Equation   Const_4_2 (2200)
+474 3      0.211       0.008 Equation   Const_4_1 (2200)
+469 7      0.125       0.007 Equation   Const_3_2 (2300)
+466 6      0.130       0.007 Equation   Const_3_1 (2300)
+536 9      0.073       0.010 GAMS Fini   
+450 8      0.079       0.006 Equation   Const1_1 (2400)
+441 10      0.010       0.004 Equation   Objective (1)
