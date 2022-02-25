@@ -1,4 +1,4 @@
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      01/08/22 17:49:22 Page 1
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      02/21/22 18:31:29 Page 1
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -12,7 +12,7 @@ C o m p i l a t i o n
   10  OPTIONS PROFILE =3, RESLIM   = 4200, LIMROW   = 5, LP = CPLEX, MIP = gurobi, RMIP=gurobi, NLP = CONOPT, MINLP = DICOPT, MIQCP = CPLEX, SOLPRINT = OFF, decimals = 8, optcr=0.01, optca=0.01, threads =8, integer4=0;
   11   
   12  ********************************************************************************
-INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol03/Scenario18/input.gms
+INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol05/Scenario18/input.gms
   14  ** sets later to be defined in input file
   15   
   16  ** to be changed
@@ -25,7 +25,7 @@ INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment
   23   
   24  ** define generator costs and wind selling prices
   25  TABLE PRICES(T,*)
-INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol03/Scenario18/wind_costs.csv
+INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol05/Scenario18/wind_costs.csv
   28  ,REW,GEN
   29  t1,21.86631793,50
   30  t2,22.68762551,50
@@ -56,7 +56,7 @@ INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment
   56  Prices(t,'rew')     =  - Prices(t,'rew');
   57  Prices(t,'gen')    =  - Prices(t,'gen');
   58   
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      01/08/22 17:49:22 Page 2
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      02/21/22 18:31:29 Page 2
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -64,7 +64,7 @@ C o m p i l a t i o n
   59  ** define wind realizations at all time periods
   60  TABLE WIND(W,T)
   62  *$INCLUDE wind_scenarios.csv
-INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol03/Scenario18/wind_scenarios.csv
+INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol05/Scenario18/wind_scenarios.csv
   64  ,t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14,t15,t16,t17,t18,t19,t20,t21,t22,t23,t24
   65  scen1,32.9816812,40.94939934,28.92615248,8.172836353,7.928511181,17.59153199,6.015299801,4.629329522,21.7313527,14.86410327,9.010034831,2.469944082,5.519138309,4.43458317,12.16002485,35.62885588,20.35111832,15.26563431,22.22371543,27.67137776,43.113
       85161,49.47531363,60.56933573,67.01041449
@@ -114,7 +114,7 @@ INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment
       2225142,23.77287021,23.66071372,37.34214228
   88  scen24,59.76427106,76.65658667,98.25015584,1.529986564,12.94362332,10.88514222,27.23631614,27.9355154,36.58313409,0.598657833,2.357973395,6.336900206,16.59471725,7.465231014,4.096201128,24.92140094,27.54723167,19.47369157,17.40037372,16.18601679,28.
       25252953,28.81161923,35.2813694,50.23119799
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      01/08/22 17:49:22 Page 3
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      02/21/22 18:31:29 Page 3
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -172,7 +172,7 @@ C o m p i l a t i o n
  114  scen50,35.87180407,32.54968105,28.65592023,9.97298787,9.164078154,5.665676673,0.087116696,25.18174903,14.52133291,6.4880603,2.25413924,7.689153261,10.40327964,16.56864261,11.70290722,34.23466824,41.47270037,47.07517922,26.73934356,28.01489978,22.635
       45124,22.96501854,35.72896645,44.64038284
  115  scen51,31.63752151,23.70298335,23.55422764,29.25618778,45.4049591,42.23636374,11.88441361,5.123093819,8.335584936,22.92907698,21.77553465,10.40954033,5.852389181,9.459330756,15.60008448,37.77066178,44.67024639,44.21901305,17.324909,22.30413153,15.54
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      01/08/22 17:49:22 Page 4
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      02/21/22 18:31:29 Page 4
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -230,7 +230,7 @@ C o m p i l a t i o n
       42997,25.76678762,18.80365352,23.84306207
  141  scen77,35.86624845,45.41977632,47.40603738,2.435440105,10.23364735,6.339315972,3.92098313,15.3399367,21.00963384,13.55739675,6.735253266,8.010755197,6.956196318,3.771478465,10.27406746,53.52997676,53.01614051,44.36620109,11.29631573,7.769651762,5.52
       7378132,31.3781433,34.76236566,30.46551895
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      01/08/22 17:49:22 Page 5
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      02/21/22 18:31:29 Page 5
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -288,14 +288,14 @@ C o m p i l a t i o n
  170  ;
  171   
  172   
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      01/08/22 17:49:22 Page 6
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      02/21/22 18:31:29 Page 6
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
 
  173  ** define tolerance threshold
  174  SCALAR TOL;
- 175  TOL =0.03;
+ 175  TOL =0.05;
  176   
  177   
  178  Parameter last_z(scen);
@@ -313,7 +313,7 @@ C o m p i l a t i o n
  190  set iterFIX iterations for fixed /iter1*iter30/;
  191   
  192  TABLE y_100(t,iterFIX)
-INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol03/Scenario18/sampled_dynamic_hi.csv
+INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol05/Scenario18/sampled_dynamic_hi.csv
  195  ,iter1,iter2,iter3,iter4,iter5,iter6,iter7,iter8,iter9,iter10,iter11,iter12,iter13,iter14,iter15,iter16,iter17,iter18,iter19,iter20,iter21,iter22,iter23,iter24,iter25,iter26,iter27,iter28,iter29,iter30
  196  t1,56.59,56.57,56.57,55.603,56.57,56.59,56.57,55.603,55.603,55.603,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
  197  t2,28.555,28.555,28.555,28.555,28.555,27.343,27.343,27.343,27.343,30.99,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -346,7 +346,7 @@ INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment
  225  *time_limit=%TIMELIM%;
  226  time_limit=2250;
  227   
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      01/08/22 17:49:22 Page 7
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      02/21/22 18:31:29 Page 7
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -404,7 +404,7 @@ C o m p i l a t i o n
  280  * make the smallest wind value large
  281           dummywind(w,t)$dummy(w) =maxwind(t) ;
  282  ); );
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      01/08/22 17:49:22 Page 8
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      02/21/22 18:31:29 Page 8
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -419,7 +419,7 @@ C o m p i l a t i o n
  290   
  291   
  292  scalar run_time_total, start_time, end_time, LP_time, bound_time, lr_time ;
-INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol03/Scenario18/subgradient_parameters.gms
+INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol05/Scenario18/subgradient_parameters.gms
  294  parameter lambda;
  295  parameter ldual value of Lagrangian dual ;
  296  parameter bound total value of Lagrangian dual ;
@@ -455,14 +455,14 @@ INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment
  326   
  327  scalar exit_tol ;
  328  exit_tol = 0.00001 ;
-INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol03/Scenario18/equations.gms
+INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol05/Scenario18/equations.gms
  330   
  331  POSITIVE VARIABLES X(W,T), Y(T), U(W,T), V(W,T);
  332  VARIABLES OBJ, BOUND_LR;
  333  BINARY VARIABLE Z(SCEN), R(W,T) ;
  334   
  335  scalar counter ;
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      01/08/22 17:49:22 Page 9
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      02/21/22 18:31:29 Page 9
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -520,7 +520,7 @@ C o m p i l a t i o n
  386   
  387  Const1_2..   -SUM(SCEN, Z(SCEN)) =G= -threshold;
  388  Const1_2FIX..  SUM(W,Z(W)) =L= threshold ;
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 10
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 10
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -578,7 +578,7 @@ C o m p i l a t i o n
  439   
  440  model schedule     / Objective,  Const1_1, Const1_2, Const_3_1, Const_3_2, Const_4_1, Const_4_2, Const_5, Const_6 /;
  441  model schedule_scenario     / Objective_scenario,  Const1_1_scenario, Const_3_1_scenario, Const_3_2_scenario, Const_4_1_scenario, Const_4_2_scenario, Const_5_scenario, Const_6_scenario / ;
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 11
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 11
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -636,7 +636,7 @@ C o m p i l a t i o n
 **** STRAY NAME bound_time OF TYPE PARAM
 **** STRAY NAME lr_time OF TYPE PARAM
 **** STRAY NAME init_bound OF TYPE PARAM
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 12
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 12
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -644,24 +644,24 @@ C o m p i l a t i o n
 **** STRAY NAME deltalambda OF TYPE PARAM
 **** STRAY NAME t1 OF TYPE PARAM
 **** STRAY NAME t2 OF TYPE PARAM
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 13
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 13
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Include File Summary
 
 
    SEQ   GLOBAL TYPE      PARENT   LOCAL  FILENAME
 
-     1        1 INPUT          0       0  /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol03/Scenario18/main_for_naive.gms
-     2       13 INCLUDE        1      13  ./home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol03/Scenario18/input.gms
-     3       27 INCLUDE        2      14  ../home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol03/Scenario18/wind_costs.csv
-     4       63 INCLUDE        2      25  ../home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol03/Scenario18/wind_scenarios.csv
-     5      194 INCLUDE        2      55  ../home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol03/Scenario18/sampled_dynamic_hi.csv
-     6      293 INCLUDE        1      14  ./home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol03/Scenario18/subgradient_parameters.gms
-     7      329 INCLUDE        1      15  ./home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol03/Scenario18/equations.gms
+     1        1 INPUT          0       0  /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol05/Scenario18/main_for_naive.gms
+     2       13 INCLUDE        1      13  ./home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol05/Scenario18/input.gms
+     3       27 INCLUDE        2      14  ../home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol05/Scenario18/wind_costs.csv
+     4       63 INCLUDE        2      25  ../home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol05/Scenario18/wind_scenarios.csv
+     5      194 INCLUDE        2      55  ../home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol05/Scenario18/sampled_dynamic_hi.csv
+     6      293 INCLUDE        1      14  ./home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol05/Scenario18/subgradient_parameters.gms
+     7      329 INCLUDE        1      15  ./home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol05/Scenario18/equations.gms
 
 
-COMPILATION TIME     =        0.078 SECONDS      3 MB  24.8.5 r61358 LEX-LEG
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 14
+COMPILATION TIME     =        0.071 SECONDS      3 MB  24.8.5 r61358 LEX-LEG
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 14
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 E x e c u t i o n
 
@@ -678,8 +678,8 @@ E x e c u t i o n
 ----    226 Assignment time_limit    0.000     0.000 SECS      4 MB      0
 ----    238 Assignment n             0.000     0.000 SECS      4 MB      0
 ----    249 Assignment scale         0.000     0.000 SECS      4 MB      0
-----    250 Assignment WIND          0.001     0.001 SECS      4 MB   2400
-----    252 Assignment WIND          0.000     0.001 SECS      4 MB   2400
+----    250 Assignment WIND          0.000     0.000 SECS      4 MB   2400
+----    252 Assignment WIND          0.001     0.001 SECS      4 MB   2400
 ----    260 Assignment threshold     0.000     0.001 SECS      4 MB      0
 ----    264 Assignment maxwind       0.000     0.001 SECS      4 MB     24
 ----    265 Assignment dummywind     0.000     0.001 SECS      4 MB   2400
@@ -696,51 +696,75 @@ E x e c u t i o n
 ----    277 Assignment minwind       0.000     0.001 SECS      4 MB      1
 ----    279 Assignment dummy         0.000     0.001 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.001 SECS      4 MB   2400
-----    275 Loop                     0.000     0.001 SECS      4 MB 
-----    277 Assignment minwind       0.000     0.001 SECS      4 MB      2
+----    277 Assignment minwind       0.000     0.001 SECS      4 MB      1
 ----    279 Assignment dummy         0.000     0.001 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.001 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.001 SECS      4 MB      2
-----    279 Assignment dummy         0.000     0.001 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.001 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.001 SECS      4 MB      2
-----    279 Assignment dummy         0.000     0.001 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.001 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.001 SECS      4 MB      2
+----    277 Assignment minwind       0.000     0.001 SECS      4 MB      1
 ----    279 Assignment dummy         0.000     0.001 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.001 SECS      4 MB   2400
 ----    275 Loop                     0.000     0.001 SECS      4 MB 
-----    277 Assignment minwind       0.000     0.001 SECS      4 MB      3
+----    277 Assignment minwind       0.000     0.001 SECS      4 MB      2
 ----    279 Assignment dummy         0.000     0.001 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.001 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.001 SECS      4 MB      3
+----    277 Assignment minwind       0.000     0.001 SECS      4 MB      2
 ----    279 Assignment dummy         0.000     0.001 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.001 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.001 SECS      4 MB      3
+----    277 Assignment minwind       0.000     0.001 SECS      4 MB      2
 ----    279 Assignment dummy         0.000     0.001 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.001 SECS      4 MB   2400
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 15
+----    277 Assignment minwind       0.000     0.001 SECS      4 MB      2
+----    279 Assignment dummy         0.000     0.001 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.001 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.001 SECS      4 MB      2
+----    279 Assignment dummy         0.000     0.001 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.001 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.001 SECS      4 MB      2
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 15
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 E x e c u t i o n
 
 
+----    279 Assignment dummy         0.000     0.001 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.001 SECS      4 MB   2400
+----    275 Loop                     0.000     0.001 SECS      4 MB 
 ----    277 Assignment minwind       0.000     0.001 SECS      4 MB      3
-----    279 Assignment dummy         0.001     0.002 SECS      4 MB      1
+----    279 Assignment dummy         0.000     0.001 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.001 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.001 SECS      4 MB      3
+----    279 Assignment dummy         0.000     0.001 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.001 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.001 SECS      4 MB      3
+----    279 Assignment dummy         0.000     0.001 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.001 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.001 SECS      4 MB      3
+----    279 Assignment dummy         0.000     0.001 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.001 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.001 SECS      4 MB      3
+----    279 Assignment dummy         0.000     0.001 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.001 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.001 SECS      4 MB      3
+----    279 Assignment dummy         0.000     0.001 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.001 SECS      4 MB   2400
+----    275 Loop                     0.000     0.001 SECS      4 MB 
+----    277 Assignment minwind       0.000     0.001 SECS      4 MB      4
+----    279 Assignment dummy         0.000     0.001 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.001 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.001 SECS      4 MB      4
+----    279 Assignment dummy         0.000     0.001 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.001 SECS      4 MB   2400
+----    277 Assignment minwind       0.001     0.002 SECS      4 MB      4
+----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.002 SECS      4 MB      4
+----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.002 SECS      4 MB      4
+----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.002 SECS      4 MB      4
+----    279 Assignment dummy         0.000     0.002 SECS      4 MB      2
 ----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
 ----    275 Loop                     0.001     0.002 SECS      4 MB 
-----    277 Assignment minwind       0.000     0.002 SECS      4 MB      4
-----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.002 SECS      4 MB      4
-----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.002 SECS      4 MB      4
-----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.002 SECS      4 MB      4
-----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
-----    275 Loop                     0.000     0.002 SECS      4 MB 
 ----    277 Assignment minwind       0.000     0.002 SECS      4 MB      5
 ----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
@@ -753,40 +777,69 @@ E x e c u t i o n
 ----    277 Assignment minwind       0.000     0.002 SECS      4 MB      5
 ----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
-----    275 Loop                     0.000     0.002 SECS      4 MB 
-----    277 Assignment minwind       0.000     0.002 SECS      4 MB      6
-----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.002 SECS      4 MB      6
-----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.002 SECS      4 MB      6
-----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.002 SECS      4 MB      6
-----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
-----    275 Loop                     0.000     0.002 SECS      4 MB 
-----    277 Assignment minwind       0.000     0.002 SECS      4 MB      7
-----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.002 SECS      4 MB      7
-----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.002 SECS      4 MB      7
-----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.002 SECS      4 MB      7
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 16
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 16
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 E x e c u t i o n
 
 
+----    277 Assignment minwind       0.000     0.002 SECS      4 MB      5
+----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.002 SECS      4 MB      5
+----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
+----    275 Loop                     0.000     0.002 SECS      4 MB 
+----    277 Assignment minwind       0.000     0.002 SECS      4 MB      6
+----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.002 SECS      4 MB      6
+----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.002 SECS      4 MB      6
+----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.002 SECS      4 MB      6
+----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.002 SECS      4 MB      6
+----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.002 SECS      4 MB      6
+----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
+----    275 Loop                     0.000     0.002 SECS      4 MB 
+----    277 Assignment minwind       0.000     0.002 SECS      4 MB      7
+----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.002 SECS      4 MB      7
+----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.002 SECS      4 MB      7
+----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.002 SECS      4 MB      7
+----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.002 SECS      4 MB      7
+----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.002 SECS      4 MB      7
 ----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
 ----    275 Loop                     0.000     0.002 SECS      4 MB 
 ----    277 Assignment minwind       0.000     0.002 SECS      4 MB      8
 ----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.002 SECS      4 MB      8
+----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.002 SECS      4 MB      8
+----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 17
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+E x e c u t i o n
+
+
 ----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
 ----    277 Assignment minwind       0.000     0.002 SECS      4 MB      8
 ----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
@@ -810,36 +863,54 @@ E x e c u t i o n
 ----    277 Assignment minwind       0.000     0.002 SECS      4 MB      9
 ----    279 Assignment dummy         0.000     0.002 SECS      4 MB      2
 ----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
-----    275 Loop                     0.000     0.002 SECS      4 MB 
-----    277 Assignment minwind       0.000     0.002 SECS      4 MB     10
+----    277 Assignment minwind       0.000     0.002 SECS      4 MB      9
 ----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.002 SECS      4 MB     10
-----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.002 SECS      4 MB     10
-----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.002 SECS      4 MB     10
+----    277 Assignment minwind       0.000     0.002 SECS      4 MB      9
 ----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
 ----    275 Loop                     0.000     0.002 SECS      4 MB 
+----    277 Assignment minwind       0.000     0.002 SECS      4 MB     10
+----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.002 SECS      4 MB     10
+----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.002 SECS      4 MB     10
+----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.002 SECS      4 MB     10
+----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.002 SECS      4 MB     10
+----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.002 SECS      4 MB     10
+----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
+----    275 Loop                     0.000     0.002 SECS      4 MB 
 ----    277 Assignment minwind       0.000     0.002 SECS      4 MB     11
 ----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
 ----    277 Assignment minwind       0.000     0.002 SECS      4 MB     11
-----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.002 SECS      4 MB     11
-----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.002 SECS      4 MB     11
-----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 17
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 18
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 E x e c u t i o n
 
 
+----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.002 SECS      4 MB     11
+----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.002 SECS      4 MB     11
+----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.002 SECS      4 MB     11
+----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.002 SECS      4 MB     11
+----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
 ----    275 Loop                     0.000     0.002 SECS      4 MB 
 ----    277 Assignment minwind       0.000     0.002 SECS      4 MB     12
@@ -848,212 +919,299 @@ E x e c u t i o n
 ----    277 Assignment minwind       0.000     0.002 SECS      4 MB     12
 ----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.002 SECS      4 MB     12
-----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.002 SECS      4 MB     12
-----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
-----    275 Loop                     0.000     0.002 SECS      4 MB 
-----    277 Assignment minwind       0.000     0.002 SECS      4 MB     13
-----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.002 SECS      4 MB     13
-----    279 Assignment dummy         0.000     0.002 SECS      4 MB      2
-----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.002 SECS      4 MB     13
-----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.002 SECS      4 MB     13
-----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
-----    275 Loop                     0.000     0.002 SECS      4 MB 
-----    277 Assignment minwind       0.000     0.002 SECS      4 MB     14
-----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.002 SECS      4 MB     14
-----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.002 SECS      4 MB     14
-----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.002 SECS      4 MB     14
-----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.002 SECS      4 MB   2400
-----    275 Loop                     0.000     0.002 SECS      4 MB 
-----    277 Assignment minwind       0.000     0.002 SECS      4 MB     15
-----    279 Assignment dummy         0.000     0.002 SECS      4 MB      1
-----    281 Assignment dummywind     0.001     0.003 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     15
+----    277 Assignment minwind       0.001     0.003 SECS      4 MB     12
 ----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     15
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     12
 ----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     15
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     12
+----    279 Assignment dummy         0.000     0.003 SECS      4 MB      2
+----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     12
 ----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 18
-G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
-E x e c u t i o n
-
-
 ----    275 Loop                     0.001     0.003 SECS      4 MB 
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     16
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     13
 ----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     16
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     13
+----    279 Assignment dummy         0.000     0.003 SECS      4 MB      2
+----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     13
 ----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     16
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     13
 ----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     16
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     13
 ----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    275 Loop                     0.000     0.003 SECS      4 MB 
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     17
-----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     17
-----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     17
-----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     17
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     13
 ----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
 ----    275 Loop                     0.000     0.003 SECS      4 MB 
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     18
-----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     18
-----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     18
-----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     18
-----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    275 Loop                     0.000     0.003 SECS      4 MB 
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     19
-----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     19
-----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     19
-----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     19
-----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    275 Loop                     0.000     0.003 SECS      4 MB 
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 19
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 19
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 E x e c u t i o n
 
 
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     20
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     14
 ----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     20
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     14
 ----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     20
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     14
 ----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     20
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     14
 ----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    275 Loop                     0.000     0.003 SECS      4 MB 
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     21
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     14
 ----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     21
-----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     21
-----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     21
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     14
 ----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
 ----    275 Loop                     0.000     0.003 SECS      4 MB 
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     22
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     15
 ----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     22
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     15
 ----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     22
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     15
 ----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     22
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     15
 ----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    275 Loop                     0.000     0.003 SECS      4 MB 
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     23
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     15
 ----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     23
-----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     23
-----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     23
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     15
 ----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
 ----    275 Loop                     0.000     0.003 SECS      4 MB 
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     24
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 20
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     16
+----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     16
+----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     16
+----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     16
+----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     16
+----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 20
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 E x e c u t i o n
 
 
-----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     24
-----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     24
-----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
-----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
-----    277 Assignment minwind       0.000     0.003 SECS      4 MB     24
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     16
 ----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
 ----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
 ----    275 Loop                     0.000     0.003 SECS      4 MB 
-----    274 Loop                     0.002     0.003 SECS      4 MB 
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     17
+----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     17
+----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     17
+----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     17
+----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     17
+----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     17
+----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
+----    275 Loop                     0.000     0.003 SECS      4 MB 
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     18
+----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     18
+----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     18
+----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     18
+----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     18
+----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     18
+----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
+----    275 Loop                     0.000     0.003 SECS      4 MB 
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     19
+----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     19
+----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     19
+----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     19
+----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 21
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+E x e c u t i o n
+
+
+----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     19
+----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.003 SECS      4 MB     19
+----    279 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.003 SECS      4 MB   2400
+----    275 Loop                     0.000     0.003 SECS      4 MB 
+----    277 Assignment minwind       0.001     0.004 SECS      4 MB     20
+----    279 Assignment dummy         0.000     0.004 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.004 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.004 SECS      4 MB     20
+----    279 Assignment dummy         0.000     0.004 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.004 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.004 SECS      4 MB     20
+----    279 Assignment dummy         0.000     0.004 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.004 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.004 SECS      4 MB     20
+----    279 Assignment dummy         0.000     0.004 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.004 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.004 SECS      4 MB     20
+----    279 Assignment dummy         0.000     0.004 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.004 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.004 SECS      4 MB     20
+----    279 Assignment dummy         0.000     0.004 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.004 SECS      4 MB   2400
+----    275 Loop                     0.001     0.004 SECS      4 MB 
+----    277 Assignment minwind       0.000     0.004 SECS      4 MB     21
+----    279 Assignment dummy         0.000     0.004 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.004 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.004 SECS      4 MB     21
+----    279 Assignment dummy         0.000     0.004 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.004 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.004 SECS      4 MB     21
+----    279 Assignment dummy         0.000     0.004 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.004 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.004 SECS      4 MB     21
+----    279 Assignment dummy         0.000     0.004 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.004 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.004 SECS      4 MB     21
+----    279 Assignment dummy         0.000     0.004 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.004 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.004 SECS      4 MB     21
+----    279 Assignment dummy         0.000     0.004 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.004 SECS      4 MB   2400
+----    275 Loop                     0.000     0.004 SECS      4 MB 
+----    277 Assignment minwind       0.000     0.004 SECS      4 MB     22
+----    279 Assignment dummy         0.000     0.004 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.004 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.004 SECS      4 MB     22
+----    279 Assignment dummy         0.000     0.004 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.004 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.004 SECS      4 MB     22
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 22
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+E x e c u t i o n
+
+
+----    279 Assignment dummy         0.000     0.004 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.004 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.004 SECS      4 MB     22
+----    279 Assignment dummy         0.000     0.004 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.004 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.004 SECS      4 MB     22
+----    279 Assignment dummy         0.000     0.004 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.004 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.004 SECS      4 MB     22
+----    279 Assignment dummy         0.000     0.004 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.004 SECS      4 MB   2400
+----    275 Loop                     0.000     0.004 SECS      4 MB 
+----    277 Assignment minwind       0.000     0.004 SECS      4 MB     23
+----    279 Assignment dummy         0.000     0.004 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.004 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.004 SECS      4 MB     23
+----    279 Assignment dummy         0.000     0.004 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.004 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.004 SECS      4 MB     23
+----    279 Assignment dummy         0.000     0.004 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.004 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.004 SECS      4 MB     23
+----    279 Assignment dummy         0.000     0.004 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.004 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.004 SECS      4 MB     23
+----    279 Assignment dummy         0.000     0.004 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.004 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.004 SECS      4 MB     23
+----    279 Assignment dummy         0.000     0.004 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.004 SECS      4 MB   2400
+----    275 Loop                     0.000     0.004 SECS      4 MB 
+----    277 Assignment minwind       0.000     0.004 SECS      4 MB     24
+----    279 Assignment dummy         0.000     0.004 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.004 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.004 SECS      4 MB     24
+----    279 Assignment dummy         0.000     0.004 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.004 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.004 SECS      4 MB     24
+----    279 Assignment dummy         0.000     0.004 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.004 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.004 SECS      4 MB     24
+----    279 Assignment dummy         0.000     0.004 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.004 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.004 SECS      4 MB     24
+----    279 Assignment dummy         0.000     0.004 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.004 SECS      4 MB   2400
+----    277 Assignment minwind       0.000     0.004 SECS      4 MB     24
+----    279 Assignment dummy         0.000     0.004 SECS      4 MB      1
+----    281 Assignment dummywind     0.000     0.004 SECS      4 MB   2400
+----    275 Loop                     0.000     0.004 SECS      4 MB 
+----    274 Loop                     0.003     0.004 SECS      4 MB 
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 23
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+E x e c u t i o n
+
 
 ----    283 PARAMETER minwind  
 
-t1  23.32000000,    t2  14.20000000,    t3  10.58000000,    t4   0.69000000,    t5   1.47000000,    t6   1.13000000,    t7   0.81000000,    t8   0.45000000,    t9   2.28000000,    t10  0.73000000,    t11  1.55000000,    t12  2.47000000,    t13  1.33000000
-t14  0.62000000,    t15  2.07000000,    t16 15.48000000,    t17  5.58000000,    t18  2.92000000,    t19 13.25000000,    t20  9.44000000,    t21  7.73000000,    t22  5.04000000,    t23  1.80000000,    t24  3.81000000
+t1  23.81000000,    t2  15.34000000,    t3  12.80000000,    t4   0.92000000,    t5   1.85000000,    t6   1.33000000,    t7   1.06000000,    t8   0.68000000,    t9   2.86000000,    t10  1.00000000,    t11  2.20000000,    t12  2.70000000,    t13  1.65000000
+t14  1.17000000,    t15  2.45000000,    t16 15.79000000,    t17 11.85000000,    t18  5.11000000,    t19 14.57000000,    t20 13.53000000,    t21  9.24000000,    t22  7.16000000,    t23  2.82000000,    t24  6.06000000
 
-----    283 Display                  0.001     0.004 SECS      4 MB 
+----    283 Display                  0.000     0.004 SECS      4 MB 
 ----    288 Assignment BigMM         0.000     0.004 SECS      4 MB    100
-----    289 Assignment BigM          0.000     0.004 SECS      4 MB   2400
-----    305 Assignment originalTheta    0.000     0.004 SECS      4 MB      0
-----    328 Assignment exit_tol      0.000     0.004 SECS      4 MB      0
-----    424 Assignment X             0.000     0.004 SECS      4 MB   2400
-----    425 Assignment U             0.000     0.004 SECS      4 MB   2400
-----    426 Assignment V             0.000     0.004 SECS      4 MB   2400
-----    427 Assignment Z             0.000     0.004 SECS      4 MB      0
-----    431 Assignment R             0.001     0.005 SECS      4 MB    100
+----    289 Assignment BigM          0.001     0.005 SECS      4 MB   2400
+----    305 Assignment originalTheta    0.000     0.005 SECS      4 MB      0
+----    328 Assignment exit_tol      0.000     0.005 SECS      4 MB      0
+----    424 Assignment X             0.000     0.005 SECS      4 MB   2400
+----    425 Assignment U             0.000     0.005 SECS      4 MB   2400
+----    426 Assignment V             0.000     0.005 SECS      4 MB   2400
+----    427 Assignment Z             0.000     0.005 SECS      4 MB      0
+----    431 Assignment R             0.000     0.005 SECS      4 MB    100
 ----    432 Assignment U             0.000     0.005 SECS      4 MB   2400
 ----    433 Assignment V             0.000     0.005 SECS      4 MB   2400
 ----    435 Assignment X             0.000     0.005 SECS      4 MB   2400
 ----    458 Assignment start_time    0.000     0.005 SECS      4 MB      0
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 21
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 24
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Model Analysis      SOLVE schedule Using MIP From line 459
 
 
 ----    459 Solve Init schedule      0.000     0.005 SECS      4 MB 
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 22
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 25
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE schedule Using MIP From line 459
 
@@ -1111,7 +1269,7 @@ Objective..  - 0.5*X(scen1,t1) - 0.5*X(scen1,t2) - 0.5*X(scen1,t3) - 0.5*X(scen1
       - 0.5*X(scen13,t18) - 0.5*X(scen13,t19) - 0.5*X(scen13,t20) - 0.5*X(scen13,t21) - 0.5*X(scen13,t22) - 0.5*X(scen13,t23) - 0.5*X(scen13,t24) - 0.5*X(scen14,t1) - 0.5*X(scen14,t2) - 0.5*X(scen14,t3) - 0.5*X(scen14,t4) - 0.5*X(scen14,t5)
      
       - 0.5*X(scen14,t6) - 0.5*X(scen14,t7) - 0.5*X(scen14,t8) - 0.5*X(scen14,t9) - 0.5*X(scen14,t10) - 0.5*X(scen14,t11) - 0.5*X(scen14,t12) - 0.5*X(scen14,t13) - 0.5*X(scen14,t14) - 0.5*X(scen14,t15) - 0.5*X(scen14,t16) - 0.5*X(scen14,t17)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 23
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 26
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE schedule Using MIP From line 459
 
@@ -1169,7 +1327,7 @@ Equation Listing    SOLVE schedule Using MIP From line 459
       - 0.5*X(scen26,t18) - 0.5*X(scen26,t19) - 0.5*X(scen26,t20) - 0.5*X(scen26,t21) - 0.5*X(scen26,t22) - 0.5*X(scen26,t23) - 0.5*X(scen26,t24) - 0.5*X(scen27,t1) - 0.5*X(scen27,t2) - 0.5*X(scen27,t3) - 0.5*X(scen27,t4) - 0.5*X(scen27,t5)
      
       - 0.5*X(scen27,t6) - 0.5*X(scen27,t7) - 0.5*X(scen27,t8) - 0.5*X(scen27,t9) - 0.5*X(scen27,t10) - 0.5*X(scen27,t11) - 0.5*X(scen27,t12) - 0.5*X(scen27,t13) - 0.5*X(scen27,t14) - 0.5*X(scen27,t15) - 0.5*X(scen27,t16) - 0.5*X(scen27,t17)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 24
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 27
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE schedule Using MIP From line 459
 
@@ -1227,7 +1385,7 @@ Equation Listing    SOLVE schedule Using MIP From line 459
       - 0.5*X(scen39,t18) - 0.5*X(scen39,t19) - 0.5*X(scen39,t20) - 0.5*X(scen39,t21) - 0.5*X(scen39,t22) - 0.5*X(scen39,t23) - 0.5*X(scen39,t24) - 0.5*X(scen40,t1) - 0.5*X(scen40,t2) - 0.5*X(scen40,t3) - 0.5*X(scen40,t4) - 0.5*X(scen40,t5)
      
       - 0.5*X(scen40,t6) - 0.5*X(scen40,t7) - 0.5*X(scen40,t8) - 0.5*X(scen40,t9) - 0.5*X(scen40,t10) - 0.5*X(scen40,t11) - 0.5*X(scen40,t12) - 0.5*X(scen40,t13) - 0.5*X(scen40,t14) - 0.5*X(scen40,t15) - 0.5*X(scen40,t16) - 0.5*X(scen40,t17)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 25
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 28
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE schedule Using MIP From line 459
 
@@ -1285,7 +1443,7 @@ Equation Listing    SOLVE schedule Using MIP From line 459
       - 0.5*X(scen52,t18) - 0.5*X(scen52,t19) - 0.5*X(scen52,t20) - 0.5*X(scen52,t21) - 0.5*X(scen52,t22) - 0.5*X(scen52,t23) - 0.5*X(scen52,t24) - 0.5*X(scen53,t1) - 0.5*X(scen53,t2) - 0.5*X(scen53,t3) - 0.5*X(scen53,t4) - 0.5*X(scen53,t5)
      
       - 0.5*X(scen53,t6) - 0.5*X(scen53,t7) - 0.5*X(scen53,t8) - 0.5*X(scen53,t9) - 0.5*X(scen53,t10) - 0.5*X(scen53,t11) - 0.5*X(scen53,t12) - 0.5*X(scen53,t13) - 0.5*X(scen53,t14) - 0.5*X(scen53,t15) - 0.5*X(scen53,t16) - 0.5*X(scen53,t17)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 26
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 29
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE schedule Using MIP From line 459
 
@@ -1343,7 +1501,7 @@ Equation Listing    SOLVE schedule Using MIP From line 459
       - 0.5*X(scen65,t18) - 0.5*X(scen65,t19) - 0.5*X(scen65,t20) - 0.5*X(scen65,t21) - 0.5*X(scen65,t22) - 0.5*X(scen65,t23) - 0.5*X(scen65,t24) - 0.5*X(scen66,t1) - 0.5*X(scen66,t2) - 0.5*X(scen66,t3) - 0.5*X(scen66,t4) - 0.5*X(scen66,t5)
      
       - 0.5*X(scen66,t6) - 0.5*X(scen66,t7) - 0.5*X(scen66,t8) - 0.5*X(scen66,t9) - 0.5*X(scen66,t10) - 0.5*X(scen66,t11) - 0.5*X(scen66,t12) - 0.5*X(scen66,t13) - 0.5*X(scen66,t14) - 0.5*X(scen66,t15) - 0.5*X(scen66,t16) - 0.5*X(scen66,t17)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 27
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 30
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE schedule Using MIP From line 459
 
@@ -1401,7 +1559,7 @@ Equation Listing    SOLVE schedule Using MIP From line 459
       - 0.5*X(scen78,t18) - 0.5*X(scen78,t19) - 0.5*X(scen78,t20) - 0.5*X(scen78,t21) - 0.5*X(scen78,t22) - 0.5*X(scen78,t23) - 0.5*X(scen78,t24) - 0.5*X(scen79,t1) - 0.5*X(scen79,t2) - 0.5*X(scen79,t3) - 0.5*X(scen79,t4) - 0.5*X(scen79,t5)
      
       - 0.5*X(scen79,t6) - 0.5*X(scen79,t7) - 0.5*X(scen79,t8) - 0.5*X(scen79,t9) - 0.5*X(scen79,t10) - 0.5*X(scen79,t11) - 0.5*X(scen79,t12) - 0.5*X(scen79,t13) - 0.5*X(scen79,t14) - 0.5*X(scen79,t15) - 0.5*X(scen79,t16) - 0.5*X(scen79,t17)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 28
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 31
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE schedule Using MIP From line 459
 
@@ -1459,7 +1617,7 @@ Equation Listing    SOLVE schedule Using MIP From line 459
       - 0.5*X(scen91,t18) - 0.5*X(scen91,t19) - 0.5*X(scen91,t20) - 0.5*X(scen91,t21) - 0.5*X(scen91,t22) - 0.5*X(scen91,t23) - 0.5*X(scen91,t24) - 0.5*X(scen92,t1) - 0.5*X(scen92,t2) - 0.5*X(scen92,t3) - 0.5*X(scen92,t4) - 0.5*X(scen92,t5)
      
       - 0.5*X(scen92,t6) - 0.5*X(scen92,t7) - 0.5*X(scen92,t8) - 0.5*X(scen92,t9) - 0.5*X(scen92,t10) - 0.5*X(scen92,t11) - 0.5*X(scen92,t12) - 0.5*X(scen92,t13) - 0.5*X(scen92,t14) - 0.5*X(scen92,t15) - 0.5*X(scen92,t16) - 0.5*X(scen92,t17)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 29
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 32
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE schedule Using MIP From line 459
 
@@ -1517,7 +1675,7 @@ Equation Listing    SOLVE schedule Using MIP From line 459
       - 10*R(scen4,t3) - 10*R(scen4,t4) - 10*R(scen4,t5) - 10*R(scen4,t6) - 10*R(scen4,t7) - 10*R(scen4,t8) - 10*R(scen4,t9) - 10*R(scen4,t10) - 10*R(scen4,t11) - 10*R(scen4,t12) - 10*R(scen4,t13) - 10*R(scen4,t14) - 10*R(scen4,t15) - 10*R(scen4,t16)
      
       - 10*R(scen4,t17) - 10*R(scen4,t18) - 10*R(scen4,t19) - 10*R(scen4,t20) - 10*R(scen4,t21) - 10*R(scen4,t22) - 10*R(scen4,t23) - 10*R(scen4,t24) - 10*R(scen5,t1) - 10*R(scen5,t2) - 10*R(scen5,t3) - 10*R(scen5,t4) - 10*R(scen5,t5) - 10*R(scen5,t6)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 30
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 33
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE schedule Using MIP From line 459
 
@@ -1575,7 +1733,7 @@ Equation Listing    SOLVE schedule Using MIP From line 459
       - 10*R(scen18,t14) - 10*R(scen18,t15) - 10*R(scen18,t16) - 10*R(scen18,t17) - 10*R(scen18,t18) - 10*R(scen18,t19) - 10*R(scen18,t20) - 10*R(scen18,t21) - 10*R(scen18,t22) - 10*R(scen18,t23) - 10*R(scen18,t24) - 10*R(scen19,t1) - 10*R(scen19,t2)
      
       - 10*R(scen19,t3) - 10*R(scen19,t4) - 10*R(scen19,t5) - 10*R(scen19,t6) - 10*R(scen19,t7) - 10*R(scen19,t8) - 10*R(scen19,t9) - 10*R(scen19,t10) - 10*R(scen19,t11) - 10*R(scen19,t12) - 10*R(scen19,t13) - 10*R(scen19,t14) - 10*R(scen19,t15)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 31
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 34
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE schedule Using MIP From line 459
 
@@ -1633,7 +1791,7 @@ Equation Listing    SOLVE schedule Using MIP From line 459
       - 10*R(scen32,t16) - 10*R(scen32,t17) - 10*R(scen32,t18) - 10*R(scen32,t19) - 10*R(scen32,t20) - 10*R(scen32,t21) - 10*R(scen32,t22) - 10*R(scen32,t23) - 10*R(scen32,t24) - 10*R(scen33,t1) - 10*R(scen33,t2) - 10*R(scen33,t3) - 10*R(scen33,t4)
      
       - 10*R(scen33,t5) - 10*R(scen33,t6) - 10*R(scen33,t7) - 10*R(scen33,t8) - 10*R(scen33,t9) - 10*R(scen33,t10) - 10*R(scen33,t11) - 10*R(scen33,t12) - 10*R(scen33,t13) - 10*R(scen33,t14) - 10*R(scen33,t15) - 10*R(scen33,t16) - 10*R(scen33,t17)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 32
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 35
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE schedule Using MIP From line 459
 
@@ -1691,7 +1849,7 @@ Equation Listing    SOLVE schedule Using MIP From line 459
       - 10*R(scen46,t18) - 10*R(scen46,t19) - 10*R(scen46,t20) - 10*R(scen46,t21) - 10*R(scen46,t22) - 10*R(scen46,t23) - 10*R(scen46,t24) - 10*R(scen47,t1) - 10*R(scen47,t2) - 10*R(scen47,t3) - 10*R(scen47,t4) - 10*R(scen47,t5) - 10*R(scen47,t6)
      
       - 10*R(scen47,t7) - 10*R(scen47,t8) - 10*R(scen47,t9) - 10*R(scen47,t10) - 10*R(scen47,t11) - 10*R(scen47,t12) - 10*R(scen47,t13) - 10*R(scen47,t14) - 10*R(scen47,t15) - 10*R(scen47,t16) - 10*R(scen47,t17) - 10*R(scen47,t18) - 10*R(scen47,t19)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 33
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 36
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE schedule Using MIP From line 459
 
@@ -1749,7 +1907,7 @@ Equation Listing    SOLVE schedule Using MIP From line 459
       - 10*R(scen60,t20) - 10*R(scen60,t21) - 10*R(scen60,t22) - 10*R(scen60,t23) - 10*R(scen60,t24) - 10*R(scen61,t1) - 10*R(scen61,t2) - 10*R(scen61,t3) - 10*R(scen61,t4) - 10*R(scen61,t5) - 10*R(scen61,t6) - 10*R(scen61,t7) - 10*R(scen61,t8)
      
       - 10*R(scen61,t9) - 10*R(scen61,t10) - 10*R(scen61,t11) - 10*R(scen61,t12) - 10*R(scen61,t13) - 10*R(scen61,t14) - 10*R(scen61,t15) - 10*R(scen61,t16) - 10*R(scen61,t17) - 10*R(scen61,t18) - 10*R(scen61,t19) - 10*R(scen61,t20) - 10*R(scen61,t21)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 34
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 37
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE schedule Using MIP From line 459
 
@@ -1807,7 +1965,7 @@ Equation Listing    SOLVE schedule Using MIP From line 459
       - 10*R(scen74,t22) - 10*R(scen74,t23) - 10*R(scen74,t24) - 10*R(scen75,t1) - 10*R(scen75,t2) - 10*R(scen75,t3) - 10*R(scen75,t4) - 10*R(scen75,t5) - 10*R(scen75,t6) - 10*R(scen75,t7) - 10*R(scen75,t8) - 10*R(scen75,t9) - 10*R(scen75,t10)
      
       - 10*R(scen75,t11) - 10*R(scen75,t12) - 10*R(scen75,t13) - 10*R(scen75,t14) - 10*R(scen75,t15) - 10*R(scen75,t16) - 10*R(scen75,t17) - 10*R(scen75,t18) - 10*R(scen75,t19) - 10*R(scen75,t20) - 10*R(scen75,t21) - 10*R(scen75,t22) - 10*R(scen75,t23)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 35
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 38
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE schedule Using MIP From line 459
 
@@ -1865,7 +2023,7 @@ Equation Listing    SOLVE schedule Using MIP From line 459
       - 10*R(scen88,t24) - 10*R(scen89,t1) - 10*R(scen89,t2) - 10*R(scen89,t3) - 10*R(scen89,t4) - 10*R(scen89,t5) - 10*R(scen89,t6) - 10*R(scen89,t7) - 10*R(scen89,t8) - 10*R(scen89,t9) - 10*R(scen89,t10) - 10*R(scen89,t11) - 10*R(scen89,t12)
      
       - 10*R(scen89,t13) - 10*R(scen89,t14) - 10*R(scen89,t15) - 10*R(scen89,t16) - 10*R(scen89,t17) - 10*R(scen89,t18) - 10*R(scen89,t19) - 10*R(scen89,t20) - 10*R(scen89,t21) - 10*R(scen89,t22) - 10*R(scen89,t23) - 10*R(scen89,t24) - 10*R(scen90,t1)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 36
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 39
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE schedule Using MIP From line 459
 
@@ -1915,27 +2073,27 @@ Equation Listing    SOLVE schedule Using MIP From line 459
       - 10*R(scen100,t21) - 10*R(scen100,t22) - 10*R(scen100,t23) - 10*R(scen100,t24) =E= 0 ; (LHS = -1000, INFES = 1000 ****)
      
 ----    369 Equation   Objective     0.007     0.012 SECS      5 MB      1
-                                      0.001              ROWGEN
-                                      0.006              COLGEN
+                                      0.002              ROWGEN
+                                      0.005              COLGEN
 
 ---- Const1_1  =L=  
 
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 37
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 40
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE schedule Using MIP From line 459
 
 
      Const1_1  =L=  
 
-Const1_1(scen1,t1)..  - X(scen1,t1) + Y(t1) - 120.34*Z(scen1) - 20*R(scen1,t1) =L= 32.98 ; (LHS = -20)
+Const1_1(scen1,t1)..  - X(scen1,t1) + Y(t1) - 120.83*Z(scen1) - 20*R(scen1,t1) =L= 32.98 ; (LHS = -20)
      
-Const1_1(scen1,t2)..  - X(scen1,t2) + Y(t2) - 103.25*Z(scen1) - 20*R(scen1,t2) =L= 40.95 ; (LHS = 0)
+Const1_1(scen1,t2)..  - X(scen1,t2) + Y(t2) - 104.39*Z(scen1) - 20*R(scen1,t2) =L= 40.95 ; (LHS = 0)
      
-Const1_1(scen1,t3)..  - X(scen1,t3) + Y(t3) - 111.65*Z(scen1) - 20*R(scen1,t3) =L= 28.93 ; (LHS = 0)
+Const1_1(scen1,t3)..  - X(scen1,t3) + Y(t3) - 113.87*Z(scen1) - 20*R(scen1,t3) =L= 28.93 ; (LHS = 0)
      
-Const1_1(scen1,t4)..  - X(scen1,t4) + Y(t4) - 122.52*Z(scen1) - 20*R(scen1,t4) =L= 8.17 ; (LHS = 0)
+Const1_1(scen1,t4)..  - X(scen1,t4) + Y(t4) - 122.75*Z(scen1) - 20*R(scen1,t4) =L= 8.17 ; (LHS = 0)
      
-Const1_1(scen1,t5)..  - X(scen1,t5) + Y(t5) - 123.54*Z(scen1) - 20*R(scen1,t5) =L= 7.93 ; (LHS = 0)
+Const1_1(scen1,t5)..  - X(scen1,t5) + Y(t5) - 123.92*Z(scen1) - 20*R(scen1,t5) =L= 7.93 ; (LHS = 0)
      
 REMAINING 2395 ENTRIES SKIPPED
 
@@ -1953,7 +2111,7 @@ Const1_2..  - Z(scen1) - Z(scen2) - Z(scen3) - Z(scen4) - Z(scen5) - Z(scen6) - 
      
       - Z(scen62) - Z(scen63) - Z(scen64) - Z(scen65) - Z(scen66) - Z(scen67) - Z(scen68) - Z(scen69) - Z(scen70) - Z(scen71) - Z(scen72) - Z(scen73) - Z(scen74) - Z(scen75) - Z(scen76) - Z(scen77) - Z(scen78) - Z(scen79) - Z(scen80) - Z(scen81)
      
-      - Z(scen82) - Z(scen83) - Z(scen84) - Z(scen85) - Z(scen86) - Z(scen87) - Z(scen88) - Z(scen89) - Z(scen90) - Z(scen91) - Z(scen92) - Z(scen93) - Z(scen94) - Z(scen95) - Z(scen96) - Z(scen97) - Z(scen98) - Z(scen99) - Z(scen100) =G= -3 ; (LHS = 0)
+      - Z(scen82) - Z(scen83) - Z(scen84) - Z(scen85) - Z(scen86) - Z(scen87) - Z(scen88) - Z(scen89) - Z(scen90) - Z(scen91) - Z(scen92) - Z(scen93) - Z(scen94) - Z(scen95) - Z(scen96) - Z(scen97) - Z(scen98) - Z(scen99) - Z(scen100) =G= -5 ; (LHS = 0)
      
 ----    387 Equation   Const1_2      0.000     0.014 SECS      6 MB      1
                                       0.000              ROWGEN
@@ -1976,7 +2134,7 @@ REMAINING 2295 ENTRIES SKIPPED
 ----    396 Equation   Const_3_1     0.003     0.017 SECS      7 MB   2300
                                       0.002              ROWGEN
                                       0.001              COLGEN
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 38
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 41
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE schedule Using MIP From line 459
 
@@ -2014,8 +2172,8 @@ Const_4_1(scen1,t7)..  U(scen1,t5) + U(scen1,t6) + U(scen1,t7) - R(scen1,t7) =L=
 REMAINING 2195 ENTRIES SKIPPED
 
 ----    405 Equation   Const_4_1     0.007     0.027 SECS      8 MB   2200
-                                      0.006              ROWGEN
-                                      0.001              COLGEN
+                                      0.007              ROWGEN
+                                      0.000              COLGEN
 
 ---- Const_4_2  =L=  
 
@@ -2034,7 +2192,7 @@ REMAINING 2195 ENTRIES SKIPPED
 ----    409 Equation   Const_4_2     0.008     0.035 SECS      9 MB   2200
                                       0.007              ROWGEN
                                       0.001              COLGEN
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 39
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 42
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE schedule Using MIP From line 459
 
@@ -2071,10 +2229,10 @@ Const_6(scen1,t5)..  - X(scen1,t5) - 80*U(scen1,t5) - 80*V(scen1,t6) + 110*R(sce
      
 REMAINING 2295 ENTRIES SKIPPED
 
-----    418 Equation   Const_6       0.002     0.039 SECS     10 MB   2300
+----    418 Equation   Const_6       0.003     0.040 SECS     10 MB   2300
                                       0.002              ROWGEN
-                                      0.000              COLGEN
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 40
+                                      0.001              COLGEN
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 43
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE schedule Using MIP From line 459
 
@@ -2132,7 +2290,7 @@ Y(t1)
         1       Const1_1(scen14,t1)
         1       Const1_1(scen15,t1)
         1       Const1_1(scen16,t1)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 41
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 44
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE schedule Using MIP From line 459
 
@@ -2190,7 +2348,7 @@ Column Listing      SOLVE schedule Using MIP From line 459
         1       Const1_1(scen65,t1)
         1       Const1_1(scen66,t1)
         1       Const1_1(scen67,t1)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 42
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 45
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE schedule Using MIP From line 459
 
@@ -2248,7 +2406,7 @@ Y(t2)
         1       Const1_1(scen12,t2)
         1       Const1_1(scen13,t2)
         1       Const1_1(scen14,t2)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 43
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 46
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE schedule Using MIP From line 459
 
@@ -2306,7 +2464,7 @@ Column Listing      SOLVE schedule Using MIP From line 459
         1       Const1_1(scen63,t2)
         1       Const1_1(scen64,t2)
         1       Const1_1(scen65,t2)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 44
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 47
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE schedule Using MIP From line 459
 
@@ -2364,7 +2522,7 @@ Y(t3)
         1       Const1_1(scen10,t3)
         1       Const1_1(scen11,t3)
         1       Const1_1(scen12,t3)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 45
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 48
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE schedule Using MIP From line 459
 
@@ -2422,7 +2580,7 @@ Column Listing      SOLVE schedule Using MIP From line 459
         1       Const1_1(scen61,t3)
         1       Const1_1(scen62,t3)
         1       Const1_1(scen63,t3)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 46
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 49
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE schedule Using MIP From line 459
 
@@ -2480,7 +2638,7 @@ U(scen1,t2)
                 (.LO, .L, .UP, .M = 0, 0, 1, 0)
       -50       Const_3_1(scen1,t1)
         1       Const_4_1(scen1,t3)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 47
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 50
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE schedule Using MIP From line 459
 
@@ -2533,7 +2691,7 @@ OBJ
                 (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
         1       Objective
 
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 48
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 51
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE schedule Using MIP From line 459
 
@@ -2542,93 +2700,93 @@ Column Listing      SOLVE schedule Using MIP From line 459
 
 Z(scen1)
                 (.LO, .L, .UP, .M = 0, 0, 1, 0)
-     -120.34    Const1_1(scen1,t1)
-     -103.25    Const1_1(scen1,t2)
-     -111.65    Const1_1(scen1,t3)
-     -122.52    Const1_1(scen1,t4)
-     -123.54    Const1_1(scen1,t5)
-     -113.54    Const1_1(scen1,t6)
-     -124.79    Const1_1(scen1,t7)
-     -125.82    Const1_1(scen1,t8)
-     -110.55    Const1_1(scen1,t9)
-     -115.87    Const1_1(scen1,t10)
-     -122.54    Const1_1(scen1,t11)
-     -130       Const1_1(scen1,t12)
-     -125.81    Const1_1(scen1,t13)
-     -126.19    Const1_1(scen1,t14)
-     -119.91    Const1_1(scen1,t15)
-     -109.85    Const1_1(scen1,t16)
-     -115.23    Const1_1(scen1,t17)
-     -117.65    Const1_1(scen1,t18)
-     -121.03    Const1_1(scen1,t19)
-     -111.77    Const1_1(scen1,t20)
-      -94.62    Const1_1(scen1,t21)
-      -85.56    Const1_1(scen1,t22)
-      -71.23    Const1_1(scen1,t23)
-      -66.8     Const1_1(scen1,t24)
+     -120.83    Const1_1(scen1,t1)
+     -104.39    Const1_1(scen1,t2)
+     -113.87    Const1_1(scen1,t3)
+     -122.75    Const1_1(scen1,t4)
+     -123.92    Const1_1(scen1,t5)
+     -113.74    Const1_1(scen1,t6)
+     -125.04    Const1_1(scen1,t7)
+     -126.05    Const1_1(scen1,t8)
+     -111.13    Const1_1(scen1,t9)
+     -116.14    Const1_1(scen1,t10)
+     -123.19    Const1_1(scen1,t11)
+     -130.23    Const1_1(scen1,t12)
+     -126.13    Const1_1(scen1,t13)
+     -126.74    Const1_1(scen1,t14)
+     -120.29    Const1_1(scen1,t15)
+     -110.16    Const1_1(scen1,t16)
+     -121.5     Const1_1(scen1,t17)
+     -119.84    Const1_1(scen1,t18)
+     -122.35    Const1_1(scen1,t19)
+     -115.86    Const1_1(scen1,t20)
+      -96.13    Const1_1(scen1,t21)
+      -87.68    Const1_1(scen1,t22)
+      -72.25    Const1_1(scen1,t23)
+      -69.05    Const1_1(scen1,t24)
        -1       Const1_2
 
 Z(scen2)
                 (.LO, .L, .UP, .M = 0, 0, 1, 0)
-     -111.44    Const1_1(scen2,t1)
-      -99.92    Const1_1(scen2,t2)
-      -89.47    Const1_1(scen2,t3)
-     -126.45    Const1_1(scen2,t4)
-     -119.91    Const1_1(scen2,t5)
-     -111.7     Const1_1(scen2,t6)
-     -113.32    Const1_1(scen2,t7)
-     -120.86    Const1_1(scen2,t8)
-     -100.95    Const1_1(scen2,t9)
-     -105.76    Const1_1(scen2,t10)
-     -106.77    Const1_1(scen2,t11)
-      -97.56    Const1_1(scen2,t12)
-     -123.43    Const1_1(scen2,t13)
-     -115.77    Const1_1(scen2,t14)
-      -88.63    Const1_1(scen2,t15)
-     -101.16    Const1_1(scen2,t16)
-     -109.22    Const1_1(scen2,t17)
-     -101.12    Const1_1(scen2,t18)
-     -131.94    Const1_1(scen2,t19)
-     -129.52    Const1_1(scen2,t20)
-     -124.21    Const1_1(scen2,t21)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 49
+     -111.93    Const1_1(scen2,t1)
+     -101.06    Const1_1(scen2,t2)
+      -91.69    Const1_1(scen2,t3)
+     -126.68    Const1_1(scen2,t4)
+     -120.29    Const1_1(scen2,t5)
+     -111.9     Const1_1(scen2,t6)
+     -113.57    Const1_1(scen2,t7)
+     -121.09    Const1_1(scen2,t8)
+     -101.53    Const1_1(scen2,t9)
+     -106.03    Const1_1(scen2,t10)
+     -107.42    Const1_1(scen2,t11)
+      -97.79    Const1_1(scen2,t12)
+     -123.75    Const1_1(scen2,t13)
+     -116.32    Const1_1(scen2,t14)
+      -89.01    Const1_1(scen2,t15)
+     -101.47    Const1_1(scen2,t16)
+     -115.49    Const1_1(scen2,t17)
+     -103.31    Const1_1(scen2,t18)
+     -133.26    Const1_1(scen2,t19)
+     -133.61    Const1_1(scen2,t20)
+     -125.72    Const1_1(scen2,t21)
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 52
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE schedule Using MIP From line 459
 
 
      Z  
 
-     -108.54    Const1_1(scen2,t22)
-     -123.25    Const1_1(scen2,t23)
-     -122.83    Const1_1(scen2,t24)
+     -110.66    Const1_1(scen2,t22)
+     -124.27    Const1_1(scen2,t23)
+     -125.08    Const1_1(scen2,t24)
        -1       Const1_2
 
 Z(scen3)
                 (.LO, .L, .UP, .M = 0, 0, 1, 0)
-     -112.35    Const1_1(scen3,t1)
-     -124.34    Const1_1(scen3,t2)
-     -115.8     Const1_1(scen3,t3)
-     -104.85    Const1_1(scen3,t4)
-     -109.15    Const1_1(scen3,t5)
-     -106.23    Const1_1(scen3,t6)
-     -125.46    Const1_1(scen3,t7)
-     -118.5     Const1_1(scen3,t8)
-     -131.97    Const1_1(scen3,t9)
-     -112.06    Const1_1(scen3,t10)
-      -99.73    Const1_1(scen3,t11)
-      -94.69    Const1_1(scen3,t12)
-     -114.84    Const1_1(scen3,t13)
-     -115.28    Const1_1(scen3,t14)
-     -128.82    Const1_1(scen3,t15)
-     -106.91    Const1_1(scen3,t16)
-      -76.66    Const1_1(scen3,t17)
-      -73.46    Const1_1(scen3,t18)
-     -106.28    Const1_1(scen3,t19)
-      -98.67    Const1_1(scen3,t20)
-     -110.58    Const1_1(scen3,t21)
-     -114.22    Const1_1(scen3,t22)
-     -118.25    Const1_1(scen3,t23)
-     -108.23    Const1_1(scen3,t24)
+     -112.84    Const1_1(scen3,t1)
+     -125.48    Const1_1(scen3,t2)
+     -118.02    Const1_1(scen3,t3)
+     -105.08    Const1_1(scen3,t4)
+     -109.53    Const1_1(scen3,t5)
+     -106.43    Const1_1(scen3,t6)
+     -125.71    Const1_1(scen3,t7)
+     -118.73    Const1_1(scen3,t8)
+     -132.55    Const1_1(scen3,t9)
+     -112.33    Const1_1(scen3,t10)
+     -100.38    Const1_1(scen3,t11)
+      -94.92    Const1_1(scen3,t12)
+     -115.16    Const1_1(scen3,t13)
+     -115.83    Const1_1(scen3,t14)
+     -129.2     Const1_1(scen3,t15)
+     -107.22    Const1_1(scen3,t16)
+      -82.93    Const1_1(scen3,t17)
+      -75.65    Const1_1(scen3,t18)
+     -107.6     Const1_1(scen3,t19)
+     -102.76    Const1_1(scen3,t20)
+     -112.09    Const1_1(scen3,t21)
+     -116.34    Const1_1(scen3,t22)
+     -119.27    Const1_1(scen3,t23)
+     -110.48    Const1_1(scen3,t24)
        -1       Const1_2
 
 REMAINING 97 ENTRIES SKIPPED
@@ -2649,7 +2807,7 @@ R(scen1,t2)
       -10       Objective
       -20       Const1_1(scen1,t2)
        20       Const_3_1(scen1,t1)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 50
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 53
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE schedule Using MIP From line 459
 
@@ -2678,7 +2836,7 @@ R(scen1,t3)
       110       Const_6(scen1,t3)
 
 REMAINING 2397 ENTRIES SKIPPED
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 51
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 54
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Model Statistics    SOLVE schedule Using MIP From line 459
 
@@ -2690,19 +2848,19 @@ BLOCKS OF VARIABLES           7     SINGLE VARIABLES        9,725
 NON ZERO ELEMENTS        73,525     DISCRETE VARIABLES      2,400
 
 
-----    459 Solve Fini schedule      0.083     0.122 SECS     10 MB  73525
+----    459 Solve Fini schedule      0.167     0.207 SECS     10 MB  73525
                                       0.001              ROWS
                                       0.005              COLUMNS
-                                      0.074              OTHERS
-GENERATION TIME      =        0.117 SECONDS     10 MB  24.8.5 r61358 LEX-LEG
+                                      0.159              OTHERS
+GENERATION TIME      =        0.202 SECONDS     10 MB  24.8.5 r61358 LEX-LEG
 
 
-EXECUTION TIME       =        0.122 SECONDS     10 MB  24.8.5 r61358 LEX-LEG
-----    459 GAMS Fini                0.021     0.021 SECS     10 MB 
+EXECUTION TIME       =        0.207 SECONDS     10 MB  24.8.5 r61358 LEX-LEG
+----    459 GAMS Fini                0.050     0.050 SECS     10 MB 
 ----      1 InitE                    0.000     0.000 SECS      3 MB 
 ----      1 ExecInit                 0.000     0.000 SECS      3 MB 
 ----    459 Solve Alg  schedule      0.000     0.000 SECS      3 MB 
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 52
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 55
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE schedule Using MIP From line 459
 
@@ -2715,10 +2873,10 @@ Solution Report     SOLVE schedule Using MIP From line 459
 
 **** SOLVER STATUS     3 Resource Interrupt        
 **** MODEL STATUS      8 Integer Solution          
-**** OBJECTIVE VALUE            -6398.2807
+**** OBJECTIVE VALUE            -6646.8672
 
- RESOURCE USAGE, LIMIT       4145.980      4200.000
- ITERATION COUNT, LIMIT   1232705    2000000000
+ RESOURCE USAGE, LIMIT       3344.220      4200.000
+ ITERATION COUNT, LIMIT   1067709    2000000000
 Gurobi link license.
 Gurobi library version 7.0.2
 Space for names approximately 0.64 Mb
@@ -2726,55 +2884,54 @@ MIP status(9): Optimization terminated due to time limit.
 
 Fixed MIP status(2): Model was solved to optimality (subject to tolerances).
 
-Final Solve:         -6398.280674    (401 iterations)
-Best possible:       -9933.780402
-Absolute gap:         3535.499727
-Relative gap:            0.355907
+Final Solve:         -6646.867178    (4 iterations)
+Best possible:      -11581.059807
+Absolute gap:         4934.192629
+Relative gap:            0.426057
 
 
 **** REPORT SUMMARY :        0     NONOPT
                              0 INFEASIBLE
                              0  UNBOUNDED
-                             1  PROJECTED
-----    459 Solve Read schedule      0.004     0.004 SECS      4 MB 
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 53
+----    459 Solve Read schedule      0.070     0.070 SECS      4 MB 
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 56
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 E x e c u t i o n
 
 
-----    460 Assignment end_time      0.000     0.004 SECS      5 MB      0
-----    462 Assignment run_time_total    0.000     0.004 SECS      5 MB      0
+----    460 Assignment end_time      0.000     0.070 SECS      5 MB      0
+----    462 Assignment run_time_total    0.000     0.070 SECS      5 MB      0
 
-----    463 VARIABLE OBJ.L                 =  -6.39828E+3  
+----    463 VARIABLE OBJ.L                 =  -6.64687E+3  
             PARAMETER run_time_total       =  4.200000E+3  
-----    463 Display                  0.000     0.004 SECS      5 MB 
-----    466 Assignment ObjNaive      0.000     0.004 SECS      5 MB      0
-----    469 Assignment zlower        0.000     0.004 SECS      5 MB      0
-----    472 Assignment zupper        0.000     0.004 SECS      5 MB      0
-----    475 Assignment GapNaive      0.000     0.004 SECS      5 MB      0
+----    463 Display                  0.000     0.070 SECS      5 MB 
+----    466 Assignment ObjNaive      0.000     0.070 SECS      5 MB      0
+----    469 Assignment zlower        0.000     0.070 SECS      5 MB      0
+----    472 Assignment zupper        0.000     0.070 SECS      5 MB      0
+----    475 Assignment GapNaive      0.000     0.070 SECS      5 MB      0
 
-----    477 PARAMETER ObjNaive             =  6.398281E+3  
-----    477 Display                  0.000     0.004 SECS      5 MB 
-----    481 Assignment TestingFile3    0.000     0.004 SECS      5 MB      0
-----    482 Assignment TestingFile3    0.000     0.004 SECS      5 MB      0
-----    483 Put                      0.000     0.004 SECS      5 MB 
-----    484 Put                      0.000     0.004 SECS      5 MB 
-----    484 Put                      0.000     0.004 SECS      5 MB 
-----    484 Put                      0.000     0.004 SECS      5 MB 
-----    484 Put                      0.000     0.004 SECS      5 MB 
-----    484 Put                      0.000     0.004 SECS      5 MB 
-----    485 Put                      0.000     0.004 SECS      5 MB 
-----    485 Put                      0.000     0.004 SECS      5 MB 
-----    485 Put                      0.000     0.004 SECS      5 MB 
-----    485 Put                      0.000     0.004 SECS      5 MB 
-----    485 Put                      0.000     0.004 SECS      5 MB 
+----    477 PARAMETER ObjNaive             =  6.646867E+3  
+----    477 Display                  0.000     0.070 SECS      5 MB 
+----    481 Assignment TestingFile3    0.000     0.070 SECS      5 MB      0
+----    482 Assignment TestingFile3    0.000     0.070 SECS      5 MB      0
+----    483 Put                      0.000     0.070 SECS      5 MB 
+----    484 Put                      0.000     0.070 SECS      5 MB 
+----    484 Put                      0.000     0.070 SECS      5 MB 
+----    484 Put                      0.000     0.070 SECS      5 MB 
+----    484 Put                      0.000     0.070 SECS      5 MB 
+----    484 Put                      0.000     0.070 SECS      5 MB 
+----    485 Put                      0.000     0.070 SECS      5 MB 
+----    485 Put                      0.000     0.070 SECS      5 MB 
+----    485 Put                      0.000     0.070 SECS      5 MB 
+----    485 Put                      0.000     0.070 SECS      5 MB 
+----    485 Put                      0.000     0.070 SECS      5 MB 
 
 **** REPORT FILE SUMMARY
 
-TestingFile3 /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol03/Scenario18/Naive.csv
+TestingFile3 /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol05/Scenario18/Naive.csv
 
 
-EXECUTION TIME       =        0.006 SECONDS      5 MB  24.8.5 r61358 LEX-LEG
+EXECUTION TIME       =        0.080 SECONDS      5 MB  24.8.5 r61358 LEX-LEG
 
 
 USER: Small MUD - 5 User License                     S160825:0507AO-LNX
@@ -2784,23 +2941,23 @@ USER: Small MUD - 5 User License                     S160825:0507AO-LNX
 
 **** FILE SUMMARY
 
-Input      /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol03/Scenario18/main_for_naive.gms
-Output     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol03/Scenario18/main_for_naive.lst
+Input      /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol05/Scenario18/main_for_naive.gms
+Output     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol05/Scenario18/main_for_naive.lst
 ----    485 GAMS Fini                0.000     0.000 SECS      5 MB 
  
----- Profile Summary (383 records processed)
-     0.083   0.010GB       459 Solve Fini schedule (73525)
-     0.021   0.010GB       459 GAMS Fini   
+---- Profile Summary (527 records processed)
+     0.167   0.010GB       459 Solve Fini schedule (73525)
+     0.070   0.004GB       459 Solve Read schedule
+     0.050   0.010GB       459 GAMS Fini   
      0.008   0.009GB       409 Equation   Const_4_2 (2200)
      0.007   0.005GB       369 Equation   Objective (1)
      0.007   0.008GB       405 Equation   Const_4_1 (2200)
-     0.004   0.004GB       459 Solve Read schedule
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     01/08/22 17:49:22 Page 54
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     02/21/22 18:31:29 Page 57
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 E x e c u t i o n
 
 
+     0.003   0.010GB       418 Equation   Const_6 (2300)
      0.003   0.007GB       396 Equation   Const_3_1 (2300)
+     0.003   0.004GB       274 Loop       
      0.003   0.008GB       399 Equation   Const_3_2 (2300)
-     0.002   0.010GB       418 Equation   Const_6 (2300)
-     0.002   0.004GB       274 Loop       
