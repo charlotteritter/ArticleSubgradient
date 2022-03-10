@@ -1,0 +1,69 @@
+--- Job main_for_naive.gms Start 03/09/22 14:56:41 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\main_for_naive.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- main_for_naive.gms(13) 2 Mb
+--- . inputME.gms(14) 3 Mb
+--- .. solar_scenarios.csv(1501) 4 Mb
+--- . inputME.gms(36) 4 Mb
+--- .. scenario_sorted.csv(1501) 4 Mb
+--- . inputME.gms(116) 4 Mb
+--- .. battery_revenue.csv(25) 4 Mb
+--- . inputME.gms(185) 4 Mb
+--- main_for_naive.gms(14) 4 Mb
+--- . subgradient_parameters.gms(33) 4 Mb
+--- main_for_naive.gms(16) 4 Mb
+--- . equations_all.gms(76) 4 Mb
+--- main_for_naive.gms(51) 4 Mb
+--- Starting execution: elapsed 0:00:00.043
+--- main_for_naive.gms(3344) 14 Mb
+--- Generating MIP model schedule
+--- main_for_naive.gms(3288) 14 Mb
+--- Starting Equ Objective: elapsed 0:00:00.271
+--- main_for_naive.gms(3290) 17 Mb
+--- Starting Equ Const1: elapsed 0:00:00.783
+--- main_for_naive.gms(3296) 38 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:00.847
+--- main_for_naive.gms(3303) 50 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:00.909
+--- main_for_naive.gms(3345) 50 Mb
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:01.064
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+Gurobi link license.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:01.216
+--- main_for_naive.gms(3371) 50 Mb
+--- Putfile TestingFile3 C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\Naive.csv
+--- Profile Summary (1238 records processed)
+     0.515   0.017GB      3288 Equation   Objective (1)
+     0.203   0.005GB      3211 Loop       
+     0.141   0.051GB      3345 Solve Fini schedule (319525)
+     0.140   0.051GB      3345 Solve Alg  schedule
+     0.063   0.038GB      3290 Equation   Const1 (34500)
+     0.062   0.050GB      3296 Equation   Const_chance_1 (36000)
+     0.016   0.005GB      3218 Assignment dummysolar (21000)
+     0.016   0.005GB      3212 Loop       
+     0.016   0.050GB      3303 Equation   Const_chance_2 (1)
+     0.016   0.005GB      3218 Assignment dummysolar (20123)
+*** Status: Normal completion
+--- Job main_for_naive.gms Stop 03/09/22 14:56:42 elapsed 0:00:01.218

@@ -154,7 +154,7 @@ hold off
 % create S samples, and write them to a file. You will need to manually
 % change the file format to be specific to what another modeling language (e.g., GAMS) might use 
 
-S=1500;
+S=18000;
 % go back a 100 time periods (arbitrary)
 
 for i=1:24
@@ -172,7 +172,7 @@ Sample = [Samp{1}; Samp{2}; Samp{3}; Samp{4}; Samp{5}; Samp{6}; Samp{7}; Samp{8}
 Sample = max(0, Sample) ;
 Actual = RawHour(size(train,1)+1: size(train,1),:) ;
 
-writematrix(Sample','1500samples.csv') 
+writematrix(Sample','18000samples.csv') 
 
 % Plot these samples
 figure
