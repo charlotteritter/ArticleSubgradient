@@ -1,4 +1,4 @@
---- Job fixed_problem_hi.gms Start 03/09/22 14:54:08 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Job fixed_problem_hi.gms Start 03/09/22 14:54:17 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     C:\GAMS\32\gmsprmNT.txt
 --- GAMS Parameters defined
@@ -16,27 +16,65 @@ Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
           Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
           C:\GAMS\32\gamslice.txt
 --- Starting compilation
---- fixed_problem_hi.gms(30) 3 Mb 1 Error
-*** Error 282 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\fixed_problem_hi.gms
-    Unable to open include file
---- fixed_problem_hi.gms(32) 3 Mb 2 Errors
-*** Error 463 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\fixed_problem_hi.gms
-    The column section in the previous table is missing.
-       You may want to use $ON/OFFEMPTY
---- fixed_problem_hi.gms(53) 3 Mb
---- . sampled_dynamic_hi.csv(25) 3 Mb
---- fixed_problem_hi.gms(62) 3 Mb
---- . battery_revenue.csv(25) 3 Mb
---- fixed_problem_hi.gms(185) 3 Mb 3 Errors
-*** Error 257 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\fixed_problem_hi.gms
-    Solve statement not checked because of previous errors
---- fixed_problem_hi.gms(188) 3 Mb 4 Errors
-*** Error 141 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\fixed_problem_hi.gms
-    Symbol declared but no values have been assigned. Check for missing
-       data definition, assignment, data loading or implicit assignment
-       via a solve statement.
-       A wild shot: You may have spurious commas in the explanatory
-       text of a declaration. Check symbol reference list.
---- fixed_problem_hi.gms(208) 3 Mb 4 Errors
-*** Status: Compilation error(s)
---- Job fixed_problem_hi.gms Stop 03/09/22 14:54:08 elapsed 0:00:00.019
+--- fixed_problem_hi.gms(30) 3 Mb
+--- . solar_scenarios.csv(1501) 4 Mb
+--- fixed_problem_hi.gms(53) 4 Mb
+--- . sampled_dynamic_hi.csv(25) 4 Mb
+--- fixed_problem_hi.gms(62) 4 Mb
+--- . battery_revenue.csv(25) 4 Mb
+--- fixed_problem_hi.gms(208) 4 Mb
+--- Starting execution: elapsed 0:00:00.042
+--- fixed_problem_hi.gms(1733) 14 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(1704) 14 Mb
+--- Starting Equ Objective: elapsed 0:00:00.228
+--- fixed_problem_hi.gms(1706) 18 Mb
+--- Starting Equ Const1: elapsed 0:00:00.715
+--- fixed_problem_hi.gms(1709) 38 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:00.776
+--- fixed_problem_hi.gms(1712) 50 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:00.850
+--- fixed_problem_hi.gms(1736) 50 Mb
+--- LOOPS iter = iter1
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:01.021
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+Gurobi link license.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:01.424
+--- fixed_problem_hi.gms(1733) 50 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(1704) 50 Mb
+--- Starting Equ Objective: elapsed 0:00:01.424
+--- fixed_problem_hi.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:02.024
+--- fixed_problem_hi.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:02.144
+--- fixed_problem_hi.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:02.262
+--- fixed_problem_hi.gms(1736) 51 Mb
+--- LOOPS iter = iter2
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+*** Error at line 1736: Control C Event: execution halted
+--- fixed_problem_hi.gms(1736) 51 Mb 1 Error
+*** SOLVE aborted
+--- Profile Summary (1228 records processed)
+     0.609   0.051GB      1704 Equation   Objective (1)
+     0.485   0.018GB      1704 Equation   Objective (1)
+     0.375   0.051GB      1736 Solve Alg  schedule
+     0.203   0.051GB      1736 Solve Fini schedule (319525)
+     0.172   0.051GB      1736 Solve Fini schedule (319525)
+     0.157   0.005GB      1668 Loop       
+     0.125   0.051GB      1709 Equation   Const_chance_1 (36000)
+     0.110   0.051GB      1706 Equation   Const1 (34500)
+     0.078   0.050GB      1709 Equation   Const_chance_1 (36000)
+     0.062   0.038GB      1706 Equation   Const1 (34500)
+--- fixed_problem_hi.gms(1736) 51 Mb 1 Error
+*** Status: Execution error(s)
+--- Job fixed_problem_hi.gms Stop 03/09/22 14:54:20 elapsed 0:00:02.510
