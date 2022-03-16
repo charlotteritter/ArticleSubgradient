@@ -19,7 +19,7 @@ SCALAR start_time, end_time, run_time_total;
 *-------------------------------------------------------------------------------
 
 SETS T times/t1*t24/;
-SETS W scenarios /scen1*scen1200/;
+SETS W scenarios /scen1*scen7200/;
 SETS iter iterations /iter1*iter30/;
 *SETS rho_ind /r1*r5/;
 *parameter rho_val(rho_ind) / r1 5, r2 40, r3 80, r4 120, r5 160/;
@@ -38,14 +38,14 @@ ALIAS (W,Scen);
 TABLE Solar(scen,t)
 $ondelim
 *$INCLUDE %SOLAR%.csv
-$INCLUDE solar_scenarios_1200.csv
+$INCLUDE solar_scenarios_7200.csv
 $offdelim
 ;
 
 *Tolerance 
 scalar tol;
 *tol=%TOL%;
-tol=0.01;
+tol=0.03;
 
 
 * time limit for each problem

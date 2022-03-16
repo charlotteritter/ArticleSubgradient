@@ -11,7 +11,7 @@ SETS SCEN scenarios /scen1*scen900/;
 TABLE Solar(scen,t)
 $ondelim
 *$INCLUDE %SOLAR%.csv
-$INCLUDE solar_scenarios_900_2.csv
+$INCLUDE solar_scenarios.csv
 $offdelim
 ;
 
@@ -33,7 +33,7 @@ time_limit=2250;
 table scenario_sorted(scen,*)
 $ondelim
 *$INCLUDE %SORTEDFILE%.csv
-$INCLUDE scenario_sorted_900_2_07.csv
+$INCLUDE scenario_sorted.csv
 *$INCLUDE scenario_sorted_100_2_01.csv
 *$INCLUDE scenario_sorted_100_3_01.csv
 *$INCLUDE scenario_sorted_100_4_01.csv

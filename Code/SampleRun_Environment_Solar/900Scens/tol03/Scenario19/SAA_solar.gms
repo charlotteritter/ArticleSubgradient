@@ -19,7 +19,7 @@ SCALAR start_time, end_time, run_time_total;
 *-------------------------------------------------------------------------------
 
 SETS T times/t1*t24/;
-SETS W scenarios /scen1*scen1200/;
+SETS W scenarios /scen1*scen7200/;
 SETS iter iterations /iter1*iter30/;
 *SETS rho_ind /r1*r5/;
 *parameter rho_val(rho_ind) / r1 5, r2 40, r3 80, r4 120, r5 160/;
@@ -38,14 +38,14 @@ ALIAS (W,Scen);
 TABLE Solar(scen,t)
 $ondelim
 *$INCLUDE %SOLAR%.csv
-$INCLUDE solar_scenarios_1200.csv
+$INCLUDE solar_scenarios_7200.csv
 $offdelim
 ;
 
 *Tolerance 
 scalar tol;
 *tol=%TOL%;
-tol=0.01;
+tol=0.03;
 
 
 * time limit for each problem
@@ -152,15 +152,15 @@ EQUATIONS
         Const_chance_2            chance constraint sum probabilities
         ;
 
-Objective.. OBJ=E= SUM(T,Prices(T, 'REW')*Y(T) - Sum(w,probability(w,'value')* ( Prices(T, 'CHAR')* P(w,t) + Prices(t, 'DISCHAR') * Q(w,t) ) ) )  + rho*sum(t,dummy(t))   ;
+Objective.. OBJ=E= SUM(T,Prices(T, 'REW')*Y(T) - Sum(w$((ord(w) ge n) and (ord(w) le m)),probability(w,'value')* ( Prices(T, 'CHAR')* P(w,t) + Prices(t, 'DISCHAR') * Q(w,t) ) ) )  + rho*sum(t,dummy(t))   ;
 
-Const1(scen,t)$(ord(t) lt card(t))..
+Const1(scen,t)$(ord(t) lt card(t) and (ord(scen) ge n) and (ord(scen) le m))..
          X(scen,t+1) =E= X(scen,t) + eta* P(scen,t) - (1/eta)* Q(scen,t) ;
 
-Const_chance_1(scen,t).. Y(T) + P(scen,t) -  Q(scen,t) -SOLAR(scen,t) =L= Z(scen)*BigM(scen,t) ;
+Const_chance_1(scen,t)$((ord(scen) ge n) and (ord(scen) le m)).. Y(T) + P(scen,t) -  Q(scen,t) -SOLAR(scen,t) =L= Z(scen)*BigM(scen,t) ;
 
 
-Const_chance_2..      - sum(scen, z(scen)) =G= -threshold;
+Const_chance_2..      - sum(scen$((ord(scen) ge n) and (ord(scen) le m)), z(scen)*probability(scen,'value')) =G= -tol;
 
 
 *** bounds on any variables

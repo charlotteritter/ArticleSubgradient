@@ -176,9 +176,9 @@ parameter last_x(scen,t), last_p(scen,t), last_q(scen,t), last_z(scen), last_ph(
 model schedule     / Objective,  Const1, Const_chance_1, Const_chance_2/ ;
 
 parameter  profit(iter), y_previous(t), run_time(iter);
-scalar profit_orig, t1, t2;
+scalar profit_orig, t1, t2,start_time,end_time,tot_time;
 
-
+start_time=jnow;
 loop(iter,
          y.fx(t)=y_100(t,iter);
          t1=jnow ;
@@ -187,8 +187,11 @@ loop(iter,
          run_time(iter) = ghour(t2 - t1)*3600 + gminute(t2 - t1)*60 + gsecond(t2 - t1);
          profit(iter)= obj.l;
 );
-
+end_time=jnow;
 display y.l;
+
+tot_time =  ghour(end_time - start_time)*3600 + gminute(end_time - start_time)*60 + gsecond(end_time - start_time);
+
 
 ********************************************************************************
 *                                write output
@@ -202,4 +205,12 @@ PUT fixed_profit;
 loop(iter, put iter.tl put profit(iter) put run_time(iter) put /; );
 PUTCLOSE fixed_profit;
 
+scalar sma;
+sma=smin(iter,profit(iter));
+File TestingFile3 / Alg.csv /;
+TestingFile3.pc=5;
+TestingFile3.nd=5;
+put TestingFile3; 
+put 'Omega', put 'Tolerance', put 'Step Size Rule', put 'Iterations', put 'Converged?', put 'Gap LR', put 'Gap Naive', put 'Obj. Naive', put 'Obj. LR', put 'Gap' put 'Time Naive', put 'Time LR', put 'Final Lambda', put 'LB Heuristic' put /;
+put '', put '', put '', put '', put '', put '', put '', put '', put '', put '', put '', put '', put '', put sma put /;
 

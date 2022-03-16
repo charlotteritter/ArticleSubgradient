@@ -53,7 +53,7 @@ $OFFDELIM
 
 ** define tolerance threshold
 SCALAR TOL;
-TOL =0.03;
+TOL =0.05;
 
 * find Ntol + 1st value
 parameter maxwind(t), minwind(t), dummywind(w,t) ;

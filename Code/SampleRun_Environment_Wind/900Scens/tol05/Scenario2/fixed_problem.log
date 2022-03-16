@@ -1,0 +1,55 @@
+--- Job fixed_problem.gms Start 03/16/22 14:26:27 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\900Scens\tol05\Scenario2\fixed_problem.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\900Scens\tol05\Scenario2\225b\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- fixed_problem.gms(27) 3 Mb
+--- . wind_costs.csv(25) 3 Mb
+--- fixed_problem.gms(34) 3 Mb
+--- . wind_scenarios.csv(901) 4 Mb
+--- fixed_problem.gms(157) 4 Mb
+--- . sampled_dynamic.csv(25) 4 Mb
+--- fixed_problem.gms(193) 4 Mb
+--- Starting execution: elapsed 0:00:00.046
+--- fixed_problem.gms(1121) 10 Mb
+--- Generating MIP model SCHEDULE
+--- fixed_problem.gms(1037) 10 Mb
+--- Starting Equ Objective: elapsed 0:00:00.394
+--- fixed_problem.gms(1039) 15 Mb
+--- Starting Equ Const1_1: elapsed 0:00:00.982
+--- fixed_problem.gms(1041) 27 Mb
+--- Starting Equ Const1_2: elapsed 0:00:01.019
+--- fixed_problem.gms(1047) 27 Mb
+--- Starting Equ Const_3_1: elapsed 0:00:01.023
+--- fixed_problem.gms(1048) 34 Mb
+--- Starting Equ Const_3_2: elapsed 0:00:01.091
+*** Error at line 1047: Execution halted: Triggered by pending CtrlC event
+--- fixed_problem.gms(1124) 34 Mb 1 Error
+*** SOLVE aborted
+--- Profile Summary (3368 records processed)
+     0.594   0.015GB      1037 Equation   Objective (1)
+     0.328   0.005GB       986 Loop       
+     0.079   0.034GB      1047 Equation   Const_3_1 (20700)
+     0.031   0.005GB       987 Loop       
+     0.031   0.027GB      1039 Equation   Const1_1 (21600)
+     0.016   0.005GB       991 Assignment dummy (1)
+     0.016   0.005GB       987 Loop       
+     0.016   0.005GB       991 Assignment dummy (1)
+     0.016   0.005GB       989 Assignment minwind (20)
+     0.016   0.005GB       987 Loop       
+--- fixed_problem.gms(1124) 34 Mb 1 Error
+*** Status: Execution error(s)
+--- Job fixed_problem.gms Stop 03/16/22 14:26:28 elapsed 0:00:01.133

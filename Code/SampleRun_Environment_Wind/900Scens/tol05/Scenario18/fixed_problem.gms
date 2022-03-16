@@ -16,37 +16,141 @@ SCALAR start_time, end_time, run_time_total;
 
 ** sets defined in input file
 SETS T times/t1*t24/;
-SETS W scenarios /scen1*scen100/;
+SETS W scenarios /scen1*scen900/;
 
 ALIAS (T,TT);
 ALIAS (W,I);
 ALIAS (W,SCEN);
-
-SETS iter iterations /iter1*iter30/;
-
-TABLE Solar(scen,t)
-$ondelim
-*$INCLUDE %SOLAR%.csv
-$INCLUDE solar_scenarios.csv
-$offdelim
+** define generator costs and wind selling prices
+TABLE COSTS(T,*)
+$ONDELIM
+$INCLUDE wind_costs.csv
+$OFFDELIM
 ;
 
-*Tolerance 
-scalar tol;
-*tol=%TOL%;
-tol=0.03;
+** define wind realizations at all time periods
+TABLE WIND(W,T)
+$ONDELIM
+$INCLUDE wind_scenarios.csv
+$OFFDELIM
+;
+
+scalar PROBABILITY;
+PROBABILITY = 1/CARD(W);
+;
 
 
-* time limit for each problem
-scalar time_limit;
-*time_limit=%TIMELIM%;
-time_limit=2250;
+** define tolerance threshold
+SCALAR TOL;
+TOL =0.05;
 
-ALIAS (T,TT);
-alias(scen,i);
 
-scalar n;
-n=card(scen);
+* find Ntol + 1st value
+parameter maxwind(t), minwind(t), dummywind(w,t) ;
+maxwind(t) =smax(w,wind(w,t)) ;
+dummywind(w,t) = wind(w,t) ;
+
+scalar it ;
+it = floor(card(w)*tol) + 1;
+
+* index of it
+set dummy(w);
+* make the dum_iter go till at least the size of it
+set dum_iter /dum_iter1*dum_iter100/;
+loop(t,
+loop(dum_iter$(ord(dum_iter)le it),
+* find the smallest wind value for this t
+         minwind(t) = smin(w,dummywind(w,t)) ;
+* index of smallest wind value
+         dummy(w) = yes$(dummywind(w,t) eq minwind(t)) ;
+* make the smallest wind value large
+         dummywind(w,t)$dummy(w) =maxwind(t) ;
+); );
+display minwind ;
+
+** define generator ramp constraints
+* this data is from Ostrowski's paper, our generator was too too large
+SCALAR ramp;
+ramp=50;
+
+** define upper bound of generator capacity
+SCALAR G, GG, start_cost;
+G=130;
+GG=20;
+
+parameter BigMM(w), BigM(w,t);
+BigMM(w)= smax(t, wind(w,t));
+BigM(w,t)= G - wind(w,t) + minwind(t);
+
+SCALARS UPTIME, DOWNTIME;
+UPTIME =3;
+DOWNTIME=3;
+
+********************************************************************************
+*                                begin model
+********************************************************************************
+POSITIVE VARIABLES X(W,T), Y(T),U(W,T), V(W,T) ;
+VARIABLES OBJ;
+BINARY VARIABLE Z(W), R(W,T) ;
+
+EQUATIONS
+        Objective
+        Const1_1(W,T) bigm constraint
+        Const1_2     sum probabilities
+        Const_3_1(W,T) ramping constraint
+        Const_3_2(W,T) ramping constraint
+        Const_4_1(W,T) generator off constraints
+        Const_4_2(W,T) generator off constraints
+
+        Const_5(W,T) generator running constraints
+
+        Const_6(W,T)
+
+        ;
+
+Objective.. OBJ=E= SUM(T,COSTS(T, 'REW')*Y(T) - PROBABILITY*SUM(W, COSTS(T, 'GEN')*( X(W,T) + GG*R(w,t) ) )  )  ;
+
+Const1_1(W,T).. Y(T)-X(W,T)-R(W,T)*GG -WIND(W,T) =L= Z(W)*BigM(w,t) ;
+
+Const1_2..  SUM(W,Z(W)) =L= card(w)*TOL ;
+
+* The generator constraints
+
+*Ramp
+
+Const_3_1(W,T)$( ord(t) le (card(t)-1)).. X(W,T+1) + GG*R(w,t+1)- X(W,T) - GG*R(w,t)  =L= ramp*(U(w,t+1) + R(w,t)) ;
+Const_3_2(W,T)$( ord(t) le (card(t)-1)).. X(W,T) + GG*R(w,t)- X(W,T+1) -GG*R(w,t+1)=L= ramp*(V(w,t+1) + R(w,t+1)) ;
+
+*On/off
+
+Const_4_1(W,T)$(ord(t) ge uptime)..   Sum(tt$((ORD(TT) le ORD(T)) and (ORD(TT) ge (ORD(T) - UPTIME +1))),U(W,TT)) =L= R(W,T) ;
+Const_4_2(W,T)$(ord(t) ge downtime )..Sum(tt$((ORD(TT) le ORD(T)) and (ORD(TT) ge (ORD(T) - DOWNTIME +1))),V(W,TT)) =L= 1-R(W,T) ;
+
+
+Const_5(W,T)$(ord(t) ge 2).. U(W,T) - V(W,T) =E= R(W,T) - R(W,T-1) ;
+
+*if uptime more than 1
+Const_6(W,T)$( ord(t) le (card(t)-1))..   (G-GG)*R(W,T)- (G-ramp)*U(W,T) - (G-ramp)*V(W,T+1) =G= X(W,T);
+
+
+*** bounds on any variables
+X.UP(W,T) =  G-GG;
+U.UP(W,T) = 1;
+V.UP(W,T) =1;
+Z.UP(w)=1;
+
+* initialize the on/off variables
+* assume the unit was on for last (uptime -1) periods
+r.fx(w,t)$(ord(t) eq 1) =1;
+u.fx(w,t)$(ord(t) eq 1) = 0;
+v.fx(w,t)$(ord(t) eq 1) = 0 ;
+* assume the generator was producing minimim power in last time period
+x.up(w,t)$(ord(t) eq 1)= ramp - GG;
+
+set iter /iter1*iter30/;
+parameter  profit(iter), y_previous(t), run_time(iter);
+scalar profit_orig, t1, t2;
+
 
 TABLE y_100(t,iter)
 $ONDELIM
@@ -54,135 +158,19 @@ $INCLUDE sampled_dynamic.csv
 $OFFDELIM
 ;
 
+MODEL  SCHEDULE    /ALL/ ;
 
-** define battery  operation costs costs and solar selling prices
+* 1st solve with the plain old 20 scenario promise
+* use a solution from 20 scenarios scenarios
+*y.fx(t)=y_20(t,'values');
+*SOLVE SCHEDULE USING MIP MAXIMIZING OBJ;
+*profit_orig= obj.l;
 
-TABLE PRICES(t,*)
-$ONDELIM
-$INCLUDE battery_revenue.csv
-$OFFDELIM
-;
-
-Prices(t,'rew')     =  - Prices(t,'rew');
-Prices(t,'char')    =  - Prices(t,'char');
-Prices(t,'dischar') =  - Prices(t,'dischar');
-** define solar scenarios at all time periods
-
-
-* Scaling of Solar power scenarios ;
-scalar scale ;
-scale = 1;
-Solar(scen,t) = scale* Solar(scen,t) ;
-* Remove too many decimals in Solar
-Solar(scen,t) = round(Solar(scen,t),2) ;
-
-
-scalar PROBABILITY;
-PROBABILITY = 1/CARD(W);
-;
-
-scalar eta ;
-*from Ben paper
-eta = 0.9
-;
-parameters max_store(t), min_store(t), max_charge, max_discharge;
-
-
-** define tolerance threshold
-SCALAR threshold;
-threshold = floor(card(scen)*TOL)  ;
-
-parameter BigX, LowX, X_0 maximum minimum initial energy stored ;
-parameter BigM(scen,t) find a good BigM ;
-
-BigX = 960 ;
-LowX = 0.2* BigX ;
-X_0  = 0.5* BigX ;
-max_charge =  0.5* BigX ;
-max_discharge =  0.5* BigX ;
-
-************** Find a Big M
-* find Ntol + 1st value
-parameter maxsolar(t), minsolar(t), dummysolar(scen,t) ;
-maxsolar(t) =smax(scen,solar(scen,t)) ;
-dummysolar(scen,t) = solar(scen,t) ;
-
-scalar it ;
-it = floor(card(scen)*tol) + 1;
-
-* index of it
-set dummy_set(scen);
-* make the dum_iter go till at least the size of it
-set dum_iter /dum_iter1*dum_iter100/;
-loop(t,
-loop(dum_iter$(ord(dum_iter)le it),
-* find the smallest solar value for this t
-         minsolar(t) = smin(scen,dummysolar(scen,t)) ;
-* index of smallest solar value
-         dummy_set(scen) = yes$(dummysolar(scen,t) eq minsolar(t)) ;
-* make the smallest solar value large
-         dummysolar(scen,t)$dummy_set(scen) =maxsolar(t) ;
-); );
-scalar G upper bound on q - p ;
-G = min(eta*(BigX - LowX), max_discharge) ;
-
-BigM(scen,t)= G - solar(scen,t) + minsolar(t);
-
-********************************************************************************
-*                                begin model
-********************************************************************************
-
-
-
-POSITIVE VARIABLES P(scen,t), Q(scen,t), Y(T), X(scen,t) ;
-VARIABLES OBJ;
-BINARY VARIABLE Z(scen) ;
-
-scalar counter ;
-
-EQUATIONS
-        Objective
-        Const1(scen,t)    balance constraint
-        Const2(scen,t)    max charge
-        Const3(scen,t)    max discharge
-        Const_chance_1(scen,t)    chance constraint big M
-        Const_chance_PH(scen,t)
-        Const_chance_2            chance constraint sum probabilities
-        ;
-
-Objective.. OBJ=E= SUM(T,Prices(T, 'REW')*Y(T) - PROBABILITY*Sum(w, ( Prices(T, 'CHAR')* P(w,t) + Prices(t, 'DISCHAR') * Q(w,t) ) ) )     ;
-
-Const1(scen,t)$(ord(t) lt card(t))..
-         X(scen,t+1) =E= X(scen,t) + eta* P(scen,t) - (1/eta)* Q(scen,t) ;
-
-Const_chance_1(scen,t).. Y(T) + P(scen,t) -  Q(scen,t) -SOLAR(scen,t) =L= Z(scen)*BigM(scen,t) ;
-
-
-Const_chance_2..      - sum(scen, z(scen)) =G= -threshold;
-
-
-*** bounds on any variables
-x.up(scen,t) = BigX ;
-x.lo(scen,t) = LowX ;
-q.up(scen,t) = max_discharge ;
-p.up(scen,t) =  max_charge ;
-x.fx(scen,'t1') = X_0 ;
-z.prior(scen)   = 1;
-
-
-parameter last_x(scen,t), last_p(scen,t), last_q(scen,t), last_z(scen), last_ph(scen) ;
-******* ALL MODELS
-
-model schedule     / Objective,  Const1, Const_chance_1, Const_chance_2/ ;
-
-parameter  profit(iter), y_previous(t), run_time(iter);
-scalar profit_orig, t1, t2;
-
-
+*2nd iteration onward
 loop(iter,
          y.fx(t)=y_100(t,iter);
          t1=jnow ;
-         SOLVE SCHEDULE USING MIP MINIMIZING OBJ;
+         SOLVE SCHEDULE USING MIP MAXIMIZING OBJ;
          t2=jnow;
          run_time(iter) = ghour(t2 - t1)*3600 + gminute(t2 - t1)*60 + gsecond(t2 - t1);
          profit(iter)= obj.l;
@@ -195,7 +183,7 @@ display y.l;
 ********************************************************************************
 
 
-FILE fixed_profit /fixed_profit.csv/;
+FILE fixed_profit /fixed_profit_2.csv/;
 fixed_profit.PC = 5;
 fixed_profit.ND = 3;
 PUT fixed_profit;
