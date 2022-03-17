@@ -1,4 +1,4 @@
-GAMS 32.2.0  rc62c018 Released Aug 26, 2020 WEX-WEI x86 64bit/MS Windows - 03/09/22 14:53:59 Page 1
+GAMS 32.2.0  rc62c018 Released Aug 26, 2020 WEX-WEI x86 64bit/MS Windows - 03/17/22 13:32:23 Page 1
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -7247,7 +7247,7 @@ INCLUDE    C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\
 7246  *Tolerance
 7247  scalar tol;
 7248  *tol=%TOL%;
-7249  tol=0.01;
+7249  tol=0.03;
 7250   
 7251   
 7252  * time limit for each problem
@@ -14574,133 +14574,138 @@ INCLUDE    C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\
 14577          Const_chance_1(scen,t)    chance constraint big M
 14578          Const_chance_PH(scen,t)
 14579          Const_chance_2            chance constraint sum probabilities
-14580          ;
-14581   
-14582  Objective.. OBJ=E= SUM(T,Prices(T, 'REW')*Y(T) - Sum(w$((ord(w) ge n) and (ord(w) le m)),probability(w,'value')* ( Prices(T, 'CHAR')* P(w,t) + Prices(t, 'DISCHAR') * Q(w,t) ) ) )  + rho*sum(t,dummy(t))   ;
-14583   
-14584  Const1(scen,t)$(ord(t) lt card(t) and (ord(scen) ge n) and (ord(scen) le m))..
-14585           X(scen,t+1) =E= X(scen,t) + eta* P(scen,t) - (1/eta)* Q(scen,t) ;
+14580   
+14581          Const_dum1(t)
+14582          Const_dum2(t)
+14583          ;
+14584   
+14585  Objective.. OBJ=E= SUM(T,Prices(T, 'REW')*Y(T) - Sum(w$((ord(w) ge n) and (ord(w) le m)),probability(w,'value')* ( Prices(T, 'CHAR')* P(w,t) + Prices(t, 'DISCHAR') * Q(w,t) ) ) )  + rho*sum(t,dummy(t))   ;
 14586   
-14587  Const_chance_1(scen,t)$((ord(scen) ge n) and (ord(scen) le m)).. Y(T) + P(scen,t) -  Q(scen,t) -SOLAR(scen,t) =L= Z(scen)*BigM(scen,t) ;
-14588   
+14587  Const1(scen,t)$(ord(t) lt card(t) and (ord(scen) ge n) and (ord(scen) le m))..
+14588           X(scen,t+1) =E= X(scen,t) + eta* P(scen,t) - (1/eta)* Q(scen,t) ;
 14589   
-14590  Const_chance_2..      - sum(scen$((ord(scen) ge n) and (ord(scen) le m)), z(scen)*probability(scen,'value')) =G= -tol;
+14590  Const_chance_1(scen,t)$((ord(scen) ge n) and (ord(scen) le m)).. Y(T) + P(scen,t) -  Q(scen,t) -SOLAR(scen,t) =L= Z(scen)*BigM(scen,t) ;
 14591   
 14592   
-14593  *** bounds on any variables
-14594  x.up(scen,t) = BigX ;
-14595  x.lo(scen,t) = LowX ;
-14596  q.up(scen,t) = max_discharge ;
-14597  p.up(scen,t) =  max_charge ;
-14598  x.fx(scen,'t1') = X_0 ;
-14599  z.prior(scen)   = 1;
-14600   
-14601   
-14602  parameter last_x(scen,t), last_p(scen,t), last_q(scen,t), last_z(scen), last_ph(scen) ;
-14603  ******* ALL MODELS
-14604   
-14605  model schedule     / Objective,  Const1, Const_chance_1, Const_chance_2/ ;
+14593  Const_chance_2..      - sum(scen$((ord(scen) ge n) and (ord(scen) le m)), z(scen)*probability(scen,'value')) =G= -tol;
+14594   
+14595  Const_dum1(t).. dummy(t)=g= y(t) - y_previous(t);
+14596  Const_dum2(t).. dummy(t)=g= y_previous(t) - y(t);
+14597   
+14598  *** bounds on any variables
+14599  x.up(scen,t) = BigX ;
+14600  x.lo(scen,t) = LowX ;
+14601  q.up(scen,t) = max_discharge ;
+14602  p.up(scen,t) =  max_charge ;
+14603  x.fx(scen,'t1') = X_0 ;
+14604  z.prior(scen)   = 1;
+14605   
 14606   
-14607   
-14608  ********************************************************************************
-14609  *                                begin iterations
-14610  ********************************************************************************
+14607  parameter last_x(scen,t), last_p(scen,t), last_q(scen,t), last_z(scen), last_ph(scen) ;
+14608  ******* ALL MODELS
+14609   
+14610  model schedule     / Objective,  Const1, Const_chance_1, Const_chance_2/ ;
 14611   
-14612  *rho_ind -> r1 40
-14613  loop(rho_ind,
-14614  tot_time = 0;
-14615  size =0;
-14616  *We take the first 20 scenarios
-14617  new_n = 1;
-14618  new_m = 20;
-14619  y_previous(t) = 0;
-14620   
-14621  *iter --> iter1 * iter1000
-14622  loop(iter,
-14623   
-14624  if (tot_time < 1800,
+14612   
+14613  ********************************************************************************
+14614  *                                begin iterations
+14615  ********************************************************************************
+14616   
+14617  *rho_ind -> r1 40
+14618  loop(rho_ind,
+14619  tot_time = 0;
+14620  size =0;
+14621  *We take the first 20 scenarios
+14622  new_n = 1;
+14623  new_m = 20;
+14624  y_previous(t) = 0;
 14625   
-14626  *rho_val(rho_ind=r1)=40
-14627           rho =rho_val(rho_ind);
-14628  * at the first iteration no proximal term due to first solving the model (1) without the regularization
-14629  if (ord(iter) eq 1,  rho =0 ; options optca =0.04, optcr =0.04) ;
-14630  if (ord(iter) gt 1,  options optca =0.0005, optcr =0.0005) ;
-14631   
-14632  * choose scenarios between n and m
-14633           n= new_n   ;
-14634           m= new_m ;
-14635           size = m-n+1 ;
+14626  *iter --> iter1 * iter1000
+14627  loop(iter,
+14628   
+14629  if (tot_time < 1800,
+14630   
+14631  *rho_val(rho_ind=r1)=40
+14632           rho =rho_val(rho_ind);
+14633  * at the first iteration no proximal term due to first solving the model (1) without the regularization
+14634  if (ord(iter) eq 1,  rho =0 ; options optca =0.04, optcr =0.04) ;
+14635  if (ord(iter) gt 1,  options optca =0.0005, optcr =0.0005) ;
 14636   
-14637   
-14638   
-14639  *****************************************************************
-14640  * choosing Big M
-14641  *****************************************************************
+14637  * choose scenarios between n and m
+14638           n= new_n   ;
+14639           m= new_m ;
+14640           size = m-n+1 ;
+14641   
 14642   
-14643  maxsolar(t) =smax(scen,solar(scen,t)) ;
-14644  dummysolar(scen,t) = solar(scen,t) ;
-14645   
-14646  it = floor(card(scen)*tol) + 1;
+14643   
+14644  *****************************************************************
+14645  * choosing Big M
+14646  *****************************************************************
 14647   
-14648  * index of it
-14649  loop(t,
-14650  loop(dum_iter$(ord(dum_iter)le it),
-14651  * find the smallest solar value for this t
-14652           minsolar(t) = smin(w$((ord(w) ge n) and (ord(w) le m)),dummysolar(w,t)) ;
-14653  * index of smallest solar value
-14654           dummy_set(w)$((ord(w) ge n) and (ord(w) le m)) = yes$(dummysolar(w,t) eq minsolar(t)) ;
-14655  * make the smallest solar value large
-14656           dummysolar(w,t)$(dummy_set(w) and ((ord(w) ge n) and (ord(w) le m))) =maxsolar(t) ;
-14657  ); );
-14658  G = min(eta*(BigX - LowX), max_discharge) ;
-14659   
-14660  BigM(scen,t)$((ord(scen) ge n) and (ord(scen) le m))= G - solar(scen,t) + minsolar(t);
-14661   
-14662   
-14663           start_time=jnow;
-14664           SOLVE SCHEDULE USING MIP MINIMIZING OBJ ;
-14665           end_time = jnow;
-14666           time(rho_ind,iter) =  ghour(end_time - start_time)*3600 + gminute(end_time - start_time)*60 + gsecond(end_time - start_time);
-14667           promise(rho_ind,iter,t) = y.l(t) ;
-14668           y_previous(t) = y.l(t) ;
-14669           profit(rho_ind,iter) = obj.l ;
-14670           num_scen(rho_ind,iter) = size ;
-14671   
-14672           new_n = m + 1;
-14673           new_m= m + ceil(size*(1+delta)) ;
-14674  );
-14675   
-14676  * calculate total time loop has been running
-14677           tot_time = time(rho_ind,iter) + tot_time ;
-14678   
+14648  maxsolar(t) =smax(scen,solar(scen,t)) ;
+14649  dummysolar(scen,t) = solar(scen,t) ;
+14650   
+14651  it = floor(card(scen)*tol) + 1;
+14652   
+14653  * index of it
+14654  loop(t,
+14655  loop(dum_iter$(ord(dum_iter)le it),
+14656  * find the smallest solar value for this t
+14657           minsolar(t) = smin(w$((ord(w) ge n) and (ord(w) le m)),dummysolar(w,t)) ;
+14658  * index of smallest solar value
+14659           dummy_set(w)$((ord(w) ge n) and (ord(w) le m)) = yes$(dummysolar(w,t) eq minsolar(t)) ;
+14660  * make the smallest solar value large
+14661           dummysolar(w,t)$(dummy_set(w) and ((ord(w) ge n) and (ord(w) le m))) =maxsolar(t) ;
+14662  ); );
+14663  G = min(eta*(BigX - LowX), max_discharge) ;
+14664   
+14665  BigM(scen,t)$((ord(scen) ge n) and (ord(scen) le m))= G - solar(scen,t) + minsolar(t);
+14666   
+14667   
+14668           start_time=jnow;
+14669           SOLVE SCHEDULE USING MIP MINIMIZING OBJ ;
+14670           end_time = jnow;
+14671           time(rho_ind,iter) =  ghour(end_time - start_time)*3600 + gminute(end_time - start_time)*60 + gsecond(end_time - start_time);
+14672           promise(rho_ind,iter,t) = y.l(t) ;
+14673           y_previous(t) = y.l(t) ;
+14674           profit(rho_ind,iter) = obj.l ;
+14675           num_scen(rho_ind,iter) = size ;
+14676   
+14677           new_n = m + 1;
+14678           new_m= m + ceil(size*(1+delta)) ;
 14679  );
 14680   
-14681  );
-14682   
-14683  display tot_time ;
-14684  display time, num_scen, profit;
+14681  * calculate total time loop has been running
+14682           tot_time = time(rho_ind,iter) + tot_time ;
+14683   
+14684  );
 14685   
-14686  FILE sampled_dynamic /sampled_dynamic.csv/;
-14687  sampled_dynamic.PC = 5;
-14688  sampled_dynamic.ND = 3;
-14689  PUT sampled_dynamic;
-14690  loop(rho_ind,LOOP(t, loop(iter, put promise(rho_ind,iter,t);) put /; ); );
-14691   
-14692  PUTCLOSE sampled_dynamic;
-14693   
-14694   
-14695  FILE profit_value /profit_value.csv/;
-14696  profit_value.PC = 5;
-14697  profit_value.ND = 3;
-14698  PUT profit_value;
-14699  loop(rho_ind, put rho_val(rho_ind) put /;
-14700  put ''  put 'time' put ' number scenarios' put 'profit_value' put /;
-14701  LOOP(iter, put iter.tl PUT time(rho_ind,iter) put num_scen(rho_ind,iter) put profit(rho_ind,iter) put /;);
-14702  );
-14703  PUTCLOSE profit_value;
-14704   
-14705   
-GAMS 32.2.0  rc62c018 Released Aug 26, 2020 WEX-WEI x86 64bit/MS Windows - 03/09/22 14:53:59 Page 2
+14686  );
+14687   
+14688  display tot_time ;
+14689  display time, num_scen, profit;
+14690   
+14691  FILE sampled_dynamic /sampled_dynamic.csv/;
+14692  sampled_dynamic.PC = 5;
+14693  sampled_dynamic.ND = 3;
+14694  PUT sampled_dynamic;
+14695  loop(rho_ind,LOOP(t, loop(iter, put promise(rho_ind,iter,t);) put /; ); );
+14696   
+14697  PUTCLOSE sampled_dynamic;
+14698   
+14699   
+14700  FILE profit_value /profit_value.csv/;
+14701  profit_value.PC = 5;
+14702  profit_value.ND = 3;
+14703  PUT profit_value;
+14704  loop(rho_ind, put rho_val(rho_ind) put /;
+14705  put ''  put 'time' put ' number scenarios' put 'profit_value' put /;
+14706  LOOP(iter, put iter.tl PUT time(rho_ind,iter) put num_scen(rho_ind,iter) put profit(rho_ind,iter) put /;);
+14707  );
+14708  PUTCLOSE profit_value;
+14709   
+14710   
+GAMS 32.2.0  rc62c018 Released Aug 26, 2020 WEX-WEI x86 64bit/MS Windows - 03/17/22 13:32:23 Page 2
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Include File Summary
 
@@ -14713,45 +14718,45 @@ Include File Summary
      4     7315 INCLUDE        1      89  .C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\ScenarioWeights_naive.csv
 
 
-COMPILATION TIME     =        0.156 SECONDS      8 MB  32.2.0 rc62c018 WEX-WEI
-GAMS 32.2.0  rc62c018 Released Aug 26, 2020 WEX-WEI x86 64bit/MS Windows - 03/09/22 14:53:59 Page 3
+COMPILATION TIME     =        0.219 SECONDS      8 MB  32.2.0 rc62c018 WEX-WEI
+GAMS 32.2.0  rc62c018 Released Aug 26, 2020 WEX-WEI x86 64bit/MS Windows - 03/17/22 13:32:23 Page 3
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 E x e c u t i o n
 
 
-----   7249 Assignment tol           0.000     0.000 SECS      8 MB      1
-----   7255 Assignment time_limit    0.000     0.000 SECS      8 MB      1
-----   7261 Assignment n             0.000     0.000 SECS      8 MB      1
-----   7299 Assignment PRICES        0.000     0.000 SECS      8 MB     72
-----   7300 Assignment PRICES        0.000     0.000 SECS      8 MB     72
-----   7301 Assignment PRICES        0.000     0.000 SECS      8 MB     72
-----   7307 Assignment scale         0.000     0.000 SECS      8 MB      1
-----   7308 Assignment Solar         0.031     0.031 SECS      8 MB  96497
-----   7310 Assignment Solar         0.032     0.063 SECS      8 MB  96472
-----  14522 Assignment eta           0.000     0.063 SECS      8 MB      1
-----  14530 Assignment threshold     0.000     0.063 SECS      8 MB      1
-----  14535 Assignment BigX          0.000     0.063 SECS      8 MB      1
-----  14536 Assignment LowX          0.000     0.063 SECS      8 MB      1
-----  14537 Assignment X_0           0.000     0.063 SECS      8 MB      1
-----  14538 Assignment max_charge    0.000     0.063 SECS      8 MB      1
-----  14539 Assignment max_discharge    0.000     0.063 SECS      8 MB      1
-----  14555 Assignment step          0.000     0.063 SECS      8 MB      1
-----  14556 Assignment delta         0.000     0.063 SECS      8 MB      1
-----  14594 Assignment X             0.015     0.078 SECS     19 MB  172800
-----  14595 Assignment X             0.016     0.094 SECS     19 MB  172800
-----  14596 Assignment Q             0.016     0.110 SECS     30 MB  172800
-----  14597 Assignment P             0.031     0.141 SECS     42 MB  172800
-----  14598 Assignment X             0.000     0.141 SECS     42 MB  172800
-----  14599 Assignment Z             0.000     0.141 SECS     42 MB      0
-----  14614 Assignment tot_time      0.000     0.141 SECS     42 MB      1
-----  14615 Assignment size          0.000     0.141 SECS     42 MB      1
-----  14617 Assignment new_n         0.000     0.141 SECS     42 MB      1
-----  14618 Assignment new_m         0.000     0.141 SECS     42 MB      1
-----  14619 Clear      y_previous    0.000     0.141 SECS     42 MB 
-**** Exec Error at line 14656: Execution halted: Triggered by pending CtrlC event
+----   7249 Assignment tol           0.000     0.016 SECS      8 MB      1
+----   7255 Assignment time_limit    0.000     0.016 SECS      8 MB      1
+----   7261 Assignment n             0.000     0.016 SECS      8 MB      1
+----   7299 Assignment PRICES        0.000     0.016 SECS      8 MB     72
+----   7300 Assignment PRICES        0.000     0.016 SECS      8 MB     72
+----   7301 Assignment PRICES        0.000     0.016 SECS      8 MB     72
+----   7307 Assignment scale         0.000     0.016 SECS      8 MB      1
+----   7308 Assignment Solar         0.031     0.047 SECS      8 MB  96497
+----   7310 Assignment Solar         0.047     0.094 SECS      8 MB  96472
+----  14522 Assignment eta           0.000     0.094 SECS      8 MB      1
+----  14530 Assignment threshold     0.000     0.094 SECS      8 MB      1
+----  14535 Assignment BigX          0.000     0.094 SECS      8 MB      1
+----  14536 Assignment LowX          0.000     0.094 SECS      8 MB      1
+----  14537 Assignment X_0           0.000     0.094 SECS      8 MB      1
+----  14538 Assignment max_charge    0.000     0.094 SECS      8 MB      1
+----  14539 Assignment max_discharge    0.000     0.094 SECS      8 MB      1
+----  14555 Assignment step          0.000     0.094 SECS      8 MB      1
+----  14556 Assignment delta         0.000     0.094 SECS      8 MB      1
+----  14599 Assignment X             0.016     0.110 SECS     19 MB  172800
+----  14600 Assignment X             0.015     0.125 SECS     19 MB  172800
+----  14601 Assignment Q             0.031     0.156 SECS     30 MB  172800
+----  14602 Assignment P             0.016     0.172 SECS     42 MB  172800
+----  14603 Assignment X             0.000     0.172 SECS     42 MB  172800
+----  14604 Assignment Z             0.000     0.172 SECS     42 MB      0
+----  14619 Assignment tot_time      0.000     0.172 SECS     42 MB      1
+----  14620 Assignment size          0.000     0.172 SECS     42 MB      1
+----  14622 Assignment new_n         0.000     0.172 SECS     42 MB      1
+----  14623 Assignment new_m         0.000     0.172 SECS     42 MB      1
+----  14624 Clear      y_previous    0.000     0.172 SECS     42 MB 
+**** Exec Error at line 14659: Execution halted: Triggered by pending CtrlC event
 
 
-EXECUTION TIME       =        1.344 SECONDS     45 MB  32.2.0 rc62c018 WEX-WEI
+EXECUTION TIME       =        0.922 SECONDS     45 MB  32.2.0 rc62c018 WEX-WEI
 
 
 USER: Small MUD - 5 User License                     S200323/0001AN-GEN
@@ -14765,12 +14770,12 @@ Input      C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\
 Output     C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\SAA_solar.lst
 
 **** USER ERROR(S) ENCOUNTERED
-----  14656 GAMS Fini                0.000     0.000 SECS     45 MB 
+----  14659 GAMS Fini                0.000     0.000 SECS     45 MB 
  
 ---- Profile Summary (30 records processed)
-     0.032   0.008GB      7310 Assignment Solar (96472)
+     0.047   0.008GB      7310 Assignment Solar (96472)
      0.031   0.008GB      7308 Assignment Solar (96497)
-     0.031   0.042GB     14597 Assignment P (172800)
-     0.016   0.019GB     14595 Assignment X (172800)
-     0.016   0.030GB     14596 Assignment Q (172800)
-     0.015   0.019GB     14594 Assignment X (172800)
+     0.031   0.030GB     14601 Assignment Q (172800)
+     0.016   0.019GB     14599 Assignment X (172800)
+     0.016   0.042GB     14602 Assignment P (172800)
+     0.015   0.019GB     14600 Assignment X (172800)

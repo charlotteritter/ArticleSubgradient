@@ -1,4 +1,4 @@
---- Job SAA_solar.gms Start 03/09/22 14:53:59 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Job SAA_solar.gms Start 03/17/22 13:32:23 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     C:\GAMS\32\gmsprmNT.txt
 --- GAMS Parameters defined
@@ -22,18 +22,18 @@ Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
 --- . battery_revenue.csv(25) 7 Mb
 --- SAA_solar.gms(89) 7 Mb
 --- . ScenarioWeights_naive.csv(7201) 8 Mb
---- SAA_solar.gms(278) 8 Mb
---- Starting execution: elapsed 0:00:00.163
---- SAA_solar.gms(14613) 45 Mb
-*** Error at line 14656: Execution halted: Triggered by pending CtrlC event
---- SAA_solar.gms(14613) 45 Mb 1 Error
+--- SAA_solar.gms(283) 8 Mb
+--- Starting execution: elapsed 0:00:00.238
+--- SAA_solar.gms(14618) 45 Mb
+*** Error at line 14659: Execution halted: Triggered by pending CtrlC event
+--- SAA_solar.gms(14618) 45 Mb 1 Error
 --- Profile Summary (30 records processed)
-     0.032   0.008GB      7310 Assignment Solar (96472)
+     0.047   0.008GB      7310 Assignment Solar (96472)
      0.031   0.008GB      7308 Assignment Solar (96497)
-     0.031   0.042GB     14597 Assignment P (172800)
-     0.016   0.019GB     14595 Assignment X (172800)
-     0.016   0.030GB     14596 Assignment Q (172800)
-     0.015   0.019GB     14594 Assignment X (172800)
---- SAA_solar.gms(14613) 45 Mb 1 Error
+     0.031   0.030GB     14601 Assignment Q (172800)
+     0.016   0.019GB     14599 Assignment X (172800)
+     0.016   0.042GB     14602 Assignment P (172800)
+     0.015   0.019GB     14600 Assignment X (172800)
+--- SAA_solar.gms(14618) 45 Mb 1 Error
 *** Status: Execution error(s)
---- Job SAA_solar.gms Stop 03/09/22 14:54:01 elapsed 0:00:01.514
+--- Job SAA_solar.gms Stop 03/17/22 13:32:24 elapsed 0:00:01.134

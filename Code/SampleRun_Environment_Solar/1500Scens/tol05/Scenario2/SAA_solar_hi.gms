@@ -150,6 +150,9 @@ EQUATIONS
         Const_chance_1(scen,t)    chance constraint big M
         Const_chance_PH(scen,t)
         Const_chance_2            chance constraint sum probabilities
+        
+        Const_dum1(t)
+        Const_dum2(t)
         ;
 
 Objective.. OBJ=E= SUM(T,Prices(T, 'REW')*Y(T) - Sum(w$((ord(w) ge n) and (ord(w) le m)),probability(w,'value')* ( Prices(T, 'CHAR')* P(w,t) + Prices(t, 'DISCHAR') * Q(w,t) ) ) )  + rho*sum(t,dummy(t))   ;
@@ -162,6 +165,8 @@ Const_chance_1(scen,t)$((ord(scen) ge n) and (ord(scen) le m)).. Y(T) + P(scen,t
 
 Const_chance_2..      - sum(scen$((ord(scen) ge n) and (ord(scen) le m)), z(scen)*probability(scen,'value')) =G= -tol;
 
+Const_dum1(t).. dummy(t)=g= y(t) - y_previous(t);
+Const_dum2(t).. dummy(t)=g= y_previous(t) - y(t);
 
 *** bounds on any variables
 x.up(scen,t) = BigX ;
