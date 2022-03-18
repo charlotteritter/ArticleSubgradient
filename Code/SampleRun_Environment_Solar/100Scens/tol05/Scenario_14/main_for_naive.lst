@@ -1,4 +1,4 @@
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      11/25/21 08:59:54 Page 1
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/17/22 17:36:39 Page 1
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -9,7 +9,7 @@ C o m p i l a t i o n
       ELiminnated X variables
        
    8   
-  10  OPTIONS PROFILE =3, RESLIM   = 4200, LIMROW   = 5, LP = CPLEX, MIP = gurobi, RMIP=gurobi, NLP = CONOPT, MINLP = DICOPT, MIQCP = CPLEX, SOLPRINT = OFF, decimals = 8, optcr=0.01, optca=0.01, threads =8, integer4=0;
+  10  OPTIONS PROFILE =3, RESLIM   = 4200, LIMROW   = 5, LP = CPLEX, MIP = gurobi, RMIP=gurobi, NLP = CONOPT, MINLP = DICOPT, MIQCP = CPLEX, SOLPRINT = OFF, decimals = 8, optcr=0.001, optca=0.001, threads =8, integer4=0;
   11   
   12  ********************************************************************************
 INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/100Scens/tol05/Scenario_14/inputME.gms
@@ -25,7 +25,7 @@ INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment
   23   
   24  TABLE Solar(scen,t)
   26  *$INCLUDE %SOLAR%.csv
-INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/100Scens/tol05/Scenario_14/solar_scenarios_100_14.csv
+INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/100Scens/tol05/Scenario_14/solar_scenarios.csv
   28  ,t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14,t15,t16,t17,t18,t19,t20,t21,t22,t23,t24
   29  scen1,0,0,0,0,0,0,0.392302151,26.76538246,26.52853122,836.3847865,1125.9201,1043.256051,1190.995122,1520.06535,1121.018186,989.46762,760.448235,494.4464354,166.4795901,125.6510627,0,0,0,0
   30  scen2,0,0,0,0,0,0,0.546606664,28.25391413,101.40031,813.0962489,632.0714107,1099.445334,1089.672039,1461.019024,1212.955333,893.6111445,807.1179088,420.859575,190.6116258,137.1254152,0,0,0,0
@@ -56,7 +56,7 @@ INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment
   55  scen27,0,0,0,0,0,0,0,25.38976183,186.6569727,537.5391315,791.253661,794.880913,1263.999715,1040.92449,1060.286259,948.3950635,732.7801667,488.7123567,168.6383007,112.8777771,0,0,0,0
   56  scen28,0,0,0,0,0,0,0.259146261,18.78455319,36.65034643,827.7732019,800.046644,964.2512151,1285.858701,1011.585792,1022.864382,1136.698372,794.9469321,456.4987543,197.9216592,121.5156489,0,0,0,0
   57  scen29,0,0,0,0,0,0,0.573170482,26.08950947,60.2485362,834.7474509,918.3847114,786.2933019,1150.302666,1159.013296,1058.480942,1052.027322,792.1529674,493.2140887,196.9065092,107.996676,0,0,0,0
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      11/25/21 08:59:54 Page 2
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/17/22 17:36:39 Page 2
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -114,7 +114,7 @@ C o m p i l a t i o n
  108  scen80,0,0,0,0,0,0,0.280381897,21.72245799,29.40026797,858.3126734,775.1146399,1247.727134,1124.706194,1013.664767,1206.960878,994.0950366,756.1624626,457.7246811,211.3415148,125.7000871,0,0,0,0
  109  scen81,0,0,0,0,0,0,0.231055782,18.47779827,87.6921759,784.8407657,787.8305878,1024.965457,1465.578678,839.2498681,1082.192809,1063.963335,737.7072082,471.4808909,170.9537721,127.9081142,0,0,0,0
  110  scen82,0,0,0,0,0,0,0,10.15876367,105.6392363,864.1902118,1075.91152,1140.698767,1057.963616,1329.340489,1008.888194,809.7601156,790.7813742,501.9185696,200.9270353,115.98591,0,0,0,0
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      11/25/21 08:59:54 Page 3
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/17/22 17:36:39 Page 3
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -156,156 +156,156 @@ C o m p i l a t i o n
  146  * Import the SORTED file
  147  table scenario_sorted(scen,*)
  149  *$INCLUDE %SORTEDFILE%.csv
- 150  *$INCLUDE scenario_sorted_100_1_01.csv
- 151  *$INCLUDE scenario_sorted_100_2_01.csv
- 152  *$INCLUDE scenario_sorted_100_3_01.csv
- 153  *$INCLUDE scenario_sorted_100_4_01.csv
- 154  *$INCLUDE scenario_sorted_100_5_01.csv
- 155  *$INCLUDE scenario_sorted_100_6_01.csv
- 156  *$INCLUDE scenario_sorted_100_7_01.csv
- 157  *$INCLUDE scenario_sorted_100_8_01.csv
- 158  *$INCLUDE scenario_sorted_100_9_01.csv
- 159  *$INCLUDE scenario_sorted_100_10_01.csv
- 160  *$INCLUDE scenario_sorted_100_11_01.csv
- 161  *$INCLUDE scenario_sorted_100_12_01.csv
- 162  *$INCLUDE scenario_sorted_100_13_01.csv
- 163  *$INCLUDE scenario_sorted_100_14_01.csv
- 164  *$INCLUDE scenario_sorted_100_15_01.csv
- 165  *$INCLUDE scenario_sorted_100_16_01.csv
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      11/25/21 08:59:54 Page 4
+INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/100Scens/tol05/Scenario_14/scenario_sorted.csv
+ 151   ,value
+ 152  scen100,1
+ 153  scen14,1
+ 154  scen99,1
+ 155  scen98,1
+ 156  scen89,1
+ 157  scen36,0
+ 158  scen59,0
+ 159  scen94,0
+ 160  scen43,0
+ 161  scen27,0
+ 162  scen26,0
+ 163  scen31,0
+ 164  scen95,0
+ 165  scen20,0
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/17/22 17:36:39 Page 4
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
 
- 166  *$INCLUDE scenario_sorted_100_17_01.csv
- 167  *$INCLUDE scenario_sorted_100_18_01.csv
- 168  *$INCLUDE scenario_sorted_100_19_01.csv
- 169  *$INCLUDE scenario_sorted_100_20_01.csv
- 170  *$INCLUDE scenario_sorted_100_1_05.csv
- 171  *$INCLUDE scenario_sorted_100_2_05.csv
- 172  *$INCLUDE scenario_sorted_100_3_05.csv
- 173  *$INCLUDE scenario_sorted_100_4_05.csv
- 174  *$INCLUDE scenario_sorted_100_5_05.csv
- 175  *$INCLUDE scenario_sorted_100_6_05.csv
- 176  *$INCLUDE scenario_sorted_100_7_05.csv
- 177  *$INCLUDE scenario_sorted_100_8_05.csv
- 178  *$INCLUDE scenario_sorted_100_9_05.csv
- 179  *$INCLUDE scenario_sorted_100_10_05.csv
- 180  *$INCLUDE scenario_sorted_100_11_05.csv
- 181  *$INCLUDE scenario_sorted_100_12_05.csv
- 182  *$INCLUDE scenario_sorted_100_13_05.csv
-INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/100Scens/tol05/Scenario_14/scenario_sorted_100_14_05.csv
- 184   ,value
- 185  scen100,1
- 186  scen14,1
- 187  scen99,1
- 188  scen98,1
- 189  scen89,1
- 190  scen36,0
- 191  scen59,0
- 192  scen94,0
- 193  scen43,0
- 194  scen27,0
- 195  scen26,0
- 196  scen31,0
- 197  scen95,0
- 198  scen20,0
- 199  scen60,0
- 200  scen88,0
- 201  scen10,0
- 202  scen33,0
- 203  scen72,0
- 204  scen54,0
- 205  scen32,0
- 206  scen75,0
- 207  scen84,0
- 208  scen49,0
- 209  scen74,0
- 210  scen23,0
- 211  scen73,0
- 212  scen25,0
- 213  scen57,0
- 214  scen3,0
- 215  scen53,0
- 216  scen46,0
- 217  scen66,0
- 218  scen9,0
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      11/25/21 08:59:54 Page 5
+ 166  scen60,0
+ 167  scen88,0
+ 168  scen10,0
+ 169  scen33,0
+ 170  scen72,0
+ 171  scen54,0
+ 172  scen32,0
+ 173  scen75,0
+ 174  scen84,0
+ 175  scen49,0
+ 176  scen74,0
+ 177  scen23,0
+ 178  scen73,0
+ 179  scen25,0
+ 180  scen57,0
+ 181  scen3,0
+ 182  scen53,0
+ 183  scen46,0
+ 184  scen66,0
+ 185  scen9,0
+ 186  scen48,0
+ 187  scen69,0
+ 188  scen47,0
+ 189  scen92,0
+ 190  scen21,0
+ 191  scen22,0
+ 192  scen40,0
+ 193  scen42,0
+ 194  scen50,0
+ 195  scen15,0
+ 196  scen64,0
+ 197  scen62,0
+ 198  scen12,0
+ 199  scen61,0
+ 200  scen81,0
+ 201  scen71,0
+ 202  scen63,0
+ 203  scen8,0
+ 204  scen56,0
+ 205  scen83,0
+ 206  scen70,0
+ 207  scen29,0
+ 208  scen55,0
+ 209  scen68,0
+ 210  scen85,0
+ 211  scen28,0
+ 212  scen97,0
+ 213  scen38,0
+ 214  scen44,0
+ 215  scen7,0
+ 216  scen39,0
+ 217  scen79,0
+ 218  scen11,0
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/17/22 17:36:39 Page 5
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
 
- 219  scen48,0
- 220  scen69,0
- 221  scen47,0
- 222  scen92,0
- 223  scen21,0
- 224  scen22,0
- 225  scen40,0
- 226  scen42,0
- 227  scen50,0
- 228  scen15,0
- 229  scen64,0
- 230  scen62,0
- 231  scen12,0
- 232  scen61,0
- 233  scen81,0
- 234  scen71,0
- 235  scen63,0
- 236  scen8,0
- 237  scen56,0
- 238  scen83,0
- 239  scen70,0
- 240  scen29,0
- 241  scen55,0
- 242  scen68,0
- 243  scen85,0
- 244  scen28,0
- 245  scen97,0
- 246  scen38,0
- 247  scen44,0
- 248  scen7,0
- 249  scen39,0
- 250  scen79,0
- 251  scen11,0
- 252  scen80,0
- 253  scen65,0
- 254  scen2,0
- 255  scen16,0
- 256  scen52,0
- 257  scen17,0
- 258  scen37,0
- 259  scen86,0
- 260  scen82,0
- 261  scen87,0
- 262  scen4,0
- 263  scen67,0
- 264  scen19,0
- 265  scen41,0
- 266  scen93,0
- 267  scen90,0
- 268  scen35,0
- 269  scen96,0
- 270  scen51,0
- 271  scen6,0
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      11/25/21 08:59:54 Page 6
+ 219  scen80,0
+ 220  scen65,0
+ 221  scen2,0
+ 222  scen16,0
+ 223  scen52,0
+ 224  scen17,0
+ 225  scen37,0
+ 226  scen86,0
+ 227  scen82,0
+ 228  scen87,0
+ 229  scen4,0
+ 230  scen67,0
+ 231  scen19,0
+ 232  scen41,0
+ 233  scen93,0
+ 234  scen90,0
+ 235  scen35,0
+ 236  scen96,0
+ 237  scen51,0
+ 238  scen6,0
+ 239  scen45,0
+ 240  scen77,0
+ 241  scen58,0
+ 242  scen24,0
+ 243  scen5,0
+ 244  scen13,0
+ 245  scen76,0
+ 246  scen18,0
+ 247  scen34,0
+ 248  scen91,0
+ 249  scen30,0
+ 250  scen78,0
+ 251  scen1,0
+ 252  *$INCLUDE scenario_sorted_100_2_01.csv
+ 253  *$INCLUDE scenario_sorted_100_3_01.csv
+ 254  *$INCLUDE scenario_sorted_100_4_01.csv
+ 255  *$INCLUDE scenario_sorted_100_5_01.csv
+ 256  *$INCLUDE scenario_sorted_100_6_01.csv
+ 257  *$INCLUDE scenario_sorted_100_7_01.csv
+ 258  *$INCLUDE scenario_sorted_100_8_01.csv
+ 259  *$INCLUDE scenario_sorted_100_9_01.csv
+ 260  *$INCLUDE scenario_sorted_100_10_01.csv
+ 261  *$INCLUDE scenario_sorted_100_11_01.csv
+ 262  *$INCLUDE scenario_sorted_100_12_01.csv
+ 263  *$INCLUDE scenario_sorted_100_13_01.csv
+ 264  *$INCLUDE scenario_sorted_100_14_01.csv
+ 265  *$INCLUDE scenario_sorted_100_15_01.csv
+ 266  *$INCLUDE scenario_sorted_100_16_01.csv
+ 267  *$INCLUDE scenario_sorted_100_17_01.csv
+ 268  *$INCLUDE scenario_sorted_100_18_01.csv
+ 269  *$INCLUDE scenario_sorted_100_19_01.csv
+ 270  *$INCLUDE scenario_sorted_100_20_01.csv
+ 271  *$INCLUDE scenario_sorted_100_1_05.csv
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/17/22 17:36:39 Page 6
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
 
- 272  scen45,0
- 273  scen77,0
- 274  scen58,0
- 275  scen24,0
- 276  scen5,0
- 277  scen13,0
- 278  scen76,0
- 279  scen18,0
- 280  scen34,0
- 281  scen91,0
- 282  scen30,0
- 283  scen78,0
- 284  scen1,0
+ 272  *$INCLUDE scenario_sorted_100_2_05.csv
+ 273  *$INCLUDE scenario_sorted_100_3_05.csv
+ 274  *$INCLUDE scenario_sorted_100_4_05.csv
+ 275  *$INCLUDE scenario_sorted_100_5_05.csv
+ 276  *$INCLUDE scenario_sorted_100_6_05.csv
+ 277  *$INCLUDE scenario_sorted_100_7_05.csv
+ 278  *$INCLUDE scenario_sorted_100_8_05.csv
+ 279  *$INCLUDE scenario_sorted_100_9_05.csv
+ 280  *$INCLUDE scenario_sorted_100_10_05.csv
+ 281  *$INCLUDE scenario_sorted_100_11_05.csv
+ 282  *$INCLUDE scenario_sorted_100_12_05.csv
+ 283  *$INCLUDE scenario_sorted_100_13_05.csv
+ 284  *$INCLUDE scenario_sorted_100_14_05.csv
  285  *$INCLUDE scenario_sorted_100_15_05.csv
  286  *$INCLUDE scenario_sorted_100_16_05.csv
  287  *$INCLUDE scenario_sorted_100_17_05.csv
@@ -346,7 +346,7 @@ C o m p i l a t i o n
  323   
  324  *Scalar which tells if LR converges
  325  scalar convergence;
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      11/25/21 08:59:54 Page 7
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/17/22 17:36:39 Page 7
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -404,7 +404,7 @@ INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment
  378  *from Ben paper
  379  eta = 0.9
  380  ;
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      11/25/21 08:59:54 Page 8
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/17/22 17:36:39 Page 8
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -462,7 +462,7 @@ INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment
  431  *Hier werden die maximalen Iterationen, also big M festgelegt
  432  *set iter                 number of subgradient iterations /iter1*iter3/;
  433  scalar num_iter          how many iterations we did ;
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      11/25/21 08:59:54 Page 9
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/17/22 17:36:39 Page 9
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -520,7 +520,7 @@ INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment
  484          LR_scenario_2(scen)
  485          LR_lb(scen)
  486          ;
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 10
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 10
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -578,7 +578,7 @@ C o m p i l a t i o n
  537  model Lagrangian      / LR,    Const1, Const_chance_1/ ;
  538   
  539  ********************************************************************************
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 11
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 11
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -625,7 +625,7 @@ C o m p i l a t i o n
 **** STRAY NAME deltalambda OF TYPE PARAM
 **** STRAY NAME t1 OF TYPE PARAM
 **** STRAY NAME t2 OF TYPE PARAM
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 12
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 12
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Include File Summary
 
@@ -634,15 +634,15 @@ Include File Summary
 
      1        1 INPUT          0       0  /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/100Scens/tol05/Scenario_14/main_for_naive.gms
      2       13 INCLUDE        1      13  ./home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/100Scens/tol05/Scenario_14/inputME.gms
-     3       27 INCLUDE        2      14  ../home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/100Scens/tol05/Scenario_14/solar_scenarios_100_14.csv
-     4      183 INCLUDE        2      69  ../home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/100Scens/tol05/Scenario_14/scenario_sorted_100_14_05.csv
+     3       27 INCLUDE        2      14  ../home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/100Scens/tol05/Scenario_14/solar_scenarios.csv
+     4      150 INCLUDE        2      36  ../home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/100Scens/tol05/Scenario_14/scenario_sorted.csv
      5      331 INCLUDE        2     116  ../home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/100Scens/tol05/Scenario_14/battery_revenue.csv
      6      426 INCLUDE        1      14  ./home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/100Scens/tol05/Scenario_14/subgradient_parameters.gms
      7      461 INCLUDE        1      16  ./home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/100Scens/tol05/Scenario_14/equations_all.gms
 
 
-COMPILATION TIME     =        3.302 SECONDS      3 MB  24.8.5 r61358 LEX-LEG
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 13
+COMPILATION TIME     =        0.060 SECONDS      3 MB  24.8.5 r61358 LEX-LEG
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 13
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 E x e c u t i o n
 
@@ -655,538 +655,538 @@ E x e c u t i o n
 ----    362 Assignment PRICES        0.000     0.000 SECS      4 MB     72
 ----    368 Assignment scale         0.000     0.000 SECS      4 MB      0
 ----    369 Assignment Solar         0.000     0.000 SECS      4 MB   1354
-----    371 Assignment Solar         0.001     0.001 SECS      4 MB   1354
-----    375 Assignment PROBABILITY    0.000     0.001 SECS      4 MB      0
-----    379 Assignment eta           0.000     0.001 SECS      4 MB      0
-----    387 Assignment threshold     0.000     0.001 SECS      4 MB      0
-----    392 Assignment BigX          0.000     0.001 SECS      4 MB      0
-----    393 Assignment LowX          0.000     0.001 SECS      4 MB      0
-----    394 Assignment X_0           0.000     0.001 SECS      4 MB      0
-----    395 Assignment max_charge    0.000     0.001 SECS      4 MB      0
-----    396 Assignment max_discharge    0.000     0.001 SECS      4 MB      0
-----    401 Assignment maxsolar      0.000     0.001 SECS      4 MB     14
-----    402 Assignment dummysolar    0.000     0.001 SECS      4 MB   1354
-----    405 Assignment it            0.000     0.001 SECS      4 MB      0
+----    371 Assignment Solar         0.000     0.000 SECS      4 MB   1354
+----    375 Assignment PROBABILITY    0.000     0.000 SECS      4 MB      0
+----    379 Assignment eta           0.000     0.000 SECS      4 MB      0
+----    387 Assignment threshold     0.000     0.000 SECS      4 MB      0
+----    392 Assignment BigX          0.000     0.000 SECS      4 MB      0
+----    393 Assignment LowX          0.000     0.000 SECS      4 MB      0
+----    394 Assignment X_0           0.000     0.000 SECS      4 MB      0
+----    395 Assignment max_charge    0.000     0.000 SECS      4 MB      0
+----    396 Assignment max_discharge    0.000     0.000 SECS      4 MB      0
+----    401 Assignment maxsolar      0.000     0.000 SECS      4 MB     14
+----    402 Assignment dummysolar    0.000     0.000 SECS      4 MB   1354
+----    405 Assignment it            0.000     0.000 SECS      4 MB      0
+----    414 Assignment minsolar      0.000     0.000 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.000 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.000 SECS      4 MB   1354
+----    414 Assignment minsolar      0.000     0.000 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.000 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.000 SECS      4 MB   1354
+----    414 Assignment minsolar      0.000     0.000 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.000 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.000 SECS      4 MB   1354
+----    414 Assignment minsolar      0.000     0.000 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.000 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.000 SECS      4 MB   1354
+----    414 Assignment minsolar      0.000     0.000 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.000 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.000 SECS      4 MB   1354
+----    414 Assignment minsolar      0.000     0.000 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.000 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.000 SECS      4 MB   1354
+----    412 Loop                     0.000     0.000 SECS      4 MB 
+----    414 Assignment minsolar      0.000     0.000 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.000 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.000 SECS      4 MB   1354
+----    414 Assignment minsolar      0.000     0.000 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.000 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.000 SECS      4 MB   1354
+----    414 Assignment minsolar      0.000     0.000 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.000 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.000 SECS      4 MB   1354
+----    414 Assignment minsolar      0.000     0.000 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.000 SECS      4 MB    100
+----    418 Assignment dummysolar    0.001     0.001 SECS      4 MB   1354
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB    100
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 14
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+E x e c u t i o n
+
+
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1354
 ----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      0
 ----    416 Assignment dummy         0.000     0.001 SECS      4 MB    100
 ----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1354
-----    414 Assignment minsolar      0.001     0.002 SECS      4 MB      0
-----    416 Assignment dummy         0.000     0.002 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1354
-----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      0
-----    416 Assignment dummy         0.000     0.002 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1354
-----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      0
-----    416 Assignment dummy         0.000     0.002 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1354
-----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      0
-----    416 Assignment dummy         0.000     0.002 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1354
-----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      0
-----    416 Assignment dummy         0.000     0.002 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1354
+----    412 Loop                     0.001     0.001 SECS      4 MB 
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1354
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1354
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1354
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1354
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1354
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1354
+----    412 Loop                     0.000     0.001 SECS      4 MB 
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1354
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1354
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1354
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1354
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1354
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1354
+----    412 Loop                     0.000     0.001 SECS      4 MB 
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1354
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1354
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1354
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      0
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 15
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+E x e c u t i o n
+
+
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1354
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1354
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1354
+----    412 Loop                     0.000     0.001 SECS      4 MB 
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1354
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1354
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1354
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1354
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1354
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1354
+----    412 Loop                     0.000     0.001 SECS      4 MB 
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      0
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB     45
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1399
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      1
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1399
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      1
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1399
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      1
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1399
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      1
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1399
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      1
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1399
+----    412 Loop                     0.000     0.001 SECS      4 MB 
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      2
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1399
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      2
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1399
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 16
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+E x e c u t i o n
+
+
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      2
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1399
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      2
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1399
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      2
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1399
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      2
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1399
+----    412 Loop                     0.000     0.001 SECS      4 MB 
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      2
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      3
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      3
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      3
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      3
+----    416 Assignment dummy         0.000     0.001 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.001 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.001 SECS      4 MB      3
+----    416 Assignment dummy         0.001     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
 ----    412 Loop                     0.001     0.002 SECS      4 MB 
-----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      0
-----    416 Assignment dummy         0.000     0.002 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1354
-----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      0
-----    416 Assignment dummy         0.000     0.002 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1354
-----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      0
-----    416 Assignment dummy         0.000     0.002 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1354
-----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      0
-----    416 Assignment dummy         0.000     0.002 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1354
-----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      0
-----    416 Assignment dummy         0.000     0.002 SECS      4 MB    100
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 14
-G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
-E x e c u t i o n
-
-
-----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1354
-----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      0
-----    416 Assignment dummy         0.000     0.002 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1354
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      4
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      4
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      4
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      4
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      4
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      4
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
 ----    412 Loop                     0.000     0.002 SECS      4 MB 
-----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      0
-----    416 Assignment dummy         0.000     0.002 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1354
-----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      0
-----    416 Assignment dummy         0.000     0.002 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1354
-----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      0
-----    416 Assignment dummy         0.000     0.002 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1354
-----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      0
-----    416 Assignment dummy         0.001     0.003 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1354
-----    414 Assignment minsolar      0.000     0.003 SECS      4 MB      0
-----    416 Assignment dummy         0.000     0.003 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1354
-----    414 Assignment minsolar      0.000     0.003 SECS      4 MB      0
-----    416 Assignment dummy         0.000     0.003 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1354
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      5
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 17
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+E x e c u t i o n
+
+
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      5
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      5
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      5
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      5
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      5
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    412 Loop                     0.000     0.002 SECS      4 MB 
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      6
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      6
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      6
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      6
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      6
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      6
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    412 Loop                     0.000     0.002 SECS      4 MB 
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      7
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      7
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      7
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      7
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      7
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      7
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 18
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+E x e c u t i o n
+
+
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    412 Loop                     0.000     0.002 SECS      4 MB 
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      8
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      8
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      8
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      8
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      8
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      8
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    412 Loop                     0.000     0.002 SECS      4 MB 
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      9
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      9
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      9
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      9
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      9
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB      9
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    412 Loop                     0.000     0.002 SECS      4 MB 
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB     10
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB     10
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB     10
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB     10
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB     10
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 19
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+E x e c u t i o n
+
+
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB     10
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    412 Loop                     0.000     0.002 SECS      4 MB 
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB     11
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB     11
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB     11
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB     11
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB     11
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB     11
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    412 Loop                     0.000     0.002 SECS      4 MB 
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB     12
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB     12
+----    416 Assignment dummy         0.000     0.002 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.002 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.002 SECS      4 MB     12
+----    416 Assignment dummy         0.001     0.003 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     12
+----    416 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     12
+----    416 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     12
+----    416 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
 ----    412 Loop                     0.001     0.003 SECS      4 MB 
-----    414 Assignment minsolar      0.000     0.003 SECS      4 MB      0
-----    416 Assignment dummy         0.000     0.003 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1354
-----    414 Assignment minsolar      0.000     0.003 SECS      4 MB      0
-----    416 Assignment dummy         0.000     0.003 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1354
-----    414 Assignment minsolar      0.000     0.003 SECS      4 MB      0
-----    416 Assignment dummy         0.000     0.003 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1354
-----    414 Assignment minsolar      0.000     0.003 SECS      4 MB      0
-----    416 Assignment dummy         0.000     0.003 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1354
-----    414 Assignment minsolar      0.000     0.003 SECS      4 MB      0
-----    416 Assignment dummy         0.000     0.003 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1354
-----    414 Assignment minsolar      0.000     0.003 SECS      4 MB      0
-----    416 Assignment dummy         0.000     0.003 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1354
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     13
+----    416 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     13
+----    416 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     13
+----    416 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 20
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+E x e c u t i o n
+
+
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     13
+----    416 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     13
+----    416 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     13
+----    416 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
 ----    412 Loop                     0.000     0.003 SECS      4 MB 
-----    414 Assignment minsolar      0.000     0.003 SECS      4 MB      0
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     14
+----    416 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     14
+----    416 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     14
+----    416 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     14
+----    416 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     14
+----    416 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     14
+----    416 Assignment dummy         0.000     0.003 SECS      4 MB      1
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    412 Loop                     0.000     0.003 SECS      4 MB 
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     14
 ----    416 Assignment dummy         0.000     0.003 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1354
-----    414 Assignment minsolar      0.000     0.003 SECS      4 MB      0
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     14
 ----    416 Assignment dummy         0.000     0.003 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1354
-----    414 Assignment minsolar      0.000     0.003 SECS      4 MB      0
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     14
 ----    416 Assignment dummy         0.000     0.003 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1354
-----    414 Assignment minsolar      0.000     0.003 SECS      4 MB      0
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 15
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     14
+----    416 Assignment dummy         0.000     0.003 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     14
+----    416 Assignment dummy         0.000     0.003 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     14
+----    416 Assignment dummy         0.000     0.003 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    412 Loop                     0.000     0.003 SECS      4 MB 
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     14
+----    416 Assignment dummy         0.000     0.003 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     14
+----    416 Assignment dummy         0.000     0.003 SECS      4 MB    100
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 21
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 E x e c u t i o n
 
 
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     14
 ----    416 Assignment dummy         0.000     0.003 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1354
-----    414 Assignment minsolar      0.000     0.003 SECS      4 MB      0
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     14
 ----    416 Assignment dummy         0.000     0.003 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1354
-----    414 Assignment minsolar      0.000     0.003 SECS      4 MB      0
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     14
 ----    416 Assignment dummy         0.000     0.003 SECS      4 MB    100
-----    418 Assignment dummysolar    0.001     0.004 SECS      4 MB   1354
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     14
+----    416 Assignment dummy         0.000     0.003 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    412 Loop                     0.000     0.003 SECS      4 MB 
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     14
+----    416 Assignment dummy         0.000     0.003 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     14
+----    416 Assignment dummy         0.000     0.003 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     14
+----    416 Assignment dummy         0.000     0.003 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     14
+----    416 Assignment dummy         0.000     0.003 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     14
+----    416 Assignment dummy         0.000     0.003 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     14
+----    416 Assignment dummy         0.000     0.003 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    412 Loop                     0.000     0.003 SECS      4 MB 
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     14
+----    416 Assignment dummy         0.000     0.003 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     14
+----    416 Assignment dummy         0.000     0.003 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     14
+----    416 Assignment dummy         0.000     0.003 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.003 SECS      4 MB     14
+----    416 Assignment dummy         0.000     0.003 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.003 SECS      4 MB   1400
+----    414 Assignment minsolar      0.001     0.004 SECS      4 MB     14
+----    416 Assignment dummy         0.000     0.004 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.004 SECS      4 MB   1400
+----    414 Assignment minsolar      0.000     0.004 SECS      4 MB     14
+----    416 Assignment dummy         0.000     0.004 SECS      4 MB    100
+----    418 Assignment dummysolar    0.000     0.004 SECS      4 MB   1400
 ----    412 Loop                     0.001     0.004 SECS      4 MB 
-----    414 Assignment minsolar      0.000     0.004 SECS      4 MB      0
-----    416 Assignment dummy         0.000     0.004 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.004 SECS      4 MB   1354
-----    414 Assignment minsolar      0.000     0.004 SECS      4 MB      0
-----    416 Assignment dummy         0.000     0.004 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.004 SECS      4 MB   1354
-----    414 Assignment minsolar      0.000     0.004 SECS      4 MB      0
-----    416 Assignment dummy         0.000     0.004 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.004 SECS      4 MB   1354
-----    414 Assignment minsolar      0.000     0.004 SECS      4 MB      0
-----    416 Assignment dummy         0.000     0.004 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.004 SECS      4 MB   1354
-----    414 Assignment minsolar      0.000     0.004 SECS      4 MB      0
-----    416 Assignment dummy         0.000     0.004 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.004 SECS      4 MB   1354
-----    414 Assignment minsolar      0.000     0.004 SECS      4 MB      0
-----    416 Assignment dummy         0.000     0.004 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.004 SECS      4 MB   1354
-----    412 Loop                     0.000     0.004 SECS      4 MB 
-----    414 Assignment minsolar      0.000     0.004 SECS      4 MB      0
-----    416 Assignment dummy         0.000     0.004 SECS      4 MB     45
-----    418 Assignment dummysolar    0.000     0.004 SECS      4 MB   1399
-----    414 Assignment minsolar      0.000     0.004 SECS      4 MB      1
-----    416 Assignment dummy         0.000     0.004 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.004 SECS      4 MB   1399
-----    414 Assignment minsolar      0.000     0.004 SECS      4 MB      1
-----    416 Assignment dummy         0.000     0.004 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.004 SECS      4 MB   1399
-----    414 Assignment minsolar      0.000     0.004 SECS      4 MB      1
-----    416 Assignment dummy         0.000     0.004 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.004 SECS      4 MB   1399
-----    414 Assignment minsolar      0.000     0.004 SECS      4 MB      1
-----    416 Assignment dummy         0.000     0.004 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.004 SECS      4 MB   1399
-----    414 Assignment minsolar      0.000     0.004 SECS      4 MB      1
-----    416 Assignment dummy         0.000     0.004 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.004 SECS      4 MB   1399
-----    412 Loop                     0.000     0.004 SECS      4 MB 
-----    414 Assignment minsolar      0.000     0.004 SECS      4 MB      2
-----    416 Assignment dummy         0.000     0.004 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.004 SECS      4 MB   1399
-----    414 Assignment minsolar      0.000     0.004 SECS      4 MB      2
-----    416 Assignment dummy         0.000     0.004 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.004 SECS      4 MB   1399
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 16
+----    411 Loop                     0.004     0.004 SECS      4 MB 
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 22
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 E x e c u t i o n
 
 
-----    414 Assignment minsolar      0.000     0.004 SECS      4 MB      2
-----    416 Assignment dummy         0.000     0.004 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.004 SECS      4 MB   1399
-----    414 Assignment minsolar      0.000     0.004 SECS      4 MB      2
-----    416 Assignment dummy         0.000     0.004 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.004 SECS      4 MB   1399
-----    414 Assignment minsolar      0.000     0.004 SECS      4 MB      2
-----    416 Assignment dummy         0.000     0.004 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.004 SECS      4 MB   1399
-----    414 Assignment minsolar      0.000     0.004 SECS      4 MB      2
-----    416 Assignment dummy         0.000     0.004 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.004 SECS      4 MB   1399
-----    412 Loop                     0.000     0.004 SECS      4 MB 
-----    414 Assignment minsolar      0.000     0.004 SECS      4 MB      2
-----    416 Assignment dummy         0.001     0.005 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.005 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.005 SECS      4 MB      3
-----    416 Assignment dummy         0.000     0.005 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.005 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.005 SECS      4 MB      3
-----    416 Assignment dummy         0.000     0.005 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.005 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.005 SECS      4 MB      3
-----    416 Assignment dummy         0.000     0.005 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.005 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.005 SECS      4 MB      3
-----    416 Assignment dummy         0.000     0.005 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.005 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.005 SECS      4 MB      3
-----    416 Assignment dummy         0.000     0.005 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.005 SECS      4 MB   1400
-----    412 Loop                     0.001     0.005 SECS      4 MB 
-----    414 Assignment minsolar      0.000     0.005 SECS      4 MB      4
-----    416 Assignment dummy         0.000     0.005 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.005 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.005 SECS      4 MB      4
-----    416 Assignment dummy         0.000     0.005 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.005 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.005 SECS      4 MB      4
-----    416 Assignment dummy         0.000     0.005 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.005 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.005 SECS      4 MB      4
-----    416 Assignment dummy         0.000     0.005 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.005 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.005 SECS      4 MB      4
-----    416 Assignment dummy         0.000     0.005 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.005 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.005 SECS      4 MB      4
-----    416 Assignment dummy         0.000     0.005 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.005 SECS      4 MB   1400
-----    412 Loop                     0.000     0.005 SECS      4 MB 
-----    414 Assignment minsolar      0.000     0.005 SECS      4 MB      5
-----    416 Assignment dummy         0.000     0.005 SECS      4 MB      1
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 17
-G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
-E x e c u t i o n
-
-
-----    418 Assignment dummysolar    0.000     0.005 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.005 SECS      4 MB      5
-----    416 Assignment dummy         0.000     0.005 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.005 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.005 SECS      4 MB      5
-----    416 Assignment dummy         0.000     0.005 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.005 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.005 SECS      4 MB      5
-----    416 Assignment dummy         0.000     0.005 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.005 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.005 SECS      4 MB      5
-----    416 Assignment dummy         0.000     0.005 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.005 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.005 SECS      4 MB      5
-----    416 Assignment dummy         0.000     0.005 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.005 SECS      4 MB   1400
-----    412 Loop                     0.000     0.005 SECS      4 MB 
-----    414 Assignment minsolar      0.000     0.005 SECS      4 MB      6
-----    416 Assignment dummy         0.000     0.005 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.005 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.005 SECS      4 MB      6
-----    416 Assignment dummy         0.000     0.005 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.005 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.005 SECS      4 MB      6
-----    416 Assignment dummy         0.000     0.005 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.005 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.005 SECS      4 MB      6
-----    416 Assignment dummy         0.000     0.005 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.005 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.005 SECS      4 MB      6
-----    416 Assignment dummy         0.000     0.005 SECS      4 MB      1
-----    418 Assignment dummysolar    0.001     0.006 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.006 SECS      4 MB      6
-----    416 Assignment dummy         0.000     0.006 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.006 SECS      4 MB   1400
-----    412 Loop                     0.001     0.006 SECS      4 MB 
-----    414 Assignment minsolar      0.000     0.006 SECS      4 MB      7
-----    416 Assignment dummy         0.000     0.006 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.006 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.006 SECS      4 MB      7
-----    416 Assignment dummy         0.000     0.006 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.006 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.006 SECS      4 MB      7
-----    416 Assignment dummy         0.000     0.006 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.006 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.006 SECS      4 MB      7
-----    416 Assignment dummy         0.000     0.006 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.006 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.006 SECS      4 MB      7
-----    416 Assignment dummy         0.000     0.006 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.006 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.006 SECS      4 MB      7
-----    416 Assignment dummy         0.000     0.006 SECS      4 MB      1
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 18
-G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
-E x e c u t i o n
-
-
-----    418 Assignment dummysolar    0.000     0.006 SECS      4 MB   1400
-----    412 Loop                     0.000     0.006 SECS      4 MB 
-----    414 Assignment minsolar      0.000     0.006 SECS      4 MB      8
-----    416 Assignment dummy         0.000     0.006 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.006 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.006 SECS      4 MB      8
-----    416 Assignment dummy         0.000     0.006 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.006 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.006 SECS      4 MB      8
-----    416 Assignment dummy         0.000     0.006 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.006 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.006 SECS      4 MB      8
-----    416 Assignment dummy         0.000     0.006 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.006 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.006 SECS      4 MB      8
-----    416 Assignment dummy         0.000     0.006 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.006 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.006 SECS      4 MB      8
-----    416 Assignment dummy         0.000     0.006 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.006 SECS      4 MB   1400
-----    412 Loop                     0.000     0.006 SECS      4 MB 
-----    414 Assignment minsolar      0.000     0.006 SECS      4 MB      9
-----    416 Assignment dummy         0.000     0.006 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.006 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.006 SECS      4 MB      9
-----    416 Assignment dummy         0.000     0.006 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.006 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.006 SECS      4 MB      9
-----    416 Assignment dummy         0.000     0.006 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.006 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.006 SECS      4 MB      9
-----    416 Assignment dummy         0.000     0.006 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.006 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.006 SECS      4 MB      9
-----    416 Assignment dummy         0.000     0.006 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.006 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.006 SECS      4 MB      9
-----    416 Assignment dummy         0.000     0.006 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.006 SECS      4 MB   1400
-----    412 Loop                     0.000     0.006 SECS      4 MB 
-----    414 Assignment minsolar      0.000     0.006 SECS      4 MB     10
-----    416 Assignment dummy         0.000     0.006 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.006 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.006 SECS      4 MB     10
-----    416 Assignment dummy         0.000     0.006 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.006 SECS      4 MB   1400
-----    414 Assignment minsolar      0.001     0.007 SECS      4 MB     10
-----    416 Assignment dummy         0.000     0.007 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.007 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.007 SECS      4 MB     10
-----    416 Assignment dummy         0.000     0.007 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.007 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.007 SECS      4 MB     10
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 19
-G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
-E x e c u t i o n
-
-
-----    416 Assignment dummy         0.000     0.007 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.007 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.007 SECS      4 MB     10
-----    416 Assignment dummy         0.004     0.011 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.011 SECS      4 MB   1400
-----    412 Loop                     0.005     0.011 SECS      4 MB 
-----    414 Assignment minsolar      0.000     0.011 SECS      4 MB     11
-----    416 Assignment dummy         0.000     0.011 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.011 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.011 SECS      4 MB     11
-----    416 Assignment dummy         0.000     0.011 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.011 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.011 SECS      4 MB     11
-----    416 Assignment dummy         0.000     0.011 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.011 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.011 SECS      4 MB     11
-----    416 Assignment dummy         0.000     0.011 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.011 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.011 SECS      4 MB     11
-----    416 Assignment dummy         0.000     0.011 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.011 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.011 SECS      4 MB     11
-----    416 Assignment dummy         0.000     0.011 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.011 SECS      4 MB   1400
-----    412 Loop                     0.000     0.011 SECS      4 MB 
-----    414 Assignment minsolar      0.000     0.011 SECS      4 MB     12
-----    416 Assignment dummy         0.000     0.011 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.011 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.011 SECS      4 MB     12
-----    416 Assignment dummy         0.000     0.011 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.011 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.011 SECS      4 MB     12
-----    416 Assignment dummy         0.000     0.011 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.011 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.011 SECS      4 MB     12
-----    416 Assignment dummy         0.000     0.011 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.011 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.011 SECS      4 MB     12
-----    416 Assignment dummy         0.000     0.011 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.011 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.011 SECS      4 MB     12
-----    416 Assignment dummy         0.000     0.011 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.011 SECS      4 MB   1400
-----    412 Loop                     0.000     0.011 SECS      4 MB 
-----    414 Assignment minsolar      0.000     0.011 SECS      4 MB     13
-----    416 Assignment dummy         0.000     0.011 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.011 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.011 SECS      4 MB     13
-----    416 Assignment dummy         0.000     0.011 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.011 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.011 SECS      4 MB     13
-----    416 Assignment dummy         0.000     0.011 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.011 SECS      4 MB   1400
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 20
-G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
-E x e c u t i o n
-
-
-----    414 Assignment minsolar      0.000     0.011 SECS      4 MB     13
-----    416 Assignment dummy         0.000     0.011 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.011 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.011 SECS      4 MB     13
-----    416 Assignment dummy         0.001     0.012 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.012 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.012 SECS      4 MB     13
-----    416 Assignment dummy         0.000     0.012 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.012 SECS      4 MB   1400
-----    412 Loop                     0.001     0.012 SECS      4 MB 
-----    414 Assignment minsolar      0.000     0.012 SECS      4 MB     14
-----    416 Assignment dummy         0.000     0.012 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.012 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.012 SECS      4 MB     14
-----    416 Assignment dummy         0.000     0.012 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.012 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.012 SECS      4 MB     14
-----    416 Assignment dummy         0.000     0.012 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.012 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.012 SECS      4 MB     14
-----    416 Assignment dummy         0.000     0.012 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.012 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.012 SECS      4 MB     14
-----    416 Assignment dummy         0.000     0.012 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.012 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.012 SECS      4 MB     14
-----    416 Assignment dummy         0.000     0.012 SECS      4 MB      1
-----    418 Assignment dummysolar    0.000     0.012 SECS      4 MB   1400
-----    412 Loop                     0.000     0.012 SECS      4 MB 
-----    414 Assignment minsolar      0.000     0.012 SECS      4 MB     14
-----    416 Assignment dummy         0.000     0.012 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.012 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.012 SECS      4 MB     14
-----    416 Assignment dummy         0.000     0.012 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.012 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.012 SECS      4 MB     14
-----    416 Assignment dummy         0.000     0.012 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.012 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.012 SECS      4 MB     14
-----    416 Assignment dummy         0.000     0.012 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.012 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.012 SECS      4 MB     14
-----    416 Assignment dummy         0.000     0.012 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.012 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.012 SECS      4 MB     14
-----    416 Assignment dummy         0.000     0.012 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.012 SECS      4 MB   1400
-----    412 Loop                     0.000     0.012 SECS      4 MB 
-----    414 Assignment minsolar      0.000     0.012 SECS      4 MB     14
-----    416 Assignment dummy         0.000     0.012 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.012 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.012 SECS      4 MB     14
-----    416 Assignment dummy         0.001     0.013 SECS      4 MB    100
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 21
-G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
-E x e c u t i o n
-
-
-----    418 Assignment dummysolar    0.000     0.013 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.013 SECS      4 MB     14
-----    416 Assignment dummy         0.000     0.013 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.013 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.013 SECS      4 MB     14
-----    416 Assignment dummy         0.000     0.013 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.013 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.013 SECS      4 MB     14
-----    416 Assignment dummy         0.000     0.013 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.013 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.013 SECS      4 MB     14
-----    416 Assignment dummy         0.000     0.013 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.013 SECS      4 MB   1400
-----    412 Loop                     0.001     0.013 SECS      4 MB 
-----    414 Assignment minsolar      0.000     0.013 SECS      4 MB     14
-----    416 Assignment dummy         0.000     0.013 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.013 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.013 SECS      4 MB     14
-----    416 Assignment dummy         0.000     0.013 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.013 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.013 SECS      4 MB     14
-----    416 Assignment dummy         0.000     0.013 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.013 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.013 SECS      4 MB     14
-----    416 Assignment dummy         0.000     0.013 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.013 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.013 SECS      4 MB     14
-----    416 Assignment dummy         0.000     0.013 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.013 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.013 SECS      4 MB     14
-----    416 Assignment dummy         0.000     0.013 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.013 SECS      4 MB   1400
-----    412 Loop                     0.000     0.013 SECS      4 MB 
-----    414 Assignment minsolar      0.000     0.013 SECS      4 MB     14
-----    416 Assignment dummy         0.000     0.013 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.013 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.013 SECS      4 MB     14
-----    416 Assignment dummy         0.000     0.013 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.013 SECS      4 MB   1400
-----    414 Assignment minsolar      0.001     0.014 SECS      4 MB     14
-----    416 Assignment dummy         0.000     0.014 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.014 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.014 SECS      4 MB     14
-----    416 Assignment dummy         0.000     0.014 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.014 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.014 SECS      4 MB     14
-----    416 Assignment dummy         0.000     0.014 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.014 SECS      4 MB   1400
-----    414 Assignment minsolar      0.000     0.014 SECS      4 MB     14
-----    416 Assignment dummy         0.000     0.014 SECS      4 MB    100
-----    418 Assignment dummysolar    0.000     0.014 SECS      4 MB   1400
-----    412 Loop                     0.001     0.014 SECS      4 MB 
-----    411 Loop                     0.013     0.014 SECS      4 MB 
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 22
-G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
-E x e c u t i o n
-
-
-----    421 Assignment G             0.000     0.014 SECS      4 MB      0
-----    423 Assignment BigM          0.001     0.015 SECS      4 MB   2400
-----    438 Assignment originalTheta    0.000     0.015 SECS      4 MB      0
-----    459 Assignment exit_tol      0.000     0.015 SECS      4 MB      0
-----    523 Assignment X             0.016     0.031 SECS      4 MB   2400
-----    524 Assignment X             0.000     0.031 SECS      4 MB   2400
-----    525 Assignment Q             0.001     0.032 SECS      4 MB   2400
-----    526 Assignment P             0.000     0.032 SECS      4 MB   2400
-----    527 Assignment X             0.000     0.032 SECS      4 MB   2400
-----    528 Assignment Z             0.000     0.032 SECS      4 MB      0
-----    544 Assignment start_time    0.000     0.032 SECS      4 MB      0
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 23
+----    421 Assignment G             0.000     0.004 SECS      4 MB      0
+----    423 Assignment BigM          0.000     0.004 SECS      4 MB   2400
+----    438 Assignment originalTheta    0.000     0.004 SECS      4 MB      0
+----    459 Assignment exit_tol      0.000     0.004 SECS      4 MB      0
+----    523 Assignment X             0.000     0.004 SECS      4 MB   2400
+----    524 Assignment X             0.000     0.004 SECS      4 MB   2400
+----    525 Assignment Q             0.000     0.004 SECS      4 MB   2400
+----    526 Assignment P             0.000     0.004 SECS      4 MB   2400
+----    527 Assignment X             0.000     0.004 SECS      4 MB   2400
+----    528 Assignment Z             0.000     0.004 SECS      4 MB      0
+----    544 Assignment start_time    0.000     0.004 SECS      4 MB      0
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 23
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Model Analysis      SOLVE schedule Using MIP From line 545
 
 
-----    545 Solve Init schedule      0.000     0.032 SECS      4 MB 
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 24
+----    545 Solve Init schedule      0.000     0.004 SECS      4 MB 
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 24
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE schedule Using MIP From line 545
 
@@ -1244,7 +1244,7 @@ Objective..  - 0.00025641026*P(scen1,t1) - 0.00025641026*P(scen1,t2) - 0.0002564
       - 0.00025641026*P(scen9,t1) - 0.00025641026*P(scen9,t2) - 0.00025641026*P(scen9,t3) - 0.00025641026*P(scen9,t4) - 0.00025641026*P(scen9,t5) - 0.00025641026*P(scen9,t6) - 0.00025641026*P(scen9,t7) - 0.00025641026*P(scen9,t8)
      
       - 0.00025641026*P(scen9,t9) - 0.00025641026*P(scen9,t10) - 0.00025641026*P(scen9,t11) - 0.00025641026*P(scen9,t12) - 0.00025641026*P(scen9,t13) - 0.00025641026*P(scen9,t14) - 0.00025641026*P(scen9,t15) - 0.00025641026*P(scen9,t16)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 25
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 25
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE schedule Using MIP From line 545
 
@@ -1302,7 +1302,7 @@ Equation Listing    SOLVE schedule Using MIP From line 545
       - 0.00025641026*P(scen17,t17) - 0.00025641026*P(scen17,t18) - 0.00025641026*P(scen17,t19) - 0.00025641026*P(scen17,t20) - 0.00025641026*P(scen17,t21) - 0.00025641026*P(scen17,t22) - 0.00025641026*P(scen17,t23) - 0.00025641026*P(scen17,t24)
      
       - 0.00025641026*P(scen18,t1) - 0.00025641026*P(scen18,t2) - 0.00025641026*P(scen18,t3) - 0.00025641026*P(scen18,t4) - 0.00025641026*P(scen18,t5) - 0.00025641026*P(scen18,t6) - 0.00025641026*P(scen18,t7) - 0.00025641026*P(scen18,t8)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 26
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 26
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE schedule Using MIP From line 545
 
@@ -1360,7 +1360,7 @@ Equation Listing    SOLVE schedule Using MIP From line 545
       - 0.00025641026*P(scen26,t9) - 0.00025641026*P(scen26,t10) - 0.00025641026*P(scen26,t11) - 0.00025641026*P(scen26,t12) - 0.00025641026*P(scen26,t13) - 0.00025641026*P(scen26,t14) - 0.00025641026*P(scen26,t15) - 0.00025641026*P(scen26,t16)
      
       - 0.00025641026*P(scen26,t17) - 0.00025641026*P(scen26,t18) - 0.00025641026*P(scen26,t19) - 0.00025641026*P(scen26,t20) - 0.00025641026*P(scen26,t21) - 0.00025641026*P(scen26,t22) - 0.00025641026*P(scen26,t23) - 0.00025641026*P(scen26,t24)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 27
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 27
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE schedule Using MIP From line 545
 
@@ -1418,7 +1418,7 @@ Equation Listing    SOLVE schedule Using MIP From line 545
       - 0.00025641026*P(scen35,t1) - 0.00025641026*P(scen35,t2) - 0.00025641026*P(scen35,t3) - 0.00025641026*P(scen35,t4) - 0.00025641026*P(scen35,t5) - 0.00025641026*P(scen35,t6) - 0.00025641026*P(scen35,t7) - 0.00025641026*P(scen35,t8)
      
       - 0.00025641026*P(scen35,t9) - 0.00025641026*P(scen35,t10) - 0.00025641026*P(scen35,t11) - 0.00025641026*P(scen35,t12) - 0.00025641026*P(scen35,t13) - 0.00025641026*P(scen35,t14) - 0.00025641026*P(scen35,t15) - 0.00025641026*P(scen35,t16)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 28
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 28
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE schedule Using MIP From line 545
 
@@ -1476,7 +1476,7 @@ Equation Listing    SOLVE schedule Using MIP From line 545
       - 0.00025641026*P(scen43,t17) - 0.00025641026*P(scen43,t18) - 0.00025641026*P(scen43,t19) - 0.00025641026*P(scen43,t20) - 0.00025641026*P(scen43,t21) - 0.00025641026*P(scen43,t22) - 0.00025641026*P(scen43,t23) - 0.00025641026*P(scen43,t24)
      
       - 0.00025641026*P(scen44,t1) - 0.00025641026*P(scen44,t2) - 0.00025641026*P(scen44,t3) - 0.00025641026*P(scen44,t4) - 0.00025641026*P(scen44,t5) - 0.00025641026*P(scen44,t6) - 0.00025641026*P(scen44,t7) - 0.00025641026*P(scen44,t8)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 29
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 29
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE schedule Using MIP From line 545
 
@@ -1534,7 +1534,7 @@ Equation Listing    SOLVE schedule Using MIP From line 545
       - 0.00025641026*P(scen52,t9) - 0.00025641026*P(scen52,t10) - 0.00025641026*P(scen52,t11) - 0.00025641026*P(scen52,t12) - 0.00025641026*P(scen52,t13) - 0.00025641026*P(scen52,t14) - 0.00025641026*P(scen52,t15) - 0.00025641026*P(scen52,t16)
      
       - 0.00025641026*P(scen52,t17) - 0.00025641026*P(scen52,t18) - 0.00025641026*P(scen52,t19) - 0.00025641026*P(scen52,t20) - 0.00025641026*P(scen52,t21) - 0.00025641026*P(scen52,t22) - 0.00025641026*P(scen52,t23) - 0.00025641026*P(scen52,t24)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 30
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 30
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE schedule Using MIP From line 545
 
@@ -1592,7 +1592,7 @@ Equation Listing    SOLVE schedule Using MIP From line 545
       - 0.00025641026*P(scen61,t1) - 0.00025641026*P(scen61,t2) - 0.00025641026*P(scen61,t3) - 0.00025641026*P(scen61,t4) - 0.00025641026*P(scen61,t5) - 0.00025641026*P(scen61,t6) - 0.00025641026*P(scen61,t7) - 0.00025641026*P(scen61,t8)
      
       - 0.00025641026*P(scen61,t9) - 0.00025641026*P(scen61,t10) - 0.00025641026*P(scen61,t11) - 0.00025641026*P(scen61,t12) - 0.00025641026*P(scen61,t13) - 0.00025641026*P(scen61,t14) - 0.00025641026*P(scen61,t15) - 0.00025641026*P(scen61,t16)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 31
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 31
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE schedule Using MIP From line 545
 
@@ -1650,7 +1650,7 @@ Equation Listing    SOLVE schedule Using MIP From line 545
       - 0.00025641026*P(scen69,t17) - 0.00025641026*P(scen69,t18) - 0.00025641026*P(scen69,t19) - 0.00025641026*P(scen69,t20) - 0.00025641026*P(scen69,t21) - 0.00025641026*P(scen69,t22) - 0.00025641026*P(scen69,t23) - 0.00025641026*P(scen69,t24)
      
       - 0.00025641026*P(scen70,t1) - 0.00025641026*P(scen70,t2) - 0.00025641026*P(scen70,t3) - 0.00025641026*P(scen70,t4) - 0.00025641026*P(scen70,t5) - 0.00025641026*P(scen70,t6) - 0.00025641026*P(scen70,t7) - 0.00025641026*P(scen70,t8)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 32
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 32
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE schedule Using MIP From line 545
 
@@ -1708,7 +1708,7 @@ Equation Listing    SOLVE schedule Using MIP From line 545
       - 0.00025641026*P(scen78,t9) - 0.00025641026*P(scen78,t10) - 0.00025641026*P(scen78,t11) - 0.00025641026*P(scen78,t12) - 0.00025641026*P(scen78,t13) - 0.00025641026*P(scen78,t14) - 0.00025641026*P(scen78,t15) - 0.00025641026*P(scen78,t16)
      
       - 0.00025641026*P(scen78,t17) - 0.00025641026*P(scen78,t18) - 0.00025641026*P(scen78,t19) - 0.00025641026*P(scen78,t20) - 0.00025641026*P(scen78,t21) - 0.00025641026*P(scen78,t22) - 0.00025641026*P(scen78,t23) - 0.00025641026*P(scen78,t24)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 33
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 33
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE schedule Using MIP From line 545
 
@@ -1766,7 +1766,7 @@ Equation Listing    SOLVE schedule Using MIP From line 545
       - 0.00025641026*P(scen87,t1) - 0.00025641026*P(scen87,t2) - 0.00025641026*P(scen87,t3) - 0.00025641026*P(scen87,t4) - 0.00025641026*P(scen87,t5) - 0.00025641026*P(scen87,t6) - 0.00025641026*P(scen87,t7) - 0.00025641026*P(scen87,t8)
      
       - 0.00025641026*P(scen87,t9) - 0.00025641026*P(scen87,t10) - 0.00025641026*P(scen87,t11) - 0.00025641026*P(scen87,t12) - 0.00025641026*P(scen87,t13) - 0.00025641026*P(scen87,t14) - 0.00025641026*P(scen87,t15) - 0.00025641026*P(scen87,t16)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 34
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 34
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE schedule Using MIP From line 545
 
@@ -1824,7 +1824,7 @@ Equation Listing    SOLVE schedule Using MIP From line 545
       - 0.00025641026*P(scen95,t17) - 0.00025641026*P(scen95,t18) - 0.00025641026*P(scen95,t19) - 0.00025641026*P(scen95,t20) - 0.00025641026*P(scen95,t21) - 0.00025641026*P(scen95,t22) - 0.00025641026*P(scen95,t23) - 0.00025641026*P(scen95,t24)
      
       - 0.00025641026*P(scen96,t1) - 0.00025641026*P(scen96,t2) - 0.00025641026*P(scen96,t3) - 0.00025641026*P(scen96,t4) - 0.00025641026*P(scen96,t5) - 0.00025641026*P(scen96,t6) - 0.00025641026*P(scen96,t7) - 0.00025641026*P(scen96,t8)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 35
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 35
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE schedule Using MIP From line 545
 
@@ -1865,9 +1865,9 @@ Equation Listing    SOLVE schedule Using MIP From line 545
      
       + 0.021050776*Y(t24) + OBJ =E= 0 ; (LHS = 0)
      
-----    488 Equation   Objective     0.078     0.110 SECS      4 MB      1
-                                      0.047              ROWGEN
-                                      0.031              COLGEN
+----    488 Equation   Objective     0.021     0.025 SECS      4 MB      1
+                                      0.002              ROWGEN
+                                      0.019              COLGEN
 
 ---- Const1  =E=  balance constraint
 
@@ -1879,7 +1879,7 @@ Const1(scen1,t3)..  - 0.9*P(scen1,t3) + 1.11111111111111*Q(scen1,t3) - X(scen1,t
      
 Const1(scen1,t4)..  - 0.9*P(scen1,t4) + 1.11111111111111*Q(scen1,t4) - X(scen1,t4) + X(scen1,t5) =E= 0 ; (LHS = 0)
      
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 36
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 36
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE schedule Using MIP From line 545
 
@@ -1890,9 +1890,9 @@ Const1(scen1,t5)..  - 0.9*P(scen1,t5) + 1.11111111111111*Q(scen1,t5) - X(scen1,t
      
 REMAINING 2295 ENTRIES SKIPPED
 
-----    490 Equation   Const1        0.052     0.162 SECS      6 MB   2300
-                                      0.039              ROWGEN
-                                      0.013              COLGEN
+----    490 Equation   Const1        0.006     0.031 SECS      6 MB   2300
+                                      0.004              ROWGEN
+                                      0.002              COLGEN
 
 ---- Const_chance_1  =L=  chance constraint big M
 
@@ -1908,9 +1908,9 @@ Const_chance_1(scen1,t5)..  P(scen1,t5) - Q(scen1,t5) + Y(t5) - 480*Z(scen1) =L=
      
 REMAINING 2395 ENTRIES SKIPPED
 
-----    496 Equation   Const_chance_1    0.011     0.173 SECS      7 MB   2400
-                                      0.010              ROWGEN
-                                      0.001              COLGEN
+----    496 Equation   Const_chance_1    0.001     0.032 SECS      7 MB   2400
+                                      0.001              ROWGEN
+                                      0.000              COLGEN
 
 ---- Const_chance_2  =G=  chance constraint sum probabilities
 
@@ -1926,10 +1926,10 @@ Const_chance_2..  - Z(scen1) - Z(scen2) - Z(scen3) - Z(scen4) - Z(scen5) - Z(sce
      
       (LHS = 0)
      
-----    503 Equation   Const_chance_2    0.001     0.174 SECS      7 MB      1
+----    503 Equation   Const_chance_2    0.001     0.033 SECS      7 MB      1
                                       0.000              ROWGEN
                                       0.001              COLGEN
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 37
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 37
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE schedule Using MIP From line 545
 
@@ -1987,7 +1987,7 @@ Y(t1)
         1       Const_chance_1(scen5,t1)
         1       Const_chance_1(scen6,t1)
         1       Const_chance_1(scen7,t1)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 38
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 38
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE schedule Using MIP From line 545
 
@@ -2045,7 +2045,7 @@ Column Listing      SOLVE schedule Using MIP From line 545
         1       Const_chance_1(scen56,t1)
         1       Const_chance_1(scen57,t1)
         1       Const_chance_1(scen58,t1)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 39
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 39
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE schedule Using MIP From line 545
 
@@ -2103,7 +2103,7 @@ Y(t2)
         1       Const_chance_1(scen3,t2)
         1       Const_chance_1(scen4,t2)
         1       Const_chance_1(scen5,t2)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 40
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 40
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE schedule Using MIP From line 545
 
@@ -2161,7 +2161,7 @@ Column Listing      SOLVE schedule Using MIP From line 545
         1       Const_chance_1(scen54,t2)
         1       Const_chance_1(scen55,t2)
         1       Const_chance_1(scen56,t2)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 41
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 41
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE schedule Using MIP From line 545
 
@@ -2219,7 +2219,7 @@ Y(t3)
         1       Const_chance_1(scen1,t3)
         1       Const_chance_1(scen2,t3)
         1       Const_chance_1(scen3,t3)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 42
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 42
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE schedule Using MIP From line 545
 
@@ -2277,7 +2277,7 @@ Column Listing      SOLVE schedule Using MIP From line 545
         1       Const_chance_1(scen52,t3)
         1       Const_chance_1(scen53,t3)
         1       Const_chance_1(scen54,t3)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 43
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 43
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE schedule Using MIP From line 545
 
@@ -2332,7 +2332,7 @@ Column Listing      SOLVE schedule Using MIP From line 545
         1       Const_chance_1(scen100,t3)
 
 REMAINING 21 ENTRIES SKIPPED
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 44
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 44
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE schedule Using MIP From line 545
 
@@ -2390,7 +2390,7 @@ Z(scen1)
      -465.88    Const_chance_1(scen1,t20)
      -480       Const_chance_1(scen1,t21)
      -480       Const_chance_1(scen1,t22)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 45
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 45
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE schedule Using MIP From line 545
 
@@ -2448,7 +2448,7 @@ Z(scen3)
      -179.03    Const_chance_1(scen3,t15)
      -283.46    Const_chance_1(scen3,t16)
      -430.3     Const_chance_1(scen3,t17)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 46
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 46
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE schedule Using MIP From line 545
 
@@ -2465,7 +2465,7 @@ Column Listing      SOLVE schedule Using MIP From line 545
        -1       Const_chance_2
 
 REMAINING 97 ENTRIES SKIPPED
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 47
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 47
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Model Statistics    SOLVE schedule Using MIP From line 545
 
@@ -2477,19 +2477,19 @@ BLOCKS OF VARIABLES           6     SINGLE VARIABLES        7,325  2,300 project
 NON ZERO ELEMENTS        21,325     DISCRETE VARIABLES        100
 
 
-----    545 Solve Fini schedule      0.714     0.888 SECS      7 MB  21325
-                                      0.001              ROWS
-                                      0.008              COLUMNS
-                                      0.584              OTHERS
-GENERATION TIME      =        0.856 SECONDS      7 MB  24.8.5 r61358 LEX-LEG
+----    545 Solve Fini schedule      0.078     0.111 SECS      7 MB  21325
+                                      0.000              ROWS
+                                      0.002              COLUMNS
+                                      0.067              OTHERS
+GENERATION TIME      =        0.107 SECONDS      7 MB  24.8.5 r61358 LEX-LEG
 
 
-EXECUTION TIME       =        0.888 SECONDS      7 MB  24.8.5 r61358 LEX-LEG
-----    545 GAMS Fini                0.347     0.347 SECS      7 MB 
+EXECUTION TIME       =        0.111 SECONDS      7 MB  24.8.5 r61358 LEX-LEG
+----    545 GAMS Fini                0.045     0.045 SECS      7 MB 
 ----      1 InitE                    0.000     0.000 SECS      3 MB 
 ----      1 ExecInit                 0.000     0.000 SECS      3 MB 
 ----    545 Solve Alg  schedule      0.000     0.000 SECS      3 MB 
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 48
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 48
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE schedule Using MIP From line 545
 
@@ -2504,8 +2504,8 @@ Solution Report     SOLVE schedule Using MIP From line 545
 **** MODEL STATUS      8 Integer Solution          
 **** OBJECTIVE VALUE             -282.2720
 
- RESOURCE USAGE, LIMIT        163.930      4200.000
- ITERATION COUNT, LIMIT     71251    2000000000
+ RESOURCE USAGE, LIMIT         61.260      4200.000
+ ITERATION COUNT, LIMIT     83054    2000000000
 Gurobi link license.
 Gurobi library version 7.0.2
 Space for names approximately 0.29 Mb
@@ -2514,53 +2514,53 @@ MIP status(2): Model was solved to optimality (subject to tolerances).
 Fixed MIP status(2): Model was solved to optimality (subject to tolerances).
 
 Final Solve:          -282.272016    (4362 iterations)
-Best possible:        -284.382291
-Absolute gap:            2.110275
-Relative gap:            0.007421
+Best possible:        -282.498547
+Absolute gap:            0.226531
+Relative gap:            0.000802
 
 
 **** REPORT SUMMARY :        0     NONOPT
                              0 INFEASIBLE
                              0  UNBOUNDED
-----    545 Solve Read schedule      0.033     0.033 SECS      3 MB 
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 49
+----    545 Solve Read schedule      0.019     0.019 SECS      3 MB 
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 49
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 E x e c u t i o n
 
 
-----    546 Assignment end_time      0.000     0.033 SECS      4 MB      0
-----    548 Assignment run_time_total    0.000     0.033 SECS      4 MB      0
+----    546 Assignment end_time      0.000     0.019 SECS      4 MB      0
+----    548 Assignment run_time_total    0.000     0.019 SECS      4 MB      0
 
 ----    549 VARIABLE OBJ.L                 =  -2.82272E+2  
-            PARAMETER run_time_total       =  3.660000E+2  
-----    549 Display                  0.000     0.033 SECS      4 MB 
-----    552 Assignment ObjNaive      0.001     0.034 SECS      4 MB      0
-----    555 Assignment zlower        0.000     0.034 SECS      4 MB      0
-----    558 Assignment zupper        0.000     0.034 SECS      4 MB      0
-----    561 Assignment GapNaive      0.000     0.034 SECS      4 MB      0
+            PARAMETER run_time_total       =  3.350000E+2  
+----    549 Display                  0.000     0.019 SECS      4 MB 
+----    552 Assignment ObjNaive      0.000     0.019 SECS      4 MB      0
+----    555 Assignment zlower        0.000     0.019 SECS      4 MB      0
+----    558 Assignment zupper        0.000     0.019 SECS      4 MB      0
+----    561 Assignment GapNaive      0.000     0.019 SECS      4 MB      0
 
 ----    563 PARAMETER ObjNaive             =  2.822720E+2  
-----    563 Display                  0.000     0.034 SECS      4 MB 
-----    567 Assignment TestingFile3    0.000     0.034 SECS      4 MB      0
-----    568 Assignment TestingFile3    0.000     0.034 SECS      4 MB      0
-----    569 Put                      0.000     0.034 SECS      4 MB 
-----    570 Put                      0.000     0.034 SECS      4 MB 
-----    570 Put                      0.000     0.034 SECS      4 MB 
-----    570 Put                      0.000     0.034 SECS      4 MB 
-----    570 Put                      0.000     0.034 SECS      4 MB 
-----    570 Put                      0.000     0.034 SECS      4 MB 
-----    571 Put                      0.000     0.034 SECS      4 MB 
-----    571 Put                      0.000     0.034 SECS      4 MB 
-----    571 Put                      0.000     0.034 SECS      4 MB 
-----    571 Put                      0.000     0.034 SECS      4 MB 
-----    571 Put                      0.000     0.034 SECS      4 MB 
+----    563 Display                  0.000     0.019 SECS      4 MB 
+----    567 Assignment TestingFile3    0.000     0.019 SECS      4 MB      0
+----    568 Assignment TestingFile3    0.000     0.019 SECS      4 MB      0
+----    569 Put                      0.000     0.019 SECS      4 MB 
+----    570 Put                      0.000     0.019 SECS      4 MB 
+----    570 Put                      0.000     0.019 SECS      4 MB 
+----    570 Put                      0.000     0.019 SECS      4 MB 
+----    570 Put                      0.000     0.019 SECS      4 MB 
+----    570 Put                      0.000     0.019 SECS      4 MB 
+----    571 Put                      0.000     0.019 SECS      4 MB 
+----    571 Put                      0.000     0.019 SECS      4 MB 
+----    571 Put                      0.000     0.019 SECS      4 MB 
+----    571 Put                      0.000     0.019 SECS      4 MB 
+----    571 Put                      0.000     0.019 SECS      4 MB 
 
 **** REPORT FILE SUMMARY
 
 TestingFile3 /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/100Scens/tol05/Scenario_14/Naive.csv
 
 
-EXECUTION TIME       =        0.068 SECONDS      4 MB  24.8.5 r61358 LEX-LEG
+EXECUTION TIME       =        0.023 SECONDS      4 MB  24.8.5 r61358 LEX-LEG
 
 
 USER: Small MUD - 5 User License                     S160825:0507AO-LNX
@@ -2575,18 +2575,18 @@ Output     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment
 ----    571 GAMS Fini                0.000     0.000 SECS      4 MB 
  
 ---- Profile Summary (521 records processed)
-     0.714   0.007GB       545 Solve Fini schedule (21325)
-     0.347   0.007GB       545 GAMS Fini   
-     0.078   0.004GB       488 Equation   Objective (1)
-     0.052   0.006GB       490 Equation   Const1 (2300)
-     0.033   0.003GB       545 Solve Read schedule
-     0.016   0.004GB       523 Assignment X (2400)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     11/25/21 08:59:54 Page 50
+     0.078   0.007GB       545 Solve Fini schedule (21325)
+     0.045   0.007GB       545 GAMS Fini   
+     0.021   0.004GB       488 Equation   Objective (1)
+     0.019   0.003GB       545 Solve Read schedule
+     0.006   0.006GB       490 Equation   Const1 (2300)
+     0.004   0.004GB       411 Loop       
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/17/22 17:36:39 Page 50
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 E x e c u t i o n
 
 
-     0.013   0.004GB       411 Loop       
-     0.011   0.007GB       496 Equation   Const_chance_1 (2400)
-     0.005   0.004GB       412 Loop       
-     0.004   0.004GB       416 Assignment dummy (1)
+     0.001   0.007GB       496 Equation   Const_chance_1 (2400)
+     0.001   0.007GB       503 Equation   Const_chance_2 (1)
+     0.001   0.004GB       418 Assignment dummysolar (1354)
+     0.001   0.004GB       412 Loop       
