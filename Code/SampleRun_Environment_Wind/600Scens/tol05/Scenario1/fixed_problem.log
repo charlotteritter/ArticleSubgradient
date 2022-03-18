@@ -1,0 +1,126 @@
+--- Job fixed_problem.gms Start 03/18/22 12:02:49 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\600Scens\tol05\Scenario1\fixed_problem.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\600Scens\tol05\Scenario1\225b\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- fixed_problem.gms(27) 3 Mb
+--- . wind_costs.csv(25) 3 Mb
+--- fixed_problem.gms(34) 3 Mb
+--- . wind_scenarios.csv(601) 4 Mb
+--- fixed_problem.gms(157) 4 Mb
+--- . sampled_dynamic.csv(25) 4 Mb
+--- fixed_problem.gms(202) 4 Mb
+--- Starting execution: elapsed 0:00:00.050
+--- fixed_problem.gms(821) 8 Mb
+--- Generating MIP model SCHEDULE
+--- fixed_problem.gms(737) 8 Mb
+--- Starting Equ Objective: elapsed 0:00:00.214
+--- fixed_problem.gms(739) 11 Mb
+--- Starting Equ Const1_1: elapsed 0:00:00.678
+--- fixed_problem.gms(741) 19 Mb
+--- Starting Equ Const1_2: elapsed 0:00:00.708
+--- fixed_problem.gms(747) 19 Mb
+--- Starting Equ Const_3_1: elapsed 0:00:00.711
+--- fixed_problem.gms(748) 24 Mb
+--- Starting Equ Const_3_2: elapsed 0:00:00.755
+--- fixed_problem.gms(752) 28 Mb
+--- Starting Equ Const_4_1: elapsed 0:00:00.796
+--- fixed_problem.gms(753) 31 Mb
+--- fixed_problem.gms(756) 33 Mb
+--- Starting Equ Const_5: elapsed 0:00:01.040
+--- fixed_problem.gms(759) 37 Mb
+--- Starting Equ Const_6: elapsed 0:00:01.089
+--- fixed_problem.gms(824) 42 Mb
+--- LOOPS iter = iter1
+---   96,002 rows  58,225 columns  441,025 non-zeroes
+---   15,000 discrete-columns
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:01.355
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+Gurobi link license.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model SCHEDULE
+--- Executing after solve: elapsed 0:00:01.663
+--- fixed_problem.gms(821) 42 Mb
+--- Generating MIP model SCHEDULE
+--- fixed_problem.gms(737) 42 Mb
+--- Starting Equ Objective: elapsed 0:00:01.663
+--- fixed_problem.gms(739) 42 Mb
+--- Starting Equ Const1_1: elapsed 0:00:02.146
+--- fixed_problem.gms(741) 42 Mb
+--- Starting Equ Const1_2: elapsed 0:00:02.202
+--- fixed_problem.gms(747) 42 Mb
+--- Starting Equ Const_3_1: elapsed 0:00:02.205
+--- fixed_problem.gms(748) 42 Mb
+--- Starting Equ Const_3_2: elapsed 0:00:02.281
+--- fixed_problem.gms(752) 42 Mb
+--- Starting Equ Const_4_1: elapsed 0:00:02.357
+--- fixed_problem.gms(753) 42 Mb
+--- Starting Equ Const_4_2: elapsed 0:00:02.478
+--- fixed_problem.gms(756) 42 Mb
+--- Starting Equ Const_5: elapsed 0:00:02.594
+--- fixed_problem.gms(759) 42 Mb
+--- Starting Equ Const_6: elapsed 0:00:02.651
+--- fixed_problem.gms(824) 42 Mb
+--- LOOPS iter = iter2
+---   96,002 rows  58,225 columns  441,025 non-zeroes
+---   15,000 discrete-columns
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:02.934
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+Gurobi link license.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model SCHEDULE
+--- Executing after solve: elapsed 0:00:03.146
+--- fixed_problem.gms(821) 42 Mb
+--- Generating MIP model SCHEDULE
+--- fixed_problem.gms(737) 42 Mb
+--- Starting Equ Objective: elapsed 0:00:03.146
+--- fixed_problem.gms(739) 42 Mb
+--- Starting Equ Const1_1: elapsed 0:00:03.606
+--- fixed_problem.gms(741) 42 Mb
+--- Starting Equ Const1_2: elapsed 0:00:03.669
+--- fixed_problem.gms(747) 42 Mb
+--- Starting Equ Const_3_1: elapsed 0:00:03.672
+--- fixed_problem.gms(748) 42 Mb
+--- Starting Equ Const_3_2: elapsed 0:00:03.748
+--- fixed_problem.gms(752) 42 Mb
+--- Starting Equ Const_4_1: elapsed 0:00:03.832
+--- fixed_problem.gms(753) 42 Mb
+--- Starting Equ Const_4_2: elapsed 0:00:03.962
+--- fixed_problem.gms(756) 42 Mb
+--- Starting Equ Const_5: elapsed 0:00:04.095
+*** Error at line 753: Execution halted: Triggered by pending CtrlC event
+--- fixed_problem.gms(824) 42 Mb 1 Error
+*** SOLVE aborted
+--- Profile Summary (2327 records processed)
+     0.484   0.042GB       737 Equation   Objective (1)
+     0.469   0.011GB       737 Equation   Objective (1)
+     0.453   0.042GB       737 Equation   Objective (1)
+     0.297   0.042GB       824 Solve Alg  SCHEDULE
+     0.203   0.042GB       824 Solve Fini SCHEDULE (441025)
+     0.203   0.042GB       824 Solve Fini SCHEDULE (441025)
+     0.203   0.042GB       824 Solve Alg  SCHEDULE
+     0.141   0.033GB       753 Equation   Const_4_2 (13200)
+     0.141   0.005GB       686 Loop       
+     0.125   0.042GB       752 Equation   Const_4_1 (13200)
+--- fixed_problem.gms(824) 42 Mb 1 Error
+*** Status: Execution error(s)
+--- Job fixed_problem.gms Stop 03/18/22 12:02:53 elapsed 0:00:04.163

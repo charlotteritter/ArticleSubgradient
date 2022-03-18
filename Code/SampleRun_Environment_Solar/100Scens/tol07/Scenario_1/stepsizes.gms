@@ -6,7 +6,7 @@ norm2 = max(gamma*gamma, 1e-6);
 if(steprule=1,stepsize =0.58;);   
 
 *** constant step length
-if(steprule=2,stepsize = 200/sqrt(norm2););
+if(steprule=2,stepsize = 200/norm2;);
 
 *** square summable but not summable
 if(steprule=3,stepsize =3/(2+num_iter););
@@ -15,7 +15,7 @@ if(steprule=3,stepsize =3/(2+num_iter););
 if(steprule=4,stepsize= 1/sqrt(num_iter););
 
 *** nonsummable diminishing step length
-if(steprule=5,stepsize= (300/num_iter)/sqrt(norm2););
+if(steprule=5,stepsize= (300/num_iter)/norm2;);
 
 *** original
 if(steprule=6,stepsize=theta*(upperbound - bound)/norm2;);

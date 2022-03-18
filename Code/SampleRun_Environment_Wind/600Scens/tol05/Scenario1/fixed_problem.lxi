@@ -1,0 +1,67 @@
+B 3 C o m p i l a t i o n
+B 858 Include File Summary
+B 872 E x e c u t i o n
+I 3136 minwind
+B 3162 Model Analysis      SOLVE SCHEDULE Using MIP From line 824
+B 3168 Equation Listing    SOLVE SCHEDULE Using MIP From line 824
+D 3171 Objective
+D 3239 Const1_1
+D 3257 Const1_2
+D 3265 Const_3_1
+D 3283 Const_3_2
+D 3301 Const_4_1
+D 3319 Const_4_2
+D 3337 Const_5
+D 3355 Const_6
+B 3374 Column Listing      SOLVE SCHEDULE Using MIP From line 824
+E 3377 X
+E 3409 Y
+E 5225 U
+E 5251 V
+E 5276 OBJ
+E 5283 Z
+E 5371 R
+B 5411 Model Statistics    SOLVE SCHEDULE Using MIP From line 824
+B 5434 Solution Report     SOLVE SCHEDULE Using MIP From line 824
+B 5456 E x e c u t i o n
+B 5466 Model Analysis      SOLVE SCHEDULE Using MIP From line 824
+B 5472 Equation Listing    SOLVE SCHEDULE Using MIP From line 824
+D 5475 Objective
+D 5543 Const1_1
+D 5561 Const1_2
+D 5569 Const_3_1
+D 5587 Const_3_2
+D 5605 Const_4_1
+D 5623 Const_4_2
+D 5641 Const_5
+D 5659 Const_6
+B 5678 Column Listing      SOLVE SCHEDULE Using MIP From line 824
+E 5681 X
+E 5713 Y
+E 7529 U
+E 7555 V
+E 7580 OBJ
+E 7587 Z
+E 7675 R
+B 7715 Model Statistics    SOLVE SCHEDULE Using MIP From line 824
+B 7738 Solution Report     SOLVE SCHEDULE Using MIP From line 824
+B 7760 E x e c u t i o n
+B 7770 Model Analysis      SOLVE SCHEDULE Using MIP From line 824
+B 7776 Equation Listing    SOLVE SCHEDULE Using MIP From line 824
+D 7779 Objective
+D 7847 Const1_1
+D 7865 Const1_2
+D 7873 Const_3_1
+D 7891 Const_3_2
+D 7909 Const_4_1
+D 7927 Const_4_2
+D 7946 Const_5
+B 7955 Column Listing      SOLVE SCHEDULE Using MIP From line 824
+E 7958 X
+E 7987 Y
+E 9803 U
+E 9824 V
+E 9845 OBJ
+E 9852 Z
+E 9940 R
+B 9972 Model Statistics    SOLVE SCHEDULE Using MIP From line 824
