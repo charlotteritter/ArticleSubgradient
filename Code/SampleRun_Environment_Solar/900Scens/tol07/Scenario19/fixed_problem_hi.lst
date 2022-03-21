@@ -1,0 +1,338 @@
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/21/22 14:55:15 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+      This is Step 5 of Algorithm 1 of file v10.pdf (iEEE paper)
+      The 1500 scenario fixed problem
+      Follow up of SAA.gms
+       
+   7   
+   8  OPTIONS PROFILE =3, RESLIM   = 1800, LIMROW   = 5, LP = CPLEX, MIP = gurobi, RMIP=Gurobi, NLP = CONOPT, MINLP = DICOPT, MIQCP = CPLEX,
+   9           SOLPRINT = OFF, decimals = 8, optcr=0.0, optca=0.0, threads =8, integer4=1;
+  10   
+  11  ********************************************************************************
+  12  * run_time_total recorder
+  13  SCALAR start_time, end_time, run_time_total;
+  14   
+  15  *-------------------------------------------------------------------------------
+  16   
+  17  ** sets defined in input file
+  18  SETS T times/t1*t24/;
+  19  SETS W scenarios /scen1*scen900/;
+  20   
+  21  ALIAS (T,TT);
+  22  ALIAS (W,I);
+  23  ALIAS (W,SCEN);
+  24   
+  25  SETS iter iterations /iter1*iter30/;
+  26   
+  27  TABLE Solar(scen,t)
+  29  *$INCLUDE %SOLAR%.csv
+  30  $INCLUDE solar_scenarios.csv
+****                             $282
+  32  ;
+****  $463
+  33   
+  34  *Tolerance
+  35  scalar tol;
+  36  *tol=%TOL%;
+  37  tol=0.05;
+  38   
+  39   
+  40  * time limit for each problem
+  41  scalar time_limit;
+  42  *time_limit=%TIMELIM%;
+  43  time_limit=2250;
+  44   
+  45  ALIAS (T,TT);
+  46  alias(scen,i);
+  47   
+  48  scalar n;
+  49  n=card(scen);
+  50   
+  51  TABLE y_100(t,iter)
+INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/900Scens/tol07/Scenario19/sampled_dynamic_hi.csv
+  54  ,iter1,iter2,iter3,iter4,iter5,iter6,iter7,iter8,iter9,iter10,iter11,iter12,iter13,iter14,iter15,iter16,iter17,iter18,iter19,iter20,iter21,iter22,iter23,iter24,iter25,iter26,iter27,iter28,iter29,iter30
+  55  t1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+  56  t2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/21/22 14:55:15 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+  57  t3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+  58  t4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+  59  t5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+  60  t6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+  61  t7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+  62  t8,5,6.65,6.11,5,5,5,5,5,3.078,1.31,0.26,3.63,8.3,6.61,8.28,7.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+  63  t9,42.74,67.68,67.68,93.29,93.29,85.68,93.29,93.29,70.03,71.03,71.03,71.03,97.18,64.73,50.24,50.24,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+  64  t10,622.06,642.41,631.3,622.06,631.3,622.06,612.81,622.06,600.33,600.33,614.01,631.3,658.59,653.4,609.17,587.777,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+  65  t11,684.618,640.679,609.38,747.77,747.77,773.43,794.22,794.22,837.26,837.26,814.48,825.707,864.111,752.78,849.815,796.425,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+  66  t12,801.23,807.86,878.54,747.573,735.253,725.484,740.785,731.049,792.67,792.981,883.94,843.132,888.47,936.305,851.98,843.35,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+  67  t13,1000.61,1000.61,987.99,964.38,964.38,967.63,967.63,970.4,942.14,942.14,970.4,963.54,885.105,841.49,855.79,924.07,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+  68  t14,1044.96,1044.96,1042.17,1088.07,1094.04,1094.04,1056,1056,1064.8,1064.8,1056,1064.8,939.054,1038.268,1000.164,1055.288,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+  69  t15,944.03,941.15,964.64,935.33,916.78,930.59,920.88,915.83,970.05,968.09,1070.54,1038.93,1003.49,944.94,972.12,1012.69,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+  70  t16,930.21,930.21,925.16,925.16,921.65,908.82,910.75,921.18,919.23,921.18,943.48,951.83,953.09,934.06,951.83,920.43,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+  71  t17,788.62,788.62,788.62,814.21,836.27,836.27,843.07,836.27,820.31,820.32,806.45,815.77,817.11,836.14,818.37,793.74,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+  72  t18,867.3,867.3,847.59,847.59,847.59,847.59,847.59,847.59,847.59,847.59,847.59,847.59,847.59,847.59,847.59,847.59,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+  73  t19,181.31,184.19,185.46,189.18,189.18,188.2,189.18,190.6,197.676,197.35,208.628,187.69,193.54,193.54,193.54,185.32,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+  74  t20,136.25,136.25,136.25,147.14,147.14,147.14,147.14,147.14,111.49,111.754,130.952,134.22,123.81,122.02,121.36,121.05,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+  75  t21,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+  76  t22,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+  77  t23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+  78  t24,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,480,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+  80  ;
+  81   
+  82   
+  83  ** define battery  operation costs costs and solar selling prices
+  84   
+  85  TABLE PRICES(t,*)
+INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/900Scens/tol07/Scenario19/battery_revenue.csv
+  88  ,REW,CHAR,DISCH
+  89  t1,0.018872128,0.025641026,0.025641026
+  90  t2,0.017165378,0.025641026,0.025641026
+  91  t3,0.015479861,0.025641026,0.025641026
+  92  t4,0.014815148,0.025641026,0.025641026
+  93  t5,0.014640477,0.025641026,0.025641026
+  94  t6,0.015101974,0.025641026,0.025641026
+  95  t7,0.017323907,0.025641026,0.025641026
+  96  t8,0.021866318,0.025641026,0.025641026
+  97  t9,0.022687626,0.025641026,0.025641026
+  98  t10,0.022632312,0.025641026,0.025641026
+  99  t11,0.023539775,0.025641026,0.025641026
+ 100  t12,0.024153055,0.025641026,0.025641026
+ 101  t13,0.025002242,0.025641026,0.025641026
+ 102  t14,0.026148843,0.025641026,0.025641026
+ 103  t15,0.028482657,0.025641026,0.025641026
+ 104  t16,0.035324217,0.025641026,0.025641026
+ 105  t17,0.053079881,0.025641026,0.025641026
+ 106  t18,0.067077457,0.025641026,0.025641026
+ 107  t19,0.043782645,0.025641026,0.025641026
+ 108  t20,0.033252185,0.025641026,0.025641026
+ 109  t21,0.02868827,0.025641026,0.025641026
+ 110  t22,0.026761757,0.025641026,0.025641026
+ 111  t23,0.023974723,0.025641026,0.025641026
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/21/22 14:55:15 Page 3
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+ 112  t24,0.021050776,0.025641026,0.025641026
+ 114  ;
+ 115   
+ 116  Prices(t,'rew')     =  - Prices(t,'rew');
+ 117  Prices(t,'char')    =  - Prices(t,'char');
+ 118  Prices(t,'dischar') =  - Prices(t,'dischar');
+ 119  ** define solar scenarios at all time periods
+ 120   
+ 121   
+ 122  * Scaling of Solar power scenarios ;
+ 123  scalar scale ;
+ 124  scale = 1;
+ 125  Solar(scen,t) = scale* Solar(scen,t) ;
+ 126  * Remove too many decimals in Solar
+ 127  Solar(scen,t) = round(Solar(scen,t),2) ;
+ 128   
+ 129   
+ 130  scalar PROBABILITY;
+ 131  PROBABILITY = 1/CARD(W);
+ 132  ;
+ 133   
+ 134  scalar eta ;
+ 135  *from Ben paper
+ 136  eta = 0.9
+ 137  ;
+ 138  parameters max_store(t), min_store(t), max_charge, max_discharge;
+ 139   
+ 140   
+ 141  ** define tolerance threshold
+ 142  SCALAR threshold;
+ 143  threshold = floor(card(scen)*TOL)  ;
+ 144   
+ 145  parameter BigX, LowX, X_0 maximum minimum initial energy stored ;
+ 146  parameter BigM(scen,t) find a good BigM ;
+ 147   
+ 148  BigX = 960 ;
+ 149  LowX = 0.2* BigX ;
+ 150  X_0  = 0.5* BigX ;
+ 151  max_charge =  0.5* BigX ;
+ 152  max_discharge =  0.5* BigX ;
+ 153   
+ 154  ************** Find a Big M
+ 155  * find Ntol + 1st value
+ 156  parameter maxsolar(t), minsolar(t), dummysolar(scen,t) ;
+ 157  maxsolar(t) =smax(scen,solar(scen,t)) ;
+ 158  dummysolar(scen,t) = solar(scen,t) ;
+ 159   
+ 160  scalar it ;
+ 161  it = floor(card(scen)*tol) + 1;
+ 162   
+ 163  * index of it
+ 164  set dummy_set(scen);
+ 165  * make the dum_iter go till at least the size of it
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/21/22 14:55:15 Page 4
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+ 166  set dum_iter /dum_iter1*dum_iter100/;
+ 167  loop(t,
+ 168  loop(dum_iter$(ord(dum_iter)le it),
+ 169  * find the smallest solar value for this t
+ 170           minsolar(t) = smin(scen,dummysolar(scen,t)) ;
+ 171  * index of smallest solar value
+ 172           dummy_set(scen) = yes$(dummysolar(scen,t) eq minsolar(t)) ;
+ 173  * make the smallest solar value large
+ 174           dummysolar(scen,t)$dummy_set(scen) =maxsolar(t) ;
+ 175  ); );
+ 176  scalar G upper bound on q - p ;
+ 177  G = min(eta*(BigX - LowX), max_discharge) ;
+ 178   
+ 179  BigM(scen,t)= G - solar(scen,t) + minsolar(t);
+ 180   
+ 181  ********************************************************************************
+ 182  *                                begin model
+ 183  ********************************************************************************
+ 184   
+ 185   
+ 186   
+ 187  POSITIVE VARIABLES P(scen,t), Q(scen,t), Y(T), X(scen,t) ;
+ 188  VARIABLES OBJ;
+ 189  BINARY VARIABLE Z(scen) ;
+ 190   
+ 191  scalar counter ;
+ 192   
+ 193  EQUATIONS
+ 194          Objective
+ 195          Const1(scen,t)    balance constraint
+ 196          Const2(scen,t)    max charge
+ 197          Const3(scen,t)    max discharge
+ 198          Const_chance_1(scen,t)    chance constraint big M
+ 199          Const_chance_PH(scen,t)
+ 200          Const_chance_2            chance constraint sum probabilities
+ 201          ;
+ 202   
+ 203  Objective.. OBJ=E= SUM(T,Prices(T, 'REW')*Y(T) - PROBABILITY*Sum(w, ( Prices(T, 'CHAR')* P(w,t) + Prices(t, 'DISCHAR') * Q(w,t) ) ) )     ;
+ 204   
+ 205  Const1(scen,t)$(ord(t) lt card(t))..
+ 206           X(scen,t+1) =E= X(scen,t) + eta* P(scen,t) - (1/eta)* Q(scen,t) ;
+ 207   
+ 208  Const_chance_1(scen,t).. Y(T) + P(scen,t) -  Q(scen,t) -SOLAR(scen,t) =L= Z(scen)*BigM(scen,t) ;
+ 209   
+ 210   
+ 211  Const_chance_2..      - sum(scen, z(scen)) =G= -threshold;
+ 212   
+ 213   
+ 214  *** bounds on any variables
+ 215  x.up(scen,t) = BigX ;
+ 216  x.lo(scen,t) = LowX ;
+ 217  q.up(scen,t) = max_discharge ;
+ 218  p.up(scen,t) =  max_charge ;
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/21/22 14:55:15 Page 5
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+ 219  x.fx(scen,'t1') = X_0 ;
+ 220  z.prior(scen)   = 1;
+ 221   
+ 222   
+ 223  parameter last_x(scen,t), last_p(scen,t), last_q(scen,t), last_z(scen), last_ph(scen) ;
+ 224  ******* ALL MODELS
+ 225   
+ 226  model schedule     / Objective,  Const1, Const_chance_1, Const_chance_2/ ;
+ 227   
+ 228  parameter  profit(iter), y_previous(t), run_time(iter);
+ 229  scalar profit_orig, t1, t2,start_time,end_time,tot_time;
+ 230   
+ 231  start_time=jnow;
+ 232  loop(iter,
+ 233           y.fx(t)=y_100(t,iter);
+ 234           t1=jnow ;
+ 235           SOLVE SCHEDULE USING MIP MINIMIZING OBJ;
+****                                                  $257
+**** LINE    185 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/900Scens/tol07/Scenario19/fixed_problem_hi.gms
+ 236           t2=jnow;
+ 237           run_time(iter) = ghour(t2 - t1)*3600 + gminute(t2 - t1)*60 + gsecond(t2 - t1);
+ 238           profit(iter)= obj.l;
+****                             $141
+**** LINE    188 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/900Scens/tol07/Scenario19/fixed_problem_hi.gms
+ 239  );
+ 240  end_time=jnow;
+ 241  display y.l;
+ 242   
+ 243  tot_time =  ghour(end_time - start_time)*3600 + gminute(end_time - start_time)*60 + gsecond(end_time - start_time);
+ 244   
+ 245   
+ 246  ********************************************************************************
+ 247  *                                write output
+ 248  ********************************************************************************
+ 249   
+ 250   
+ 251  FILE fixed_profit /fixed_profit_hi.csv/;
+ 252  fixed_profit.PC = 5;
+ 253  fixed_profit.ND = 3;
+ 254  PUT fixed_profit;
+ 255  loop(iter, put iter.tl put profit(iter) put run_time(iter) put /; );
+ 256  PUTCLOSE fixed_profit;
+ 257   
+ 258  scalar sma;
+ 259  sma=smax(iter,profit(iter));
+ 260  File TestingFile3 / Alg_hi.csv /;
+ 261  TestingFile3.pc=5;
+ 262  TestingFile3.nd=5;
+ 263  put TestingFile3;
+ 264  put 'Omega', put 'Tolerance', put 'Step Size Rule', put 'Iterations', put 'Converged?', put 'Gap LR', put 'Gap Naive', put 'Obj. Naive', put 'Obj. LR', put 'Gap' put 'Time Naive', put 'Time LR', put 'Final Lambda', put 'LB Heuristic' put /;
+ 265  put '', put '', put '', put '', put '', put '', put '', put '', put '', put '', put '', put '', put '', put sma put /;
+ 266   
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/21/22 14:55:15 Page 6
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+
+**** LIST OF STRAY NAMES - CHECK DECLARATIONS FOR SPURIOUS COMMAS
+**** STRAY NAME run_time_total OF TYPE PARAM
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/21/22 14:55:15 Page 7
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Error Messages
+
+
+141  Symbol declared but no values have been assigned. Check for missing
+        data definition, assignment, data loading or implicit assignment
+        via a solve statement.
+        A wild shot: You may have spurious commas in the explanatory
+        text of a declaration. Check symbol reference list.
+257  Solve statement not checked because of previous errors
+282  Unable to open include file
+463  The column section in the previous table is missing
+
+**** 4 ERROR(S)   0 WARNING(S)
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/21/22 14:55:15 Page 8
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Include File Summary
+
+
+   SEQ   GLOBAL TYPE      PARENT   LOCAL  FILENAME
+
+     1        1 INPUT          0       0  /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/900Scens/tol07/Scenario19/fixed_problem_hi.gms
+     2       53 INCLUDE        1      53  ./home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/900Scens/tol07/Scenario19/sampled_dynamic_hi.csv
+     3       87 INCLUDE        1      62  ./home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/900Scens/tol07/Scenario19/battery_revenue.csv
+
+
+COMPILATION TIME     =        0.014 SECONDS      3 MB  24.8.5 r61358 LEX-LEG
+
+
+USER: Small MUD - 5 User License                     S160825:0507AO-LNX
+      Universitaet Erlangen-Nuernberg, Lehrstuhl f. WirtschaftsmaDC7699
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/900Scens/tol07/Scenario19/fixed_problem_hi.gms
+Output     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/900Scens/tol07/Scenario19/fixed_problem_hi.lst
+
+**** USER ERROR(S) ENCOUNTERED
