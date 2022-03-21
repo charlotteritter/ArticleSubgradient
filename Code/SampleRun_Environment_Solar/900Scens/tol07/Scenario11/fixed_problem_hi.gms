@@ -34,7 +34,7 @@ $offdelim
 *Tolerance 
 scalar tol;
 *tol=%TOL%;
-tol=0.07;
+tol=0.05;
 
 
 * time limit for each problem
@@ -206,7 +206,7 @@ loop(iter, put iter.tl put profit(iter) put run_time(iter) put /; );
 PUTCLOSE fixed_profit;
 
 scalar sma;
-sma=smin(iter,profit(iter));
+sma=smax(iter,profit(iter));
 File TestingFile3 / Alg_hi.csv /;
 TestingFile3.pc=5;
 TestingFile3.nd=5;

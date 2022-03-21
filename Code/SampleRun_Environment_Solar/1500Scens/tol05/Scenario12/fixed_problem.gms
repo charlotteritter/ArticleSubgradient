@@ -206,12 +206,11 @@ loop(iter, put iter.tl put profit(iter) put run_time(iter) put /; );
 PUTCLOSE fixed_profit;
 
 scalar sma;
-sma=smin(iter,profit(iter));
+sma=smax(iter,profit(iter));
 File TestingFile3 / Alg.csv /;
 TestingFile3.pc=5;
 TestingFile3.nd=5;
 put TestingFile3; 
 put 'Omega', put 'Tolerance', put 'Step Size Rule', put 'Iterations', put 'Converged?', put 'Gap LR', put 'Gap Naive', put 'Obj. Naive', put 'Obj. LR', put 'Gap' put 'Time Naive', put 'Time LR', put 'Final Lambda', put 'LB Heuristic' put /;
 put '', put '', put '', put '', put '', put '', put '', put '', put '', put '', put '', put '', put '', put sma put /;
-
 
