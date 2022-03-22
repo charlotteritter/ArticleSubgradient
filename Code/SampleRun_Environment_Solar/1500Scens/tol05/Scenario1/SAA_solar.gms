@@ -180,7 +180,7 @@ z.prior(scen)   = 1;
 parameter last_x(scen,t), last_p(scen,t), last_q(scen,t), last_z(scen), last_ph(scen) ;
 ******* ALL MODELS
 
-model schedule     / Objective,  Const1, Const_chance_1, Const_chance_2/ ;
+model schedule     / Objective,  Const1, Const_chance_1, Const_chance_2, Const_dum1, Const_dum2/ ;
 
 
 ********************************************************************************
