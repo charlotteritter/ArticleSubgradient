@@ -1,4 +1,4 @@
-**$ONTEXT
+$ONTEXT
 This is Step 5 of Algorithm 1 of file v10.pdf (iEEE paper)
 The 1500 scenario fixed problem
 Follow up of SAA.gms
@@ -34,7 +34,7 @@ $offdelim
 *Tolerance 
 scalar tol;
 *tol=%TOL%;
-tol=0.03;
+tol=0.01;
 
 
 * time limit for each problem

@@ -15,7 +15,7 @@ module load gams/24.8
 # change to work directory
 
 
-gams SAA_solar_hi.gms
+gams SAA_hierarchical.gms
 
 # run 
 #./a.out
