@@ -1,0 +1,29 @@
+B 3 C o m p i l a t i o n
+B 497 Include File Summary
+B 514 E x e c u t i o n
+I 991 minwind
+B 1013 Model Analysis      SOLVE schedule Using MIP From line 461
+B 1019 Equation Listing    SOLVE schedule Using MIP From line 461
+D 1022 Objective
+D 1034 Const1_1
+D 1052 Const1_2
+D 1060 Const_3_1
+D 1078 Const_3_2
+D 1096 Const_4_1
+D 1114 Const_4_2
+D 1132 Const_5
+D 1150 Const_6
+B 1169 Column Listing      SOLVE schedule Using MIP From line 461
+E 1172 X
+E 1204 Y
+E 1520 U
+E 1546 V
+E 1571 OBJ
+E 1578 Z
+E 1666 R
+B 1706 Model Statistics    SOLVE schedule Using MIP From line 461
+B 1724 Solution Report     SOLVE schedule Using MIP From line 461
+B 1746 E x e c u t i o n
+I 1751 OBJ
+I 1752 run_time_total
+I 1759 ObjNaive

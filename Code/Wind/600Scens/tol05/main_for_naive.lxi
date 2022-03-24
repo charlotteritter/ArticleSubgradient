@@ -1,0 +1,22 @@
+B 3 C o m p i l a t i o n
+B 1580 Include File Summary
+B 1597 E x e c u t i o n
+B 3890 Model Analysis      SOLVE schedule Using MIP From line 1545
+B 3896 Equation Listing    SOLVE schedule Using MIP From line 1545
+D 3899 Objective
+D 3939 Const1
+D 3957 Const_chance_1
+D 3975 Const_chance_2
+B 3984 Column Listing      SOLVE schedule Using MIP From line 1545
+E 3987 P
+E 4009 Q
+E 4028 Y
+E 5844 X
+E 5864 OBJ
+E 5871 Z
+B 5960 Model Statistics    SOLVE schedule Using MIP From line 1545
+B 5978 Solution Report     SOLVE schedule Using MIP From line 1545
+B 6000 E x e c u t i o n
+I 6005 OBJ
+I 6006 run_time_total
+I 6013 ObjNaive

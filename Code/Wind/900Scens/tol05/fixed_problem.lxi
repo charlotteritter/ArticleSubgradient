@@ -1,0 +1,12 @@
+B 3 C o m p i l a t i o n
+B 1162 Include File Summary
+B 1176 E x e c u t i o n
+B 4549 Model Analysis      SOLVE schedule Using MIP From line 1136
+B 4555 Equation Listing    SOLVE schedule Using MIP From line 1136
+D 4558 Objective
+D 4615 Const1
+B 4624 Column Listing      SOLVE schedule Using MIP From line 1136
+E 4627 P
+E 4643 Y
+E 4659 OBJ
+B 4667 Model Statistics    SOLVE schedule Using MIP From line 1136

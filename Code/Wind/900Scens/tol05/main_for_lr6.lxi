@@ -1,0 +1,12 @@
+B 3 C o m p i l a t i o n
+B 2372 Include File Summary
+B 2396 E x e c u t i o n
+B 5771 Model Analysis      SOLVE schedule Using RMIP From line 2148
+B 5777 Equation Listing    SOLVE schedule Using RMIP From line 2148
+D 5780 Objective
+D 5837 Const1
+B 5846 Column Listing      SOLVE schedule Using RMIP From line 2148
+E 5849 P
+E 5865 Y
+E 5881 OBJ
+B 5889 Model Statistics    SOLVE schedule Using RMIP From line 2148

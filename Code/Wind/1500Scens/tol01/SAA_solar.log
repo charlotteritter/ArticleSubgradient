@@ -1,0 +1,67 @@
+--- Job SAA_solar.gms Start 12/20/21 14:36:24 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\1500Scen\tol01\SAA_solar.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\1500Scen\tol01\225a\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- SAA_solar.gms(41) 3 Mb
+--- . solar_scenarios_7200.csv(7201) 7 Mb
+--- SAA_solar.gms(69) 7 Mb
+--- . battery_revenue.csv(25) 7 Mb
+--- SAA_solar.gms(89) 7 Mb
+--- . ScenarioWeights_naive.csv(1201) 7 Mb
+--- SAA_solar.gms(278) 7 Mb
+--- Starting execution: elapsed 0:00:00.142
+--- SAA_solar.gms(8613) 45 Mb
+--- Generating MIP model schedule
+--- SAA_solar.gms(8582) 45 Mb
+--- Starting Equ Objective: elapsed 0:00:02.787
+--- SAA_solar.gms(8584) 45 Mb
+--- Starting Equ Const1: elapsed 0:00:02.797
+--- SAA_solar.gms(8587) 45 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:02.830
+--- SAA_solar.gms(8590) 45 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:02.853
+--- SAA_solar.gms(8664) 45 Mb
+--- LOOPS rho_ind = r1
+---       iter = iter1
+---   942 rows  1,485 columns  4,285 non-zeroes
+---   20 discrete-columns
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:02.867
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:02.948
+--- SAA_solar.gms(8613) 45 Mb
+*** Error at line 8654: Execution halted: Triggered by pending CtrlC event
+--- SAA_solar.gms(8613) 45 Mb 1 Error
+--- Profile Summary (40 records processed)
+     0.079   0.045GB      8664 Solve Alg  schedule
+     0.032   0.045GB      8584 Equation   Const1 (460)
+     0.031   0.008GB      7310 Assignment Solar (96472)
+     0.031   0.030GB      8596 Assignment Q (172800)
+     0.031   0.045GB      8587 Equation   Const_chance_1 (480)
+     0.016   0.008GB      7308 Assignment Solar (96497)
+     0.016   0.019GB      8594 Assignment X (172800)
+     0.015   0.045GB      8582 Equation   Objective (1)
+     0.015   0.045GB      8664 Solve Fini schedule (4285)
+     0.015   0.041GB      8597 Assignment P (172800)
+--- SAA_solar.gms(8613) 45 Mb 1 Error
+*** Status: Execution error(s)
+--- Job SAA_solar.gms Stop 12/20/21 14:36:28 elapsed 0:00:04.053

@@ -1,0 +1,19 @@
+B 3 C o m p i l a t i o n
+B 1269 Include File Summary
+B 1285 E x e c u t i o n
+I 5938 minwind
+B 5960 Model Analysis      SOLVE schedule Using MIP From line 1231
+B 5966 Equation Listing    SOLVE schedule Using MIP From line 1231
+D 5969 Objective
+D 6067 Const1_1
+D 6085 Const1_2
+D 6093 Const_3_1
+D 6112 Const_3_2
+B 6121 Column Listing      SOLVE schedule Using MIP From line 1231
+E 6124 X
+E 6148 Y
+E 8864 U
+E 8880 OBJ
+E 8887 Z
+E 8975 R
+B 9000 Model Statistics    SOLVE schedule Using MIP From line 1231

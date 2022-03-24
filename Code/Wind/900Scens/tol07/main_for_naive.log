@@ -1,0 +1,59 @@
+--- Job main_for_naive.gms Start 03/24/22 16:16:59 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Wind\900Scen\tol07\main_for_naive.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Wind\900Scen\tol07\225a\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- main_for_naive.gms(13) 2 Mb
+--- . input.gms(14) 3 Mb
+--- .. wind_costs.csv(25) 3 Mb
+--- . input.gms(25) 3 Mb
+--- .. wind_scenarios.csv(901) 4 Mb
+--- . input.gms(123) 4 Mb
+--- main_for_naive.gms(14) 4 Mb
+--- . subgradient_parameters.gms(35) 4 Mb
+--- main_for_naive.gms(16) 4 Mb
+--- . equations.gms(123) 4 Mb
+--- main_for_naive.gms(51) 4 Mb
+--- Starting execution: elapsed 0:00:00.030
+--- main_for_naive.gms(1230) 10 Mb
+--- Generating MIP model schedule
+--- main_for_naive.gms(1140) 10 Mb
+--- Starting Equ Objective: elapsed 0:00:00.427
+--- main_for_naive.gms(1149) 15 Mb
+--- Starting Equ Const1_1: elapsed 0:00:01.025
+--- main_for_naive.gms(1158) 27 Mb
+--- Starting Equ Const1_2: elapsed 0:00:01.059
+--- main_for_naive.gms(1167) 27 Mb
+--- Starting Equ Const_3_1: elapsed 0:00:01.064
+--- main_for_naive.gms(1170) 34 Mb
+--- Starting Equ Const_3_2: elapsed 0:00:01.125
+*** Error at line 1167: Execution halted: Triggered by pending CtrlC event
+--- main_for_naive.gms(1231) 34 Mb 1 Error
+*** SOLVE aborted
+--- Profile Summary (4673 records processed)
+     0.594   0.015GB      1140 Equation   Objective (1)
+     0.360   0.005GB      1044 Loop       
+     0.063   0.034GB      1167 Equation   Const_3_1 (20700)
+     0.032   0.005GB      1045 Loop       
+     0.031   0.027GB      1149 Equation   Const1_1 (21600)
+     0.016   0.005GB      1049 Assignment dummy (2)
+     0.016   0.005GB      1045 Loop       
+     0.016   0.005GB      1049 Assignment dummy (1)
+     0.016   0.005GB      1045 Loop       
+     0.016   0.005GB      1049 Assignment dummy (1)
+--- main_for_naive.gms(1231) 34 Mb 1 Error
+*** Status: Execution error(s)
+--- Job main_for_naive.gms Stop 03/24/22 16:17:00 elapsed 0:00:01.168

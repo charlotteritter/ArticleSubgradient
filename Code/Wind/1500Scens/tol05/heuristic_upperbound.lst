@@ -1,0 +1,142 @@
+GAMS 32.2.0  rc62c018 Released Aug 26, 2020 WEX-WEI x86 64bit/MS Windows - 12/20/21 14:04:02 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+   1  ********************************************************************************
+   2  * Find a upperbound on the problem : a feasible solution
+   3  ********************************************************************************
+   4   
+   5  *upperbound =  0;
+   6  * Find a upper bound using a fixed value and solving MIP (a feasible solution)
+   7  * solve single scenario problem and choose the worst #threshold problems
+   8  start_time = jnow ;
+****           $140
+**** 140  Unknown symbol
+   9  schedule_scenario.solvelink = 5 ;
+****                            $140
+**** 140  Unknown symbol
+  10  alias(rs,scen)
+****               $157
+**** 157  No known set found in alias list
+  11  parameter res_scenarios(rs,*) ;
+  12   
+  13  loop(rs,
+****        $352
+**** 352  Set has not been initialized
+  14  counter = ord(rs)  ;
+****        $140     $141
+**** 140  Unknown symbol
+**** 141  Symbol declared but no values have been assigned. Check for missing
+****         data definition, assignment, data loading or implicit assignment
+****         via a solve statement.
+****         A wild shot: You may have spurious commas in the explanatory
+****         text of a declaration. Check symbol reference list.
+  15  *Solving (2) for each scenario w with corresponding z(w) = 0
+  16  solve schedule_scenario using MIP minimizing Obj ;
+****                        $241                     $140,257
+**** 140  Unknown symbol
+**** 241  Model has not been defined
+**** 257  Solve statement not checked because of previous errors
+  17  res_scenarios(rs,'obj') =obj.l ;
+****                 $352          $141
+**** 141  Symbol declared but no values have been assigned. Check for missing
+****         data definition, assignment, data loading or implicit assignment
+****         via a solve statement.
+****         A wild shot: You may have spurious commas in the explanatory
+****         text of a declaration. Check symbol reference list.
+**** 352  Set has not been initialized
+  18   
+  19   
+  20  res_scenarios(rs,'scenario') = counter ;
+****                 $352
+**** 352  Set has not been initialized
+  21  *=counter
+  22   
+  23   
+  24  );
+  25  end_time =jnow ;
+****         $140
+**** 140  Unknown symbol
+  26  run_time_total = ghour(end_time - start_time)*3600 + gminute(end_time - start_time)*60 + gsecond(end_time - start_time);
+****               $140
+**** 140  Unknown symbol
+  27   
+  28   
+  29  ** Write to a file to sort
+  30  FILE scen_sorted /scen_sorted.csv/;
+  31  *.PC specifies the format of the put file: 5 -> Formatted output; non-numeric output is quoted and each item is delimited with commas.
+  32  scen_sorted.PC = 5;
+  33  *.ND sets the number of decimals that are displayed in the put file
+  34  scen_sorted.ND = 3;
+  35  PUT scen_sorted;
+  36  loop(rs, put res_scenarios(rs,'scenario') put res_scenarios(rs,'obj') put /; ) ;
+****        $352                  $352                             $352
+**** 352  Set has not been initialized
+  37  PUTCLOSE scen_sorted;
+  38   
+  39   
+  40  z.fx(scen) = scenario_sorted(scen,'value') ;
+****     $140 $123               $140 $352    $116
+**** 116  Label is unknown
+**** 123  Set has not been initialized and the dimension is unknown
+**** 140  Unknown symbol
+**** 352  Set has not been initialized
+  41  *** Ensure file was generated correctly
+  42  if ( sum(scen,z.lo(scen)) ne threshold, abort "sorted file not generated correctly check manually") ;
+****              $352      $352           $140
+**** 140  Unknown symbol
+**** 352  Set has not been initialized
+  43  start_time = jnow ;
+  44  schedule.solprint = 0;
+****                  $140
+**** 140  Unknown symbol
+  45  *schedule.optfile  = 1;
+  46  schedule.solvelink = 5 ;
+  47  solve schedule using MIP minimizing Obj ;
+****               $241                       $257
+**** 241  Model has not been defined
+**** 257  Solve statement not checked because of previous errors
+  48  end_time = jnow ;
+  49  bound_time =  run_time_total + ghour(end_time - start_time)*3600 + gminute(end_time - start_time)*60 + gsecond(end_time - start_time);
+****           $140
+**** 140  Unknown symbol
+  50  upperbound = Obj.l ;
+****           $140
+**** 140  Unknown symbol
+  51  prev_y(t) = y.l(t) ;
+****       $140,120,340,140
+**** 120  Unknown identifier entered as set
+**** 140  Unknown symbol
+**** 340  A label/element with the same name exist. You may have forgotten
+****         to quote a label/element reference. For example,
+****         set i / a,b,c /; parameter x(i); x('a') = 10;
+  52  *prev_w(scen,t) = w.l(scen,t) ;
+  53  * Clear bound on z now
+  54  z.up(scen) = 1 ;
+****          $352
+**** 352  Set has not been initialized
+  55  z.lo(scen) = 0 ;
+****          $352
+**** 352  Set has not been initialized
+  56   
+  57  *display lowerbound,upperbound,prev_y, LP_time, bound_time  ;
+  58  display upperbound,prev_y  ;
+
+**** 36 ERROR(S)   0 WARNING(S)
+
+
+COMPILATION TIME     =        0.016 SECONDS      3 MB  32.2.0 rc62c018 WEX-WEI
+
+
+USER: Small MUD - 5 User License                     S200323/0001AN-GEN
+      Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\1500Scen\tol05\heuristic_upperbound.gms
+Output     C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\1500Scen\tol05\heuristic_upperbound.lst
+
+**** USER ERROR(S) ENCOUNTERED

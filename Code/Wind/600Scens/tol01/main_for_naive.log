@@ -1,0 +1,79 @@
+--- Job main_for_naive.gms Start 01/06/22 17:19:33 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Wind\600Scen\tol01\main_for_naive.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Wind\600Scen\tol01\225a\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- main_for_naive.gms(13) 2 Mb
+--- . input.gms(14) 3 Mb
+--- .. wind_costs.csv(25) 3 Mb
+--- . input.gms(25) 3 Mb
+--- .. wind_scenarios.csv(601) 4 Mb
+--- . input.gms(55) 4 Mb
+--- .. sampled_dynamic_hi.csv(25) 4 Mb
+--- . input.gms(128) 4 Mb
+--- main_for_naive.gms(14) 4 Mb
+--- . subgradient_parameters.gms(35) 4 Mb
+--- main_for_naive.gms(16) 4 Mb
+--- . equations.gms(123) 4 Mb
+--- main_for_naive.gms(51) 4 Mb
+--- Starting execution: elapsed 0:00:00.038
+--- main_for_naive.gms(960) 8 Mb
+--- Generating MIP model schedule
+--- main_for_naive.gms(870) 8 Mb
+--- Starting Equ Objective: elapsed 0:00:00.091
+--- main_for_naive.gms(879) 11 Mb
+--- Starting Equ Const1_1: elapsed 0:00:00.549
+--- main_for_naive.gms(888) 20 Mb
+--- Starting Equ Const1_2: elapsed 0:00:00.570
+--- main_for_naive.gms(897) 20 Mb
+--- Starting Equ Const_3_1: elapsed 0:00:00.573
+--- main_for_naive.gms(900) 24 Mb
+--- Starting Equ Const_3_2: elapsed 0:00:00.610
+--- main_for_naive.gms(906) 28 Mb
+--- Starting Equ Const_4_1: elapsed 0:00:00.649
+--- main_for_naive.gms(910) 31 Mb
+--- Starting Equ Const_4_2: elapsed 0:00:00.755
+--- main_for_naive.gms(914) 33 Mb
+--- Starting Equ Const_5: elapsed 0:00:00.850
+--- main_for_naive.gms(919) 37 Mb
+--- Starting Equ Const_6: elapsed 0:00:00.882
+--- main_for_naive.gms(961) 42 Mb
+---   96,002 rows  58,225 columns  441,025 non-zeroes
+---   15,000 discrete-columns
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:01.090
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+Gurobi link license.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:01.508
+--- main_for_naive.gms(987) 42 Mb
+--- Putfile TestingFile3 C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Wind\600Scen\tol01\Naive.csv
+--- Profile Summary (596 records processed)
+     0.469   0.011GB       870 Equation   Objective (1)
+     0.407   0.042GB       961 Solve Alg  schedule
+     0.172   0.042GB       961 Solve Fini schedule (441025)
+     0.109   0.031GB       906 Equation   Const_4_1 (13200)
+     0.094   0.033GB       910 Equation   Const_4_2 (13200)
+     0.047   0.028GB       900 Equation   Const_3_2 (13800)
+     0.031   0.037GB       914 Equation   Const_5 (13800)
+     0.031   0.041GB       919 Equation   Const_6 (13800)
+     0.031   0.024GB       897 Equation   Const_3_1 (13800)
+     0.016   0.020GB       879 Equation   Const1_1 (14400)
+*** Status: Normal completion
+--- Job main_for_naive.gms Stop 01/06/22 17:19:34 elapsed 0:00:01.510

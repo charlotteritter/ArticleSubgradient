@@ -1,0 +1,1536 @@
+--- Job fixed_problem.gms Start 12/16/21 17:38:07 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\fixed_problem.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\225a\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- fixed_problem.gms(30) 3 Mb
+--- . solar_scenarios_600.csv(102) 3 Mb 1 Error
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(103) 3 Mb 2 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(104) 3 Mb 3 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(105) 3 Mb 4 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(106) 3 Mb 5 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(107) 3 Mb 6 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(108) 3 Mb 7 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(109) 3 Mb 8 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(110) 3 Mb 9 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(111) 3 Mb 10 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(112) 3 Mb 11 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(113) 3 Mb 12 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(114) 3 Mb 13 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(115) 3 Mb 14 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(116) 3 Mb 15 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(117) 3 Mb 16 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(118) 3 Mb 17 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(119) 3 Mb 18 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(120) 3 Mb 19 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(121) 3 Mb 20 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(122) 3 Mb 21 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(123) 3 Mb 22 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(124) 3 Mb 23 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(125) 3 Mb 24 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(126) 3 Mb 25 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(127) 3 Mb 26 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(128) 3 Mb 27 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(129) 3 Mb 28 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(130) 3 Mb 29 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(131) 3 Mb 30 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(132) 3 Mb 31 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(133) 3 Mb 32 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(134) 3 Mb 33 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(135) 3 Mb 34 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(136) 3 Mb 35 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(137) 3 Mb 36 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(138) 3 Mb 37 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(139) 3 Mb 38 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(140) 3 Mb 39 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(141) 3 Mb 40 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(142) 3 Mb 41 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(143) 3 Mb 42 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(144) 3 Mb 43 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(145) 3 Mb 44 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(146) 3 Mb 45 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(147) 3 Mb 46 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(148) 3 Mb 47 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(149) 3 Mb 48 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(150) 3 Mb 49 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(151) 3 Mb 50 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(152) 3 Mb 51 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(153) 3 Mb 52 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(154) 3 Mb 53 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(155) 3 Mb 54 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(156) 3 Mb 55 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(157) 3 Mb 56 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(158) 3 Mb 57 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(159) 3 Mb 58 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(160) 3 Mb 59 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(161) 3 Mb 60 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(162) 3 Mb 61 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(163) 3 Mb 62 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(164) 3 Mb 63 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(165) 3 Mb 64 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(166) 3 Mb 65 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(167) 3 Mb 66 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(168) 3 Mb 67 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(169) 3 Mb 68 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(170) 3 Mb 69 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(171) 3 Mb 70 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(172) 3 Mb 71 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(173) 3 Mb 72 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(174) 3 Mb 73 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(175) 3 Mb 74 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(176) 3 Mb 75 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(177) 3 Mb 76 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(178) 3 Mb 77 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(179) 3 Mb 78 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(180) 3 Mb 79 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(181) 3 Mb 80 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(182) 3 Mb 81 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(183) 3 Mb 82 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(184) 3 Mb 83 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(185) 3 Mb 84 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(186) 3 Mb 85 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(187) 3 Mb 86 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(188) 3 Mb 87 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(189) 3 Mb 88 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(190) 3 Mb 89 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(191) 3 Mb 90 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(192) 3 Mb 91 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(193) 3 Mb 92 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(194) 3 Mb 93 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(195) 3 Mb 94 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(196) 3 Mb 95 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(197) 3 Mb 96 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(198) 3 Mb 97 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(199) 3 Mb 98 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(200) 3 Mb 99 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(201) 3 Mb 100 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(202) 3 Mb 101 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(203) 3 Mb 102 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(204) 3 Mb 103 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(205) 3 Mb 104 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(206) 3 Mb 105 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(207) 3 Mb 106 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(208) 3 Mb 107 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(209) 3 Mb 108 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(210) 3 Mb 109 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(211) 3 Mb 110 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(212) 3 Mb 111 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(213) 3 Mb 112 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(214) 3 Mb 113 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(215) 3 Mb 114 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(216) 3 Mb 115 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(217) 3 Mb 116 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(218) 3 Mb 117 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(219) 3 Mb 118 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(220) 3 Mb 119 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(221) 3 Mb 120 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(222) 3 Mb 121 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(223) 3 Mb 122 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(224) 3 Mb 123 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(225) 3 Mb 124 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(226) 3 Mb 125 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(227) 3 Mb 126 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(228) 3 Mb 127 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(229) 3 Mb 128 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(230) 3 Mb 129 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(231) 3 Mb 130 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(232) 3 Mb 131 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(233) 3 Mb 132 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(234) 3 Mb 133 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(235) 3 Mb 134 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(236) 3 Mb 135 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(237) 3 Mb 136 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(238) 3 Mb 137 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(239) 3 Mb 138 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(240) 3 Mb 139 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(241) 3 Mb 140 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(242) 3 Mb 141 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(243) 3 Mb 142 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(244) 3 Mb 143 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(245) 3 Mb 144 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(246) 3 Mb 145 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(247) 3 Mb 146 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(248) 3 Mb 147 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(249) 3 Mb 148 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(250) 3 Mb 149 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(251) 3 Mb 150 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(252) 3 Mb 151 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(253) 3 Mb 152 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(254) 3 Mb 153 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(255) 3 Mb 154 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(256) 3 Mb 155 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(257) 3 Mb 156 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(258) 3 Mb 157 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(259) 3 Mb 158 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(260) 3 Mb 159 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(261) 3 Mb 160 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(262) 3 Mb 161 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(263) 3 Mb 162 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(264) 3 Mb 163 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(265) 3 Mb 164 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(266) 3 Mb 165 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(267) 3 Mb 166 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(268) 3 Mb 167 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(269) 3 Mb 168 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(270) 3 Mb 169 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(271) 3 Mb 170 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(272) 3 Mb 171 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(273) 3 Mb 172 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(274) 3 Mb 173 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(275) 3 Mb 174 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(276) 3 Mb 175 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(277) 3 Mb 176 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(278) 3 Mb 177 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(279) 3 Mb 178 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(280) 3 Mb 179 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(281) 3 Mb 180 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(282) 3 Mb 181 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(283) 3 Mb 182 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(284) 3 Mb 183 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(285) 3 Mb 184 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(286) 3 Mb 185 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(287) 3 Mb 186 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(288) 3 Mb 187 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(289) 3 Mb 188 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(290) 3 Mb 189 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(291) 3 Mb 190 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(292) 3 Mb 191 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(293) 3 Mb 192 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(294) 3 Mb 193 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(295) 3 Mb 194 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(296) 3 Mb 195 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(297) 3 Mb 196 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(298) 3 Mb 197 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(299) 3 Mb 198 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(300) 3 Mb 199 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(301) 3 Mb 200 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(302) 3 Mb 201 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(303) 3 Mb 202 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(304) 3 Mb 203 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(305) 3 Mb 204 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(306) 3 Mb 205 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(307) 3 Mb 206 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(308) 3 Mb 207 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(309) 3 Mb 208 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(310) 3 Mb 209 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(311) 3 Mb 210 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(312) 3 Mb 211 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(313) 3 Mb 212 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(314) 3 Mb 213 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(315) 3 Mb 214 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(316) 3 Mb 215 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(317) 3 Mb 216 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(318) 3 Mb 217 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(319) 3 Mb 218 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(320) 3 Mb 219 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(321) 3 Mb 220 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(322) 3 Mb 221 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(323) 3 Mb 222 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(324) 3 Mb 223 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(325) 3 Mb 224 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(326) 3 Mb 225 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(327) 3 Mb 226 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(328) 3 Mb 227 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(329) 3 Mb 228 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(330) 3 Mb 229 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(331) 3 Mb 230 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(332) 3 Mb 231 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(333) 3 Mb 232 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(334) 3 Mb 233 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(335) 3 Mb 234 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(336) 3 Mb 235 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(337) 3 Mb 236 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(338) 3 Mb 237 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(339) 3 Mb 238 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(340) 3 Mb 239 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(341) 3 Mb 240 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(342) 3 Mb 241 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(343) 3 Mb 242 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(344) 3 Mb 243 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(345) 3 Mb 244 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(346) 3 Mb 245 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(347) 3 Mb 246 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(348) 3 Mb 247 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(349) 3 Mb 248 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(350) 3 Mb 249 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(351) 3 Mb 250 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(352) 3 Mb 251 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(353) 3 Mb 252 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(354) 3 Mb 253 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(355) 3 Mb 254 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(356) 3 Mb 255 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(357) 3 Mb 256 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(358) 3 Mb 257 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(359) 3 Mb 258 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(360) 3 Mb 259 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(361) 3 Mb 260 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(362) 3 Mb 261 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(363) 3 Mb 262 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(364) 3 Mb 263 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(365) 3 Mb 264 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(366) 3 Mb 265 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(367) 3 Mb 266 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(368) 3 Mb 267 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(369) 3 Mb 268 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(370) 3 Mb 269 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(371) 3 Mb 270 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(372) 3 Mb 271 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(373) 3 Mb 272 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(374) 3 Mb 273 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(375) 3 Mb 274 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(376) 3 Mb 275 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(377) 3 Mb 276 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(378) 3 Mb 277 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(379) 3 Mb 278 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(380) 3 Mb 279 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(381) 3 Mb 280 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(382) 3 Mb 281 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(383) 3 Mb 282 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(384) 3 Mb 283 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(385) 3 Mb 284 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(386) 3 Mb 285 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(387) 3 Mb 286 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(388) 3 Mb 287 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(389) 3 Mb 288 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(390) 3 Mb 289 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(391) 3 Mb 290 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(392) 3 Mb 291 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(393) 3 Mb 292 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(394) 3 Mb 293 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(395) 3 Mb 294 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(396) 3 Mb 295 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(397) 3 Mb 296 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(398) 3 Mb 297 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(399) 3 Mb 298 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(400) 3 Mb 299 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(401) 3 Mb 300 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(402) 3 Mb 301 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(403) 3 Mb 302 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(404) 3 Mb 303 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(405) 3 Mb 304 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(406) 3 Mb 305 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(407) 3 Mb 306 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(408) 3 Mb 307 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(409) 3 Mb 308 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(410) 3 Mb 309 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(411) 3 Mb 310 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(412) 3 Mb 311 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(413) 3 Mb 312 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(414) 3 Mb 313 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(415) 3 Mb 314 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(416) 3 Mb 315 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(417) 3 Mb 316 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(418) 3 Mb 317 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(419) 3 Mb 318 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(420) 3 Mb 319 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(421) 3 Mb 320 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(422) 3 Mb 321 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(423) 3 Mb 322 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(424) 3 Mb 323 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(425) 3 Mb 324 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(426) 3 Mb 325 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(427) 3 Mb 326 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(428) 3 Mb 327 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(429) 3 Mb 328 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(430) 3 Mb 329 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(431) 3 Mb 330 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(432) 3 Mb 331 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(433) 3 Mb 332 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(434) 3 Mb 333 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(435) 3 Mb 334 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(436) 3 Mb 335 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(437) 3 Mb 336 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(438) 3 Mb 337 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(439) 3 Mb 338 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(440) 3 Mb 339 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(441) 3 Mb 340 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(442) 3 Mb 341 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(443) 3 Mb 342 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(444) 3 Mb 343 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(445) 3 Mb 344 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(446) 3 Mb 345 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(447) 3 Mb 346 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(448) 3 Mb 347 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(449) 3 Mb 348 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(450) 3 Mb 349 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(451) 3 Mb 350 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(452) 3 Mb 351 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(453) 3 Mb 352 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(454) 3 Mb 353 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(455) 3 Mb 354 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(456) 3 Mb 355 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(457) 3 Mb 356 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(458) 3 Mb 357 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(459) 3 Mb 358 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(460) 3 Mb 359 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(461) 3 Mb 360 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(462) 3 Mb 361 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(463) 3 Mb 362 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(464) 3 Mb 363 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(465) 3 Mb 364 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(466) 3 Mb 365 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(467) 3 Mb 366 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(468) 3 Mb 367 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(469) 3 Mb 368 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(470) 3 Mb 369 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(471) 3 Mb 370 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(472) 3 Mb 371 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(473) 3 Mb 372 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(474) 3 Mb 373 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(475) 3 Mb 374 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(476) 3 Mb 375 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(477) 3 Mb 376 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(478) 3 Mb 377 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(479) 3 Mb 378 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(480) 3 Mb 379 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(481) 3 Mb 380 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(482) 3 Mb 381 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(483) 3 Mb 382 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(484) 3 Mb 383 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(485) 3 Mb 384 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(486) 3 Mb 385 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(487) 3 Mb 386 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(488) 3 Mb 387 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(489) 3 Mb 388 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(490) 3 Mb 389 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(491) 3 Mb 390 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(492) 3 Mb 391 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(493) 3 Mb 392 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(494) 3 Mb 393 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(495) 3 Mb 394 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(496) 3 Mb 395 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(497) 3 Mb 396 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(498) 3 Mb 397 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(499) 3 Mb 398 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(500) 3 Mb 399 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(501) 3 Mb 400 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(502) 3 Mb 401 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(503) 3 Mb 402 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(504) 3 Mb 403 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(505) 3 Mb 404 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(506) 3 Mb 405 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(507) 3 Mb 406 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(508) 3 Mb 407 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(509) 3 Mb 408 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(510) 3 Mb 409 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(511) 3 Mb 410 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(512) 3 Mb 411 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(513) 3 Mb 412 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(514) 3 Mb 413 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(515) 3 Mb 414 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(516) 3 Mb 415 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(517) 3 Mb 416 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(518) 3 Mb 417 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(519) 3 Mb 418 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(520) 3 Mb 419 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(521) 3 Mb 420 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(522) 3 Mb 421 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(523) 3 Mb 422 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(524) 3 Mb 423 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(525) 3 Mb 424 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(526) 3 Mb 425 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(527) 3 Mb 426 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(528) 3 Mb 427 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(529) 3 Mb 428 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(530) 3 Mb 429 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(531) 3 Mb 430 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(532) 3 Mb 431 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(533) 3 Mb 432 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(534) 3 Mb 433 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(535) 3 Mb 434 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(536) 3 Mb 435 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(537) 3 Mb 436 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(538) 3 Mb 437 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(539) 3 Mb 438 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(540) 3 Mb 439 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(541) 3 Mb 440 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(542) 3 Mb 441 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(543) 3 Mb 442 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(544) 3 Mb 443 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(545) 3 Mb 444 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(546) 3 Mb 445 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(547) 3 Mb 446 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(548) 3 Mb 447 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(549) 3 Mb 448 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(550) 3 Mb 449 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(551) 3 Mb 450 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(552) 3 Mb 451 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(553) 3 Mb 452 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(554) 3 Mb 453 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(555) 3 Mb 454 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(556) 3 Mb 455 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(557) 3 Mb 456 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(558) 3 Mb 457 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(559) 3 Mb 458 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(560) 3 Mb 459 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(561) 3 Mb 460 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(562) 3 Mb 461 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(563) 3 Mb 462 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(564) 3 Mb 463 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(565) 3 Mb 464 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(566) 3 Mb 465 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(567) 3 Mb 466 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(568) 3 Mb 467 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(569) 3 Mb 468 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(570) 3 Mb 469 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(571) 3 Mb 470 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(572) 3 Mb 471 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(573) 3 Mb 472 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(574) 3 Mb 473 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(575) 3 Mb 474 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(576) 3 Mb 475 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(577) 3 Mb 476 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(578) 3 Mb 477 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(579) 3 Mb 478 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(580) 3 Mb 479 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(581) 3 Mb 480 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(582) 3 Mb 481 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(583) 3 Mb 482 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(584) 3 Mb 483 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(585) 3 Mb 484 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(586) 3 Mb 485 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(587) 3 Mb 486 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(588) 3 Mb 487 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(589) 3 Mb 488 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(590) 3 Mb 489 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(591) 3 Mb 490 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(592) 3 Mb 491 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(593) 3 Mb 492 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(594) 3 Mb 493 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(595) 3 Mb 494 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(596) 3 Mb 495 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(597) 3 Mb 496 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(598) 3 Mb 497 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(599) 3 Mb 498 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(600) 3 Mb 499 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- . solar_scenarios_600.csv(601) 3 Mb 500 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\solar_scenarios_600.csv
+    Domain violation for element
+--- fixed_problem.gms(53) 3 Mb
+--- . sampled_dynamic.csv(25) 3 Mb
+--- fixed_problem.gms(62) 3 Mb
+--- . battery_revenue.csv(25) 3 Mb
+--- fixed_problem.gms(185) 3 Mb 501 Errors
+*** Error 257 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\fixed_problem.gms
+    Solve statement not checked because of previous errors
+--- fixed_problem.gms(188) 3 Mb 502 Errors
+*** Error 141 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\fixed_problem.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+--- fixed_problem.gms(205) 3 Mb 502 Errors
+*** Status: Compilation error(s)
+--- Job fixed_problem.gms Stop 12/16/21 17:38:07 elapsed 0:00:00.085

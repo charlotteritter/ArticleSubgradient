@@ -1,0 +1,90 @@
+--- Job SAA_solar_hi.gms Start 12/16/21 18:20:15 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\900Scen\tol05\SAA_solar_hi.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\900Scen\tol05\225a\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- SAA_solar_hi.gms(41) 3 Mb
+--- . ScenarioSet_hierarchical_solar900.csv(709) 3 Mb
+--- SAA_solar_hi.gms(69) 3 Mb
+--- . battery_revenue.csv(25) 3 Mb
+--- SAA_solar_hi.gms(89) 3 Mb
+--- . ScenarioWeights_hierarchical_solar900.csv(709) 3 Mb
+--- SAA_solar_hi.gms(278) 3 Mb
+--- Starting execution: elapsed 0:00:00.084
+--- SAA_solar_hi.gms(1629) 8 Mb
+--- Generating MIP model schedule
+--- SAA_solar_hi.gms(1598) 8 Mb
+--- Starting Equ Objective: elapsed 0:00:00.275
+--- SAA_solar_hi.gms(1600) 8 Mb
+--- Starting Equ Const1: elapsed 0:00:00.285
+--- SAA_solar_hi.gms(1603) 8 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:00.293
+--- SAA_solar_hi.gms(1606) 8 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:00.295
+--- SAA_solar_hi.gms(1680) 8 Mb
+--- LOOPS rho_ind = r1
+---       iter = iter1
+---   942 rows  1,485 columns  4,285 non-zeroes
+---   20 discrete-columns
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:00.326
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:00.431
+--- SAA_solar_hi.gms(1629) 8 Mb
+--- Generating MIP model schedule
+--- SAA_solar_hi.gms(1598) 8 Mb
+--- Starting Equ Objective: elapsed 0:00:00.630
+--- SAA_solar_hi.gms(1600) 8 Mb
+--- Starting Equ Const1: elapsed 0:00:00.654
+--- SAA_solar_hi.gms(1603) 8 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:00.667
+--- SAA_solar_hi.gms(1606) 8 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:00.670
+--- SAA_solar_hi.gms(1680) 8 Mb
+--- LOOPS rho_ind = r1
+---       iter = iter2
+---   1,036 rows  1,655 columns  4,735 non-zeroes
+---   22 discrete-columns
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:00.686
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:00.779
+--- SAA_solar_hi.gms(1629) 8 Mb
+*** Error at line 1670: Execution halted: Triggered by pending CtrlC event
+--- SAA_solar_hi.gms(1629) 8 Mb 1 Error
+--- Profile Summary (50 records processed)
+     0.109   0.008GB      1680 Solve Alg  schedule
+     0.079   0.008GB      1680 Solve Alg  schedule
+     0.031   0.008GB      1680 Solve Fini schedule (4285)
+     0.031   0.008GB      1598 Equation   Objective (1)
+     0.016   0.008GB      1600 Equation   Const1 (506)
+     0.016   0.005GB      1610 Assignment X (16992)
+     0.016   0.008GB      1603 Equation   Const_chance_1 (480)
+     0.015   0.008GB      1680 Solve Fini schedule (4735)
+     0.015   0.008GB      1680 Solve Read schedule
+--- SAA_solar_hi.gms(1629) 8 Mb 1 Error
+*** Status: Execution error(s)
+--- Job SAA_solar_hi.gms Stop 12/16/21 18:20:16 elapsed 0:00:00.921

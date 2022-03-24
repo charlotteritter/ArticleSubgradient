@@ -1,0 +1,49 @@
+--- Job fixed_problem.gms Start 12/16/21 17:54:42 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\900Scen\tol05\fixed_problem.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\900Scen\tol05\225a\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- fixed_problem.gms(30) 3 Mb
+--- . solar_scenarios_900.csv(901) 3 Mb
+--- fixed_problem.gms(53) 3 Mb
+--- . sampled_dynamic.csv(25) 3 Mb
+--- fixed_problem.gms(62) 3 Mb
+--- . battery_revenue.csv(25) 3 Mb
+--- fixed_problem.gms(208) 4 Mb
+--- Starting execution: elapsed 0:00:00.044
+--- fixed_problem.gms(1133) 10 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1104) 10 Mb
+--- Starting Equ Objective: elapsed 0:00:00.476
+--- fixed_problem.gms(1106) 12 Mb
+--- Starting Equ Const1: elapsed 0:00:00.967
+*** Error at line 1104: Execution halted: Triggered by pending CtrlC event
+--- fixed_problem.gms(1136) 12 Mb 1 Error
+*** SOLVE aborted
+--- Profile Summary (3373 records processed)
+     0.485   0.012GB      1104 Equation   Objective (1)
+     0.407   0.005GB      1068 Loop       
+     0.032   0.005GB      1069 Loop       
+     0.031   0.005GB      1069 Loop       
+     0.031   0.005GB      1069 Loop       
+     0.031   0.005GB      1069 Loop       
+     0.031   0.005GB      1069 Loop       
+     0.016   0.005GB      1071 Assignment minsolar (4)
+     0.016   0.005GB      1069 Loop       
+     0.016   0.005GB      1073 Assignment dummy_set (1)
+--- fixed_problem.gms(1136) 12 Mb 1 Error
+*** Status: Execution error(s)
+--- Job fixed_problem.gms Stop 12/16/21 17:54:43 elapsed 0:00:00.974

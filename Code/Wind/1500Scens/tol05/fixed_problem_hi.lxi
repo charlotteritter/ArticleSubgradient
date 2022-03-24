@@ -1,0 +1,33 @@
+B 3 C o m p i l a t i o n
+B 1762 Include File Summary
+B 1776 E x e c u t i o n
+B 7309 Model Analysis      SOLVE schedule Using MIP From line 1736
+B 7315 Equation Listing    SOLVE schedule Using MIP From line 1736
+D 7318 Objective
+D 7406 Const1
+D 7424 Const_chance_1
+D 7442 Const_chance_2
+B 7451 Column Listing      SOLVE schedule Using MIP From line 1736
+E 7454 P
+E 7476 Q
+E 7495 Y
+E 12011 X
+E 12031 OBJ
+E 12038 Z
+B 12127 Model Statistics    SOLVE schedule Using MIP From line 1736
+B 12150 Solution Report     SOLVE schedule Using MIP From line 1736
+B 12172 E x e c u t i o n
+B 12182 Model Analysis      SOLVE schedule Using MIP From line 1736
+B 12188 Equation Listing    SOLVE schedule Using MIP From line 1736
+D 12191 Objective
+D 12279 Const1
+D 12297 Const_chance_1
+D 12315 Const_chance_2
+B 12324 Column Listing      SOLVE schedule Using MIP From line 1736
+E 12327 P
+E 12349 Q
+E 12368 Y
+E 16884 X
+E 16904 OBJ
+E 16911 Z
+B 17000 Model Statistics    SOLVE schedule Using MIP From line 1736

@@ -1,0 +1,23 @@
+B 3 C o m p i l a t i o n
+B 2104 Include File Summary
+B 2128 E x e c u t i o n
+I 7645 minwind
+B 7669 Model Analysis      SOLVE schedule Using RMIP From line 1826
+B 7675 Equation Listing    SOLVE schedule Using RMIP From line 1826
+D 7678 Objective
+D 7840 Const1_1
+D 7858 Const1_2
+D 7866 Const_3_1
+D 7884 Const_3_2
+D 7902 Const_4_1
+D 7920 Const_4_2
+D 7939 Const_5
+B 7948 Column Listing      SOLVE schedule Using RMIP From line 1826
+E 7951 X
+E 7980 Y
+E 12496 U
+E 12517 V
+E 12538 OBJ
+E 12545 Z
+E 12633 R
+B 12665 Model Statistics    SOLVE schedule Using RMIP From line 1826

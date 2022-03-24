@@ -1,0 +1,486 @@
+--- Job main_for_lr6.gms Start 12/16/21 17:40:17 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol05\main_for_lr6.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol05\225a\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- main_for_lr6.gms(19) 2 Mb
+--- . inputME.gms(14) 3 Mb
+--- .. solar_scenarios_600.csv(601) 3 Mb
+--- . inputME.gms(36) 3 Mb
+--- .. scenario_sorted_600_05.csv(601) 3 Mb
+--- . inputME.gms(116) 3 Mb
+--- .. battery_revenue.csv(25) 3 Mb
+--- . inputME.gms(185) 3 Mb
+--- main_for_lr6.gms(20) 3 Mb
+--- . subgradient_parameters.gms(33) 3 Mb
+--- main_for_lr6.gms(22) 3 Mb
+--- . equations_all.gms(76) 3 Mb
+--- main_for_lr6.gms(23) 3 Mb
+--- . lp_lowerbound.gms(12) 3 Mb
+--- main_for_lr6.gms(24) 3 Mb
+--- . heuristic_upperbound.gms(58) 3 Mb
+--- main_for_lr6.gms(39) 3 Mb
+--- call csv2gdx Naive.csv id=nv index=1 values=2..lastCol useHeader=y
+No errors, CSV2GDX time = 15ms
+--- main_for_lr6.gms(40) 3 Mb
+--- GDXin=C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol05\Naive.gdx
+--- main_for_lr6.gms(75) 3 Mb
+--- . plain_lr.gms(13) 3 Mb
+--- main_for_lr6.gms(81) 3 Mb
+--- . LR_updates.gms(18) 3 Mb
+--- .. stepsizes.gms(21) 3 Mb
+--- . LR_updates.gms(43) 3 Mb
+--- main_for_lr6.gms(102) 3 Mb
+--- Starting execution: elapsed 0:00:00.127
+--- main_for_lr6.gms(1547) 8 Mb
+--- Generating RMIP model schedule
+--- main_for_lr6.gms(1494) 8 Mb
+--- Starting Equ Objective: elapsed 0:00:00.339
+--- main_for_lr6.gms(1496) 9 Mb
+--- Starting Equ Const1: elapsed 0:00:00.653
+--- main_for_lr6.gms(1502) 18 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:00.687
+--- main_for_lr6.gms(1509) 23 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:00.727
+--- main_for_lr6.gms(1548) 23 Mb
+---   28,202 rows  43,825 columns  127,825 non-zeroes
+---   600 discrete-columns
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:00.842
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+Gurobi link license.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:01.013
+--- main_for_lr6.gms(1570) 23 Mb
+--- Generating MIP model schedule_scenario
+--- main_for_lr6.gms(1514) 23 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.013
+--- main_for_lr6.gms(1498) 23 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.013
+--- main_for_lr6.gms(1503) 23 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.016
+--- main_for_lr6.gms(1573) 23 Mb
+--- LOOPS rs = scen1
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.026
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.053
+--- main_for_lr6.gms(1570) 23 Mb
+--- Generating MIP model schedule_scenario
+--- main_for_lr6.gms(1514) 23 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.053
+--- main_for_lr6.gms(1498) 23 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.054
+--- main_for_lr6.gms(1503) 23 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.057
+--- main_for_lr6.gms(1573) 23 Mb
+--- LOOPS rs = scen2
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.067
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.082
+--- main_for_lr6.gms(1570) 23 Mb
+--- Generating MIP model schedule_scenario
+--- main_for_lr6.gms(1514) 23 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.082
+--- main_for_lr6.gms(1498) 23 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.083
+--- main_for_lr6.gms(1503) 23 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.086
+--- main_for_lr6.gms(1573) 23 Mb
+--- LOOPS rs = scen3
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.092
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.107
+--- main_for_lr6.gms(1570) 23 Mb
+--- Generating MIP model schedule_scenario
+--- main_for_lr6.gms(1514) 23 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.107
+--- main_for_lr6.gms(1498) 23 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.108
+--- main_for_lr6.gms(1503) 23 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.110
+--- main_for_lr6.gms(1573) 23 Mb
+--- LOOPS rs = scen4
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.117
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.135
+--- main_for_lr6.gms(1570) 23 Mb
+--- Generating MIP model schedule_scenario
+--- main_for_lr6.gms(1514) 23 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.135
+--- main_for_lr6.gms(1498) 23 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.136
+--- main_for_lr6.gms(1503) 23 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.138
+--- main_for_lr6.gms(1573) 23 Mb
+--- LOOPS rs = scen5
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.144
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.157
+--- main_for_lr6.gms(1570) 23 Mb
+--- Generating MIP model schedule_scenario
+--- main_for_lr6.gms(1514) 23 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.158
+--- main_for_lr6.gms(1498) 23 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.158
+--- main_for_lr6.gms(1503) 23 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.161
+--- main_for_lr6.gms(1573) 23 Mb
+--- LOOPS rs = scen6
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.168
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.182
+--- main_for_lr6.gms(1570) 23 Mb
+--- Generating MIP model schedule_scenario
+--- main_for_lr6.gms(1514) 23 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.183
+--- main_for_lr6.gms(1498) 23 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.183
+--- main_for_lr6.gms(1503) 23 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.186
+--- main_for_lr6.gms(1573) 23 Mb
+--- LOOPS rs = scen7
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.192
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.205
+--- main_for_lr6.gms(1570) 23 Mb
+--- Generating MIP model schedule_scenario
+--- main_for_lr6.gms(1514) 23 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.205
+--- main_for_lr6.gms(1498) 23 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.206
+--- main_for_lr6.gms(1503) 23 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.208
+--- main_for_lr6.gms(1573) 23 Mb
+--- LOOPS rs = scen8
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.215
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.228
+--- main_for_lr6.gms(1570) 23 Mb
+--- Generating MIP model schedule_scenario
+--- main_for_lr6.gms(1514) 23 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.228
+--- main_for_lr6.gms(1498) 23 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.229
+--- main_for_lr6.gms(1503) 23 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.233
+--- main_for_lr6.gms(1573) 23 Mb
+--- LOOPS rs = scen9
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.240
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.255
+--- main_for_lr6.gms(1570) 23 Mb
+--- Generating MIP model schedule_scenario
+--- main_for_lr6.gms(1514) 23 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.255
+--- main_for_lr6.gms(1498) 23 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.255
+--- main_for_lr6.gms(1503) 23 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.259
+--- main_for_lr6.gms(1573) 23 Mb
+--- LOOPS rs = scen10
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.264
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.278
+--- main_for_lr6.gms(1570) 23 Mb
+--- Generating MIP model schedule_scenario
+--- main_for_lr6.gms(1514) 23 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.279
+--- main_for_lr6.gms(1498) 23 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.280
+--- main_for_lr6.gms(1503) 23 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.283
+--- main_for_lr6.gms(1573) 23 Mb
+--- LOOPS rs = scen11
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.289
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.302
+--- main_for_lr6.gms(1570) 23 Mb
+--- Generating MIP model schedule_scenario
+--- main_for_lr6.gms(1514) 23 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.303
+--- main_for_lr6.gms(1498) 23 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.303
+--- main_for_lr6.gms(1503) 23 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.306
+--- main_for_lr6.gms(1573) 23 Mb
+--- LOOPS rs = scen12
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.313
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.331
+--- main_for_lr6.gms(1570) 23 Mb
+--- Generating MIP model schedule_scenario
+--- main_for_lr6.gms(1514) 23 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.331
+--- main_for_lr6.gms(1498) 23 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.332
+--- main_for_lr6.gms(1503) 23 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.336
+--- main_for_lr6.gms(1573) 23 Mb
+--- LOOPS rs = scen13
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.344
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.359
+--- main_for_lr6.gms(1570) 23 Mb
+--- Generating MIP model schedule_scenario
+--- main_for_lr6.gms(1514) 23 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.359
+--- main_for_lr6.gms(1498) 23 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.360
+--- main_for_lr6.gms(1503) 23 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.363
+--- main_for_lr6.gms(1573) 23 Mb
+--- LOOPS rs = scen14
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.369
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.386
+--- main_for_lr6.gms(1570) 23 Mb
+--- Generating MIP model schedule_scenario
+--- main_for_lr6.gms(1514) 23 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.387
+--- main_for_lr6.gms(1498) 23 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.388
+--- main_for_lr6.gms(1503) 23 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.391
+--- main_for_lr6.gms(1573) 23 Mb
+--- LOOPS rs = scen15
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.400
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.420
+--- main_for_lr6.gms(1570) 23 Mb
+--- Generating MIP model schedule_scenario
+--- main_for_lr6.gms(1514) 23 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.420
+--- main_for_lr6.gms(1498) 23 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.421
+--- main_for_lr6.gms(1503) 23 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.424
+--- main_for_lr6.gms(1573) 23 Mb
+--- LOOPS rs = scen16
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.431
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.450
+--- main_for_lr6.gms(1570) 23 Mb
+--- Generating MIP model schedule_scenario
+--- main_for_lr6.gms(1514) 23 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.450
+--- main_for_lr6.gms(1498) 23 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.451
+--- main_for_lr6.gms(1503) 23 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.455
+--- main_for_lr6.gms(1573) 23 Mb
+--- LOOPS rs = scen17
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.461
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.476
+--- main_for_lr6.gms(1570) 23 Mb
+--- Generating MIP model schedule_scenario
+--- main_for_lr6.gms(1514) 23 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.476
+--- main_for_lr6.gms(1498) 23 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.476
+--- main_for_lr6.gms(1503) 23 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.480
+--- main_for_lr6.gms(1573) 23 Mb
+--- LOOPS rs = scen18
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.486
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.502
+--- main_for_lr6.gms(1570) 23 Mb
+--- Generating MIP model schedule_scenario
+--- main_for_lr6.gms(1514) 23 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.502
+--- main_for_lr6.gms(1498) 23 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.503
+--- main_for_lr6.gms(1503) 23 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.506
+--- main_for_lr6.gms(1573) 23 Mb
+--- LOOPS rs = scen19
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.513
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.526
+--- main_for_lr6.gms(1570) 23 Mb
+--- Generating MIP model schedule_scenario
+--- main_for_lr6.gms(1514) 23 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.527
+--- main_for_lr6.gms(1498) 23 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.527
+--- main_for_lr6.gms(1503) 23 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.532
+--- main_for_lr6.gms(1573) 23 Mb
+--- LOOPS rs = scen20
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.538
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.556
+--- main_for_lr6.gms(1570) 23 Mb
+*** Error at line 1573: Execution halted: Triggered by pending CtrlC event
+--- main_for_lr6.gms(1570) 23 Mb 1 Error
+--- Profile Summary (2506 records processed)
+     0.312   0.009GB      1494 Equation   Objective (1)
+     0.187   0.005GB      1417 Loop       
+     0.156   0.022GB      1548 Solve Alg  schedule
+     0.110   0.022GB      1548 Solve Fini schedule (127825)
+     0.032   0.018GB      1496 Equation   Const1 (13800)
+     0.031   0.023GB      1502 Equation   Const_chance_1 (14400)
+     0.016   0.005GB      1422 Assignment dummy (600)
+     0.016   0.005GB      1418 Loop       
+     0.016   0.022GB      1548 Solve Read schedule
+     0.016   0.005GB      1408 Assignment dummysolar (8104)
+--- main_for_lr6.gms(1570) 23 Mb 1 Error
+*** Status: Execution error(s)
+--- Job main_for_lr6.gms Stop 12/16/21 17:40:18 elapsed 0:00:01.557

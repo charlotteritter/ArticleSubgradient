@@ -1,0 +1,29 @@
+--- Job inputME.gms Start 12/16/21 17:50:39 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\900Scen\tol01\inputME.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\900Scen\tol01\225a\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- inputME.gms(14) 3 Mb
+--- . solar_scenarios_900.csv(901) 3 Mb
+--- inputME.gms(36) 3 Mb
+--- . scenario_sorted_900_01.csv(901) 4 Mb
+--- inputME.gms(116) 4 Mb
+--- . battery_revenue.csv(25) 4 Mb
+--- inputME.gms(185) 4 Mb
+--- Starting execution: elapsed 0:00:00.060
+--- inputME.gms(2010) 6 Mb
+*** Status: Normal completion
+--- Job inputME.gms Stop 12/16/21 17:50:39 elapsed 0:00:00.166

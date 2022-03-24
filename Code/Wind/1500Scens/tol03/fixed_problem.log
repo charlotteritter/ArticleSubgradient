@@ -1,0 +1,57 @@
+--- Job fixed_problem.gms Start 12/20/21 14:26:17 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\1500Scen\tol03\fixed_problem.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\1500Scen\tol03\225a\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- fixed_problem.gms(30) 3 Mb
+--- . solar_scenarios_1500.csv(1501) 4 Mb
+--- fixed_problem.gms(53) 4 Mb
+--- . sampled_dynamic.csv(25) 4 Mb
+--- fixed_problem.gms(62) 4 Mb
+--- . battery_revenue.csv(25) 4 Mb
+--- fixed_problem.gms(208) 4 Mb
+--- Starting execution: elapsed 0:00:00.053
+--- fixed_problem.gms(1733) 14 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 14 Mb
+--- Starting Equ Objective: elapsed 0:00:00.246
+--- fixed_problem.gms(1706) 18 Mb
+--- Starting Equ Const1: elapsed 0:00:00.769
+--- fixed_problem.gms(1709) 38 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:00.830
+--- fixed_problem.gms(1712) 50 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:00.903
+--- fixed_problem.gms(1736) 50 Mb
+--- LOOPS iter = iter1
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+*** Error at line 1736: Control C Event: execution halted
+--- fixed_problem.gms(1736) 50 Mb 1 Error
+*** SOLVE aborted
+--- Profile Summary (1215 records processed)
+     0.531   0.018GB      1704 Equation   Objective (1)
+     0.156   0.005GB      1668 Loop       
+     0.141   0.051GB      1736 Solve Fini schedule (319525)
+     0.078   0.050GB      1709 Equation   Const_chance_1 (36000)
+     0.047   0.038GB      1706 Equation   Const1 (34500)
+     0.016   0.009GB      1716 Assignment X (36000)
+     0.016   0.005GB      1659 Assignment dummysolar (20115)
+     0.016   0.005GB      1675 Assignment dummysolar (20115)
+     0.016   0.005GB      1669 Loop       
+     0.016   0.005GB      1675 Assignment dummysolar (20799)
+--- fixed_problem.gms(1736) 50 Mb 1 Error
+*** Status: Execution error(s)
+--- Job fixed_problem.gms Stop 12/20/21 14:26:19 elapsed 0:00:01.078

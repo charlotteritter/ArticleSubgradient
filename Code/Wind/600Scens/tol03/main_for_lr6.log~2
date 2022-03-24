@@ -1,0 +1,96 @@
+--- Job main_for_lr6.gms Start 12/16/21 17:36:15 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\main_for_lr6.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\225a\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- main_for_lr6.gms(19) 2 Mb
+--- . inputME.gms(14) 3 Mb
+--- .. solar_scenarios_600.csv(601) 3 Mb
+--- . inputME.gms(36) 3 Mb 1 Error
+*** Error 282 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\inputME.gms
+    Unable to open include file
+--- . inputME.gms(97) 3 Mb 2 Errors
+*** Error 463 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\inputME.gms
+    The column section in the previous table is missing.
+       You may want to use $ON/OFFEMPTY
+--- . inputME.gms(116) 3 Mb
+--- .. battery_revenue.csv(25) 3 Mb
+--- . inputME.gms(185) 3 Mb
+--- main_for_lr6.gms(20) 3 Mb
+--- . subgradient_parameters.gms(33) 3 Mb
+--- main_for_lr6.gms(22) 3 Mb
+--- . equations_all.gms(76) 3 Mb
+--- main_for_lr6.gms(23) 3 Mb
+--- . lp_lowerbound.gms(4) 3 Mb 3 Errors
+*** Error 257 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\lp_lowerbound.gms
+    Solve statement not checked because of previous errors
+--- . lp_lowerbound.gms(7) 3 Mb 4 Errors
+*** Error 141 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\lp_lowerbound.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+--- . lp_lowerbound.gms(8) 3 Mb 5 Errors
+*** Error 141 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\lp_lowerbound.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+--- . lp_lowerbound.gms(12) 3 Mb
+--- main_for_lr6.gms(24) 3 Mb
+--- . heuristic_upperbound.gms(16) 3 Mb 6 Errors
+*** Error 257 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\heuristic_upperbound.gms
+    Solve statement not checked because of previous errors
+--- . heuristic_upperbound.gms(40) 3 Mb 7 Errors
+*** Error 116 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\heuristic_upperbound.gms
+    Label is unknown
+--- . heuristic_upperbound.gms(47) 3 Mb 8 Errors
+*** Error 257 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\heuristic_upperbound.gms
+    Solve statement not checked because of previous errors
+--- . heuristic_upperbound.gms(51) 3 Mb 9 Errors
+*** Error 141 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\heuristic_upperbound.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+--- . heuristic_upperbound.gms(58) 3 Mb
+--- main_for_lr6.gms(39) 3 Mb
+--- call csv2gdx Naive.csv id=nv index=1 values=2..lastCol useHeader=y
+No errors, CSV2GDX time = 0ms
+--- main_for_lr6.gms(40) 3 Mb
+--- GDXin=C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\Naive.gdx
+--- main_for_lr6.gms(75) 3 Mb
+--- . plain_lr.gms(4) 3 Mb 10 Errors
+*** Error 257 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\plain_lr.gms
+    Solve statement not checked because of previous errors
+--- . plain_lr.gms(6) 3 Mb 11 Errors
+*** Error 141 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\600Scen\tol03\plain_lr.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+--- . plain_lr.gms(13) 3 Mb
+--- main_for_lr6.gms(81) 3 Mb
+--- . LR_updates.gms(18) 3 Mb
+--- .. stepsizes.gms(21) 3 Mb
+--- . LR_updates.gms(43) 3 Mb
+--- main_for_lr6.gms(102) 3 Mb 11 Errors
+*** Status: Compilation error(s)
+--- Job main_for_lr6.gms Stop 12/16/21 17:36:16 elapsed 0:00:00.164

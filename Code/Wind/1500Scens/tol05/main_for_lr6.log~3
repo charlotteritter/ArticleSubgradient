@@ -1,0 +1,70 @@
+--- Job main_for_lr6.gms Start 12/16/21 17:53:49 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\900Scen\tol05\main_for_lr6.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\900Scen\tol05\225a\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- main_for_lr6.gms(19) 2 Mb
+--- . inputME.gms(14) 3 Mb
+--- .. solar_scenarios_900.csv(901) 3 Mb
+--- . inputME.gms(36) 3 Mb
+--- .. scenario_sorted_900_05.csv(901) 4 Mb
+--- . inputME.gms(116) 4 Mb
+--- .. battery_revenue.csv(25) 4 Mb
+--- . inputME.gms(185) 4 Mb
+--- main_for_lr6.gms(20) 4 Mb
+--- . subgradient_parameters.gms(33) 4 Mb
+--- main_for_lr6.gms(22) 4 Mb
+--- . equations_all.gms(76) 4 Mb
+--- main_for_lr6.gms(23) 4 Mb
+--- . lp_lowerbound.gms(12) 4 Mb
+--- main_for_lr6.gms(24) 4 Mb
+--- . heuristic_upperbound.gms(58) 4 Mb
+--- main_for_lr6.gms(39) 4 Mb
+--- call csv2gdx Naive.csv id=nv index=1 values=2..lastCol useHeader=y
+No errors, CSV2GDX time = 0ms
+--- main_for_lr6.gms(40) 4 Mb
+--- GDXin=C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Solar\900Scen\tol05\Naive.gdx
+--- main_for_lr6.gms(75) 4 Mb
+--- . plain_lr.gms(13) 4 Mb
+--- main_for_lr6.gms(81) 4 Mb
+--- . LR_updates.gms(18) 4 Mb
+--- .. stepsizes.gms(21) 4 Mb
+--- . LR_updates.gms(43) 4 Mb
+--- main_for_lr6.gms(102) 4 Mb
+--- Starting execution: elapsed 0:00:00.186
+--- main_for_lr6.gms(2147) 10 Mb
+--- Generating RMIP model schedule
+--- main_for_lr6.gms(2094) 10 Mb
+--- Starting Equ Objective: elapsed 0:00:00.679
+--- main_for_lr6.gms(2096) 12 Mb
+--- Starting Equ Const1: elapsed 0:00:01.155
+*** Error at line 2094: Execution halted: Triggered by pending CtrlC event
+--- main_for_lr6.gms(2148) 12 Mb 1 Error
+*** SOLVE aborted
+--- Profile Summary (3375 records processed)
+     0.469   0.012GB      2094 Equation   Objective (1)
+     0.453   0.005GB      2017 Loop       
+     0.047   0.005GB      2018 Loop       
+     0.032   0.005GB      2018 Loop       
+     0.031   0.005GB      2018 Loop       
+     0.031   0.005GB      2018 Loop       
+     0.031   0.005GB      2018 Loop       
+     0.031   0.005GB      2018 Loop       
+     0.031   0.005GB      2018 Loop       
+     0.016   0.005GB      2022 Assignment dummy (1)
+--- main_for_lr6.gms(2148) 12 Mb 1 Error
+*** Status: Execution error(s)
+--- Job main_for_lr6.gms Stop 12/16/21 17:53:50 elapsed 0:00:01.162
