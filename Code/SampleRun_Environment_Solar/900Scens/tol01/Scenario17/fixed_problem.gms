@@ -206,7 +206,7 @@ loop(iter, put iter.tl put profit(iter) put run_time(iter) put /; );
 PUTCLOSE fixed_profit;
 
 scalar sma;
-sma=smax(iter,profit(iter));
+sma=smin(iter,profit(iter));
 File TestingFile3 / Alg.csv /;
 TestingFile3.pc=5;
 TestingFile3.nd=5;
