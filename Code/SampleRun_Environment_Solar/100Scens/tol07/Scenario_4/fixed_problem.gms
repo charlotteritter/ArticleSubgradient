@@ -34,7 +34,7 @@ $offdelim
 *Tolerance 
 scalar tol;
 *tol=%TOL%;
-tol=0.05;
+tol=0.07;
 
 
 * time limit for each problem

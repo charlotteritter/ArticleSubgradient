@@ -22,7 +22,7 @@ ALIAS (T,TT);
 ALIAS (W,I);
 ALIAS (W,SCEN);
 
-SETS iter iterations /iter1*iter30/;
+SETS iter iterations /iter1*iter60/;
 
 TABLE Solar(scen,t)
 $ondelim
@@ -34,7 +34,7 @@ $offdelim
 *Tolerance 
 scalar tol;
 *tol=%TOL%;
-tol=0.05;
+tol=0.07;
 
 
 * time limit for each problem
@@ -207,7 +207,7 @@ PUTCLOSE fixed_profit;
 
 scalar sma;
 sma=smin(iter,profit(iter));
-File TestingFile3 / Alg.csv /;
+File TestingFile3 / Alg_60.csv /;
 TestingFile3.pc=5;
 TestingFile3.nd=5;
 put TestingFile3; 
