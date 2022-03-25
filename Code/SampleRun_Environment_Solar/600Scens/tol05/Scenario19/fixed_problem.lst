@@ -1,4 +1,4 @@
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/24/22 22:28:00 Page 1
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/25/22 13:25:46 Page 1
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -56,7 +56,7 @@ INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment
   54  scen23,0,0,0,0,0,0,0.022745072,9.183230441,188.5100068,442.4737177,901.5084735,910.4121856,1463.214253,1056.571234,1113.303732,1081.77033,815.2798412,491.1562172,222.2919478,132.4648218,0,0,0,0
   55  scen24,0,0,0,0,0,0,0,14.16477839,89.89763559,655.2122764,1027.614273,885.9471252,991.7678557,997.9166692,968.0108587,1045.930097,845.1928347,536.12417,216.0432243,132.232079,0,0,0,0
   56  scen25,0,0,0,0,0,0,0,20.84263621,83.83352879,622.9762623,876.7988104,999.5540883,1102.425911,1036.74722,1087.12011,992.8914583,727.1714549,458.5944216,168.7947653,110.3799102,0,0,0,0
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/24/22 22:28:00 Page 2
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/25/22 13:25:46 Page 2
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -114,7 +114,7 @@ C o m p i l a t i o n
  107  scen76,0,0,0,0,0,0,0,25.20803514,43.42525325,791.0797566,466.0035178,1222.250911,1403.919523,1245.965065,1083.517785,1173.619414,790.2397343,477.5499423,159.1788349,117.7496607,0,0,0,0
  108  scen77,0,0,0,0,0,0,0,16.49314721,98.12589142,785.2196839,924.8382627,1113.351249,1177.054404,960.4611272,1436.039581,750.1303839,829.5050078,376.7801786,170.0822912,134.5865806,0,0,0,0
  109  scen78,0,0,0,0,0,0,0,6.227611072,140.5250182,603.1406084,1344.328718,1128.669464,1203.740837,1580.249912,1172.837039,634.4712526,805.5409063,431.0381253,141.5109119,131.2986092,0,0,0,0
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/24/22 22:28:00 Page 3
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/25/22 13:25:46 Page 3
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -172,7 +172,7 @@ C o m p i l a t i o n
  160  scen129,0,0,0,0,0,0,0.656628496,44.11927025,58.28124536,954.6296559,588.7466482,1281.392186,1200.872042,1408.483833,1153.610114,1195.546089,754.9239893,480.0709027,212.3229651,97.61048334,0,0,0,0
  161  scen130,0,0,0,0,0,0,0,13.19692353,178.4185829,816.506578,1107.70844,942.980928,1068.497238,1200.568413,1139.32011,938.7270161,642.460365,467.9611484,239.4734174,105.116227,0,0,0,0
  162  scen131,0,0,0,0,0,0,1.207949195,29.62669306,138.6834436,889.9146107,1012.186105,911.6462033,1162.83425,1434.551463,940.6075252,983.9402576,775.9758184,523.1426752,223.9070483,102.7923236,0,0,0,0
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/24/22 22:28:00 Page 4
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/25/22 13:25:46 Page 4
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -230,7 +230,7 @@ C o m p i l a t i o n
  213  scen182,0,0,0,0,0,0,0,8.651182322,152.7835698,337.3137379,1267.220055,1376.895129,1367.080599,1109.845741,1230.967295,1143.331691,936.6015479,433.6396004,187.9470225,150.8179137,0,0,0,0
  214  scen183,0,0,0,0,0,0,0.518438599,31.9928497,161.8833181,738.3934186,857.825021,883.0101923,1172.786027,942.2072922,1089.463043,1042.368666,914.5586042,480.7840855,203.7226862,117.33265,0,0,0,0
  215  scen184,0,0,0,0,0,0,0,21.85236679,183.0649503,697.1496458,1073.674649,954.1938965,1023.560634,1444.041779,862.3982958,955.0734884,646.3582398,512.5271425,194.9364936,121.7888175,0,0,0,0
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/24/22 22:28:00 Page 5
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/25/22 13:25:46 Page 5
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -288,7 +288,7 @@ C o m p i l a t i o n
  266  scen235,0,0,0,0,0,0,0.277815227,5.496501853,153.9039782,748.575814,1232.172643,1123.477091,544.0167297,1017.47389,1207.565368,785.4934782,767.9089757,453.2377964,197.4571355,139.6147362,0,0,0,0
  267  scen236,0,0,0,0,0,0,0.356729919,9.020665101,208.1802201,887.1672819,885.2803165,783.8783602,955.5133326,865.4374377,1048.200767,740.2377188,845.6830829,458.5183076,242.5204154,130.9021063,0,0,0,0
  268  scen237,0,0,0,0,0,0,0,5.575773376,194.966303,848.6051242,1025.178659,735.0774229,988.8278604,965.0489495,1007.6217,702.9920366,660.7758356,443.9366341,188.4943907,121.3874081,0,0,0,0
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/24/22 22:28:00 Page 6
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/25/22 13:25:46 Page 6
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -346,7 +346,7 @@ C o m p i l a t i o n
  319  scen288,0,0,0,0,0,0,0,45.8964607,111.426412,687.4355157,711.806821,1403.417977,1535.776896,1530.941709,1182.416013,875.3433229,723.8045283,386.5952276,239.7560657,121.2147937,0,0,0,0
  320  scen289,0,0,0,0,0,0,0,26.18779659,185.7893544,492.666161,1319.879697,641.3124988,1188.17552,1406.150903,1317.576203,1294.729056,865.2337021,463.5140781,222.7908395,138.595202,0,0,0,0
  321  scen290,0,0,0,0,0,0,0.003188366,0,246.295841,706.254709,724.6326042,497.4768885,1490.711666,1289.876701,842.6805342,1135.68319,799.3546925,508.5019392,147.7406923,160.7841244,0,0,0,0
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/24/22 22:28:00 Page 7
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/25/22 13:25:46 Page 7
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -404,7 +404,7 @@ C o m p i l a t i o n
  372  scen341,0,0,0,0,0,0,0,11.85284678,40.9703852,1003.181608,1501.690333,1059.705358,1132.312183,1542.537995,1189.531315,915.7160765,869.8463081,509.9349557,152.1118584,127.0736881,0,0,0,0
  373  scen342,0,0,0,0,0,0,0.098596928,6.576758081,46.82319379,517.0034181,814.628529,1095.149363,1226.618393,1272.554845,1064.870132,845.6470665,813.0289342,399.6814574,201.8724001,109.3281748,0,0,0,0
  374  scen343,0,0,0,0,0,0,0,13.70229462,62.09831664,696.3566586,754.8812667,617.475075,1052.403493,1252.492678,1039.855529,1145.39867,651.012692,433.5555063,157.6072449,129.8622772,0,0,0,0
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/24/22 22:28:00 Page 8
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/25/22 13:25:46 Page 8
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -462,7 +462,7 @@ C o m p i l a t i o n
  425  scen394,0,0,0,0,0,0,0,25.22198539,121.8350327,648.2978186,1133.275041,1435.698523,996.5599101,1088.997947,881.5081479,1145.912074,745.4809238,447.0134035,180.9111373,127.2371507,0,0,0,0
  426  scen395,0,0,0,0,0,0,0,24.31448702,158.6235019,701.295916,986.6742455,807.0815898,812.9972672,1236.158388,1117.030371,1025.041117,727.1305888,445.7970791,160.8826851,133.6303264,0,0,0,0
  427  scen396,0,0,0,0,0,0,0.589201643,11.65345069,43.89708622,794.5726685,965.8007493,803.048819,938.9190471,1406.405866,1209.728157,883.3738075,875.5363787,539.9643635,192.2842511,114.4000393,0,0,0,0
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/24/22 22:28:00 Page 9
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      03/25/22 13:25:46 Page 9
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -520,7 +520,7 @@ C o m p i l a t i o n
  478  scen447,0,0,0,0,0,0,0,19.71774224,198.3170587,613.5256727,1148.808196,1038.218814,739.4399883,1350.80062,1406.440198,824.1726496,885.3795654,519.2273753,176.8319404,97.21287147,0,0,0,0
  479  scen448,0,0,0,0,0,0,1.074493179,12.22888091,240.2425679,835.2762888,994.3288623,1452.841898,1417.744945,1222.242537,859.6967657,1130.733957,614.9041965,487.0994022,202.6236029,120.6154851,0,0,0,0
  480  scen449,0,0,0,0,0,0,0,0,73.48838819,668.1819113,1214.712026,1055.588705,1199.284565,1261.081738,1270.034889,1013.499225,843.3288244,479.0700231,120.757904,114.5048454,0,0,0,0
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/24/22 22:28:00 Page 10
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/25/22 13:25:46 Page 10
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -578,7 +578,7 @@ C o m p i l a t i o n
  531  scen500,0,0,0,0,0,0,0.397803136,46.46481411,113.1333038,1153.250321,1178.55872,966.4745696,949.8895639,1193.978446,1313.953232,1053.429724,616.2854098,445.9351164,194.4080692,97.65902217,0,0,0,0
  532  scen501,0,0,0,0,0,0,1.062817469,33.08722513,131.1016459,808.8592327,837.6859641,471.6243121,942.1440744,806.5916954,1072.617473,1327.25928,687.1781265,481.0117873,186.4904019,131.3572436,0,0,0,0
  533  scen502,0,0,0,0,0,0,0,0,137.5509248,937.2464504,1124.757575,1021.501289,621.4429982,1071.042631,1262.216458,995.7406466,798.0222152,469.66653,216.7424382,122.7134101,0,0,0,0
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/24/22 22:28:00 Page 11
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/25/22 13:25:46 Page 11
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -636,7 +636,7 @@ C o m p i l a t i o n
  584  scen553,0,0,0,0,0,0,0,13.66784695,0,569.2634364,895.6069258,1311.045381,1248.786736,813.9914058,960.8083106,781.0314992,793.8454562,369.4142301,199.2646242,117.0385384,0,0,0,0
  585  scen554,0,0,0,0,0,0,0,8.408933932,2.286066811,759.8753202,917.3148877,941.193146,1099.384583,1184.866465,966.4105669,1059.936611,700.8426284,458.3132597,141.2634802,106.4522307,0,0,0,0
  586  scen555,0,0,0,0,0,0,0.711005522,10.3400157,104.5524326,794.9071977,1219.327278,801.9475906,953.1862102,957.5592703,1239.900055,853.120838,765.9733826,426.7902404,145.4339621,136.0810658,0,0,0,0
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/24/22 22:28:00 Page 12
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/25/22 13:25:46 Page 12
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -694,7 +694,7 @@ C o m p i l a t i o n
 ****        $170
 **** LINE    603 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/solar_scenarios.csv
 **** LINE     30 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/fixed_problem.gms
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/24/22 22:28:00 Page 13
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/25/22 13:25:46 Page 13
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -751,7 +751,7 @@ C o m p i l a t i o n
 ****        $170
 **** LINE    616 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/solar_scenarios.csv
 **** LINE     30 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/fixed_problem.gms
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/24/22 22:28:00 Page 14
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/25/22 13:25:46 Page 14
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -808,7 +808,7 @@ C o m p i l a t i o n
 ****        $170
 **** LINE    629 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/solar_scenarios.csv
 **** LINE     30 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/fixed_problem.gms
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/24/22 22:28:00 Page 15
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/25/22 13:25:46 Page 15
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -865,7 +865,7 @@ C o m p i l a t i o n
 ****        $170
 **** LINE    642 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/solar_scenarios.csv
 **** LINE     30 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/fixed_problem.gms
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/24/22 22:28:00 Page 16
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/25/22 13:25:46 Page 16
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -922,7 +922,7 @@ C o m p i l a t i o n
 ****        $170
 **** LINE    655 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/solar_scenarios.csv
 **** LINE     30 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/fixed_problem.gms
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/24/22 22:28:00 Page 17
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/25/22 13:25:46 Page 17
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -979,7 +979,7 @@ C o m p i l a t i o n
 ****        $170
 **** LINE    668 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/solar_scenarios.csv
 **** LINE     30 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/fixed_problem.gms
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/24/22 22:28:00 Page 18
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/25/22 13:25:46 Page 18
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -1036,7 +1036,7 @@ C o m p i l a t i o n
 ****        $170
 **** LINE    681 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/solar_scenarios.csv
 **** LINE     30 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/fixed_problem.gms
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/24/22 22:28:00 Page 19
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/25/22 13:25:46 Page 19
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -1093,7 +1093,7 @@ C o m p i l a t i o n
 ****        $170
 **** LINE    694 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/solar_scenarios.csv
 **** LINE     30 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/fixed_problem.gms
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/24/22 22:28:00 Page 20
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/25/22 13:25:46 Page 20
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -1150,7 +1150,7 @@ C o m p i l a t i o n
 ****        $170
 **** LINE    707 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/solar_scenarios.csv
 **** LINE     30 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/fixed_problem.gms
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/24/22 22:28:00 Page 21
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/25/22 13:25:46 Page 21
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -1207,7 +1207,7 @@ C o m p i l a t i o n
 ****        $170
 **** LINE    720 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/solar_scenarios.csv
 **** LINE     30 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/fixed_problem.gms
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/24/22 22:28:00 Page 22
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/25/22 13:25:46 Page 22
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -1264,7 +1264,7 @@ C o m p i l a t i o n
 ****        $170
 **** LINE    733 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/solar_scenarios.csv
 **** LINE     30 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/fixed_problem.gms
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/24/22 22:28:00 Page 23
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/25/22 13:25:46 Page 23
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -1321,7 +1321,7 @@ C o m p i l a t i o n
 ****        $170
 **** LINE    746 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/solar_scenarios.csv
 **** LINE     30 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/fixed_problem.gms
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/24/22 22:28:00 Page 24
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/25/22 13:25:46 Page 24
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -1378,7 +1378,7 @@ C o m p i l a t i o n
 ****        $170
 **** LINE    759 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/solar_scenarios.csv
 **** LINE     30 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/fixed_problem.gms
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/24/22 22:28:00 Page 25
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/25/22 13:25:46 Page 25
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -1435,7 +1435,7 @@ C o m p i l a t i o n
 ****        $170
 **** LINE    772 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/solar_scenarios.csv
 **** LINE     30 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/fixed_problem.gms
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/24/22 22:28:00 Page 26
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/25/22 13:25:46 Page 26
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -1492,7 +1492,7 @@ C o m p i l a t i o n
 ****        $170
 **** LINE    785 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/solar_scenarios.csv
 **** LINE     30 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/fixed_problem.gms
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/24/22 22:28:00 Page 27
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/25/22 13:25:46 Page 27
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -1549,7 +1549,7 @@ C o m p i l a t i o n
 ****        $170
 **** LINE    798 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/solar_scenarios.csv
 **** LINE     30 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/fixed_problem.gms
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/24/22 22:28:00 Page 28
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/25/22 13:25:46 Page 28
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -1606,7 +1606,7 @@ C o m p i l a t i o n
 ****        $170
 **** LINE    811 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/solar_scenarios.csv
 **** LINE     30 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/fixed_problem.gms
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/24/22 22:28:00 Page 29
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/25/22 13:25:46 Page 29
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -1663,7 +1663,7 @@ C o m p i l a t i o n
 ****        $170
 **** LINE    824 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/solar_scenarios.csv
 **** LINE     30 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/fixed_problem.gms
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/24/22 22:28:00 Page 30
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/25/22 13:25:46 Page 30
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -1720,7 +1720,7 @@ C o m p i l a t i o n
 ****        $170
 **** LINE    837 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/solar_scenarios.csv
 **** LINE     30 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/fixed_problem.gms
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/24/22 22:28:00 Page 31
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/25/22 13:25:46 Page 31
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -1777,7 +1777,7 @@ C o m p i l a t i o n
 ****        $170
 **** LINE    850 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/solar_scenarios.csv
 **** LINE     30 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/fixed_problem.gms
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/24/22 22:28:00 Page 32
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/25/22 13:25:46 Page 32
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -1834,7 +1834,7 @@ C o m p i l a t i o n
 ****        $170
 **** LINE    863 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/solar_scenarios.csv
 **** LINE     30 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/fixed_problem.gms
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/24/22 22:28:00 Page 33
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/25/22 13:25:46 Page 33
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -1891,7 +1891,7 @@ C o m p i l a t i o n
 ****        $170
 **** LINE    876 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/solar_scenarios.csv
 **** LINE     30 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/fixed_problem.gms
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/24/22 22:28:00 Page 34
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/25/22 13:25:46 Page 34
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -1948,7 +1948,7 @@ C o m p i l a t i o n
 ****        $170
 **** LINE    889 INCLUDE     /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/solar_scenarios.csv
 **** LINE     30 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/fixed_problem.gms
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/24/22 22:28:00 Page 35
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/25/22 13:25:46 Page 35
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -2006,7 +2006,7 @@ C o m p i l a t i o n
  935  *Tolerance
  936  scalar tol;
  937  *tol=%TOL%;
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/24/22 22:28:00 Page 36
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/25/22 13:25:46 Page 36
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -2064,7 +2064,7 @@ INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment
  991  t2,0.017165378,0.025641026,0.025641026
  992  t3,0.015479861,0.025641026,0.025641026
  993  t4,0.014815148,0.025641026,0.025641026
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/24/22 22:28:00 Page 37
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/25/22 13:25:46 Page 37
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -2122,7 +2122,7 @@ C o m p i l a t i o n
 1045   
 1046  parameter BigX, LowX, X_0 maximum minimum initial energy stored ;
 1047  parameter BigM(scen,t) find a good BigM ;
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/24/22 22:28:00 Page 38
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/25/22 13:25:46 Page 38
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -2180,7 +2180,7 @@ C o m p i l a t i o n
 1098          Const3(scen,t)    max discharge
 1099          Const_chance_1(scen,t)    chance constraint big M
 1100          Const_chance_PH(scen,t)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/24/22 22:28:00 Page 39
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/25/22 13:25:46 Page 39
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -2238,7 +2238,7 @@ C o m p i l a t i o n
 1147  ********************************************************************************
 1148  *                                write output
 1149  ********************************************************************************
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/24/22 22:28:00 Page 40
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/25/22 13:25:46 Page 40
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -2264,7 +2264,7 @@ C o m p i l a t i o n
 
 **** LIST OF STRAY NAMES - CHECK DECLARATIONS FOR SPURIOUS COMMAS
 **** STRAY NAME run_time_total OF TYPE PARAM
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/24/22 22:28:00 Page 41
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/25/22 13:25:46 Page 41
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Error Messages
 
@@ -2278,7 +2278,7 @@ Error Messages
 257  Solve statement not checked because of previous errors
 
 **** 302 ERROR(S)   0 WARNING(S)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/24/22 22:28:00 Page 42
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     03/25/22 13:25:46 Page 42
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Include File Summary
 
@@ -2291,7 +2291,7 @@ Include File Summary
      4      988 INCLUDE        1      62  ./home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/600Scens/tol05/Scenario19/battery_revenue.csv
 
 
-COMPILATION TIME     =        0.253 SECONDS      3 MB  24.8.5 r61358 LEX-LEG
+COMPILATION TIME     =        0.170 SECONDS      3 MB  24.8.5 r61358 LEX-LEG
 
 
 USER: Small MUD - 5 User License                     S160825:0507AO-LNX
