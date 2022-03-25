@@ -1,0 +1,11 @@
+51      0.021
+8714 2      0.026       0.032 Equation   Const_6 (460)
+8805 10      0.182       0.032 GAMS Fini   
+8805 3      0.053       0.032 Solve Fini SCHEDULE (14821)
+8703 1      0.025       0.031 Equation   Const_3_2 (506)
+8702 7      0.025       0.031 Equation   Const_3_1 (506)
+8707 8      0.021       0.031 Equation   Const_4_1 (484)
+8702 5      0.025       0.031 Equation   Const_3_1 (460)
+8703 4      0.025       0.032 Equation   Const_3_2 (460)
+8714 9      0.025       0.031 Equation   Const_6 (506)
+8805 6      0.159       0.031 GAMS Fini   
