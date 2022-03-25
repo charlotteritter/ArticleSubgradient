@@ -20,7 +20,7 @@ SCALAR start_time, end_time, run_time_total;
 
 SETS T times/t1*t24/;
 SETS W scenarios /scen1*scen4272/;
-SETS iter iterations /iter1*iter30/;
+SETS iter iterations /iter1*iter60/;
 *SETS rho_ind /r1*r5/;
 *parameter rho_val(rho_ind) / r1 5, r2 40, r3 80, r4 120, r5 160/;
 *SETS rho_ind /r1*r3/;
@@ -51,7 +51,7 @@ tol=0.07;
 * time limit for each problem
 scalar time_limit;
 *time_limit=%TIMELIM%;
-time_limit=2250;
+time_limit=4200;
 
 ALIAS (T,TT);
 alias(scen,i);
@@ -199,7 +199,7 @@ y_previous(t) = 0;
 *iter --> iter1 * iter1000
 loop(iter,
 
-if (tot_time < 1800,
+if (tot_time < 3800,
 
 *rho_val(rho_ind=r1)=40
          rho =rho_val(rho_ind);
