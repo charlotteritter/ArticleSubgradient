@@ -22,7 +22,7 @@ ALIAS (T,TT);
 ALIAS (W,I);
 ALIAS (W,SCEN);
 
-SETS iter iterations /iter1*iter60/;
+SETS iter iterations /iter1*iter30/;
 
 TABLE Solar(scen,t)
 $ondelim
@@ -207,7 +207,7 @@ PUTCLOSE fixed_profit;
 
 scalar sma;
 sma=smin(iter,profit(iter));
-File TestingFile3 / Alg_60.csv /;
+File TestingFile3 / Alg.csv /;
 TestingFile3.pc=5;
 TestingFile3.nd=5;
 put TestingFile3; 
