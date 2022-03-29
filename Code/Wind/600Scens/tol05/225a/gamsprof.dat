@@ -1,0 +1,11 @@
+2387      0.099
+928 7      0.726       0.040 Solve Fini schedule (441025)
+838 9      0.113       0.019 Equation   ObjectiveFIX (1)
+1001 1      0.533       0.039 Solve Fini SCHEDULEFIX (441025)
+928 3      0.102       0.011 Solve Read schedule
+1001 5      0.319       0.046 Solve Fini SCHEDULEFIX (441025)
+838 10      0.101       0.021 Equation   ObjectiveFIX (1)
+1001 2      0.902       0.039 GAMS Fini   
+745 8      0.111       0.005 Loop       
+928 4      0.846       0.040 GAMS Fini   
+1001 6      0.212       0.046 Solve Fini SCHEDULEFIX (441025)

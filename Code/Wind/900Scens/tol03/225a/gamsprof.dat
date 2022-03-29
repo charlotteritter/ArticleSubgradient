@@ -1,0 +1,11 @@
+2144      0.146
+1228 10      0.271       0.015 Solve Read schedule
+1301 8      0.304       0.068 Solve Fini SCHEDULEFIX (661525)
+1138 2      0.218       0.027 Equation   ObjectiveFIX (1)
+1228 1      0.154       0.058 GAMS Fini   
+1180 3      0.156       0.046 Equation   Const_4_2 (19800)
+1301 9      0.160       0.068 GAMS Fini   
+1176 6      0.153       0.042 Equation   Const_4_1 (19800)
+1301 5      0.955       0.057 Solve Fini SCHEDULEFIX (661525)
+1301 4      0.187       0.057 GAMS Fini   
+1228 7      1.340       0.058 Solve Fini schedule (661525)

@@ -1,0 +1,11 @@
+4736      0.147
+1300 5      0.298       0.068 Solve Fini SCHEDULEFIX (661525)
+1175 4      0.154       0.042 Equation   Const_4_1 (19800)
+1137 10      0.193       0.027 Equation   ObjectiveFIX (1)
+1227 1      1.075       0.058 Solve Fini schedule (661525)
+1300 7      1.102       0.057 Solve Fini SCHEDULEFIX (661525)
+1181 8      0.148       0.057 Equation   Const_4_2FIX (19800)
+1300 9      0.257       0.057 GAMS Fini   
+1300 3      0.257       0.068 GAMS Fini   
+1227 2      0.236       0.058 GAMS Fini   
+1044 6      0.328       0.005 Loop       
