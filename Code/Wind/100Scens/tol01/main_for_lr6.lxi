@@ -1,0 +1,159 @@
+B 3 C o m p i l a t i o n
+B 704 Include File Summary
+B 728 E x e c u t i o n
+I 917 minwind
+B 941 Model Analysis      SOLVE schedule Using RMIP From line 457
+B 947 Equation Listing    SOLVE schedule Using RMIP From line 457
+D 950 Objective
+D 962 Const1_1
+D 980 Const1_2
+D 988 Const_3_1
+D 1006 Const_3_2
+D 1024 Const_4_1
+D 1042 Const_4_2
+D 1060 Const_5
+D 1078 Const_6
+B 1097 Column Listing      SOLVE schedule Using RMIP From line 457
+E 1100 X
+E 1132 Y
+E 1448 U
+E 1474 V
+E 1499 OBJ
+E 1506 Z
+E 1594 R
+B 1634 Model Statistics    SOLVE schedule Using RMIP From line 457
+B 1652 Solution Report     SOLVE schedule Using RMIP From line 457
+B 1674 E x e c u t i o n
+I 1682 init_lambda
+I 1683 LP_time
+I 1684 lowerbound
+B 1697 Model Analysis      SOLVE SCHEDULEFIX Using MIP From line 499
+B 1703 Equation Listing    SOLVE SCHEDULEFIX Using MIP From line 499
+D 1706 ObjectiveFIX
+D 1718 Const1_1FIX
+D 1736 Const1_2FIX
+D 1744 Const_3_1FIX
+D 1762 Const_3_2FIX
+D 1780 Const_4_1FIX
+D 1798 Const_4_2FIX
+D 1816 Const_5FIX
+D 1834 Const_6FIX
+B 1853 Column Listing      SOLVE SCHEDULEFIX Using MIP From line 499
+E 1856 X
+E 1888 Y
+E 2204 U
+E 2230 V
+E 2255 OBJ
+E 2262 Z
+E 2350 R
+B 2390 Model Statistics    SOLVE SCHEDULEFIX Using MIP From line 499
+B 2413 Solution Report     SOLVE SCHEDULEFIX Using MIP From line 499
+B 2435 E x e c u t i o n
+I 2443 prev_y
+I 2448 prev_z
+B 2458 Model Analysis      SOLVE SCHEDULEFIX Using MIP From line 499
+B 2464 Equation Listing    SOLVE SCHEDULEFIX Using MIP From line 499
+D 2467 ObjectiveFIX
+D 2479 Const1_1FIX
+D 2497 Const1_2FIX
+D 2505 Const_3_1FIX
+D 2523 Const_3_2FIX
+D 2541 Const_4_1FIX
+D 2559 Const_4_2FIX
+D 2577 Const_5FIX
+D 2595 Const_6FIX
+B 2614 Column Listing      SOLVE SCHEDULEFIX Using MIP From line 499
+E 2617 X
+E 2649 Y
+E 2965 U
+E 2991 V
+E 3016 OBJ
+E 3023 Z
+E 3111 R
+B 3151 Model Statistics    SOLVE SCHEDULEFIX Using MIP From line 499
+B 3174 Solution Report     SOLVE SCHEDULEFIX Using MIP From line 499
+B 3196 E x e c u t i o n
+I 3204 prev_y
+I 3209 prev_z
+B 3219 Model Analysis      SOLVE SCHEDULEFIX Using MIP From line 499
+B 3225 Equation Listing    SOLVE SCHEDULEFIX Using MIP From line 499
+D 3228 ObjectiveFIX
+D 3240 Const1_1FIX
+D 3258 Const1_2FIX
+D 3266 Const_3_1FIX
+D 3284 Const_3_2FIX
+D 3302 Const_4_1FIX
+D 3320 Const_4_2FIX
+D 3338 Const_5FIX
+D 3356 Const_6FIX
+B 3375 Column Listing      SOLVE SCHEDULEFIX Using MIP From line 499
+E 3378 X
+E 3410 Y
+E 3726 U
+E 3752 V
+E 3777 OBJ
+E 3784 Z
+E 3872 R
+B 3912 Model Statistics    SOLVE SCHEDULEFIX Using MIP From line 499
+B 3935 Solution Report     SOLVE SCHEDULEFIX Using MIP From line 499
+B 3957 E x e c u t i o n
+I 3965 prev_y
+I 3970 prev_z
+B 3980 Model Analysis      SOLVE SCHEDULEFIX Using MIP From line 499
+B 3986 Equation Listing    SOLVE SCHEDULEFIX Using MIP From line 499
+D 3989 ObjectiveFIX
+D 4001 Const1_1FIX
+D 4019 Const1_2FIX
+D 4027 Const_3_1FIX
+D 4045 Const_3_2FIX
+D 4063 Const_4_1FIX
+D 4081 Const_4_2FIX
+D 4099 Const_5FIX
+D 4117 Const_6FIX
+B 4136 Column Listing      SOLVE SCHEDULEFIX Using MIP From line 499
+E 4139 X
+E 4171 Y
+E 4487 U
+E 4513 V
+E 4538 OBJ
+E 4545 Z
+E 4633 R
+B 4673 Model Statistics    SOLVE SCHEDULEFIX Using MIP From line 499
+B 4696 Solution Report     SOLVE SCHEDULEFIX Using MIP From line 499
+B 4718 E x e c u t i o n
+I 4726 prev_y
+I 4731 prev_z
+B 4741 Model Analysis      SOLVE SCHEDULEFIX Using MIP From line 499
+B 4747 Equation Listing    SOLVE SCHEDULEFIX Using MIP From line 499
+D 4750 ObjectiveFIX
+D 4762 Const1_1FIX
+D 4780 Const1_2FIX
+D 4788 Const_3_1FIX
+D 4806 Const_3_2FIX
+D 4824 Const_4_1FIX
+D 4842 Const_4_2FIX
+D 4860 Const_5FIX
+D 4878 Const_6FIX
+B 4897 Column Listing      SOLVE SCHEDULEFIX Using MIP From line 499
+E 4900 X
+E 4932 Y
+E 5248 U
+E 5274 V
+E 5299 OBJ
+E 5306 Z
+E 5394 R
+B 5434 Model Statistics    SOLVE SCHEDULEFIX Using MIP From line 499
+B 5457 Solution Report     SOLVE SCHEDULEFIX Using MIP From line 499
+B 5479 E x e c u t i o n
+I 5487 prev_y
+I 5492 prev_z
+B 5502 Model Analysis      SOLVE SCHEDULEFIX Using MIP From line 499
+B 5508 Equation Listing    SOLVE SCHEDULEFIX Using MIP From line 499
+D 5511 ObjectiveFIX
+D 5524 Const1_1FIX
+B 5533 Column Listing      SOLVE SCHEDULEFIX Using MIP From line 499
+E 5536 X
+E 5552 Y
+E 5568 OBJ
+E 5575 R
+B 5592 Model Statistics    SOLVE SCHEDULEFIX Using MIP From line 499
