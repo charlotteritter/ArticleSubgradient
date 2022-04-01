@@ -1,0 +1,11 @@
+3041      0.199
+957 1      0.389       0.040 Solve Fini schedule (441025)
+999 9      0.246       0.053 GAMS Fini   
+999 7      0.260       0.053 Solve Fini SCHEDULEFIX (441025)
+999 5      0.221       0.053 Solve Fini SCHEDULEFIX (441025)
+999 3      0.267       0.053 Solve Fini SCHEDULEFIX (441025)
+999 2      0.222       0.053 Solve Fini SCHEDULEFIX (441025)
+999 8      0.280       0.053 Solve Fini SCHEDULEFIX (441025)
+999 10      0.237       0.053 Solve Fini SCHEDULEFIX (441025)
+999 6      0.305       0.053 Solve Fini SCHEDULEFIX (441025)
+999 4      0.231       0.053 Solve Fini SCHEDULEFIX (441025)

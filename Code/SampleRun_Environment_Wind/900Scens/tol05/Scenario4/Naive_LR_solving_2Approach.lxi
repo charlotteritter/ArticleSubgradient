@@ -1,0 +1,48 @@
+B 3 C o m p i l a t i o n
+B 1794 Include File Summary
+B 1816 E x e c u t i o n
+I 3229 minwind
+B 3273 Model Analysis      SOLVE schedule Using MIP From line 1536
+B 3279 Equation Listing    SOLVE schedule Using MIP From line 1536
+D 3282 Objective
+D 3350 Const1_1
+D 23358 Const1_2
+D 23366 Const_3_1
+D 43374 Const_3_2
+D 63382 Const_4_1
+D 83390 Const_4_2
+D 103398 Const_5
+D 123406 Const_6
+B 143415 Column Listing      SOLVE schedule Using MIP From line 1536
+E 143418 X
+E 143450 Y
+E 145266 OBJ
+E 145273 Z
+E 145361 R
+E 145400 U
+E 145426 V
+B 145452 Model Statistics    SOLVE schedule Using MIP From line 1536
+B 145470 Solution Report     SOLVE schedule Using MIP From line 1536
+B 145492 E x e c u t i o n
+I 145502 OBJ
+I 145503 run_time_total
+B 145511 Model Analysis      SOLVE schedule Using RMIP From line 1572
+B 145517 Equation Listing    SOLVE schedule Using RMIP From line 1572
+D 145520 Objective
+D 145588 Const1_1
+D 165596 Const1_2
+D 165604 Const_3_1
+D 185612 Const_3_2
+D 205620 Const_4_1
+D 225628 Const_4_2
+D 245636 Const_5
+D 265644 Const_6
+B 285653 Column Listing      SOLVE schedule Using RMIP From line 1572
+E 285656 X
+E 285688 Y
+E 287504 OBJ
+E 287511 Z
+E 287599 R
+E 287638 U
+E 287664 V
+B 287690 Model Statistics    SOLVE schedule Using RMIP From line 1572

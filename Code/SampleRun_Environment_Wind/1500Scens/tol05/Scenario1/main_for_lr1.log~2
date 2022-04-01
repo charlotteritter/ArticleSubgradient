@@ -1,0 +1,69 @@
+--- Job main_for_lr1.gms Start 03/14/22 11:43:57 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\1500Scens\tol05\Scenario1\main_for_lr1.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\1500Scens\tol05\Scenario1\225a\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- main_for_lr1.gms(13) 2 Mb
+--- . input.gms(14) 3 Mb
+--- .. wind_costs.csv(25) 3 Mb
+--- . input.gms(25) 3 Mb
+--- .. wind_scenarios.csv(901) 4 Mb
+--- . input.gms(122) 4 Mb
+--- main_for_lr1.gms(14) 4 Mb
+--- . subgradient_parameters.gms(35) 4 Mb
+--- main_for_lr1.gms(15) 4 Mb
+--- . equations.gms(123) 4 Mb
+--- main_for_lr1.gms(16) 4 Mb
+--- . lp_lowerbound.gms(12) 4 Mb
+--- main_for_lr1.gms(17) 4 Mb
+--- . heuristic_upperbound.gms(9) 4 Mb
+--- .. sampled_dynamic.csv(25) 4 Mb
+--- . heuristic_upperbound.gms(65) 4 Mb
+--- main_for_lr1.gms(35) 4 Mb
+--- call csv2gdx Naive.csv id=nv index=1 values=2..lastCol useHeader=y
+*** ErrNr = 1 Msg = No such file or directory
+CSV2GDX time = 16ms
+--- main_for_lr1.gms(36) 4 Mb
+--- GDXin=C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\1500Scens\tol05\Scenario1\Naive.gdx
+--- main_for_lr1.gms(40) 4 Mb 1 Error
+*** Error 492 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\1500Scens\tol05\Scenario1\main_for_lr1.gms
+    Symbol not in GDX
+--- main_for_lr1.gms(42) 4 Mb 2 Errors
+*** Error 141 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\1500Scens\tol05\Scenario1\main_for_lr1.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+--- main_for_lr1.gms(88) 4 Mb
+--- . plain_lr.gms(4) 4 Mb 3 Errors
+*** Error 257 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\1500Scens\tol05\Scenario1\plain_lr.gms
+    Solve statement not checked because of previous errors
+--- . plain_lr.gms(6) 4 Mb 4 Errors
+*** Error 141 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\1500Scens\tol05\Scenario1\plain_lr.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+--- . plain_lr.gms(12) 4 Mb
+--- main_for_lr1.gms(94) 4 Mb
+--- . LR_updates.gms(17) 4 Mb
+--- .. stepsizes.gms(21) 4 Mb
+--- . LR_updates.gms(42) 4 Mb
+--- main_for_lr1.gms(118) 4 Mb 4 Errors
+*** Status: Compilation error(s)
+--- Job main_for_lr1.gms Stop 03/14/22 11:43:57 elapsed 0:00:00.088

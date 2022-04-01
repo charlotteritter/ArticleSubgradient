@@ -1,0 +1,53 @@
+B 3 C o m p i l a t i o n
+B 14706 Include File Summary
+B 14720 E x e c u t i o n
+B 14742 Model Analysis      SOLVE SCHEDULE Using MIP From line 14661
+B 14748 Equation Listing    SOLVE SCHEDULE Using MIP From line 14661
+D 14751 Objective
+D 14759 Const1_1
+D 14777 Const1_2
+D 14785 Const_3_1
+D 14803 Const_3_2
+D 14821 Const_4_1
+D 14839 Const_4_2
+D 14857 Const_5
+D 14875 Const_6
+D 14893 Const_dum1
+D 14911 Const_dum2
+B 14930 Column Listing      SOLVE SCHEDULE Using MIP From line 14661
+E 14933 X
+E 14965 Y
+E 15047 U
+E 15073 V
+E 15098 dummy
+E 15117 OBJ
+E 15124 Z
+E 15212 R
+B 15252 Model Statistics    SOLVE SCHEDULE Using MIP From line 14661
+B 15277 Solution Report     SOLVE SCHEDULE Using MIP From line 14661
+B 15299 E x e c u t i o n
+B 15306 Model Analysis      SOLVE SCHEDULE Using MIP From line 14661
+B 15312 Equation Listing    SOLVE SCHEDULE Using MIP From line 14661
+D 15315 Objective
+D 15323 Const1_1
+D 15341 Const1_2
+D 15349 Const_3_1
+D 15367 Const_3_2
+D 15385 Const_4_1
+D 15403 Const_4_2
+D 15421 Const_5
+D 15439 Const_6
+D 15457 Const_dum1
+D 15475 Const_dum2
+B 15494 Column Listing      SOLVE SCHEDULE Using MIP From line 14661
+E 15497 X
+E 15529 Y
+E 15617 U
+E 15643 V
+E 15668 dummy
+E 15687 OBJ
+E 15694 Z
+E 15782 R
+B 15822 Model Statistics    SOLVE SCHEDULE Using MIP From line 14661
+B 15847 Solution Report     SOLVE SCHEDULE Using MIP From line 14661
+B 15869 E x e c u t i o n

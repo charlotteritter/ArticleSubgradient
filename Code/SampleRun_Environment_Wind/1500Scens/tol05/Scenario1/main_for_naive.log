@@ -1,0 +1,53 @@
+--- Job main_for_naive.gms Start 03/14/22 11:46:19 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\1500Scens\tol05\Scenario1\main_for_naive.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\1500Scens\tol05\Scenario1\225a\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- main_for_naive.gms(13) 2 Mb
+--- . input.gms(14) 3 Mb
+--- .. wind_costs.csv(25) 3 Mb
+--- . input.gms(25) 3 Mb
+--- .. wind_scenarios.csv(901) 4 Mb
+--- . input.gms(122) 4 Mb
+--- main_for_naive.gms(14) 4 Mb
+--- . subgradient_parameters.gms(35) 4 Mb
+--- main_for_naive.gms(15) 4 Mb
+--- . equations.gms(123) 4 Mb
+--- main_for_naive.gms(48) 4 Mb
+--- Starting execution: elapsed 0:00:00.031
+--- main_for_naive.gms(1227) 14 Mb
+--- Generating MIP model schedule
+--- main_for_naive.gms(1138) 14 Mb
+--- Starting Equ Objective: elapsed 0:00:00.811
+--- main_for_naive.gms(1147) 22 Mb
+--- Starting Equ Const1_1: elapsed 0:00:01.812
+*** Error at line 1138: Execution halted: Triggered by pending CtrlC event
+--- main_for_naive.gms(1228) 22 Mb 1 Error
+*** SOLVE aborted
+--- Profile Summary (5534 records processed)
+     1.000   0.022GB      1138 Equation   Objective (1)
+     0.735   0.006GB      1043 Loop       
+     0.047   0.006GB      1044 Loop       
+     0.047   0.006GB      1044 Loop       
+     0.046   0.006GB      1044 Loop       
+     0.032   0.006GB      1044 Loop       
+     0.032   0.006GB      1044 Loop       
+     0.032   0.006GB      1044 Loop       
+     0.032   0.006GB      1044 Loop       
+     0.032   0.006GB      1044 Loop       
+--- main_for_naive.gms(1228) 22 Mb 1 Error
+*** Status: Execution error(s)
+--- Job main_for_naive.gms Stop 03/14/22 11:46:21 elapsed 0:00:01.828
