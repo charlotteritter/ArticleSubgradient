@@ -27,7 +27,7 @@ SETS iter iterations /iter1*iter30/;
 *parameter rho_val(rho_ind) / r1 40, r2 50, r3 60/;
 
 SETS rho_ind /r1/;
-parameter rho_val(rho_ind) / r1 0.000001/;
+parameter rho_val(rho_ind) / r1 0/;
 
 ALIAS (T,TT);
 ALIAS (W,I);
