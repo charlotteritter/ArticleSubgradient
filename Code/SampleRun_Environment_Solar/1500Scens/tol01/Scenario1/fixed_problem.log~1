@@ -1,4 +1,4 @@
---- Job fixed_problem.gms Start 03/10/22 12:48:07 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Job fixed_problem.gms Start 04/12/22 10:16:43 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     C:\GAMS\32\gmsprmNT.txt
 --- GAMS Parameters defined
@@ -23,22 +23,22 @@ Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
 --- fixed_problem.gms(62) 4 Mb
 --- . battery_revenue.csv(25) 4 Mb
 --- fixed_problem.gms(216) 4 Mb
---- Starting execution: elapsed 0:00:00.042
+--- Starting execution: elapsed 0:00:00.106
 --- fixed_problem.gms(1733) 14 Mb
 --- Generating MIP model schedule
 --- fixed_problem.gms(1704) 14 Mb
---- Starting Equ Objective: elapsed 0:00:00.350
+--- Starting Equ Objective: elapsed 0:00:00.329
 --- fixed_problem.gms(1706) 18 Mb
---- Starting Equ Const1: elapsed 0:00:00.937
+--- Starting Equ Const1: elapsed 0:00:00.886
 --- fixed_problem.gms(1709) 38 Mb
---- Starting Equ Const_chance_1: elapsed 0:00:01.004
+--- Starting Equ Const_chance_1: elapsed 0:00:00.946
 --- fixed_problem.gms(1712) 50 Mb
---- Starting Equ Const_chance_2: elapsed 0:00:01.078
+--- Starting Equ Const_chance_2: elapsed 0:00:01.021
 --- fixed_problem.gms(1736) 50 Mb
 --- LOOPS iter = iter1
 ---   70,502 rows  109,525 columns  319,525 non-zeroes
 ---   1,500 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:01.245
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:01.238
 
 Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
@@ -46,22 +46,22 @@ Gurobi link license.
 *** Cannot initialize Gurobi environment.
 *** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule
---- Executing after solve: elapsed 0:00:01.413
+--- Executing after solve: elapsed 0:00:01.589
 --- fixed_problem.gms(1733) 50 Mb
 --- Generating MIP model schedule
 --- fixed_problem.gms(1704) 50 Mb
---- Starting Equ Objective: elapsed 0:00:01.413
+--- Starting Equ Objective: elapsed 0:00:01.589
 --- fixed_problem.gms(1706) 51 Mb
---- Starting Equ Const1: elapsed 0:00:02.042
+--- Starting Equ Const1: elapsed 0:00:02.197
 --- fixed_problem.gms(1709) 51 Mb
---- Starting Equ Const_chance_1: elapsed 0:00:02.174
+--- Starting Equ Const_chance_1: elapsed 0:00:02.315
 --- fixed_problem.gms(1712) 51 Mb
---- Starting Equ Const_chance_2: elapsed 0:00:02.298
+--- Starting Equ Const_chance_2: elapsed 0:00:02.428
 --- fixed_problem.gms(1736) 51 Mb
 --- LOOPS iter = iter2
 ---   70,502 rows  109,525 columns  319,525 non-zeroes
 ---   1,500 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:02.527
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:02.638
 
 Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
@@ -69,22 +69,22 @@ Gurobi link license.
 *** Cannot initialize Gurobi environment.
 *** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule
---- Executing after solve: elapsed 0:00:02.679
+--- Executing after solve: elapsed 0:00:02.778
 --- fixed_problem.gms(1733) 51 Mb
 --- Generating MIP model schedule
 --- fixed_problem.gms(1704) 51 Mb
---- Starting Equ Objective: elapsed 0:00:02.679
+--- Starting Equ Objective: elapsed 0:00:02.778
 --- fixed_problem.gms(1706) 51 Mb
---- Starting Equ Const1: elapsed 0:00:03.331
+--- Starting Equ Const1: elapsed 0:00:03.399
 --- fixed_problem.gms(1709) 51 Mb
---- Starting Equ Const_chance_1: elapsed 0:00:03.493
+--- Starting Equ Const_chance_1: elapsed 0:00:03.540
 --- fixed_problem.gms(1712) 51 Mb
---- Starting Equ Const_chance_2: elapsed 0:00:03.630
+--- Starting Equ Const_chance_2: elapsed 0:00:03.687
 --- fixed_problem.gms(1736) 51 Mb
 --- LOOPS iter = iter3
 ---   70,502 rows  109,525 columns  319,525 non-zeroes
 ---   1,500 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:03.874
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:03.949
 
 Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
@@ -92,22 +92,22 @@ Gurobi link license.
 *** Cannot initialize Gurobi environment.
 *** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule
---- Executing after solve: elapsed 0:00:04.015
+--- Executing after solve: elapsed 0:00:04.145
 --- fixed_problem.gms(1733) 51 Mb
 --- Generating MIP model schedule
 --- fixed_problem.gms(1704) 51 Mb
---- Starting Equ Objective: elapsed 0:00:04.015
+--- Starting Equ Objective: elapsed 0:00:04.145
 --- fixed_problem.gms(1706) 51 Mb
---- Starting Equ Const1: elapsed 0:00:04.645
+--- Starting Equ Const1: elapsed 0:00:04.794
 --- fixed_problem.gms(1709) 51 Mb
---- Starting Equ Const_chance_1: elapsed 0:00:04.820
+--- Starting Equ Const_chance_1: elapsed 0:00:04.942
 --- fixed_problem.gms(1712) 51 Mb
---- Starting Equ Const_chance_2: elapsed 0:00:04.972
+--- Starting Equ Const_chance_2: elapsed 0:00:05.095
 --- fixed_problem.gms(1736) 51 Mb
 --- LOOPS iter = iter4
 ---   70,502 rows  109,525 columns  319,525 non-zeroes
 ---   1,500 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:05.221
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:05.343
 
 Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
@@ -115,22 +115,22 @@ Gurobi link license.
 *** Cannot initialize Gurobi environment.
 *** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule
---- Executing after solve: elapsed 0:00:05.374
+--- Executing after solve: elapsed 0:00:05.487
 --- fixed_problem.gms(1733) 51 Mb
 --- Generating MIP model schedule
 --- fixed_problem.gms(1704) 51 Mb
---- Starting Equ Objective: elapsed 0:00:05.375
+--- Starting Equ Objective: elapsed 0:00:05.487
 --- fixed_problem.gms(1706) 51 Mb
---- Starting Equ Const1: elapsed 0:00:06.016
+--- Starting Equ Const1: elapsed 0:00:06.081
 --- fixed_problem.gms(1709) 51 Mb
---- Starting Equ Const_chance_1: elapsed 0:00:06.187
+--- Starting Equ Const_chance_1: elapsed 0:00:06.270
 --- fixed_problem.gms(1712) 51 Mb
---- Starting Equ Const_chance_2: elapsed 0:00:06.349
+--- Starting Equ Const_chance_2: elapsed 0:00:06.428
 --- fixed_problem.gms(1736) 51 Mb
 --- LOOPS iter = iter5
 ---   70,502 rows  109,525 columns  319,525 non-zeroes
 ---   1,500 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:06.595
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:06.682
 
 Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
@@ -138,22 +138,22 @@ Gurobi link license.
 *** Cannot initialize Gurobi environment.
 *** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule
---- Executing after solve: elapsed 0:00:06.755
+--- Executing after solve: elapsed 0:00:06.845
 --- fixed_problem.gms(1733) 51 Mb
 --- Generating MIP model schedule
 --- fixed_problem.gms(1704) 51 Mb
---- Starting Equ Objective: elapsed 0:00:06.756
+--- Starting Equ Objective: elapsed 0:00:06.845
 --- fixed_problem.gms(1706) 51 Mb
---- Starting Equ Const1: elapsed 0:00:07.394
+--- Starting Equ Const1: elapsed 0:00:07.524
 --- fixed_problem.gms(1709) 51 Mb
---- Starting Equ Const_chance_1: elapsed 0:00:07.555
+--- Starting Equ Const_chance_1: elapsed 0:00:07.702
 --- fixed_problem.gms(1712) 51 Mb
---- Starting Equ Const_chance_2: elapsed 0:00:07.724
+--- Starting Equ Const_chance_2: elapsed 0:00:07.865
 --- fixed_problem.gms(1736) 51 Mb
 --- LOOPS iter = iter6
 ---   70,502 rows  109,525 columns  319,525 non-zeroes
 ---   1,500 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:07.994
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:08.121
 
 Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
@@ -161,22 +161,22 @@ Gurobi link license.
 *** Cannot initialize Gurobi environment.
 *** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule
---- Executing after solve: elapsed 0:00:08.138
+--- Executing after solve: elapsed 0:00:08.339
 --- fixed_problem.gms(1733) 51 Mb
 --- Generating MIP model schedule
 --- fixed_problem.gms(1704) 51 Mb
---- Starting Equ Objective: elapsed 0:00:08.138
+--- Starting Equ Objective: elapsed 0:00:08.339
 --- fixed_problem.gms(1706) 51 Mb
---- Starting Equ Const1: elapsed 0:00:08.762
+--- Starting Equ Const1: elapsed 0:00:09.069
 --- fixed_problem.gms(1709) 51 Mb
---- Starting Equ Const_chance_1: elapsed 0:00:08.943
+--- Starting Equ Const_chance_1: elapsed 0:00:09.276
 --- fixed_problem.gms(1712) 51 Mb
---- Starting Equ Const_chance_2: elapsed 0:00:09.115
+--- Starting Equ Const_chance_2: elapsed 0:00:09.448
 --- fixed_problem.gms(1736) 51 Mb
 --- LOOPS iter = iter7
 ---   70,502 rows  109,525 columns  319,525 non-zeroes
 ---   1,500 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:09.372
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:09.691
 
 Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
@@ -184,22 +184,22 @@ Gurobi link license.
 *** Cannot initialize Gurobi environment.
 *** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule
---- Executing after solve: elapsed 0:00:09.514
+--- Executing after solve: elapsed 0:00:09.850
 --- fixed_problem.gms(1733) 51 Mb
 --- Generating MIP model schedule
 --- fixed_problem.gms(1704) 51 Mb
---- Starting Equ Objective: elapsed 0:00:09.515
+--- Starting Equ Objective: elapsed 0:00:09.850
 --- fixed_problem.gms(1706) 51 Mb
---- Starting Equ Const1: elapsed 0:00:10.152
+--- Starting Equ Const1: elapsed 0:00:10.498
 --- fixed_problem.gms(1709) 51 Mb
---- Starting Equ Const_chance_1: elapsed 0:00:10.326
+--- Starting Equ Const_chance_1: elapsed 0:00:10.682
 --- fixed_problem.gms(1712) 51 Mb
---- Starting Equ Const_chance_2: elapsed 0:00:10.486
+--- Starting Equ Const_chance_2: elapsed 0:00:10.840
 --- fixed_problem.gms(1736) 51 Mb
 --- LOOPS iter = iter8
 ---   70,502 rows  109,525 columns  319,525 non-zeroes
 ---   1,500 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:10.742
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:11.098
 
 Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
@@ -207,22 +207,22 @@ Gurobi link license.
 *** Cannot initialize Gurobi environment.
 *** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule
---- Executing after solve: elapsed 0:00:10.900
+--- Executing after solve: elapsed 0:00:11.256
 --- fixed_problem.gms(1733) 51 Mb
 --- Generating MIP model schedule
 --- fixed_problem.gms(1704) 51 Mb
---- Starting Equ Objective: elapsed 0:00:10.900
+--- Starting Equ Objective: elapsed 0:00:11.257
 --- fixed_problem.gms(1706) 51 Mb
---- Starting Equ Const1: elapsed 0:00:11.525
+--- Starting Equ Const1: elapsed 0:00:11.971
 --- fixed_problem.gms(1709) 51 Mb
---- Starting Equ Const_chance_1: elapsed 0:00:11.700
+--- Starting Equ Const_chance_1: elapsed 0:00:12.144
 --- fixed_problem.gms(1712) 51 Mb
---- Starting Equ Const_chance_2: elapsed 0:00:11.864
+--- Starting Equ Const_chance_2: elapsed 0:00:12.323
 --- fixed_problem.gms(1736) 51 Mb
 --- LOOPS iter = iter9
 ---   70,502 rows  109,525 columns  319,525 non-zeroes
 ---   1,500 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:12.112
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:12.622
 
 Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
@@ -230,22 +230,22 @@ Gurobi link license.
 *** Cannot initialize Gurobi environment.
 *** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule
---- Executing after solve: elapsed 0:00:12.265
+--- Executing after solve: elapsed 0:00:12.867
 --- fixed_problem.gms(1733) 51 Mb
 --- Generating MIP model schedule
 --- fixed_problem.gms(1704) 51 Mb
---- Starting Equ Objective: elapsed 0:00:12.265
+--- Starting Equ Objective: elapsed 0:00:12.867
 --- fixed_problem.gms(1706) 51 Mb
---- Starting Equ Const1: elapsed 0:00:12.909
+--- Starting Equ Const1: elapsed 0:00:13.566
 --- fixed_problem.gms(1709) 51 Mb
---- Starting Equ Const_chance_1: elapsed 0:00:13.082
+--- Starting Equ Const_chance_1: elapsed 0:00:13.738
 --- fixed_problem.gms(1712) 51 Mb
---- Starting Equ Const_chance_2: elapsed 0:00:13.254
+--- Starting Equ Const_chance_2: elapsed 0:00:13.913
 --- fixed_problem.gms(1736) 51 Mb
 --- LOOPS iter = iter10
 ---   70,502 rows  109,525 columns  319,525 non-zeroes
 ---   1,500 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:13.513
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:14.176
 
 Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
@@ -253,22 +253,22 @@ Gurobi link license.
 *** Cannot initialize Gurobi environment.
 *** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule
---- Executing after solve: elapsed 0:00:13.656
+--- Executing after solve: elapsed 0:00:14.337
 --- fixed_problem.gms(1733) 51 Mb
 --- Generating MIP model schedule
 --- fixed_problem.gms(1704) 51 Mb
---- Starting Equ Objective: elapsed 0:00:13.657
+--- Starting Equ Objective: elapsed 0:00:14.337
 --- fixed_problem.gms(1706) 51 Mb
---- Starting Equ Const1: elapsed 0:00:14.316
+--- Starting Equ Const1: elapsed 0:00:15.010
 --- fixed_problem.gms(1709) 51 Mb
---- Starting Equ Const_chance_1: elapsed 0:00:14.488
+--- Starting Equ Const_chance_1: elapsed 0:00:15.185
 --- fixed_problem.gms(1712) 51 Mb
---- Starting Equ Const_chance_2: elapsed 0:00:14.660
+--- Starting Equ Const_chance_2: elapsed 0:00:15.343
 --- fixed_problem.gms(1736) 51 Mb
 --- LOOPS iter = iter11
 ---   70,502 rows  109,525 columns  319,525 non-zeroes
 ---   1,500 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:14.908
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:15.595
 
 Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
@@ -276,22 +276,22 @@ Gurobi link license.
 *** Cannot initialize Gurobi environment.
 *** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule
---- Executing after solve: elapsed 0:00:15.057
+--- Executing after solve: elapsed 0:00:15.741
 --- fixed_problem.gms(1733) 51 Mb
 --- Generating MIP model schedule
 --- fixed_problem.gms(1704) 51 Mb
---- Starting Equ Objective: elapsed 0:00:15.057
+--- Starting Equ Objective: elapsed 0:00:15.741
 --- fixed_problem.gms(1706) 51 Mb
---- Starting Equ Const1: elapsed 0:00:15.668
+--- Starting Equ Const1: elapsed 0:00:16.335
 --- fixed_problem.gms(1709) 51 Mb
---- Starting Equ Const_chance_1: elapsed 0:00:15.850
+--- Starting Equ Const_chance_1: elapsed 0:00:16.520
 --- fixed_problem.gms(1712) 51 Mb
---- Starting Equ Const_chance_2: elapsed 0:00:16.015
+--- Starting Equ Const_chance_2: elapsed 0:00:16.690
 --- fixed_problem.gms(1736) 51 Mb
 --- LOOPS iter = iter12
 ---   70,502 rows  109,525 columns  319,525 non-zeroes
 ---   1,500 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:16.271
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:16.961
 
 Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
@@ -299,22 +299,22 @@ Gurobi link license.
 *** Cannot initialize Gurobi environment.
 *** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule
---- Executing after solve: elapsed 0:00:16.416
+--- Executing after solve: elapsed 0:00:17.115
 --- fixed_problem.gms(1733) 51 Mb
 --- Generating MIP model schedule
 --- fixed_problem.gms(1704) 51 Mb
---- Starting Equ Objective: elapsed 0:00:16.417
+--- Starting Equ Objective: elapsed 0:00:17.115
 --- fixed_problem.gms(1706) 51 Mb
---- Starting Equ Const1: elapsed 0:00:17.050
+--- Starting Equ Const1: elapsed 0:00:17.729
 --- fixed_problem.gms(1709) 51 Mb
---- Starting Equ Const_chance_1: elapsed 0:00:17.234
+--- Starting Equ Const_chance_1: elapsed 0:00:17.898
 --- fixed_problem.gms(1712) 51 Mb
---- Starting Equ Const_chance_2: elapsed 0:00:17.403
+--- Starting Equ Const_chance_2: elapsed 0:00:18.065
 --- fixed_problem.gms(1736) 51 Mb
 --- LOOPS iter = iter13
 ---   70,502 rows  109,525 columns  319,525 non-zeroes
 ---   1,500 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:17.659
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:18.317
 
 Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
@@ -322,22 +322,22 @@ Gurobi link license.
 *** Cannot initialize Gurobi environment.
 *** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule
---- Executing after solve: elapsed 0:00:17.819
+--- Executing after solve: elapsed 0:00:18.471
 --- fixed_problem.gms(1733) 51 Mb
 --- Generating MIP model schedule
 --- fixed_problem.gms(1704) 51 Mb
---- Starting Equ Objective: elapsed 0:00:17.819
+--- Starting Equ Objective: elapsed 0:00:18.471
 --- fixed_problem.gms(1706) 51 Mb
---- Starting Equ Const1: elapsed 0:00:18.468
+--- Starting Equ Const1: elapsed 0:00:19.111
 --- fixed_problem.gms(1709) 51 Mb
---- Starting Equ Const_chance_1: elapsed 0:00:18.642
+--- Starting Equ Const_chance_1: elapsed 0:00:19.286
 --- fixed_problem.gms(1712) 51 Mb
---- Starting Equ Const_chance_2: elapsed 0:00:18.806
+--- Starting Equ Const_chance_2: elapsed 0:00:19.452
 --- fixed_problem.gms(1736) 51 Mb
 --- LOOPS iter = iter14
 ---   70,502 rows  109,525 columns  319,525 non-zeroes
 ---   1,500 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:19.062
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:19.713
 
 Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
@@ -345,388 +345,27 @@ Gurobi link license.
 *** Cannot initialize Gurobi environment.
 *** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule
---- Executing after solve: elapsed 0:00:19.211
+--- Executing after solve: elapsed 0:00:19.870
 --- fixed_problem.gms(1733) 51 Mb
 --- Generating MIP model schedule
 --- fixed_problem.gms(1704) 51 Mb
---- Starting Equ Objective: elapsed 0:00:19.211
+--- Starting Equ Objective: elapsed 0:00:19.871
 --- fixed_problem.gms(1706) 51 Mb
---- Starting Equ Const1: elapsed 0:00:19.858
---- fixed_problem.gms(1709) 51 Mb
---- Starting Equ Const_chance_1: elapsed 0:00:20.035
---- fixed_problem.gms(1712) 51 Mb
---- Starting Equ Const_chance_2: elapsed 0:00:20.208
---- fixed_problem.gms(1736) 51 Mb
---- LOOPS iter = iter15
----   70,502 rows  109,525 columns  319,525 non-zeroes
----   1,500 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:20.462
-
-Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
-
-Gurobi link license.
-*** Cannot initialize Gurobi environment.
-*** Could be a missing or invalid license. (status=10009|10009)
---- Reading solution for model schedule
---- Executing after solve: elapsed 0:00:20.614
---- fixed_problem.gms(1733) 51 Mb
---- Generating MIP model schedule
---- fixed_problem.gms(1704) 51 Mb
---- Starting Equ Objective: elapsed 0:00:20.615
---- fixed_problem.gms(1706) 51 Mb
---- Starting Equ Const1: elapsed 0:00:21.270
---- fixed_problem.gms(1709) 51 Mb
---- Starting Equ Const_chance_1: elapsed 0:00:21.449
---- fixed_problem.gms(1712) 51 Mb
---- Starting Equ Const_chance_2: elapsed 0:00:21.615
---- fixed_problem.gms(1736) 51 Mb
---- LOOPS iter = iter16
----   70,502 rows  109,525 columns  319,525 non-zeroes
----   1,500 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:21.862
-
-Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
-
-Gurobi link license.
-*** Cannot initialize Gurobi environment.
-*** Could be a missing or invalid license. (status=10009|10009)
---- Reading solution for model schedule
---- Executing after solve: elapsed 0:00:22.010
---- fixed_problem.gms(1733) 51 Mb
---- Generating MIP model schedule
---- fixed_problem.gms(1704) 51 Mb
---- Starting Equ Objective: elapsed 0:00:22.010
---- fixed_problem.gms(1706) 51 Mb
---- Starting Equ Const1: elapsed 0:00:22.645
---- fixed_problem.gms(1709) 51 Mb
---- Starting Equ Const_chance_1: elapsed 0:00:22.825
---- fixed_problem.gms(1712) 51 Mb
---- Starting Equ Const_chance_2: elapsed 0:00:22.989
---- fixed_problem.gms(1736) 51 Mb
---- LOOPS iter = iter17
----   70,502 rows  109,525 columns  319,525 non-zeroes
----   1,500 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:23.236
-
-Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
-
-Gurobi link license.
-*** Cannot initialize Gurobi environment.
-*** Could be a missing or invalid license. (status=10009|10009)
---- Reading solution for model schedule
---- Executing after solve: elapsed 0:00:23.379
---- fixed_problem.gms(1733) 51 Mb
---- Generating MIP model schedule
---- fixed_problem.gms(1704) 51 Mb
---- Starting Equ Objective: elapsed 0:00:23.380
---- fixed_problem.gms(1706) 51 Mb
---- Starting Equ Const1: elapsed 0:00:24.036
---- fixed_problem.gms(1709) 51 Mb
---- Starting Equ Const_chance_1: elapsed 0:00:24.214
---- fixed_problem.gms(1712) 51 Mb
---- Starting Equ Const_chance_2: elapsed 0:00:24.377
---- fixed_problem.gms(1736) 51 Mb
---- LOOPS iter = iter18
----   70,502 rows  109,525 columns  319,525 non-zeroes
----   1,500 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:24.628
-
-Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
-
-Gurobi link license.
-*** Cannot initialize Gurobi environment.
-*** Could be a missing or invalid license. (status=10009|10009)
---- Reading solution for model schedule
---- Executing after solve: elapsed 0:00:24.782
---- fixed_problem.gms(1733) 51 Mb
---- Generating MIP model schedule
---- fixed_problem.gms(1704) 51 Mb
---- Starting Equ Objective: elapsed 0:00:24.783
---- fixed_problem.gms(1706) 51 Mb
---- Starting Equ Const1: elapsed 0:00:25.435
---- fixed_problem.gms(1709) 51 Mb
---- Starting Equ Const_chance_1: elapsed 0:00:25.608
---- fixed_problem.gms(1712) 51 Mb
---- Starting Equ Const_chance_2: elapsed 0:00:25.774
---- fixed_problem.gms(1736) 51 Mb
---- LOOPS iter = iter19
----   70,502 rows  109,525 columns  319,525 non-zeroes
----   1,500 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:26.020
-
-Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
-
-Gurobi link license.
-*** Cannot initialize Gurobi environment.
-*** Could be a missing or invalid license. (status=10009|10009)
---- Reading solution for model schedule
---- Executing after solve: elapsed 0:00:26.167
---- fixed_problem.gms(1733) 51 Mb
---- Generating MIP model schedule
---- fixed_problem.gms(1704) 51 Mb
---- Starting Equ Objective: elapsed 0:00:26.167
---- fixed_problem.gms(1706) 51 Mb
---- Starting Equ Const1: elapsed 0:00:26.822
---- fixed_problem.gms(1709) 51 Mb
---- Starting Equ Const_chance_1: elapsed 0:00:26.995
---- fixed_problem.gms(1712) 51 Mb
---- Starting Equ Const_chance_2: elapsed 0:00:27.165
---- fixed_problem.gms(1736) 51 Mb
---- LOOPS iter = iter20
----   70,502 rows  109,525 columns  319,525 non-zeroes
----   1,500 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:27.436
-
-Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
-
-Gurobi link license.
-*** Cannot initialize Gurobi environment.
-*** Could be a missing or invalid license. (status=10009|10009)
---- Reading solution for model schedule
---- Executing after solve: elapsed 0:00:27.593
---- fixed_problem.gms(1733) 51 Mb
---- Generating MIP model schedule
---- fixed_problem.gms(1704) 51 Mb
---- Starting Equ Objective: elapsed 0:00:27.593
---- fixed_problem.gms(1706) 51 Mb
---- Starting Equ Const1: elapsed 0:00:28.236
---- fixed_problem.gms(1709) 51 Mb
---- Starting Equ Const_chance_1: elapsed 0:00:28.409
---- fixed_problem.gms(1712) 51 Mb
---- Starting Equ Const_chance_2: elapsed 0:00:28.588
---- fixed_problem.gms(1736) 51 Mb
---- LOOPS iter = iter21
----   70,502 rows  109,525 columns  319,525 non-zeroes
----   1,500 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:28.847
-
-Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
-
-Gurobi link license.
-*** Cannot initialize Gurobi environment.
-*** Could be a missing or invalid license. (status=10009|10009)
---- Reading solution for model schedule
---- Executing after solve: elapsed 0:00:29.000
---- fixed_problem.gms(1733) 51 Mb
---- Generating MIP model schedule
---- fixed_problem.gms(1704) 51 Mb
---- Starting Equ Objective: elapsed 0:00:29.001
---- fixed_problem.gms(1706) 51 Mb
---- Starting Equ Const1: elapsed 0:00:29.653
---- fixed_problem.gms(1709) 51 Mb
---- Starting Equ Const_chance_1: elapsed 0:00:29.846
---- fixed_problem.gms(1712) 51 Mb
---- Starting Equ Const_chance_2: elapsed 0:00:30.013
---- fixed_problem.gms(1736) 51 Mb
---- LOOPS iter = iter22
----   70,502 rows  109,525 columns  319,525 non-zeroes
----   1,500 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:30.275
-
-Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
-
-Gurobi link license.
-*** Cannot initialize Gurobi environment.
-*** Could be a missing or invalid license. (status=10009|10009)
---- Reading solution for model schedule
---- Executing after solve: elapsed 0:00:30.432
---- fixed_problem.gms(1733) 51 Mb
---- Generating MIP model schedule
---- fixed_problem.gms(1704) 51 Mb
---- Starting Equ Objective: elapsed 0:00:30.433
---- fixed_problem.gms(1706) 51 Mb
---- Starting Equ Const1: elapsed 0:00:31.066
---- fixed_problem.gms(1709) 51 Mb
---- Starting Equ Const_chance_1: elapsed 0:00:31.239
---- fixed_problem.gms(1712) 51 Mb
---- Starting Equ Const_chance_2: elapsed 0:00:31.400
---- fixed_problem.gms(1736) 51 Mb
---- LOOPS iter = iter23
----   70,502 rows  109,525 columns  319,525 non-zeroes
----   1,500 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:31.653
-
-Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
-
-Gurobi link license.
-*** Cannot initialize Gurobi environment.
-*** Could be a missing or invalid license. (status=10009|10009)
---- Reading solution for model schedule
---- Executing after solve: elapsed 0:00:31.800
---- fixed_problem.gms(1733) 51 Mb
---- Generating MIP model schedule
---- fixed_problem.gms(1704) 51 Mb
---- Starting Equ Objective: elapsed 0:00:31.801
---- fixed_problem.gms(1706) 51 Mb
---- Starting Equ Const1: elapsed 0:00:32.442
---- fixed_problem.gms(1709) 51 Mb
---- Starting Equ Const_chance_1: elapsed 0:00:32.612
---- fixed_problem.gms(1712) 51 Mb
---- Starting Equ Const_chance_2: elapsed 0:00:32.784
---- fixed_problem.gms(1736) 51 Mb
---- LOOPS iter = iter24
----   70,502 rows  109,525 columns  319,525 non-zeroes
----   1,500 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:33.036
-
-Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
-
-Gurobi link license.
-*** Cannot initialize Gurobi environment.
-*** Could be a missing or invalid license. (status=10009|10009)
---- Reading solution for model schedule
---- Executing after solve: elapsed 0:00:33.190
---- fixed_problem.gms(1733) 51 Mb
---- Generating MIP model schedule
---- fixed_problem.gms(1704) 51 Mb
---- Starting Equ Objective: elapsed 0:00:33.190
---- fixed_problem.gms(1706) 51 Mb
---- Starting Equ Const1: elapsed 0:00:33.833
---- fixed_problem.gms(1709) 51 Mb
---- Starting Equ Const_chance_1: elapsed 0:00:34.007
---- fixed_problem.gms(1712) 51 Mb
---- Starting Equ Const_chance_2: elapsed 0:00:34.173
---- fixed_problem.gms(1736) 51 Mb
---- LOOPS iter = iter25
----   70,502 rows  109,525 columns  319,525 non-zeroes
----   1,500 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:34.434
-
-Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
-
-Gurobi link license.
-*** Cannot initialize Gurobi environment.
-*** Could be a missing or invalid license. (status=10009|10009)
---- Reading solution for model schedule
---- Executing after solve: elapsed 0:00:34.586
---- fixed_problem.gms(1733) 51 Mb
---- Generating MIP model schedule
---- fixed_problem.gms(1704) 51 Mb
---- Starting Equ Objective: elapsed 0:00:34.587
---- fixed_problem.gms(1706) 51 Mb
---- Starting Equ Const1: elapsed 0:00:35.240
---- fixed_problem.gms(1709) 51 Mb
---- Starting Equ Const_chance_1: elapsed 0:00:35.413
---- fixed_problem.gms(1712) 51 Mb
---- Starting Equ Const_chance_2: elapsed 0:00:35.580
---- fixed_problem.gms(1736) 51 Mb
---- LOOPS iter = iter26
----   70,502 rows  109,525 columns  319,525 non-zeroes
----   1,500 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:35.824
-
-Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
-
-Gurobi link license.
-*** Cannot initialize Gurobi environment.
-*** Could be a missing or invalid license. (status=10009|10009)
---- Reading solution for model schedule
---- Executing after solve: elapsed 0:00:35.972
---- fixed_problem.gms(1733) 51 Mb
---- Generating MIP model schedule
---- fixed_problem.gms(1704) 51 Mb
---- Starting Equ Objective: elapsed 0:00:35.972
---- fixed_problem.gms(1706) 51 Mb
---- Starting Equ Const1: elapsed 0:00:36.603
---- fixed_problem.gms(1709) 51 Mb
---- Starting Equ Const_chance_1: elapsed 0:00:36.786
---- fixed_problem.gms(1712) 51 Mb
---- Starting Equ Const_chance_2: elapsed 0:00:36.946
---- fixed_problem.gms(1736) 51 Mb
---- LOOPS iter = iter27
----   70,502 rows  109,525 columns  319,525 non-zeroes
----   1,500 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:37.200
-
-Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
-
-Gurobi link license.
-*** Cannot initialize Gurobi environment.
-*** Could be a missing or invalid license. (status=10009|10009)
---- Reading solution for model schedule
---- Executing after solve: elapsed 0:00:37.347
---- fixed_problem.gms(1733) 51 Mb
---- Generating MIP model schedule
---- fixed_problem.gms(1704) 51 Mb
---- Starting Equ Objective: elapsed 0:00:37.347
---- fixed_problem.gms(1706) 51 Mb
---- Starting Equ Const1: elapsed 0:00:38.012
---- fixed_problem.gms(1709) 51 Mb
---- Starting Equ Const_chance_1: elapsed 0:00:38.192
---- fixed_problem.gms(1712) 51 Mb
---- Starting Equ Const_chance_2: elapsed 0:00:38.361
---- fixed_problem.gms(1736) 51 Mb
---- LOOPS iter = iter28
----   70,502 rows  109,525 columns  319,525 non-zeroes
----   1,500 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:38.625
-
-Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
-
-Gurobi link license.
-*** Cannot initialize Gurobi environment.
-*** Could be a missing or invalid license. (status=10009|10009)
---- Reading solution for model schedule
---- Executing after solve: elapsed 0:00:38.789
---- fixed_problem.gms(1733) 51 Mb
---- Generating MIP model schedule
---- fixed_problem.gms(1704) 51 Mb
---- Starting Equ Objective: elapsed 0:00:38.789
---- fixed_problem.gms(1706) 51 Mb
---- Starting Equ Const1: elapsed 0:00:39.421
---- fixed_problem.gms(1709) 51 Mb
---- Starting Equ Const_chance_1: elapsed 0:00:39.604
---- fixed_problem.gms(1712) 51 Mb
---- Starting Equ Const_chance_2: elapsed 0:00:39.775
---- fixed_problem.gms(1736) 51 Mb
---- LOOPS iter = iter29
----   70,502 rows  109,525 columns  319,525 non-zeroes
----   1,500 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:40.047
-
-Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
-
-Gurobi link license.
-*** Cannot initialize Gurobi environment.
-*** Could be a missing or invalid license. (status=10009|10009)
---- Reading solution for model schedule
---- Executing after solve: elapsed 0:00:40.200
---- fixed_problem.gms(1733) 51 Mb
---- Generating MIP model schedule
---- fixed_problem.gms(1704) 51 Mb
---- Starting Equ Objective: elapsed 0:00:40.201
---- fixed_problem.gms(1706) 51 Mb
---- Starting Equ Const1: elapsed 0:00:40.862
---- fixed_problem.gms(1709) 51 Mb
---- Starting Equ Const_chance_1: elapsed 0:00:41.035
---- fixed_problem.gms(1712) 51 Mb
---- Starting Equ Const_chance_2: elapsed 0:00:41.194
---- fixed_problem.gms(1736) 51 Mb
---- LOOPS iter = iter30
----   70,502 rows  109,525 columns  319,525 non-zeroes
----   1,500 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:41.445
-
-Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
-
-Gurobi link license.
-*** Cannot initialize Gurobi environment.
-*** Could be a missing or invalid license. (status=10009|10009)
---- Reading solution for model schedule
---- Executing after solve: elapsed 0:00:41.590
---- fixed_problem.gms(1766) 51 Mb
---- Putfile fixed_profit C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\fixed_profit.csv
---- Putfile TestingFile3 C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\Alg.csv
---- Profile Summary (1760 records processed)
-    41.234   0.051GB      1733 Loop       
-     0.672   0.051GB      1704 Equation   Objective (1)
+--- Starting Equ Const1: elapsed 0:00:20.561
+*** Error at line 1704: Execution halted: Triggered by pending CtrlC event
+--- fixed_problem.gms(1736) 51 Mb 1 Error
+*** SOLVE aborted
+--- Profile Summary (1395 records processed)
+     0.734   0.051GB      1704 Equation   Objective (1)
+     0.704   0.051GB      1704 Equation   Objective (1)
+     0.687   0.051GB      1704 Equation   Objective (1)
+     0.687   0.051GB      1704 Equation   Objective (1)
+     0.687   0.051GB      1704 Equation   Objective (1)
      0.671   0.051GB      1704 Equation   Objective (1)
-     0.657   0.051GB      1704 Equation   Objective (1)
-     0.657   0.051GB      1704 Equation   Objective (1)
-     0.656   0.051GB      1704 Equation   Objective (1)
-     0.656   0.051GB      1704 Equation   Objective (1)
-     0.656   0.051GB      1704 Equation   Objective (1)
-     0.656   0.051GB      1704 Equation   Objective (1)
-     0.656   0.051GB      1704 Equation   Objective (1)
-*** Status: Normal completion
---- Job fixed_problem.gms Stop 03/10/22 12:48:48 elapsed 0:00:41.593
+     0.641   0.051GB      1704 Equation   Objective (1)
+     0.641   0.051GB      1704 Equation   Objective (1)
+     0.640   0.051GB      1704 Equation   Objective (1)
+     0.625   0.051GB      1704 Equation   Objective (1)
+--- fixed_problem.gms(1736) 51 Mb 1 Error
+*** Status: Execution error(s)
+--- Job fixed_problem.gms Stop 04/12/22 10:17:03 elapsed 0:00:20.578

@@ -191,7 +191,7 @@ end_time=jnow;
 display y.l;
 
 tot_time =  ghour(end_time - start_time)*3600 + gminute(end_time - start_time)*60 + gsecond(end_time - start_time);
-
+display tot_time;
 
 ********************************************************************************
 *                                write output

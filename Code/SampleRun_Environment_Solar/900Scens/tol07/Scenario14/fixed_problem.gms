@@ -5,7 +5,7 @@ Follow up of SAA.gms
 
 $OFFTEXT
 
-OPTIONS PROFILE =3, RESLIM   = 1800, LIMROW   = 5, LP = CPLEX, MIP = cplex, RMIP=Gurobi, NLP = CONOPT, MINLP = DICOPT, MIQCP = CPLEX,
+OPTIONS PROFILE =3, RESLIM   = 1800, LIMROW   = 5, LP = CPLEX, MIP = gurobi, RMIP=Gurobi, NLP = CONOPT, MINLP = DICOPT, MIQCP = CPLEX,
          SOLPRINT = OFF, decimals = 8, optcr=0.0, optca=0.0, threads =8, integer4=1;
 
 ********************************************************************************
@@ -191,7 +191,7 @@ end_time=jnow;
 display y.l;
 
 tot_time =  ghour(end_time - start_time)*3600 + gminute(end_time - start_time)*60 + gsecond(end_time - start_time);
-
+display tot_time;
 
 ********************************************************************************
 *                                write output

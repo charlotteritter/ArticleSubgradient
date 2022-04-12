@@ -1,10 +1,10 @@
---- Job fixed_problem.gms Start 03/09/22 14:54:30 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Job fixed_problem.gms Start 03/21/22 11:40:06 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     C:\GAMS\32\gmsprmNT.txt
 --- GAMS Parameters defined
-    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\fixed_problem.gms
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\fixed_problem.gms
     PageSize 0
-    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225a\
     SysDir C:\GAMS\32\
     LogOption 3
     ErrMsg 1
@@ -22,23 +22,23 @@ Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
 --- . sampled_dynamic.csv(25) 4 Mb
 --- fixed_problem.gms(62) 4 Mb
 --- . battery_revenue.csv(25) 4 Mb
---- fixed_problem.gms(208) 4 Mb
---- Starting execution: elapsed 0:00:00.038
+--- fixed_problem.gms(216) 4 Mb
+--- Starting execution: elapsed 0:00:00.053
 --- fixed_problem.gms(1733) 14 Mb
 --- Generating MIP model schedule
 --- fixed_problem.gms(1704) 14 Mb
---- Starting Equ Objective: elapsed 0:00:00.250
---- fixed_problem.gms(1706) 18 Mb
---- Starting Equ Const1: elapsed 0:00:00.794
+--- Starting Equ Objective: elapsed 0:00:01.084
+--- fixed_problem.gms(1706) 17 Mb
+--- Starting Equ Const1: elapsed 0:00:01.655
 --- fixed_problem.gms(1709) 38 Mb
---- Starting Equ Const_chance_1: elapsed 0:00:00.846
+--- Starting Equ Const_chance_1: elapsed 0:00:01.716
 --- fixed_problem.gms(1712) 50 Mb
---- Starting Equ Const_chance_2: elapsed 0:00:00.910
+--- Starting Equ Const_chance_2: elapsed 0:00:01.797
 --- fixed_problem.gms(1736) 50 Mb
 --- LOOPS iter = iter1
 ---   70,502 rows  109,525 columns  319,525 non-zeroes
 ---   1,500 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:01.081
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:01.982
 
 Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
@@ -46,35 +46,96 @@ Gurobi link license.
 *** Cannot initialize Gurobi environment.
 *** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model schedule
---- Executing after solve: elapsed 0:00:01.234
+--- Executing after solve: elapsed 0:00:02.180
 --- fixed_problem.gms(1733) 50 Mb
 --- Generating MIP model schedule
 --- fixed_problem.gms(1704) 50 Mb
---- Starting Equ Objective: elapsed 0:00:01.235
+--- Starting Equ Objective: elapsed 0:00:02.180
 --- fixed_problem.gms(1706) 51 Mb
---- Starting Equ Const1: elapsed 0:00:01.793
+--- Starting Equ Const1: elapsed 0:00:02.853
 --- fixed_problem.gms(1709) 51 Mb
---- Starting Equ Const_chance_1: elapsed 0:00:01.906
+--- Starting Equ Const_chance_1: elapsed 0:00:02.999
 --- fixed_problem.gms(1712) 51 Mb
---- Starting Equ Const_chance_2: elapsed 0:00:02.030
+--- Starting Equ Const_chance_2: elapsed 0:00:03.135
 --- fixed_problem.gms(1736) 51 Mb
 --- LOOPS iter = iter2
 ---   70,502 rows  109,525 columns  319,525 non-zeroes
 ---   1,500 discrete-columns
-*** Error at line 1736: Control C Event: execution halted
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:03.369
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+Gurobi link license.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:03.531
+--- fixed_problem.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:00:03.531
+--- fixed_problem.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:04.182
+--- fixed_problem.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:04.339
+--- fixed_problem.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:04.486
+--- fixed_problem.gms(1736) 51 Mb
+--- LOOPS iter = iter3
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:04.727
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+Gurobi link license.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:04.894
+--- fixed_problem.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:00:04.894
+--- fixed_problem.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:05.576
+--- fixed_problem.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:05.752
+--- fixed_problem.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:05.923
+--- fixed_problem.gms(1736) 51 Mb
+--- LOOPS iter = iter4
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:06.207
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+Gurobi link license.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:06.356
+--- fixed_problem.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:00:06.356
+--- fixed_problem.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:07.019
+*** Error at line 1704: Execution halted: Triggered by pending CtrlC event
 --- fixed_problem.gms(1736) 51 Mb 1 Error
 *** SOLVE aborted
---- Profile Summary (1228 records processed)
-     0.563   0.051GB      1704 Equation   Objective (1)
-     0.547   0.018GB      1704 Equation   Objective (1)
-     0.203   0.051GB      1736 Solve Fini schedule (319525)
-     0.172   0.005GB      1668 Loop       
-     0.172   0.051GB      1736 Solve Fini schedule (319525)
-     0.140   0.051GB      1736 Solve Alg  schedule
-     0.125   0.051GB      1709 Equation   Const_chance_1 (36000)
-     0.109   0.051GB      1706 Equation   Const1 (34500)
-     0.078   0.050GB      1709 Equation   Const_chance_1 (36000)
-     0.047   0.038GB      1706 Equation   Const1 (34500)
+--- Profile Summary (5585 records processed)
+     0.984   0.005GB      1668 Loop       
+     0.688   0.051GB      1704 Equation   Objective (1)
+     0.688   0.051GB      1704 Equation   Objective (1)
+     0.656   0.051GB      1704 Equation   Objective (1)
+     0.656   0.051GB      1704 Equation   Objective (1)
+     0.578   0.017GB      1704 Equation   Objective (1)
+     0.266   0.051GB      1736 Solve Fini schedule (319525)
+     0.219   0.051GB      1736 Solve Fini schedule (319525)
+     0.218   0.051GB      1736 Solve Fini schedule (319525)
+     0.187   0.051GB      1736 Solve Alg  schedule
 --- fixed_problem.gms(1736) 51 Mb 1 Error
 *** Status: Execution error(s)
---- Job fixed_problem.gms Stop 03/09/22 14:54:33 elapsed 0:00:02.272
+--- Job fixed_problem.gms Stop 03/21/22 11:40:13 elapsed 0:00:07.035
