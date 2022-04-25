@@ -81,7 +81,7 @@ $include plain_lr.gms
 $include LR_updates.gms
          if( ((results(iter,'gap') < 0.001) and (num_iter > 2)), contin = 0;);
          lr_time = lr_time + results(iter,'time')   ;
-         if (lr_time > 2250, contin = 0 ;) ;
+         if (lr_time > 5800, contin = 0 ;) ;
          d=results(iter,'gap');
          FinalIter=num_iter;
 
