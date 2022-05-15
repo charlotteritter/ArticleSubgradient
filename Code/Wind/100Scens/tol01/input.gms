@@ -1,3 +1,5 @@
+** INPUT SPECIFICATIONS **
+
 SETS T times/t1*t24/;
 SETS W scenarios /scen1*scen100/;
 

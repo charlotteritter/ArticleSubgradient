@@ -23,7 +23,7 @@ SETS W scenarios /w1*w4272/;
 SETS iter iterations /iter1*iter30/;
 
 SETS rho_ind /r1/;
-parameter rho_val(rho_ind) / r1 0.0001/;
+parameter rho_val(rho_ind) / r1 0.1/;
 
 ALIAS (T,TT);
 ALIAS (W,I);

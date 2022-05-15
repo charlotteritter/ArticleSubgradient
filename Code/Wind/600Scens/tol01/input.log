@@ -1,0 +1,27 @@
+--- Job input.gms Start 05/11/22 10:28:12 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\Wind\600Scens\tol01\input.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\Wind\600Scens\tol01\225b\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- input.gms(13) 3 Mb
+--- . wind_costs.csv(25) 3 Mb
+--- input.gms(23) 3 Mb
+--- . wind_scenarios.csv(601) 4 Mb
+--- input.gms(107) 4 Mb
+--- Starting execution: elapsed 0:00:00.025
+--- input.gms(730) 5 Mb
+*** Status: Normal completion
+--- Job input.gms Stop 05/11/22 10:28:12 elapsed 0:00:00.074

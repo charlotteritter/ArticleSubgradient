@@ -16,7 +16,7 @@ schedule_scenario.solvelink = 5 ;
 alias(rs,scen)
 
 *********************************************************************************
-* Solve the fixed problem of the SAA to get an upperbound to the problem
+* Solve the fixed problem of the SAA to get an lower bound to the problem
 *********************************************************************************
 
 scalar temp;

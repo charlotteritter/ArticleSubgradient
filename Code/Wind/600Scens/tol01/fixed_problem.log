@@ -1,10 +1,10 @@
---- Job fixed_problem.gms Start 03/18/22 11:54:21 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Job fixed_problem.gms Start 05/11/22 10:27:38 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     C:\GAMS\32\gmsprmNT.txt
 --- GAMS Parameters defined
-    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Wind\600Scen\tol01\fixed_problem.gms
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\Wind\600Scens\tol01\fixed_problem.gms
     PageSize 0
-    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\projectTSAM\Code\Wind\600Scen\tol01\225a\
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\Wind\600Scens\tol01\225b\
     SysDir C:\GAMS\32\
     LogOption 3
     ErrMsg 1
@@ -23,32 +23,32 @@ Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
 --- fixed_problem.gms(157) 4 Mb
 --- . sampled_dynamic.csv(25) 4 Mb
 --- fixed_problem.gms(202) 4 Mb
---- Starting execution: elapsed 0:00:00.030
+--- Starting execution: elapsed 0:00:00.038
 --- fixed_problem.gms(821) 8 Mb
 --- Generating MIP model SCHEDULE
 --- fixed_problem.gms(737) 8 Mb
---- Starting Equ Objective: elapsed 0:00:00.078
+--- Starting Equ Objective: elapsed 0:00:00.097
 --- fixed_problem.gms(739) 11 Mb
---- Starting Equ Const1_1: elapsed 0:00:00.510
+--- Starting Equ Const1_1: elapsed 0:00:00.538
 --- fixed_problem.gms(741) 19 Mb
---- Starting Equ Const1_2: elapsed 0:00:00.537
+--- Starting Equ Const1_2: elapsed 0:00:00.558
 --- fixed_problem.gms(747) 19 Mb
---- Starting Equ Const_3_1: elapsed 0:00:00.540
+--- Starting Equ Const_3_1: elapsed 0:00:00.561
 --- fixed_problem.gms(748) 24 Mb
---- Starting Equ Const_3_2: elapsed 0:00:00.584
+--- Starting Equ Const_3_2: elapsed 0:00:00.598
 --- fixed_problem.gms(752) 28 Mb
---- Starting Equ Const_4_1: elapsed 0:00:00.622
+--- Starting Equ Const_4_1: elapsed 0:00:00.640
 --- fixed_problem.gms(753) 31 Mb
---- Starting Equ Const_4_2: elapsed 0:00:00.722
+--- Starting Equ Const_4_2: elapsed 0:00:00.738
 --- fixed_problem.gms(756) 33 Mb
---- Starting Equ Const_5: elapsed 0:00:00.831
+--- Starting Equ Const_5: elapsed 0:00:00.846
 --- fixed_problem.gms(759) 37 Mb
---- Starting Equ Const_6: elapsed 0:00:00.867
+--- Starting Equ Const_6: elapsed 0:00:00.886
 --- fixed_problem.gms(824) 42 Mb
 --- LOOPS iter = iter1
 ---   96,002 rows  58,225 columns  441,025 non-zeroes
 ---   15,000 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:01.123
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:01.088
 
 Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
 
@@ -56,33 +56,29 @@ Gurobi link license.
 *** Cannot initialize Gurobi environment.
 *** Could be a missing or invalid license. (status=10009|10009)
 --- Reading solution for model SCHEDULE
---- Executing after solve: elapsed 0:00:01.535
+--- Executing after solve: elapsed 0:00:01.329
 --- fixed_problem.gms(821) 42 Mb
 --- Generating MIP model SCHEDULE
 --- fixed_problem.gms(737) 42 Mb
---- Starting Equ Objective: elapsed 0:00:01.536
+--- Starting Equ Objective: elapsed 0:00:01.329
 --- fixed_problem.gms(739) 42 Mb
---- Starting Equ Const1_1: elapsed 0:00:01.977
+--- Starting Equ Const1_1: elapsed 0:00:01.789
 --- fixed_problem.gms(741) 42 Mb
---- Starting Equ Const1_2: elapsed 0:00:02.036
---- fixed_problem.gms(747) 42 Mb
---- Starting Equ Const_3_1: elapsed 0:00:02.039
---- fixed_problem.gms(748) 42 Mb
---- Starting Equ Const_3_2: elapsed 0:00:02.122
-*** Error at line 747: Execution halted: Triggered by pending CtrlC event
+--- Starting Equ Const1_2: elapsed 0:00:01.856
+*** Error at line 739: Execution halted: Triggered by pending CtrlC event
 --- fixed_problem.gms(824) 42 Mb 1 Error
 *** SOLVE aborted
---- Profile Summary (578 records processed)
-     0.437   0.042GB       737 Equation   Objective (1)
-     0.422   0.011GB       737 Equation   Objective (1)
-     0.406   0.042GB       824 Solve Alg  SCHEDULE
-     0.203   0.042GB       824 Solve Fini SCHEDULE (441025)
-     0.110   0.033GB       753 Equation   Const_4_2 (13200)
-     0.109   0.031GB       752 Equation   Const_4_1 (13200)
-     0.078   0.042GB       747 Equation   Const_3_1 (13800)
-     0.063   0.042GB       739 Equation   Const1_1 (14400)
-     0.047   0.024GB       747 Equation   Const_3_1 (13800)
-     0.047   0.041GB       759 Equation   Const_6 (13800)
+--- Profile Summary (576 records processed)
+     0.453   0.042GB       737 Equation   Objective (1)
+     0.438   0.011GB       737 Equation   Objective (1)
+     0.219   0.042GB       824 Solve Alg  SCHEDULE
+     0.172   0.042GB       824 Solve Fini SCHEDULE (441025)
+     0.109   0.033GB       753 Equation   Const_4_2 (13200)
+     0.094   0.031GB       752 Equation   Const_4_1 (13200)
+     0.078   0.042GB       739 Equation   Const1_1 (14400)
+     0.047   0.028GB       748 Equation   Const_3_2 (13800)
+     0.047   0.037GB       756 Equation   Const_5 (13800)
+     0.032   0.005GB       686 Loop       
 --- fixed_problem.gms(824) 42 Mb 1 Error
 *** Status: Execution error(s)
---- Job fixed_problem.gms Stop 03/18/22 11:54:23 elapsed 0:00:02.160
+--- Job fixed_problem.gms Stop 05/11/22 10:27:40 elapsed 0:00:01.876

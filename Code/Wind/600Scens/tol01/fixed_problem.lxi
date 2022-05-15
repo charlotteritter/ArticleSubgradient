@@ -28,14 +28,11 @@ B 3738 Model Analysis      SOLVE SCHEDULE Using MIP From line 824
 B 3744 Equation Listing    SOLVE SCHEDULE Using MIP From line 824
 D 3747 Objective
 D 3815 Const1_1
-D 3833 Const1_2
-D 3841 Const_3_1
-D 3860 Const_3_2
-B 3869 Column Listing      SOLVE SCHEDULE Using MIP From line 824
-E 3872 X
-E 3896 Y
-E 5712 U
-E 5728 OBJ
-E 5735 Z
-E 5823 R
-B 5848 Model Statistics    SOLVE SCHEDULE Using MIP From line 824
+D 3834 Const1_2
+B 3843 Column Listing      SOLVE SCHEDULE Using MIP From line 824
+E 3846 X
+E 3865 Y
+E 5681 OBJ
+E 5688 Z
+E 5773 R
+B 5793 Model Statistics    SOLVE SCHEDULE Using MIP From line 824
