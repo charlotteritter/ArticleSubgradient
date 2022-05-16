@@ -1,8 +1,5 @@
 $ONTEXT
-This is Step 5 of Algorithm 1 of file v10.pdf (iEEE paper)
-The 1500 scenario fixed problem
-Follow up of SAA.gms
-
+This is the QP bound for Model II
 $OFFTEXT
 
 OPTIONS PROFILE =3, RESLIM   = 2100, LIMROW   = 5, LP = CPLEX, MIP = gurobi, RMIP=gurobi, NLP = CONOPT, MINLP = DICOPT, MIQCP = CPLEX, SOLPRINT = OFF, decimals = 8, optcr=0.01, optca=0.01, threads =8, integer4=0;
@@ -19,15 +16,11 @@ $offdelim
 ;
 $include subgradient_parameters.gms
 $include equations.gms
-*$include lp_lowerbound.gms
 
 ********************************************************************************
 * Find a upperbound on the problem : a feasible solution
 ********************************************************************************
 
-*upperbound =  0;
-* Find a upper bound using a fixed value and solving MIP (a feasible solution)
-* solve single scenario problem and choose the worst #threshold problems
 start_time = jnow ;
 schedule_scenario.solvelink = 5 ;
 alias(rs,scen)
@@ -41,7 +34,6 @@ res_scenarios(rs,'obj') =obj.l ;
 
 
 res_scenarios(rs,'scenario') = counter ;
-*=counter
 
 
 );
@@ -65,21 +57,18 @@ z.fx(scen) = scenario_sorted(scen,'value') ;
 if ( sum(scen,z.lo(scen)) ne threshold, abort "sorted file not generated correctly check manually") ;
 start_time = jnow ;
 schedule.solprint = 0;
-*schedule.optfile  = 1;
 schedule.solvelink = 5 ;
 solve schedule using MIP minimizing Obj ;
 end_time = jnow ;
 bound_time =  run_time_total + ghour(end_time - start_time)*3600 + gminute(end_time - start_time)*60 + gsecond(end_time - start_time);
 upperbound = Obj.l ;
 prev_y(t) = y.l(t) ;
-*prev_w(scen,t) = w.l(scen,t) ;
-* Clear bound on z now
 z.up(scen) = 1 ;
 z.lo(scen) = 0 ;
 
 display upperbound,prev_y, bound_time  ;
 
-
+*Create output file named QP.csv in which the results of the bounding methods are saved
 FILE sampled_dynamic /QP.csv/;
 sampled_dynamic.PC = 5;
 sampled_dynamic.ND = 3;

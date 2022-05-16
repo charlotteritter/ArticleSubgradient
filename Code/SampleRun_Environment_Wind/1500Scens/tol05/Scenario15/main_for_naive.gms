@@ -1,9 +1,5 @@
 $ONTEXT
-Splitting into multiple files
-
-True problem
-ELiminnated X variables
-
+Solving the Naive model (1) with a time limit of 4200s.
 $OFFTEXT
 
 $eolcom //
@@ -12,7 +8,6 @@ OPTIONS PROFILE =3, RESLIM   = 4200, LIMROW   = 5, LP = CPLEX, MIP = gurobi, RMI
 ********************************************************************************
 $include input.gms
 $include subgradient_parameters.gms
-
 $include equations.gms   
 
 ********************************************************************************
@@ -41,7 +36,7 @@ GapNaive = (zupper-zlower)/zupper;
 
 display ObjNaive;
 
-
+*Create Output file named Naive.csv, which we include in the LR solving
 File TestingFile3 / Naive.csv /;
 TestingFile3.pc=5;
 TestingFile3.nd=5;

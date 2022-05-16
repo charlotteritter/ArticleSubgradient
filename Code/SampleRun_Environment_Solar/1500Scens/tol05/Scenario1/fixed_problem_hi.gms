@@ -26,20 +26,17 @@ SETS iter iterations /iter1*iter30/;
 
 TABLE Solar(scen,t)
 $ondelim
-*$INCLUDE %SOLAR%.csv
 $INCLUDE solar_scenarios.csv
 $offdelim
 ;
 
 *Tolerance 
 scalar tol;
-*tol=%TOL%;
 tol=0.05;
 
 
 * time limit for each problem
 scalar time_limit;
-*time_limit=%TIMELIM%;
 time_limit=2250;
 
 ALIAS (T,TT);

@@ -1,13 +1,7 @@
 $ONTEXT
-Bismark Singh
-March 17, 2021
-
-Code for plain Lagrangian decomposition (removed Progressive Hedging)
-Based on the paper at http://www.optimization-online.org/DB_HTML/2019/05/7222.html
- 
-
-Excel file used for LB heuristic needs to be manually sorted
-
+This is Algorithm 1 with step size 2 for the solar model
+If Naive results should be included in generated table: Running after main_for_naive; input of Naive.gdx required for the compiled table 
+And uncomment noted lines
 $OFFTEXT
 
 $eolcom //
@@ -16,30 +10,32 @@ OPTIONS PROFILE =3, RESLIM   = 2100, LIMROW   = 5, LP = CPLEX, MIP = gurobi, RMI
 ********************************************************************************
 *                                Include input files
 ********************************************************************************
-$ include inputME.gms // no need to change for Lagrangian decomposition
+$ include input.gms
 $include subgradient_parameters.gms
-
 $include equations_all.gms
-$include lp_lowerbound.gms // no need to change for Lagrangian decomposition
-$include heuristic_upperbound.gms // no need to change for Lagrangian decomposition
+$include lp_lowerbound.gms
+$include heuristic_upperbound.gms
 
+*Create output csv file named LR2.csv
 File TestingFile3 / LR2.csv /;
 TestingFile3.pc=5;
 TestingFile3.nd=5;
 put TestingFile3; 
-put 'Omega', put 'Tolerance', put 'Step Size Rule', put 'Iterations', put 'Converged?', put 'Gap LR', put 'Gap Naive', put 'Obj. Naive', put 'Obj. LR', put 'Gap' put 'Time Naive', put 'Time LR', put 'Final Lambda', put 'LB Heuristic' put /;
+***Uncomment following line when Naive should be included
+*put 'Omega', put 'Tolerance', put 'Step Size Rule', put 'Iterations', put 'Converged?', put 'Gap LR', put 'Gap Naive', put 'Obj. Naive', put 'Obj. LR', put 'Gap', put 'Time Naive', put 'Time LR', put 'Final Lambda', put 'LB Heuristic' put /;
+put 'Omega', put 'Tolerance', put 'Step Size Rule', put 'Iterations', put 'Converged?', put 'Gap LR', put 'Obj. LR', put 'Gap', put 'Time LR', put 'Final Lambda', put 'LB Heuristic' put /;
 
 ********************************************************************************
-* Solve the Lagrangian Dual problem now
+* Include the Solving of the Naive model (for when the naive results should be included in the generated table)
+* When wanted: uncomment the following
 ********************************************************************************
+$ONTEXT
 scalar d;
 scalar FinalIter;
 sets ro "rows" /1/;
 sets cl "columns" /1*3/;
 $call csv2gdx Naive.csv id=nv index=1 values=2..lastCol useHeader=y
 $gdxIn Naive.gdx
-*$load i=dim1
-*$load j=dim2
 parameter nv(ro,cl) ;
 $load nv
 $gdxIn
@@ -53,6 +49,10 @@ GapNaive =nv('1','2');
 
 scalar TimeNaive;
 TimeNaive= nv('1','3');
+$OFFTEXT
+
+scalar d;
+scalar FinalIter;
 
 parameter ldual_iter(iter) obj function at each iteration ;
 lr_time = 0 ;
@@ -64,7 +64,6 @@ scalar steprule;
 steprule=2;
 loop(iter$contin,
 num_iter = ord(iter) ;
-*         pass a warm start
          y.l(t) = prev_y(t) ;
          z.l(scen) = scenario_sorted(scen,'value') ;
          start_time = jnow;
@@ -99,4 +98,6 @@ display z.l, y.l ;
 display ObjLR, heuristic;
 
 put TestingFile3;
-put n, put tol, put steprule, put FinalIter, put convergence, put d, put GapNaive, put zlower, put ObjLR, put ((ObjLR-max(heuristic,zlower))/ObjLR), put TimeNaive, put lr_time, put lambda, put heuristic put /;
+**For when the naive result should be included in generated table: uncomment following
+*put n, put tol, put steprule, put FinalIter, put convergence, put d, put GapNaive, put zlower, put ObjLR, put ((ObjLR-heuristic)/ObjLR), put TimeNaive, put lr_time, put lambda, put heuristic put /;
+put n, put tol, put steprule, put FinalIter, put convergence, put d, put ObjLR, put ((ObjLR-heuristic)/ObjLR), put lr_time, put lambda, put heuristic put /;

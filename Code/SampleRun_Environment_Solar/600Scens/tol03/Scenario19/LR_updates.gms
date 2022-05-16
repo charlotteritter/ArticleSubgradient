@@ -40,4 +40,4 @@ results(iter,'theta') = theta;
 results(iter,'step') = stepsize;
 results(iter,'gamma') = gamma ;
 results(iter,'lambda') = lambda ;
-results(iter,'gap') = (((-lowerbound)+upperbound)/(-lowerbound))    ; //gap is same as computed by GAMS
+results(iter,'gap') = (((-lowerbound)+upperbound)/(-lowerbound))    ; 

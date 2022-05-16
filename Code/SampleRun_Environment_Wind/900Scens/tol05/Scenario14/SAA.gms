@@ -1,12 +1,11 @@
 $ONTEXT
-This is Step 4 of Algorithm 1 of file v10.pdf (iEEE paper)
+This is Step 3 of Algorithm 2 
 Big M is updated
 Single file to run different values of rho
 Promise is updated at each iteration
 Can update with new wind scenarios file
 
-After this file, we run fixed scenario problem - dynamic_1500.gms
-
+After this file, we run fixed scenario problem - fixed_problem.gms
 $OFFTEXT
 
 OPTIONS PROFILE =3, RESLIM   = 2100, LIMROW   = 5, LP = CPLEX, MIP = gurobi, RMIP=Gurobi, NLP = CONOPT, MINLP = DICOPT, MIQCP = CPLEX,
@@ -21,13 +20,9 @@ SCALAR start_time, end_time, run_time_total;
 SETS T times/t1*t24/;
 SETS W scenarios /w1*w7200/;
 SETS iter iterations /iter1*iter30/;
-*SETS rho_ind /r1*r5/;
-*parameter rho_val(rho_ind) / r1 5, r2 40, r3 80, r4 120, r5 160/;
-*SETS rho_ind /r1*r3/;
-*parameter rho_val(rho_ind) / r1 40, r2 50, r3 60/;
 
 SETS rho_ind /r1/;
-parameter rho_val(rho_ind) / r1 0/;
+parameter rho_val(rho_ind) / r1 0.1/;
 
 ALIAS (T,TT);
 ALIAS (W,I);
@@ -45,6 +40,7 @@ $INCLUDE wind_scenarios_7200.csv
 $OFFDELIM
 ;
 
+** all scenarios are weighed equally here
 table probability(w,*)
 $ONDELIM
 $INCLUDE ScenarioWeights_naive.csv
@@ -120,7 +116,6 @@ Objective.. OBJ=E= SUM(T,COSTS(T, 'REW')*Y(T) - SUM(w$((ord(w) ge n) and (ord(w)
 
 Const1_1(W,T)$((ord(w) ge n) and (ord(w) le m)).. Y(T)-X(W,T)-R(W,T)*GG -WIND(W,T) =L= Z(W)*BigM(w,t) ;
 
-*Const1_2..  SUM(W$((ord(w) ge n) and (ord(w) le m)),Z(W)) =G= size*(1- TOL) ;
 Const1_2..  SUM(W$((ord(w) ge n) and (ord(w) le m)),Z(W)*probability(w,'value')) =L= TOL ;
 
 
@@ -162,7 +157,6 @@ MODEL  SCHEDULE    /ALL/ ;
 *                                begin iterations
 ********************************************************************************
 
-*rho_ind -> r1 40
 loop(rho_ind,   
 tot_time = 0;
 size =0;
@@ -171,12 +165,10 @@ new_n = 1;
 new_m = 20;
 y_previous(t) = 0;
 
-*iter --> iter1 * iter1000
 loop(iter,
 
 if (tot_time < 1800,
 
-*rho_val(rho_ind=r1)=40
          rho =rho_val(rho_ind);
 * at the first iteration no proximal term due to first solving the model (1) without the regularization
 if (ord(iter) eq 1,  rho =0 ; options optca =0.04, optcr =0.04) ;
@@ -224,9 +216,6 @@ v.fx(w,t)$((ord(t) eq 1) and (ord(w) ge n) and (ord(w) le m)) = 0 ;
 * assume the generator was producing minimim power in last time period
 x.up(w,t)$((ord(t) eq 1) and (ord(w) ge n) and (ord(w) le m)) = ramp - GG;
 
-* fix the variables which are not being considered
-*X.FX(W,T)$((ord(w) lt n) or (ord(w) gt m)) = 0;
-*R.FX(W,T)$((ord(w) lt n) or (ord(w) gt m)) = 0 ;
 
 ****************************** end  of bounds
 

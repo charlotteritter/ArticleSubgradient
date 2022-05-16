@@ -1,6 +1,5 @@
-** sets later to be defined in input file
+** INPUT SPECIFICATIONS **
 
-** to be changed
 SETS T times/t1*t24/;
 SETS W scenarios /scen1*scen600/;
 
@@ -21,7 +20,6 @@ Prices(t,'gen')    =  - Prices(t,'gen');
 ** define wind realizations at all time periods
 TABLE WIND(W,T)
 $ONDELIM
-*$INCLUDE wind_scenarios.csv
 $INCLUDE wind_scenarios.csv
 $OFFDELIM
 ;
@@ -47,38 +45,19 @@ DOWNTIME=3;
 
 * maximum number of iterations in LR
 set iter number of subgradient iterations /iter1*iter10/;
-*set iter number of subgradient iterations /iter1/;
+* maximum number of iteration in fixed (bound IR)
 set iterFIX iterations for fixed /iter1*iter30/;
 
-TABLE y_100(t,iterFIX)
-$ONDELIM
-$INCLUDE sampled_dynamic_hi.csv
-$OFFDELIM
-;
 
 * time limit for each problem
 scalar time_limit;
-*time_limit=%TIMELIM%;
 time_limit=2250;
-
-$ONTEXT
-* Import the SORTED file
-table scenario_sorted(scen,*)
-$ondelim
-$INCLUDE scenario_sorted_1500.csv 
-$offdelim
-;
-$OFFTEXT
 
 scalar n;
 n=card(scen);
 
 *Scalar which tells if LR converges
 scalar convergence;
-
-** define battery  operation costs costs and solar selling prices
-** define solar scenarios at all time periods
-
 
 * Scaling of wind power scenarios ;
 scalar scale ;

@@ -1,8 +1,8 @@
 ********************************************************************************
-* Find a upperbound on the problem : a feasible solution
+* Find a lower bound on the problem : a feasible solution (QP)
 ********************************************************************************
 
-*upperbound =  0;
+* Algorithm 4
 * Find a upper bound using a fixed value and solving MIP (a feasible solution)
 * solve single scenario problem and choose the worst #threshold problems
 start_time = jnow ;
@@ -18,8 +18,6 @@ res_scenarios(rs,'obj') =obj.l ;
 
 
 res_scenarios(rs,'scenario') = counter ;
-*=counter
-
 
 );
 end_time =jnow ;
@@ -49,10 +47,8 @@ end_time = jnow ;
 bound_time =  run_time_total + ghour(end_time - start_time)*3600 + gminute(end_time - start_time)*60 + gsecond(end_time - start_time);
 upperbound = Obj.l ;
 prev_y(t) = y.l(t) ;
-*prev_w(scen,t) = w.l(scen,t) ;
 * Clear bound on z now
 z.up(scen) = 1 ;
 z.lo(scen) = 0 ;
 
-*display lowerbound,upperbound,prev_y, LP_time, bound_time  ;
 display upperbound,prev_y  ;

@@ -2,8 +2,6 @@ parameter lambda;
 parameter ldual value of Lagrangian dual ;
 parameter bound total value of Lagrangian dual ;
 scalar init_lambda, init_bound initial value of lambda dual LP objective from LP ;
-*Hier werden die maximalen Iterationen, also big M festgelegt
-*set iter                 number of subgradient iterations /iter1*iter3/; 
 scalar num_iter          how many iterations we did ;
 scalar contin            stopping             /1/;
 parameter stepsize;

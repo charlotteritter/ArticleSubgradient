@@ -12,8 +12,6 @@ else
          if (noimprovement > 1,  theta = theta/2; noimprovement = 0; );
 );
 
-* Fix the Stepsize 
-
 $include stepsizes.gms
 
 * Lambda Update

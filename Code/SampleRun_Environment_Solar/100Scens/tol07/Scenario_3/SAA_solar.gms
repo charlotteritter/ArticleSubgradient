@@ -1,12 +1,11 @@
 $ONTEXT
-This is Step 4 of Algorithm 1 of file v10.pdf (iEEE paper)
+This is Step 3 of Algorithm 2 for solar model (Model I)
 Big M is updated
 Single file to run different values of rho
 Promise is updated at each iteration
 Can update with new wind scenarios file
 
-After this file, we run fixed scenario problem - dynamic_1500.gms
-
+After this file, we run fixed scenario problem - fixed_problem.gms
 $OFFTEXT
 
 OPTIONS PROFILE =3, RESLIM   = 2100, LIMROW   = 5, LP = CPLEX, MIP = gurobi, RMIP=Gurobi, NLP = CONOPT, MINLP = DICOPT, MIQCP = CPLEX,
@@ -21,36 +20,26 @@ SCALAR start_time, end_time, run_time_total;
 SETS T times/t1*t24/;
 SETS W scenarios /scen1*scen7200/;
 SETS iter iterations /iter1*iter30/;
-*SETS rho_ind /r1*r5/;
-*parameter rho_val(rho_ind) / r1 5, r2 40, r3 80, r4 120, r5 160/;
-*SETS rho_ind /r1*r3/;
-*parameter rho_val(rho_ind) / r1 40, r2 50, r3 60/;
 
 SETS rho_ind /r1/;
-parameter rho_val(rho_ind) / r1 40/;
+parameter rho_val(rho_ind) / r1 0/;
 
 ALIAS (T,TT);
 ALIAS (W,I);
 ALIAS (W,Scen);
-** define generator costs and wind selling prices
-
 
 TABLE Solar(scen,t)
 $ondelim
-*$INCLUDE %SOLAR%.csv
 $INCLUDE solar_scenarios_7200.csv
 $offdelim
 ;
 
 *Tolerance 
 scalar tol;
-*tol=%TOL%;
 tol=0.07;
-
 
 * time limit for each problem
 scalar time_limit;
-*time_limit=%TIMELIM%;
 time_limit=2250;
 
 ALIAS (T,TT);
@@ -63,7 +52,6 @@ n=card(scen);
 scalar convergence;
 
 ** define battery  operation costs costs and solar selling prices
-
 TABLE PRICES(t,*)
 $ONDELIM
 $INCLUDE battery_revenue.csv
@@ -73,8 +61,6 @@ $OFFDELIM
 Prices(t,'rew')     =  - Prices(t,'rew');
 Prices(t,'char')    =  - Prices(t,'char');
 Prices(t,'dischar') =  - Prices(t,'dischar');
-** define solar scenarios at all time periods
-
 
 * Scaling of Solar power scenarios ;
 scalar scale ;
@@ -180,14 +166,13 @@ z.prior(scen)   = 1;
 parameter last_x(scen,t), last_p(scen,t), last_q(scen,t), last_z(scen), last_ph(scen) ;
 ******* ALL MODELS
 
-model schedule     / Objective,  Const1, Const_chance_1, Const_chance_2/ ;
+model schedule     / Objective,  Const1, Const_chance_1, Const_chance_2, Const_dum1, Const_dum2/ ;
 
 
 ********************************************************************************
 *                                begin iterations
 ********************************************************************************
 
-*rho_ind -> r1 40
 loop(rho_ind,   
 tot_time = 0;
 size =0;
@@ -196,12 +181,9 @@ new_n = 1;
 new_m = 20;
 y_previous(t) = 0;
 
-*iter --> iter1 * iter1000
 loop(iter,
-
 if (tot_time < 1800,
 
-*rho_val(rho_ind=r1)=40
          rho =rho_val(rho_ind);
 * at the first iteration no proximal term due to first solving the model (1) without the regularization
 if (ord(iter) eq 1,  rho =0 ; options optca =0.04, optcr =0.04) ;

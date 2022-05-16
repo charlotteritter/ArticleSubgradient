@@ -45,20 +45,16 @@ LR.. bound_lr =e=   SUM(T,PRICES(T, 'REW')*Y(T) - PROBABILITY*SUM(scen, PRICES(T
 Objective_scenario(scen)$(ord(scen) eq counter)..
          OBJ =E= SUM(TT,PRICES(tt, 'REW')*Y(TT) - PRICES(TT, 'GEN')*( X(scen,TT) + GG*R(scen,tt) ) )     ;
 
-*Const1_1(W,T).. Y(T)-X(W,T)-R(W,T)*GG -Z(W)*WIND(W,T) =L= (1-Z(W))*BigMM(w) ;
 Const1_1(scen,T).. Y(T)-X(scen,T)-R(scen,T)*GG -WIND(scen,T) =L= Z(scen)*BigM(scen,t) ;
 
 Const1_1FIX(W,T).. Y(T)-X(W,T)-R(W,T)*GG -WIND(W,T) =L= Z(W)*BigM(w,t) ;
 
-*Const1_1_scenario(scen,t)$(ord(t) lt card(t) and (ord(scen) eq counter))..
 Const1_1_scenario(scen,t)$(ord(scen) eq counter)..
 
          Y(T)-X(scen,T)-R(scen,T)*GG -WIND(scen,T) =L= 0 ;
 
 Const1_2..   -SUM(SCEN, Z(SCEN)) =G= -threshold;
 Const1_2FIX..  SUM(W,Z(W)) =L= threshold ;
-
-****************************************************************************TODO Constraints (all but no. 1) in scenario form (z(w)=0)
 
 * The generator constraints
 
@@ -110,7 +106,6 @@ x.up(scen,t)$(ord(t) eq 1)= ramp - GG;
 
 model schedule     / Objective,  Const1_1, Const1_2, Const_3_1, Const_3_2, Const_4_1, Const_4_2, Const_5, Const_6 /;
 model schedule_scenario     / Objective_scenario,  Const1_1_scenario, Const_3_1_scenario, Const_3_2_scenario, Const_4_1_scenario, Const_4_2_scenario, Const_5_scenario, Const_6_scenario / ; 
-*model INITIAL               / / ;
 model Lagrangian      / LR,    Const1_1, Const_3_1, Const_3_2, Const_4_1, Const_4_2, Const_5, Const_6 /;
 MODEL  SCHEDULEFIX    /ObjectiveFIX,Const1_1FIX,Const1_2FIX, Const_3_1FIX, Const_3_2FIX, Const_4_1FIX, Const_4_2FIX, Const_5FIX, Const_6FIX/;
 
