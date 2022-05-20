@@ -1,4 +1,4 @@
---- Job main_for_lr1.gms Start 03/14/22 11:44:57 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Job main_for_lr1.gms Start 03/14/22 11:46:40 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     C:\GAMS\32\gmsprmNT.txt
 --- GAMS Parameters defined
@@ -34,36 +34,37 @@ Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
 --- . heuristic_upperbound.gms(65) 4 Mb
 --- main_for_lr1.gms(35) 4 Mb
 --- call csv2gdx Naive.csv id=nv index=1 values=2..lastCol useHeader=y
-*** ErrNr = 1 Msg = No such file or directory
-CSV2GDX time = 16ms
+No errors, CSV2GDX time = 0ms
 --- main_for_lr1.gms(36) 4 Mb
 --- GDXin=C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\1500Scens\tol05\Scenario1\Naive.gdx
---- main_for_lr1.gms(40) 4 Mb 1 Error
-*** Error 492 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\1500Scens\tol05\Scenario1\main_for_lr1.gms
-    Symbol not in GDX
---- main_for_lr1.gms(42) 4 Mb 2 Errors
-*** Error 141 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\1500Scens\tol05\Scenario1\main_for_lr1.gms
-    Symbol declared but no values have been assigned. Check for missing
-       data definition, assignment, data loading or implicit assignment
-       via a solve statement.
-       A wild shot: You may have spurious commas in the explanatory
-       text of a declaration. Check symbol reference list.
 --- main_for_lr1.gms(88) 4 Mb
---- . plain_lr.gms(4) 4 Mb 3 Errors
-*** Error 257 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\1500Scens\tol05\Scenario1\plain_lr.gms
-    Solve statement not checked because of previous errors
---- . plain_lr.gms(6) 4 Mb 4 Errors
-*** Error 141 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\1500Scens\tol05\Scenario1\plain_lr.gms
-    Symbol declared but no values have been assigned. Check for missing
-       data definition, assignment, data loading or implicit assignment
-       via a solve statement.
-       A wild shot: You may have spurious commas in the explanatory
-       text of a declaration. Check symbol reference list.
 --- . plain_lr.gms(12) 4 Mb
 --- main_for_lr1.gms(94) 4 Mb
 --- . LR_updates.gms(17) 4 Mb
 --- .. stepsizes.gms(21) 4 Mb
 --- . LR_updates.gms(42) 4 Mb
---- main_for_lr1.gms(118) 4 Mb 4 Errors
-*** Status: Compilation error(s)
---- Job main_for_lr1.gms Stop 03/14/22 11:44:57 elapsed 0:00:00.090
+--- main_for_lr1.gms(118) 4 Mb
+--- Starting execution: elapsed 0:00:00.081
+--- main_for_lr1.gms(1225) 14 Mb
+--- Generating RMIP model schedule
+--- main_for_lr1.gms(1138) 14 Mb
+--- Starting Equ Objective: elapsed 0:00:00.797
+--- main_for_lr1.gms(1147) 22 Mb
+--- Starting Equ Const1_1: elapsed 0:00:01.897
+*** Error at line 1138: Execution halted: Triggered by pending CtrlC event
+--- main_for_lr1.gms(1226) 22 Mb 1 Error
+*** SOLVE aborted
+--- Profile Summary (5536 records processed)
+     1.094   0.022GB      1138 Equation   Objective (1)
+     0.672   0.006GB      1043 Loop       
+     0.047   0.006GB      1044 Loop       
+     0.032   0.006GB      1044 Loop       
+     0.032   0.006GB      1044 Loop       
+     0.032   0.006GB      1044 Loop       
+     0.032   0.006GB      1044 Loop       
+     0.031   0.006GB      1044 Loop       
+     0.031   0.006GB      1044 Loop       
+     0.031   0.006GB      1044 Loop       
+--- main_for_lr1.gms(1226) 22 Mb 1 Error
+*** Status: Execution error(s)
+--- Job main_for_lr1.gms Stop 03/14/22 11:46:42 elapsed 0:00:01.913

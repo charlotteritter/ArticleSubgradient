@@ -1,0 +1,77 @@
+--- Job main_for_lr6.gms Start 05/20/22 11:49:18 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\100Scens\tol01\Scenario_10 - Copy\main_for_lr6.gms"
+    PageSize 0
+    ScrDir "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\100Scens\tol01\Scenario_10 - Copy\225c\"
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- main_for_lr6.gms(10) 2 Mb
+--- . input.gms(8) 3 Mb
+--- .. solar_scenarios.csv(101) 3 Mb
+--- . input.gms(22) 3 Mb
+--- .. scenario_sorted.csv(101) 3 Mb
+--- . input.gms(38) 3 Mb
+--- .. battery_revenue.csv(25) 3 Mb
+--- . input.gms(105) 3 Mb
+--- main_for_lr6.gms(11) 3 Mb
+--- . subgradient_parameters.gms(31) 3 Mb
+--- main_for_lr6.gms(12) 3 Mb
+--- . equations_all.gms(76) 3 Mb
+--- main_for_lr6.gms(13) 3 Mb
+--- . lp_lowerbound.gms(12) 3 Mb
+--- main_for_lr6.gms(14) 3 Mb
+--- . heuristic_upperbound.gms(54) 3 Mb
+--- main_for_lr6.gms(31) 3 Mb
+--- call csv2gdx Naive.csv id=nv index=1 values=2..lastCol useHeader=y
+No errors, CSV2GDX time = 0ms
+--- main_for_lr6.gms(32) 3 Mb
+--- GDXin=C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\100Scens\tol01\Scenario_10 - Copy\Naive.gdx
+--- main_for_lr6.gms(80) 3 Mb
+--- . plain_lr.gms(16) 3 Mb
+--- main_for_lr6.gms(86) 3 Mb
+--- . LR_updates.gms(18) 3 Mb
+--- .. stepsizes.gms(21) 3 Mb
+--- . LR_updates.gms(37) 3 Mb 3 Errors
+*** Error   8 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\100Scens\tol01\Scenario_10 - Copy\LR_updates.gms
+    ')' expected
+*** Error 767 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\100Scens\tol01\Scenario_10 - Copy\LR_updates.gms
+    Unexpected symbol will terminate the loop - symbol replaced by )
+*** Error 409 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\100Scens\tol01\Scenario_10 - Copy\LR_updates.gms
+    Unrecognizable item - skip to find a new statement
+      looking for a ';' or a key word to get started again
+--- . LR_updates.gms(38) 3 Mb 4 Errors
+*** Error 408 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\100Scens\tol01\Scenario_10 - Copy\LR_updates.gms
+    Too many ),] or }
+--- . LR_updates.gms(39) 3 Mb 5 Errors
+*** Error 408 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\100Scens\tol01\Scenario_10 - Copy\LR_updates.gms
+    Too many ),] or }
+--- . LR_updates.gms(45) 3 Mb 6 Errors
+*** Error 408 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\100Scens\tol01\Scenario_10 - Copy\LR_updates.gms
+    Too many ),] or }
+--- . LR_updates.gms(59) 3 Mb
+--- main_for_lr6.gms(87) 3 Mb 7 Errors
+*** Error 149 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\100Scens\tol01\Scenario_10 - Copy\main_for_lr6.gms
+    Uncontrolled set entered as constant
+--- main_for_lr6.gms(88) 3 Mb 8 Errors
+*** Error 149 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\100Scens\tol01\Scenario_10 - Copy\main_for_lr6.gms
+    Uncontrolled set entered as constant
+--- main_for_lr6.gms(90) 3 Mb 9 Errors
+*** Error 149 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\100Scens\tol01\Scenario_10 - Copy\main_for_lr6.gms
+    Uncontrolled set entered as constant
+--- main_for_lr6.gms(92) 3 Mb 10 Errors
+*** Error 408 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\100Scens\tol01\Scenario_10 - Copy\main_for_lr6.gms
+    Too many ),] or }
+--- main_for_lr6.gms(106) 3 Mb 10 Errors
+*** Status: Compilation error(s)
+--- Job main_for_lr6.gms Stop 05/20/22 11:49:18 elapsed 0:00:00.082

@@ -1,0 +1,163 @@
+--- Job SAA_hierarchical.gms Start 05/11/22 10:19:59 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\Wind\100Scens\tol01\SAA_hierarchical.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\Wind\100Scens\tol01\225b\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- SAA_hierarchical.gms(33) 3 Mb
+--- . wind_costs.csv(25) 3 Mb
+--- SAA_hierarchical.gms(40) 3 Mb
+--- . ScenarioSet_hierarchical_wind7200.csv(4273) 7 Mb
+--- SAA_hierarchical.gms(46) 7 Mb
+--- . ScenarioWeights_hierarchical_wind7200.csv(4273) 7 Mb
+--- SAA_hierarchical.gms(262) 7 Mb
+--- Starting execution: elapsed 0:00:00.112
+--- SAA_hierarchical.gms(8731) 31 Mb
+--- Generating MIP model SCHEDULE
+--- SAA_hierarchical.gms(8686) 31 Mb
+--- Starting Equ Objective: elapsed 0:00:00.305
+--- SAA_hierarchical.gms(8688) 31 Mb
+--- Starting Equ Const1_1: elapsed 0:00:00.337
+--- SAA_hierarchical.gms(8690) 31 Mb
+--- Starting Equ Const1_2: elapsed 0:00:00.356
+--- SAA_hierarchical.gms(8697) 31 Mb
+--- Starting Equ Const_3_1: elapsed 0:00:00.357
+--- SAA_hierarchical.gms(8698) 32 Mb
+--- Starting Equ Const_3_2: elapsed 0:00:00.389
+--- SAA_hierarchical.gms(8702) 32 Mb
+--- Starting Equ Const_4_1: elapsed 0:00:00.426
+--- SAA_hierarchical.gms(8703) 32 Mb
+--- Starting Equ Const_4_2: elapsed 0:00:00.452
+--- SAA_hierarchical.gms(8706) 32 Mb
+--- Starting Equ Const_5: elapsed 0:00:00.477
+--- SAA_hierarchical.gms(8709) 32 Mb
+--- Starting Equ Const_6: elapsed 0:00:00.499
+--- SAA_hierarchical.gms(8711) 33 Mb
+--- Starting Equ Const_dum1: elapsed 0:00:00.531
+--- SAA_hierarchical.gms(8712) 33 Mb
+--- Starting Equ Const_dum2: elapsed 0:00:00.531
+--- SAA_hierarchical.gms(8792) 33 Mb
+--- LOOPS rho_ind = r1
+---       iter = iter1
+---   3,250 rows  1,989 columns  14,821 non-zeroes
+---   500 discrete-columns
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:00.546
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model SCHEDULE
+--- Executing after solve: elapsed 0:00:00.630
+--- SAA_hierarchical.gms(8731) 33 Mb
+--- Generating MIP model SCHEDULE
+--- SAA_hierarchical.gms(8686) 33 Mb
+--- Starting Equ Objective: elapsed 0:00:00.773
+--- SAA_hierarchical.gms(8688) 33 Mb
+--- Starting Equ Const1_1: elapsed 0:00:00.806
+--- SAA_hierarchical.gms(8690) 33 Mb
+--- Starting Equ Const1_2: elapsed 0:00:00.823
+--- SAA_hierarchical.gms(8697) 33 Mb
+--- Starting Equ Const_3_1: elapsed 0:00:00.823
+--- SAA_hierarchical.gms(8698) 33 Mb
+--- Starting Equ Const_3_2: elapsed 0:00:00.855
+--- SAA_hierarchical.gms(8702) 33 Mb
+--- Starting Equ Const_4_1: elapsed 0:00:00.888
+--- SAA_hierarchical.gms(8703) 33 Mb
+--- Starting Equ Const_4_2: elapsed 0:00:00.914
+--- SAA_hierarchical.gms(8706) 33 Mb
+--- Starting Equ Const_5: elapsed 0:00:00.938
+--- SAA_hierarchical.gms(8709) 33 Mb
+--- Starting Equ Const_6: elapsed 0:00:00.962
+--- SAA_hierarchical.gms(8711) 33 Mb
+--- Starting Equ Const_dum1: elapsed 0:00:00.991
+--- SAA_hierarchical.gms(8712) 33 Mb
+--- Starting Equ Const_dum2: elapsed 0:00:00.991
+--- SAA_hierarchical.gms(8792) 33 Mb
+--- LOOPS rho_ind = r1
+---       iter = iter2
+---   3,570 rows  2,183 columns  16,315 non-zeroes
+---   550 discrete-columns
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:00.999
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model SCHEDULE
+--- Executing after solve: elapsed 0:00:01.048
+--- SAA_hierarchical.gms(8731) 33 Mb
+--- Generating MIP model SCHEDULE
+--- SAA_hierarchical.gms(8686) 33 Mb
+--- Starting Equ Objective: elapsed 0:00:01.182
+--- SAA_hierarchical.gms(8688) 33 Mb
+--- Starting Equ Const1_1: elapsed 0:00:01.213
+--- SAA_hierarchical.gms(8690) 33 Mb
+--- Starting Equ Const1_2: elapsed 0:00:01.229
+--- SAA_hierarchical.gms(8697) 33 Mb
+--- Starting Equ Const_3_1: elapsed 0:00:01.230
+--- SAA_hierarchical.gms(8698) 33 Mb
+--- Starting Equ Const_3_2: elapsed 0:00:01.262
+--- SAA_hierarchical.gms(8702) 33 Mb
+--- Starting Equ Const_4_1: elapsed 0:00:01.291
+--- SAA_hierarchical.gms(8703) 33 Mb
+--- Starting Equ Const_4_2: elapsed 0:00:01.316
+--- SAA_hierarchical.gms(8706) 33 Mb
+--- Starting Equ Const_5: elapsed 0:00:01.341
+--- SAA_hierarchical.gms(8709) 33 Mb
+--- Starting Equ Const_6: elapsed 0:00:01.364
+--- SAA_hierarchical.gms(8711) 33 Mb
+--- Starting Equ Const_dum1: elapsed 0:00:01.396
+--- SAA_hierarchical.gms(8712) 33 Mb
+--- Starting Equ Const_dum2: elapsed 0:00:01.397
+--- SAA_hierarchical.gms(8792) 33 Mb
+--- LOOPS rho_ind = r1
+---       iter = iter3
+---   4,050 rows  2,474 columns  18,520 non-zeroes
+---   625 discrete-columns
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:01.407
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model SCHEDULE
+--- Executing after solve: elapsed 0:00:01.460
+--- SAA_hierarchical.gms(8731) 33 Mb
+--- Generating MIP model SCHEDULE
+--- SAA_hierarchical.gms(8686) 33 Mb
+--- Starting Equ Objective: elapsed 0:00:01.610
+--- SAA_hierarchical.gms(8688) 33 Mb
+--- Starting Equ Const1_1: elapsed 0:00:01.650
+*** Error at line 8686: Execution halted: Triggered by pending CtrlC event
+--- SAA_hierarchical.gms(8792) 33 Mb 1 Error
+*** SOLVE aborted
+--- Profile Summary (73 records processed)
+     0.078   0.032GB      8792 Solve Alg  SCHEDULE
+     0.047   0.032GB      8792 Solve Alg  SCHEDULE
+     0.047   0.032GB      8792 Solve Alg  SCHEDULE
+     0.047   0.032GB      8686 Equation   Objective (1)
+     0.032   0.032GB      8706 Equation   Const_5 (506)
+     0.032   0.032GB      8686 Equation   Objective (1)
+     0.032   0.032GB      8698 Equation   Const_3_2 (575)
+     0.032   0.032GB      8703 Equation   Const_4_2 (550)
+     0.032   0.031GB      8686 Equation   Objective (1)
+     0.032   0.032GB      8698 Equation   Const_3_2 (460)
+--- SAA_hierarchical.gms(8792) 33 Mb 1 Error
+*** Status: Execution error(s)
+--- Job SAA_hierarchical.gms Stop 05/11/22 10:20:01 elapsed 0:00:01.653

@@ -18,7 +18,7 @@ File TestingFile3 / LR6.csv /;
 TestingFile3.pc=5;
 TestingFile3.nd=5;
 put TestingFile3; 
-put 'Omega', put 'Tolerance', put 'Step Size Rule', put 'Iterations', put 'Converged?', put 'Gap LR', put 'Gap Naive', put 'Obj. Naive', put 'Obj. LR', put 'Gap' put 'Time Naive', put 'Time LR', put 'Final Lambda', put 'LB Heuristic' put /;
+put 'Omega', put 'Tolerance', put 'Step Size Rule', put 'Iterations', put 'Converged?', put 'Gap LR', put 'Gap Naive', put 'Obj. Naive', put 'Obj. LR (UB)', put 'Obj. LR (LB),' put 'Gap' put 'Time Naive', put 'Time LR', put 'Final Lambda', put 'LB Heuristic', put 'BBP', put 'Best iter', put 'Lambda best iter', put 'Gamma best iter' /;
 
 
 ********************************************************************************
@@ -54,6 +54,13 @@ parameter check(scen,t);
 scalar steprule;
 steprule=3;
 scalar FinalIter;
+scalar it;
+scalar BBP;
+BBP=0;
+scalar boundTemp;
+scalar lbLR;
+scalar gammaBest;
+scalar lambdaBest;
 
 
     lr_time=0;
@@ -88,6 +95,7 @@ scalar ObjLR;
 scalar heuristic;
 ObjLR=-lowerbound;
 heuristic=-upperbound;
+lbLR=-lbLR;
 
 display results, lowerbound, upperbound, LP_bound, run_time_total, lr_time, num_iter ;
 display z.l, y.l ;
@@ -95,4 +103,4 @@ display zlower, ObjLR, heuristic;
 
 
 put TestingFile3;
-put n, put tol, put steprule, put FinalIter, put convergence, put d, put GapNaive, put zlower, put ObjLR, put ((ObjLR-max(heuristic,zlower))/ObjLR), put TimeNaive, put lr_time, put lambda, put heuristic put /;
+put n, put tol, put steprule, put FinalIter, put convergence, put d, put GapNaive, put zlower, put ObjLR, put lbLR , put ((ObjLR-max(heuristic,zlower))/ObjLR), put TimeNaive, put lr_time, put lambda, put heuristic, put BBP, put it, put lambdaBest, put gammaBest put /;

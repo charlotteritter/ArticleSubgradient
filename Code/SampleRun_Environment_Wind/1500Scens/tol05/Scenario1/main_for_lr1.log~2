@@ -1,4 +1,4 @@
---- Job main_for_lr1.gms Start 03/14/22 11:43:57 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Job main_for_lr1.gms Start 03/14/22 11:44:57 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     C:\GAMS\32\gmsprmNT.txt
 --- GAMS Parameters defined
@@ -66,4 +66,4 @@ CSV2GDX time = 16ms
 --- . LR_updates.gms(42) 4 Mb
 --- main_for_lr1.gms(118) 4 Mb 4 Errors
 *** Status: Compilation error(s)
---- Job main_for_lr1.gms Stop 03/14/22 11:43:57 elapsed 0:00:00.088
+--- Job main_for_lr1.gms Stop 03/14/22 11:44:57 elapsed 0:00:00.090

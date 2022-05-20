@@ -1,4 +1,4 @@
---- Job main_for_lr1.gms Start 03/14/22 11:42:07 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Job main_for_lr1.gms Start 03/14/22 11:43:57 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     C:\GAMS\32\gmsprmNT.txt
 --- GAMS Parameters defined
@@ -35,7 +35,7 @@ Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
 --- main_for_lr1.gms(35) 4 Mb
 --- call csv2gdx Naive.csv id=nv index=1 values=2..lastCol useHeader=y
 *** ErrNr = 1 Msg = No such file or directory
-CSV2GDX time = 0ms
+CSV2GDX time = 16ms
 --- main_for_lr1.gms(36) 4 Mb
 --- GDXin=C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\1500Scens\tol05\Scenario1\Naive.gdx
 --- main_for_lr1.gms(40) 4 Mb 1 Error
@@ -66,4 +66,4 @@ CSV2GDX time = 0ms
 --- . LR_updates.gms(42) 4 Mb
 --- main_for_lr1.gms(118) 4 Mb 4 Errors
 *** Status: Compilation error(s)
---- Job main_for_lr1.gms Stop 03/14/22 11:42:07 elapsed 0:00:00.096
+--- Job main_for_lr1.gms Stop 03/14/22 11:43:57 elapsed 0:00:00.088
