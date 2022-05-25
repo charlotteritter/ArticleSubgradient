@@ -1,0 +1,11 @@
+5536      0.032
+3256 9      0.164       0.048 GAMS Fini   
+3129 6      0.033       0.005 Loop       
+3129 1      0.032       0.005 Loop       
+3129 8      0.033       0.005 Loop       
+3129 7      0.052       0.005 Loop       
+3256 5      0.280       0.048 Solve Fini schedule (319525)
+3210 10      0.068       0.047 Equation   Const_chance_1 (36000)
+3202 4      0.077       0.018 Equation   Objective (1)
+3128 2      0.544       0.005 Loop       
+3204 3      0.051       0.035 Equation   Const1 (34500)
