@@ -47,7 +47,7 @@ TimeNaive= nv('1','3');
 parameter ldual_iter(iter) obj function at each iteration ;
 lr_time = 0 ;
 
-option limrow = 0, limcol = 0, optca=0.0001, optcr=0.0001;
+option limrow = 0, limcol = 0, optca=0.0001, optcr=0.0001, reslim=4000;
 
 
 parameter check(scen,t);
@@ -86,7 +86,7 @@ $include plain_lr.gms
 $include LR_updates.gms
     if( ((results(iter,'gap') < exit_tol) and (num_iter > 2)),convergence=2; contin = 0;);
     lr_time = lr_time + results(iter,'time')   ;
-    if (lr_time > 2400, contin = 0 ; ) ;
+    if (lr_time > 10000, contin = 0 ; ) ;
     d=results(iter,'gap');
     FinalIter=num_iter;
 );

@@ -1,0 +1,11 @@
+3383      0.022
+1201 5      0.177       0.058 GAMS Fini   
+1025 2      0.222       0.005 Loop       
+1144 1      0.032       0.038 Equation   Const_3_2 (20700)
+1158 9      0.029       0.052 Equation   Const_5 (20700)
+1201 6      0.458       0.058 Solve Fini schedule (661525)
+1150 8      0.072       0.042 Equation   Const_4_1 (19800)
+1141 10      0.031       0.031 Equation   Const_3_1 (20700)
+1154 3      0.072       0.046 Equation   Const_4_2 (19800)
+1118 7      0.085       0.015 Equation   Objective (1)
+1163 4      0.033       0.057 Equation   Const_6 (20700)
