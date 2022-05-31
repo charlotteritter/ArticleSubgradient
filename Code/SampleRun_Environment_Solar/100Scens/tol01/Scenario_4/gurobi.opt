@@ -1,6 +1,0 @@
-** Below is excellent optfile for bounds: method 2, mipstart 1
-method 2
-*mipemphasis 2
-varsel 3
-mipstart 1
-*solutiontype 1
