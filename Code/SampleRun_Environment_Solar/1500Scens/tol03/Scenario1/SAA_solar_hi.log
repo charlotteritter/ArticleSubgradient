@@ -1,0 +1,37 @@
+--- Job SAA_solar_hi.gms Start 03/22/22 11:24:55 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol03\Scenario1\SAA_solar_hi.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol03\Scenario1\225a\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- SAA_solar_hi.gms(41) 3 Mb
+--- . ScenarioSet_hierarchical_solar7200.csv(4273) 6 Mb
+--- SAA_solar_hi.gms(69) 6 Mb
+--- . battery_revenue.csv(25) 6 Mb
+--- SAA_solar_hi.gms(89) 6 Mb
+--- . ScenarioWeights_hierarchical_solar7200.csv(4273) 6 Mb
+--- SAA_solar_hi.gms(283) 6 Mb
+--- Starting execution: elapsed 0:00:00.100
+--- SAA_solar_hi.gms(8762) 28 Mb
+*** Error at line 8803: Execution halted: Triggered by pending CtrlC event
+--- SAA_solar_hi.gms(8762) 28 Mb 1 Error
+--- Profile Summary (30 records processed)
+     0.016   0.006GB      4380 Assignment Solar (57353)
+     0.016   0.006GB      4382 Assignment Solar (57350)
+     0.016   0.020GB      8745 Assignment Q (102528)
+     0.015   0.013GB      8744 Assignment X (102528)
+--- SAA_solar_hi.gms(8762) 28 Mb 1 Error
+*** Status: Execution error(s)
+--- Job SAA_solar_hi.gms Stop 03/22/22 11:24:56 elapsed 0:00:00.889

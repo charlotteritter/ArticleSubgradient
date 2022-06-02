@@ -1,0 +1,1676 @@
+--- Job fixed_problem_hi.gms Start 04/12/22 10:21:41 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\fixed_problem_hi.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- fixed_problem_hi.gms(30) 3 Mb
+--- . solar_scenarios.csv(1501) 4 Mb
+--- fixed_problem_hi.gms(53) 4 Mb
+--- . sampled_dynamic_hi.csv(25) 4 Mb
+--- fixed_problem_hi.gms(62) 4 Mb
+--- . battery_revenue.csv(25) 4 Mb
+--- fixed_problem_hi.gms(216) 4 Mb
+--- Starting execution: elapsed 0:00:00.042
+--- fixed_problem_hi.gms(1733) 14 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(1704) 14 Mb
+--- Starting Equ Objective: elapsed 0:00:00.250
+--- fixed_problem_hi.gms(1706) 18 Mb
+--- Starting Equ Const1: elapsed 0:00:00.847
+--- fixed_problem_hi.gms(1709) 38 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:00.903
+--- fixed_problem_hi.gms(1712) 50 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:00.983
+--- fixed_problem_hi.gms(1736) 50 Mb
+--- LOOPS iter = iter1
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:01.150
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\"
+Row 'Const_chance_2' infeasible, all entries at implied bounds.
+Presolve time = 0.03 sec. (23.77 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.05 sec. (30.03 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.05 sec. (30.03 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 0.05sec (det. 30.34 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:01.526
+--- fixed_problem_hi.gms(1733) 50 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(1704) 50 Mb
+--- Starting Equ Objective: elapsed 0:00:01.526
+--- fixed_problem_hi.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:02.155
+--- fixed_problem_hi.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:02.312
+--- fixed_problem_hi.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:02.455
+--- fixed_problem_hi.gms(1736) 51 Mb
+--- LOOPS iter = iter2
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:02.680
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\"
+Row 'Const_chance_2' infeasible, all entries at implied bounds.
+Presolve time = 0.06 sec. (23.78 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.08 sec. (30.04 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.08 sec. (30.04 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 0.08sec (det. 30.35 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:03.044
+--- fixed_problem_hi.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:00:03.044
+--- fixed_problem_hi.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:03.688
+--- fixed_problem_hi.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:03.845
+--- fixed_problem_hi.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:03.995
+--- fixed_problem_hi.gms(1736) 51 Mb
+--- LOOPS iter = iter3
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:04.245
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\"
+Row 'Const_chance_2' infeasible, all entries at implied bounds.
+Presolve time = 0.03 sec. (23.78 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.05 sec. (30.04 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.05 sec. (30.04 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 0.05sec (det. 30.35 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:04.585
+--- fixed_problem_hi.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:00:04.585
+--- fixed_problem_hi.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:05.256
+--- fixed_problem_hi.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:05.463
+--- fixed_problem_hi.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:05.618
+--- fixed_problem_hi.gms(1736) 51 Mb
+--- LOOPS iter = iter4
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:05.856
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\"
+Row 'Const_chance_2' infeasible, all entries at implied bounds.
+Presolve time = 0.05 sec. (23.78 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.06 sec. (30.04 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.06 sec. (30.04 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 0.06sec (det. 30.35 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:06.218
+--- fixed_problem_hi.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:00:06.218
+--- fixed_problem_hi.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:06.884
+--- fixed_problem_hi.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:07.064
+--- fixed_problem_hi.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:07.254
+--- fixed_problem_hi.gms(1736) 51 Mb
+--- LOOPS iter = iter5
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:07.563
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\"
+Row 'Const_chance_2' infeasible, all entries at implied bounds.
+Presolve time = 0.05 sec. (23.78 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.06 sec. (30.04 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.06 sec. (30.04 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 0.06sec (det. 30.35 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:07.934
+--- fixed_problem_hi.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:00:07.934
+--- fixed_problem_hi.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:08.871
+--- fixed_problem_hi.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:09.343
+--- fixed_problem_hi.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:09.820
+--- fixed_problem_hi.gms(1736) 51 Mb
+--- LOOPS iter = iter6
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:10.250
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\"
+Row 'Const_chance_2' infeasible, all entries at implied bounds.
+Presolve time = 0.05 sec. (23.78 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.06 sec. (30.04 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.06 sec. (30.04 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 0.06sec (det. 30.35 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:10.620
+--- fixed_problem_hi.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:00:10.620
+--- fixed_problem_hi.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:11.283
+--- fixed_problem_hi.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:11.453
+--- fixed_problem_hi.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:11.625
+--- fixed_problem_hi.gms(1736) 51 Mb
+--- LOOPS iter = iter7
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:11.879
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\"
+Row 'Const_chance_2' infeasible, all entries at implied bounds.
+Presolve time = 0.05 sec. (23.78 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.06 sec. (30.04 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.06 sec. (30.04 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 0.06sec (det. 30.35 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:12.250
+--- fixed_problem_hi.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:00:12.250
+--- fixed_problem_hi.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:12.879
+--- fixed_problem_hi.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:13.072
+--- fixed_problem_hi.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:13.244
+--- fixed_problem_hi.gms(1736) 51 Mb
+--- LOOPS iter = iter8
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:13.503
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\"
+Row 'Const_chance_2' infeasible, all entries at implied bounds.
+Presolve time = 0.03 sec. (23.78 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.05 sec. (30.07 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.05 sec. (30.07 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 0.05sec (det. 30.38 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:13.851
+--- fixed_problem_hi.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:00:13.851
+--- fixed_problem_hi.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:14.525
+--- fixed_problem_hi.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:14.707
+--- fixed_problem_hi.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:14.879
+--- fixed_problem_hi.gms(1736) 51 Mb
+--- LOOPS iter = iter9
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:15.142
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\"
+Row 'Const_chance_2' infeasible, all entries at implied bounds.
+Presolve time = 0.05 sec. (23.77 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.06 sec. (30.06 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.06 sec. (30.06 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 0.06sec (det. 30.37 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:15.513
+--- fixed_problem_hi.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:00:15.513
+--- fixed_problem_hi.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:16.196
+--- fixed_problem_hi.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:16.378
+--- fixed_problem_hi.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:16.544
+--- fixed_problem_hi.gms(1736) 51 Mb
+--- LOOPS iter = iter10
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:16.794
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\"
+Row 'Const_chance_2' infeasible, all entries at implied bounds.
+Presolve time = 0.03 sec. (23.78 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.05 sec. (30.07 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.05 sec. (30.07 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 0.05sec (det. 30.38 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:17.135
+--- fixed_problem_hi.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:00:17.135
+--- fixed_problem_hi.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:17.789
+--- fixed_problem_hi.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:17.986
+--- fixed_problem_hi.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:18.148
+--- fixed_problem_hi.gms(1736) 51 Mb
+--- LOOPS iter = iter11
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:18.416
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\"
+Row 'Const_chance_2' infeasible, all entries at implied bounds.
+Presolve time = 0.03 sec. (23.77 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.05 sec. (30.05 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.05 sec. (30.05 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 0.05sec (det. 30.36 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:18.778
+--- fixed_problem_hi.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:00:18.778
+--- fixed_problem_hi.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:19.396
+--- fixed_problem_hi.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:19.574
+--- fixed_problem_hi.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:19.737
+--- fixed_problem_hi.gms(1736) 51 Mb
+--- LOOPS iter = iter12
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:20.040
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\"
+Row 'Const_chance_2' infeasible, all entries at implied bounds.
+Presolve time = 0.05 sec. (23.77 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.06 sec. (30.05 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.06 sec. (30.05 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 0.06sec (det. 30.36 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:20.440
+--- fixed_problem_hi.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:00:20.440
+--- fixed_problem_hi.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:21.143
+--- fixed_problem_hi.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:21.572
+--- fixed_problem_hi.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:21.964
+--- fixed_problem_hi.gms(1736) 51 Mb
+--- LOOPS iter = iter13
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:22.589
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\"
+Row 'Const_chance_2' infeasible, all entries at implied bounds.
+Presolve time = 0.13 sec. (23.77 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.16 sec. (30.05 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.16 sec. (30.05 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 0.16sec (det. 30.36 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:23.615
+--- fixed_problem_hi.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:00:23.615
+--- fixed_problem_hi.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:24.863
+--- fixed_problem_hi.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:25.133
+--- fixed_problem_hi.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:25.378
+--- fixed_problem_hi.gms(1736) 51 Mb
+--- LOOPS iter = iter14
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:25.752
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\"
+Row 'Const_chance_2' infeasible, all entries at implied bounds.
+Presolve time = 0.05 sec. (23.79 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.06 sec. (30.07 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.06 sec. (30.07 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 0.06sec (det. 30.38 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:26.103
+--- fixed_problem_hi.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:00:26.103
+--- fixed_problem_hi.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:26.786
+--- fixed_problem_hi.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:26.959
+--- fixed_problem_hi.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:27.125
+--- fixed_problem_hi.gms(1736) 51 Mb
+--- LOOPS iter = iter15
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:27.411
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\"
+Row 'Const_chance_2' infeasible, all entries at implied bounds.
+Presolve time = 0.06 sec. (23.79 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.08 sec. (30.07 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.08 sec. (30.07 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 0.08sec (det. 30.38 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:27.842
+--- fixed_problem_hi.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:00:27.843
+--- fixed_problem_hi.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:28.818
+--- fixed_problem_hi.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:29.362
+--- fixed_problem_hi.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:29.893
+--- fixed_problem_hi.gms(1736) 51 Mb
+--- LOOPS iter = iter16
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:30.561
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\"
+Row 'Const_chance_2' infeasible, all entries at implied bounds.
+Presolve time = 0.11 sec. (23.79 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.14 sec. (30.07 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.14 sec. (30.07 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 0.14sec (det. 30.38 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:31.539
+--- fixed_problem_hi.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:00:31.543
+--- fixed_problem_hi.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:32.880
+--- fixed_problem_hi.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:33.424
+--- fixed_problem_hi.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:33.871
+--- fixed_problem_hi.gms(1736) 51 Mb
+--- LOOPS iter = iter17
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:34.418
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\"
+Row 'Const_chance_2' infeasible, all entries at implied bounds.
+Presolve time = 0.08 sec. (23.78 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.11 sec. (30.06 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.11 sec. (30.06 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 0.12sec (det. 30.37 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:35.144
+--- fixed_problem_hi.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:00:35.145
+--- fixed_problem_hi.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:36.038
+--- fixed_problem_hi.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:36.250
+--- fixed_problem_hi.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:36.448
+--- fixed_problem_hi.gms(1736) 51 Mb
+--- LOOPS iter = iter18
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:36.707
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\"
+Row 'Const_chance_2' infeasible, all entries at implied bounds.
+Presolve time = 0.06 sec. (23.78 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.09 sec. (30.06 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.09 sec. (30.06 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 0.09sec (det. 30.37 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:37.108
+--- fixed_problem_hi.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:00:37.108
+--- fixed_problem_hi.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:37.849
+--- fixed_problem_hi.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:38.019
+--- fixed_problem_hi.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:38.238
+--- fixed_problem_hi.gms(1736) 51 Mb
+--- LOOPS iter = iter19
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:38.566
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\"
+Row 'Const_chance_2' infeasible, all entries at implied bounds.
+Presolve time = 0.05 sec. (23.77 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.06 sec. (30.06 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.06 sec. (30.06 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 0.08sec (det. 30.37 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:39.004
+--- fixed_problem_hi.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:00:39.004
+--- fixed_problem_hi.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:40.100
+--- fixed_problem_hi.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:40.672
+--- fixed_problem_hi.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:41.275
+--- fixed_problem_hi.gms(1736) 51 Mb
+--- LOOPS iter = iter20
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:42.406
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\"
+Row 'Const_chance_2' infeasible, all entries at implied bounds.
+Presolve time = 0.28 sec. (23.76 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.33 sec. (30.05 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.33 sec. (30.05 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 0.70sec (det. 30.37 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- fixed_problem_hi.gms(1736) 51 Mb  3 secs
+--- Executing after solve: elapsed 0:00:45.121
+--- fixed_problem_hi.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:00:45.123
+--- fixed_problem_hi.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:47.278
+--- fixed_problem_hi.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:48.053
+--- fixed_problem_hi.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:48.932
+--- fixed_problem_hi.gms(1736) 51 Mb
+--- LOOPS iter = iter21
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:50.288
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\"
+Row 'Const_chance_2' infeasible, all entries at implied bounds.
+Presolve time = 0.09 sec. (23.69 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.13 sec. (29.96 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.13 sec. (29.96 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 0.24sec (det. 30.28 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:52.867
+--- fixed_problem_hi.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:00:52.869
+--- fixed_problem_hi.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:54.067
+--- fixed_problem_hi.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:54.475
+--- fixed_problem_hi.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:54.820
+--- fixed_problem_hi.gms(1736) 51 Mb
+--- LOOPS iter = iter22
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:55.241
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\"
+Row 'Const_chance_2' infeasible, all entries at implied bounds.
+Presolve time = 0.08 sec. (23.69 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.09 sec. (29.96 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.09 sec. (29.96 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 0.09sec (det. 30.28 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:55.790
+--- fixed_problem_hi.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:00:55.791
+--- fixed_problem_hi.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:56.643
+--- fixed_problem_hi.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:56.879
+--- fixed_problem_hi.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:57.126
+--- fixed_problem_hi.gms(1736) 51 Mb
+--- LOOPS iter = iter23
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:57.503
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\"
+Row 'Const_chance_2' infeasible, all entries at implied bounds.
+Presolve time = 0.06 sec. (23.69 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.08 sec. (29.97 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.08 sec. (29.97 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 0.08sec (det. 30.28 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:57.967
+--- fixed_problem_hi.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:00:57.968
+--- fixed_problem_hi.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:58.797
+--- fixed_problem_hi.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:59.062
+--- fixed_problem_hi.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:59.323
+--- fixed_problem_hi.gms(1736) 51 Mb
+--- LOOPS iter = iter24
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:59.754
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\"
+Row 'Const_chance_2' infeasible, all entries at implied bounds.
+Presolve time = 0.14 sec. (23.69 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.17 sec. (29.97 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.17 sec. (29.97 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 0.25sec (det. 30.28 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:01:00.869
+--- fixed_problem_hi.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:01:00.870
+--- fixed_problem_hi.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:01:02.761
+--- fixed_problem_hi.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:01:03.442
+--- fixed_problem_hi.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:01:03.959
+--- fixed_problem_hi.gms(1736) 51 Mb
+--- LOOPS iter = iter25
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:01:04.856
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\"
+Row 'Const_chance_2' infeasible, all entries at implied bounds.
+Presolve time = 0.14 sec. (23.69 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.16 sec. (29.97 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.16 sec. (29.97 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 0.28sec (det. 30.28 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:01:06.795
+--- fixed_problem_hi.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:01:06.797
+--- fixed_problem_hi.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:01:08.076
+--- fixed_problem_hi.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:01:08.770
+--- fixed_problem_hi.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:01:09.409
+--- fixed_problem_hi.gms(1736) 51 Mb
+--- LOOPS iter = iter26
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:01:10.454
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\"
+Row 'Const_chance_2' infeasible, all entries at implied bounds.
+Presolve time = 0.17 sec. (23.69 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.20 sec. (29.97 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.20 sec. (29.97 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 0.48sec (det. 30.28 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:01:12.354
+--- fixed_problem_hi.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:01:12.355
+--- fixed_problem_hi.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:01:14.669
+--- fixed_problem_hi.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:01:15.347
+--- fixed_problem_hi.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:01:15.846
+--- fixed_problem_hi.gms(1736) 51 Mb
+--- LOOPS iter = iter27
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:01:16.363
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\"
+Tried aggregator 1 time.
+MIP Presolve eliminated 1657 rows and 4645 columns.
+MIP Presolve modified 4514 coefficients.
+Reduced MIP has 68845 rows, 104880 columns, and 240828 nonzeros.
+Reduced MIP has 1488 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.31 sec. (114.04 ticks)
+Probing fixed 1488 vars, tightened 16752 bounds.
+Probing time = 0.30 sec. (15.79 ticks)
+
+Root node processing (before b&c):
+  Real time             =    1.05 sec. (228.95 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    1.05 sec. (228.95 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 1.05sec (det. 229.26 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:01:17.956
+--- fixed_problem_hi.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:01:17.956
+--- fixed_problem_hi.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:01:19.857
+--- fixed_problem_hi.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:01:20.331
+--- fixed_problem_hi.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:01:20.796
+--- fixed_problem_hi.gms(1736) 51 Mb
+--- LOOPS iter = iter28
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:01:21.327
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\"
+Row 'Const_chance_2' infeasible, all entries at implied bounds.
+Presolve time = 0.13 sec. (23.69 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.14 sec. (29.96 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.14 sec. (29.96 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 0.22sec (det. 30.28 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:01:22.433
+--- fixed_problem_hi.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:01:22.434
+--- fixed_problem_hi.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:01:24.017
+--- fixed_problem_hi.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:01:24.547
+--- fixed_problem_hi.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:01:25.167
+--- fixed_problem_hi.gms(1736) 51 Mb
+--- LOOPS iter = iter29
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:01:26.569
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\"
+Tried aggregator 1 time.
+MIP Presolve eliminated 1644 rows and 4635 columns.
+MIP Presolve modified 4285 coefficients.
+Reduced MIP has 68858 rows, 104890 columns, and 240884 nonzeros.
+Reduced MIP has 1489 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.74 sec. (114.04 ticks)
+Probing fixed 3 vars, tightened 0 bounds.
+Probing time = 0.59 sec. (6.06 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 501 rows and 870 columns.
+Reduced MIP has 68357 rows, 104020 columns, and 239246 nonzeros.
+Reduced MIP has 1486 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.70 sec. (156.17 ticks)
+Probing time = 2.26 sec. (86.21 ticks)
+Clique table members: 1.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
+Parallel mode: deterministic, using up to 6 threads for concurrent optimization:
+ * Starting dual Simplex on 1 thread...
+ * Starting Barrier on 4 threads...
+ * Starting primal Simplex on 1 thread...
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Dual objective     =          -268.079719
+Perturbation started.
+Iteration:   101   Dual objective     =          -268.079719
+Iteration:  1075   Dual objective     =          -267.903887
+Iteration:  2051   Dual objective     =          -267.727528
+Iteration:  3031   Dual objective     =          -267.559850
+Iteration:  4013   Dual objective     =          -267.402777
+Iteration:  4926   Dual objective     =          -267.126689
+Iteration:  5860   Dual objective     =          -266.683011
+Iteration:  6810   Dual objective     =          -266.294154
+Iteration:  7774   Dual objective     =          -265.942110
+Iteration:  8719   Dual objective     =          -265.563643
+Iteration:  9395   Dual objective     =          -264.163601
+Iteration: 10080   Dual objective     =          -262.712764
+Iteration: 10795   Dual objective     =          -261.415621
+Iteration: 11517   Dual objective     =          -260.302737
+Iteration: 12284   Dual objective     =          -259.347126
+Removing perturbation.
+
+Dual simplex solved model.
+
+Root relaxation solution time = 4.05 sec. (386.58 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0    infeasible                                      12618         
+
+Root node processing (before b&c):
+  Real time             =    9.48 sec. (901.90 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    9.48 sec. (901.90 ticks)
+MIP status(119): integer infeasible or unbounded
+Cplex Time: 9.61sec (det. 902.21 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:01:37.636
+--- fixed_problem_hi.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:01:37.636
+--- fixed_problem_hi.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:01:39.910
+--- fixed_problem_hi.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:01:40.555
+--- fixed_problem_hi.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:01:41.351
+--- fixed_problem_hi.gms(1736) 51 Mb
+--- LOOPS iter = iter30
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:01:43.787
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\"
+Found incumbent of value 0.000000 after 0.05 sec. (4.49 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 13723 rows and 4525 columns.
+MIP Presolve modified 8778 coefficients.
+Reduced MIP has 56779 rows, 105000 columns, and 204834 nonzeros.
+Reduced MIP has 1500 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 1.83 sec. (99.00 ticks)
+Probing time = 3.66 sec. (3.29 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 56779 rows, 105000 columns, and 204834 nonzeros.
+Reduced MIP has 1500 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 4.97 sec. (142.58 ticks)
+
+Root node processing (before b&c):
+  Real time             =   11.58 sec. (287.72 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =   11.58 sec. (287.72 ticks)
+MIP status(101): integer optimal solution
+Cplex Time: 14.01sec (det. 288.04 ticks)
+Fixing integer variables, and solving final LP...
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\225a\"
+Parallel mode: deterministic, using up to 8 threads for concurrent optimization:
+ * Starting dual Simplex on 1 thread...
+ * Starting Barrier on 6 threads...
+ * Starting primal Simplex on 1 thread...
+Tried aggregator 1 time.
+LP Presolve eliminated 13724 rows and 6025 columns.
+Reduced LP has 56778 rows, 103500 columns, and 181056 nonzeros.
+Presolve time = 1.91 sec. (114.45 ticks)
+Initializing dual steep norms . . .
+
+Dual simplex solved model.
+
+Fixed MIP status(1): optimal
+Cplex Time: 6.22sec (det. 182.52 ticks)
+
+Proven optimal solution.
+
+MIP Solution:            0.000000    (0 iterations, 0 nodes)
+Final Solve:             0.000000    (0 iterations)
+
+Best possible:           0.000000
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+--- Reading solution for model schedule
+--- fixed_problem_hi.gms(1736) 51 Mb  26 secs
+--- Executing after solve: elapsed 0:02:08.619
+--- fixed_problem_hi.gms(1766) 51 Mb
+--- Putfile fixed_profit C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\fixed_profit_hi.csv
+--- Putfile TestingFile3 C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol01\Scenario1\Alg_hi.csv
+--- Profile Summary (1760 records processed)
+   128.359   0.051GB      1733 Loop       
+    24.281   0.051GB      1736 Solve Alg  schedule
+    10.891   0.051GB      1736 Solve Alg  schedule
+     2.563   0.051GB      1736 Solve Alg  schedule
+     2.531   0.051GB      1736 Solve Alg  schedule
+     2.390   0.051GB      1736 Solve Fini schedule (319525)
+     2.312   0.051GB      1704 Equation   Objective (1)
+     2.281   0.051GB      1704 Equation   Objective (1)
+     2.157   0.051GB      1704 Equation   Objective (1)
+     1.891   0.051GB      1704 Equation   Objective (1)
+*** Status: Normal completion
+--- Job fixed_problem_hi.gms Stop 04/12/22 10:23:50 elapsed 0:02:08.627

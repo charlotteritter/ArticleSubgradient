@@ -1,0 +1,484 @@
+B 3 C o m p i l a t i o n
+B 1770 Include File Summary
+B 1784 E x e c u t i o n
+B 7317 Model Analysis      SOLVE schedule Using MIP From line 1736
+B 7323 Equation Listing    SOLVE schedule Using MIP From line 1736
+D 7326 Objective
+D 7414 Const1
+D 7432 Const_chance_1
+D 7450 Const_chance_2
+B 7459 Column Listing      SOLVE schedule Using MIP From line 1736
+E 7462 P
+E 7484 Q
+E 7503 Y
+E 12019 X
+E 12039 OBJ
+E 12046 Z
+B 12135 Model Statistics    SOLVE schedule Using MIP From line 1736
+B 12158 Solution Report     SOLVE schedule Using MIP From line 1736
+B 12188 E x e c u t i o n
+B 12198 Model Analysis      SOLVE schedule Using MIP From line 1736
+B 12204 Equation Listing    SOLVE schedule Using MIP From line 1736
+D 12207 Objective
+D 12295 Const1
+D 12313 Const_chance_1
+D 12331 Const_chance_2
+B 12340 Column Listing      SOLVE schedule Using MIP From line 1736
+E 12343 P
+E 12365 Q
+E 12384 Y
+E 16900 X
+E 16920 OBJ
+E 16927 Z
+B 17016 Model Statistics    SOLVE schedule Using MIP From line 1736
+B 17039 Solution Report     SOLVE schedule Using MIP From line 1736
+B 17069 E x e c u t i o n
+B 17079 Model Analysis      SOLVE schedule Using MIP From line 1736
+B 17085 Equation Listing    SOLVE schedule Using MIP From line 1736
+D 17088 Objective
+D 17176 Const1
+D 17194 Const_chance_1
+D 17212 Const_chance_2
+B 17221 Column Listing      SOLVE schedule Using MIP From line 1736
+E 17224 P
+E 17246 Q
+E 17265 Y
+E 21781 X
+E 21801 OBJ
+E 21808 Z
+B 21897 Model Statistics    SOLVE schedule Using MIP From line 1736
+B 21920 Solution Report     SOLVE schedule Using MIP From line 1736
+B 21950 E x e c u t i o n
+B 21960 Model Analysis      SOLVE schedule Using MIP From line 1736
+B 21966 Equation Listing    SOLVE schedule Using MIP From line 1736
+D 21969 Objective
+D 22057 Const1
+D 22075 Const_chance_1
+D 22093 Const_chance_2
+B 22102 Column Listing      SOLVE schedule Using MIP From line 1736
+E 22105 P
+E 22127 Q
+E 22146 Y
+E 26662 X
+E 26682 OBJ
+E 26689 Z
+B 26778 Model Statistics    SOLVE schedule Using MIP From line 1736
+B 26801 Solution Report     SOLVE schedule Using MIP From line 1736
+B 26831 E x e c u t i o n
+B 26841 Model Analysis      SOLVE schedule Using MIP From line 1736
+B 26847 Equation Listing    SOLVE schedule Using MIP From line 1736
+D 26850 Objective
+D 26938 Const1
+D 26956 Const_chance_1
+D 26974 Const_chance_2
+B 26983 Column Listing      SOLVE schedule Using MIP From line 1736
+E 26986 P
+E 27008 Q
+E 27027 Y
+E 31543 X
+E 31563 OBJ
+E 31570 Z
+B 31659 Model Statistics    SOLVE schedule Using MIP From line 1736
+B 31682 Solution Report     SOLVE schedule Using MIP From line 1736
+B 31712 E x e c u t i o n
+B 31722 Model Analysis      SOLVE schedule Using MIP From line 1736
+B 31728 Equation Listing    SOLVE schedule Using MIP From line 1736
+D 31731 Objective
+D 31819 Const1
+D 31837 Const_chance_1
+D 31855 Const_chance_2
+B 31864 Column Listing      SOLVE schedule Using MIP From line 1736
+E 31867 P
+E 31889 Q
+E 31908 Y
+E 36424 X
+E 36444 OBJ
+E 36451 Z
+B 36540 Model Statistics    SOLVE schedule Using MIP From line 1736
+B 36563 Solution Report     SOLVE schedule Using MIP From line 1736
+B 36593 E x e c u t i o n
+B 36603 Model Analysis      SOLVE schedule Using MIP From line 1736
+B 36609 Equation Listing    SOLVE schedule Using MIP From line 1736
+D 36612 Objective
+D 36700 Const1
+D 36718 Const_chance_1
+D 36736 Const_chance_2
+B 36745 Column Listing      SOLVE schedule Using MIP From line 1736
+E 36748 P
+E 36770 Q
+E 36789 Y
+E 41305 X
+E 41325 OBJ
+E 41332 Z
+B 41421 Model Statistics    SOLVE schedule Using MIP From line 1736
+B 41444 Solution Report     SOLVE schedule Using MIP From line 1736
+B 41474 E x e c u t i o n
+B 41484 Model Analysis      SOLVE schedule Using MIP From line 1736
+B 41490 Equation Listing    SOLVE schedule Using MIP From line 1736
+D 41493 Objective
+D 41581 Const1
+D 41599 Const_chance_1
+D 41617 Const_chance_2
+B 41626 Column Listing      SOLVE schedule Using MIP From line 1736
+E 41629 P
+E 41651 Q
+E 41670 Y
+E 46186 X
+E 46206 OBJ
+E 46213 Z
+B 46302 Model Statistics    SOLVE schedule Using MIP From line 1736
+B 46325 Solution Report     SOLVE schedule Using MIP From line 1736
+B 46355 E x e c u t i o n
+B 46365 Model Analysis      SOLVE schedule Using MIP From line 1736
+B 46371 Equation Listing    SOLVE schedule Using MIP From line 1736
+D 46374 Objective
+D 46462 Const1
+D 46480 Const_chance_1
+D 46498 Const_chance_2
+B 46507 Column Listing      SOLVE schedule Using MIP From line 1736
+E 46510 P
+E 46532 Q
+E 46551 Y
+E 51067 X
+E 51087 OBJ
+E 51094 Z
+B 51183 Model Statistics    SOLVE schedule Using MIP From line 1736
+B 51206 Solution Report     SOLVE schedule Using MIP From line 1736
+B 51236 E x e c u t i o n
+B 51246 Model Analysis      SOLVE schedule Using MIP From line 1736
+B 51252 Equation Listing    SOLVE schedule Using MIP From line 1736
+D 51255 Objective
+D 51343 Const1
+D 51361 Const_chance_1
+D 51379 Const_chance_2
+B 51388 Column Listing      SOLVE schedule Using MIP From line 1736
+E 51391 P
+E 51413 Q
+E 51432 Y
+E 55948 X
+E 55968 OBJ
+E 55975 Z
+B 56064 Model Statistics    SOLVE schedule Using MIP From line 1736
+B 56087 Solution Report     SOLVE schedule Using MIP From line 1736
+B 56117 E x e c u t i o n
+B 56127 Model Analysis      SOLVE schedule Using MIP From line 1736
+B 56133 Equation Listing    SOLVE schedule Using MIP From line 1736
+D 56136 Objective
+D 56224 Const1
+D 56242 Const_chance_1
+D 56260 Const_chance_2
+B 56269 Column Listing      SOLVE schedule Using MIP From line 1736
+E 56272 P
+E 56294 Q
+E 56313 Y
+E 60829 X
+E 60849 OBJ
+E 60856 Z
+B 60945 Model Statistics    SOLVE schedule Using MIP From line 1736
+B 60968 Solution Report     SOLVE schedule Using MIP From line 1736
+B 60998 E x e c u t i o n
+B 61008 Model Analysis      SOLVE schedule Using MIP From line 1736
+B 61014 Equation Listing    SOLVE schedule Using MIP From line 1736
+D 61017 Objective
+D 61105 Const1
+D 61123 Const_chance_1
+D 61141 Const_chance_2
+B 61150 Column Listing      SOLVE schedule Using MIP From line 1736
+E 61153 P
+E 61175 Q
+E 61194 Y
+E 65710 X
+E 65730 OBJ
+E 65737 Z
+B 65826 Model Statistics    SOLVE schedule Using MIP From line 1736
+B 65849 Solution Report     SOLVE schedule Using MIP From line 1736
+B 65879 E x e c u t i o n
+B 65889 Model Analysis      SOLVE schedule Using MIP From line 1736
+B 65895 Equation Listing    SOLVE schedule Using MIP From line 1736
+D 65898 Objective
+D 65986 Const1
+D 66004 Const_chance_1
+D 66022 Const_chance_2
+B 66031 Column Listing      SOLVE schedule Using MIP From line 1736
+E 66034 P
+E 66056 Q
+E 66075 Y
+E 70591 X
+E 70611 OBJ
+E 70618 Z
+B 70707 Model Statistics    SOLVE schedule Using MIP From line 1736
+B 70730 Solution Report     SOLVE schedule Using MIP From line 1736
+B 70760 E x e c u t i o n
+B 70770 Model Analysis      SOLVE schedule Using MIP From line 1736
+B 70776 Equation Listing    SOLVE schedule Using MIP From line 1736
+D 70779 Objective
+D 70867 Const1
+D 70885 Const_chance_1
+D 70903 Const_chance_2
+B 70912 Column Listing      SOLVE schedule Using MIP From line 1736
+E 70915 P
+E 70937 Q
+E 70956 Y
+E 75472 X
+E 75492 OBJ
+E 75499 Z
+B 75588 Model Statistics    SOLVE schedule Using MIP From line 1736
+B 75611 Solution Report     SOLVE schedule Using MIP From line 1736
+B 75641 E x e c u t i o n
+B 75651 Model Analysis      SOLVE schedule Using MIP From line 1736
+B 75657 Equation Listing    SOLVE schedule Using MIP From line 1736
+D 75660 Objective
+D 75748 Const1
+D 75766 Const_chance_1
+D 75784 Const_chance_2
+B 75793 Column Listing      SOLVE schedule Using MIP From line 1736
+E 75796 P
+E 75818 Q
+E 75837 Y
+E 80353 X
+E 80373 OBJ
+E 80380 Z
+B 80469 Model Statistics    SOLVE schedule Using MIP From line 1736
+B 80492 Solution Report     SOLVE schedule Using MIP From line 1736
+B 80522 E x e c u t i o n
+B 80532 Model Analysis      SOLVE schedule Using MIP From line 1736
+B 80538 Equation Listing    SOLVE schedule Using MIP From line 1736
+D 80541 Objective
+D 80629 Const1
+D 80647 Const_chance_1
+D 80665 Const_chance_2
+B 80674 Column Listing      SOLVE schedule Using MIP From line 1736
+E 80677 P
+E 80699 Q
+E 80718 Y
+E 85234 X
+E 85254 OBJ
+E 85261 Z
+B 85350 Model Statistics    SOLVE schedule Using MIP From line 1736
+B 85373 Solution Report     SOLVE schedule Using MIP From line 1736
+B 85403 E x e c u t i o n
+B 85413 Model Analysis      SOLVE schedule Using MIP From line 1736
+B 85419 Equation Listing    SOLVE schedule Using MIP From line 1736
+D 85422 Objective
+D 85510 Const1
+D 85528 Const_chance_1
+D 85546 Const_chance_2
+B 85555 Column Listing      SOLVE schedule Using MIP From line 1736
+E 85558 P
+E 85580 Q
+E 85599 Y
+E 90115 X
+E 90135 OBJ
+E 90142 Z
+B 90231 Model Statistics    SOLVE schedule Using MIP From line 1736
+B 90254 Solution Report     SOLVE schedule Using MIP From line 1736
+B 90284 E x e c u t i o n
+B 90294 Model Analysis      SOLVE schedule Using MIP From line 1736
+B 90300 Equation Listing    SOLVE schedule Using MIP From line 1736
+D 90303 Objective
+D 90391 Const1
+D 90409 Const_chance_1
+D 90427 Const_chance_2
+B 90436 Column Listing      SOLVE schedule Using MIP From line 1736
+E 90439 P
+E 90461 Q
+E 90480 Y
+E 94996 X
+E 95016 OBJ
+E 95023 Z
+B 95112 Model Statistics    SOLVE schedule Using MIP From line 1736
+B 95135 Solution Report     SOLVE schedule Using MIP From line 1736
+B 95165 E x e c u t i o n
+B 95175 Model Analysis      SOLVE schedule Using MIP From line 1736
+B 95181 Equation Listing    SOLVE schedule Using MIP From line 1736
+D 95184 Objective
+D 95272 Const1
+D 95290 Const_chance_1
+D 95308 Const_chance_2
+B 95317 Column Listing      SOLVE schedule Using MIP From line 1736
+E 95320 P
+E 95342 Q
+E 95361 Y
+E 99877 X
+E 99897 OBJ
+E 99904 Z
+B 99993 Model Statistics    SOLVE schedule Using MIP From line 1736
+B 100016 Solution Report     SOLVE schedule Using MIP From line 1736
+B 100046 E x e c u t i o n
+B 100056 Model Analysis      SOLVE schedule Using MIP From line 1736
+B 100062 Equation Listing    SOLVE schedule Using MIP From line 1736
+D 100065 Objective
+D 100153 Const1
+D 100171 Const_chance_1
+D 100189 Const_chance_2
+B 100198 Column Listing      SOLVE schedule Using MIP From line 1736
+E 100201 P
+E 100223 Q
+E 100242 Y
+E 104758 X
+E 104778 OBJ
+E 104785 Z
+B 104874 Model Statistics    SOLVE schedule Using MIP From line 1736
+B 104897 Solution Report     SOLVE schedule Using MIP From line 1736
+B 104927 E x e c u t i o n
+B 104937 Model Analysis      SOLVE schedule Using MIP From line 1736
+B 104943 Equation Listing    SOLVE schedule Using MIP From line 1736
+D 104946 Objective
+D 105034 Const1
+D 105052 Const_chance_1
+D 105070 Const_chance_2
+B 105079 Column Listing      SOLVE schedule Using MIP From line 1736
+E 105082 P
+E 105104 Q
+E 105123 Y
+E 109639 X
+E 109659 OBJ
+E 109666 Z
+B 109755 Model Statistics    SOLVE schedule Using MIP From line 1736
+B 109778 Solution Report     SOLVE schedule Using MIP From line 1736
+B 109822 E x e c u t i o n
+B 109832 Model Analysis      SOLVE schedule Using MIP From line 1736
+B 109838 Equation Listing    SOLVE schedule Using MIP From line 1736
+D 109841 Objective
+D 109929 Const1
+D 109947 Const_chance_1
+D 109965 Const_chance_2
+B 109974 Column Listing      SOLVE schedule Using MIP From line 1736
+E 109977 P
+E 109999 Q
+E 110018 Y
+E 114534 X
+E 114552 OBJ
+E 114559 Z
+B 114648 Model Statistics    SOLVE schedule Using MIP From line 1736
+B 114671 Solution Report     SOLVE schedule Using MIP From line 1736
+B 114715 E x e c u t i o n
+B 114725 Model Analysis      SOLVE schedule Using MIP From line 1736
+B 114731 Equation Listing    SOLVE schedule Using MIP From line 1736
+D 114734 Objective
+D 114822 Const1
+D 114840 Const_chance_1
+D 114858 Const_chance_2
+B 114867 Column Listing      SOLVE schedule Using MIP From line 1736
+E 114870 P
+E 114892 Q
+E 114911 Y
+E 119427 X
+E 119445 OBJ
+E 119452 Z
+B 119541 Model Statistics    SOLVE schedule Using MIP From line 1736
+B 119564 Solution Report     SOLVE schedule Using MIP From line 1736
+B 119608 E x e c u t i o n
+B 119618 Model Analysis      SOLVE schedule Using MIP From line 1736
+B 119624 Equation Listing    SOLVE schedule Using MIP From line 1736
+D 119627 Objective
+D 119715 Const1
+D 119733 Const_chance_1
+D 119751 Const_chance_2
+B 119760 Column Listing      SOLVE schedule Using MIP From line 1736
+E 119763 P
+E 119785 Q
+E 119804 Y
+E 124320 X
+E 124338 OBJ
+E 124345 Z
+B 124434 Model Statistics    SOLVE schedule Using MIP From line 1736
+B 124457 Solution Report     SOLVE schedule Using MIP From line 1736
+B 124501 E x e c u t i o n
+B 124511 Model Analysis      SOLVE schedule Using MIP From line 1736
+B 124517 Equation Listing    SOLVE schedule Using MIP From line 1736
+D 124520 Objective
+D 124608 Const1
+D 124626 Const_chance_1
+D 124644 Const_chance_2
+B 124653 Column Listing      SOLVE schedule Using MIP From line 1736
+E 124656 P
+E 124678 Q
+E 124697 Y
+E 129213 X
+E 129231 OBJ
+E 129238 Z
+B 129327 Model Statistics    SOLVE schedule Using MIP From line 1736
+B 129350 Solution Report     SOLVE schedule Using MIP From line 1736
+B 129394 E x e c u t i o n
+B 129404 Model Analysis      SOLVE schedule Using MIP From line 1736
+B 129410 Equation Listing    SOLVE schedule Using MIP From line 1736
+D 129413 Objective
+D 129501 Const1
+D 129519 Const_chance_1
+D 129537 Const_chance_2
+B 129546 Column Listing      SOLVE schedule Using MIP From line 1736
+E 129549 P
+E 129571 Q
+E 129590 Y
+E 134106 X
+E 134124 OBJ
+E 134131 Z
+B 134220 Model Statistics    SOLVE schedule Using MIP From line 1736
+B 134243 Solution Report     SOLVE schedule Using MIP From line 1736
+B 134287 E x e c u t i o n
+B 134297 Model Analysis      SOLVE schedule Using MIP From line 1736
+B 134303 Equation Listing    SOLVE schedule Using MIP From line 1736
+D 134306 Objective
+D 134394 Const1
+D 134412 Const_chance_1
+D 134430 Const_chance_2
+B 134439 Column Listing      SOLVE schedule Using MIP From line 1736
+E 134442 P
+E 134464 Q
+E 134483 Y
+E 138999 X
+E 139017 OBJ
+E 139024 Z
+B 139113 Model Statistics    SOLVE schedule Using MIP From line 1736
+B 139136 Solution Report     SOLVE schedule Using MIP From line 1736
+B 139180 E x e c u t i o n
+B 139190 Model Analysis      SOLVE schedule Using MIP From line 1736
+B 139196 Equation Listing    SOLVE schedule Using MIP From line 1736
+D 139199 Objective
+D 139287 Const1
+D 139305 Const_chance_1
+D 139323 Const_chance_2
+B 139332 Column Listing      SOLVE schedule Using MIP From line 1736
+E 139335 P
+E 139357 Q
+E 139376 Y
+E 143892 X
+E 143910 OBJ
+E 143917 Z
+B 144006 Model Statistics    SOLVE schedule Using MIP From line 1736
+B 144029 Solution Report     SOLVE schedule Using MIP From line 1736
+B 144073 E x e c u t i o n
+B 144083 Model Analysis      SOLVE schedule Using MIP From line 1736
+B 144089 Equation Listing    SOLVE schedule Using MIP From line 1736
+D 144092 Objective
+D 144180 Const1
+D 144198 Const_chance_1
+D 144216 Const_chance_2
+B 144225 Column Listing      SOLVE schedule Using MIP From line 1736
+E 144228 P
+E 144250 Q
+E 144269 Y
+E 148785 X
+E 148803 OBJ
+E 148810 Z
+B 148899 Model Statistics    SOLVE schedule Using MIP From line 1736
+B 148922 Solution Report     SOLVE schedule Using MIP From line 1736
+B 148966 E x e c u t i o n
+B 148976 Model Analysis      SOLVE schedule Using MIP From line 1736
+B 148982 Equation Listing    SOLVE schedule Using MIP From line 1736
+D 148985 Objective
+D 149073 Const1
+D 149091 Const_chance_1
+D 149109 Const_chance_2
+B 149118 Column Listing      SOLVE schedule Using MIP From line 1736
+E 149121 P
+E 149143 Q
+E 149162 Y
+E 153678 X
+E 153696 OBJ
+E 153703 Z
+B 153792 Model Statistics    SOLVE schedule Using MIP From line 1736
+B 153815 Solution Report     SOLVE schedule Using MIP From line 1736
+B 153859 E x e c u t i o n
+I 153866 Y

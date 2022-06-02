@@ -1,0 +1,51 @@
+--- Job SAA_solar.gms Start 12/13/21 16:12:23 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\600Scens\tol03\Scenario5\SAA_solar.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\600Scens\tol03\Scenario5\225c\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- SAA_solar.gms(41) 3 Mb
+--- . solar_scenarios_1200.csv(1201) 4 Mb
+--- SAA_solar.gms(64) 4 Mb 1 Error
+*** Error 282 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\600Scens\tol03\Scenario5\SAA_solar.gms
+    Unable to open include file
+--- SAA_solar.gms(66) 4 Mb 2 Errors
+*** Error 463 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\600Scens\tol03\Scenario5\SAA_solar.gms
+    The column section in the previous table is missing.
+       You may want to use $ON/OFFEMPTY
+--- SAA_solar.gms(75) 4 Mb
+--- . battery_revenue.csv(25) 4 Mb
+--- SAA_solar.gms(95) 4 Mb
+--- . ScenarioWeights_naive.csv(1201) 4 Mb
+--- SAA_solar.gms(243) 4 Mb 3 Errors
+*** Error 257 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\600Scens\tol03\Scenario5\SAA_solar.gms
+    Solve statement not checked because of previous errors
+--- SAA_solar.gms(246) 4 Mb 4 Errors
+*** Error 141 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\600Scens\tol03\Scenario5\SAA_solar.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+--- SAA_solar.gms(248) 4 Mb 5 Errors
+*** Error 141 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\600Scens\tol03\Scenario5\SAA_solar.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+--- SAA_solar.gms(284) 4 Mb 5 Errors
+*** Status: Compilation error(s)
+--- Job SAA_solar.gms Stop 12/13/21 16:12:24 elapsed 0:00:00.053

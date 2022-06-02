@@ -1,0 +1,7 @@
+=0Gurobi           24.8.5 r61358 Released May 10, 2017 LEG x86 64bit/Linux      
+=B/home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Solar/900Scens/tol01/Scenario1/225c/gurobilog.dat
+=1
+=2
+=CGAMS/Gurobi demo requires a Gurobi license from Gurobi Optimization.
+=CGurobi library version 7.0.2
+=CLP status(2): Model was solved to optimality (subject to tolerances).

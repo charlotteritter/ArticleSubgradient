@@ -1,0 +1,2863 @@
+--- Job fixed_problem.gms Start 04/12/22 10:22:28 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\fixed_problem.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- fixed_problem.gms(30) 3 Mb
+--- . solar_scenarios.csv(1501) 4 Mb
+--- fixed_problem.gms(53) 4 Mb
+--- . sampled_dynamic.csv(25) 4 Mb
+--- fixed_problem.gms(62) 4 Mb
+--- . battery_revenue.csv(25) 4 Mb
+--- fixed_problem.gms(216) 4 Mb
+--- Starting execution: elapsed 0:00:00.207
+--- fixed_problem.gms(1668) 5 Mb  5 secs
+--- fixed_problem.gms(1733) 14 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 14 Mb
+--- Starting Equ Objective: elapsed 0:00:05.564
+--- fixed_problem.gms(1706) 17 Mb
+--- Starting Equ Const1: elapsed 0:00:06.444
+--- fixed_problem.gms(1709) 38 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:06.572
+--- fixed_problem.gms(1712) 50 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:06.735
+--- fixed_problem.gms(1736) 50 Mb
+--- LOOPS iter = iter1
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:07.053
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Row 'Const_chance_2' infeasible, all entries at implied bounds.
+Presolve time = 0.08 sec. (23.80 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.09 sec. (30.08 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.09 sec. (30.08 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 0.09sec (det. 30.40 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:07.788
+--- fixed_problem.gms(1733) 50 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 50 Mb
+--- Starting Equ Objective: elapsed 0:00:07.788
+--- fixed_problem.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:08.718
+--- fixed_problem.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:08.930
+--- fixed_problem.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:09.100
+--- fixed_problem.gms(1736) 51 Mb
+--- LOOPS iter = iter2
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:09.377
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Tried aggregator 1 time.
+MIP Presolve eliminated 3261 rows and 5235 columns.
+MIP Presolve modified 3230 coefficients.
+Reduced MIP has 67241 rows, 104290 columns, and 235084 nonzeros.
+Reduced MIP has 1429 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.23 sec. (114.23 ticks)
+Probing fixed 32 vars, tightened 262 bounds.
+Probing time = 0.23 sec. (36.57 ticks)
+Presolve time = 0.05 sec. (21.38 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.94 sec. (352.99 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.94 sec. (352.99 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 0.95sec (det. 353.30 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:10.701
+--- fixed_problem.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:00:10.701
+--- fixed_problem.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:11.493
+--- fixed_problem.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:11.727
+--- fixed_problem.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:11.971
+--- fixed_problem.gms(1736) 51 Mb
+--- LOOPS iter = iter3
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:12.356
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Row 'Const_chance_2' infeasible, all entries at implied bounds.
+Presolve time = 0.17 sec. (23.82 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.19 sec. (30.09 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.19 sec. (30.09 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 0.30sec (det. 30.40 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:13.153
+--- fixed_problem.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:00:13.153
+--- fixed_problem.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:14.708
+--- fixed_problem.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:15.404
+--- fixed_problem.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:15.978
+--- fixed_problem.gms(1736) 51 Mb
+--- LOOPS iter = iter4
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:16.892
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Tried aggregator 1 time.
+MIP Presolve eliminated 2145 rows and 4985 columns.
+MIP Presolve modified 5102 coefficients.
+Reduced MIP has 68357 rows, 104540 columns, and 238832 nonzeros.
+Reduced MIP has 1454 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.92 sec. (114.81 ticks)
+Probing fixed 23 vars, tightened 0 bounds.
+Probing time = 0.39 sec. (8.52 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 2530 rows and 4370 columns.
+Reduced MIP has 65827 rows, 100170 columns, and 230391 nonzeros.
+Reduced MIP has 1431 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 1.14 sec. (151.25 ticks)
+Probing time = 0.69 sec. (3.88 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
+Parallel mode: deterministic, using up to 6 threads for concurrent optimization:
+ * Starting dual Simplex on 1 thread...
+ * Starting Barrier on 4 threads...
+ * Starting primal Simplex on 1 thread...
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Dual objective     =          -278.264845
+Perturbation started.
+Iteration:   101   Dual objective     =          -278.264845
+Iteration:  1408   Dual objective     =          -278.042113
+Iteration:  2351   Dual objective     =          -277.874114
+Iteration:  3219   Dual objective     =          -277.636730
+Iteration:  4129   Dual objective     =          -277.244076
+Iteration:  5034   Dual objective     =          -276.797940
+Iteration:  5963   Dual objective     =          -276.318752
+Iteration:  6890   Dual objective     =          -275.842913
+Iteration:  7790   Dual objective     =          -275.305901
+Iteration:  8686   Dual objective     =          -274.800729
+Iteration:  9362   Dual objective     =          -273.395717
+Iteration: 10038   Dual objective     =          -271.790216
+Iteration: 10732   Dual objective     =          -270.338577
+Iteration: 11438   Dual objective     =          -268.875568
+Iteration: 12170   Dual objective     =          -267.585216
+Iteration: 12942   Dual objective     =          -266.568995
+Iteration: 13804   Dual objective     =          -265.752374
+Iteration: 14678   Dual objective     =          -265.210574
+Iteration: 15535   Dual objective     =          -264.883235
+Iteration: 16345   Dual objective     =          -264.626606
+Iteration: 17167   Dual objective     =          -264.397487
+Removing perturbation.
+
+Dual simplex solved model.
+
+Root relaxation solution time = 5.97 sec. (526.95 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0    infeasible                                      17236         
+
+Root node processing (before b&c):
+  Real time             =   10.41 sec. (1021.81 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =   10.41 sec. (1021.81 ticks)
+MIP status(119): integer infeasible or unbounded
+Cplex Time: 10.74sec (det. 1022.12 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:28.678
+--- fixed_problem.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:00:28.680
+--- fixed_problem.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:29.940
+--- fixed_problem.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:30.281
+--- fixed_problem.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:30.628
+--- fixed_problem.gms(1736) 51 Mb
+--- LOOPS iter = iter5
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:31.260
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Tried aggregator 1 time.
+MIP Presolve eliminated 2281 rows and 5125 columns.
+MIP Presolve modified 3276 coefficients.
+Reduced MIP has 68221 rows, 104400 columns, and 238140 nonzeros.
+Reduced MIP has 1440 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.52 sec. (114.54 ticks)
+Probing fixed 1441 vars, tightened 20263 bounds.
+Probing time = 0.59 sec. (9.65 ticks)
+
+Root node processing (before b&c):
+  Real time             =    1.86 sec. (271.57 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    1.86 sec. (271.57 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 1.98sec (det. 271.88 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:34.588
+--- fixed_problem.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:00:34.589
+--- fixed_problem.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:36.007
+--- fixed_problem.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:36.553
+--- fixed_problem.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:37.203
+--- fixed_problem.gms(1736) 51 Mb
+--- LOOPS iter = iter6
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:38.222
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Tried aggregator 1 time.
+MIP Presolve eliminated 2385 rows and 5205 columns.
+MIP Presolve modified 2692 coefficients.
+Reduced MIP has 68117 rows, 104320 columns, and 237692 nonzeros.
+Reduced MIP has 1432 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.48 sec. (114.37 ticks)
+Probing fixed 1432 vars, tightened 18574 bounds.
+Probing time = 0.92 sec. (8.01 ticks)
+
+Root node processing (before b&c):
+  Real time             =    2.16 sec. (278.12 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    2.16 sec. (278.12 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 2.25sec (det. 278.43 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- fixed_problem.gms(1736) 51 Mb  4 secs
+--- Executing after solve: elapsed 0:00:42.368
+--- fixed_problem.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:00:42.369
+--- fixed_problem.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:43.720
+--- fixed_problem.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:44.505
+--- fixed_problem.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:44.992
+--- fixed_problem.gms(1736) 51 Mb
+--- LOOPS iter = iter7
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:45.629
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Tried aggregator 1 time.
+MIP Presolve eliminated 2060 rows and 4955 columns.
+MIP Presolve modified 3369 coefficients.
+Reduced MIP has 68442 rows, 104570 columns, and 239092 nonzeros.
+Reduced MIP has 1457 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.58 sec. (114.60 ticks)
+Probing fixed 8 vars, tightened 0 bounds.
+Probing time = 2.88 sec. (7.29 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 1787 rows and 3140 columns.
+Reduced MIP has 66655 rows, 101430 columns, and 233289 nonzeros.
+Reduced MIP has 1449 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 2.34 sec. (152.34 ticks)
+Probing time = 1.24 sec. (3.93 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
+Parallel mode: deterministic, using up to 6 threads for concurrent optimization:
+ * Starting dual Simplex on 1 thread...
+ * Starting Barrier on 4 threads...
+ * Starting primal Simplex on 1 thread...
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Dual objective     =          -279.316592
+Perturbation started.
+Iteration:   101   Dual objective     =          -279.316592
+Iteration:   885   Dual objective     =          -279.222202
+Iteration:  2136   Dual objective     =          -279.016385
+Iteration:  2989   Dual objective     =          -278.870998
+Iteration:  3894   Dual objective     =          -278.614843
+Iteration:  4764   Dual objective     =          -278.399407
+Iteration:  5653   Dual objective     =          -278.123150
+Iteration:  6549   Dual objective     =          -277.685384
+Iteration:  7436   Dual objective     =          -277.281706
+Iteration:  8339   Dual objective     =          -276.806526
+Iteration:  9187   Dual objective     =          -276.311722
+Iteration:  9827   Dual objective     =          -275.019622
+Iteration: 10479   Dual objective     =          -273.752671
+Iteration: 11154   Dual objective     =          -272.585082
+Iteration: 11836   Dual objective     =          -271.428262
+Iteration: 12529   Dual objective     =          -270.253074
+Iteration: 13267   Dual objective     =          -269.212369
+Iteration: 14043   Dual objective     =          -268.299197
+Iteration: 14814   Dual objective     =          -267.711939
+Iteration: 15630   Dual objective     =          -267.321728
+Iteration: 16422   Dual objective     =          -267.056717
+Iteration: 17221   Dual objective     =          -266.833911
+Iteration: 17940   Dual objective     =          -266.659671
+Iteration: 18629   Dual objective     =          -266.514357
+Iteration: 19370   Dual objective     =          -266.386612
+Iteration: 20033   Dual objective     =          -266.308112
+Iteration: 20684   Dual objective     =          -266.233957
+Iteration: 21380   Dual objective     =          -266.175426
+Iteration: 22041   Dual objective     =          -266.138361
+Iteration: 22629   Dual objective     =          -266.120980
+Removing perturbation.
+Iteration: 23119    Objective     =          -267.866925
+
+Dual simplex solved model.
+
+Root relaxation solution time = 29.03 sec. (1102.57 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0     -267.8687   584                   -267.8687    23266         
+      0     0        cutoff                                      24813         
+Elapsed time = 54.74 sec. (2777.19 ticks, tree = 0.01 MB, solutions = 0)
+
+Root node processing (before b&c):
+  Real time             =   54.77 sec. (2778.81 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =   54.77 sec. (2778.81 ticks)
+MIP status(119): integer infeasible or unbounded
+Cplex Time: 55.02sec (det. 2779.13 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:01:41.889
+--- fixed_problem.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:01:41.890
+--- fixed_problem.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:01:42.870
+--- fixed_problem.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:01:43.136
+--- fixed_problem.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:01:43.400
+--- fixed_problem.gms(1736) 51 Mb
+--- LOOPS iter = iter8
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:01:43.865
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Tried aggregator 1 time.
+MIP Presolve eliminated 2731 rows and 4945 columns.
+MIP Presolve modified 4628 coefficients.
+Reduced MIP has 67771 rows, 104580 columns, and 237180 nonzeros.
+Reduced MIP has 1458 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.34 sec. (114.72 ticks)
+Probing fixed 12 vars, tightened 0 bounds.
+Probing time = 0.26 sec. (8.04 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 1847 rows and 3360 columns.
+Reduced MIP has 65924 rows, 101220 columns, and 231027 nonzeros.
+Reduced MIP has 1446 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 1.64 sec. (151.20 ticks)
+Probing time = 1.56 sec. (3.89 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
+Parallel mode: deterministic, using up to 6 threads for concurrent optimization:
+ * Starting dual Simplex on 1 thread...
+ * Starting Barrier on 4 threads...
+ * Starting primal Simplex on 1 thread...
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Dual objective     =          -283.433405
+Perturbation started.
+Iteration:   101   Dual objective     =          -283.433405
+Iteration:   893   Dual objective     =          -283.349272
+Iteration:  2087   Dual objective     =          -283.179422
+Iteration:  2928   Dual objective     =          -283.056770
+Iteration:  3771   Dual objective     =          -282.889966
+Iteration:  4459   Dual objective     =          -282.697916
+Iteration:  5302   Dual objective     =          -282.282478
+Iteration:  6197   Dual objective     =          -281.857845
+Iteration:  7040   Dual objective     =          -281.323131
+Iteration:  7877   Dual objective     =          -280.736523
+Iteration:  8681   Dual objective     =          -280.076595
+Iteration:  9516   Dual objective     =          -279.375083
+Iteration: 10305   Dual objective     =          -278.549033
+Iteration: 10994   Dual objective     =          -277.092657
+Iteration: 11671   Dual objective     =          -275.692194
+Iteration: 12382   Dual objective     =          -274.402138
+Iteration: 13107   Dual objective     =          -273.222021
+Iteration: 13852   Dual objective     =          -272.239912
+Iteration: 14647   Dual objective     =          -271.452675
+Iteration: 15453   Dual objective     =          -270.760684
+Iteration: 16274   Dual objective     =          -270.182978
+Iteration: 17092   Dual objective     =          -269.795866
+Iteration: 17924   Dual objective     =          -269.543783
+Iteration: 18717   Dual objective     =          -269.324674
+Iteration: 19458   Dual objective     =          -269.144604
+Iteration: 20186   Dual objective     =          -268.991627
+Iteration: 20880   Dual objective     =          -268.904456
+Iteration: 21641   Dual objective     =          -268.838806
+Iteration: 22362   Dual objective     =          -268.812198
+Removing perturbation.
+Iteration: 22751    Objective     =          -270.721356
+
+Primal simplex solved model.
+
+Root relaxation solution time = 15.11 sec. (999.75 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0     -270.7223   368                   -270.7223    12918         
+      0     0        cutoff                                      13736         
+Elapsed time = 35.44 sec. (2124.78 ticks, tree = 0.01 MB, solutions = 0)
+
+Root node processing (before b&c):
+  Real time             =   35.56 sec. (2126.40 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =   35.56 sec. (2126.40 ticks)
+MIP status(119): integer infeasible or unbounded
+Cplex Time: 35.56sec (det. 2126.71 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:02:20.163
+--- fixed_problem.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:02:20.164
+--- fixed_problem.gms(1704) 51 Mb  4 secs
+--- fixed_problem.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:02:24.682
+--- fixed_problem.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:02:25.672
+--- fixed_problem.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:02:26.148
+--- fixed_problem.gms(1736) 51 Mb
+--- LOOPS iter = iter9
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:02:27.269
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Tried aggregator 1 time.
+MIP Presolve eliminated 2662 rows and 4995 columns.
+MIP Presolve modified 3901 coefficients.
+Reduced MIP has 67840 rows, 104530 columns, and 237265 nonzeros.
+Reduced MIP has 1453 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.72 sec. (114.49 ticks)
+Probing fixed 2 vars, tightened 0 bounds.
+Probing time = 0.94 sec. (6.01 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 1596 rows and 2960 columns.
+Reduced MIP has 66244 rows, 101570 columns, and 232102 nonzeros.
+Reduced MIP has 1451 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 1.75 sec. (152.01 ticks)
+Probing time = 1.22 sec. (3.89 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
+Parallel mode: deterministic, using up to 6 threads for concurrent optimization:
+ * Starting dual Simplex on 1 thread...
+ * Starting Barrier on 4 threads...
+ * Starting primal Simplex on 1 thread...
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Dual objective     =          -270.881731
+Perturbation started.
+Iteration:   101   Dual objective     =          -270.881731
+Iteration:   953   Dual objective     =          -270.759292
+Iteration:  2278   Dual objective     =          -270.520171
+Iteration:  3052   Dual objective     =          -270.380297
+Iteration:  3939   Dual objective     =          -270.164810
+Iteration:  4873   Dual objective     =          -269.915657
+Iteration:  5823   Dual objective     =          -269.680010
+Iteration:  6750   Dual objective     =          -269.467801
+Iteration:  7632   Dual objective     =          -269.252146
+Iteration:  8488   Dual objective     =          -268.994497
+Iteration:  9114   Dual objective     =          -267.588136
+Iteration:  9846   Dual objective     =          -266.238797
+Iteration: 10576   Dual objective     =          -265.028363
+Iteration: 11276   Dual objective     =          -263.935027
+Iteration: 11980   Dual objective     =          -263.022486
+Iteration: 12718   Dual objective     =          -262.166782
+Iteration: 13466   Dual objective     =          -261.466778
+Iteration: 14166   Dual objective     =          -261.080423
+Iteration: 14903   Dual objective     =          -260.806811
+Iteration: 15630   Dual objective     =          -260.580771
+Iteration: 16394   Dual objective     =          -260.429235
+Iteration: 17103   Dual objective     =          -260.307348
+Iteration: 17774   Dual objective     =          -260.224267
+Iteration: 18474   Dual objective     =          -260.155230
+Iteration: 19161   Dual objective     =          -260.111586
+Iteration: 19812   Dual objective     =          -260.090436
+Removing perturbation.
+Iteration: 20316    Objective     =          -261.639465
+
+Dual simplex solved model.
+
+Root relaxation solution time = 12.81 sec. (1072.23 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0     -261.6409   651                   -261.6409    20417         
+      0     0        cutoff                                      21590         
+Elapsed time = 36.13 sec. (2967.11 ticks, tree = 0.01 MB, solutions = 0)
+
+Root node processing (before b&c):
+  Real time             =   36.19 sec. (2968.73 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =   36.19 sec. (2968.73 ticks)
+MIP status(119): integer infeasible or unbounded
+Cplex Time: 36.70sec (det. 2969.04 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:03:05.550
+--- fixed_problem.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:03:05.550
+--- fixed_problem.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:03:08.485
+--- fixed_problem.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:03:09.330
+--- fixed_problem.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:03:10.104
+--- fixed_problem.gms(1736) 51 Mb
+--- LOOPS iter = iter10
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:03:11.519
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Tried aggregator 1 time.
+MIP Presolve eliminated 2566 rows and 5235 columns.
+MIP Presolve modified 5435 coefficients.
+Reduced MIP has 67936 rows, 104290 columns, and 237240 nonzeros.
+Reduced MIP has 1429 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 1.22 sec. (114.72 ticks)
+Probing fixed 1432 vars, tightened 18444 bounds.
+Probing time = 2.20 sec. (37.06 ticks)
+
+Root node processing (before b&c):
+  Real time             =    5.64 sec. (326.71 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    5.64 sec. (326.71 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 6.67sec (det. 327.03 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:03:19.949
+--- fixed_problem.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:03:19.949
+--- fixed_problem.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:03:22.362
+--- fixed_problem.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:03:23.025
+--- fixed_problem.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:03:23.465
+--- fixed_problem.gms(1736) 51 Mb
+--- LOOPS iter = iter11
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:03:24.055
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Tried aggregator 1 time.
+MIP Presolve eliminated 2307 rows and 5145 columns.
+MIP Presolve modified 3666 coefficients.
+Reduced MIP has 68195 rows, 104380 columns, and 238028 nonzeros.
+Reduced MIP has 1438 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.38 sec. (114.49 ticks)
+Probing fixed 16 vars, tightened 0 bounds.
+Probing time = 0.34 sec. (8.43 ticks)
+Presolve time = 0.08 sec. (21.58 ticks)
+
+Root node processing (before b&c):
+  Real time             =    1.39 sec. (312.36 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    1.39 sec. (312.36 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 1.42sec (det. 312.67 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:03:26.140
+--- fixed_problem.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:03:26.140
+--- fixed_problem.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:03:27.513
+--- fixed_problem.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:03:28.005
+--- fixed_problem.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:03:28.449
+--- fixed_problem.gms(1736) 51 Mb
+--- LOOPS iter = iter12
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:03:29.132
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Row 'Const_chance_2' infeasible, all entries at implied bounds.
+Presolve time = 0.38 sec. (23.72 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.39 sec. (30.00 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.39 sec. (30.00 ticks)
+MIP status(103): integer infeasible
+Cplex Time: 1.50sec (det. 30.31 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:03:32.788
+--- fixed_problem.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:03:32.788
+--- fixed_problem.gms(1704) 51 Mb  3 secs
+--- fixed_problem.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:03:36.828
+--- fixed_problem.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:03:38.131
+--- fixed_problem.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:03:39.642
+--- fixed_problem.gms(1736) 51 Mb
+--- LOOPS iter = iter13
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:03:41.941
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Tried aggregator 1 time.
+MIP Presolve eliminated 2125 rows and 5005 columns.
+MIP Presolve modified 3378 coefficients.
+Reduced MIP has 68377 rows, 104520 columns, and 238812 nonzeros.
+Reduced MIP has 1452 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 1.17 sec. (114.53 ticks)
+Probing fixed 4 vars, tightened 0 bounds.
+Probing time = 2.47 sec. (6.45 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 1768 rows and 3160 columns.
+Reduced MIP has 66609 rows, 101360 columns, and 233128 nonzeros.
+Reduced MIP has 1448 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 2.55 sec. (152.04 ticks)
+Probing time = 1.56 sec. (3.90 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
+Parallel mode: deterministic, using up to 6 threads for concurrent optimization:
+ * Starting dual Simplex on 1 thread...
+ * Starting Barrier on 4 threads...
+ * Starting primal Simplex on 1 thread...
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Dual objective     =          -276.294216
+Perturbation started.
+Iteration:   101   Dual objective     =          -276.294216
+Iteration:  1074   Dual objective     =          -276.148669
+Iteration:  2417   Dual objective     =          -275.910927
+Iteration:  3179   Dual objective     =          -275.754495
+Iteration:  4118   Dual objective     =          -275.493717
+Iteration:  5066   Dual objective     =          -275.250716
+Iteration:  5983   Dual objective     =          -275.027925
+Iteration:  6833   Dual objective     =          -274.794138
+Iteration:  7740   Dual objective     =          -274.436230
+Iteration:  8650   Dual objective     =          -274.028450
+Iteration:  9295   Dual objective     =          -272.680925
+Iteration:  9940   Dual objective     =          -271.622786
+Iteration: 10611   Dual objective     =          -270.568811
+Iteration: 11289   Dual objective     =          -269.493670
+Iteration: 11953   Dual objective     =          -268.636280
+Iteration: 12675   Dual objective     =          -267.743636
+Iteration: 13417   Dual objective     =          -266.942218
+Iteration: 14223   Dual objective     =          -266.227452
+Iteration: 15048   Dual objective     =          -265.713292
+Iteration: 15885   Dual objective     =          -265.388659
+Iteration: 16688   Dual objective     =          -265.157451
+Iteration: 17313   Dual objective     =          -265.003828
+Iteration: 18012   Dual objective     =          -264.880747
+Iteration: 18802   Dual objective     =          -264.772990
+Iteration: 19501   Dual objective     =          -264.715182
+Iteration: 20212   Dual objective     =          -264.674161
+Iteration: 20909   Dual objective     =          -264.655233
+Removing perturbation.
+Iteration: 21171    Objective     =          -266.327427
+
+Dual simplex solved model.
+
+Root relaxation solution time = 24.59 sec. (924.64 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0     -266.3285   483                   -266.3285    21263         
+      0     0        cutoff                                      22929         
+Elapsed time = 54.97 sec. (2532.54 ticks, tree = 0.01 MB, solutions = 0)
+
+Root node processing (before b&c):
+  Real time             =   55.05 sec. (2534.16 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =   55.05 sec. (2534.16 ticks)
+MIP status(119): integer infeasible or unbounded
+Cplex Time: 56.48sec (det. 2534.47 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:04:40.711
+--- fixed_problem.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:04:40.711
+--- fixed_problem.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:04:41.799
+--- fixed_problem.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:04:42.291
+--- fixed_problem.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:04:43.189
+--- fixed_problem.gms(1736) 51 Mb
+--- LOOPS iter = iter14
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:04:44.716
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Tried aggregator 1 time.
+MIP Presolve eliminated 1956 rows and 4875 columns.
+MIP Presolve modified 3379 coefficients.
+Reduced MIP has 68546 rows, 104650 columns, and 239540 nonzeros.
+Reduced MIP has 1465 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 1.17 sec. (114.63 ticks)
+Probing fixed 7 vars, tightened 0 bounds.
+Probing time = 3.59 sec. (7.26 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 1477 rows and 2590 columns.
+Reduced MIP has 67069 rows, 102060 columns, and 234738 nonzeros.
+Reduced MIP has 1458 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 3.86 sec. (152.82 ticks)
+Probing time = 1.33 sec. (3.94 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
+Parallel mode: deterministic, using up to 6 threads for concurrent optimization:
+ * Starting dual Simplex on 1 thread...
+ * Starting Barrier on 4 threads...
+ * Starting primal Simplex on 1 thread...
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Dual objective     =          -277.709526
+Perturbation started.
+Iteration:   101   Dual objective     =          -277.709526
+Iteration:   866   Dual objective     =          -277.619701
+Iteration:  2080   Dual objective     =          -277.421274
+Iteration:  2895   Dual objective     =          -277.288905
+Iteration:  3671   Dual objective     =          -277.114677
+Iteration:  4611   Dual objective     =          -276.892320
+Iteration:  5543   Dual objective     =          -276.631611
+Iteration:  6466   Dual objective     =          -276.417146
+Iteration:  7401   Dual objective     =          -276.205779
+Iteration:  8257   Dual objective     =          -275.998509
+Iteration:  8903   Dual objective     =          -275.489026
+Iteration:  9543   Dual objective     =          -274.269819
+Iteration: 10209   Dual objective     =          -273.157534
+Iteration: 10849   Dual objective     =          -272.248034
+Iteration: 11541   Dual objective     =          -271.156181
+Iteration: 12233   Dual objective     =          -270.157821
+Iteration: 12938   Dual objective     =          -269.242138
+Iteration: 13686   Dual objective     =          -268.408238
+Iteration: 14480   Dual objective     =          -267.794163
+Iteration: 15249   Dual objective     =          -267.402826
+Iteration: 16080   Dual objective     =          -267.061530
+Iteration: 16763   Dual objective     =          -266.800762
+Iteration: 17491   Dual objective     =          -266.616866
+Iteration: 18161   Dual objective     =          -266.477044
+Iteration: 18830   Dual objective     =          -266.360082
+Iteration: 19479   Dual objective     =          -266.272586
+Iteration: 20097   Dual objective     =          -266.214968
+Iteration: 20723   Dual objective     =          -266.173304
+Iteration: 21412   Dual objective     =          -266.138406
+Iteration: 22038   Dual objective     =          -266.127351
+Removing perturbation.
+Iteration: 22225    Objective     =          -267.789108
+
+Dual simplex solved model.
+
+Root relaxation solution time = 16.50 sec. (1088.49 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0     -267.7904   652                   -267.7904    22350         
+      0     0        cutoff                                      24575         
+Elapsed time = 51.02 sec. (3036.64 ticks, tree = 0.01 MB, solutions = 0)
+
+Root node processing (before b&c):
+  Real time             =   51.06 sec. (3038.27 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =   51.06 sec. (3038.27 ticks)
+MIP status(119): integer infeasible or unbounded
+Cplex Time: 51.45sec (det. 3038.58 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:05:37.635
+--- fixed_problem.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:05:37.637
+--- fixed_problem.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:05:39.107
+--- fixed_problem.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:05:39.731
+--- fixed_problem.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:05:40.325
+--- fixed_problem.gms(1736) 51 Mb
+--- LOOPS iter = iter15
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:05:41.286
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Tried aggregator 1 time.
+MIP Presolve eliminated 1917 rows and 4845 columns.
+MIP Presolve modified 3070 coefficients.
+Reduced MIP has 68585 rows, 104680 columns, and 239708 nonzeros.
+Reduced MIP has 1468 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.50 sec. (114.68 ticks)
+Probing fixed 5 vars, tightened 0 bounds.
+Probing time = 0.52 sec. (6.49 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 1286 rows and 2270 columns.
+Reduced MIP has 67299 rows, 102410 columns, and 235543 nonzeros.
+Reduced MIP has 1463 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 1.08 sec. (152.70 ticks)
+Probing time = 0.39 sec. (3.97 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
+Parallel mode: deterministic, using up to 6 threads for concurrent optimization:
+ * Starting dual Simplex on 1 thread...
+ * Starting Barrier on 4 threads...
+ * Starting primal Simplex on 1 thread...
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Dual objective     =          -281.821454
+Perturbation started.
+Iteration:   101   Dual objective     =          -281.821454
+Iteration:   697   Dual objective     =          -281.777313
+Iteration:  1690   Dual objective     =          -281.655327
+Iteration:  2884   Dual objective     =          -281.496980
+Iteration:  3672   Dual objective     =          -281.354248
+Iteration:  4550   Dual objective     =          -281.176671
+Iteration:  5481   Dual objective     =          -280.995745
+Iteration:  6372   Dual objective     =          -280.812289
+Iteration:  7098   Dual objective     =          -280.614042
+Iteration:  7886   Dual objective     =          -280.377238
+Iteration:  8763   Dual objective     =          -279.903211
+Iteration:  9616   Dual objective     =          -279.398360
+Iteration: 10256   Dual objective     =          -278.606157
+Iteration: 10894   Dual objective     =          -277.682473
+Iteration: 11554   Dual objective     =          -276.717266
+Iteration: 12214   Dual objective     =          -275.812557
+Iteration: 12914   Dual objective     =          -274.871613
+Iteration: 13612   Dual objective     =          -273.994553
+Iteration: 14332   Dual objective     =          -273.156164
+Iteration: 15109   Dual objective     =          -272.361541
+Iteration: 15885   Dual objective     =          -271.852831
+Iteration: 16662   Dual objective     =          -271.425849
+Iteration: 17441   Dual objective     =          -271.146192
+Iteration: 18185   Dual objective     =          -270.926568
+Iteration: 18867   Dual objective     =          -270.737782
+Iteration: 19572   Dual objective     =          -270.592654
+Iteration: 20240   Dual objective     =          -270.489841
+Iteration: 20896   Dual objective     =          -270.397808
+Iteration: 21491   Dual objective     =          -270.325539
+Iteration: 22178   Dual objective     =          -270.262994
+Iteration: 22852   Dual objective     =          -270.210307
+Iteration: 23501   Dual objective     =          -270.177661
+Iteration: 24127   Dual objective     =          -270.161442
+Removing perturbation.
+Iteration: 24655    Objective     =          -271.876040
+
+Dual simplex solved model.
+
+Root relaxation solution time = 16.98 sec. (1378.43 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0     -271.8778   791                   -271.8778    24803         
+      0     0        cutoff                                      27461         
+Elapsed time = 32.45 sec. (3061.81 ticks, tree = 0.01 MB, solutions = 0)
+
+Root node processing (before b&c):
+  Real time             =   32.56 sec. (3063.44 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =   32.56 sec. (3063.44 ticks)
+MIP status(119): integer infeasible or unbounded
+Cplex Time: 32.58sec (det. 3063.75 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:06:14.766
+--- fixed_problem.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:06:14.772
+--- fixed_problem.gms(1704) 51 Mb  3 secs
+--- fixed_problem.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:06:18.315
+--- fixed_problem.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:06:19.057
+--- fixed_problem.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:06:19.901
+--- fixed_problem.gms(1736) 51 Mb
+--- LOOPS iter = iter16
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:06:21.293
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Tried aggregator 1 time.
+MIP Presolve eliminated 2241 rows and 4845 columns.
+MIP Presolve modified 4380 coefficients.
+Reduced MIP has 68261 rows, 104680 columns, and 238768 nonzeros.
+Reduced MIP has 1468 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.49 sec. (114.68 ticks)
+Probing fixed 4 vars, tightened 0 bounds.
+Probing time = 0.45 sec. (6.44 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 1207 rows and 2200 columns.
+Reduced MIP has 67054 rows, 102480 columns, and 234831 nonzeros.
+Reduced MIP has 1464 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 1.23 sec. (153.12 ticks)
+Probing time = 0.19 sec. (3.92 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
+Parallel mode: deterministic, using up to 6 threads for concurrent optimization:
+ * Starting dual Simplex on 1 thread...
+ * Starting Barrier on 4 threads...
+ * Starting primal Simplex on 1 thread...
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Dual objective     =          -269.728942
+Perturbation started.
+Iteration:   101   Dual objective     =          -269.728942
+Iteration:   798   Dual objective     =          -269.650486
+Iteration:  1979   Dual objective     =          -269.454207
+Iteration:  2839   Dual objective     =          -269.314469
+Iteration:  3631   Dual objective     =          -269.131769
+Iteration:  4570   Dual objective     =          -268.916932
+Iteration:  5518   Dual objective     =          -268.707102
+Iteration:  6460   Dual objective     =          -268.497392
+Iteration:  7365   Dual objective     =          -268.225337
+Iteration:  8250   Dual objective     =          -268.008372
+Iteration:  8842   Dual objective     =          -267.730957
+Iteration:  9472   Dual objective     =          -266.433277
+Iteration: 10227   Dual objective     =          -265.185641
+Iteration: 10964   Dual objective     =          -264.166701
+Iteration: 11674   Dual objective     =          -263.131090
+Iteration: 12414   Dual objective     =          -262.126063
+Iteration: 13155   Dual objective     =          -261.337712
+Iteration: 13881   Dual objective     =          -260.801635
+Iteration: 14581   Dual objective     =          -260.551637
+Iteration: 15251   Dual objective     =          -260.345554
+Iteration: 15948   Dual objective     =          -260.187299
+Iteration: 16682   Dual objective     =          -260.059334
+Iteration: 17355   Dual objective     =          -259.981362
+Iteration: 18036   Dual objective     =          -259.925241
+Iteration: 18679   Dual objective     =          -259.896017
+Iteration: 19287   Dual objective     =          -259.884674
+Removing perturbation.
+Iteration: 19423    Objective     =          -261.404052
+
+Dual simplex solved model.
+
+Root relaxation solution time = 11.98 sec. (1042.49 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0     -261.4057   669                   -261.4057    19514         
+      0     0     -260.6922   669                  Cuts: 5136    36295         
+      0     0        cutoff                                      38557         
+Elapsed time = 78.06 sec. (7668.06 ticks, tree = 0.01 MB, solutions = 0)
+
+Implied bound cuts applied:  1825
+Flow cuts applied:  684
+Mixed integer rounding cuts applied:  1140
+Gomory fractional cuts applied:  46
+
+Root node processing (before b&c):
+  Real time             =   78.13 sec. (7669.72 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =   78.13 sec. (7669.72 ticks)
+MIP status(119): integer infeasible or unbounded
+Cplex Time: 78.14sec (det. 7670.04 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- fixed_problem.gms(1736) 51 Mb  82 secs
+--- Executing after solve: elapsed 0:07:42.895
+--- fixed_problem.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:07:42.895
+--- fixed_problem.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:07:44.521
+--- fixed_problem.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:07:45.188
+--- fixed_problem.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:07:45.709
+--- fixed_problem.gms(1736) 51 Mb
+--- LOOPS iter = iter17
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:07:46.742
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Tried aggregator 1 time.
+MIP Presolve eliminated 2190 rows and 5055 columns.
+MIP Presolve modified 2859 coefficients.
+Reduced MIP has 68312 rows, 104470 columns, and 238532 nonzeros.
+Reduced MIP has 1447 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.81 sec. (114.48 ticks)
+Probing fixed 8 vars, tightened 0 bounds.
+Probing time = 0.80 sec. (7.65 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 2117 rows and 3740 columns.
+Reduced MIP has 66195 rows, 100730 columns, and 231679 nonzeros.
+Reduced MIP has 1439 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 1.73 sec. (151.17 ticks)
+Probing time = 0.14 sec. (3.89 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
+Parallel mode: deterministic, using up to 6 threads for concurrent optimization:
+ * Starting dual Simplex on 1 thread...
+ * Starting Barrier on 4 threads...
+ * Starting primal Simplex on 1 thread...
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Dual objective     =          -280.370120
+Perturbation started.
+Iteration:   101   Dual objective     =          -280.370120
+Iteration:  1242   Dual objective     =          -280.187447
+Iteration:  2121   Dual objective     =          -280.031706
+Iteration:  2968   Dual objective     =          -279.874318
+Iteration:  3890   Dual objective     =          -279.618019
+Iteration:  4742   Dual objective     =          -279.392402
+Iteration:  5638   Dual objective     =          -278.970738
+Iteration:  6571   Dual objective     =          -278.575247
+Iteration:  7498   Dual objective     =          -278.068810
+Iteration:  8407   Dual objective     =          -277.580071
+Iteration:  9124   Dual objective     =          -276.817568
+Iteration:  9764   Dual objective     =          -275.375774
+Iteration: 10561   Dual objective     =          -274.053400
+Iteration: 11331   Dual objective     =          -272.708689
+Iteration: 12097   Dual objective     =          -271.478398
+Iteration: 12846   Dual objective     =          -270.415526
+Iteration: 13579   Dual objective     =          -269.513449
+Iteration: 14308   Dual objective     =          -268.803238
+Iteration: 15024   Dual objective     =          -268.330280
+Iteration: 15731   Dual objective     =          -268.076030
+Iteration: 16457   Dual objective     =          -267.864501
+Iteration: 17216   Dual objective     =          -267.616699
+Iteration: 17964   Dual objective     =          -267.455469
+Iteration: 18792   Dual objective     =          -267.305791
+Iteration: 19583   Dual objective     =          -267.195127
+Iteration: 20405   Dual objective     =          -267.110650
+Iteration: 21227   Dual objective     =          -267.045460
+Iteration: 22008   Dual objective     =          -267.013563
+Removing perturbation.
+Iteration: 22611    Objective     =          -268.747808
+
+Primal simplex solved model.
+
+Root relaxation solution time = 11.44 sec. (925.05 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0     -268.7500   374                   -268.7500    12107         
+      0     0        cutoff                                      14065         
+Elapsed time = 23.74 sec. (2238.85 ticks, tree = 0.01 MB, solutions = 0)
+
+Root node processing (before b&c):
+  Real time             =   23.77 sec. (2240.46 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =   23.77 sec. (2240.46 ticks)
+MIP status(119): integer infeasible or unbounded
+Cplex Time: 23.81sec (det. 2240.77 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:08:11.897
+--- fixed_problem.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:08:11.897
+--- fixed_problem.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:08:13.059
+--- fixed_problem.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:08:13.422
+--- fixed_problem.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:08:13.688
+--- fixed_problem.gms(1736) 51 Mb
+--- LOOPS iter = iter18
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:08:14.137
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Tried aggregator 1 time.
+MIP Presolve eliminated 2047 rows and 4945 columns.
+MIP Presolve modified 3212 coefficients.
+Reduced MIP has 68455 rows, 104580 columns, and 239148 nonzeros.
+Reduced MIP has 1458 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.30 sec. (114.57 ticks)
+Probing fixed 4 vars, tightened 0 bounds.
+Probing time = 0.14 sec. (6.45 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 1570 rows and 2800 columns.
+Reduced MIP has 66885 rows, 101780 columns, and 234094 nonzeros.
+Reduced MIP has 1454 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.58 sec. (152.22 ticks)
+Probing time = 0.08 sec. (3.92 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
+Parallel mode: deterministic, using up to 6 threads for concurrent optimization:
+ * Starting dual Simplex on 1 thread...
+ * Starting Barrier on 4 threads...
+ * Starting primal Simplex on 1 thread...
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Dual objective     =          -276.485049
+Perturbation started.
+Iteration:   101   Dual objective     =          -276.485049
+Iteration:   857   Dual objective     =          -276.395421
+Iteration:  2116   Dual objective     =          -276.189523
+Iteration:  2906   Dual objective     =          -276.062375
+Iteration:  3793   Dual objective     =          -275.853780
+Iteration:  4725   Dual objective     =          -275.580426
+Iteration:  5619   Dual objective     =          -275.356988
+Iteration:  6501   Dual objective     =          -275.143394
+Iteration:  7382   Dual objective     =          -274.828472
+Iteration:  8299   Dual objective     =          -274.406771
+Iteration:  9116   Dual objective     =          -273.782344
+Iteration:  9765   Dual objective     =          -272.523364
+Iteration: 10435   Dual objective     =          -271.491613
+Iteration: 11073   Dual objective     =          -270.455375
+Iteration: 11808   Dual objective     =          -269.427255
+Iteration: 12565   Dual objective     =          -268.434496
+Iteration: 13302   Dual objective     =          -267.514268
+Iteration: 14052   Dual objective     =          -266.779467
+Iteration: 14777   Dual objective     =          -266.269482
+Iteration: 15494   Dual objective     =          -266.020810
+Iteration: 16220   Dual objective     =          -265.751808
+Iteration: 16958   Dual objective     =          -265.570326
+Iteration: 17667   Dual objective     =          -265.444542
+Iteration: 18412   Dual objective     =          -265.328154
+Iteration: 19106   Dual objective     =          -265.250168
+Iteration: 19867   Dual objective     =          -265.182737
+Iteration: 20607   Dual objective     =          -265.141356
+Iteration: 21256   Dual objective     =          -265.125265
+Removing perturbation.
+Iteration: 21619    Objective     =          -266.739946
+
+Dual simplex solved model.
+
+Root relaxation solution time = 11.23 sec. (1135.56 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0     -266.7416   612                   -266.7416    21727         
+      0     0        cutoff                                      22835         
+Elapsed time = 24.53 sec. (3213.19 ticks, tree = 0.01 MB, solutions = 0)
+
+Root node processing (before b&c):
+  Real time             =   24.59 sec. (3214.81 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =   24.59 sec. (3214.81 ticks)
+MIP status(119): integer infeasible or unbounded
+Cplex Time: 24.59sec (det. 3215.12 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:08:39.452
+--- fixed_problem.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:08:39.452
+--- fixed_problem.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:08:40.636
+--- fixed_problem.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:08:41.233
+--- fixed_problem.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:08:41.652
+--- fixed_problem.gms(1736) 51 Mb
+--- LOOPS iter = iter19
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:08:42.195
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Tried aggregator 1 time.
+MIP Presolve eliminated 2161 rows and 4965 columns.
+MIP Presolve modified 6528 coefficients.
+Reduced MIP has 68341 rows, 104560 columns, and 238860 nonzeros.
+Reduced MIP has 1456 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.23 sec. (114.91 ticks)
+Probing fixed 5 vars, tightened 0 bounds.
+Probing time = 0.14 sec. (7.20 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 1594 rows and 2990 columns.
+Reduced MIP has 66747 rows, 101570 columns, and 233611 nonzeros.
+Reduced MIP has 1451 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.56 sec. (151.97 ticks)
+Probing time = 0.14 sec. (3.89 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
+Parallel mode: deterministic, using up to 6 threads for concurrent optimization:
+ * Starting dual Simplex on 1 thread...
+ * Starting Barrier on 4 threads...
+ * Starting primal Simplex on 1 thread...
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Dual objective     =          -272.262599
+Perturbation started.
+Iteration:   101   Dual objective     =          -272.262599
+Iteration:   945   Dual objective     =          -272.153164
+Iteration:  2202   Dual objective     =          -271.937855
+Iteration:  3041   Dual objective     =          -271.789004
+Iteration:  3942   Dual objective     =          -271.539058
+Iteration:  4844   Dual objective     =          -271.300361
+Iteration:  5678   Dual objective     =          -271.093263
+Iteration:  6591   Dual objective     =          -270.750217
+Iteration:  7496   Dual objective     =          -270.307399
+Iteration:  8417   Dual objective     =          -269.919919
+Iteration:  9139   Dual objective     =          -269.017361
+Iteration:  9788   Dual objective     =          -267.809389
+Iteration: 10449   Dual objective     =          -266.872357
+Iteration: 11102   Dual objective     =          -265.985932
+Iteration: 11801   Dual objective     =          -265.034036
+Iteration: 12534   Dual objective     =          -264.173242
+Iteration: 13272   Dual objective     =          -263.419838
+Iteration: 14013   Dual objective     =          -262.871041
+Iteration: 14798   Dual objective     =          -262.425723
+Iteration: 15608   Dual objective     =          -262.116239
+Iteration: 16319   Dual objective     =          -261.962713
+Iteration: 17029   Dual objective     =          -261.840407
+Iteration: 17719   Dual objective     =          -261.758718
+Iteration: 18433   Dual objective     =          -261.699190
+Iteration: 19089   Dual objective     =          -261.665058
+Removing perturbation.
+Iteration: 19807    Objective     =          -263.233947
+
+Dual simplex solved model.
+
+Root relaxation solution time = 6.69 sec. (829.99 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0     -263.2358   480                   -263.2358    19888         
+      0     0        cutoff                                      21905         
+Elapsed time = 25.19 sec. (3297.27 ticks, tree = 0.01 MB, solutions = 0)
+
+Implied bound cuts applied:  476
+Flow cuts applied:  103
+Mixed integer rounding cuts applied:  330
+Gomory fractional cuts applied:  12
+
+Root node processing (before b&c):
+  Real time             =   25.22 sec. (3298.90 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =   25.22 sec. (3298.90 ticks)
+MIP status(119): integer infeasible or unbounded
+Cplex Time: 25.23sec (det. 3299.21 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:09:07.859
+--- fixed_problem.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:09:07.859
+--- fixed_problem.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:09:09.090
+--- fixed_problem.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:09:09.619
+--- fixed_problem.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:09:10.250
+--- fixed_problem.gms(1736) 51 Mb
+--- LOOPS iter = iter20
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:09:10.870
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Tried aggregator 1 time.
+MIP Presolve eliminated 2034 rows and 4935 columns.
+MIP Presolve modified 3567 coefficients.
+Reduced MIP has 68468 rows, 104590 columns, and 239204 nonzeros.
+Reduced MIP has 1459 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.49 sec. (114.57 ticks)
+Probing fixed 3 vars, tightened 0 bounds.
+Probing time = 0.33 sec. (6.44 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+MIP Presolve eliminated 1491 rows and 2670 columns.
+Reduced MIP has 66977 rows, 101920 columns, and 234416 nonzeros.
+Reduced MIP has 1456 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 1.25 sec. (152.57 ticks)
+Probing time = 0.19 sec. (3.92 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Parallel mode: deterministic, using up to 2 threads for parallel tasks at root LP.
+Parallel mode: deterministic, using up to 6 threads for concurrent optimization:
+ * Starting dual Simplex on 1 thread...
+ * Starting Barrier on 4 threads...
+ * Starting primal Simplex on 1 thread...
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Dual objective     =          -276.288197
+Perturbation started.
+Iteration:   101   Dual objective     =          -276.288197
+Iteration:   804   Dual objective     =          -276.207892
+Iteration:  2071   Dual objective     =          -275.997209
+Iteration:  2959   Dual objective     =          -275.860141
+Iteration:  3816   Dual objective     =          -275.663229
+Iteration:  4705   Dual objective     =          -275.389864
+Iteration:  5526   Dual objective     =          -275.172052
+Iteration:  6448   Dual objective     =          -274.826488
+Iteration:  7358   Dual objective     =          -274.425437
+Iteration:  8252   Dual objective     =          -273.982867
+Iteration:  9160   Dual objective     =          -273.556516
+Iteration:  9810   Dual objective     =          -272.277340
+Iteration: 10462   Dual objective     =          -271.292375
+Iteration: 11108   Dual objective     =          -270.292668
+Iteration: 11861   Dual objective     =          -269.181227
+Iteration: 12611   Dual objective     =          -268.095190
+Iteration: 13332   Dual objective     =          -267.215205
+Iteration: 14091   Dual objective     =          -266.355119
+Iteration: 14811   Dual objective     =          -265.794508
+Iteration: 15543   Dual objective     =          -265.411420
+Iteration: 16251   Dual objective     =          -265.144662
+Iteration: 16978   Dual objective     =          -264.885719
+Iteration: 17738   Dual objective     =          -264.707379
+Iteration: 18482   Dual objective     =          -264.563721
+Iteration: 19224   Dual objective     =          -264.469195
+Iteration: 19920   Dual objective     =          -264.415637
+Iteration: 20623   Dual objective     =          -264.383273
+Removing perturbation.
+Iteration: 21186    Objective     =          -266.011759
+
+Dual simplex solved model.
+
+Root relaxation solution time = 13.47 sec. (1083.02 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0     -266.0139   521                   -266.0139    21291         
+      0     0        cutoff                                      24283         
+Elapsed time = 30.76 sec. (2940.42 ticks, tree = 0.01 MB, solutions = 0)
+
+Root node processing (before b&c):
+  Real time             =   30.84 sec. (2942.04 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =   30.84 sec. (2942.04 ticks)
+MIP status(119): integer infeasible or unbounded
+Cplex Time: 30.86sec (det. 2942.35 ticks)
+CPLEX Error  1217: No solution exists.
+Problem is integer infeasible.
+--- Reading solution for model schedule
+--- fixed_problem.gms(1736) 51 Mb  32 secs
+--- Executing after solve: elapsed 0:09:42.563
+--- fixed_problem.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:09:42.564
+--- fixed_problem.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:09:43.701
+--- fixed_problem.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:09:44.139
+--- fixed_problem.gms(1712) 51 Mb
+--- Starting Equ Const_chance_2: elapsed 0:09:44.618
+--- fixed_problem.gms(1736) 51 Mb
+--- LOOPS iter = iter21
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:09:45.229
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Found incumbent of value 0.000000 after 0.02 sec. (4.49 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 13723 rows and 4525 columns.
+MIP Presolve modified 8778 coefficients.
+Reduced MIP has 56779 rows, 105000 columns, and 204834 nonzeros.
+Reduced MIP has 1500 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.42 sec. (99.03 ticks)
+Probing time = 0.55 sec. (3.29 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 56779 rows, 105000 columns, and 204834 nonzeros.
+Reduced MIP has 1500 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 1.08 sec. (142.58 ticks)
+
+Root node processing (before b&c):
+  Real time             =    2.44 sec. (287.75 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    2.44 sec. (287.75 ticks)
+MIP status(101): integer optimal solution
+Cplex Time: 2.44sec (det. 288.07 ticks)
+Fixing integer variables, and solving final LP...
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Parallel mode: deterministic, using up to 8 threads for concurrent optimization:
+ * Starting dual Simplex on 1 thread...
+ * Starting Barrier on 6 threads...
+ * Starting primal Simplex on 1 thread...
+Tried aggregator 1 time.
+LP Presolve eliminated 13724 rows and 6025 columns.
+Reduced LP has 56778 rows, 103500 columns, and 181056 nonzeros.
+Presolve time = 1.45 sec. (114.45 ticks)
+Initializing dual steep norms . . .
+
+Dual simplex solved model.
+
+Fixed MIP status(1): optimal
+Cplex Time: 2.20sec (det. 182.52 ticks)
+
+Proven optimal solution.
+
+MIP Solution:            0.000000    (0 iterations, 0 nodes)
+Final Solve:             0.000000    (0 iterations)
+
+Best possible:           0.000000
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+--- Reading solution for model schedule
+--- fixed_problem.gms(1736) 51 Mb  6 secs
+--- Executing after solve: elapsed 0:09:50.819
+--- fixed_problem.gms(1733) 51 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 51 Mb
+--- Starting Equ Objective: elapsed 0:09:50.820
+--- fixed_problem.gms(1706) 51 Mb
+--- Starting Equ Const1: elapsed 0:09:51.826
+--- fixed_problem.gms(1709) 51 Mb
+--- Starting Equ Const_chance_1: elapsed 0:09:52.108
+--- fixed_problem.gms(1712) 56 Mb
+--- Starting Equ Const_chance_2: elapsed 0:09:52.369
+--- fixed_problem.gms(1736) 56 Mb
+--- LOOPS iter = iter22
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:09:52.719
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Found incumbent of value 0.000000 after 0.01 sec. (4.49 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 13723 rows and 4525 columns.
+MIP Presolve modified 8778 coefficients.
+Reduced MIP has 56779 rows, 105000 columns, and 204834 nonzeros.
+Reduced MIP has 1500 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.25 sec. (99.03 ticks)
+Probing time = 0.14 sec. (3.29 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 56779 rows, 105000 columns, and 204834 nonzeros.
+Reduced MIP has 1500 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.78 sec. (142.58 ticks)
+
+Root node processing (before b&c):
+  Real time             =    1.31 sec. (287.75 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    1.31 sec. (287.75 ticks)
+MIP status(101): integer optimal solution
+Cplex Time: 1.31sec (det. 288.07 ticks)
+Fixing integer variables, and solving final LP...
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Parallel mode: deterministic, using up to 8 threads for concurrent optimization:
+ * Starting dual Simplex on 1 thread...
+ * Starting Barrier on 6 threads...
+ * Starting primal Simplex on 1 thread...
+Tried aggregator 1 time.
+LP Presolve eliminated 13724 rows and 6025 columns.
+Reduced LP has 56778 rows, 103500 columns, and 181056 nonzeros.
+Presolve time = 0.80 sec. (114.45 ticks)
+Initializing dual steep norms . . .
+
+Dual simplex solved model.
+
+Fixed MIP status(1): optimal
+Cplex Time: 1.24sec (det. 182.52 ticks)
+
+Proven optimal solution.
+
+MIP Solution:            0.000000    (0 iterations, 0 nodes)
+Final Solve:             0.000000    (0 iterations)
+
+Best possible:           0.000000
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+--- Reading solution for model schedule
+--- fixed_problem.gms(1736) 56 Mb  3 secs
+--- Executing after solve: elapsed 0:09:55.938
+--- fixed_problem.gms(1733) 56 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 56 Mb
+--- Starting Equ Objective: elapsed 0:09:55.940
+--- fixed_problem.gms(1706) 56 Mb
+--- Starting Equ Const1: elapsed 0:09:57.416
+--- fixed_problem.gms(1709) 56 Mb
+--- Starting Equ Const_chance_1: elapsed 0:09:58.069
+--- fixed_problem.gms(1712) 56 Mb
+--- Starting Equ Const_chance_2: elapsed 0:09:58.764
+--- fixed_problem.gms(1736) 56 Mb
+--- LOOPS iter = iter23
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:09:59.913
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Found incumbent of value 0.000000 after 0.03 sec. (4.49 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 13723 rows and 4525 columns.
+MIP Presolve modified 8778 coefficients.
+Reduced MIP has 56779 rows, 105000 columns, and 204834 nonzeros.
+Reduced MIP has 1500 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.64 sec. (99.03 ticks)
+Probing time = 0.83 sec. (3.29 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 56779 rows, 105000 columns, and 204834 nonzeros.
+Reduced MIP has 1500 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 1.38 sec. (142.58 ticks)
+
+Root node processing (before b&c):
+  Real time             =    3.13 sec. (287.75 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    3.13 sec. (287.75 ticks)
+MIP status(101): integer optimal solution
+Cplex Time: 3.16sec (det. 288.07 ticks)
+Fixing integer variables, and solving final LP...
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Parallel mode: deterministic, using up to 8 threads for concurrent optimization:
+ * Starting dual Simplex on 1 thread...
+ * Starting Barrier on 6 threads...
+ * Starting primal Simplex on 1 thread...
+Tried aggregator 1 time.
+LP Presolve eliminated 13724 rows and 6025 columns.
+Reduced LP has 56778 rows, 103500 columns, and 181056 nonzeros.
+Presolve time = 0.83 sec. (114.45 ticks)
+Initializing dual steep norms . . .
+
+Dual simplex solved model.
+
+Fixed MIP status(1): optimal
+Cplex Time: 1.33sec (det. 182.52 ticks)
+
+Proven optimal solution.
+
+MIP Solution:            0.000000    (0 iterations, 0 nodes)
+Final Solve:             0.000000    (0 iterations)
+
+Best possible:           0.000000
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+--- Reading solution for model schedule
+--- fixed_problem.gms(1736) 56 Mb  6 secs
+--- Executing after solve: elapsed 0:10:05.875
+--- fixed_problem.gms(1733) 56 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 56 Mb
+--- Starting Equ Objective: elapsed 0:10:05.876
+--- fixed_problem.gms(1706) 56 Mb
+--- Starting Equ Const1: elapsed 0:10:07.532
+--- fixed_problem.gms(1709) 56 Mb
+--- Starting Equ Const_chance_1: elapsed 0:10:07.907
+--- fixed_problem.gms(1712) 56 Mb
+--- Starting Equ Const_chance_2: elapsed 0:10:08.342
+--- fixed_problem.gms(1736) 56 Mb
+--- LOOPS iter = iter24
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:10:08.985
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Found incumbent of value 0.000000 after 0.02 sec. (4.49 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 13723 rows and 4525 columns.
+MIP Presolve modified 8778 coefficients.
+Reduced MIP has 56779 rows, 105000 columns, and 204834 nonzeros.
+Reduced MIP has 1500 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.34 sec. (99.03 ticks)
+Probing time = 0.14 sec. (3.29 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 56779 rows, 105000 columns, and 204834 nonzeros.
+Reduced MIP has 1500 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.81 sec. (142.58 ticks)
+
+Root node processing (before b&c):
+  Real time             =    1.49 sec. (287.75 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    1.49 sec. (287.75 ticks)
+MIP status(101): integer optimal solution
+Cplex Time: 1.50sec (det. 288.07 ticks)
+Fixing integer variables, and solving final LP...
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Parallel mode: deterministic, using up to 8 threads for concurrent optimization:
+ * Starting dual Simplex on 1 thread...
+ * Starting Barrier on 6 threads...
+ * Starting primal Simplex on 1 thread...
+Tried aggregator 1 time.
+LP Presolve eliminated 13724 rows and 6025 columns.
+Reduced LP has 56778 rows, 103500 columns, and 181056 nonzeros.
+Presolve time = 1.02 sec. (114.45 ticks)
+Initializing dual steep norms . . .
+
+Dual simplex solved model.
+
+Fixed MIP status(1): optimal
+Cplex Time: 1.55sec (det. 182.52 ticks)
+
+Proven optimal solution.
+
+MIP Solution:            0.000000    (0 iterations, 0 nodes)
+Final Solve:             0.000000    (0 iterations)
+
+Best possible:           0.000000
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:10:12.849
+--- fixed_problem.gms(1733) 56 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 56 Mb
+--- Starting Equ Objective: elapsed 0:10:12.850
+--- fixed_problem.gms(1706) 56 Mb
+--- Starting Equ Const1: elapsed 0:10:13.917
+--- fixed_problem.gms(1709) 56 Mb
+--- Starting Equ Const_chance_1: elapsed 0:10:14.328
+--- fixed_problem.gms(1712) 56 Mb
+--- Starting Equ Const_chance_2: elapsed 0:10:14.716
+--- fixed_problem.gms(1736) 56 Mb
+--- LOOPS iter = iter25
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:10:15.286
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Found incumbent of value 0.000000 after 0.02 sec. (4.49 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 13723 rows and 4525 columns.
+MIP Presolve modified 8778 coefficients.
+Reduced MIP has 56779 rows, 105000 columns, and 204834 nonzeros.
+Reduced MIP has 1500 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.38 sec. (99.03 ticks)
+Probing time = 0.09 sec. (3.29 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 56779 rows, 105000 columns, and 204834 nonzeros.
+Reduced MIP has 1500 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.95 sec. (142.58 ticks)
+
+Root node processing (before b&c):
+  Real time             =    1.64 sec. (287.75 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    1.64 sec. (287.75 ticks)
+MIP status(101): integer optimal solution
+Cplex Time: 1.66sec (det. 288.07 ticks)
+Fixing integer variables, and solving final LP...
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Parallel mode: deterministic, using up to 8 threads for concurrent optimization:
+ * Starting dual Simplex on 1 thread...
+ * Starting Barrier on 6 threads...
+ * Starting primal Simplex on 1 thread...
+Tried aggregator 1 time.
+LP Presolve eliminated 13724 rows and 6025 columns.
+Reduced LP has 56778 rows, 103500 columns, and 181056 nonzeros.
+Presolve time = 0.94 sec. (114.45 ticks)
+Initializing dual steep norms . . .
+
+Dual simplex solved model.
+
+Fixed MIP status(1): optimal
+Cplex Time: 1.38sec (det. 182.52 ticks)
+
+Proven optimal solution.
+
+MIP Solution:            0.000000    (0 iterations, 0 nodes)
+Final Solve:             0.000000    (0 iterations)
+
+Best possible:           0.000000
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:10:19.076
+--- fixed_problem.gms(1733) 56 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 56 Mb
+--- Starting Equ Objective: elapsed 0:10:19.076
+--- fixed_problem.gms(1706) 56 Mb
+--- Starting Equ Const1: elapsed 0:10:20.153
+--- fixed_problem.gms(1709) 56 Mb
+--- Starting Equ Const_chance_1: elapsed 0:10:20.525
+--- fixed_problem.gms(1712) 56 Mb
+--- Starting Equ Const_chance_2: elapsed 0:10:20.912
+--- fixed_problem.gms(1736) 56 Mb
+--- LOOPS iter = iter26
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:10:21.445
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Found incumbent of value 0.000000 after 0.02 sec. (4.49 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 13723 rows and 4525 columns.
+MIP Presolve modified 8778 coefficients.
+Reduced MIP has 56779 rows, 105000 columns, and 204834 nonzeros.
+Reduced MIP has 1500 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.38 sec. (99.03 ticks)
+Probing time = 0.25 sec. (3.29 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 56779 rows, 105000 columns, and 204834 nonzeros.
+Reduced MIP has 1500 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.91 sec. (142.58 ticks)
+
+Root node processing (before b&c):
+  Real time             =    1.70 sec. (287.75 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    1.70 sec. (287.75 ticks)
+MIP status(101): integer optimal solution
+Cplex Time: 1.70sec (det. 288.07 ticks)
+Fixing integer variables, and solving final LP...
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Parallel mode: deterministic, using up to 8 threads for concurrent optimization:
+ * Starting dual Simplex on 1 thread...
+ * Starting Barrier on 6 threads...
+ * Starting primal Simplex on 1 thread...
+Tried aggregator 1 time.
+LP Presolve eliminated 13724 rows and 6025 columns.
+Reduced LP has 56778 rows, 103500 columns, and 181056 nonzeros.
+Presolve time = 0.95 sec. (114.45 ticks)
+Initializing dual steep norms . . .
+
+Dual simplex solved model.
+
+Fixed MIP status(1): optimal
+Cplex Time: 1.39sec (det. 182.52 ticks)
+
+Proven optimal solution.
+
+MIP Solution:            0.000000    (0 iterations, 0 nodes)
+Final Solve:             0.000000    (0 iterations)
+
+Best possible:           0.000000
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+--- Reading solution for model schedule
+--- fixed_problem.gms(1736) 56 Mb  4 secs
+--- Executing after solve: elapsed 0:10:25.318
+--- fixed_problem.gms(1733) 56 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 56 Mb
+--- Starting Equ Objective: elapsed 0:10:25.319
+--- fixed_problem.gms(1706) 56 Mb
+--- Starting Equ Const1: elapsed 0:10:26.379
+--- fixed_problem.gms(1709) 56 Mb
+--- Starting Equ Const_chance_1: elapsed 0:10:26.769
+--- fixed_problem.gms(1712) 56 Mb
+--- Starting Equ Const_chance_2: elapsed 0:10:27.122
+--- fixed_problem.gms(1736) 56 Mb
+--- LOOPS iter = iter27
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:10:27.658
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Found incumbent of value 0.000000 after 0.02 sec. (4.49 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 13723 rows and 4525 columns.
+MIP Presolve modified 8778 coefficients.
+Reduced MIP has 56779 rows, 105000 columns, and 204834 nonzeros.
+Reduced MIP has 1500 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.26 sec. (99.03 ticks)
+Probing time = 0.14 sec. (3.29 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 56779 rows, 105000 columns, and 204834 nonzeros.
+Reduced MIP has 1500 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.78 sec. (142.58 ticks)
+
+Root node processing (before b&c):
+  Real time             =    1.34 sec. (287.75 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    1.34 sec. (287.75 ticks)
+MIP status(101): integer optimal solution
+Cplex Time: 1.36sec (det. 288.07 ticks)
+Fixing integer variables, and solving final LP...
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Parallel mode: deterministic, using up to 8 threads for concurrent optimization:
+ * Starting dual Simplex on 1 thread...
+ * Starting Barrier on 6 threads...
+ * Starting primal Simplex on 1 thread...
+Tried aggregator 1 time.
+LP Presolve eliminated 13724 rows and 6025 columns.
+Reduced LP has 56778 rows, 103500 columns, and 181056 nonzeros.
+Presolve time = 0.74 sec. (114.45 ticks)
+Initializing dual steep norms . . .
+
+Dual simplex solved model.
+
+Fixed MIP status(1): optimal
+Cplex Time: 1.11sec (det. 182.52 ticks)
+
+Proven optimal solution.
+
+MIP Solution:            0.000000    (0 iterations, 0 nodes)
+Final Solve:             0.000000    (0 iterations)
+
+Best possible:           0.000000
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+--- Reading solution for model schedule
+--- fixed_problem.gms(1736) 56 Mb  3 secs
+--- Executing after solve: elapsed 0:10:30.731
+--- fixed_problem.gms(1733) 56 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 56 Mb
+--- Starting Equ Objective: elapsed 0:10:30.731
+--- fixed_problem.gms(1706) 56 Mb
+--- Starting Equ Const1: elapsed 0:10:31.608
+--- fixed_problem.gms(1709) 56 Mb
+--- Starting Equ Const_chance_1: elapsed 0:10:31.932
+--- fixed_problem.gms(1712) 56 Mb
+--- Starting Equ Const_chance_2: elapsed 0:10:32.258
+--- fixed_problem.gms(1736) 56 Mb
+--- LOOPS iter = iter28
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:10:32.812
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Found incumbent of value 0.000000 after 0.02 sec. (4.49 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 13723 rows and 4525 columns.
+MIP Presolve modified 8778 coefficients.
+Reduced MIP has 56779 rows, 105000 columns, and 204834 nonzeros.
+Reduced MIP has 1500 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.30 sec. (99.03 ticks)
+Probing time = 0.14 sec. (3.29 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 56779 rows, 105000 columns, and 204834 nonzeros.
+Reduced MIP has 1500 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.76 sec. (142.58 ticks)
+
+Root node processing (before b&c):
+  Real time             =    1.39 sec. (287.75 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    1.39 sec. (287.75 ticks)
+MIP status(101): integer optimal solution
+Cplex Time: 1.39sec (det. 288.07 ticks)
+Fixing integer variables, and solving final LP...
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Parallel mode: deterministic, using up to 8 threads for concurrent optimization:
+ * Starting dual Simplex on 1 thread...
+ * Starting Barrier on 6 threads...
+ * Starting primal Simplex on 1 thread...
+Tried aggregator 1 time.
+LP Presolve eliminated 13724 rows and 6025 columns.
+Reduced LP has 56778 rows, 103500 columns, and 181056 nonzeros.
+Presolve time = 0.67 sec. (114.45 ticks)
+Initializing dual steep norms . . .
+
+Dual simplex solved model.
+
+Fixed MIP status(1): optimal
+Cplex Time: 0.99sec (det. 182.52 ticks)
+
+Proven optimal solution.
+
+MIP Solution:            0.000000    (0 iterations, 0 nodes)
+Final Solve:             0.000000    (0 iterations)
+
+Best possible:           0.000000
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:10:35.833
+--- fixed_problem.gms(1733) 56 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 56 Mb
+--- Starting Equ Objective: elapsed 0:10:35.833
+--- fixed_problem.gms(1706) 56 Mb
+--- Starting Equ Const1: elapsed 0:10:36.534
+--- fixed_problem.gms(1709) 56 Mb
+--- Starting Equ Const_chance_1: elapsed 0:10:36.728
+--- fixed_problem.gms(1712) 56 Mb
+--- Starting Equ Const_chance_2: elapsed 0:10:36.924
+--- fixed_problem.gms(1736) 56 Mb
+--- LOOPS iter = iter29
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:10:37.243
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Found incumbent of value 0.000000 after 0.02 sec. (4.49 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 13723 rows and 4525 columns.
+MIP Presolve modified 8778 coefficients.
+Reduced MIP has 56779 rows, 105000 columns, and 204834 nonzeros.
+Reduced MIP has 1500 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.22 sec. (99.03 ticks)
+Probing time = 0.05 sec. (3.29 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 56779 rows, 105000 columns, and 204834 nonzeros.
+Reduced MIP has 1500 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.41 sec. (142.58 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.77 sec. (287.75 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.77 sec. (287.75 ticks)
+MIP status(101): integer optimal solution
+Cplex Time: 0.77sec (det. 288.07 ticks)
+Fixing integer variables, and solving final LP...
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Parallel mode: deterministic, using up to 8 threads for concurrent optimization:
+ * Starting dual Simplex on 1 thread...
+ * Starting Barrier on 6 threads...
+ * Starting primal Simplex on 1 thread...
+Tried aggregator 1 time.
+LP Presolve eliminated 13724 rows and 6025 columns.
+Reduced LP has 56778 rows, 103500 columns, and 181056 nonzeros.
+Presolve time = 0.58 sec. (114.45 ticks)
+Initializing dual steep norms . . .
+
+Dual simplex solved model.
+
+Fixed MIP status(1): optimal
+Cplex Time: 0.86sec (det. 182.52 ticks)
+
+Proven optimal solution.
+
+MIP Solution:            0.000000    (0 iterations, 0 nodes)
+Final Solve:             0.000000    (0 iterations)
+
+Best possible:           0.000000
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:10:39.348
+--- fixed_problem.gms(1733) 56 Mb
+--- Generating MIP model schedule
+--- fixed_problem.gms(1704) 56 Mb
+--- Starting Equ Objective: elapsed 0:10:39.348
+--- fixed_problem.gms(1706) 56 Mb
+--- Starting Equ Const1: elapsed 0:10:40.062
+--- fixed_problem.gms(1709) 56 Mb
+--- Starting Equ Const_chance_1: elapsed 0:10:40.335
+--- fixed_problem.gms(1712) 56 Mb
+--- Starting Equ Const_chance_2: elapsed 0:10:40.562
+--- fixed_problem.gms(1736) 56 Mb
+--- LOOPS iter = iter30
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:10:40.884
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Found incumbent of value 0.000000 after 0.01 sec. (4.49 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 13723 rows and 4525 columns.
+MIP Presolve modified 8778 coefficients.
+Reduced MIP has 56779 rows, 105000 columns, and 204834 nonzeros.
+Reduced MIP has 1500 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.48 sec. (99.03 ticks)
+Probing time = 0.47 sec. (3.29 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 56779 rows, 105000 columns, and 204834 nonzeros.
+Reduced MIP has 1500 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 1.41 sec. (142.58 ticks)
+
+Root node processing (before b&c):
+  Real time             =    2.64 sec. (287.75 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    2.64 sec. (287.75 ticks)
+MIP status(101): integer optimal solution
+Cplex Time: 2.66sec (det. 288.07 ticks)
+Fixing integer variables, and solving final LP...
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 2
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\225b\"
+Parallel mode: deterministic, using up to 8 threads for concurrent optimization:
+ * Starting dual Simplex on 1 thread...
+ * Starting Barrier on 6 threads...
+ * Starting primal Simplex on 1 thread...
+Tried aggregator 1 time.
+LP Presolve eliminated 13724 rows and 6025 columns.
+Reduced LP has 56778 rows, 103500 columns, and 181056 nonzeros.
+Presolve time = 1.38 sec. (114.45 ticks)
+Initializing dual steep norms . . .
+
+Dual simplex solved model.
+
+Fixed MIP status(1): optimal
+Cplex Time: 2.06sec (det. 182.52 ticks)
+
+Proven optimal solution.
+
+MIP Solution:            0.000000    (0 iterations, 0 nodes)
+Final Solve:             0.000000    (0 iterations)
+
+Best possible:           0.000000
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+--- Reading solution for model schedule
+--- fixed_problem.gms(1736) 56 Mb  5 secs
+--- Executing after solve: elapsed 0:10:46.522
+--- fixed_problem.gms(1766) 56 Mb
+--- Putfile fixed_profit C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\fixed_profit.csv
+--- Putfile TestingFile3 C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\Alg.csv
+--- Profile Summary (6080 records processed)
+   640.969   0.056GB      1733 Loop       
+    81.547   0.051GB      1736 Solve Alg  schedule
+    58.734   0.051GB      1736 Solve Alg  schedule
+    56.219   0.051GB      1736 Solve Alg  schedule
+    52.860   0.051GB      1736 Solve Alg  schedule
+    38.188   0.051GB      1736 Solve Alg  schedule
+    36.203   0.051GB      1736 Solve Alg  schedule
+    33.390   0.051GB      1736 Solve Alg  schedule
+    31.485   0.051GB      1736 Solve Alg  schedule
+    25.609   0.051GB      1736 Solve Alg  schedule
+*** Status: Normal completion
+--- Job fixed_problem.gms Stop 04/12/22 10:33:15 elapsed 0:10:46.535

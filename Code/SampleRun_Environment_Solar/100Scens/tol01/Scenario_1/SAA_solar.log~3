@@ -1,0 +1,128 @@
+--- Job SAA_solar.gms Start 12/13/21 15:53:29 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\100Scens\tol01\Scenario_1\SAA_solar.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\100Scens\tol01\Scenario_1\225c\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- SAA_solar.gms(41) 3 Mb
+--- . solar_scenarios_1200.csv(1201) 4 Mb
+--- SAA_solar.gms(64) 4 Mb
+--- . sampled_dynamic.csv(1) 4 Mb 118 Errors
+*** Error 455 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\100Scens\tol01\Scenario_1\sampled_dynamic.csv
+    Bad or missing delimiter while reading delimited data records
+*** Error 338 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\100Scens\tol01\Scenario_1\sampled_dynamic.csv
+    Unique element expected - symbol was not an element
+       and the following text will be skipped until a proper
+       symbol is found to recover. Remember that an UNQUOTED
+       element has to start with a letter or digit
+       followed by letters, digits, '+', '-' or '_'. The length
+       is limited to 63 characters. The following words are
+       reserved (starting symbols of a GAMS statement) and cannot
+       be used for UNQUOTED set elements:
+   
+          ABORT, ACRONYM(S), ALIAS, BINARY, DISPLAY, ELSE
+          EQUATION(S), EXECUTE, FILE(S), FOR, FREE, IF, INTEGER, LOOP
+          MODEL(S), NEGATIVE, OPTION(S), PARAMETER(S)
+          POSITIVE, PROCEDURE(S), PUT, PUTCLEAR, PUTCLOSE, PUTHD
+          PUTPAGE, PUTTL, SCALAR(S), SEMICONT, SET(S), SOS1, SOS2
+          TABLE, VARIABLE(S), WHILE
+   
+       QUOTED elements can contain any character. Single and
+       double quotes can be used (starting and ending quote have
+       to match).
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\100Scens\tol01\Scenario_1\sampled_dynamic.csv
+    Domain violation for element
+*** Error 455 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\100Scens\tol01\Scenario_1\sampled_dynamic.csv
+    Bad or missing delimiter while reading delimited data records
+*** Error 338 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\100Scens\tol01\Scenario_1\sampled_dynamic.csv
+    Unique element expected - symbol was not an element
+       and the following text will be skipped until a proper
+       symbol is found to recover. Remember that an UNQUOTED
+       element has to start with a letter or digit
+       followed by letters, digits, '+', '-' or '_'. The length
+       is limited to 63 characters. The following words are
+       reserved (starting symbols of a GAMS statement) and cannot
+       be used for UNQUOTED set elements:
+   
+          ABORT, ACRONYM(S), ALIAS, BINARY, DISPLAY, ELSE
+          EQUATION(S), EXECUTE, FILE(S), FOR, FREE, IF, INTEGER, LOOP
+          MODEL(S), NEGATIVE, OPTION(S), PARAMETER(S)
+          POSITIVE, PROCEDURE(S), PUT, PUTCLEAR, PUTCLOSE, PUTHD
+          PUTPAGE, PUTTL, SCALAR(S), SEMICONT, SET(S), SOS1, SOS2
+          TABLE, VARIABLE(S), WHILE
+   
+       QUOTED elements can contain any character. Single and
+       double quotes can be used (starting and ending quote have
+       to match).
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\100Scens\tol01\Scenario_1\sampled_dynamic.csv
+    Domain violation for element
+*** Error 172 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\100Scens\tol01\Scenario_1\sampled_dynamic.csv
+    Element is redefined
+*** Error 455 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\100Scens\tol01\Scenario_1\sampled_dynamic.csv
+    Bad or missing delimiter while reading delimited data records
+*** Error 338 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\100Scens\tol01\Scenario_1\sampled_dynamic.csv
+    Unique element expected - symbol was not an element
+       and the following text will be skipped until a proper
+       symbol is found to recover. Remember that an UNQUOTED
+       element has to start with a letter or digit
+       followed by letters, digits, '+', '-' or '_'. The length
+       is limited to 63 characters. The following words are
+       reserved (starting symbols of a GAMS statement) and cannot
+       be used for UNQUOTED set elements:
+   
+          ABORT, ACRONYM(S), ALIAS, BINARY, DISPLAY, ELSE
+          EQUATION(S), EXECUTE, FILE(S), FOR, FREE, IF, INTEGER, LOOP
+          MODEL(S), NEGATIVE, OPTION(S), PARAMETER(S)
+          POSITIVE, PROCEDURE(S), PUT, PUTCLEAR, PUTCLOSE, PUTHD
+          PUTPAGE, PUTTL, SCALAR(S), SEMICONT, SET(S), SOS1, SOS2
+          TABLE, VARIABLE(S), WHILE
+   
+       QUOTED elements can contain any character. Single and
+       double quotes can be used (starting and ending quote have
+       to match).
+*** Error 300 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\100Scens\tol01\Scenario_1\sampled_dynamic.csv
+    Remaining errors not printed for this line
+--- . sampled_dynamic.csv(2) 4 Mb 121 Errors
+*** Error 170 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\100Scens\tol01\Scenario_1\sampled_dynamic.csv
+    Domain violation for element
+*** Error 455 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\100Scens\tol01\Scenario_1\sampled_dynamic.csv
+    Bad or missing delimiter while reading delimited data records
+*** Error   2 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\100Scens\tol01\Scenario_1\sampled_dynamic.csv
+    Identifier expected
+--- . sampled_dynamic.csv(24) 4 Mb
+--- SAA_solar.gms(75) 4 Mb
+--- . battery_revenue.csv(25) 4 Mb
+--- SAA_solar.gms(95) 4 Mb
+--- . ScenarioWeights_naive.csv(1201) 4 Mb
+--- SAA_solar.gms(243) 4 Mb 122 Errors
+*** Error 257 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\100Scens\tol01\Scenario_1\SAA_solar.gms
+    Solve statement not checked because of previous errors
+--- SAA_solar.gms(246) 4 Mb 123 Errors
+*** Error 141 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\100Scens\tol01\Scenario_1\SAA_solar.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+--- SAA_solar.gms(248) 4 Mb 124 Errors
+*** Error 141 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\100Scens\tol01\Scenario_1\SAA_solar.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+--- SAA_solar.gms(284) 4 Mb 124 Errors
+*** Status: Compilation error(s)
+--- Job SAA_solar.gms Stop 12/13/21 15:53:29 elapsed 0:00:00.035
