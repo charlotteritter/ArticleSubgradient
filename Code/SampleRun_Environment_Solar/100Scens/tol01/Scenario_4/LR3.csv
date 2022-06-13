@@ -1,2 +1,2 @@
-"Omega","Tolerance","Step Size Rule","Iterations","Converged?","Gap LR","Gap Naive","Obj. Naive","Obj. LR","Gap","Time Naive","Time LR","Final Lambda","LB Heuristic"
-100.00000,0.01000,3.00000,10.00000,0.00000,0.01473,0.00244,267.64940,271.65134,0.01473,64.00000,857.00000,6.27268,267.64940
+"Omega","Tolerance","Step Size Rule","Iterations","Converged?","Gap LR","Gap Naive","Obj. Naive","Obj. LR (UB)","Obj. LR (LB),","Gap","Time Naive","Time LR","Final Lambda","LB Heuristic","BBP","Best iter","Lambda best iter","Gamma best iter"
+100.00000,0.01000,3.00000,10.00000,0.00000,0.01473,0.00000,267.64940,271.65134,271.65134,0.01473,66.00000,152.00000,6.27268,267.64940,0.00000,10.00000,6.02268,-1.00000

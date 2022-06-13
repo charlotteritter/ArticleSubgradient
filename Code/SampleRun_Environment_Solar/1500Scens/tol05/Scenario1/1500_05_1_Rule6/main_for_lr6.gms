@@ -50,7 +50,7 @@ lr_time = 0 ;
 option limrow = 0, limcol = 0, optca=0.0001, optcr=0.0001;
 
 
-parameter check(scen,t);
+parameters check(scen,t), z_values(iter,scen);
 scalar steprule;
 steprule=6;
 scalar FinalIter;
@@ -61,6 +61,7 @@ scalar boundTemp;
 scalar lbLR;
 scalar gammaBest;
 scalar lambdaBest;
+
 
 
     lr_time=0;
@@ -78,7 +79,7 @@ scalar lambdaBest;
 *********************************************************************
     
 $include plain_lr.gms
-    
+    z_values(iter,scen)=last_z(scen);
     end_time = jnow ;
     results(iter,'time') = ghour(end_time - start_time)*3600 + gminute(end_time - start_time)*60 + gsecond(end_time - start_time);
     results(iter,'objective') = bound ;
@@ -96,6 +97,12 @@ scalar heuristic;
 ObjLR=-lowerbound;
 heuristic=-upperbound;
 lbLR=-lbLR;
+
+FILE sampled_dynamic /z_values.csv/;
+sampled_dynamic.PC = 5;
+sampled_dynamic.ND = 3;
+PUT sampled_dynamic;
+LOOP(iter, loop(scen, put z_values(iter,scen);) put /; ); 
 
 display results, lowerbound, upperbound, LP_bound, run_time_total, lr_time, num_iter ;
 display z.l, y.l ;
