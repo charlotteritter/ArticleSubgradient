@@ -102,7 +102,7 @@ FILE sampled_dynamic /z_values.csv/;
 sampled_dynamic.PC = 5;
 sampled_dynamic.ND = 3;
 PUT sampled_dynamic;
-LOOP(iter, loop(scen, put z_values(iter,scen);) put /; ); 
+LOOP(scen, loop(iter, put z_values(iter,scen);) put /; ); 
 
 display results, lowerbound, upperbound, LP_bound, run_time_total, lr_time, num_iter ;
 display z.l, y.l ;
