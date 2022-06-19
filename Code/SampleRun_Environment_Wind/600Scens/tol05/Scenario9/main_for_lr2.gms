@@ -14,7 +14,7 @@ $include lp_lowerbound.gms
 $include heuristic_upperbound.gms 
 
 *Create output csv file named LR6.csv
-File TestingFile3 / LR2_20000.csv /;
+File TestingFile3 / LR2.csv /;
 TestingFile3.pc=5;
 TestingFile3.nd=5;
 put TestingFile3; 
@@ -70,9 +70,8 @@ scalar lambdaBest;
     option clear=y;
     Lagrangian.solveOpt=2;
     loop(iter$contin,
-    num_iter = ord(iter) ;
     if((num_iter>2), option reslim=15000;);
-             start_time = jnow;
+    start_time = jnow;
     
 *********************************************************************
 ***Solve a Lagrangian iteration 
@@ -87,7 +86,7 @@ $include plain_lr.gms
 $include LR_updates.gms
     if( ((results(iter,'gap') < exit_tol) and (num_iter > 2)),convergence=2; contin = 0;);
     lr_time = lr_time + results(iter,'time')   ;
-    if (lr_time > 20000, contin = 0 ; ) ;
+    if (lr_time > 41000, contin = 0 ; ) ;
     d=results(iter,'gap');
     FinalIter=num_iter;
 );
