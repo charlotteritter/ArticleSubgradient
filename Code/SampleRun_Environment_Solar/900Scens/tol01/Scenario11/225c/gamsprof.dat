@@ -1,0 +1,11 @@
+784      0.002
+2002 2      0.047       0.012 Equation   Objective (1)
+2056 5      0.131       0.030 Solve Fini schedule (191725)
+2004 1      0.021       0.023 Equation   Const1 (20700)
+1929 6      0.003       0.004 Loop       
+2056 3      0.107       0.030 GAMS Fini   
+1928 7      0.041       0.004 Loop       
+2010 8      0.019       0.030 Equation   Const_chance_1 (21600)
+1929 10      0.003       0.004 Loop       
+1929 4      0.002       0.004 Loop       
+1940 9      0.003       0.006 Assignment BigM (21600)
