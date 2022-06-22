@@ -1,0 +1,99 @@
+--- Job SAA.gms Start 06/22/22 10:09:47 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\Wind\100Scens\tol01\SAA.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\Wind\100Scens\tol01\225b\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- SAA.gms(32) 3 Mb
+--- . wind_costs.csv(25) 3 Mb
+--- SAA.gms(39) 3 Mb
+--- . wind_scenarios_7200.csv(7201) 10 Mb
+--- SAA.gms(46) 10 Mb
+--- . ScenarioWeights_naive.csv(7201) 10 Mb
+--- SAA.gms(264) 10 Mb
+--- Starting execution: elapsed 0:00:00.331
+--- SAA.gms(14587) 50 Mb
+--- Generating MIP model SCHEDULE
+--- SAA.gms(14542) 50 Mb
+--- Starting Equ Objective: elapsed 0:00:00.649
+--- SAA.gms(14544) 50 Mb
+--- Starting Equ Const1_1: elapsed 0:00:00.689
+--- SAA.gms(14546) 50 Mb
+--- Starting Equ Const1_2: elapsed 0:00:00.718
+--- SAA.gms(14553) 50 Mb
+--- Starting Equ Const_3_1: elapsed 0:00:00.719
+--- SAA.gms(14554) 50 Mb
+--- Starting Equ Const_3_2: elapsed 0:00:00.774
+--- SAA.gms(14558) 50 Mb
+--- Starting Equ Const_4_1: elapsed 0:00:00.823
+--- SAA.gms(14559) 51 Mb
+--- Starting Equ Const_4_2: elapsed 0:00:00.862
+--- SAA.gms(14562) 51 Mb
+--- Starting Equ Const_5: elapsed 0:00:00.904
+--- SAA.gms(14565) 51 Mb
+--- Starting Equ Const_6: elapsed 0:00:00.942
+--- SAA.gms(14567) 51 Mb
+--- Starting Equ Const_dum1: elapsed 0:00:00.995
+--- SAA.gms(14568) 51 Mb
+--- Starting Equ Const_dum2: elapsed 0:00:00.995
+--- SAA.gms(14650) 51 Mb
+--- LOOPS rho_ind = r1
+---       iter = iter1
+---   3,250 rows  1,989 columns  14,821 non-zeroes
+---   500 discrete-columns
+--- Executing GUROBI (Solvelink=2): elapsed 0:00:01.068
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model SCHEDULE
+--- Executing after solve: elapsed 0:00:01.331
+--- SAA.gms(14587) 51 Mb
+--- Generating MIP model SCHEDULE
+--- SAA.gms(14542) 51 Mb
+--- Starting Equ Objective: elapsed 0:00:01.571
+--- SAA.gms(14544) 51 Mb
+--- Starting Equ Const1_1: elapsed 0:00:01.614
+--- SAA.gms(14546) 51 Mb
+--- Starting Equ Const1_2: elapsed 0:00:01.641
+--- SAA.gms(14553) 51 Mb
+--- Starting Equ Const_3_1: elapsed 0:00:01.642
+--- SAA.gms(14554) 51 Mb
+--- Starting Equ Const_3_2: elapsed 0:00:01.698
+--- SAA.gms(14558) 51 Mb
+--- Starting Equ Const_4_1: elapsed 0:00:01.747
+--- SAA.gms(14559) 51 Mb
+--- Starting Equ Const_4_2: elapsed 0:00:01.787
+--- SAA.gms(14562) 51 Mb
+--- Starting Equ Const_5: elapsed 0:00:01.825
+*** Error at line 14559: Execution halted: Triggered by pending CtrlC event
+--- SAA.gms(14650) 51 Mb 1 Error
+*** SOLVE aborted
+--- Profile Summary (45 records processed)
+     0.250   0.051GB     14650 Solve Alg  SCHEDULE
+     0.079   0.051GB     14650 Solve Fini SCHEDULE (14821)
+     0.047   0.051GB     14553 Equation   Const_3_1 (506)
+     0.047   0.051GB     14558 Equation   Const_4_1 (484)
+     0.047   0.051GB     14562 Equation   Const_5 (460)
+     0.047   0.050GB     14542 Equation   Objective (1)
+     0.047   0.050GB     14553 Equation   Const_3_1 (460)
+     0.047   0.050GB     14554 Equation   Const_3_2 (460)
+     0.046   0.051GB     14558 Equation   Const_4_1 (440)
+     0.046   0.051GB     14565 Equation   Const_6 (460)
+--- SAA.gms(14650) 51 Mb 1 Error
+*** Status: Execution error(s)
+--- Job SAA.gms Stop 06/22/22 10:09:49 elapsed 0:00:01.829
