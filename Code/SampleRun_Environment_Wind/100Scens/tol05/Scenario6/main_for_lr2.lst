@@ -1,4 +1,4 @@
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      06/19/22 20:13:52 Page 1
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      06/21/22 13:23:57 Page 1
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -56,7 +56,7 @@ INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment
   55  ** define wind realizations at all time periods
   56  TABLE WIND(W,T)
 INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol05/Scenario6/wind_scenarios.csv
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      06/19/22 20:13:52 Page 2
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      06/21/22 13:23:57 Page 2
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -114,7 +114,7 @@ C o m p i l a t i o n
       .2537668,24.79956398,16.55838166,5.278000439
   85  scen26,27.69734437,26.17378811,5.677983758,10.14988206,0.791895735,8.716690139,8.124881632,14.63282031,3.698959247,5.315852419,5.776982414,17.17069946,3.776659625,4.858354538,0.250875424,46.35920099,36.68749273,27.69337444,17.63235464,28.98781358,34
       .97458318,34.01933747,32.46267997,48.6276103
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      06/19/22 20:13:52 Page 3
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      06/21/22 13:23:57 Page 3
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -172,7 +172,7 @@ C o m p i l a t i o n
  111  scen52,31.97286853,22.40745029,7.763244294,12.57944677,4.613822516,10.2032021,6.768287607,11.74931215,7.803730961,5.384365853,8.604126655,7.837394996,0.656608262,5.866596321,6.421787937,26.03926744,34.2933945,37.52334234,43.34286463,28.74266064,21.6
       9958702,14.396831,19.84113431,19.04489616
  112  scen53,39.05432428,43.37351867,32.73021658,13.90269803,23.7228747,32.71371954,19.01617236,16.67507481,20.21754457,1.03789161,3.388321381,3.674163108,15.44965273,0.493525994,3.606442041,29.71090781,29.59458551,38.1091054,24.82396031,18.71158585,20.75
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      06/19/22 20:13:52 Page 4
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      06/21/22 13:23:57 Page 4
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -230,7 +230,7 @@ C o m p i l a t i o n
       05655626,29.44111511,28.61544636,32.92180555
  138  scen79,36.04744111,40.50323944,53.71878551,2.202068048,1.623993374,1.483433183,17.0864593,24.39881969,23.25361265,27.19697339,36.54927023,33.87773544,0.254810163,8.566982294,2.563645529,34.12393897,18.09331838,22.76149918,30.11199598,19.91719743,28.
       82381594,29.50257141,12.49978051,0.663437241
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      06/19/22 20:13:52 Page 5
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      06/21/22 13:23:57 Page 5
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -288,7 +288,7 @@ C o m p i l a t i o n
  169  SCALAR TOL;
  170  TOL =0.05;
  171   
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      06/19/22 20:13:52 Page 6
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      06/21/22 13:23:57 Page 6
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -346,7 +346,7 @@ C o m p i l a t i o n
  222  set dummy(w);
  223  * make the dum_iter go till at least the size of it
  224  set dum_iter /dum_iter1*dum_iter100/;
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      06/19/22 20:13:52 Page 7
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      06/21/22 13:23:57 Page 7
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -404,7 +404,7 @@ INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment
  275   
  276  scalar exit_tol ;
  277  exit_tol = 0.00001 ;
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      06/19/22 20:13:52 Page 8
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      06/21/22 13:23:57 Page 8
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -462,7 +462,7 @@ INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment
  328  Const1_1FIX(W,T).. Y(T)-X(W,T)-R(W,T)*GG -WIND(W,T) =L= Z(W)*BigM(w,t) ;
  329   
  330  Const1_1_scenario(scen,t)$(ord(scen) eq counter)..
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      06/19/22 20:13:52 Page 9
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                      06/21/22 13:23:57 Page 9
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -520,7 +520,7 @@ C o m p i l a t i o n
  381   
  382   
  383  ******* ALL MODELS
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     06/19/22 20:13:52 Page 10
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     06/21/22 13:23:57 Page 10
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -578,7 +578,7 @@ INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment
  435  t14,10.975,31.049,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
  436  t15,0.083,3.451,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
  437  t16,17.823,18.477,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     06/19/22 20:13:52 Page 11
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     06/21/22 13:23:57 Page 11
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -636,7 +636,7 @@ C o m p i l a t i o n
  489  TestingFile3.nd=5;
  490  put TestingFile3;
  491  put 'Omega', put 'Tolerance', put 'Step Size Rule', put 'Iterations', put 'Converged?', put 'Gap LR', put 'Gap Naive', put 'Obj. Naive', put 'Obj. LR (UB)', put 'Obj. LR (LB),' put 'Gap' put 'Time Naive', put 'Time LR', put 'Final Lambda', put 'LB H
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     06/19/22 20:13:52 Page 12
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     06/21/22 13:23:57 Page 12
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -694,7 +694,7 @@ GDXIN   /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wi
  543      if((num_iter>2), option reslim=15000;);
 ****                 $141
 **** LINE     73 INPUT       /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol05/Scenario6/main_for_lr2.gms
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     06/19/22 20:13:52 Page 13
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     06/21/22 13:23:57 Page 13
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -752,7 +752,7 @@ INCLUDE    /home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment
  591  *** Guarantees that never zero in the denominator
  592  norm = max(abs(gamma), 1e-6);
  593  norm2 = max(gamma*gamma, 1e-6);
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     06/19/22 20:13:52 Page 14
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     06/21/22 13:23:57 Page 14
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -810,7 +810,7 @@ C o m p i l a t i o n
  641  convergence=0;
  642  deltalambda = abs(lambdaprevious-lambda) ;
  643  if( deltalambda < 0.0001, contin = 0; display 'lambdas same'; convergence = 1 );
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     06/19/22 20:13:52 Page 15
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     06/21/22 13:23:57 Page 15
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -852,7 +852,7 @@ C o m p i l a t i o n
 **** STRAY NAME max_discharge OF TYPE PARAM
 **** STRAY NAME bound_time OF TYPE PARAM
 **** STRAY NAME init_bound OF TYPE PARAM
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     06/19/22 20:13:52 Page 16
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     06/21/22 13:23:57 Page 16
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Error Messages
 
@@ -865,7 +865,7 @@ Error Messages
 257  Solve statement not checked because of previous errors
 
 **** 3 ERROR(S)   0 WARNING(S)
-GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     06/19/22 20:13:52 Page 17
+GAMS 24.8.5  r61358 Released May 10, 2017 LEX-LEG x86 64bit/Linux                                                                                                                                                                     06/21/22 13:23:57 Page 17
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Include File Summary
 
@@ -888,7 +888,7 @@ Include File Summary
     14      590 INCLUDE       13      18  ../home/hpc/mpwm/mpwm031h/ArticleSubgradient/Code/SampleRun_Environment_Wind/100Scens/tol05/Scenario6/stepsizes.gms
 
 
-COMPILATION TIME     =        0.049 SECONDS      3 MB  24.8.5 r61358 LEX-LEG
+COMPILATION TIME     =        0.053 SECONDS      3 MB  24.8.5 r61358 LEX-LEG
 
 
 USER: Small MUD - 5 User License                     S160825:0507AO-LNX
