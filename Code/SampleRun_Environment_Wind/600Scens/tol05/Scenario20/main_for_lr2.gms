@@ -70,6 +70,7 @@ scalar lambdaBest;
     option clear=y;
     Lagrangian.solveOpt=2;
     loop(iter$contin,
+    num_iter = ord(iter) ;
     if((num_iter>2), option reslim=15000;);
     start_time = jnow;
     
