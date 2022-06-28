@@ -1,4 +1,4 @@
---- Job main_for_lr2.gms Start 06/23/22 12:27:03 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Job main_for_lr2.gms Start 06/28/22 14:01:33 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     C:\GAMS\32\gmsprmNT.txt
 --- GAMS Parameters defined
@@ -34,7 +34,7 @@ Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
 --- . heuristic_upperbound.gms(49) 4 Mb
 --- main_for_lr2.gms(31) 4 Mb
 --- call csv2gdx Naive.csv id=nv index=1 values=2..lastCol useHeader=y
-No errors, CSV2GDX time = 0ms
+No errors, CSV2GDX time = 16ms
 --- main_for_lr2.gms(32) 4 Mb
 --- GDXin=C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\1500Scens\tol05\Scenario1\Naive.gdx
 --- main_for_lr2.gms(81) 4 Mb
@@ -44,21 +44,44 @@ No errors, CSV2GDX time = 0ms
 --- .. stepsizes.gms(21) 4 Mb
 --- . LR_updates.gms(59) 4 Mb
 --- main_for_lr2.gms(107) 4 Mb
---- Starting execution: elapsed 0:00:00.198
---- main_for_lr2.gms(1625) 6 Mb
-*** Error at line 1632: Execution halted: Triggered by pending CtrlC event
---- main_for_lr2.gms(1625) 6 Mb 1 Error
---- Profile Summary (4727 records processed)
-     0.047   0.006GB      1626 Loop       
-     0.047   0.006GB      1626 Loop       
-     0.047   0.006GB      1626 Loop       
-     0.047   0.006GB      1626 Loop       
-     0.047   0.006GB      1626 Loop       
-     0.047   0.006GB      1626 Loop       
-     0.046   0.006GB      1626 Loop       
-     0.046   0.006GB      1626 Loop       
-     0.032   0.006GB      1626 Loop       
-     0.032   0.006GB      1626 Loop       
---- main_for_lr2.gms(1625) 6 Mb 1 Error
+--- Starting execution: elapsed 0:00:00.122
+--- main_for_lr2.gms(1800) 15 Mb
+--- Generating RMIP model schedule
+--- main_for_lr2.gms(1718) 15 Mb
+--- Starting Equ Objective: elapsed 0:00:01.130
+--- main_for_lr2.gms(1726) 23 Mb
+--- Starting Equ Const1_1: elapsed 0:00:02.228
+--- main_for_lr2.gms(1734) 43 Mb
+--- Starting Equ Const1_2: elapsed 0:00:02.289
+--- main_for_lr2.gms(1741) 43 Mb
+--- Starting Equ Const_3_1: elapsed 0:00:02.302
+--- main_for_lr2.gms(1744) 54 Mb
+--- Starting Equ Const_3_2: elapsed 0:00:02.420
+--- main_for_lr2.gms(1750) 64 Mb
+--- Starting Equ Const_4_1: elapsed 0:00:02.532
+--- main_for_lr2.gms(1754) 71 Mb
+--- Starting Equ Const_4_2: elapsed 0:00:02.792
+--- main_for_lr2.gms(1758) 77 Mb
+--- Starting Equ Const_5: elapsed 0:00:03.057
+--- main_for_lr2.gms(1763) 88 Mb
+--- Starting Equ Const_6: elapsed 0:00:03.138
+--- main_for_lr2.gms(1801) 100 Mb
+---   240,002 rows  145,525 columns  1,102,525 non-zeroes
+---   37,500 discrete-columns
+*** Error at line 1801: Control C Event: execution halted
+--- main_for_lr2.gms(1801) 100 Mb 1 Error
+*** SOLVE aborted
+--- Profile Summary (5543 records processed)
+     1.094   0.023GB      1718 Equation   Objective (1)
+     0.969   0.006GB      1625 Loop       
+     0.406   0.100GB      1801 Solve Fini schedule (1102525)
+     0.266   0.077GB      1754 Equation   Const_4_2 (33000)
+     0.250   0.071GB      1750 Equation   Const_4_1 (33000)
+     0.125   0.064GB      1744 Equation   Const_3_2 (34500)
+     0.125   0.098GB      1763 Equation   Const_6 (34500)
+     0.109   0.053GB      1741 Equation   Const_3_1 (34500)
+     0.078   0.088GB      1758 Equation   Const_5 (34500)
+     0.062   0.006GB      1626 Loop       
+--- main_for_lr2.gms(1801) 100 Mb 1 Error
 *** Status: Execution error(s)
---- Job main_for_lr2.gms Stop 06/23/22 12:27:04 elapsed 0:00:00.988
+--- Job main_for_lr2.gms Stop 06/28/22 14:01:36 elapsed 0:00:03.696
