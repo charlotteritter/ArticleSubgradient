@@ -1,10 +1,10 @@
---- Job main_for_lr6.gms Start 05/30/22 10:01:51 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Job main_for_lr6.gms Start 07/01/22 12:05:28 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     C:\GAMS\32\gmsprmNT.txt
 --- GAMS Parameters defined
     Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\600Scens\tol05\Scenario1\main_for_lr6.gms
     PageSize 0
-    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\600Scens\tol05\Scenario1\225b\
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\600Scens\tol05\Scenario1\225f\
     SysDir C:\GAMS\32\
     LogOption 3
     ErrMsg 1
@@ -34,102 +34,49 @@ Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
 --- . heuristic_upperbound.gms(49) 4 Mb
 --- main_for_lr6.gms(31) 4 Mb
 --- call csv2gdx Naive.csv id=nv index=1 values=2..lastCol useHeader=y
-No errors, CSV2GDX time = 0ms
+No errors, CSV2GDX time = 78ms
 --- main_for_lr6.gms(32) 4 Mb
 --- GDXin=C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\600Scens\tol05\Scenario1\Naive.gdx
---- main_for_lr6.gms(81) 4 Mb
+--- main_for_lr6.gms(80) 4 Mb
 --- . plain_lr.gms(16) 4 Mb
---- main_for_lr6.gms(87) 4 Mb
+--- main_for_lr6.gms(86) 4 Mb
 --- . LR_updates.gms(18) 4 Mb
 --- .. stepsizes.gms(21) 4 Mb
 --- . LR_updates.gms(59) 4 Mb
---- main_for_lr6.gms(107) 4 Mb
---- Starting execution: elapsed 0:00:00.091
+--- main_for_lr6.gms(106) 4 Mb
+--- Starting execution: elapsed 0:00:00.442
 --- main_for_lr6.gms(900) 8 Mb
 --- Generating RMIP model schedule
 --- main_for_lr6.gms(818) 8 Mb
---- Starting Equ Objective: elapsed 0:00:00.302
+--- Starting Equ Objective: elapsed 0:00:00.619
 --- main_for_lr6.gms(826) 11 Mb
---- Starting Equ Const1_1: elapsed 0:00:00.807
+--- Starting Equ Const1_1: elapsed 0:00:01.059
 --- main_for_lr6.gms(834) 20 Mb
---- Starting Equ Const1_2: elapsed 0:00:00.835
+--- Starting Equ Const1_2: elapsed 0:00:01.079
 --- main_for_lr6.gms(841) 20 Mb
---- Starting Equ Const_3_1: elapsed 0:00:00.837
+--- Starting Equ Const_3_1: elapsed 0:00:01.082
 --- main_for_lr6.gms(844) 24 Mb
---- Starting Equ Const_3_2: elapsed 0:00:00.887
+--- Starting Equ Const_3_2: elapsed 0:00:01.127
 --- main_for_lr6.gms(850) 28 Mb
---- Starting Equ Const_4_1: elapsed 0:00:00.928
+--- Starting Equ Const_4_1: elapsed 0:00:01.167
 --- main_for_lr6.gms(854) 31 Mb
---- Starting Equ Const_4_2: elapsed 0:00:01.067
+--- Starting Equ Const_4_2: elapsed 0:00:01.266
 --- main_for_lr6.gms(858) 33 Mb
---- Starting Equ Const_5: elapsed 0:00:01.179
---- main_for_lr6.gms(863) 37 Mb
---- Starting Equ Const_6: elapsed 0:00:01.220
---- main_for_lr6.gms(901) 42 Mb
----   96,002 rows  58,225 columns  441,025 non-zeroes
----   15,000 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:01.447
-
-Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
-
-Gurobi link license.
-*** Cannot initialize Gurobi environment.
-*** Could be a missing or invalid license. (status=10009|10009)
---- Reading solution for model schedule
---- Executing after solve: elapsed 0:00:01.885
---- main_for_lr6.gms(961) 42 Mb
---- Generating MIP model SCHEDULEFIX
---- main_for_lr6.gms(816) 42 Mb
---- Starting Equ ObjectiveFIX: elapsed 0:00:01.885
---- main_for_lr6.gms(828) 42 Mb
---- Starting Equ Const1_1FIX: elapsed 0:00:02.359
---- main_for_lr6.gms(835) 42 Mb
---- Starting Equ Const1_2FIX: elapsed 0:00:02.409
---- main_for_lr6.gms(840) 42 Mb
---- Starting Equ Const_3_1FIX: elapsed 0:00:02.417
---- main_for_lr6.gms(846) 42 Mb
---- Starting Equ Const_3_2FIX: elapsed 0:00:02.497
---- main_for_lr6.gms(852) 42 Mb
---- Starting Equ Const_4_1FIX: elapsed 0:00:02.570
---- main_for_lr6.gms(856) 42 Mb
---- Starting Equ Const_4_2FIX: elapsed 0:00:02.690
---- main_for_lr6.gms(860) 42 Mb
---- Starting Equ Const_5FIX: elapsed 0:00:02.821
---- main_for_lr6.gms(865) 42 Mb
---- Starting Equ Const_6FIX: elapsed 0:00:02.872
---- main_for_lr6.gms(964) 42 Mb
---- LOOPS iterFIX = iter1
----   96,002 rows  58,225 columns  441,025 non-zeroes
----   15,000 discrete-columns
---- Executing GUROBI (Solvelink=2): elapsed 0:00:03.192
-
-Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
-
-Gurobi link license.
-*** Cannot initialize Gurobi environment.
-*** Could be a missing or invalid license. (status=10009|10009)
---- Reading solution for model SCHEDULEFIX
---- Executing after solve: elapsed 0:00:03.424
---- main_for_lr6.gms(961) 42 Mb
---- Generating MIP model SCHEDULEFIX
---- main_for_lr6.gms(816) 42 Mb
---- Starting Equ ObjectiveFIX: elapsed 0:00:03.425
---- main_for_lr6.gms(828) 42 Mb
---- Starting Equ Const1_1FIX: elapsed 0:00:03.875
-*** Error at line 816: Execution halted: Triggered by pending CtrlC event
---- main_for_lr6.gms(964) 42 Mb 1 Error
+--- Starting Equ Const_5: elapsed 0:00:01.367
+*** Error at line 854: Execution halted: Triggered by pending CtrlC event
+--- main_for_lr6.gms(901) 33 Mb 1 Error
 *** SOLVE aborted
---- Profile Summary (2344 records processed)
-     0.500   0.011GB       818 Equation   Objective (1)
-     0.469   0.042GB       816 Equation   ObjectiveFIX (1)
-     0.453   0.042GB       816 Equation   ObjectiveFIX (1)
-     0.422   0.042GB       901 Solve Alg  schedule
-     0.250   0.042GB       964 Solve Fini SCHEDULEFIX (441025)
-     0.219   0.042GB       964 Solve Alg  SCHEDULEFIX
-     0.188   0.042GB       901 Solve Fini schedule (441025)
-     0.188   0.005GB       725 Loop       
-     0.141   0.031GB       850 Equation   Const_4_1 (13200)
-     0.125   0.042GB       852 Equation   Const_4_1FIX (13200)
---- main_for_lr6.gms(964) 42 Mb 1 Error
+--- Profile Summary (2302 records processed)
+     0.437   0.011GB       818 Equation   Objective (1)
+     0.156   0.005GB       725 Loop       
+     0.110   0.033GB       854 Equation   Const_4_2 (13200)
+     0.093   0.031GB       850 Equation   Const_4_1 (13200)
+     0.047   0.028GB       844 Equation   Const_3_2 (13800)
+     0.031   0.024GB       841 Equation   Const_3_1 (13800)
+     0.016   0.020GB       826 Equation   Const1_1 (14400)
+     0.016   0.020GB       834 Equation   Const1_2 (1)
+     0.016   0.005GB       730 Assignment dummy (1)
+     0.016   0.005GB       726 Loop       
+--- main_for_lr6.gms(901) 33 Mb 1 Error
 *** Status: Execution error(s)
---- Job main_for_lr6.gms Stop 05/30/22 10:01:55 elapsed 0:00:03.885
+--- Job main_for_lr6.gms Stop 07/01/22 12:05:30 elapsed 0:00:01.412

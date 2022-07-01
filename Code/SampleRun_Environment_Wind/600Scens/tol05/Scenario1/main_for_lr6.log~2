@@ -1,4 +1,4 @@
---- Job main_for_lr6.gms Start 05/29/22 11:53:01 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Job main_for_lr6.gms Start 05/30/22 10:01:44 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     C:\GAMS\32\gmsprmNT.txt
 --- GAMS Parameters defined
@@ -34,54 +34,28 @@ Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
 --- . heuristic_upperbound.gms(49) 4 Mb
 --- main_for_lr6.gms(31) 4 Mb
 --- call csv2gdx Naive.csv id=nv index=1 values=2..lastCol useHeader=y
-No errors, CSV2GDX time = 63ms
+No errors, CSV2GDX time = 47ms
 --- main_for_lr6.gms(32) 4 Mb
 --- GDXin=C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\600Scens\tol05\Scenario1\Naive.gdx
---- main_for_lr6.gms(80) 4 Mb
+--- main_for_lr6.gms(75) 4 Mb 1 Error
+*** Error  12 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\600Scens\tol05\Scenario1\main_for_lr6.gms
+    ';' expected
+--- main_for_lr6.gms(81) 4 Mb
+--- . plain_lr.gms(4) 4 Mb 2 Errors
+*** Error 257 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\600Scens\tol05\Scenario1\plain_lr.gms
+    Solve statement not checked because of previous errors
 --- . plain_lr.gms(16) 4 Mb
---- main_for_lr6.gms(86) 4 Mb
+--- main_for_lr6.gms(87) 4 Mb
 --- . LR_updates.gms(18) 4 Mb
 --- .. stepsizes.gms(21) 4 Mb
+--- . LR_updates.gms(44) 4 Mb 3 Errors
+*** Error 141 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\600Scens\tol05\Scenario1\LR_updates.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
 --- . LR_updates.gms(59) 4 Mb
---- main_for_lr6.gms(106) 4 Mb
---- Starting execution: elapsed 0:00:00.381
---- main_for_lr6.gms(900) 8 Mb
---- Generating RMIP model schedule
---- main_for_lr6.gms(818) 8 Mb
---- Starting Equ Objective: elapsed 0:00:00.563
---- main_for_lr6.gms(826) 11 Mb
---- Starting Equ Const1_1: elapsed 0:00:01.007
---- main_for_lr6.gms(834) 20 Mb
---- Starting Equ Const1_2: elapsed 0:00:01.028
---- main_for_lr6.gms(841) 20 Mb
---- Starting Equ Const_3_1: elapsed 0:00:01.036
---- main_for_lr6.gms(844) 24 Mb
---- Starting Equ Const_3_2: elapsed 0:00:01.076
---- main_for_lr6.gms(850) 28 Mb
---- Starting Equ Const_4_1: elapsed 0:00:01.120
---- main_for_lr6.gms(854) 31 Mb
---- Starting Equ Const_4_2: elapsed 0:00:01.231
---- main_for_lr6.gms(858) 33 Mb
---- Starting Equ Const_5: elapsed 0:00:01.343
---- main_for_lr6.gms(863) 37 Mb
---- Starting Equ Const_6: elapsed 0:00:01.384
---- main_for_lr6.gms(901) 42 Mb
----   96,002 rows  58,225 columns  441,025 non-zeroes
----   15,000 discrete-columns
-*** Error at line 901: Control C Event: execution halted
---- main_for_lr6.gms(901) 42 Mb 1 Error
-*** SOLVE aborted
---- Profile Summary (2303 records processed)
-     0.453   0.011GB       818 Equation   Objective (1)
-     0.172   0.042GB       901 Solve Fini schedule (441025)
-     0.141   0.005GB       725 Loop       
-     0.110   0.031GB       850 Equation   Const_4_1 (13200)
-     0.109   0.033GB       854 Equation   Const_4_2 (13200)
-     0.047   0.024GB       841 Equation   Const_3_1 (13800)
-     0.047   0.037GB       858 Equation   Const_5 (13800)
-     0.047   0.028GB       844 Equation   Const_3_2 (13800)
-     0.031   0.041GB       863 Equation   Const_6 (13800)
-     0.016   0.005GB       730 Assignment dummy (1)
---- main_for_lr6.gms(901) 42 Mb 1 Error
-*** Status: Execution error(s)
---- Job main_for_lr6.gms Stop 05/29/22 11:53:03 elapsed 0:00:01.618
+--- main_for_lr6.gms(107) 4 Mb 3 Errors
+*** Status: Compilation error(s)
+--- Job main_for_lr6.gms Stop 05/30/22 10:01:45 elapsed 0:00:00.383
