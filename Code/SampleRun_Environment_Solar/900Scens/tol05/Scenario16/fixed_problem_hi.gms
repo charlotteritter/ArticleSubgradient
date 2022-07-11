@@ -16,7 +16,7 @@ SCALAR start_time, end_time, run_time_total;
 
 ** sets defined in input file
 SETS T times/t1*t24/;
-SETS W scenarios /scen1*scen900/;
+SETS W scenarios /scen1*scen100/;
 
 ALIAS (T,TT);
 ALIAS (W,I);
@@ -209,5 +209,5 @@ TestingFile3.pc=5;
 TestingFile3.nd=5;
 put TestingFile3; 
 put 'Omega', put 'Tolerance', put 'Step Size Rule', put 'Iterations', put 'Converged?', put 'Gap LR', put 'Gap Naive', put 'Obj. Naive', put 'Obj. LR', put 'Gap' put 'Time Naive', put 'Time LR', put 'Final Lambda', put 'LB Heuristic' put /;
-put '', put '', put '', put '', put '', put '', put '', put '', put '', put '', put '', put '', put '', put sma put /;
+put '', put '', put '', put '', put '', put '', put '', put '', put '', put '', put '', put '', put tot_time, put sma put /;
 

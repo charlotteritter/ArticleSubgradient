@@ -209,5 +209,5 @@ TestingFile3.pc=5;
 TestingFile3.nd=5;
 put TestingFile3; 
 put 'Omega', put 'Tolerance', put 'Step Size Rule', put 'Iterations', put 'Converged?', put 'Gap LR', put 'Gap Naive', put 'Obj. Naive', put 'Obj. LR', put 'Gap' put 'Time Naive', put 'Time LR', put 'Final Lambda', put 'LB Heuristic' put /;
-put '', put '', put '', put '', put '', put '', put '', put '', put '', put '', put '', put '', put '', put sma put /;
+put '', put '', put '', put '', put '', put '', put '', put '', put '', put '', put '', put '', put tot_time, put sma put /;
 

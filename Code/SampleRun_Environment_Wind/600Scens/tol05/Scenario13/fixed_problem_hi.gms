@@ -16,7 +16,7 @@ SCALAR start_time, end_time, run_time_total;
 
 ** sets defined in input file
 SETS T times/t1*t24/;
-SETS W scenarios /scen1*scen600/;
+SETS W scenarios /scen1*scen1500/;
 
 ALIAS (T,TT);
 ALIAS (W,I);
@@ -165,7 +165,8 @@ MODEL  SCHEDULE    /ALL/ ;
 *y.fx(t)=y_20(t,'values');
 *SOLVE SCHEDULE USING MIP MAXIMIZING OBJ;
 *profit_orig= obj.l;
-
+run_time_total=0;
+start_time = jnow;
 *2nd iteration onward
 loop(iter,
          y.fx(t)=y_100(t,iter);
@@ -175,7 +176,8 @@ loop(iter,
          run_time(iter) = ghour(t2 - t1)*3600 + gminute(t2 - t1)*60 + gsecond(t2 - t1);
          profit(iter)= obj.l;
 );
-
+end_time = jnow ;
+run_time_total = ghour(end_time - start_time)*3600 + gminute(end_time - start_time)*60 + gsecond(end_time - start_time);
 display y.l;
 
 ********************************************************************************
@@ -197,5 +199,6 @@ TestingFile3.pc=5;
 TestingFile3.nd=5;
 put TestingFile3; 
 put 'Omega', put 'Tolerance', put 'Step Size Rule', put 'Iterations', put 'Converged?', put 'Gap LR', put 'Gap Naive', put 'Obj. Naive', put 'Obj. LR', put 'Gap' put 'Time Naive', put 'Time LR', put 'Final Lambda', put 'LB Heuristic' put /;
-put '', put '', put '', put '', put '', put '', put '', put '', put '', put '', put '', put '', put '', put sma put /;
+put '', put '', put '', put '', put '', put '', put '', put '', put '', put '', put '', put '', put run_time_total, put sma put /;
+
 
