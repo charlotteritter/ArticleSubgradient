@@ -73,8 +73,8 @@ FILE sampled_dynamic /QP.csv/;
 sampled_dynamic.PC = 5;
 sampled_dynamic.ND = 3;
 PUT sampled_dynamic;
-put 'QP' put /;
-put upperbound put /;
+put 'Time', put 'QP' put /;
+put bound_time, put upperbound put /;
 PUTCLOSE sampled_dynamic;
 
 

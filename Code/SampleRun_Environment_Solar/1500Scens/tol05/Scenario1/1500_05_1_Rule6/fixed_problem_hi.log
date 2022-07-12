@@ -1,0 +1,105 @@
+--- Job fixed_problem_hi.gms Start 07/12/22 11:08:46 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\1500_05_1_Rule6\fixed_problem_hi.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\1500_05_1_Rule6\225a\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- fixed_problem_hi.gms(15) 2 Mb
+--- . input.gms(8) 3 Mb
+--- .. solar_scenarios.csv(1501) 4 Mb
+--- . input.gms(22) 4 Mb
+--- .. scenario_sorted.csv(1501) 4 Mb
+--- . input.gms(38) 4 Mb
+--- .. battery_revenue.csv(25) 4 Mb
+--- . input.gms(105) 4 Mb
+--- fixed_problem_hi.gms(32) 4 Mb
+--- . sampled_dynamic_hi.csv(25) 4 Mb
+--- fixed_problem_hi.gms(44) 4 Mb
+--- . equations_all.gms(76) 4 Mb
+--- fixed_problem_hi.gms(84) 4 Mb
+--- Starting execution: elapsed 0:00:00.047
+--- fixed_problem_hi.gms(3283) 14 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(3228) 14 Mb
+--- Starting Equ Objective: elapsed 0:00:01.042
+--- fixed_problem_hi.gms(3230) 18 Mb
+--- Starting Equ Const1: elapsed 0:00:01.588
+--- fixed_problem_hi.gms(3236) 38 Mb
+--- Starting Equ Const_chance_1: elapsed 0:00:01.653
+--- fixed_problem_hi.gms(3243) 50 Mb
+--- Starting Equ Const_chance_2: elapsed 0:00:01.721
+--- fixed_problem_hi.gms(3286) 50 Mb
+--- LOOPS iterFIX = iter1
+---   70,502 rows  109,525 columns  319,525 non-zeroes
+---   1,500 discrete-columns
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:01.946
+
+IBM ILOG CPLEX   32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+Cplex 12.10.0.0
+
+Reading data...
+Starting Cplex...
+Space for names approximately 4.53 Mb
+Use option 'names no' to turn use of names off
+Version identifier: 12.10.0.0 | 2019-11-26 | 843d4de2ae
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 8
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_TimeLimit                               1800
+CPXPARAM_Tune_TimeLimit                          360
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_MIP_Tolerances_MIPGap                   0
+CPXPARAM_WorkDir                                 "C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\1500Scens\tol05\Scenario1\1500_05_1_Rule6\225a\"
+Presolve time = 0.03 sec. (16.88 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.05 sec. (23.12 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.05 sec. (23.12 ticks)
+MIP status(114): aborted, no integer solution
+Cplex Time: 0.05sec (det. 23.43 ticks)
+CPLEX Error  1217: No solution exists.
+Problem aborted, no integer solution found.
+--- Reading solution for model schedule
+--- Executing after solve: elapsed 0:00:02.513
+--- fixed_problem_hi.gms(3283) 50 Mb
+--- Generating MIP model schedule
+--- fixed_problem_hi.gms(3228) 50 Mb
+--- Starting Equ Objective: elapsed 0:00:02.514
+--- fixed_problem_hi.gms(3230) 51 Mb
+--- Starting Equ Const1: elapsed 0:00:03.149
+*** Error at line 3228: Execution halted: Triggered by pending CtrlC event
+--- fixed_problem_hi.gms(3286) 51 Mb 1 Error
+*** SOLVE aborted
+--- Profile Summary (5546 records processed)
+     0.953   0.006GB      3133 Loop       
+     0.641   0.051GB      3228 Equation   Objective (1)
+     0.547   0.051GB      3286 Solve Alg  schedule
+     0.547   0.018GB      3228 Equation   Objective (1)
+     0.219   0.051GB      3286 Solve Fini schedule (319525)
+     0.063   0.038GB      3230 Equation   Const1 (34500)
+     0.063   0.005GB      3134 Loop       
+     0.063   0.005GB      3134 Loop       
+     0.063   0.006GB      3134 Loop       
+     0.062   0.006GB      3134 Loop       
+--- fixed_problem_hi.gms(3286) 51 Mb 1 Error
+*** Status: Execution error(s)
+--- Job fixed_problem_hi.gms Stop 07/12/22 11:08:49 elapsed 0:00:03.166

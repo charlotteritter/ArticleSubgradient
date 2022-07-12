@@ -1,0 +1,49 @@
+--- Job fixed_problem_hi.gms Start 07/11/22 11:27:57 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\1500Scens\tol05\Scenario1\fixed_problem_hi.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\1500Scens\tol05\Scenario1\225c\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- fixed_problem_hi.gms(27) 3 Mb
+--- . wind_costs.csv(25) 3 Mb
+--- fixed_problem_hi.gms(34) 3 Mb
+--- . wind_scenarios.csv(1501) 4 Mb
+--- fixed_problem_hi.gms(157) 4 Mb
+--- . sampled_dynamic_hi.csv(25) 4 Mb
+--- fixed_problem_hi.gms(204) 4 Mb
+--- Starting execution: elapsed 0:00:00.058
+--- fixed_problem_hi.gms(1722) 15 Mb
+--- Generating MIP model SCHEDULE
+--- fixed_problem_hi.gms(1637) 15 Mb
+--- Starting Equ Objective: elapsed 0:00:01.086
+--- fixed_problem_hi.gms(1639) 23 Mb
+--- Starting Equ Const1_1: elapsed 0:00:02.311
+*** Error at line 1637: Execution halted: Triggered by pending CtrlC event
+--- fixed_problem_hi.gms(1725) 23 Mb 1 Error
+*** SOLVE aborted
+--- Profile Summary (5527 records processed)
+     1.219   0.023GB      1637 Equation   Objective (1)
+     0.984   0.006GB      1586 Loop       
+     0.063   0.006GB      1587 Loop       
+     0.047   0.006GB      1587 Loop       
+     0.047   0.006GB      1587 Loop       
+     0.047   0.006GB      1587 Loop       
+     0.047   0.006GB      1587 Loop       
+     0.047   0.006GB      1587 Loop       
+     0.047   0.006GB      1587 Loop       
+     0.047   0.006GB      1587 Loop       
+--- fixed_problem_hi.gms(1725) 23 Mb 1 Error
+*** Status: Execution error(s)
+--- Job fixed_problem_hi.gms Stop 07/11/22 11:28:00 elapsed 0:00:02.330
