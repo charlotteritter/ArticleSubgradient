@@ -1,0 +1,57 @@
+--- Job MainHeuristic.gms Start 07/15/22 11:02:18 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\1500Scens\tol05\Scenario2\MainHeuristic.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\1500Scens\tol05\Scenario2\225b\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- MainHeuristic.gms(10) 2 Mb
+--- . input.gms(13) 3 Mb
+--- .. wind_costs.csv(25) 3 Mb
+--- . input.gms(23) 3 Mb
+--- .. wind_scenarios.csv(1501) 4 Mb
+--- . input.gms(107) 4 Mb
+--- MainHeuristic.gms(14) 4 Mb
+--- . scenario_sorted.csv(1502) 4 Mb 1 Error
+*** Error 409 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\1500Scens\tol05\Scenario2\scenario_sorted.csv
+    Unrecognizable item - skip to find a new statement
+      looking for a ';' or a key word to get started again
+--- . scenario_sorted.csv(1048575) 4 Mb
+--- MainHeuristic.gms(17) 4 Mb
+--- . subgradient_parameters.gms(33) 4 Mb
+--- MainHeuristic.gms(18) 4 Mb
+--- . equations_all.gms(96) 4 Mb
+--- MainHeuristic.gms(32) 4 Mb 2 Errors
+*** Error 257 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\1500Scens\tol05\Scenario2\MainHeuristic.gms
+    Solve statement not checked because of previous errors
+--- MainHeuristic.gms(33) 4 Mb 3 Errors
+*** Error 141 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\1500Scens\tol05\Scenario2\MainHeuristic.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+--- MainHeuristic.gms(61) 4 Mb 4 Errors
+*** Error 257 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\1500Scens\tol05\Scenario2\MainHeuristic.gms
+    Solve statement not checked because of previous errors
+--- MainHeuristic.gms(65) 4 Mb 5 Errors
+*** Error 141 in C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Wind\1500Scens\tol05\Scenario2\MainHeuristic.gms
+    Symbol declared but no values have been assigned. Check for missing
+       data definition, assignment, data loading or implicit assignment
+       via a solve statement.
+       A wild shot: You may have spurious commas in the explanatory
+       text of a declaration. Check symbol reference list.
+--- MainHeuristic.gms(81) 4 Mb 5 Errors
+*** Status: Compilation error(s)
+--- Job MainHeuristic.gms Stop 07/15/22 11:02:19 elapsed 0:00:01.317

@@ -1,3 +1,2 @@
-﻿Omega,Tolerance,Step Size Rule,Iterations,Converged?,Gap LR,Gap Naive,Obj. Naive,Obj. LR,Gap,Time Naive,Time LR,Final Lambda,LB Heuristic
-,,,,,,,,,,,,556.0,0.0
-,,,,,,,,,,,,550.0,0.0
+﻿Time,QP
+2106.0,-6764.109

@@ -1,0 +1,1549 @@
+--- Job MainHeuristic.gms Start 07/15/22 11:05:35 32.2.0 rc62c018 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\32\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\900Scens\tol05\Scenario3\MainHeuristic.gms
+    PageSize 0
+    ScrDir C:\Users\charl\OneDrive\Dokumente\A_Uni\HiWi\ArticleSubgradient\Code\SampleRun_Environment_Solar\900Scens\tol05\Scenario3\225c\
+    SysDir C:\GAMS\32\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+GAMS 32.2.0   Copyright (C) 1987-2020 GAMS Development. All rights reserved
+Licensee: Small MUD - 5 User License                     S200323/0001AN-GEN
+          Friedrich-Alexander-Universitaet Erlangen-Nurnberg         DC7699
+          C:\GAMS\32\gamslice.txt
+--- Starting compilation
+--- MainHeuristic.gms(10) 2 Mb
+--- . input.gms(8) 3 Mb
+--- .. solar_scenarios.csv(901) 3 Mb
+--- . input.gms(22) 3 Mb
+--- .. scenario_sorted.csv(901) 4 Mb
+--- . input.gms(38) 4 Mb
+--- .. battery_revenue.csv(25) 4 Mb
+--- . input.gms(105) 4 Mb
+--- MainHeuristic.gms(11) 4 Mb
+--- . subgradient_parameters.gms(31) 4 Mb
+--- MainHeuristic.gms(12) 4 Mb
+--- . equations_all.gms(76) 4 Mb
+--- MainHeuristic.gms(75) 4 Mb
+--- Starting execution: elapsed 0:00:00.064
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.371
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.372
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.375
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen1
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.383
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:00.400
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.401
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.401
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.405
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen2
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.410
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:00.419
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.420
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.420
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.423
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen3
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.428
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:00.439
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.439
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.440
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.442
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen4
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.447
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:00.458
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.458
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.459
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.462
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen5
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.466
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:00.480
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.481
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.481
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.485
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen6
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.490
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:00.501
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.501
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.501
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.505
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen7
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.509
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:00.518
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.518
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.519
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.522
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen8
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.528
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:00.538
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.538
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.538
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.541
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen9
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.546
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:00.555
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.555
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.555
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.559
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen10
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.565
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:00.575
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.575
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.576
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.580
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen11
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.585
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:00.596
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.596
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.596
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.600
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen12
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.605
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:00.614
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.614
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.615
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.618
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen13
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.623
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:00.632
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.633
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.633
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.637
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen14
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.641
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:00.650
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.650
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.650
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.654
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen15
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.658
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:00.668
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.668
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.668
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.671
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen16
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.675
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:00.686
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.686
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.687
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.691
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen17
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.695
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:00.705
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.705
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.706
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.709
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen18
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.714
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:00.724
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.724
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.724
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.727
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen19
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.732
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:00.741
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.741
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.742
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.745
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen20
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.750
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:00.760
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.760
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.760
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.764
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen21
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.768
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:00.777
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.777
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.777
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.781
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen22
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.785
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:00.794
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.794
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.795
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.798
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen23
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.804
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:00.814
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.814
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.815
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.818
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen24
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.823
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:00.832
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.832
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.833
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.836
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen25
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.840
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:00.849
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.849
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.850
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.853
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen26
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.858
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:00.868
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.868
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.868
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.872
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen27
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.876
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:00.885
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.885
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.886
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.889
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen28
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.893
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:00.903
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.903
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.904
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.907
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen29
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.913
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:00.923
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.923
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.923
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.927
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen30
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.931
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:00.940
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.940
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.940
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.943
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen31
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.947
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:00.956
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.956
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.957
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.961
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen32
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.965
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:00.976
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.976
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.977
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.980
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen33
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.984
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:00.994
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:00.995
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:00.995
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:00.998
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen34
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.003
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.013
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.013
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.014
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.017
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen35
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.023
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.032
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.032
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.033
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.037
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen36
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.042
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.052
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.052
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.053
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.056
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen37
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.061
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.072
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.073
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.073
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.076
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen38
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.081
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.092
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.092
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.092
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.095
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen39
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.100
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.109
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.109
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.110
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.113
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen40
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.118
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.129
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.129
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.129
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.132
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen41
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.137
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.146
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.147
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.147
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.150
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen42
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.155
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.164
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.164
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.165
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.168
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen43
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.173
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.182
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.182
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.182
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.185
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen44
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.190
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.200
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.200
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.201
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.204
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen45
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.208
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.216
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.217
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.217
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.221
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen46
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.226
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.236
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.237
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.237
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.241
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen47
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.246
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.255
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.255
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.255
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.259
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen48
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.263
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.274
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.274
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.274
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.279
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen49
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.284
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.292
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.292
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.293
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.296
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen50
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.301
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.311
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.311
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.311
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.315
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen51
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.320
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.329
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.329
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.330
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.333
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen52
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.339
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.349
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.349
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.349
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.353
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen53
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.358
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.367
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.367
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.367
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.371
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen54
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.376
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.385
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.385
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.385
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.389
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen55
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.393
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.402
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.402
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.403
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.406
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen56
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.411
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.420
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.420
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.420
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.423
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen57
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.428
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.437
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.437
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.437
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.441
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen58
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.446
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.457
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.457
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.457
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.461
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen59
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.466
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.476
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.476
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.477
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.480
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen60
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.484
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.494
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.494
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.495
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.498
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen61
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.503
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.513
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.513
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.513
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.516
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen62
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.520
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.529
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.530
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.530
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.533
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen63
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.538
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.549
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.549
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.549
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.553
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen64
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.557
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.566
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.566
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.566
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.570
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen65
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.576
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.586
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.586
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.587
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.590
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen66
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.595
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.604
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.604
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.605
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.608
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen67
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.613
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.623
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.623
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.623
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.627
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen68
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.631
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.641
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.641
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.641
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.644
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen69
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.650
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.659
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.659
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.660
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.663
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen70
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.668
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.680
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.680
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.680
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.683
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen71
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.688
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.697
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.697
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.698
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.701
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen72
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.706
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.715
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.715
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.716
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.721
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen73
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.726
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.736
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.736
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.736
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.740
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen74
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.745
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.756
+--- MainHeuristic.gms(2062) 10 Mb
+--- Generating MIP model schedule_scenario
+--- MainHeuristic.gms(2022) 10 Mb
+--- Starting Equ Objective_scenario: elapsed 0:00:01.756
+--- MainHeuristic.gms(2006) 10 Mb
+--- Starting Equ Const1_scenario: elapsed 0:00:01.756
+--- MainHeuristic.gms(2011) 10 Mb
+--- Starting Equ Const_chance_1_scenario: elapsed 0:00:01.759
+--- MainHeuristic.gms(2065) 10 Mb
+--- LOOPS rs = scen75
+---   48 rows  97 columns  213 non-zeroes
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:01.764
+
+Gurobi           32.2.0 rc62c018 Released Aug 26, 2020 WEI x86 64bit/MS Window
+
+GAMS/Gurobi demo/community requires a Gurobi license from Gurobi Optimization.
+*** Cannot initialize Gurobi environment.
+*** Could be a missing or invalid license. (status=10009|10009)
+--- Reading solution for model schedule_scenario
+--- Executing after solve: elapsed 0:00:01.778
+--- MainHeuristic.gms(2062) 10 Mb
+*** Error at line 2065: Execution halted: Triggered by pending CtrlC event
+--- MainHeuristic.gms(2062) 10 Mb 1 Error
+--- Profile Summary (4117 records processed)
+     0.297   0.005GB      1928 Loop       
+     0.031   0.005GB      1929 Loop       
+     0.016   0.005GB      1933 Assignment dummy (1)
+     0.016   0.005GB      1929 Loop       
+     0.016   0.005GB      1931 Assignment minsolar (9)
+     0.016   0.005GB      1929 Loop       
+     0.016   0.005GB      1933 Assignment dummy (900)
+     0.016   0.005GB      1929 Loop       
+     0.016   0.010GB      2022 Equation   Objective_scenario (1)
+     0.016   0.005GB      1935 Assignment dummysolar (12083)
+--- MainHeuristic.gms(2062) 10 Mb 1 Error
+*** Status: Execution error(s)
+--- Job MainHeuristic.gms Stop 07/15/22 11:05:37 elapsed 0:00:01.778
