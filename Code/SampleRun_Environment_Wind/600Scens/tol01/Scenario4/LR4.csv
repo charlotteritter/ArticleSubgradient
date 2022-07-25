@@ -1,0 +1,2 @@
+"Omega","Tolerance","Step Size Rule","Iterations","Converged?","Gap LR","Gap Naive","Obj. Naive","Obj. LR (UB)","Obj. LR (LB),","Gap","Time Naive","Time LR","Final Lambda","LB Heuristic","BBP","Best iter","Lambda best iter","Gamma best iter"
+600.00000,0.01000,4.00000,2.00000,0.00000,0.48637,0.50168,4649.13232,9607.79297,5114.25001,0.48637,4201.00000,4202.00000,135.28217,4934.88595,0.00000,1.00000,145.52482,6.00000

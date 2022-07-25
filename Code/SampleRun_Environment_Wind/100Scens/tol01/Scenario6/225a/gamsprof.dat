@@ -1,0 +1,11 @@
+245      0.007
+401 2      0.015       0.010 GAMS Fini   
+401 3      0.050       0.010 Solve Fini schedule (73525)
+464 6      0.044       0.010 Solve Fini SCHEDULEFIX (73525)
+316 1      0.008       0.006 Equation   ObjectiveFIX (1)
+354 9      0.008       0.009 Equation   Const_4_2 (2200)
+464 7      0.027       0.010 GAMS Fini   
+340 10      0.011       0.007 Equation   Const_3_1FIX (2300)
+360 8      0.009       0.009 Equation   Const_5FIX (2300)
+352 5      0.012       0.008 Equation   Const_4_1FIX (2200)
+350 4      0.011       0.008 Equation   Const_4_1 (2200)

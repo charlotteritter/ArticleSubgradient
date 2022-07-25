@@ -1,0 +1,11 @@
+323      0.025
+464 7      0.052       0.011 Solve Fini SCHEDULEFIX (73525)
+401 2      0.061       0.010 Solve Fini schedule (73525)
+352 1      0.030       0.009 Equation   Const_4_1FIX (2200)
+464 5      0.050       0.011 Solve Fini SCHEDULEFIX (73525)
+464 4      0.051       0.010 Solve Fini SCHEDULEFIX (73525)
+356 9      0.029       0.010 Equation   Const_4_2FIX (2200)
+464 3      0.076       0.011 Solve Fini SCHEDULEFIX (73525)
+356 6      0.026       0.009 Equation   Const_4_2FIX (2200)
+464 10      0.031       0.011 GAMS Fini   
+356 8      0.028       0.010 Equation   Const_4_2FIX (2200)
