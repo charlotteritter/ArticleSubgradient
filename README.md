@@ -1,0 +1,12 @@
+# Subgradient step-size update rules in Lagrangian relaxations of chance-constrained optimization models
+This project is based on the paper **Statistical performance of subgradient step-size update rules in Lagrangian relaxations of chance-constrained optimization models** by C. Ritter and B. Singh. 
+There, using different computational experiments and statistical tests on two example instances of chance-constrained optimization problems, we investigate whether some step-size rules are particularly well suited for solving the Langrangian relaxation via the subgradient method for those kinds of models in practice.
+We present the results of those tests and several additional investigations related to complementary bounding techniques.
+We refer to the paper for further information on methods and conclusions.
+A preprint of the manuscript that is currently under peer review is available at xxx.
+## Repository content
+The repository contains the following content:
+- `code` contains all the GAMS code one needs to run the algorithms presented in the paper. One can direct through the subfolders to a specific instance of the desired model. There are starter files for the different algorithms included. `main_for_naive.gms` for the naive solution method, `main_for_lr1.gms` up to `main_for_lr6.gms` for the Lagrangian relaxation algorithm (Alg. 1) using step-size rule one to six, `SAA.gms` as part 1 of Algorithm 2 and `fixed_problem.gms` as part 2 of Algorithm 2. Analogously, `SAA_hi.gms` as part 1 of Algorithm 3 and `fixed_problem_hi.gms` as part 2 of Algorithm 3. In Model II we also have a starter file `MainHeuristic.gms` for the Algorithm 4. For Model I that is included and put out in the Lagrangian relaxation. 
+- `results` contains the excel tables and figures visualizing the results that are partially also included in the paper. Thereby we differ between the `Example_Instances` and `Samples` for each model instance. The `Example_Instances` include the 16 instances we presented seperately in the paper for Model I and Model II, respectively. The `Samples` include all 20 batches of each scenario-size regime for Model I and Model II, respectively. 
+## Requirements to run code
+The code uses the optimization solver Gurobi, which is therefore required to run it. 
