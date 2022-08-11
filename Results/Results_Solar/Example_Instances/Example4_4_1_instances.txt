@@ -1,5 +1,0 @@
-For section with the example instances in the paper I used those instances:
-100 scenarios: 10th instance (1st)
-600 scenarios: 1st instance
-900 scenarios: 9th instance (1st)
-1500 scenarios: 1st instance
