@@ -1,5 +1,8 @@
 $ONTEXT
-This is the QP bound for Model II
+This is the GAMS code corresponding to the paper "Statistical performance of subgradient step-size update rules in Lagrangian relaxations of chance-constrained optimization models" by C. Ritter and B. Singh
+See: https://github.com/charlotteritter/ArticleSubgradient
+
+This is Algorithm 4 for wind model (Model II)
 $OFFTEXT
 
 OPTIONS PROFILE =3, RESLIM   = 2100, LIMROW   = 5, LP = CPLEX, MIP = gurobi, RMIP=gurobi, NLP = CONOPT, MINLP = DICOPT, MIQCP = CPLEX, SOLPRINT = OFF, decimals = 8, optcr=0.01, optca=0.01, threads =8, integer4=0;

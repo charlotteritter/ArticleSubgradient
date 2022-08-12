@@ -1,8 +1,9 @@
 $ONTEXT
-This is Step 5 of Algorithm 1 of file v10.pdf (iEEE paper)
-The 1500 scenario fixed problem
-Follow up of SAA.gms
+This is the GAMS code corresponding to the paper "Statistical performance of subgradient step-size update rules in Lagrangian relaxations of chance-constrained optimization models" by C. Ritter and B. Singh
+See: https://github.com/charlotteritter/ArticleSubgradient
 
+This is Step 7 of Algorithm 2 for wind model (Model II)
+Before this file, we run the regularized problems - SAA.gms to start Algorithm 2
 $OFFTEXT
 
 OPTIONS PROFILE =3, RESLIM   = 1800, LIMROW   = 5, LP = CPLEX, MIP = gurobi, RMIP=Gurobi, NLP = CONOPT, MINLP = DICOPT, MIQCP = CPLEX,

@@ -1,11 +1,9 @@
 $ONTEXT
-This is Step 3 of Algorithm 2 
-Big M is updated
-Single file to run different values of rho
-Promise is updated at each iteration
-Can update with new wind scenarios file
+This is the GAMS code corresponding to the paper "Statistical performance of subgradient step-size update rules in Lagrangian relaxations of chance-constrained optimization models" by C. Ritter and B. Singh
+See: https://github.com/charlotteritter/ArticleSubgradient
 
-After this file, we run fixed scenario problem - fixed_problem.gms
+This is Step 4 and 6 of Algorithm 2 for wind model (Model II)
+After this file, we run fixed scenario problem - fixed_problem.gms to finish Algorithm 2
 $OFFTEXT
 
 OPTIONS PROFILE =3, RESLIM   = 2100, LIMROW   = 5, LP = CPLEX, MIP = gurobi, RMIP=Gurobi, NLP = CONOPT, MINLP = DICOPT, MIQCP = CPLEX,

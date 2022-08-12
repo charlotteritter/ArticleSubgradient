@@ -1,5 +1,8 @@
 $ONTEXT
-Solving the Naive model (1) with a time limit of 4200s.
+This is the GAMS code corresponding to the paper "Statistical performance of subgradient step-size update rules in Lagrangian relaxations of chance-constrained optimization models" by C. Ritter and B. Singh
+See: https://github.com/charlotteritter/ArticleSubgradient
+
+This is the naive solution method with a time limit of 4200s for wind model (Model II).
 $OFFTEXT
 
 $eolcom //
