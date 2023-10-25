@@ -1,9 +1,9 @@
 # Subgradient step-size update rules in Lagrangian relaxations of chance-constrained optimization models
-This project is based on the paper **Statistical performance of subgradient step-size update rules in Lagrangian relaxations of chance-constrained optimization models** by C. Ritter and B. Singh. 
+This project is based on the paper **Statistical performance of subgradient step-size update rules in Lagrangian relaxations of chance-constrained optimization models** by C. Ritter and B. Singh that is due to appear in the _Lecture Notes in Computer Science_ (LNCS) series.
 There, using different computational experiments and statistical tests on two example instances of chance-constrained optimization problems, we investigate whether particular choices of the step-size rules are better suited for solving the Lagrangian relaxation via the subgradient method for these kinds of models in practice.
 We present the results of those tests and several additional investigations related to bounding techniques.
-We refer to the paper for further information on methods and conclusions.
-A preprint of the manuscript that is currently under peer review is available at https://optimization-online.org/2022/08/statistical-performance-of-subgradient-step-size-update-rules-in-lagrangian-relaxations-of-chance-constrained-optimization-models/.
+We refer to the paper (DOI will be functional soon) for further information on methods and conclusions: https://doi.org/10.1007/978-3-031-47859-8_26. 
+
 ## Repository content
 The repository contains the following content:
 - `Code` contains all the GAMS code one needs to run the algorithms presented in the paper. Please refer to the subfolders for a specific instance of the desired model. Starter files for the different algorithms are included. `main_for_naive.gms` for the naive solution method, `main_for_lr1.gms` up to `main_for_lr6.gms` for the Lagrangian relaxation algorithm (Alg. 1) using step-size rule one to six, `SAA.gms` as part 1 of Algorithm 2 and `fixed_problem.gms` as part 2 of Algorithm 2. Analogously, `SAA_hi.gms` as part 1 of Algorithm 3 and `fixed_problem_hi.gms` as part 2 of Algorithm 3. We also have a starter file `MainHeuristic.gms` for Algorithm 4. For Model I, that is also included and put out in the Lagrangian relaxation. 
