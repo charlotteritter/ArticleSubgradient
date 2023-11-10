@@ -1,8 +1,8 @@
 # Subgradient step-size update rules in Lagrangian relaxations of chance-constrained optimization models
-This project is based on the paper **Statistical performance of subgradient step-size update rules in Lagrangian relaxations of chance-constrained optimization models** by C. Ritter and B. Singh that is due to appear in the _Lecture Notes in Computer Science_ (LNCS) series.
+This project is based on the paper **Statistical performance of subgradient step-size update rules in Lagrangian relaxations of chance-constrained optimization models** by C. Ritter and B. Singh published in the _Lecture Notes in Computer Science_ (LNCS) series.
 There, using different computational experiments and statistical tests on two example instances of chance-constrained optimization problems, we investigate whether particular choices of the step-size rules are better suited for solving the Lagrangian relaxation via the subgradient method for these kinds of models in practice.
 We present the results of those tests and several additional investigations related to bounding techniques.
-We refer to the paper (DOI will be functional soon) for further information on methods and conclusions: https://doi.org/10.1007/978-3-031-47859-8_26. 
+We refer to the paper for further information on methods and conclusions: https://doi.org/10.1007/978-3-031-47859-8_26. 
 
 ## Repository content
 The repository contains the following content:
